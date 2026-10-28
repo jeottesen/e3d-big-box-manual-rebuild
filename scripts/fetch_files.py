@@ -6,12 +6,14 @@ to raw/files/ with a manifest. Skips Volcano / silicone heater mat / Super Whopp
 Polite: one connection, delay, retries. Run:  python3 -I scripts/fetch_files.py
 """
 import gzip, json, os, time, urllib.error, urllib.parse, urllib.request
+import sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))   # sibling modules (python -I does not add the script folder)
+import crawl
+from targets import WANT_FILES as WANT
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RAW = os.environ.get('BIGBOX_RAW', f'{ROOT}/raw')   # archive data lives outside git; override with BIGBOX_RAW
 UA = 'bigbox-manual-archiver/2.0 (personal documentation backup; single connection)'
-WANT = ['V6-175-ASSM', 'V6-175-BREAK', 'V6-175-SINK', 'V6-300-BREAK', 'V6-300-SINK-D', 'V6-BLOCK-CARTRIDGE',
-        'V6-NOZZLE-ALL', 'E-MOTOR-NEMA17-ALL_PUBLIC', 'Motor-Datasheet-All', 'DC_Fans']
 os.makedirs(f'{RAW}/files', exist_ok=True)
 
 def fetch(url, tries=4):
@@ -36,6 +38,9 @@ manifest_path = f'{RAW}/files.json'
 manifest = json.load(open(manifest_path)) if os.path.exists(manifest_path) else {}
 for w in WANT:
     if w in manifest and os.path.exists(f'{RAW}/files/{w}.pdf'): continue
+    seeded = json.load(open(f'{crawl.SEED}/files.json')).get(w) if crawl.SEED and os.path.exists(f'{crawl.SEED}/files.json') else None
+    if seeded and crawl.from_seed(f'files/{w}.pdf'):
+        manifest[w] = seeded; json.dump(manifest, open(manifest_path, 'w'), indent=1); print(w, 'from seed'); continue
     for ts, orig in sorted(caps.get(w, []), reverse=True):  # newest capture first; fall back if one is bad
         d = fetch(f'https://web.archive.org/web/{ts}id_/{orig}')
         if d and d[:4] == b'%PDF':

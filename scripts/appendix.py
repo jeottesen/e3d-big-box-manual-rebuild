@@ -7,35 +7,36 @@
 
 Run after recover.py:  python3 -I scripts/appendix.py
 """
-import html, json, os, re
+import html, json, os, sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))   # sibling modules (python -I does not add the script folder)
+from recover import find_section
+from targets import APPENDIX
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RAW = os.environ.get('BIGBOX_RAW', f'{ROOT}/raw')   # archive data lives outside git; override with BIGBOX_RAW
-src = open(f'{ROOT}/scripts/recover.py').read().split("if __name__")[0]
-ns = {'__file__': f'{ROOT}/scripts/recover.py'}; exec(compile(src, 'recover', 'exec'), ns)
-sections = ns['sections']
 
-def old_version(page, ts):
-    for d in ('versions', 'versions_removed/unchanged', 'versions_removed/errors'):
-        f = f'{RAW}/{d}/{page}/{ts}.html'
-        if os.path.exists(f): return open(f).read()
-    raise FileNotFoundError(f'{page} {ts}')
+def saved_versions(page):
+    """(timestamp, path) of every saved version of a page, newest first."""
+    out = []
+    for d in ('versions', 'versions_removed/unchanged'):
+        p = f'{RAW}/{d}/{page}'
+        if os.path.isdir(p): out += [(f[:-5], f'{p}/{f}') for f in os.listdir(p) if f.endswith('.html')]
+    return sorted(out, reverse=True)
 
-def section(page, ts, rx):
-    return next(((t, b) for t, _, b, _ in sections(old_version(page, ts), rx)), None)
+def newest_with_section(page, rx, must):
+    """Newest saved version of page that has the section, as (timestamp, section html)."""
+    for ts, path in saved_versions(page):
+        found = find_section(open(path).read(), rx, must)
+        if found: return ts, found[1]
+    return None
 
 parts, sources = [], []
-def add(heading, page, ts, rx, note):
-    s = section(page, ts, rx)
-    if not s: print('NOT FOUND:', page, ts, rx); return
-    parts.append(f'<h2>{html.escape(heading)}</h2><p class="src">From the {page.replace("_", " ")} page, version {ts}. {note}</p>{s[1]}')
+for heading, page, rx, must, note in APPENDIX:
+    hit = newest_with_section(page, rx, must)
+    if not hit: print('NOT FOUND:', page, rx); continue
+    ts, section_html = hit
+    parts.append(f'<h2>{html.escape(heading)}</h2><p class="src">From the {page.replace("_", " ")} page, version {ts}. {note}</p>{section_html}')
     sources.append(f'{page} {ts}')
-
-NOTE_LINKS = 'File and download links in this section pointed to files that the archive did not keep.'
-add('Slicer profiles (older Software page)', 'BigBox_Software', '20160601234712', r'^BigBox Slicer Profiles$',
-    'Describes the Simplify3D and Slic3r profiles that were once offered, including the experimental dual-extruder profile. ' + NOTE_LINKS)
-add('Simplify3D alpha profile (older First Print page)', 'Your_First_Print', '20151230221140', r'^Simplify3D$', 'Early single-extruder profile. ' + NOTE_LINKS)
-add('Slic3r alpha profile (older First Print page)', 'Your_First_Print', '20151230221140', r'^Slic3r$', 'Early single-extruder profile. ' + NOTE_LINKS)
 os.makedirs(f'{RAW}/recovered', exist_ok=True)
 index_path = f'{RAW}/recovered/index.json'
 index = json.load(open(index_path)) if os.path.exists(index_path) else {}

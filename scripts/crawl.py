@@ -9,7 +9,7 @@ Polite by design: one connection, fixed delay, Retry-After honoured, exponential
 aborts after repeated failures. Everything is cached so re-runs only fetch what is missing.
 Run:  python3 -I scripts/crawl.py [inventory|pages|images|all]
 """
-import gzip, json, os, re, sys, time, html, urllib.request, urllib.parse, urllib.error
+import gzip, json, os, re, shutil, sys, time, html, urllib.request, urllib.parse, urllib.error
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RAW = os.environ.get('BIGBOX_RAW', f'{ROOT}/raw')   # archive data lives outside git; override with BIGBOX_RAW
@@ -18,13 +18,24 @@ HOST = 'wiki.e3d-online.com'
 UA = 'bigbox-manual-archiver/2.0 (personal documentation backup; single connection)'
 DELAY = 2.0
 MAX_CONSEC_FAIL = 4
-for d in ('pages', 'images'): os.makedirs(f'{RAW}/{d}', exist_ok=True)
+os.makedirs(f'{RAW}/images', exist_ok=True)
+SEED = os.environ.get('BIGBOX_SEED')   # optional read-only folder laid out like the data folder; used before any network fetch
+stats = {'seeded': 0, 'network': 0}
+
+def from_seed(rel, dest=None):
+    """Copy rel from the seed folder into the data folder (at dest, default rel). True if the seed had it."""
+    src = f'{SEED}/{rel}' if SEED else None
+    if not src or not os.path.exists(src): return False
+    os.makedirs(os.path.dirname(f'{RAW}/{dest or rel}'), exist_ok=True)
+    shutil.copy(src, f'{RAW}/{dest or rel}'); stats['seeded'] += 1
+    return True
 
 fails = 0
 
 def get(url, binary=False, tries=5):
     """Return (status, bytes|str|None). 404/403/410 are final answers; everything else is retried."""
     global fails
+    stats['network'] += 1
     for i in range(tries):
         time.sleep(DELAY)
         wait = 20 * 2 ** i
@@ -58,13 +69,13 @@ def cdx(prefix, extra=''):
     rows = json.loads(body) if body.strip() else []
     return rows[1:] if rows else []
 
-def inventory():
+def inventory(names=('wiki', 'index', 'images')):
     out = {}
-    for name, prefix, extra in (('wiki', f'{HOST}/wiki/', ''),   # no mimetype filter: duplicate captures are stored as warc/revisit
+    for name, prefix, extra in [x for x in (('wiki', f'{HOST}/wiki/', ''),   # no mimetype filter: duplicate captures are stored as warc/revisit
                                 ('index', f'{HOST}/index.php?title=', ''),
-                                ('images', f'{HOST}/images/', '')):
+                                ('images', f'{HOST}/images/', '')) if x[0] in names]:
         path = f'{RAW}/cdx_{name}.json'
-        if not os.path.exists(path):
+        if not os.path.exists(path) and not from_seed(f'cdx_{name}.json'):
             rows = cdx(prefix, extra)
             json.dump(rows, open(path, 'w'))
             print(f'CDX {name}: {len(rows)} captures', flush=True)
@@ -101,6 +112,7 @@ def page_links(h):
     return out
 
 def pages(inv):
+    os.makedirs(f'{RAW}/pages', exist_ok=True)
     rows = [r for r in inv['wiki'] + inv['index'] if title_of(r[1])]
     idx = index(rows, lambda o: title_of(o).lower())
     log_path = f'{RAW}/pages.json'
@@ -137,15 +149,21 @@ def orig_path(path):
     m = re.match(r'(/images)/thumb/(.+?)/[^/]+$', path)
     return f'{m.group(1)}/{m.group(2)}' if m else path
 
-def images_used():
-    used = {}
-    files = [(f[:-5], f'{RAW}/pages/{f}') for f in sorted(os.listdir(f'{RAW}/pages'))]
+def all_saved_pages():
+    """(name, path) of every saved page and version in the data folder."""
+    pdir = f'{RAW}/pages'
+    files = [(f[:-5], f'{pdir}/{f}') for f in sorted(os.listdir(pdir))] if os.path.isdir(pdir) else []
     vdir = f'{RAW}/versions'   # every archived version too: older versions hold images later removed
     if os.path.isdir(vdir):
         for t in sorted(os.listdir(vdir)):
             if os.path.isdir(f'{vdir}/{t}'):
                 files += [(t, f'{vdir}/{t}/{v}') for v in sorted(os.listdir(f'{vdir}/{t}')) if v.endswith('.html')]
-    for name, path in files:
+    return files
+
+def images_used(files=None):
+    """Image file -> pages using it, over the given (name, path) list or every saved page and version."""
+    used = {}
+    for name, path in (all_saved_pages() if files is None else files):
         h = open(path).read()
         m = re.search(r'id="mw-content-text".*?<div class="printfooter"', h, re.S)
         for tag in re.findall(r'<img[^>]*>', m.group(0) if m else h):
@@ -159,13 +177,14 @@ def images_used():
 def width(p):
     m = re.search(r'/(\d+)px-[^/]+$', p); return int(m.group(1)) if m else 0
 
-def images(inv):
+def images(inv, files=None):
+    seed_man = json.load(open(f'{SEED}/images.json')) if SEED and os.path.exists(f'{SEED}/images.json') else {}
     caps = {}
     for ts, orig, *_ in inv['images']:
         caps.setdefault(urllib.parse.unquote(urllib.parse.urlparse(orig).path), []).append((ts, orig))
     mpath = f'{RAW}/images.json'
     man = json.load(open(mpath)) if os.path.exists(mpath) else {}
-    for op, users in images_used().items():
+    for op, users in images_used(files).items():
         fname = op.rsplit('/', 1)[1]
         if man.get(fname, {}).get('kind') == 'original' and os.path.exists(f'{RAW}/images/{fname}'):
             continue
@@ -181,6 +200,9 @@ def images(inv):
             continue  # already have exactly this capture
         if not choice and fname in man and not man[fname].get('kind'):
             continue  # already known to be absent from the archive
+        sd = seed_man.get(fname)
+        if choice and sd and sd.get('kind') == kind and sd.get('snapshot') == choice[0] and from_seed(f'images/{fname}'):
+            man[fname] = {**sd, 'pages': sorted(users)}; json.dump(man, open(mpath, 'w'), indent=1); continue
         rec = {'kind': None, 'pages': sorted(users), 'original_path': op}
         if choice:
             ts, orig = choice

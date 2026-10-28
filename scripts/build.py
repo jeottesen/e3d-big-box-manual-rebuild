@@ -12,7 +12,7 @@ RAW = os.environ.get('BIGBOX_RAW', f'{ROOT}/raw')   # archive data lives outside
 SITE = os.environ.get('BIGBOX_SITE', f'{ROOT}/docs')
 os.makedirs(f'{SITE}/images', exist_ok=True)
 
-pages = {f[:-5]: open(f'{RAW}/pages/{f}').read() for f in sorted(os.listdir(f'{RAW}/pages'))}
+pages = {f[:-5]: open(f'{RAW}/pages/{f}').read() for f in sorted(os.listdir(f'{RAW}/pages'))} if os.path.isdir(f'{RAW}/pages') else {}
 meta = json.load(open(f'{RAW}/pages.json'))
 imgs = json.load(open(f'{RAW}/images.json'))
 rec_path = f'{RAW}/recovered/index.json'   # pages rebuilt from older versions of parent pages (see recover.py)
@@ -20,9 +20,11 @@ for t, info in (json.load(open(rec_path)).items() if os.path.exists(rec_path) el
     if info and t not in pages:
         pages[t] = open(f'{RAW}/recovered/{t}.html').read()
         meta[t] = {'snapshot': f'recovered from {info["parent"]} {info["version"]}'}
+latest_titles = set()
 lat_path = f'{RAW}/versions/latest.json'   # latest good (non-error) version per page, written by clean.py
 for t, v in (json.load(open(lat_path)).items() if os.path.exists(lat_path) else []):
-    if v and t in pages:
+    if v:
+        latest_titles.add(t)
         pages[t] = open(f'{RAW}/versions/{t}/{v}.html').read()
         meta[t] = {'snapshot': v}
 local = {t.lower(): t for t in pages}
@@ -97,7 +99,9 @@ if os.path.isdir(f'{RAW}/files'):
     for f in os.listdir(f'{RAW}/files'): shutil.copy(f'{RAW}/files/{f}', f'{SITE}/files/{f}')
 
 TARGET = '20161018063904'
-order = ['BigBox_Build_Manual'] + [t for t in pages if t != 'BigBox_Build_Manual']
+# index first, then the archived pages alphabetically, then rebuilt pages, appendix and datasheets in the order recover/appendix wrote them
+rebuilt = [t for t, info in (json.load(open(rec_path)).items() if os.path.exists(rec_path) else []) if info and t in pages and t not in latest_titles]
+order = ['BigBox_Build_Manual'] + sorted(t for t in pages if t != 'BigBox_Build_Manual' and t not in rebuilt) + rebuilt
 stats, sections = {}, []
 for t in order:
     b = fix_links(fix_images(extract(pages[t]), stats), False)
