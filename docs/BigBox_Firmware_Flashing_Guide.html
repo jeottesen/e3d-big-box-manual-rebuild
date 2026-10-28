@@ -1,0 +1,234 @@
+<!doctype html><meta charset="utf-8"><title>BigBox_Firmware_Flashing_Guide</title><style>body{font:16px/1.55 system-ui,sans-serif;max-width:60rem;margin:2rem auto;padding:0 1rem;color:#222}
+img{max-width:100%;height:auto}.missing{display:inline-block;border:1px dashed #999;padding:.4rem .7rem;color:#777;font-size:.85em;margin:.2rem 0}
+nav a{margin-right:1rem}table{border-collapse:collapse}td,th{border:1px solid #ccc;padding:.3rem .5rem}
+.src{color:#777;font-size:.8em}h1,h2,h3{line-height:1.2}</style><nav><a href="index.html">Contents</a></nav><h1>BigBox Firmware Flashing Guide</h1><p class="src">Archived 20201204013533 · source: wiki.e3d-online.com/wiki/BigBox_Firmware_Flashing_Guide</p>
+
+<p><span style="color:red; font-weight:bold; font-size:150%">NEVER try to flash the firmware while the printer is printing!</span>
+</p><p><span style="color:red; font-weight:bold; font-size:150%">Also disconnect any other processes accessing the printer like OctoPrint or any other host applications!</span>
+</p><p><span style="color:red; font-weight:bold; font-size:150%">Do NOT cut the power while flashing this can damage your RUMBA board!</span> 
+</p>
+
+
+<h1><span class="mw-headline" id="Flashing_a_new_firmware">Flashing a new firmware</span></h1>
+<p>Firmwares for the BigBox come as hex files.
+</p><p>The official source for firmware images is the release page of the official source repository: <a rel="nofollow" class="external text" href="https://github.com/BigBox3D/Marlin/releases">BigBox Firmware Releases</a>.
+</p><p>Flashing a new firmware may reset your stored settings and it is recommended to reset the settings too. So if you changed specific values like E steps, other steps settings, or other settings which can be stored be sure to note them down <b>before</b> you flash a new firmware.
+</p>
+<h2><span class="mw-headline" id="Determining_your_BigBox_version">Determining your BigBox version</span></h2>
+<p>To determine which version of the BigBox go to <a href="BigBox_Version_Overview.html" title="BigBox Version Overview">BigBox Version Overview</a>.
+</p>
+<h2><span class="mw-headline" id="Connecting_to_the_BigBox">Connecting to the BigBox</span></h2>
+<p><span style="color:green; font-weight:bold;">You don't have to change anything on the RUMBA board in order to flash a new firmware!</span>
+</p><p><span style="color:green; font-weight:bold;">The box should be switched on!</span>
+</p>
+<h3><span class="mw-headline" id="Without_OctoPrint.2FOctoPi_upgrade">Without OctoPrint/OctoPi upgrade</span></h3>
+<p>To connect to your BigBox use the USB port on the backside of the box. For this you need an USB cable with a Type B plug on one end.
+</p>
+<div class="thumb tleft"><div class="thumbinner" style="width:302px;"><img src="images/USB_Connection.JPG" alt="USB_Connection.JPG">  <div class="thumbcaption"><div class="magnify"></div></div></div></div>
+<p><br clear="all" />
+</p>
+<h3><span class="mw-headline" id="With_OctoPrint.2FOctoPi_upgrade">With OctoPrint/OctoPi upgrade</span></h3>
+<p>If you have the upgrade there is no USB port on the backside of your box but only a network port which cannot be used to flash a new firmware.
+</p><p>If you don't want to flash from your OctoPi as described in <a href="#Flashing_with_OctoPrint_plugin">#Flashing with OctoPrint plugin</a> then you have to open the electronics cover on the bottom inside the box. On the front left side of the RUMBA is the USB port where the RaspberryPI is connected to.
+</p><p>To connect to your RUMBA temporarily for flashing  you have to unplug the RPi from the RUMBA, the blue cable in the picture. Then you can connect your PC to that port. For this you need an USB cable with a Mini-B plug on one end.
+</p>
+<div class="thumb tleft"><div class="thumbinner" style="width:302px;"><img src="images/Blue_usb_mini.jpg" alt="Blue_usb_mini.jpg">  <div class="thumbcaption"><div class="magnify"></div></div></div></div>
+<p><br clear="all" />
+</p>
+<h2><span class="mw-headline" id="Flashing_on_Windows">Flashing on Windows</span></h2>
+<h3><span class="mw-headline" id="Driver_Installation">Driver Installation</span></h3>
+<p>The Windows driver for the RUMBA board can be downloaded from the RepRap wiki:
+</p>
+<dl><dd> <a rel="nofollow" class="external free" href="http://reprap.org/wiki/RUMBA#RUMBA_USB_Driver_for_Windows">http://reprap.org/wiki/RUMBA#RUMBA_USB_Driver_for_Windows</a></dd></dl>
+<div class="thumb tleft"><div class="thumbinner" style="width:302px;"><span class="missing">[image not archived: Windows_RUMBA_Drivers_extracted.png]</span>  <div class="thumbcaption"><div class="magnify"></div>Windows RUMBA Drivers extracted</div></div></div>
+<p>Download the ZIP file, extract the installer and run it. Follow the installer steps until completion accepting any default options.
+<br clear="all" />
+</p>
+<div class="thumb tleft"><div class="thumbinner" style="width:302px;"><span class="missing">[image not archived: Windows_RUMBA_Drivers_installation_1.png]</span>  <div class="thumbcaption"><div class="magnify"></div>Windows RUMBA Drivers installation 1</div></div></div>
+<div class="thumb tleft"><div class="thumbinner" style="width:302px;"><span class="missing">[image not archived: Windows_RUMBA_Drivers_installation_2.png]</span>  <div class="thumbcaption"><div class="magnify"></div>Windows RUMBA Drivers installation 2</div></div></div>
+<p><br clear="all" />
+</p>
+<h3><span class="mw-headline" id="Flashing_a_new_firmware_2">Flashing a new firmware</span></h3>
+<div class="thumb tleft"><div class="thumbinner" style="width:302px;"><span class="missing">[image not archived: Windows_Device_Manager_connected_RUMBA.png]</span>  <div class="thumbcaption"><div class="magnify"></div>Windows Device Manager connected RUMBA</div></div></div>
+<p>After you installed the driver and connect the RUMBA over USB it should be listed in the device manager.
+</p><p>Take note of the COM port.
+<br clear="all" />
+</p>
+<div class="thumb tleft"><div class="thumbinner" style="width:213px;"><span class="missing">[image not archived: Windows_XLoader.png]</span>  <div class="thumbcaption"><div class="magnify"></div>Windows XLoader</div></div></div>
+<p>Get <a rel="nofollow" class="external text" href="http://russemotto.com/xloader/XLoader.zip">XLoader</a>, unzip then start it.
+<br clear="all" />
+</p>
+<div class="thumb tleft"><div class="thumbinner" style="width:213px;"><span class="missing">[image not archived: Windows_XLoader_setup.png]</span>  <div class="thumbcaption"><div class="magnify"></div>Windows XLoader setup</div></div></div>
+<p>Point it to the desired hex file you want to flash, select the appropriate device for the RUMBA (Mega(ATMEGA2560)), the COM port you noted in the device manager and the correct BAUD rate (115200). 
+<br clear="all" />
+</p>
+<div class="thumb tleft"><div class="thumbinner" style="width:213px;"><span class="missing">[image not archived: Windows_XLoader_uploading.png]</span>  <div class="thumbcaption"><div class="magnify"></div>Windows XLoader uploading</div></div></div>
+<p>Click "Upload" and if everything goes right your new firmware will be flashed to the RUMBA.
+<br clear="all" />
+</p>
+<div class="thumb tleft"><div class="thumbinner" style="width:213px;"><span class="missing">[image not archived: Windows_XLoader_finished.png]</span>  <div class="thumbcaption"><div class="magnify"></div>Windows XLoader finished</div></div></div>
+<p>After writing and if all went well the screen will look like this.
+<br clear="all" />
+</p><p>After process is complete the RUMBA automatically resets and starts up.
+</p><p>To complete the process go to <a href="#After_flashing_a_new_firmware">#After flashing a new firmware</a> and follow the steps there!
+</p>
+<h2><span class="mw-headline" id="Flashing_on_OS_X_.28Mac.29">Flashing on OS X (Mac)</span></h2>
+<p>Get <a rel="nofollow" class="external text" href="http://paulkaplan.me/HexUploader/">HexUploader</a> and start it.
+<br clear="all" />
+</p>
+<div class="thumb tleft"><div class="thumbinner" style="width:302px;"><span class="missing">[image not archived: HexUploader_setup.png]</span>  <div class="thumbcaption"><div class="magnify"></div>HexUploader setup</div></div></div>
+<p>Select the appropriate device for the RUMBA (Mega - ATMega 2560), the "Serial Port" (usbmodem1421 in my case) and the correct "Baud Rate" (115200)
+<br clear="all" />
+</p>
+<div class="thumb tleft"><div class="thumbinner" style="width:302px;"><span class="missing">[image not archived: HexUploader_file_selection.png]</span>  <div class="thumbcaption"><div class="magnify"></div>HexUploader file selection</div></div></div>
+<p>Click "Upload a Hex File" and select the desired hex file you want to flash and click "Open". 
+<br clear="all" />
+</p>
+<div class="thumb tleft"><div class="thumbinner" style="width:302px;"><span class="missing">[image not archived: HexUploader_writing.png]</span>  <div class="thumbcaption"><div class="magnify"></div>HexUploader writing</div></div></div>
+<p>HexUploader writes the the file to the RUMBA board.
+<br clear="all" />
+</p>
+<div class="thumb tleft"><div class="thumbinner" style="width:302px;"><span class="missing">[image not archived: HexUploader_finished.png]</span>  <div class="thumbcaption"><div class="magnify"></div>HexUploader finished</div></div></div>
+<p>After writing it will verify the upload and if all went well the screen will look like this.
+<br clear="all" />
+</p><p>After process is complete the RUMBA automatically resets and starts up.
+</p><p>To complete the process go to <a href="#After_flashing_a_new_firmware">#After flashing a new firmware</a> and follow the steps there!
+</p>
+<h2><span class="mw-headline" id="Flashing_on_Linux">Flashing on Linux</span></h2>
+<p>To flash from Linux you can use the console and "avrdude". avrdude is available in most of the big distributions' package repositories like Ubuntu, Debian, RedHat.
+</p><p>For a Debian based distribution and using apt as package manager <b>sudo apt-get install avrdude</b> should do it.
+</p><p>To flash a hex file with avrdude you can use the following:
+</p>
+<pre>/usr/bin/avrdude -C/etc/avrdude.conf -v \
+-patmega2560 -cwiring -P/dev/ttyACM0 \
+-Uflash:w:[insert path to hex file]:i
+</pre>
+<p>After process is complete the RUMBA automatically resets and starts up.
+</p><p>To complete the process go to <a href="#After_flashing_a_new_firmware">#After flashing a new firmware</a> and follow the steps there!
+</p>
+<h2><span class="mw-headline" id="Flashing_on_an_RaspberryPi.2FOctoPi">Flashing on an RaspberryPi/OctoPi</span></h2>
+<p>Flashing on an RPi depends on the used distribution, if you use OctoPi then this is Debian based and you can refer to <a href="#Flashing_on_Linux">#Flashing on Linux</a>.
+</p>
+<h2><span class="mw-headline" id="Flashing_with_.22Firmware_Updater.22_.28OctoPrint_plugin.29">Flashing with "Firmware Updater" (OctoPrint plugin)</span></h2>
+<h3><span class="mw-headline" id="Installing_and_setting_up_.22Firmware_Updater.22">Installing and setting up "Firmware Updater"</span></h3>
+<p>Refer to <a href="#Flashing_on_Linux">#Flashing on Linux</a> to install "avrdude" on your OctoPi. This is a prerequisite to use this Octoprint plugin.
+</p><p>Unfortunately the plugin is not listed in the OctoPrint plugin repository but this is not a real problem.
+<br clear="all" />
+</p>
+<div class="thumb tleft"><div class="thumbinner" style="width:302px;"><span class="missing">[image not archived: OctoPrint_Plugin_Manager_dialog.png]</span>  <div class="thumbcaption"><div class="magnify"></div>OctoPrint Plugin Manager dialog</div></div></div>
+<p>Open OctoPrint settings dialog and go to "Plugin Manager" section.
+<br clear="all" />
+</p>
+<div class="thumb tleft"><div class="thumbinner" style="width:302px;"><span class="missing">[image not archived: OctoPrint_install_FirmwareUpdater_plugin.png]</span>  <div class="thumbcaption"><div class="magnify"></div>OctoPrint install FirmwareUpdater plugin</div></div></div>
+<p>Insert the URL for the "Firmware Updater" plugin into the "...from URL" input box and click "Install". The process will tell you what to do.
+</p><p>At the time of writing this is <a rel="nofollow" class="external free" href="https://github.com/OctoPrint/OctoPrint-FirmwareUpdater/archive/master.zip">https://github.com/OctoPrint/OctoPrint-FirmwareUpdater/archive/master.zip</a>
+</p><p>The repository URL on Github is <a rel="nofollow" class="external free" href="https://github.com/OctoPrint/OctoPrint-FirmwareUpdater">https://github.com/OctoPrint/OctoPrint-FirmwareUpdater</a>
+<br clear="all" />
+</p>
+<div class="thumb tleft"><div class="thumbinner" style="width:302px;"><span class="missing">[image not archived: OctoPrint_FirmwareUpdater.png]</span>  <div class="thumbcaption"><div class="magnify"></div>OctoPrint FirmwareUpdater</div></div></div>
+<p>After a successful installation and a restart of OctoPrint you can select the plugin from the settings menu.
+<br clear="all" />
+</p>
+<div class="thumb tleft"><div class="thumbinner" style="width:302px;"><span class="missing">[image not archived: OctoPrint_FirmwareUpdater_configuration.png]</span>  <div class="thumbcaption"><div class="magnify"></div>OctoPrint FirmwareUpdater configuration</div></div></div>
+<p>It is recommended to tell the plugin where "avrdude" is installed. On a normal OctoPi installation "avrdude" will be at "/usr/bin/avrdude".
+</p><p>Open the configuration for the plugin by clicking the wrench in the upper right corner and enter that path in the input field.
+<br clear="all" />
+</p>
+<h3><span class="mw-headline" id="Flashing_a_new_firmware_3">Flashing a new firmware</span></h3>
+<p><span style="color:red; font-weight:bold; font-size:120%">Do NOT use the "Check for updates" or check the option "Check for firmware updates after connecting to printer" because this won't work for the BigBox or Marlin at the time of writing!</span>
+</p>
+<div class="thumb tleft"><div class="thumbinner" style="width:302px;"><span class="missing">[image not archived: OctoPrint_FirmwareUpdater.png]</span>  <div class="thumbcaption"><div class="magnify"></div>OctoPrint FirmwareUpdater</div></div></div>
+<p>To flash a firmware file with the plugin disconnect OctoPrint from the printer, and open the plugin via the settings dialog.
+<br clear="all" />
+</p>
+<div class="thumb tleft"><div class="thumbinner" style="width:302px;"><span class="missing">[image not archived: OctoPrint_FirmwareUpdater_flash_firmware.png]</span>  <div class="thumbcaption"><div class="magnify"></div>OctoPrint FirmwareUpdater flash firmware</div></div></div>
+<p>Point the plugin to a file on local drive with the "Brose" button or copy and paste a link to a hex file in the "...from URL" input field.
+</p><p>Select the serial port your printer is connected to, normally there should be only one.
+</p><p><span style="color:red; font-weight:bold; font-size:100%">If you are using the "Autoselect" plugin which can automatically select the port you may have "AUTO" in the list too. This does not work for the firmware update! You have to explicitly select the correct port for the firmware update to work!</span>
+</p><p>Hit the corresponding button for the input field you used and the firmware will be flashed.
+<br clear="all" />
+</p><p>After process is complete the RUMBA automatically resets and starts up.
+</p><p>To complete the process go to <a href="#After_flashing_a_new_firmware">#After flashing a new firmware</a> and follow the steps there!
+</p>
+<h2><span class="mw-headline" id="Flashing_with_.22BigBox_Firmware.22_.28Octoprint_plugin.29">Flashing with "BigBox Firmware" (Octoprint plugin)</span></h2>
+<p>Thanks to a member of the community (tohara) there is another Octoprint plugin available. While created especially for the BigBox this plugin should also work with other electronics using Marlin firmware.
+</p>
+<h3><span class="mw-headline" id="Installing_and_setting_up_.22BigBox_Firmware.22">Installing and setting up "BigBox Firmware"</span></h3>
+<p>Unfortunately the plugin is not listed in the OctoPrint plugin repository but this is not a real problem.
+<br clear="all" />
+</p>
+<div class="thumb tleft"><div class="thumbinner" style="width:302px;"><span class="missing">[image not archived: OctoPrint_Plugin_Manager_dialog.png]</span>  <div class="thumbcaption"><div class="magnify"></div>OctoPrint Plugin Manager dialog</div></div></div>
+<p>Open OctoPrint settings dialog and go to "Plugin Manager" section.
+<br clear="all" />
+</p>
+<div class="thumb tleft"><div class="thumbinner" style="width:302px;"><span class="missing">[image not archived: OctoPrint_install_BigBox_Firmware_plugin.png]</span>  <div class="thumbcaption"><div class="magnify"></div>OctoPrint install BigBox Firmware plugin</div></div></div>
+<p>Insert the URL for the "BigBox Firmware" plugin into the "...from URL" input box and click "Install". The process will tell you what to do.
+</p><p>At the time of writing this is <a rel="nofollow" class="external free" href="https://github.com/tohara/OctoPrint-BigBoxFirmware/archive/master.zip">https://github.com/tohara/OctoPrint-BigBoxFirmware/archive/master.zip</a>
+</p><p>The repository URL on Github is <a rel="nofollow" class="external free" href="https://github.com/tohara/OctoPrint-BigBoxFirmware">https://github.com/tohara/OctoPrint-BigBoxFirmware</a>
+<br clear="all" />
+</p>
+<div class="thumb tleft"><div class="thumbinner" style="width:302px;"><span class="missing">[image not archived: OctoPrint_BigBox_Firmware.png]</span>  <div class="thumbcaption"><div class="magnify"></div>OctoPrint BigBox Firmware</div></div></div>
+<p>After a successful installation and a restart of OctoPrint you can select the plugin from the settings menu.
+<br clear="all" />
+</p>
+<h3><span class="mw-headline" id="Flashing_a_new_firmware_4">Flashing a new firmware</span></h3>
+<p>This plugin is Git and profile based. That means you created profiles with settings for the firmware based on a Git repository with a Marlin firmware source in it.
+</p><p>The plugin has several default profiles you can take as a base to create your own special profile with setting for your box or with features you want to use.
+</p><p>Please refer to the Git repository of the plugin for its usage.
+</p><p>If you have a profile ready you simply click the "Flash firmware button" of the profile. Then the firmware is setup with the settings of the profile, compiled and flashed right away to your box.
+</p><p>At the time of writing the plugin works with the original Marlin firmware repository on Github, <a rel="nofollow" class="external text" href="https://github.com/tohara">tohara</a> has also a Marlin repository up with different Marlin releases and so does <a rel="nofollow" class="external text" href="https://github.com/Alex9779">Alex9779</a>.
+</p>
+<h1><span class="mw-headline" id="Building_from_source_and_flashing">Building from source and flashing</span></h1>
+<h2><span class="mw-headline" id="Arduino_IDE_Setup">Arduino IDE Setup</span></h2>
+<p><span style="color:red; font-weight:bold; font-size:100%">To connect the RUMBA board from your Windows PC you have to follow the directions in <a href="#Driver_Installation">#Driver Installation</a> to install the drivers for the RUMBA board to be recognized by Windows.</span> 
+</p><p>The installer can be downloaded from the Arduino website:
+</p>
+<dl><dd> <a rel="nofollow" class="external free" href="https://www.arduino.cc/en/Main/Software">https://www.arduino.cc/en/Main/Software</a></dd></dl>
+<p>At the time of writing the current version is 1.6.9. Marlin requires at least 1.6.0 since RC6, it will produce warnings and fail to compile if you use lower versions. When installing choose the default component installation and installation location.
+</p><p>Arduino IDE is now installed, however, before we can build a new firmware there are some extra libraries required. These come bundled with the source code so will be setup in the next step.
+</p>
+<h2><span class="mw-headline" id="Install_additional_libaries">Install additional libaries</span></h2>
+<p>To be able to compile Marlin for the RUMBA board and the BigBox you have to install two additional libraries.
+</p><p>Fortunately the Arduino IDE includes a library manager for some versions now.
+</p>
+<div class="thumb tleft"><div class="thumbinner" style="width:302px;"><span class="missing">[image not archived: Arduino_include_library.png]</span>  <div class="thumbcaption"><div class="magnify"></div>Arduino include library</div></div></div>
+<p>Go to the menu "Sketch" -&gt; "Include library" -&gt; "Manage Libraries..." to open the library manager.
+<br clear="all" />
+</p><p>Add the following libraries to your installation:
+</p>
+<ul><li> LiquidCrystal_I2C</li>
+<li> U8glib</li></ul>
+<h2><span class="mw-headline" id="Get_the_source_code">Get the source code</span></h2>
+<p>The official source code repository for the BigBox is located on Github <a rel="nofollow" class="external text" href="https://github.com/BigBox3D/">BigBox3D Github repository</a>.
+</p><p><span style="color:red; font-weight:bold; font-size:100%"><b>REMEMBER:</b> the code is for the <b>current</b> version of the BigBox, if you have changed something, built differently or have an older version, like the Kickstarter BigBox you have to do changes in the source to make it work for your BigBox!</span>
+</p><p>There is also an unofficial repository with a lot of branches for most of the available factory BigBoxes with additional features enabled also hosted on Github: <a rel="nofollow" class="external free" href="https://github.com/Alex9779/Marlin">https://github.com/Alex9779/Marlin</a>
+</p><p>Either clone one of the repositories locally, fork it and clone your fork locally or download the source as a ZIP file and unpack.
+</p>
+<h2><span class="mw-headline" id="Setting_up_the_Arduino_project">Setting up the Arduino project</span></h2>
+<p>The source code for the firmware is stored in the Marlin folder.  Navigate to the Marlin folder and double-click Marlin.ino. This should open Arduino IDE.
+</p><p>Select the following options from the menu to make sure the correct board and processor options are set:
+</p>
+<dl><dd><b>Tools &gt; Board &gt; "Arduino/Genuino Mega or Mega 2560"</b></dd></dl>
+<dl><dd><b>Tools &gt; Processor &gt; "ATmega2560 (Mega 2560)"</b></dd></dl>
+<p><br clear="all" />
+</p>
+<h1><span class="mw-headline" id="After_flashing_a_new_firmware">After flashing a new firmware</span></h1>
+<p>It is recommended to reset the EEPROM of the RUMBA board after you flashed a new version. There have been reports of strange behaviours and a reset solved these issues.
+</p><p><span style="color:red; font-weight:bold; font-size:100%"><b>ATTENTION:</b> resetting the EEPROM will read the default values from the firmware. Bed leveling, motor steps, offsets and other settings are back to the firmware defaults!</span>
+</p><p><span style="color:red; font-weight:bold; font-size:100%">If you have special values set, note them down and set them again after resetting.</span>
+</p><p>To reset the EEPROM use the LCD.
+</p>
+<ol><li> Push the knob to get to leave the info screen and open the menus.</li>
+<li> Scroll to the "Control" menu entry and push the knob.</li>
+<li> Scroll to the "Load failsafe defaults" menu entry and push the knob.</li>
+<li> Scroll to the "Save settings" menu entry and push the knob.</li></ol>
+<h2><span class="mw-headline" id="Troubleshooting">Troubleshooting</span></h2>
+<p>If your RUMBA board does not appear in the Windows device manager for example even you have installed the drivers or if uploading a new firmware fails with strange errors it may be due to a damaged USB2Serial firmware.
+</p><p>Try the steps described <a rel="nofollow" class="external text" href="http://reprap.org/wiki/RUMBA#USB_connection_.28Writing_in_progress.29">here</a> to flash a ware to the programmer.
+</p>
+
+
+
+
+
+</div>					
