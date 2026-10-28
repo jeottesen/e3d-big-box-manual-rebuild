@@ -17,21 +17,16 @@
   "heading": "(15) Single & Dual Direct-Drive IR Sensor Bracket",
   "lines": 6
  },
- "Single_Direct-Drive_Extruder": {
-  "parent": "BigBox_Printer_Sub-assemblies",
-  "version": "20160703140933",
-  "heading": "(1) Single Direct-Drive Extruder",
-  "lines": 11
- },
+ "Single_Direct-Drive_Extruder": null,
  "Mesh_Levelling_the_Non-Hybrid_Dual": {
   "parent": "Printer_Commissioning",
-  "version": "20160627160851",
+  "version": "20160811132429",
   "heading": "(9.2) Mesh Levelling the Dual",
   "lines": 29
  },
  "Non-Hybrid_Dual_Calibrating_Z_Offset": {
   "parent": "Printer_Commissioning",
-  "version": "20160627160851",
+  "version": "20160811132429",
   "heading": "(4.3.2) Calibrating Z Offset Dual",
   "lines": 47
  },

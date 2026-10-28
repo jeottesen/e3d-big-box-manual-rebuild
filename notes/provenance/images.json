@@ -1,4 +1,24 @@
 {
+ "Bigbox_logo.png": {
+  "kind": "thumb-1100px",
+  "pages": [
+   "BigBox_Build_Manual"
+  ],
+  "original_path": "/images/d/d5/Bigbox_logo.png",
+  "snapshot": "20200127162434",
+  "url": "https://wiki.e3d-online.com/images/thumb/d/d5/Bigbox_logo.png/1100px-Bigbox_logo.png",
+  "bytes": 15156
+ },
+ "Boxed_spool.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Your_First_Print"
+  ],
+  "original_path": "/images/3/3f/Boxed_spool.jpg",
+  "snapshot": "20210509050619",
+  "url": "https://wiki.e3d-online.com/images/thumb/3/3f/Boxed_spool.jpg/450px-Boxed_spool.jpg",
+  "bytes": 13187
+ },
  "Spool_tube.jpg": {
   "kind": "thumb-450px",
   "pages": [
@@ -18,26 +38,6 @@
   "snapshot": "20210509050619",
   "url": "https://wiki.e3d-online.com/images/thumb/1/15/Spool_tube_out.jpg/450px-Spool_tube_out.jpg",
   "bytes": 23371
- },
- "Boxed_spool.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Your_First_Print"
-  ],
-  "original_path": "/images/3/3f/Boxed_spool.jpg",
-  "snapshot": "20210509050619",
-  "url": "https://wiki.e3d-online.com/images/thumb/3/3f/Boxed_spool.jpg/450px-Boxed_spool.jpg",
-  "bytes": 13187
- },
- "Bigbox_logo.png": {
-  "kind": "thumb-1100px",
-  "pages": [
-   "BigBox_Build_Manual"
-  ],
-  "original_path": "/images/d/d5/Bigbox_logo.png",
-  "snapshot": "20200127162434",
-  "url": "https://wiki.e3d-online.com/images/thumb/d/d5/Bigbox_logo.png/1100px-Bigbox_logo.png",
-  "bytes": 15156
  },
  "Spool_unpacked.jpg": {
   "kind": "thumb-450px",
@@ -109,26 +109,6 @@
   "url": "https://wiki.e3d-online.com/images/thumb/5/5e/Spool_clamped.jpg/450px-Spool_clamped.jpg",
   "bytes": 14546
  },
- "Spool_pull.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Your_First_Print"
-  ],
-  "original_path": "/images/d/d7/Spool_pull.jpg",
-  "snapshot": "20210509050625",
-  "url": "https://wiki.e3d-online.com/images/thumb/d/d7/Spool_pull.jpg/450px-Spool_pull.jpg",
-  "bytes": 22418
- },
- "Filament_arm.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Your_First_Print"
-  ],
-  "original_path": "/images/c/c4/Filament_arm.jpg",
-  "snapshot": "20210509050625",
-  "url": "https://wiki.e3d-online.com/images/thumb/c/c4/Filament_arm.jpg/450px-Filament_arm.jpg",
-  "bytes": 33003
- },
  "Spool_clamped_up.jpg": {
   "kind": "thumb-450px",
   "pages": [
@@ -139,15 +119,15 @@
   "url": "https://wiki.e3d-online.com/images/thumb/e/eb/Spool_clamped_up.jpg/450px-Spool_clamped_up.jpg",
   "bytes": 15201
  },
- "Tube_refit.jpg": {
+ "Spool_pull.jpg": {
   "kind": "thumb-450px",
   "pages": [
    "Your_First_Print"
   ],
-  "original_path": "/images/8/8f/Tube_refit.jpg",
+  "original_path": "/images/d/d7/Spool_pull.jpg",
   "snapshot": "20210509050625",
-  "url": "https://wiki.e3d-online.com/images/thumb/8/8f/Tube_refit.jpg/450px-Tube_refit.jpg",
-  "bytes": 29205
+  "url": "https://wiki.e3d-online.com/images/thumb/d/d7/Spool_pull.jpg/450px-Spool_pull.jpg",
+  "bytes": 22418
  },
  "Filament_insert.jpg": {
   "kind": "thumb-450px",
@@ -159,15 +139,25 @@
   "url": "https://wiki.e3d-online.com/images/thumb/2/28/Filament_insert.jpg/450px-Filament_insert.jpg",
   "bytes": 29304
  },
- "Display_temperature.jpg": {
+ "Filament_arm.jpg": {
   "kind": "thumb-450px",
   "pages": [
    "Your_First_Print"
   ],
-  "original_path": "/images/7/7d/Display_temperature.jpg",
+  "original_path": "/images/c/c4/Filament_arm.jpg",
   "snapshot": "20210509050625",
-  "url": "https://wiki.e3d-online.com/images/thumb/7/7d/Display_temperature.jpg/450px-Display_temperature.jpg",
-  "bytes": 18173
+  "url": "https://wiki.e3d-online.com/images/thumb/c/c4/Filament_arm.jpg/450px-Filament_arm.jpg",
+  "bytes": 33003
+ },
+ "Tube_refit.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Your_First_Print"
+  ],
+  "original_path": "/images/8/8f/Tube_refit.jpg",
+  "snapshot": "20210509050625",
+  "url": "https://wiki.e3d-online.com/images/thumb/8/8f/Tube_refit.jpg/450px-Tube_refit.jpg",
+  "bytes": 29205
  },
  "Idler_tension.jpg": {
   "kind": "thumb-450px",
@@ -178,6 +168,16 @@
   "snapshot": "20210509050625",
   "url": "https://wiki.e3d-online.com/images/thumb/8/8f/Idler_tension.jpg/450px-Idler_tension.jpg",
   "bytes": 27521
+ },
+ "Display_temperature.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Your_First_Print"
+  ],
+  "original_path": "/images/7/7d/Display_temperature.jpg",
+  "snapshot": "20210509050625",
+  "url": "https://wiki.e3d-online.com/images/thumb/7/7d/Display_temperature.jpg/450px-Display_temperature.jpg",
+  "bytes": 18173
  },
  "Display_nozzle.jpg": {
   "kind": "thumb-450px",
@@ -239,16 +239,6 @@
   "url": "https://wiki.e3d-online.com/images/thumb/4/43/Filament_pull_out.jpg/450px-Filament_pull_out.jpg",
   "bytes": 32635
  },
- "Display_calibrate.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Your_First_Print"
-  ],
-  "original_path": "/images/a/aa/Display_calibrate.jpg",
-  "snapshot": "20210509050632",
-  "url": "https://wiki.e3d-online.com/images/thumb/a/aa/Display_calibrate.jpg/450px-Display_calibrate.jpg",
-  "bytes": 18193
- },
  "Filament_ruler.jpg": {
   "kind": "thumb-450px",
   "pages": [
@@ -258,16 +248,6 @@
   "snapshot": "20210509050631",
   "url": "https://wiki.e3d-online.com/images/thumb/e/ec/Filament_ruler.jpg/450px-Filament_ruler.jpg",
   "bytes": 26739
- },
- "Display_print_from_sd.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Your_First_Print"
-  ],
-  "original_path": "/images/6/6a/Display_print_from_sd.jpg",
-  "snapshot": "20210509050631",
-  "url": "https://wiki.e3d-online.com/images/thumb/6/6a/Display_print_from_sd.jpg/450px-Display_print_from_sd.jpg",
-  "bytes": 18770
  },
  "Filament_mark.jpg": {
   "kind": "thumb-450px",
@@ -279,6 +259,26 @@
   "url": "https://wiki.e3d-online.com/images/thumb/d/d0/Filament_mark.jpg/450px-Filament_mark.jpg",
   "bytes": 25048
  },
+ "Display_print_from_sd.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Your_First_Print"
+  ],
+  "original_path": "/images/6/6a/Display_print_from_sd.jpg",
+  "snapshot": "20210509050631",
+  "url": "https://wiki.e3d-online.com/images/thumb/6/6a/Display_print_from_sd.jpg/450px-Display_print_from_sd.jpg",
+  "bytes": 18770
+ },
+ "Display_calibrate.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Your_First_Print"
+  ],
+  "original_path": "/images/a/aa/Display_calibrate.jpg",
+  "snapshot": "20210509050632",
+  "url": "https://wiki.e3d-online.com/images/thumb/a/aa/Display_calibrate.jpg/450px-Display_calibrate.jpg",
+  "bytes": 18193
+ },
  "Display_extruder_0.jpg": {
   "kind": "thumb-450px",
   "pages": [
@@ -289,15 +289,15 @@
   "url": "https://wiki.e3d-online.com/images/thumb/3/34/Display_extruder_0.jpg/450px-Display_extruder_0.jpg",
   "bytes": 17555
  },
- "298_steps.jpg": {
+ "Ruler_measure.jpg": {
   "kind": "thumb-450px",
   "pages": [
    "Your_First_Print"
   ],
-  "original_path": "/images/6/6b/298_steps.jpg",
-  "snapshot": "20210509050632",
-  "url": "https://wiki.e3d-online.com/images/thumb/6/6b/298_steps.jpg/450px-298_steps.jpg",
-  "bytes": 15790
+  "original_path": "/images/2/28/Ruler_measure.jpg",
+  "snapshot": "20210509050639",
+  "url": "https://wiki.e3d-online.com/images/thumb/2/28/Ruler_measure.jpg/450px-Ruler_measure.jpg",
+  "bytes": 26266
  },
  "304_steps.jpg": {
   "kind": "thumb-450px",
@@ -309,15 +309,25 @@
   "url": "https://wiki.e3d-online.com/images/thumb/1/1f/304_steps.jpg/450px-304_steps.jpg",
   "bytes": 22213
  },
- "Ruler_measure.jpg": {
+ "298_steps.jpg": {
   "kind": "thumb-450px",
   "pages": [
    "Your_First_Print"
   ],
-  "original_path": "/images/2/28/Ruler_measure.jpg",
-  "snapshot": "20210509050639",
-  "url": "https://wiki.e3d-online.com/images/thumb/2/28/Ruler_measure.jpg/450px-Ruler_measure.jpg",
-  "bytes": 26266
+  "original_path": "/images/6/6b/298_steps.jpg",
+  "snapshot": "20210509050632",
+  "url": "https://wiki.e3d-online.com/images/thumb/6/6b/298_steps.jpg/450px-298_steps.jpg",
+  "bytes": 15790
+ },
+ "Steps_correct.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Your_First_Print"
+  ],
+  "original_path": "/images/1/1b/Steps_correct.jpg",
+  "snapshot": "20210509050637",
+  "url": "https://wiki.e3d-online.com/images/thumb/1/1b/Steps_correct.jpg/450px-Steps_correct.jpg",
+  "bytes": 26263
  },
  "Spool_steps.jpg": {
   "kind": "thumb-450px",
@@ -339,16 +349,6 @@
   "url": "https://wiki.e3d-online.com/images/thumb/2/20/Sliced_benchy.jpg/450px-Sliced_benchy.jpg",
   "bytes": 31849
  },
- "Steps_correct.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Your_First_Print"
-  ],
-  "original_path": "/images/1/1b/Steps_correct.jpg",
-  "snapshot": "20210509050637",
-  "url": "https://wiki.e3d-online.com/images/thumb/1/1b/Steps_correct.jpg/450px-Steps_correct.jpg",
-  "bytes": 26263
- },
  "Display_temperatures.jpg": {
   "kind": "thumb-450px",
   "pages": [
@@ -369,16 +369,6 @@
   "url": "https://wiki.e3d-online.com/images/thumb/5/5c/Display_benchy.jpg/450px-Display_benchy.jpg",
   "bytes": 18769
  },
- "Stop_printing.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Your_First_Print"
-  ],
-  "original_path": "/images/5/57/Stop_printing.jpg",
-  "snapshot": "20210509050639",
-  "url": "https://wiki.e3d-online.com/images/thumb/5/57/Stop_printing.jpg/450px-Stop_printing.jpg",
-  "bytes": 19377
- },
  "Benchy_printing.jpg": {
   "kind": "thumb-450px",
   "pages": [
@@ -388,6 +378,16 @@
   "snapshot": "20210509050638",
   "url": "https://wiki.e3d-online.com/images/thumb/a/a6/Benchy_printing.jpg/450px-Benchy_printing.jpg",
   "bytes": 48394
+ },
+ "Stop_printing.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Your_First_Print"
+  ],
+  "original_path": "/images/5/57/Stop_printing.jpg",
+  "snapshot": "20210509050639",
+  "url": "https://wiki.e3d-online.com/images/thumb/5/57/Stop_printing.jpg/450px-Stop_printing.jpg",
+  "bytes": 19377
  },
  "Move_printhead.jpg": {
   "kind": "thumb-450px",
@@ -419,1857 +419,12 @@
   "url": "https://wiki.e3d-online.com/images/thumb/6/66/Printing_running.jpg/450px-Printing_running.jpg",
   "bytes": 31018
  },
- "Oictoprint_website.jpg": {
-  "kind": null,
-  "pages": [
-   "BigBox_OctoPrint_Upgrade"
-  ],
-  "original_path": "/images/4/48/Oictoprint_website.jpg"
- },
  "Benchy_finished.jpg": {
   "kind": null,
   "pages": [
    "Your_First_Print"
   ],
   "original_path": "/images/a/a4/Benchy_finished.jpg"
- },
- "Oictoprint_download.jpg": {
-  "kind": null,
-  "pages": [
-   "BigBox_OctoPrint_Upgrade"
-  ],
-  "original_path": "/images/2/23/Oictoprint_download.jpg"
- },
- "Octoprint_writing.jpg": {
-  "kind": null,
-  "pages": [
-   "BigBox_OctoPrint_Upgrade"
-  ],
-  "original_path": "/images/1/1b/Octoprint_writing.jpg"
- },
- "Octoprint_write.jpg": {
-  "kind": null,
-  "pages": [
-   "BigBox_OctoPrint_Upgrade"
-  ],
-  "original_path": "/images/8/89/Octoprint_write.jpg"
- },
- "Putty_download.jpg": {
-  "kind": null,
-  "pages": [
-   "BigBox_OctoPrint_Upgrade"
-  ],
-  "original_path": "/images/e/ee/Putty_download.jpg"
- },
- "Putty_open.jpg": {
-  "kind": null,
-  "pages": [
-   "BigBox_OctoPrint_Upgrade"
-  ],
-  "original_path": "/images/9/94/Putty_open.jpg"
- },
- "Insert_sd.jpg": {
-  "kind": null,
-  "pages": [
-   "BigBox_OctoPrint_Upgrade"
-  ],
-  "original_path": "/images/2/2e/Insert_sd.jpg"
- },
- "Insert_network.jpg": {
-  "kind": null,
-  "pages": [
-   "BigBox_OctoPrint_Upgrade"
-  ],
-  "original_path": "/images/b/b7/Insert_network.jpg"
- },
- "Push_sd.jpg": {
-  "kind": null,
-  "pages": [
-   "BigBox_OctoPrint_Upgrade"
-  ],
-  "original_path": "/images/b/bd/Push_sd.jpg"
- },
- "Putty_alert.jpg": {
-  "kind": null,
-  "pages": [
-   "BigBox_OctoPrint_Upgrade"
-  ],
-  "original_path": "/images/b/b5/Putty_alert.jpg"
- },
- "Putty_login.jpg": {
-  "kind": null,
-  "pages": [
-   "BigBox_OctoPrint_Upgrade"
-  ],
-  "original_path": "/images/a/a3/Putty_login.jpg"
- },
- "Putty_config.jpg": {
-  "kind": null,
-  "pages": [
-   "BigBox_OctoPrint_Upgrade"
-  ],
-  "original_path": "/images/e/e9/Putty_config.jpg"
- },
- "Putty_raspi_config.jpg": {
-  "kind": null,
-  "pages": [
-   "BigBox_OctoPrint_Upgrade"
-  ],
-  "original_path": "/images/c/c5/Putty_raspi_config.jpg"
- },
- "Putty_expand.jpg": {
-  "kind": null,
-  "pages": [
-   "BigBox_OctoPrint_Upgrade"
-  ],
-  "original_path": "/images/8/88/Putty_expand.jpg"
- },
- "Browser.jpg": {
-  "kind": null,
-  "pages": [
-   "BigBox_OctoPrint_Upgrade"
-  ],
-  "original_path": "/images/7/7c/Browser.jpg"
- },
- "Putty_advanced.jpg": {
-  "kind": null,
-  "pages": [
-   "BigBox_OctoPrint_Upgrade"
-  ],
-  "original_path": "/images/1/15/Putty_advanced.jpg"
- },
- "Putty_reboot.jpg": {
-  "kind": null,
-  "pages": [
-   "BigBox_OctoPrint_Upgrade"
-  ],
-  "original_path": "/images/5/50/Putty_reboot.jpg"
- },
- "Bigbox_update.jpg": {
-  "kind": null,
-  "pages": [
-   "BigBox_OctoPrint_Upgrade"
-  ],
-  "original_path": "/images/3/30/Bigbox_update.jpg"
- },
- "Bigbox_reboot.jpg": {
-  "kind": null,
-  "pages": [
-   "BigBox_OctoPrint_Upgrade"
-  ],
-  "original_path": "/images/f/f2/Bigbox_reboot.jpg"
- },
- "Reboot.jpg": {
-  "kind": null,
-  "pages": [
-   "BigBox_OctoPrint_Upgrade"
-  ],
-  "original_path": "/images/a/ac/Reboot.jpg"
- },
- "Bigbox_reload.jpg": {
-  "kind": null,
-  "pages": [
-   "BigBox_OctoPrint_Upgrade"
-  ],
-  "original_path": "/images/8/80/Bigbox_reload.jpg"
- },
- "Printer_profile.jpg": {
-  "kind": null,
-  "pages": [
-   "BigBox_OctoPrint_Upgrade"
-  ],
-  "original_path": "/images/1/18/Printer_profile.jpg"
- },
- "Logged_in.jpg": {
-  "kind": null,
-  "pages": [
-   "BigBox_OctoPrint_Upgrade"
-  ],
-  "original_path": "/images/3/3a/Logged_in.jpg"
- },
- "Serial_connection.jpg": {
-  "kind": null,
-  "pages": [
-   "BigBox_OctoPrint_Upgrade"
-  ],
-  "original_path": "/images/a/a7/Serial_connection.jpg"
- },
- "Printer_connect.jpg": {
-  "kind": null,
-  "pages": [
-   "BigBox_OctoPrint_Upgrade"
-  ],
-  "original_path": "/images/1/1f/Printer_connect.jpg"
- },
- "Printer_scripts.jpg": {
-  "kind": null,
-  "pages": [
-   "BigBox_OctoPrint_Upgrade"
-  ],
-  "original_path": "/images/7/75/Printer_scripts.jpg"
- },
- "Printer_online.jpg": {
-  "kind": null,
-  "pages": [
-   "BigBox_OctoPrint_Upgrade"
-  ],
-  "original_path": "/images/2/2f/Printer_online.jpg"
- },
- "Printer_appearance.jpg": {
-  "kind": null,
-  "pages": [
-   "BigBox_OctoPrint_Upgrade"
-  ],
-  "original_path": "/images/1/1b/Printer_appearance.jpg"
- },
- "Printer_control.jpg": {
-  "kind": null,
-  "pages": [
-   "BigBox_OctoPrint_Upgrade"
-  ],
-  "original_path": "/images/b/bd/Printer_control.jpg"
- },
- "Plugins.jpg": {
-  "kind": null,
-  "pages": [
-   "BigBox_OctoPrint_Upgrade"
-  ],
-  "original_path": "/images/4/4f/Plugins.jpg"
- },
- "Plugins_by_date.jpg": {
-  "kind": null,
-  "pages": [
-   "BigBox_OctoPrint_Upgrade"
-  ],
-  "original_path": "/images/d/d0/Plugins_by_date.jpg"
- },
- "Plugins_eeprom.jpg": {
-  "kind": null,
-  "pages": [
-   "BigBox_OctoPrint_Upgrade"
-  ],
-  "original_path": "/images/d/dd/Plugins_eeprom.jpg"
- },
- "Plugins_paste.jpg": {
-  "kind": null,
-  "pages": [
-   "BigBox_OctoPrint_Upgrade"
-  ],
-  "original_path": "/images/5/50/Plugins_paste.jpg"
- },
- "Plugins_installing.jpg": {
-  "kind": null,
-  "pages": [
-   "BigBox_OctoPrint_Upgrade"
-  ],
-  "original_path": "/images/9/9d/Plugins_installing.jpg"
- },
- "Plugins_done.jpg": {
-  "kind": null,
-  "pages": [
-   "BigBox_OctoPrint_Upgrade"
-  ],
-  "original_path": "/images/f/f2/Plugins_done.jpg"
- },
- "Printing_timelapse.jpg": {
-  "kind": null,
-  "pages": [
-   "BigBox_OctoPrint_Upgrade"
-  ],
-  "original_path": "/images/c/c4/Printing_timelapse.jpg"
- },
- "Printing_temperature.jpg": {
-  "kind": null,
-  "pages": [
-   "BigBox_OctoPrint_Upgrade"
-  ],
-  "original_path": "/images/5/51/Printing_temperature.jpg"
- },
- "Printing_terminal.jpg": {
-  "kind": null,
-  "pages": [
-   "BigBox_OctoPrint_Upgrade"
-  ],
-  "original_path": "/images/1/14/Printing_terminal.jpg"
- },
- "Printing_print.jpg": {
-  "kind": null,
-  "pages": [
-   "BigBox_OctoPrint_Upgrade"
-  ],
-  "original_path": "/images/5/5f/Printing_print.jpg"
- },
- "Windows_RUMBA_Drivers_extracted.png": {
-  "kind": null,
-  "pages": [
-   "BigBox_Firmware_Flashing_Guide"
-  ],
-  "original_path": "/images/4/4e/Windows_RUMBA_Drivers_extracted.png"
- },
- "Blue_usb_mini.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "BigBox_Firmware_Flashing_Guide",
-   "BigBox_Printer_Sub-assemblies"
-  ],
-  "original_path": "/images/b/b8/Blue_usb_mini.jpg",
-  "snapshot": "20210508114313",
-  "url": "https://wiki.e3d-online.com/images/thumb/b/b8/Blue_usb_mini.jpg/450px-Blue_usb_mini.jpg",
-  "bytes": 25570
- },
- "Windows_RUMBA_Drivers_installation_1.png": {
-  "kind": null,
-  "pages": [
-   "BigBox_Firmware_Flashing_Guide"
-  ],
-  "original_path": "/images/6/60/Windows_RUMBA_Drivers_installation_1.png"
- },
- "USB_Connection.JPG": {
-  "kind": "thumb-600px",
-  "pages": [
-   "BigBox_Firmware_Flashing_Guide"
-  ],
-  "original_path": "/images/e/e4/USB_Connection.JPG",
-  "snapshot": "20200127162603",
-  "url": "https://wiki.e3d-online.com/images/thumb/e/e4/USB_Connection.JPG/600px-USB_Connection.JPG",
-  "bytes": 40627
- },
- "Windows_XLoader.png": {
-  "kind": null,
-  "pages": [
-   "BigBox_Firmware_Flashing_Guide"
-  ],
-  "original_path": "/images/f/f5/Windows_XLoader.png"
- },
- "Windows_RUMBA_Drivers_installation_2.png": {
-  "kind": null,
-  "pages": [
-   "BigBox_Firmware_Flashing_Guide"
-  ],
-  "original_path": "/images/c/ca/Windows_RUMBA_Drivers_installation_2.png"
- },
- "Windows_XLoader_setup.png": {
-  "kind": null,
-  "pages": [
-   "BigBox_Firmware_Flashing_Guide"
-  ],
-  "original_path": "/images/7/71/Windows_XLoader_setup.png"
- },
- "Windows_XLoader_uploading.png": {
-  "kind": null,
-  "pages": [
-   "BigBox_Firmware_Flashing_Guide"
-  ],
-  "original_path": "/images/1/13/Windows_XLoader_uploading.png"
- },
- "Windows_XLoader_finished.png": {
-  "kind": null,
-  "pages": [
-   "BigBox_Firmware_Flashing_Guide"
-  ],
-  "original_path": "/images/2/20/Windows_XLoader_finished.png"
- },
- "Windows_Device_Manager_connected_RUMBA.png": {
-  "kind": null,
-  "pages": [
-   "BigBox_Firmware_Flashing_Guide"
-  ],
-  "original_path": "/images/1/1b/Windows_Device_Manager_connected_RUMBA.png"
- },
- "HexUploader_setup.png": {
-  "kind": null,
-  "pages": [
-   "BigBox_Firmware_Flashing_Guide"
-  ],
-  "original_path": "/images/9/90/HexUploader_setup.png"
- },
- "HexUploader_file_selection.png": {
-  "kind": null,
-  "pages": [
-   "BigBox_Firmware_Flashing_Guide"
-  ],
-  "original_path": "/images/8/82/HexUploader_file_selection.png"
- },
- "HexUploader_writing.png": {
-  "kind": null,
-  "pages": [
-   "BigBox_Firmware_Flashing_Guide"
-  ],
-  "original_path": "/images/9/97/HexUploader_writing.png"
- },
- "HexUploader_finished.png": {
-  "kind": null,
-  "pages": [
-   "BigBox_Firmware_Flashing_Guide"
-  ],
-  "original_path": "/images/4/49/HexUploader_finished.png"
- },
- "OctoPrint_install_FirmwareUpdater_plugin.png": {
-  "kind": null,
-  "pages": [
-   "BigBox_Firmware_Flashing_Guide"
-  ],
-  "original_path": "/images/e/e2/OctoPrint_install_FirmwareUpdater_plugin.png"
- },
- "OctoPrint_FirmwareUpdater.png": {
-  "kind": null,
-  "pages": [
-   "BigBox_Firmware_Flashing_Guide"
-  ],
-  "original_path": "/images/f/f1/OctoPrint_FirmwareUpdater.png"
- },
- "OctoPrint_Plugin_Manager_dialog.png": {
-  "kind": null,
-  "pages": [
-   "BigBox_Firmware_Flashing_Guide"
-  ],
-  "original_path": "/images/4/42/OctoPrint_Plugin_Manager_dialog.png"
- },
- "OctoPrint_FirmwareUpdater_configuration.png": {
-  "kind": null,
-  "pages": [
-   "BigBox_Firmware_Flashing_Guide"
-  ],
-  "original_path": "/images/a/a1/OctoPrint_FirmwareUpdater_configuration.png"
- },
- "OctoPrint_FirmwareUpdater_flash_firmware.png": {
-  "kind": null,
-  "pages": [
-   "BigBox_Firmware_Flashing_Guide"
-  ],
-  "original_path": "/images/4/45/OctoPrint_FirmwareUpdater_flash_firmware.png"
- },
- "Arduino_include_library.png": {
-  "kind": null,
-  "pages": [
-   "BigBox_Firmware_Flashing_Guide"
-  ],
-  "original_path": "/images/4/47/Arduino_include_library.png"
- },
- "X_m3_f.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/d/d5/X_m3_f.jpg",
-  "snapshot": "20210508123613",
-  "url": "https://wiki.e3d-online.com/images/thumb/d/d5/X_m3_f.jpg/450px-X_m3_f.jpg",
-  "bytes": 29261
- },
- "X_m3_r.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/3/3a/X_m3_r.jpg",
-  "snapshot": "20210508123625",
-  "url": "https://wiki.e3d-online.com/images/thumb/3/3a/X_m3_r.jpg/450px-X_m3_r.jpg",
-  "bytes": 25364
- },
- "X_m3_i.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/e/eb/X_m3_i.jpg",
-  "snapshot": "20210508123615",
-  "url": "https://wiki.e3d-online.com/images/thumb/e/eb/X_m3_i.jpg/450px-X_m3_i.jpg",
-  "bytes": 21870
- },
- "X_pulley_tighten.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/d/d7/X_pulley_tighten.jpg",
-  "snapshot": "20210508123614",
-  "url": "https://wiki.e3d-online.com/images/thumb/d/d7/X_pulley_tighten.jpg/450px-X_pulley_tighten.jpg",
-  "bytes": 24890
- },
- "X_pulley_align.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/7/7d/X_pulley_align.jpg",
-  "snapshot": "20210508123613",
-  "url": "https://wiki.e3d-online.com/images/thumb/7/7d/X_pulley_align.jpg/450px-X_pulley_align.jpg",
-  "bytes": 26627
- },
- "Xy_front.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/1/1f/Xy_front.jpg",
-  "snapshot": "20210508123612",
-  "url": "https://wiki.e3d-online.com/images/thumb/1/1f/Xy_front.jpg/450px-Xy_front.jpg",
-  "bytes": 27556
- },
- "X_belt_tighten.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/5/5a/X_belt_tighten.jpg",
-  "snapshot": "20210508123631",
-  "url": "https://wiki.e3d-online.com/images/thumb/5/5a/X_belt_tighten.jpg/450px-X_belt_tighten.jpg",
-  "bytes": 31741
- },
- "Xy_front_cork.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/0/02/Xy_front_cork.jpg",
-  "snapshot": "20210508123624",
-  "url": "https://wiki.e3d-online.com/images/thumb/0/02/Xy_front_cork.jpg/450px-Xy_front_cork.jpg",
-  "bytes": 16730
- },
- "Xy_front_tighten.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/6/64/Xy_front_tighten.jpg",
-  "snapshot": "20210508123614",
-  "url": "https://wiki.e3d-online.com/images/thumb/6/64/Xy_front_tighten.jpg/450px-Xy_front_tighten.jpg",
-  "bytes": 20758
- },
- "Xy_back.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/e/e9/Xy_back.jpg",
-  "snapshot": "20210508123613",
-  "url": "https://wiki.e3d-online.com/images/thumb/e/e9/Xy_back.jpg/450px-Xy_back.jpg",
-  "bytes": 24476
- },
- "Xy_back_tighten.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/d/d4/Xy_back_tighten.jpg",
-  "snapshot": "20210508123615",
-  "url": "https://wiki.e3d-online.com/images/thumb/d/d4/Xy_back_tighten.jpg/450px-Xy_back_tighten.jpg",
-  "bytes": 22007
- },
- "Xy_pulley_push.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/e/ef/Xy_pulley_push.jpg",
-  "snapshot": "20210508123621",
-  "url": "https://wiki.e3d-online.com/images/thumb/e/ef/Xy_pulley_push.jpg/450px-Xy_pulley_push.jpg",
-  "bytes": 20618
- },
- "Xy_belt_tension.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/b/bf/Xy_belt_tension.jpg",
-  "snapshot": "20210508123620",
-  "url": "https://wiki.e3d-online.com/images/thumb/b/bf/Xy_belt_tension.jpg/450px-Xy_belt_tension.jpg",
-  "bytes": 21152
- },
- "Xy_back_m3.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/f/f2/Xy_back_m3.jpg",
-  "snapshot": "20210508123628",
-  "url": "https://wiki.e3d-online.com/images/thumb/f/f2/Xy_back_m3.jpg/450px-Xy_back_m3.jpg",
-  "bytes": 15537
- },
- "Xy_front_m3.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/b/bd/Xy_front_m3.jpg",
-  "snapshot": "20210508123632",
-  "url": "https://wiki.e3d-online.com/images/thumb/b/bd/Xy_front_m3.jpg/450px-Xy_front_m3.jpg",
-  "bytes": 18883
- },
- "Xy_front_measure.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/7/71/Xy_front_measure.jpg",
-  "snapshot": "20210508123619",
-  "url": "https://wiki.e3d-online.com/images/thumb/7/71/Xy_front_measure.jpg/450px-Xy_front_measure.jpg",
-  "bytes": 28101
- },
- "Xy_front_measure_other.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/8/85/Xy_front_measure_other.jpg",
-  "snapshot": "20210508123640",
-  "url": "https://wiki.e3d-online.com/images/thumb/8/85/Xy_front_measure_other.jpg/450px-Xy_front_measure_other.jpg",
-  "bytes": 23490
- },
- "Xy_pulley_tighten.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/5/59/Xy_pulley_tighten.jpg",
-  "snapshot": "20210508123630",
-  "url": "https://wiki.e3d-online.com/images/thumb/5/59/Xy_pulley_tighten.jpg/450px-Xy_pulley_tighten.jpg",
-  "bytes": 21674
- },
- "Y_motor_align.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/1/1b/Y_motor_align.jpg",
-  "snapshot": "20210508123634",
-  "url": "https://wiki.e3d-online.com/images/thumb/1/1b/Y_motor_align.jpg/450px-Y_motor_align.jpg",
-  "bytes": 19115
- },
- "Y_motor_grubs.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/f/f8/Y_motor_grubs.jpg",
-  "snapshot": "20210508123621",
-  "url": "https://wiki.e3d-online.com/images/thumb/f/f8/Y_motor_grubs.jpg/450px-Y_motor_grubs.jpg",
-  "bytes": 22658
- },
- "Y_motor_push.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/e/e8/Y_motor_push.jpg",
-  "snapshot": "20210508123626",
-  "url": "https://wiki.e3d-online.com/images/thumb/e/e8/Y_motor_push.jpg/450px-Y_motor_push.jpg",
-  "bytes": 20637
- },
- "Y_motor_screw.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/8/81/Y_motor_screw.jpg",
-  "snapshot": "20210508123636",
-  "url": "https://wiki.e3d-online.com/images/thumb/8/81/Y_motor_screw.jpg/450px-Y_motor_screw.jpg",
-  "bytes": 17359
- },
- "Z_check.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/6/65/Z_check.jpg",
-  "snapshot": "20210508123630",
-  "url": "https://wiki.e3d-online.com/images/thumb/6/65/Z_check.jpg/450px-Z_check.jpg",
-  "bytes": 25104
- },
- "Z_corner.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/9/97/Z_corner.jpg",
-  "snapshot": "20210508123633",
-  "url": "https://wiki.e3d-online.com/images/thumb/9/97/Z_corner.jpg/450px-Z_corner.jpg",
-  "bytes": 16424
- },
- "Z_rods.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/6/68/Z_rods.jpg",
-  "snapshot": "20210508123641",
-  "url": "https://wiki.e3d-online.com/images/thumb/6/68/Z_rods.jpg/450px-Z_rods.jpg",
-  "bytes": 27506
- },
- "Bed_up.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/e/e9/Bed_up.jpg",
-  "snapshot": "20210508123657",
-  "url": "https://wiki.e3d-online.com/images/thumb/e/e9/Bed_up.jpg/450px-Bed_up.jpg",
-  "bytes": 24158
- },
- "Leadscrew_varients.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/7/7c/Leadscrew_varients.jpg",
-  "snapshot": "20210508123654",
-  "url": "https://wiki.e3d-online.com/images/thumb/7/7c/Leadscrew_varients.jpg/450px-Leadscrew_varients.jpg",
-  "bytes": 15824
- },
- "Lead_cover_bottom.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/0/01/Lead_cover_bottom.jpg",
-  "snapshot": "20210508123659",
-  "url": "https://wiki.e3d-online.com/images/thumb/0/01/Lead_cover_bottom.jpg/450px-Lead_cover_bottom.jpg",
-  "bytes": 10972
- },
- "Leadscrew_fit.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/d/df/Leadscrew_fit.jpg",
-  "snapshot": "20210508123641",
-  "url": "https://wiki.e3d-online.com/images/thumb/d/df/Leadscrew_fit.jpg/450px-Leadscrew_fit.jpg",
-  "bytes": 22079
- },
- "Leadscrew_coupler.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/2/2f/Leadscrew_coupler.jpg",
-  "snapshot": "20210508123700",
-  "url": "https://wiki.e3d-online.com/images/thumb/2/2f/Leadscrew_coupler.jpg/450px-Leadscrew_coupler.jpg",
-  "bytes": 18546
- },
- "Leadscrew_leadscrew.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/b/bd/Leadscrew_leadscrew.jpg",
-  "snapshot": "20210508123710",
-  "url": "https://wiki.e3d-online.com/images/thumb/b/bd/Leadscrew_leadscrew.jpg/450px-Leadscrew_leadscrew.jpg",
-  "bytes": 32890
- },
- "Top_bottoms.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/c/cc/Top_bottoms.jpg",
-  "snapshot": "20210508123654",
-  "url": "https://wiki.e3d-online.com/images/thumb/c/cc/Top_bottoms.jpg/450px-Top_bottoms.jpg",
-  "bytes": 27705
- },
- "Top_bottom.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/f/f9/Top_bottom.jpg",
-  "snapshot": "20210508123655",
-  "url": "https://wiki.e3d-online.com/images/thumb/f/f9/Top_bottom.jpg/450px-Top_bottom.jpg",
-  "bytes": 22350
- },
- "Leadscrew_couplers.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/0/0e/Leadscrew_couplers.jpg",
-  "snapshot": "20210508123655",
-  "url": "https://wiki.e3d-online.com/images/thumb/0/0e/Leadscrew_couplers.jpg/450px-Leadscrew_couplers.jpg",
-  "bytes": 15587
- },
- "Bed_measure.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/3/34/Bed_measure.jpg",
-  "snapshot": "20210508123700",
-  "url": "https://wiki.e3d-online.com/images/thumb/3/34/Bed_measure.jpg/450px-Bed_measure.jpg",
-  "bytes": 19861
- },
- "Bed_measure_other.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/9/91/Bed_measure_other.jpg",
-  "snapshot": "20210508123656",
-  "url": "https://wiki.e3d-online.com/images/thumb/9/91/Bed_measure_other.jpg/450px-Bed_measure_other.jpg",
-  "bytes": 23030
- },
- "Clips.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/b/b3/Clips.jpg",
-  "snapshot": "20210508123703",
-  "url": "https://wiki.e3d-online.com/images/thumb/b/b3/Clips.jpg/450px-Clips.jpg",
-  "bytes": 9448
- },
- "Clips_squash.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/b/b5/Clips_squash.jpg",
-  "snapshot": "20210508123724",
-  "url": "https://wiki.e3d-online.com/images/thumb/b/b5/Clips_squash.jpg/450px-Clips_squash.jpg",
-  "bytes": 13751
- },
- "Clips_break.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/1/19/Clips_break.jpg",
-  "snapshot": "20210508123726",
-  "url": "https://wiki.e3d-online.com/images/thumb/1/19/Clips_break.jpg/450px-Clips_break.jpg",
-  "bytes": 14213
- },
- "Clips_prong_bent.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/2/21/Clips_prong_bent.jpg",
-  "snapshot": "20210508123727",
-  "url": "https://wiki.e3d-online.com/images/thumb/2/21/Clips_prong_bent.jpg/450px-Clips_prong_bent.jpg",
-  "bytes": 9938
- },
- "Clips_prong.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/9/91/Clips_prong.jpg",
-  "snapshot": "20210508123728",
-  "url": "https://wiki.e3d-online.com/images/thumb/9/91/Clips_prong.jpg/450px-Clips_prong.jpg",
-  "bytes": 12419
- },
- "Clips_ba.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/b/b5/Clips_ba.jpg",
-  "snapshot": "20210508123726",
-  "url": "https://wiki.e3d-online.com/images/thumb/b/b5/Clips_ba.jpg/450px-Clips_ba.jpg",
-  "bytes": 11874
- },
- "Glass.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/e/e2/Glass.jpg",
-  "snapshot": "20210508123725",
-  "url": "https://wiki.e3d-online.com/images/thumb/e/e2/Glass.jpg/450px-Glass.jpg",
-  "bytes": 37343
- },
- "Glass_cliped.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/e/e0/Glass_cliped.jpg",
-  "snapshot": "20210508123727",
-  "url": "https://wiki.e3d-online.com/images/thumb/e/e0/Glass_cliped.jpg/450px-Glass_cliped.jpg",
-  "bytes": 33070
- },
- "Glass_clip.jpg": {
-  "kind": "thumb-300px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/6/6e/Glass_clip.jpg",
-  "snapshot": "20210523193657",
-  "url": "https://wiki.e3d-online.com/images/thumb/6/6e/Glass_clip.jpg/300px-Glass_clip.jpg",
-  "bytes": 19856
- },
- "Wiper.jpg": {
-  "kind": "thumb-300px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/1/15/Wiper.jpg",
-  "snapshot": "20210523193714",
-  "url": "https://wiki.e3d-online.com/images/thumb/1/15/Wiper.jpg/300px-Wiper.jpg",
-  "bytes": 12979
- },
- "Glass_clips.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/4/47/Glass_clips.jpg",
-  "snapshot": "20210508123728",
-  "url": "https://wiki.e3d-online.com/images/thumb/4/47/Glass_clips.jpg/450px-Glass_clips.jpg",
-  "bytes": 37414
- },
- "Wiper_adjust.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/d/db/Wiper_adjust.jpg",
-  "snapshot": "20210508123646",
-  "url": "https://wiki.e3d-online.com/images/thumb/d/db/Wiper_adjust.jpg/450px-Wiper_adjust.jpg",
-  "bytes": 20726
- },
- "Wiper_undo.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/a/ac/Wiper_undo.jpg",
-  "snapshot": "20210508123727",
-  "url": "https://wiki.e3d-online.com/images/thumb/a/ac/Wiper_undo.jpg/450px-Wiper_undo.jpg",
-  "bytes": 18024
- },
- "Check_y.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/c/c6/Check_y.jpg",
-  "snapshot": "20210508123646",
-  "url": "https://wiki.e3d-online.com/images/thumb/c/c6/Check_y.jpg/450px-Check_y.jpg",
-  "bytes": 23309
- },
- "Fan.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/3/32/Fan.jpg",
-  "snapshot": "20210508123731",
-  "url": "https://wiki.e3d-online.com/images/thumb/3/32/Fan.jpg/450px-Fan.jpg",
-  "bytes": 31312
- },
- "Check_x.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/d/de/Check_x.jpg",
-  "snapshot": "20210508123719",
-  "url": "https://wiki.e3d-online.com/images/thumb/d/de/Check_x.jpg/450px-Check_x.jpg",
-  "bytes": 28821
- },
- "Ir.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/a/aa/Ir.jpg",
-  "snapshot": "20210508123719",
-  "url": "https://wiki.e3d-online.com/images/thumb/a/aa/Ir.jpg/450px-Ir.jpg",
-  "bytes": 22896
- },
- "Power_on.jpg": {
-  "kind": "thumb-300px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/e/e3/Power_on.jpg",
-  "snapshot": "20210523193623",
-  "url": "https://wiki.e3d-online.com/images/thumb/e/e3/Power_on.jpg/300px-Power_on.jpg",
-  "bytes": 11915
- },
- "Power_on_ready.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/8/87/Power_on_ready.jpg",
-  "snapshot": "20210508123804",
-  "url": "https://wiki.e3d-online.com/images/thumb/8/87/Power_on_ready.jpg/450px-Power_on_ready.jpg",
-  "bytes": 19785
- },
- "Display_info.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/a/a5/Display_info.jpg",
-  "snapshot": "20210508123814",
-  "url": "https://wiki.e3d-online.com/images/thumb/a/a5/Display_info.jpg/450px-Display_info.jpg",
-  "bytes": 16642
- },
- "Display_Motion.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/1/1a/Display_Motion.jpg",
-  "snapshot": "20210508123804",
-  "url": "https://wiki.e3d-online.com/images/thumb/1/1a/Display_Motion.jpg/450px-Display_Motion.jpg",
-  "bytes": 17163
- },
- "Display_zoff.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/e/e7/Display_zoff.jpg",
-  "snapshot": "20210508123805",
-  "url": "https://wiki.e3d-online.com/images/thumb/e/e7/Display_zoff.jpg/450px-Display_zoff.jpg",
-  "bytes": 19300
- },
- "Display_control.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/d/d4/Display_control.jpg",
-  "snapshot": "20210508123804",
-  "url": "https://wiki.e3d-online.com/images/thumb/d/d4/Display_control.jpg/450px-Display_control.jpg",
-  "bytes": 15864
- },
- "Display_controlback.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/2/22/Display_controlback.jpg",
-  "snapshot": "20230520183453",
-  "url": "https://wiki.e3d-online.com/images/thumb/2/22/Display_controlback.jpg/450px-Display_controlback.jpg",
-  "bytes": 18544
- },
- "Display_zoffadj.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/c/ce/Display_zoffadj.jpg",
-  "snapshot": "20210508123805",
-  "url": "https://wiki.e3d-online.com/images/thumb/c/ce/Display_zoffadj.jpg/450px-Display_zoffadj.jpg",
-  "bytes": 15892
- },
- "Display_z_steps.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/5/5a/Display_z_steps.jpg",
-  "snapshot": "20210508123805",
-  "url": "https://wiki.e3d-online.com/images/thumb/5/5a/Display_z_steps.jpg/450px-Display_z_steps.jpg",
-  "bytes": 22540
- },
- "Display_store.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/8/87/Display_store.jpg",
-  "snapshot": "20230520183420",
-  "url": "https://wiki.e3d-online.com/images/thumb/8/87/Display_store.jpg/450px-Display_store.jpg",
-  "bytes": 17172
- },
- "Display_autohome.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/7/7d/Display_autohome.jpg",
-  "snapshot": "20210508123818",
-  "url": "https://wiki.e3d-online.com/images/thumb/7/7d/Display_autohome.jpg/450px-Display_autohome.jpg",
-  "bytes": 17306
- },
- "Display_z_steps_400.jpg": {
-  "kind": "thumb-300px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/f/f6/Display_z_steps_400.jpg",
-  "snapshot": "20210523193727",
-  "url": "https://wiki.e3d-online.com/images/thumb/f/f6/Display_z_steps_400.jpg/300px-Display_z_steps_400.jpg",
-  "bytes": 12906
- },
- "Display_5mm.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/f/f1/Display_5mm.jpg",
-  "snapshot": "20230520183415",
-  "url": "https://wiki.e3d-online.com/images/thumb/f/f1/Display_5mm.jpg/450px-Display_5mm.jpg",
-  "bytes": 20966
- },
- "Display_autohomed.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/d/db/Display_autohomed.jpg",
-  "snapshot": "20230520183520",
-  "url": "https://wiki.e3d-online.com/images/thumb/d/db/Display_autohomed.jpg/450px-Display_autohomed.jpg",
-  "bytes": 37012
- },
- "Display_0.1.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/c/c7/Display_0.1.jpg",
-  "snapshot": "20210508123800",
-  "url": "https://wiki.e3d-online.com/images/thumb/c/c7/Display_0.1.jpg/450px-Display_0.1.jpg",
-  "bytes": 17147
- },
- "Display_z.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/1/1d/Display_z.jpg",
-  "snapshot": "20210508123809",
-  "url": "https://wiki.e3d-online.com/images/thumb/1/1d/Display_z.jpg/450px-Display_z.jpg",
-  "bytes": 18009
- },
- "Display_moveaxis.jpg": {
-  "kind": "thumb-300px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/4/46/Display_moveaxis.jpg",
-  "snapshot": "20210523193732",
-  "url": "https://wiki.e3d-online.com/images/thumb/4/46/Display_moveaxis.jpg/300px-Display_moveaxis.jpg",
-  "bytes": 11230
- },
- "Move_z.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/c/c4/Move_z.jpg",
-  "snapshot": "20210508123809",
-  "url": "https://wiki.e3d-online.com/images/thumb/c/c4/Move_z.jpg/450px-Move_z.jpg",
-  "bytes": 27535
- },
- "Ir_press.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/2/2e/Ir_press.jpg",
-  "snapshot": "20210508123743",
-  "url": "https://wiki.e3d-online.com/images/thumb/2/2e/Ir_press.jpg/450px-Ir_press.jpg",
-  "bytes": 38023
- },
- "Belt_bed.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/d/d8/Belt_bed.jpg",
-  "snapshot": "20210508123811",
-  "url": "https://wiki.e3d-online.com/images/thumb/d/d8/Belt_bed.jpg/450px-Belt_bed.jpg",
-  "bytes": 44249
- },
- "Cut_belt.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/d/df/Cut_belt.jpg",
-  "snapshot": "20210508123810",
-  "url": "https://wiki.e3d-online.com/images/thumb/d/df/Cut_belt.jpg/450px-Cut_belt.jpg",
-  "bytes": 12339
- },
- "Ir_tighten.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/9/96/Ir_tighten.jpg",
-  "snapshot": "20210508123744",
-  "url": "https://wiki.e3d-online.com/images/thumb/9/96/Ir_tighten.jpg/450px-Ir_tighten.jpg",
-  "bytes": 34591
- },
- "Movez_touch.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/d/da/Movez_touch.jpg",
-  "snapshot": "20210508123818",
-  "url": "https://wiki.e3d-online.com/images/thumb/d/da/Movez_touch.jpg/450px-Movez_touch.jpg",
-  "bytes": 25881
- },
- "Z_autohomed.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/d/d9/Z_autohomed.jpg",
-  "snapshot": "20210508123811",
-  "url": "https://wiki.e3d-online.com/images/thumb/d/d9/Z_autohomed.jpg/450px-Z_autohomed.jpg",
-  "bytes": 27400
- },
- "Z_difference.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/8/88/Z_difference.jpg",
-  "snapshot": "20210508123819",
-  "url": "https://wiki.e3d-online.com/images/thumb/8/88/Z_difference.jpg/450px-Z_difference.jpg",
-  "bytes": 15998
- },
- "Movez_5.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/b/bf/Movez_5.jpg",
-  "snapshot": "20210508123738",
-  "url": "https://wiki.e3d-online.com/images/thumb/b/bf/Movez_5.jpg/450px-Movez_5.jpg",
-  "bytes": 16545
- },
- "Z_offset.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/2/2c/Z_offset.jpg",
-  "snapshot": "20210508123818",
-  "url": "https://wiki.e3d-online.com/images/thumb/2/2c/Z_offset.jpg/450px-Z_offset.jpg",
-  "bytes": 16477
- },
- "Z_calibrated.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/9/9f/Z_calibrated.jpg",
-  "snapshot": "20210508123815",
-  "url": "https://wiki.e3d-online.com/images/thumb/9/9f/Z_calibrated.jpg/450px-Z_calibrated.jpg",
-  "bytes": 23727
- },
- "Zero_xy.jpg": {
-  "kind": "thumb-300px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/2/25/Zero_xy.jpg",
-  "snapshot": "20210523193747",
-  "url": "https://wiki.e3d-online.com/images/thumb/2/25/Zero_xy.jpg/300px-Zero_xy.jpg",
-  "bytes": 20507
- },
- "Move_x.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/6/67/Move_x.jpg",
-  "snapshot": "20210508123821",
-  "url": "https://wiki.e3d-online.com/images/thumb/6/67/Move_x.jpg/450px-Move_x.jpg",
-  "bytes": 17614
- },
- "Move_x_0.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/b/bb/Move_x_0.jpg",
-  "snapshot": "20210508123815",
-  "url": "https://wiki.e3d-online.com/images/thumb/b/bb/Move_x_0.jpg/450px-Move_x_0.jpg",
-  "bytes": 15888
- },
- "Move_x_offset_adjust.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/f/f0/Move_x_offset_adjust.jpg",
-  "snapshot": "20210508123817",
-  "url": "https://wiki.e3d-online.com/images/thumb/f/f0/Move_x_offset_adjust.jpg/450px-Move_x_offset_adjust.jpg",
-  "bytes": 22053
- },
- "Move_x_offset.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/6/69/Move_x_offset.jpg",
-  "snapshot": "20210508123817",
-  "url": "https://wiki.e3d-online.com/images/thumb/6/69/Move_x_offset.jpg/450px-Move_x_offset.jpg",
-  "bytes": 25080
- },
- "Move_y_offset.jpg": {
-  "kind": "thumb-300px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/3/3d/Move_y_offset.jpg",
-  "snapshot": "20210523193753",
-  "url": "https://wiki.e3d-online.com/images/thumb/3/3d/Move_y_offset.jpg/300px-Move_y_offset.jpg",
-  "bytes": 12269
- },
- "Move_x_offset_correct.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/1/1d/Move_x_offset_correct.jpg",
-  "snapshot": "20210508123828",
-  "url": "https://wiki.e3d-online.com/images/thumb/1/1d/Move_x_offset_correct.jpg/450px-Move_x_offset_correct.jpg",
-  "bytes": 25778
- },
- "Loosen_z.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/a/ab/Loosen_z.jpg",
-  "snapshot": "20210508123823",
-  "url": "https://wiki.e3d-online.com/images/thumb/a/ab/Loosen_z.jpg/450px-Loosen_z.jpg",
-  "bytes": 14390
- },
- "Move_y_trigger.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/1/1b/Move_y_trigger.jpg",
-  "snapshot": "20210508123822",
-  "url": "https://wiki.e3d-online.com/images/thumb/1/1b/Move_y_trigger.jpg/450px-Move_y_trigger.jpg",
-  "bytes": 21454
- },
- "Move_y_wrong.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/2/2a/Move_y_wrong.jpg",
-  "snapshot": "20210508123823",
-  "url": "https://wiki.e3d-online.com/images/thumb/2/2a/Move_y_wrong.jpg/450px-Move_y_wrong.jpg",
-  "bytes": 29121
- },
- "Xy_set.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/7/7f/Xy_set.jpg",
-  "snapshot": "20210508123824",
-  "url": "https://wiki.e3d-online.com/images/thumb/7/7f/Xy_set.jpg/450px-Xy_set.jpg",
-  "bytes": 26608
- },
- "Grease.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/c/cb/Grease.jpg",
-  "snapshot": "20210508123823",
-  "url": "https://wiki.e3d-online.com/images/thumb/c/cb/Grease.jpg/450px-Grease.jpg",
-  "bytes": 14163
- },
- "Z_tight.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/5/50/Z_tight.jpg",
-  "snapshot": "20210508123823",
-  "url": "https://wiki.e3d-online.com/images/thumb/5/50/Z_tight.jpg/450px-Z_tight.jpg",
-  "bytes": 11918
- },
- "Z_bottomed.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/7/76/Z_bottomed.jpg",
-  "snapshot": "20210508123823",
-  "url": "https://wiki.e3d-online.com/images/thumb/7/76/Z_bottomed.jpg/450px-Z_bottomed.jpg",
-  "bytes": 15560
- },
- "More_grease.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/b/bb/More_grease.jpg",
-  "snapshot": "20210508123746",
-  "url": "https://wiki.e3d-online.com/images/thumb/b/bb/More_grease.jpg/450px-More_grease.jpg",
-  "bytes": 29499
- },
- "Z_screws.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/c/c4/Z_screws.jpg",
-  "snapshot": "20210508123747",
-  "url": "https://wiki.e3d-online.com/images/thumb/c/c4/Z_screws.jpg/450px-Z_screws.jpg",
-  "bytes": 16083
- },
- "Tightening_lower_bed.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/6/6f/Tightening_lower_bed.jpg",
-  "snapshot": "20210508123747",
-  "url": "https://wiki.e3d-online.com/images/thumb/6/6f/Tightening_lower_bed.jpg/450px-Tightening_lower_bed.jpg",
-  "bytes": 35546
- },
- "Tightening_control.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/3/35/Tightening_control.jpg",
-  "snapshot": "20210508123743",
-  "url": "https://wiki.e3d-online.com/images/thumb/3/35/Tightening_control.jpg/450px-Tightening_control.jpg",
-  "bytes": 22498
- },
- "Tightening_temperature.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/6/60/Tightening_temperature.jpg",
-  "snapshot": "20210508123742",
-  "url": "https://wiki.e3d-online.com/images/thumb/6/60/Tightening_temperature.jpg/450px-Tightening_temperature.jpg",
-  "bytes": 21519
- },
- "Tightening_fans.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/6/65/Tightening_fans.jpg",
-  "snapshot": "20210508123748",
-  "url": "https://wiki.e3d-online.com/images/thumb/6/65/Tightening_fans.jpg/450px-Tightening_fans.jpg",
-  "bytes": 34230
- },
- "Tightening_285.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/b/b0/Tightening_285.jpg",
-  "snapshot": "20210508123743",
-  "url": "https://wiki.e3d-online.com/images/thumb/b/b0/Tightening_285.jpg/450px-Tightening_285.jpg",
-  "bytes": 20773
- },
- "Tightening_nozzle_1.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/6/62/Tightening_nozzle_1.jpg",
-  "snapshot": "20210508123754",
-  "url": "https://wiki.e3d-online.com/images/thumb/6/62/Tightening_nozzle_1.jpg/450px-Tightening_nozzle_1.jpg",
-  "bytes": 21605
- },
- "Tightening_wait.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/2/2a/Tightening_wait.jpg",
-  "snapshot": "20210508123804",
-  "url": "https://wiki.e3d-online.com/images/thumb/2/2a/Tightening_wait.jpg/450px-Tightening_wait.jpg",
-  "bytes": 26617
- },
- "Tightening_spanners.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/0/0c/Tightening_spanners.jpg",
-  "snapshot": "20210508123748",
-  "url": "https://wiki.e3d-online.com/images/thumb/0/0c/Tightening_spanners.jpg/450px-Tightening_spanners.jpg",
-  "bytes": 29882
- },
- "Tightening_cooldown.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/9/92/Tightening_cooldown.jpg",
-  "snapshot": "20210508123750",
-  "url": "https://wiki.e3d-online.com/images/thumb/9/92/Tightening_cooldown.jpg/450px-Tightening_cooldown.jpg",
-  "bytes": 27388
- },
- "Tightening_nozzle2.jpg": {
-  "kind": "thumb-300px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/4/4b/Tightening_nozzle2.jpg",
-  "snapshot": "20210523193808",
-  "url": "https://wiki.e3d-online.com/images/thumb/4/4b/Tightening_nozzle2.jpg/300px-Tightening_nozzle2.jpg",
-  "bytes": 15062
- },
- "Dual_align.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/1/1a/Dual_align.jpg",
-  "snapshot": "20210508123752",
-  "url": "https://wiki.e3d-online.com/images/thumb/1/1a/Dual_align.jpg/450px-Dual_align.jpg",
-  "bytes": 24014
- },
- "Dual_align_pin_above.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/a/a3/Dual_align_pin_above.jpg",
-  "snapshot": "20210508123755",
-  "url": "https://wiki.e3d-online.com/images/thumb/a/a3/Dual_align_pin_above.jpg/450px-Dual_align_pin_above.jpg",
-  "bytes": 26428
- },
- "Dual_align_pin_centre.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/3/3c/Dual_align_pin_centre.jpg",
-  "snapshot": "20210508123756",
-  "url": "https://wiki.e3d-online.com/images/thumb/3/3c/Dual_align_pin_centre.jpg/450px-Dual_align_pin_centre.jpg",
-  "bytes": 29713
- },
- "Dual_align_pin_move.jpg": {
-  "kind": "thumb-300px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/2/2e/Dual_align_pin_move.jpg",
-  "snapshot": "20210523193821",
-  "url": "https://wiki.e3d-online.com/images/thumb/2/2e/Dual_align_pin_move.jpg/300px-Dual_align_pin_move.jpg",
-  "bytes": 14936
- },
- "Dual_align_pin_fan_off.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/4/40/Dual_align_pin_fan_off.jpg",
-  "snapshot": "20210508123756",
-  "url": "https://wiki.e3d-online.com/images/thumb/4/40/Dual_align_pin_fan_off.jpg/450px-Dual_align_pin_fan_off.jpg",
-  "bytes": 40405
- },
- "Dual_align_pin_allen.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/e/e0/Dual_align_pin_allen.jpg",
-  "snapshot": "20210508123754",
-  "url": "https://wiki.e3d-online.com/images/thumb/e/e0/Dual_align_pin_allen.jpg/450px-Dual_align_pin_allen.jpg",
-  "bytes": 35857
- },
- "Dual_align_pin_right.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/d/d8/Dual_align_pin_right.jpg",
-  "snapshot": "20210508123754",
-  "url": "https://wiki.e3d-online.com/images/thumb/d/d8/Dual_align_pin_right.jpg/450px-Dual_align_pin_right.jpg",
-  "bytes": 27084
- },
- "Dual_align_pin_left.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/d/d4/Dual_align_pin_left.jpg",
-  "snapshot": "20210508123705",
-  "url": "https://wiki.e3d-online.com/images/thumb/d/d4/Dual_align_pin_left.jpg/450px-Dual_align_pin_left.jpg",
-  "bytes": 27623
- },
- "Dual_offset.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/a/a7/Dual_offset.jpg",
-  "snapshot": "20210508123700",
-  "url": "https://wiki.e3d-online.com/images/thumb/a/a7/Dual_offset.jpg/450px-Dual_offset.jpg",
-  "bytes": 31401
- },
- "Dual_offset_x_position.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/3/33/Dual_offset_x_position.jpg",
-  "snapshot": "20210508123701",
-  "url": "https://wiki.e3d-online.com/images/thumb/3/33/Dual_offset_x_position.jpg/450px-Dual_offset_x_position.jpg",
-  "bytes": 22894
- },
- "Dual_offset_y_position.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/7/77/Dual_offset_y_position.jpg",
-  "snapshot": "20210508123710",
-  "url": "https://wiki.e3d-online.com/images/thumb/7/77/Dual_offset_y_position.jpg/450px-Dual_offset_y_position.jpg",
-  "bytes": 23580
- },
- "Dual_offset_x_position_adj.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/8/88/Dual_offset_x_position_adj.jpg",
-  "snapshot": "20210508123705",
-  "url": "https://wiki.e3d-online.com/images/thumb/8/88/Dual_offset_x_position_adj.jpg/450px-Dual_offset_x_position_adj.jpg",
-  "bytes": 23223
- },
- "Dual_offset_x_position_move.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/4/48/Dual_offset_x_position_move.jpg",
-  "snapshot": "20210508123702",
-  "url": "https://wiki.e3d-online.com/images/thumb/4/48/Dual_offset_x_position_move.jpg/450px-Dual_offset_x_position_move.jpg",
-  "bytes": 26334
- },
- "Dual_offset_y_position_y.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/1/12/Dual_offset_y_position_y.jpg",
-  "snapshot": "20210508123701",
-  "url": "https://wiki.e3d-online.com/images/thumb/1/12/Dual_offset_y_position_y.jpg/450px-Dual_offset_y_position_y.jpg",
-  "bytes": 24021
- },
- "Dual_offset_y_position_move.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/9/99/Dual_offset_y_position_move.jpg",
-  "snapshot": "20210508123709",
-  "url": "https://wiki.e3d-online.com/images/thumb/9/99/Dual_offset_y_position_move.jpg/450px-Dual_offset_y_position_move.jpg",
-  "bytes": 22329
- },
- "Dual_offset_calc.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/0/0d/Dual_offset_calc.jpg",
-  "snapshot": "20210508123725",
-  "url": "https://wiki.e3d-online.com/images/thumb/0/0d/Dual_offset_calc.jpg/450px-Dual_offset_calc.jpg",
-  "bytes": 10908
- },
- "Dual_offset_y_position_adj.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/a/ac/Dual_offset_y_position_adj.jpg",
-  "snapshot": "20210508123706",
-  "url": "https://wiki.e3d-online.com/images/thumb/a/ac/Dual_offset_y_position_adj.jpg/450px-Dual_offset_y_position_adj.jpg",
-  "bytes": 21517
- },
- "Stickers_back.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/8/8b/Stickers_back.jpg",
-  "snapshot": "20210508123711",
-  "url": "https://wiki.e3d-online.com/images/thumb/8/8b/Stickers_back.jpg/450px-Stickers_back.jpg",
-  "bytes": 15495
- },
- "Dual_m218.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/1/14/Dual_m218.jpg",
-  "snapshot": "20210508123643",
-  "url": "https://wiki.e3d-online.com/images/thumb/1/14/Dual_m218.jpg/450px-Dual_m218.jpg",
-  "bytes": 41554
- },
- "Autolevelling.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/1/11/Autolevelling.jpg",
-  "snapshot": "20210508123712",
-  "url": "https://wiki.e3d-online.com/images/thumb/1/11/Autolevelling.jpg/450px-Autolevelling.jpg",
-  "bytes": 18844
- },
- "Stickers.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/3/37/Stickers.jpg",
-  "snapshot": "20210508123715",
-  "url": "https://wiki.e3d-online.com/images/thumb/3/37/Stickers.jpg/450px-Stickers.jpg",
-  "bytes": 15551
- },
- "Stickers_tissue.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/d/dd/Stickers_tissue.jpg",
-  "snapshot": "20210508123718",
-  "url": "https://wiki.e3d-online.com/images/thumb/d/dd/Stickers_tissue.jpg/450px-Stickers_tissue.jpg",
-  "bytes": 19089
- },
- "Stickers_align.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/b/b5/Stickers_align.jpg",
-  "snapshot": "20210508123711",
-  "url": "https://wiki.e3d-online.com/images/thumb/b/b5/Stickers_align.jpg/450px-Stickers_align.jpg",
-  "bytes": 18278
- },
- "Stickers_rub.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/a/ac/Stickers_rub.jpg",
-  "snapshot": "20210508123712",
-  "url": "https://wiki.e3d-online.com/images/thumb/a/ac/Stickers_rub.jpg/450px-Stickers_rub.jpg",
-  "bytes": 17342
- },
- "Stickers_peel.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/0/0f/Stickers_peel.jpg",
-  "snapshot": "20210508123717",
-  "url": "https://wiki.e3d-online.com/images/thumb/0/0f/Stickers_peel.jpg/450px-Stickers_peel.jpg",
-  "bytes": 19136
- },
- "Stickers_e3d.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/c/c1/Stickers_e3d.jpg",
-  "snapshot": "20210508123718",
-  "url": "https://wiki.e3d-online.com/images/thumb/c/c1/Stickers_e3d.jpg/450px-Stickers_e3d.jpg",
-  "bytes": 17050
- },
- "Stickers_stuck.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/5/5c/Stickers_stuck.jpg",
-  "snapshot": "20210508123650",
-  "url": "https://wiki.e3d-online.com/images/thumb/5/5c/Stickers_stuck.jpg/450px-Stickers_stuck.jpg",
-  "bytes": 20558
- },
- "Stickers_mib.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/1/19/Stickers_mib.jpg",
-  "snapshot": "20210508123719",
-  "url": "https://wiki.e3d-online.com/images/thumb/1/19/Stickers_mib.jpg/450px-Stickers_mib.jpg",
-  "bytes": 28760
- },
- "Stickers_1.1.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/1/18/Stickers_1.1.jpg",
-  "snapshot": "20210508123647",
-  "url": "https://wiki.e3d-online.com/images/thumb/1/18/Stickers_1.1.jpg/450px-Stickers_1.1.jpg",
-  "bytes": 23017
- },
- "Stickers_ks.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/f/f2/Stickers_ks.jpg",
-  "snapshot": "20210508123643",
-  "url": "https://wiki.e3d-online.com/images/thumb/f/f2/Stickers_ks.jpg/450px-Stickers_ks.jpg",
-  "bytes": 16360
- },
- "Dual_head_move.jpg": {
-  "kind": null,
-  "pages": [
-   "Dual_Extruders"
-  ],
-  "original_path": "/images/f/f2/Dual_head_move.jpg"
- },
- "Stickers_done.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/2/26/Stickers_done.jpg",
-  "snapshot": "20210508123643",
-  "url": "https://wiki.e3d-online.com/images/thumb/2/26/Stickers_done.jpg/450px-Stickers_done.jpg",
-  "bytes": 24379
- },
- "Dual_head_ir_scrwe.jpg": {
-  "kind": null,
-  "pages": [
-   "Dual_Extruders"
-  ],
-  "original_path": "/images/4/46/Dual_head_ir_scrwe.jpg"
- },
- "Dual_head_move_ir.jpg": {
-  "kind": null,
-  "pages": [
-   "Dual_Extruders"
-  ],
-  "original_path": "/images/7/72/Dual_head_move_ir.jpg"
- },
- "Dual_powered.jpg": {
-  "kind": null,
-  "pages": [
-   "Dual_Extruders"
-  ],
-  "original_path": "/images/2/2c/Dual_powered.jpg"
- },
- "Dual_boot.jpg": {
-  "kind": null,
-  "pages": [
-   "Dual_Extruders"
-  ],
-  "original_path": "/images/1/16/Dual_boot.jpg"
- },
- "Y-axis_rear.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "BigBox_Parts_Preparation"
-  ],
-  "original_path": "/images/6/6d/Y-axis_rear.jpg",
-  "snapshot": "20210508114931",
-  "url": "https://wiki.e3d-online.com/images/thumb/6/6d/Y-axis_rear.jpg/450px-Y-axis_rear.jpg",
-  "bytes": 17826
  },
  "Y-AXIS_REAR.jpg": {
   "kind": "thumb-1200px",
@@ -2281,15 +436,15 @@
   "url": "https://wiki.e3d-online.com/images/thumb/7/76/Y-AXIS_REAR.jpg/1200px-Y-AXIS_REAR.jpg",
   "bytes": 132248
  },
- "Y-axis_front_brackets.jpg": {
+ "Y-axis_rear.jpg": {
   "kind": "thumb-450px",
   "pages": [
    "BigBox_Parts_Preparation"
   ],
-  "original_path": "/images/5/59/Y-axis_front_brackets.jpg",
+  "original_path": "/images/6/6d/Y-axis_rear.jpg",
   "snapshot": "20210508114931",
-  "url": "https://wiki.e3d-online.com/images/thumb/5/59/Y-axis_front_brackets.jpg/450px-Y-axis_front_brackets.jpg",
-  "bytes": 14896
+  "url": "https://wiki.e3d-online.com/images/thumb/6/6d/Y-axis_rear.jpg/450px-Y-axis_rear.jpg",
+  "bytes": 17826
  },
  "Y-AXIS_FRONT.jpg": {
   "kind": "thumb-1200px",
@@ -2301,35 +456,15 @@
   "url": "https://wiki.e3d-online.com/images/thumb/a/a9/Y-AXIS_FRONT.jpg/1200px-Y-AXIS_FRONT.jpg",
   "bytes": 91720
  },
- "X-AXIS_IDLER_CARRIAGE.jpg": {
-  "kind": "thumb-1200px",
-  "pages": [
-   "BigBox_Parts_Preparation"
-  ],
-  "original_path": "/images/f/f5/X-AXIS_IDLER_CARRIAGE.jpg",
-  "snapshot": "20210508114931",
-  "url": "https://wiki.e3d-online.com/images/thumb/f/f5/X-AXIS_IDLER_CARRIAGE.jpg/1200px-X-AXIS_IDLER_CARRIAGE.jpg",
-  "bytes": 143466
- },
- "Y-axis_belt_idler.jpg": {
+ "Y-axis_front_brackets.jpg": {
   "kind": "thumb-450px",
   "pages": [
    "BigBox_Parts_Preparation"
   ],
-  "original_path": "/images/4/49/Y-axis_belt_idler.jpg",
-  "snapshot": "20210508114930",
-  "url": "https://wiki.e3d-online.com/images/thumb/4/49/Y-axis_belt_idler.jpg/450px-Y-axis_belt_idler.jpg",
-  "bytes": 11127
- },
- "X-Axis_idler.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "BigBox_Parts_Preparation"
-  ],
-  "original_path": "/images/5/51/X-Axis_idler.jpg",
+  "original_path": "/images/5/59/Y-axis_front_brackets.jpg",
   "snapshot": "20210508114931",
-  "url": "https://wiki.e3d-online.com/images/thumb/5/51/X-Axis_idler.jpg/450px-X-Axis_idler.jpg",
-  "bytes": 16129
+  "url": "https://wiki.e3d-online.com/images/thumb/5/59/Y-axis_front_brackets.jpg/450px-Y-axis_front_brackets.jpg",
+  "bytes": 14896
  },
  "Y-AXIS_IDLER.jpg": {
   "kind": "thumb-1200px",
@@ -2341,15 +476,35 @@
   "url": "https://wiki.e3d-online.com/images/thumb/6/64/Y-AXIS_IDLER.jpg/1200px-Y-AXIS_IDLER.jpg",
   "bytes": 107212
  },
- "V1.1_x_carriage_m4_pull.jpg": {
+ "Y-axis_belt_idler.jpg": {
   "kind": "thumb-450px",
   "pages": [
    "BigBox_Parts_Preparation"
   ],
-  "original_path": "/images/5/59/V1.1_x_carriage_m4_pull.jpg",
+  "original_path": "/images/4/49/Y-axis_belt_idler.jpg",
+  "snapshot": "20210508114930",
+  "url": "https://wiki.e3d-online.com/images/thumb/4/49/Y-axis_belt_idler.jpg/450px-Y-axis_belt_idler.jpg",
+  "bytes": 11127
+ },
+ "X-AXIS_IDLER_CARRIAGE.jpg": {
+  "kind": "thumb-1200px",
+  "pages": [
+   "BigBox_Parts_Preparation"
+  ],
+  "original_path": "/images/f/f5/X-AXIS_IDLER_CARRIAGE.jpg",
   "snapshot": "20210508114931",
-  "url": "https://wiki.e3d-online.com/images/thumb/5/59/V1.1_x_carriage_m4_pull.jpg/450px-V1.1_x_carriage_m4_pull.jpg",
-  "bytes": 17626
+  "url": "https://wiki.e3d-online.com/images/thumb/f/f5/X-AXIS_IDLER_CARRIAGE.jpg/1200px-X-AXIS_IDLER_CARRIAGE.jpg",
+  "bytes": 143466
+ },
+ "X-Axis_idler.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "BigBox_Parts_Preparation"
+  ],
+  "original_path": "/images/5/51/X-Axis_idler.jpg",
+  "snapshot": "20210508114931",
+  "url": "https://wiki.e3d-online.com/images/thumb/5/51/X-Axis_idler.jpg/450px-X-Axis_idler.jpg",
+  "bytes": 16129
  },
  "X-AXIS_MOTOR_CARRIAGE.jpg": {
   "kind": "thumb-1200px",
@@ -2381,15 +536,15 @@
   "url": "https://wiki.e3d-online.com/images/thumb/e/e1/V1.1_x_carriage_m4.jpg/450px-V1.1_x_carriage_m4.jpg",
   "bytes": 17735
  },
- "V1.1_x_carriage_rings.jpg": {
+ "V1.1_x_carriage_m4_pull.jpg": {
   "kind": "thumb-450px",
   "pages": [
    "BigBox_Parts_Preparation"
   ],
-  "original_path": "/images/b/b6/V1.1_x_carriage_rings.jpg",
-  "snapshot": "20210508114937",
-  "url": "https://wiki.e3d-online.com/images/thumb/b/b6/V1.1_x_carriage_rings.jpg/450px-V1.1_x_carriage_rings.jpg",
-  "bytes": 29236
+  "original_path": "/images/5/59/V1.1_x_carriage_m4_pull.jpg",
+  "snapshot": "20210508114931",
+  "url": "https://wiki.e3d-online.com/images/thumb/5/59/V1.1_x_carriage_m4_pull.jpg/450px-V1.1_x_carriage_m4_pull.jpg",
+  "bytes": 17626
  },
  "V1.1_x_carriage_m4_grub.jpg": {
   "kind": "thumb-450px",
@@ -2400,6 +555,16 @@
   "snapshot": "20210508114938",
   "url": "https://wiki.e3d-online.com/images/thumb/7/72/V1.1_x_carriage_m4_grub.jpg/450px-V1.1_x_carriage_m4_grub.jpg",
   "bytes": 15861
+ },
+ "V1.1_x_carriage_rings.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "BigBox_Parts_Preparation"
+  ],
+  "original_path": "/images/b/b6/V1.1_x_carriage_rings.jpg",
+  "snapshot": "20210508114937",
+  "url": "https://wiki.e3d-online.com/images/thumb/b/b6/V1.1_x_carriage_rings.jpg/450px-V1.1_x_carriage_rings.jpg",
+  "bytes": 29236
  },
  "V1.1_x_carriage_m3_nut.jpg": {
   "kind": "thumb-450px",
@@ -2421,16 +586,6 @@
   "url": "https://wiki.e3d-online.com/images/thumb/f/fb/V1.1_x_carriage_m3_more_nut.jpg/450px-V1.1_x_carriage_m3_more_nut.jpg",
   "bytes": 15832
  },
- "V1.1_x_carriage_mount.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "BigBox_Parts_Preparation"
-  ],
-  "original_path": "/images/1/10/V1.1_x_carriage_mount.jpg",
-  "snapshot": "20210508114949",
-  "url": "https://wiki.e3d-online.com/images/thumb/1/10/V1.1_x_carriage_mount.jpg/450px-V1.1_x_carriage_mount.jpg",
-  "bytes": 15648
- },
  "V1.1_x_carriage_m3_even_more_nuts.jpg": {
   "kind": "thumb-450px",
   "pages": [
@@ -2440,6 +595,16 @@
   "snapshot": "20210508114938",
   "url": "https://wiki.e3d-online.com/images/thumb/a/a9/V1.1_x_carriage_m3_even_more_nuts.jpg/450px-V1.1_x_carriage_m3_even_more_nuts.jpg",
   "bytes": 20027
+ },
+ "V1.1_x_carriage_mount.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "BigBox_Parts_Preparation"
+  ],
+  "original_path": "/images/1/10/V1.1_x_carriage_mount.jpg",
+  "snapshot": "20210508114949",
+  "url": "https://wiki.e3d-online.com/images/thumb/1/10/V1.1_x_carriage_mount.jpg/450px-V1.1_x_carriage_mount.jpg",
+  "bytes": 15648
  },
  "HEATED_BED_CORNERS.jpg": {
   "kind": "thumb-1200px",
@@ -2521,16 +686,6 @@
   "url": "https://wiki.e3d-online.com/images/thumb/4/4e/Y_axis_motor_assembled.jpeg/450px-Y_axis_motor_assembled.jpeg",
   "bytes": 17719
  },
- "Ir_sensor_pcb_assembled.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "BigBox_Parts_Preparation"
-  ],
-  "original_path": "/images/1/10/Ir_sensor_pcb_assembled.jpg",
-  "snapshot": "20210508114949",
-  "url": "https://wiki.e3d-online.com/images/thumb/1/10/Ir_sensor_pcb_assembled.jpg/450px-Ir_sensor_pcb_assembled.jpg",
-  "bytes": 13476
- },
  "Ir_sensor_pcb.jpg": {
   "kind": "thumb-450px",
   "pages": [
@@ -2541,15 +696,15 @@
   "url": "https://wiki.e3d-online.com/images/thumb/d/d3/Ir_sensor_pcb.jpg/450px-Ir_sensor_pcb.jpg",
   "bytes": 11572
  },
- "Spool_carrier_assembled.jpg": {
+ "Ir_sensor_pcb_assembled.jpg": {
   "kind": "thumb-450px",
   "pages": [
    "BigBox_Parts_Preparation"
   ],
-  "original_path": "/images/7/75/Spool_carrier_assembled.jpg",
+  "original_path": "/images/1/10/Ir_sensor_pcb_assembled.jpg",
   "snapshot": "20210508114949",
-  "url": "https://wiki.e3d-online.com/images/thumb/7/75/Spool_carrier_assembled.jpg/450px-Spool_carrier_assembled.jpg",
-  "bytes": 10716
+  "url": "https://wiki.e3d-online.com/images/thumb/1/10/Ir_sensor_pcb_assembled.jpg/450px-Ir_sensor_pcb_assembled.jpg",
+  "bytes": 13476
  },
  "SPOOL-HOLDER_CLAMP.jpg": {
   "kind": "thumb-1200px",
@@ -2561,25 +716,15 @@
   "url": "https://wiki.e3d-online.com/images/thumb/7/7b/SPOOL-HOLDER_CLAMP.jpg/1200px-SPOOL-HOLDER_CLAMP.jpg",
   "bytes": 99870
  },
- "Iec_02.jpg": {
+ "Spool_carrier_assembled.jpg": {
   "kind": "thumb-450px",
   "pages": [
    "BigBox_Parts_Preparation"
   ],
-  "original_path": "/images/1/13/Iec_02.jpg",
-  "snapshot": "20210508115002",
-  "url": "https://wiki.e3d-online.com/images/thumb/1/13/Iec_02.jpg/450px-Iec_02.jpg",
-  "bytes": 18083
- },
- "Z_drag_anchors.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "BigBox_Parts_Preparation"
-  ],
-  "original_path": "/images/e/ee/Z_drag_anchors.jpg",
-  "snapshot": "20210508115001",
-  "url": "https://wiki.e3d-online.com/images/thumb/e/ee/Z_drag_anchors.jpg/450px-Z_drag_anchors.jpg",
-  "bytes": 12283
+  "original_path": "/images/7/75/Spool_carrier_assembled.jpg",
+  "snapshot": "20210508114949",
+  "url": "https://wiki.e3d-online.com/images/thumb/7/75/Spool_carrier_assembled.jpg/450px-Spool_carrier_assembled.jpg",
+  "bytes": 10716
  },
  "Z-AXIS_DRAG_CHAIN.jpg": {
   "kind": "thumb-1200px",
@@ -2591,6 +736,16 @@
   "url": "https://wiki.e3d-online.com/images/thumb/2/20/Z-AXIS_DRAG_CHAIN.jpg/1200px-Z-AXIS_DRAG_CHAIN.jpg",
   "bytes": 84671
  },
+ "Z_drag_anchors.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "BigBox_Parts_Preparation"
+  ],
+  "original_path": "/images/e/ee/Z_drag_anchors.jpg",
+  "snapshot": "20210508115001",
+  "url": "https://wiki.e3d-online.com/images/thumb/e/ee/Z_drag_anchors.jpg/450px-Z_drag_anchors.jpg",
+  "bytes": 12283
+ },
  "IED-switch.jpg": {
   "kind": "thumb-450px",
   "pages": [
@@ -2601,25 +756,15 @@
   "url": "https://wiki.e3d-online.com/images/thumb/e/eb/IED-switch.jpg/450px-IED-switch.jpg",
   "bytes": 19985
  },
- "Iec_05.jpg": {
+ "Iec_02.jpg": {
   "kind": "thumb-450px",
   "pages": [
    "BigBox_Parts_Preparation"
   ],
-  "original_path": "/images/6/6f/Iec_05.jpg",
+  "original_path": "/images/1/13/Iec_02.jpg",
   "snapshot": "20210508115002",
-  "url": "https://wiki.e3d-online.com/images/thumb/6/6f/Iec_05.jpg/450px-Iec_05.jpg",
-  "bytes": 19802
- },
- "Connect-live-brown.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "BigBox_Parts_Preparation"
-  ],
-  "original_path": "/images/0/02/Connect-live-brown.jpg",
-  "snapshot": "20210508114956",
-  "url": "https://wiki.e3d-online.com/images/thumb/0/02/Connect-live-brown.jpg/450px-Connect-live-brown.jpg",
-  "bytes": 13708
+  "url": "https://wiki.e3d-online.com/images/thumb/1/13/Iec_02.jpg/450px-Iec_02.jpg",
+  "bytes": 18083
  },
  "Iec_03.jpg": {
   "kind": "thumb-450px",
@@ -2631,6 +776,26 @@
   "url": "https://wiki.e3d-online.com/images/thumb/0/0b/Iec_03.jpg/450px-Iec_03.jpg",
   "bytes": 17693
  },
+ "Connect-live-brown.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "BigBox_Parts_Preparation"
+  ],
+  "original_path": "/images/0/02/Connect-live-brown.jpg",
+  "snapshot": "20210508114956",
+  "url": "https://wiki.e3d-online.com/images/thumb/0/02/Connect-live-brown.jpg/450px-Connect-live-brown.jpg",
+  "bytes": 13708
+ },
+ "Iec_05.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "BigBox_Parts_Preparation"
+  ],
+  "original_path": "/images/6/6f/Iec_05.jpg",
+  "snapshot": "20210508115002",
+  "url": "https://wiki.e3d-online.com/images/thumb/6/6f/Iec_05.jpg/450px-Iec_05.jpg",
+  "bytes": 19802
+ },
  "IED-wiring-1.jpg": {
   "kind": "thumb-450px",
   "pages": [
@@ -2640,16 +805,6 @@
   "snapshot": "20210508114957",
   "url": "https://wiki.e3d-online.com/images/thumb/9/9d/IED-wiring-1.jpg/450px-IED-wiring-1.jpg",
   "bytes": 19677
- },
- "Frame_back_b.jpg": {
-  "kind": "thumb-262px",
-  "pages": [
-   "Bill_Of_Materials"
-  ],
-  "original_path": "/images/5/52/Frame_back_b.jpg",
-  "snapshot": "20210521130624",
-  "url": "https://wiki.e3d-online.com/images/thumb/5/52/Frame_back_b.jpg/262px-Frame_back_b.jpg",
-  "bytes": 8993
  },
  "Iec_07.jpg": {
   "kind": "thumb-450px",
@@ -2661,16 +816,6 @@
   "url": "https://wiki.e3d-online.com/images/thumb/b/bb/Iec_07.jpg/450px-Iec_07.jpg",
   "bytes": 20409
  },
- "Frame_front_b.jpg": {
-  "kind": "thumb-262px",
-  "pages": [
-   "Bill_Of_Materials"
-  ],
-  "original_path": "/images/9/9a/Frame_front_b.jpg",
-  "snapshot": "20210521130638",
-  "url": "https://wiki.e3d-online.com/images/thumb/9/9a/Frame_front_b.jpg/262px-Frame_front_b.jpg",
-  "bytes": 5787
- },
  "IED-all-wires-twist.jpg": {
   "kind": "thumb-450px",
   "pages": [
@@ -2680,131 +825,6 @@
   "snapshot": "20210508115001",
   "url": "https://wiki.e3d-online.com/images/thumb/d/d1/IED-all-wires-twist.jpg/450px-IED-all-wires-twist.jpg",
   "bytes": 15224
- },
- "Frame_left_b.jpg": {
-  "kind": "thumb-262px",
-  "pages": [
-   "Bill_Of_Materials"
-  ],
-  "original_path": "/images/4/45/Frame_left_b.jpg",
-  "snapshot": "20210521130632",
-  "url": "https://wiki.e3d-online.com/images/thumb/4/45/Frame_left_b.jpg/262px-Frame_left_b.jpg",
-  "bytes": 7276
- },
- "Frame_upper_supports_b.jpg": {
-  "kind": "thumb-227px",
-  "pages": [
-   "Bill_Of_Materials"
-  ],
-  "original_path": "/images/4/44/Frame_upper_supports_b.jpg",
-  "snapshot": "20210521130651",
-  "url": "https://wiki.e3d-online.com/images/thumb/4/44/Frame_upper_supports_b.jpg/227px-Frame_upper_supports_b.jpg",
-  "bytes": 5950
- },
- "Frame_right_b.jpg": {
-  "kind": "thumb-262px",
-  "pages": [
-   "Bill_Of_Materials"
-  ],
-  "original_path": "/images/2/2e/Frame_right_b.jpg",
-  "snapshot": "20210521130640",
-  "url": "https://wiki.e3d-online.com/images/thumb/2/2e/Frame_right_b.jpg/262px-Frame_right_b.jpg",
-  "bytes": 7900
- },
- "Frame_base_b.jpg": {
-  "kind": "thumb-262px",
-  "pages": [
-   "Bill_Of_Materials"
-  ],
-  "original_path": "/images/e/e6/Frame_base_b.jpg",
-  "snapshot": "20210521130650",
-  "url": "https://wiki.e3d-online.com/images/thumb/e/e6/Frame_base_b.jpg/262px-Frame_base_b.jpg",
-  "bytes": 5929
- },
- "Frame_lower_support_b.jpg": {
-  "kind": "thumb-262px",
-  "pages": [
-   "Bill_Of_Materials"
-  ],
-  "original_path": "/images/c/c5/Frame_lower_support_b.jpg",
-  "snapshot": "20210521130649",
-  "url": "https://wiki.e3d-online.com/images/thumb/c/c5/Frame_lower_support_b.jpg/262px-Frame_lower_support_b.jpg",
-  "bytes": 6035
- },
- "Heated_bed_b.jpg": {
-  "kind": "thumb-262px",
-  "pages": [
-   "Bill_Of_Materials"
-  ],
-  "original_path": "/images/a/aa/Heated_bed_b.jpg",
-  "snapshot": "20210521130650",
-  "url": "https://wiki.e3d-online.com/images/thumb/a/aa/Heated_bed_b.jpg/262px-Heated_bed_b.jpg",
-  "bytes": 12217
- },
- "Frame_lcd_b.jpg": {
-  "kind": "thumb-273px",
-  "pages": [
-   "Bill_Of_Materials"
-  ],
-  "original_path": "/images/1/14/Frame_lcd_b.jpg",
-  "snapshot": "20210521130648",
-  "url": "https://wiki.e3d-online.com/images/thumb/1/14/Frame_lcd_b.jpg/273px-Frame_lcd_b.jpg",
-  "bytes": 9789
- },
- "Frame_top_b.jpg": {
-  "kind": "thumb-262px",
-  "pages": [
-   "Bill_Of_Materials"
-  ],
-  "original_path": "/images/5/59/Frame_top_b.jpg",
-  "snapshot": "20210521130648",
-  "url": "https://wiki.e3d-online.com/images/thumb/5/59/Frame_top_b.jpg/262px-Frame_top_b.jpg",
-  "bytes": 3545
- },
- "Frame_misc_b.jpg": {
-  "kind": "thumb-436px",
-  "pages": [
-   "Bill_Of_Materials"
-  ],
-  "original_path": "/images/f/fb/Frame_misc_b.jpg",
-  "snapshot": "20210521130648",
-  "url": "https://wiki.e3d-online.com/images/thumb/f/fb/Frame_misc_b.jpg/436px-Frame_misc_b.jpg",
-  "bytes": 13534
- },
- "Assembled_print_fan.jpeg": {
-  "kind": null,
-  "pages": [
-   "Print_Cooling_Fan"
-  ],
-  "original_path": "/images/b/b9/Assembled_print_fan.jpeg"
- },
- "PRINT_FAN_DUCT.jpg": {
-  "kind": null,
-  "pages": [
-   "Print_Cooling_Fan"
-  ],
-  "original_path": "/images/d/d1/PRINT_FAN_DUCT.jpg"
- },
- "X-CARRIAGE_SINGLE.jpg": {
-  "kind": null,
-  "pages": [
-   "Pro_&_Lite_X-Carriage"
-  ],
-  "original_path": "/images/5/52/X-CARRIAGE_SINGLE.jpg"
- },
- "Single_x_carriage.jpg": {
-  "kind": null,
-  "pages": [
-   "Pro_&_Lite_X-Carriage"
-  ],
-  "original_path": "/images/9/9e/Single_x_carriage.jpg"
- },
- "Single_correct.jpg": {
-  "kind": null,
-  "pages": [
-   "Pro_&_Lite_X-Carriage"
-  ],
-  "original_path": "/images/f/f6/Single_correct.jpg"
  },
  "EXTRUDER_HYBRID_TITAN_DIRECT.jpg": {
   "kind": "thumb-1200px",
@@ -2816,13 +836,6 @@
   "url": "https://wiki.e3d-online.com/images/thumb/3/38/EXTRUDER_HYBRID_TITAN_DIRECT.jpg/1200px-EXTRUDER_HYBRID_TITAN_DIRECT.jpg",
   "bytes": 133291
  },
- "Single_incorrect.jpg": {
-  "kind": null,
-  "pages": [
-   "Pro_&_Lite_X-Carriage"
-  ],
-  "original_path": "/images/6/60/Single_incorrect.jpg"
- },
  "1.1_titan_pinion.jpg": {
   "kind": "thumb-450px",
   "pages": [
@@ -2833,16 +846,6 @@
   "url": "https://wiki.e3d-online.com/images/thumb/1/1e/1.1_titan_pinion.jpg/450px-1.1_titan_pinion.jpg",
   "bytes": 20858
  },
- "Non-titan-direct.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "BigBox_Printer_Sub-assemblies"
-  ],
-  "original_path": "/images/3/39/Non-titan-direct.jpg",
-  "snapshot": "20210508114326",
-  "url": "https://wiki.e3d-online.com/images/thumb/3/39/Non-titan-direct.jpg/450px-Non-titan-direct.jpg",
-  "bytes": 18553
- },
  "EXTRUDER_HYBRID_NON-TITAN_DIRECT.jpg": {
   "kind": "thumb-1200px",
   "pages": [
@@ -2852,6 +855,16 @@
   "snapshot": "20210508114359",
   "url": "https://wiki.e3d-online.com/images/thumb/1/14/EXTRUDER_HYBRID_NON-TITAN_DIRECT.jpg/1200px-EXTRUDER_HYBRID_NON-TITAN_DIRECT.jpg",
   "bytes": 150917
+ },
+ "Non-titan-direct.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "BigBox_Printer_Sub-assemblies"
+  ],
+  "original_path": "/images/3/39/Non-titan-direct.jpg",
+  "snapshot": "20210508114326",
+  "url": "https://wiki.e3d-online.com/images/thumb/3/39/Non-titan-direct.jpg/450px-Non-titan-direct.jpg",
+  "bytes": 18553
  },
  "X-AXIS_ASSEMBLY.jpg": {
   "kind": "thumb-1200px",
@@ -2873,16 +886,6 @@
   "url": "https://wiki.e3d-online.com/images/thumb/3/3f/Assembled_x_axis.jpg/450px-Assembled_x_axis.jpg",
   "bytes": 13506
  },
- "Electronics_cover_barbs.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "BigBox_Printer_Sub-assemblies"
-  ],
-  "original_path": "/images/f/f9/Electronics_cover_barbs.jpg",
-  "snapshot": "20210508114313",
-  "url": "https://wiki.e3d-online.com/images/thumb/f/f9/Electronics_cover_barbs.jpg/450px-Electronics_cover_barbs.jpg",
-  "bytes": 15595
- },
  "ELECTRONICS_COVER.jpg": {
   "kind": "thumb-1200px",
   "pages": [
@@ -2893,6 +896,16 @@
   "url": "https://wiki.e3d-online.com/images/thumb/d/d0/ELECTRONICS_COVER.jpg/1200px-ELECTRONICS_COVER.jpg",
   "bytes": 105272
  },
+ "Electronics_cover_barbs.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "BigBox_Printer_Sub-assemblies"
+  ],
+  "original_path": "/images/f/f9/Electronics_cover_barbs.jpg",
+  "snapshot": "20210508114313",
+  "url": "https://wiki.e3d-online.com/images/thumb/f/f9/Electronics_cover_barbs.jpg/450px-Electronics_cover_barbs.jpg",
+  "bytes": 15595
+ },
  "Electronics_cover_fitting_fan.jpg": {
   "kind": "thumb-300px",
   "pages": [
@@ -2902,16 +915,6 @@
   "snapshot": "20191221004016",
   "url": "https://wiki.e3d-online.com/images/thumb/b/bd/Electronics_cover_fitting_fan.jpg/300px-Electronics_cover_fitting_fan.jpg",
   "bytes": 13404
- },
- "Assembled_spool_carrier.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "BigBox_Printer_Sub-assemblies"
-  ],
-  "original_path": "/images/f/ff/Assembled_spool_carrier.jpg",
-  "snapshot": "20210508114313",
-  "url": "https://wiki.e3d-online.com/images/thumb/f/ff/Assembled_spool_carrier.jpg/450px-Assembled_spool_carrier.jpg",
-  "bytes": 13388
  },
  "Electronics_cover_assembled.jpg": {
   "kind": "thumb-450px",
@@ -2933,15 +936,15 @@
   "url": "https://wiki.e3d-online.com/images/thumb/c/c5/Spool_carrier_exploded.jpg/1200px-Spool_carrier_exploded.jpg",
   "bytes": 87958
  },
- "Lock_nut.jpg": {
+ "Assembled_spool_carrier.jpg": {
   "kind": "thumb-450px",
   "pages": [
    "BigBox_Printer_Sub-assemblies"
   ],
-  "original_path": "/images/6/60/Lock_nut.jpg",
-  "snapshot": "20210508114326",
-  "url": "https://wiki.e3d-online.com/images/thumb/6/60/Lock_nut.jpg/450px-Lock_nut.jpg",
-  "bytes": 8348
+  "original_path": "/images/f/ff/Assembled_spool_carrier.jpg",
+  "snapshot": "20210508114313",
+  "url": "https://wiki.e3d-online.com/images/thumb/f/ff/Assembled_spool_carrier.jpg/450px-Assembled_spool_carrier.jpg",
+  "bytes": 13388
  },
  "Fitted_brass_nut.jpg": {
   "kind": "thumb-300px",
@@ -2952,6 +955,16 @@
   "snapshot": "20191219200942",
   "url": "https://wiki.e3d-online.com/images/thumb/3/33/Fitted_brass_nut.jpg/300px-Fitted_brass_nut.jpg",
   "bytes": 7314
+ },
+ "Lock_nut.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "BigBox_Printer_Sub-assemblies"
+  ],
+  "original_path": "/images/6/60/Lock_nut.jpg",
+  "snapshot": "20210508114326",
+  "url": "https://wiki.e3d-online.com/images/thumb/6/60/Lock_nut.jpg/450px-Lock_nut.jpg",
+  "bytes": 8348
  },
  "Corner_nut_trap.jpg": {
   "kind": "thumb-300px",
@@ -3053,6 +1066,16 @@
   "url": "https://wiki.e3d-online.com/images/thumb/f/f0/Insert_supports.jpg/450px-Insert_supports.jpg",
   "bytes": 13682
  },
+ "Ends_x.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "BigBox_Printer_Sub-assemblies"
+  ],
+  "original_path": "/images/1/16/Ends_x.jpg",
+  "snapshot": "20210508114338",
+  "url": "https://wiki.e3d-online.com/images/thumb/1/16/Ends_x.jpg/450px-Ends_x.jpg",
+  "bytes": 13955
+ },
  "Insert_screws.jpg": {
   "kind": "thumb-300px",
   "pages": [
@@ -3073,16 +1096,6 @@
   "url": "https://wiki.e3d-online.com/images/thumb/4/4c/Position_bearings.jpg/1200px-Position_bearings.jpg",
   "bytes": 70802
  },
- "Ends_x.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "BigBox_Printer_Sub-assemblies"
-  ],
-  "original_path": "/images/1/16/Ends_x.jpg",
-  "snapshot": "20210508114338",
-  "url": "https://wiki.e3d-online.com/images/thumb/1/16/Ends_x.jpg/450px-Ends_x.jpg",
-  "bytes": 13955
- },
  "Bed_standoffs.jpg": {
   "kind": "thumb-450px",
   "pages": [
@@ -3092,16 +1105,6 @@
   "snapshot": "20210508114350",
   "url": "https://wiki.e3d-online.com/images/thumb/b/b1/Bed_standoffs.jpg/450px-Bed_standoffs.jpg",
   "bytes": 13713
- },
- "Bed_attached.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "BigBox_Printer_Sub-assemblies"
-  ],
-  "original_path": "/images/8/82/Bed_attached.jpg",
-  "snapshot": "20210508114301",
-  "url": "https://wiki.e3d-online.com/images/thumb/8/82/Bed_attached.jpg/450px-Bed_attached.jpg",
-  "bytes": 32667
  },
  "Bed.jpg": {
   "kind": "thumb-450px",
@@ -3123,6 +1126,16 @@
   "url": "https://wiki.e3d-online.com/images/thumb/4/48/Bed_fixings.jpg/450px-Bed_fixings.jpg",
   "bytes": 21211
  },
+ "Bed_attached.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "BigBox_Printer_Sub-assemblies"
+  ],
+  "original_path": "/images/8/82/Bed_attached.jpg",
+  "snapshot": "20210508114301",
+  "url": "https://wiki.e3d-online.com/images/thumb/8/82/Bed_attached.jpg/450px-Bed_attached.jpg",
+  "bytes": 32667
+ },
  "Z_drag_parts.jpg": {
   "kind": "thumb-450px",
   "pages": [
@@ -3133,16 +1146,6 @@
   "url": "https://wiki.e3d-online.com/images/thumb/2/25/Z_drag_parts.jpg/450px-Z_drag_parts.jpg",
   "bytes": 21143
  },
- "Z_drag_end_feed.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "BigBox_Printer_Sub-assemblies"
-  ],
-  "original_path": "/images/9/94/Z_drag_end_feed.jpg",
-  "snapshot": "20210508110552",
-  "url": "https://wiki.e3d-online.com/images/thumb/9/94/Z_drag_end_feed.jpg/450px-Z_drag_end_feed.jpg",
-  "bytes": 14316
- },
  "Z_drag_end.jpg": {
   "kind": "thumb-450px",
   "pages": [
@@ -3152,6 +1155,16 @@
   "snapshot": "20210508114358",
   "url": "https://wiki.e3d-online.com/images/thumb/1/1e/Z_drag_end.jpg/450px-Z_drag_end.jpg",
   "bytes": 13141
+ },
+ "Z_drag_end_feed.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "BigBox_Printer_Sub-assemblies"
+  ],
+  "original_path": "/images/9/94/Z_drag_end_feed.jpg",
+  "snapshot": "20210508110552",
+  "url": "https://wiki.e3d-online.com/images/thumb/9/94/Z_drag_end_feed.jpg/450px-Z_drag_end_feed.jpg",
+  "bytes": 14316
  },
  "Z_drag_end_through.jpg": {
   "kind": "thumb-450px",
@@ -3263,16 +1276,6 @@
   "url": "https://wiki.e3d-online.com/images/thumb/9/9f/Psu_screw.jpg/450px-Psu_screw.jpg",
   "bytes": 15503
  },
- "Position_psu_switch.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "BigBox_Printer_Sub-assemblies"
-  ],
-  "original_path": "/images/c/c3/Position_psu_switch.jpg",
-  "snapshot": "20210508110552",
-  "url": "https://wiki.e3d-online.com/images/thumb/c/c3/Position_psu_switch.jpg/450px-Position_psu_switch.jpg",
-  "bytes": 20908
- },
  "Position_psu_spacer.jpg": {
   "kind": "thumb-450px",
   "pages": [
@@ -3282,6 +1285,16 @@
   "snapshot": "20210508114359",
   "url": "https://wiki.e3d-online.com/images/thumb/6/6c/Position_psu_spacer.jpg/450px-Position_psu_spacer.jpg",
   "bytes": 15933
+ },
+ "Position_psu_switch.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "BigBox_Printer_Sub-assemblies"
+  ],
+  "original_path": "/images/c/c3/Position_psu_switch.jpg",
+  "snapshot": "20210508110552",
+  "url": "https://wiki.e3d-online.com/images/thumb/c/c3/Position_psu_switch.jpg/450px-Position_psu_switch.jpg",
+  "bytes": 20908
  },
  "Fixed_psu.jpg": {
   "kind": "thumb-450px",
@@ -3293,16 +1306,6 @@
   "url": "https://wiki.e3d-online.com/images/thumb/b/bf/Fixed_psu.jpg/450px-Fixed_psu.jpg",
   "bytes": 12588
  },
- "Stand_offs_fitted.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "BigBox_Printer_Sub-assemblies"
-  ],
-  "original_path": "/images/3/3a/Stand_offs_fitted.jpg",
-  "snapshot": "20210508114337",
-  "url": "https://wiki.e3d-online.com/images/thumb/3/3a/Stand_offs_fitted.jpg/450px-Stand_offs_fitted.jpg",
-  "bytes": 10379
- },
  "Stand_offs.jpg": {
   "kind": "thumb-450px",
   "pages": [
@@ -3312,6 +1315,16 @@
   "snapshot": "20210508110552",
   "url": "https://wiki.e3d-online.com/images/thumb/1/17/Stand_offs.jpg/450px-Stand_offs.jpg",
   "bytes": 9542
+ },
+ "Stand_offs_fitted.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "BigBox_Printer_Sub-assemblies"
+  ],
+  "original_path": "/images/3/3a/Stand_offs_fitted.jpg",
+  "snapshot": "20210508114337",
+  "url": "https://wiki.e3d-online.com/images/thumb/3/3a/Stand_offs_fitted.jpg/450px-Stand_offs_fitted.jpg",
+  "bytes": 10379
  },
  "Rumba_fitted.jpg": {
   "kind": "thumb-450px",
@@ -3353,16 +1366,6 @@
   "url": "https://wiki.e3d-online.com/images/thumb/d/d4/Dual_pt100-amp.jpg/450px-Dual_pt100-amp.jpg",
   "bytes": 24687
  },
- "Cable_tie.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "BigBox_Printer_Sub-assemblies"
-  ],
-  "original_path": "/images/e/ee/Cable_tie.jpg",
-  "snapshot": "20210508114326",
-  "url": "https://wiki.e3d-online.com/images/thumb/e/ee/Cable_tie.jpg/450px-Cable_tie.jpg",
-  "bytes": 18678
- },
  "Fitted_dual_pt100-amp.jpg": {
   "kind": "thumb-450px",
   "pages": [
@@ -3373,6 +1376,16 @@
   "url": "https://wiki.e3d-online.com/images/thumb/0/00/Fitted_dual_pt100-amp.jpg/450px-Fitted_dual_pt100-amp.jpg",
   "bytes": 22154
  },
+ "Cable_tie.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "BigBox_Printer_Sub-assemblies"
+  ],
+  "original_path": "/images/e/ee/Cable_tie.jpg",
+  "snapshot": "20210508114326",
+  "url": "https://wiki.e3d-online.com/images/thumb/e/ee/Cable_tie.jpg/450px-Cable_tie.jpg",
+  "bytes": 18678
+ },
  "Iec_leads.jpg": {
   "kind": "thumb-450px",
   "pages": [
@@ -3382,16 +1395,6 @@
   "snapshot": "20210508114338",
   "url": "https://wiki.e3d-online.com/images/thumb/0/05/Iec_leads.jpg/450px-Iec_leads.jpg",
   "bytes": 21932
- },
- "Dual_iec_leads_terminals.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "BigBox_Printer_Sub-assemblies"
-  ],
-  "original_path": "/images/b/b2/Dual_iec_leads_terminals.jpg",
-  "snapshot": "20210508114319",
-  "url": "https://wiki.e3d-online.com/images/thumb/b/b2/Dual_iec_leads_terminals.jpg/450px-Dual_iec_leads_terminals.jpg",
-  "bytes": 28280
  },
  "Iec_end.jpg": {
   "kind": "thumb-450px",
@@ -3413,6 +1416,16 @@
   "url": "https://wiki.e3d-online.com/images/thumb/a/a0/Iec_leads_terminals.jpg/450px-Iec_leads_terminals.jpg",
   "bytes": 26771
  },
+ "Dual_iec_leads_terminals.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "BigBox_Printer_Sub-assemblies"
+  ],
+  "original_path": "/images/b/b2/Dual_iec_leads_terminals.jpg",
+  "snapshot": "20210508114319",
+  "url": "https://wiki.e3d-online.com/images/thumb/b/b2/Dual_iec_leads_terminals.jpg/450px-Dual_iec_leads_terminals.jpg",
+  "bytes": 28280
+ },
  "Both_iec_leads_terminals.jpg": {
   "kind": "thumb-450px",
   "pages": [
@@ -3423,16 +1436,6 @@
   "url": "https://wiki.e3d-online.com/images/thumb/2/28/Both_iec_leads_terminals.jpg/450px-Both_iec_leads_terminals.jpg",
   "bytes": 25978
  },
- "Both_connected_terminals.jpg": {
-  "kind": "thumb-300px",
-  "pages": [
-   "BigBox_Printer_Sub-assemblies"
-  ],
-  "original_path": "/images/f/f4/Both_connected_terminals.jpg",
-  "snapshot": "20191219092714",
-  "url": "https://wiki.e3d-online.com/images/thumb/f/f4/Both_connected_terminals.jpg/300px-Both_connected_terminals.jpg",
-  "bytes": 16864
- },
  "Screwed_terminals.jpg": {
   "kind": "thumb-450px",
   "pages": [
@@ -3442,6 +1445,16 @@
   "snapshot": "20210508114313",
   "url": "https://wiki.e3d-online.com/images/thumb/3/36/Screwed_terminals.jpg/450px-Screwed_terminals.jpg",
   "bytes": 24992
+ },
+ "Both_connected_terminals.jpg": {
+  "kind": "thumb-300px",
+  "pages": [
+   "BigBox_Printer_Sub-assemblies"
+  ],
+  "original_path": "/images/f/f4/Both_connected_terminals.jpg",
+  "snapshot": "20191219092714",
+  "url": "https://wiki.e3d-online.com/images/thumb/f/f4/Both_connected_terminals.jpg/300px-Both_connected_terminals.jpg",
+  "bytes": 16864
  },
  "Cable_tied_wires.jpg": {
   "kind": "thumb-300px",
@@ -3503,16 +1516,6 @@
   "url": "https://wiki.e3d-online.com/images/thumb/a/a4/Pi_parts.jpg/450px-Pi_parts.jpg",
   "bytes": 21990
  },
- "Pi_fitted.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "BigBox_Printer_Sub-assemblies"
-  ],
-  "original_path": "/images/c/cc/Pi_fitted.jpg",
-  "snapshot": "20210508114325",
-  "url": "https://wiki.e3d-online.com/images/thumb/c/cc/Pi_fitted.jpg/450px-Pi_fitted.jpg",
-  "bytes": 20891
- },
  "Dc_converter.jpg": {
   "kind": "thumb-450px",
   "pages": [
@@ -3522,6 +1525,16 @@
   "snapshot": "20210508114319",
   "url": "https://wiki.e3d-online.com/images/thumb/d/d2/Dc_converter.jpg/450px-Dc_converter.jpg",
   "bytes": 13143
+ },
+ "Pi_fitted.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "BigBox_Printer_Sub-assemblies"
+  ],
+  "original_path": "/images/c/cc/Pi_fitted.jpg",
+  "snapshot": "20210508114325",
+  "url": "https://wiki.e3d-online.com/images/thumb/c/cc/Pi_fitted.jpg/450px-Pi_fitted.jpg",
+  "bytes": 20891
  },
  "Pi_wires.jpg": {
   "kind": "thumb-450px",
@@ -3542,6 +1555,17 @@
   "snapshot": "20210508114333",
   "url": "https://wiki.e3d-online.com/images/thumb/e/ed/Cable_ties_pi.jpg/450px-Cable_ties_pi.jpg",
   "bytes": 18946
+ },
+ "Blue_usb_mini.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "BigBox_Firmware_Flashing_Guide",
+   "BigBox_Printer_Sub-assemblies"
+  ],
+  "original_path": "/images/b/b8/Blue_usb_mini.jpg",
+  "snapshot": "20210508114313",
+  "url": "https://wiki.e3d-online.com/images/thumb/b/b8/Blue_usb_mini.jpg/450px-Blue_usb_mini.jpg",
+  "bytes": 25570
  },
  "Blue_usb_a.jpg": {
   "kind": "thumb-450px",
@@ -3623,16 +1647,6 @@
   "url": "https://wiki.e3d-online.com/images/thumb/0/02/Split_pairs.jpg/450px-Split_pairs.jpg",
   "bytes": 14480
  },
- "Twist_hold.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "BigBox_Printer_Sub-assemblies"
-  ],
-  "original_path": "/images/9/9d/Twist_hold.jpg",
-  "snapshot": "20210508114358",
-  "url": "https://wiki.e3d-online.com/images/thumb/9/9d/Twist_hold.jpg/450px-Twist_hold.jpg",
-  "bytes": 17012
- },
  "Twist_pairs.jpg": {
   "kind": "thumb-450px",
   "pages": [
@@ -3642,6 +1656,16 @@
   "snapshot": "20210508114350",
   "url": "https://wiki.e3d-online.com/images/thumb/a/ad/Twist_pairs.jpg/450px-Twist_pairs.jpg",
   "bytes": 13756
+ },
+ "Twist_hold.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "BigBox_Printer_Sub-assemblies"
+  ],
+  "original_path": "/images/9/9d/Twist_hold.jpg",
+  "snapshot": "20210508114358",
+  "url": "https://wiki.e3d-online.com/images/thumb/9/9d/Twist_hold.jpg/450px-Twist_hold.jpg",
+  "bytes": 17012
  },
  "Secure_pairs.jpg": {
   "kind": "thumb-450px",
@@ -3653,16 +1677,6 @@
   "url": "https://wiki.e3d-online.com/images/thumb/e/ea/Secure_pairs.jpg/450px-Secure_pairs.jpg",
   "bytes": 17355
  },
- "Both_pairs.jpg": {
-  "kind": "thumb-300px",
-  "pages": [
-   "BigBox_Printer_Sub-assemblies"
-  ],
-  "original_path": "/images/e/ec/Both_pairs.jpg",
-  "snapshot": "20191217045531",
-  "url": "https://wiki.e3d-online.com/images/thumb/e/ec/Both_pairs.jpg/300px-Both_pairs.jpg",
-  "bytes": 9645
- },
  "Done_pairs.jpg": {
   "kind": "thumb-300px",
   "pages": [
@@ -3673,6 +1687,16 @@
   "url": "https://wiki.e3d-online.com/images/thumb/c/c7/Done_pairs.jpg/300px-Done_pairs.jpg",
   "bytes": 8542
  },
+ "Both_pairs.jpg": {
+  "kind": "thumb-300px",
+  "pages": [
+   "BigBox_Printer_Sub-assemblies"
+  ],
+  "original_path": "/images/e/ec/Both_pairs.jpg",
+  "snapshot": "20191217045531",
+  "url": "https://wiki.e3d-online.com/images/thumb/e/ec/Both_pairs.jpg/300px-Both_pairs.jpg",
+  "bytes": 9645
+ },
  "Join_pairs.jpg": {
   "kind": "thumb-450px",
   "pages": [
@@ -3682,6 +1706,16 @@
   "snapshot": "20210508114351",
   "url": "https://wiki.e3d-online.com/images/thumb/9/93/Join_pairs.jpg/450px-Join_pairs.jpg",
   "bytes": 14257
+ },
+ "Loosen.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "BigBox_Printer_Sub-assemblies"
+  ],
+  "original_path": "/images/a/a0/Loosen.jpg",
+  "snapshot": "20210508114345",
+  "url": "https://wiki.e3d-online.com/images/thumb/a/a0/Loosen.jpg/450px-Loosen.jpg",
+  "bytes": 31099
  },
  "Join_black.jpg": {
   "kind": "thumb-450px",
@@ -3703,16 +1737,6 @@
   "url": "https://wiki.e3d-online.com/images/thumb/c/c2/Join_rest.jpg/300px-Join_rest.jpg",
   "bytes": 19942
  },
- "Loosen.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "BigBox_Printer_Sub-assemblies"
-  ],
-  "original_path": "/images/a/a0/Loosen.jpg",
-  "snapshot": "20210508114345",
-  "url": "https://wiki.e3d-online.com/images/thumb/a/a0/Loosen.jpg/450px-Loosen.jpg",
-  "bytes": 31099
- },
  "Route.jpg": {
   "kind": "thumb-450px",
   "pages": [
@@ -3722,16 +1746,6 @@
   "snapshot": "20210508114320",
   "url": "https://wiki.e3d-online.com/images/thumb/0/0b/Route.jpg/450px-Route.jpg",
   "bytes": 25172
- },
- "FRAME-LUG_RENDER.jpg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "BigBox_Printer_Sub-assemblies"
-  ],
-  "original_path": "/images/6/66/FRAME-LUG_RENDER.jpg",
-  "snapshot": "20210508114319",
-  "url": "https://wiki.e3d-online.com/images/thumb/6/66/FRAME-LUG_RENDER.jpg/450px-FRAME-LUG_RENDER.jpg",
-  "bytes": 11350
  },
  "Completed_base.jpg": {
   "kind": "thumb-300px",
@@ -3753,6 +1767,16 @@
   "url": "https://wiki.e3d-online.com/images/thumb/7/78/FRAME-LUG_DRAWING.jpg/1200px-FRAME-LUG_DRAWING.jpg",
   "bytes": 79196
  },
+ "FRAME-LUG_RENDER.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "BigBox_Printer_Sub-assemblies"
+  ],
+  "original_path": "/images/6/66/FRAME-LUG_RENDER.jpg",
+  "snapshot": "20210508114319",
+  "url": "https://wiki.e3d-online.com/images/thumb/6/66/FRAME-LUG_RENDER.jpg/450px-FRAME-LUG_RENDER.jpg",
+  "bytes": 11350
+ },
  "Nut_traps.jpg": {
   "kind": "thumb-450px",
   "pages": [
@@ -3762,16 +1786,6 @@
   "snapshot": "20210508114338",
   "url": "https://wiki.e3d-online.com/images/thumb/1/1a/Nut_traps.jpg/450px-Nut_traps.jpg",
   "bytes": 30000
- },
- "Frame-Assembly-stage-1.JPG": {
-  "kind": "thumb-450px",
-  "pages": [
-   "BigBox_Printer_Sub-assemblies"
-  ],
-  "original_path": "/images/1/17/Frame-Assembly-stage-1.JPG",
-  "snapshot": "20210508114302",
-  "url": "https://wiki.e3d-online.com/images/thumb/1/17/Frame-Assembly-stage-1.JPG/450px-Frame-Assembly-stage-1.JPG",
-  "bytes": 26146
  },
  "FRAME-LUG_Photo.jpg": {
   "kind": "thumb-450px",
@@ -3783,15 +1797,15 @@
   "url": "https://wiki.e3d-online.com/images/thumb/b/b0/FRAME-LUG_Photo.jpg/450px-FRAME-LUG_Photo.jpg",
   "bytes": 7100
  },
- "Left_frame_side_and_left_frame_support.JPG": {
-  "kind": "thumb-300px",
+ "Frame-Assembly-stage-1.JPG": {
+  "kind": "thumb-450px",
   "pages": [
    "BigBox_Printer_Sub-assemblies"
   ],
-  "original_path": "/images/b/b6/Left_frame_side_and_left_frame_support.JPG",
-  "snapshot": "20191217100945",
-  "url": "https://wiki.e3d-online.com/images/thumb/b/b6/Left_frame_side_and_left_frame_support.JPG/300px-Left_frame_side_and_left_frame_support.JPG",
-  "bytes": 7574
+  "original_path": "/images/1/17/Frame-Assembly-stage-1.JPG",
+  "snapshot": "20210508114302",
+  "url": "https://wiki.e3d-online.com/images/thumb/1/17/Frame-Assembly-stage-1.JPG/450px-Frame-Assembly-stage-1.JPG",
+  "bytes": 26146
  },
  "Left_and_right_upper_frame_supports.JPG": {
   "kind": "thumb-450px",
@@ -3802,6 +1816,26 @@
   "snapshot": "20210508114343",
   "url": "https://wiki.e3d-online.com/images/thumb/f/fb/Left_and_right_upper_frame_supports.JPG/450px-Left_and_right_upper_frame_supports.JPG",
   "bytes": 14387
+ },
+ "Left_frame_side_and_left_frame_support.JPG": {
+  "kind": "thumb-300px",
+  "pages": [
+   "BigBox_Printer_Sub-assemblies"
+  ],
+  "original_path": "/images/b/b6/Left_frame_side_and_left_frame_support.JPG",
+  "snapshot": "20191217100945",
+  "url": "https://wiki.e3d-online.com/images/thumb/b/b6/Left_frame_side_and_left_frame_support.JPG/300px-Left_frame_side_and_left_frame_support.JPG",
+  "bytes": 7574
+ },
+ "Frame_lug_tightening.JPG": {
+  "kind": "thumb-450px",
+  "pages": [
+   "BigBox_Printer_Sub-assemblies"
+  ],
+  "original_path": "/images/3/3c/Frame_lug_tightening.JPG",
+  "snapshot": "20210508114313",
+  "url": "https://wiki.e3d-online.com/images/thumb/3/3c/Frame_lug_tightening.JPG/450px-Frame_lug_tightening.JPG",
+  "bytes": 13779
  },
  "Right_side_of_BigBox_frame.JPG": {
   "kind": "thumb-450px",
@@ -3823,16 +1857,6 @@
   "url": "https://wiki.e3d-online.com/images/thumb/2/20/Sides_and_lower_support.JPG/450px-Sides_and_lower_support.JPG",
   "bytes": 17790
  },
- "Frame_lug_tightening.JPG": {
-  "kind": "thumb-450px",
-  "pages": [
-   "BigBox_Printer_Sub-assemblies"
-  ],
-  "original_path": "/images/3/3c/Frame_lug_tightening.JPG",
-  "snapshot": "20210508114313",
-  "url": "https://wiki.e3d-online.com/images/thumb/3/3c/Frame_lug_tightening.JPG/450px-Frame_lug_tightening.JPG",
-  "bytes": 13779
- },
  "Lower_support_on.JPG": {
   "kind": "thumb-450px",
   "pages": [
@@ -3853,16 +1877,6 @@
   "url": "https://wiki.e3d-online.com/images/thumb/a/a0/Fix_sides_into_back_panel.JPG/450px-Fix_sides_into_back_panel.JPG",
   "bytes": 22771
  },
- "BigBox_frame_fronts.JPG": {
-  "kind": "thumb-300px",
-  "pages": [
-   "BigBox_Printer_Sub-assemblies"
-  ],
-  "original_path": "/images/7/7c/BigBox_frame_fronts.JPG",
-  "snapshot": "20191214234818",
-  "url": "https://wiki.e3d-online.com/images/thumb/7/7c/BigBox_frame_fronts.JPG/300px-BigBox_frame_fronts.JPG",
-  "bytes": 10110
- },
  "Frame_so_far.JPG": {
   "kind": "thumb-450px",
   "pages": [
@@ -3873,6 +1887,16 @@
   "url": "https://wiki.e3d-online.com/images/thumb/0/03/Frame_so_far.JPG/450px-Frame_so_far.JPG",
   "bytes": 19893
  },
+ "BigBox_frame_fronts.JPG": {
+  "kind": "thumb-300px",
+  "pages": [
+   "BigBox_Printer_Sub-assemblies"
+  ],
+  "original_path": "/images/7/7c/BigBox_frame_fronts.JPG",
+  "snapshot": "20191214234818",
+  "url": "https://wiki.e3d-online.com/images/thumb/7/7c/BigBox_frame_fronts.JPG/300px-BigBox_frame_fronts.JPG",
+  "bytes": 10110
+ },
  "Frame_front_half_attached.JPG": {
   "kind": "thumb-450px",
   "pages": [
@@ -3882,26 +1906,6 @@
   "snapshot": "20210508114332",
   "url": "https://wiki.e3d-online.com/images/thumb/0/04/Frame_front_half_attached.JPG/450px-Frame_front_half_attached.JPG",
   "bytes": 19873
- },
- "Lcd_wires.jpeg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "BigBox_Printer_Sub-assemblies"
-  ],
-  "original_path": "/images/9/91/Lcd_wires.jpeg",
-  "snapshot": "20210508114333",
-  "url": "https://wiki.e3d-online.com/images/thumb/9/91/Lcd_wires.jpeg/450px-Lcd_wires.jpeg",
-  "bytes": 27576
- },
- "Correct_cable_plugs.jpeg": {
-  "kind": "thumb-450px",
-  "pages": [
-   "BigBox_Printer_Sub-assemblies"
-  ],
-  "original_path": "/images/0/03/Correct_cable_plugs.jpeg",
-  "snapshot": "20210508114307",
-  "url": "https://wiki.e3d-online.com/images/thumb/0/03/Correct_cable_plugs.jpeg/450px-Correct_cable_plugs.jpeg",
-  "bytes": 19145
  },
  "Laser_cut_lcd_parts.jpeg": {
   "kind": "thumb-450px",
@@ -3923,25 +1927,25 @@
   "url": "https://wiki.e3d-online.com/images/thumb/5/52/Lcd_cable_plugs.jpeg/300px-Lcd_cable_plugs.jpeg",
   "bytes": 11083
  },
- "Lcd_sd.jpeg": {
+ "Correct_cable_plugs.jpeg": {
   "kind": "thumb-450px",
   "pages": [
    "BigBox_Printer_Sub-assemblies"
   ],
-  "original_path": "/images/d/dd/Lcd_sd.jpeg",
-  "snapshot": "20210508114331",
-  "url": "https://wiki.e3d-online.com/images/thumb/d/dd/Lcd_sd.jpeg/450px-Lcd_sd.jpeg",
-  "bytes": 11850
+  "original_path": "/images/0/03/Correct_cable_plugs.jpeg",
+  "snapshot": "20210508114307",
+  "url": "https://wiki.e3d-online.com/images/thumb/0/03/Correct_cable_plugs.jpeg/450px-Correct_cable_plugs.jpeg",
+  "bytes": 19145
  },
- "Lcd_screwed.jpeg": {
+ "Lcd_wires.jpeg": {
   "kind": "thumb-450px",
   "pages": [
    "BigBox_Printer_Sub-assemblies"
   ],
-  "original_path": "/images/f/f0/Lcd_screwed.jpeg",
-  "snapshot": "20210508114348",
-  "url": "https://wiki.e3d-online.com/images/thumb/f/f0/Lcd_screwed.jpeg/450px-Lcd_screwed.jpeg",
-  "bytes": 13861
+  "original_path": "/images/9/91/Lcd_wires.jpeg",
+  "snapshot": "20210508114333",
+  "url": "https://wiki.e3d-online.com/images/thumb/9/91/Lcd_wires.jpeg/450px-Lcd_wires.jpeg",
+  "bytes": 27576
  },
  "Lcd_front_with_screws.jpg": {
   "kind": "thumb-450px",
@@ -3953,6 +1957,16 @@
   "url": "https://wiki.e3d-online.com/images/thumb/f/f8/Lcd_front_with_screws.jpg/450px-Lcd_front_with_screws.jpg",
   "bytes": 15045
  },
+ "Lcd_screwed.jpeg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "BigBox_Printer_Sub-assemblies"
+  ],
+  "original_path": "/images/f/f0/Lcd_screwed.jpeg",
+  "snapshot": "20210508114348",
+  "url": "https://wiki.e3d-online.com/images/thumb/f/f0/Lcd_screwed.jpeg/450px-Lcd_screwed.jpeg",
+  "bytes": 13861
+ },
  "Lcd_sides.jpeg": {
   "kind": "thumb-450px",
   "pages": [
@@ -3963,32 +1977,15 @@
   "url": "https://wiki.e3d-online.com/images/thumb/2/23/Lcd_sides.jpeg/450px-Lcd_sides.jpeg",
   "bytes": 15430
  },
- "TITAN-IN-THE-BOX.jpg": {
-  "kind": null,
+ "Lcd_sd.jpeg": {
+  "kind": "thumb-450px",
   "pages": [
-   "Titan_Assembly"
+   "BigBox_Printer_Sub-assemblies"
   ],
-  "original_path": "/images/e/ec/TITAN-IN-THE-BOX.jpg"
- },
- "TITAN-FLUSH-GEARS.png": {
-  "kind": "original",
-  "pages": [
-   "Titan_Assembly"
-  ],
-  "original_path": "/images/e/eb/TITAN-FLUSH-GEARS.png",
-  "snapshot": "20190708135326",
-  "url": "https://wiki.e3d-online.com/images/e/eb/TITAN-FLUSH-GEARS.png",
-  "bytes": 15160
- },
- "TITAN-AFFIX-BODY.jpg": {
-  "kind": "original",
-  "pages": [
-   "Titan_Assembly"
-  ],
-  "original_path": "/images/5/5f/TITAN-AFFIX-BODY.jpg",
-  "snapshot": "20190928143631",
-  "url": "https://wiki.e3d-online.com/images/5/5f/TITAN-AFFIX-BODY.jpg",
-  "bytes": 23650
+  "original_path": "/images/d/dd/Lcd_sd.jpeg",
+  "snapshot": "20210508114331",
+  "url": "https://wiki.e3d-online.com/images/thumb/d/dd/Lcd_sd.jpeg/450px-Lcd_sd.jpeg",
+  "bytes": 11850
  },
  "Lcd_assembly.jpeg": {
   "kind": "thumb-450px",
@@ -4000,76 +1997,1857 @@
   "url": "https://wiki.e3d-online.com/images/thumb/4/42/Lcd_assembly.jpeg/450px-Lcd_assembly.jpeg",
   "bytes": 13114
  },
- "TITAN-PTFE.png": {
-  "kind": "original",
+ "X_m3_f.jpg": {
+  "kind": "thumb-450px",
   "pages": [
-   "Titan_Assembly"
+   "Printer_Commissioning"
   ],
-  "original_path": "/images/e/e2/TITAN-PTFE.png",
-  "snapshot": "20190928143705",
-  "url": "https://wiki.e3d-online.com/images/e/e2/TITAN-PTFE.png",
-  "bytes": 55928
+  "original_path": "/images/d/d5/X_m3_f.jpg",
+  "snapshot": "20210508123613",
+  "url": "https://wiki.e3d-online.com/images/thumb/d/d5/X_m3_f.jpg/450px-X_m3_f.jpg",
+  "bytes": 29261
  },
- "TITAN-FLUSH-GEARS-PHOTO.jpg": {
-  "kind": "original",
+ "X_m3_r.jpg": {
+  "kind": "thumb-450px",
   "pages": [
-   "Titan_Assembly"
+   "Printer_Commissioning"
   ],
-  "original_path": "/images/1/17/TITAN-FLUSH-GEARS-PHOTO.jpg",
-  "snapshot": "20190928143650",
-  "url": "https://wiki.e3d-online.com/images/1/17/TITAN-FLUSH-GEARS-PHOTO.jpg",
-  "bytes": 28889
+  "original_path": "/images/3/3a/X_m3_r.jpg",
+  "snapshot": "20210508123625",
+  "url": "https://wiki.e3d-online.com/images/thumb/3/3a/X_m3_r.jpg/450px-X_m3_r.jpg",
+  "bytes": 25364
  },
- "MOTOR-TYPE.jpg": {
-  "kind": "thumb-1000px",
+ "X_m3_i.jpg": {
+  "kind": "thumb-450px",
   "pages": [
-   "Titan_Assembly"
+   "Printer_Commissioning"
   ],
-  "original_path": "/images/e/e2/MOTOR-TYPE.jpg",
-  "snapshot": "20190928143701",
-  "url": "https://wiki.e3d-online.com/images/thumb/e/e2/MOTOR-TYPE.jpg/1000px-MOTOR-TYPE.jpg",
-  "bytes": 39603
+  "original_path": "/images/e/eb/X_m3_i.jpg",
+  "snapshot": "20210508123615",
+  "url": "https://wiki.e3d-online.com/images/thumb/e/eb/X_m3_i.jpg/450px-X_m3_i.jpg",
+  "bytes": 21870
  },
- "TITAN-IDLER-FITTING.jpg": {
+ "X_pulley_align.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/7/7d/X_pulley_align.jpg",
+  "snapshot": "20210508123613",
+  "url": "https://wiki.e3d-online.com/images/thumb/7/7d/X_pulley_align.jpg/450px-X_pulley_align.jpg",
+  "bytes": 26627
+ },
+ "X_pulley_tighten.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/d/d7/X_pulley_tighten.jpg",
+  "snapshot": "20210508123614",
+  "url": "https://wiki.e3d-online.com/images/thumb/d/d7/X_pulley_tighten.jpg/450px-X_pulley_tighten.jpg",
+  "bytes": 24890
+ },
+ "X_belt_tighten.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/5/5a/X_belt_tighten.jpg",
+  "snapshot": "20210508123631",
+  "url": "https://wiki.e3d-online.com/images/thumb/5/5a/X_belt_tighten.jpg/450px-X_belt_tighten.jpg",
+  "bytes": 31741
+ },
+ "Xy_front.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/1/1f/Xy_front.jpg",
+  "snapshot": "20210508123612",
+  "url": "https://wiki.e3d-online.com/images/thumb/1/1f/Xy_front.jpg/450px-Xy_front.jpg",
+  "bytes": 27556
+ },
+ "Xy_front_tighten.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/6/64/Xy_front_tighten.jpg",
+  "snapshot": "20210508123614",
+  "url": "https://wiki.e3d-online.com/images/thumb/6/64/Xy_front_tighten.jpg/450px-Xy_front_tighten.jpg",
+  "bytes": 20758
+ },
+ "Xy_front_cork.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/0/02/Xy_front_cork.jpg",
+  "snapshot": "20210508123624",
+  "url": "https://wiki.e3d-online.com/images/thumb/0/02/Xy_front_cork.jpg/450px-Xy_front_cork.jpg",
+  "bytes": 16730
+ },
+ "Xy_back.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/e/e9/Xy_back.jpg",
+  "snapshot": "20210508123613",
+  "url": "https://wiki.e3d-online.com/images/thumb/e/e9/Xy_back.jpg/450px-Xy_back.jpg",
+  "bytes": 24476
+ },
+ "Xy_back_tighten.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/d/d4/Xy_back_tighten.jpg",
+  "snapshot": "20210508123615",
+  "url": "https://wiki.e3d-online.com/images/thumb/d/d4/Xy_back_tighten.jpg/450px-Xy_back_tighten.jpg",
+  "bytes": 22007
+ },
+ "Xy_front_m3.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/b/bd/Xy_front_m3.jpg",
+  "snapshot": "20210508123632",
+  "url": "https://wiki.e3d-online.com/images/thumb/b/bd/Xy_front_m3.jpg/450px-Xy_front_m3.jpg",
+  "bytes": 18883
+ },
+ "Xy_back_m3.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/f/f2/Xy_back_m3.jpg",
+  "snapshot": "20210508123628",
+  "url": "https://wiki.e3d-online.com/images/thumb/f/f2/Xy_back_m3.jpg/450px-Xy_back_m3.jpg",
+  "bytes": 15537
+ },
+ "Xy_pulley_push.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/e/ef/Xy_pulley_push.jpg",
+  "snapshot": "20210508123621",
+  "url": "https://wiki.e3d-online.com/images/thumb/e/ef/Xy_pulley_push.jpg/450px-Xy_pulley_push.jpg",
+  "bytes": 20618
+ },
+ "Xy_belt_tension.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/b/bf/Xy_belt_tension.jpg",
+  "snapshot": "20210508123620",
+  "url": "https://wiki.e3d-online.com/images/thumb/b/bf/Xy_belt_tension.jpg/450px-Xy_belt_tension.jpg",
+  "bytes": 21152
+ },
+ "Xy_front_measure.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/7/71/Xy_front_measure.jpg",
+  "snapshot": "20210508123619",
+  "url": "https://wiki.e3d-online.com/images/thumb/7/71/Xy_front_measure.jpg/450px-Xy_front_measure.jpg",
+  "bytes": 28101
+ },
+ "Xy_front_measure_other.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/8/85/Xy_front_measure_other.jpg",
+  "snapshot": "20210508123640",
+  "url": "https://wiki.e3d-online.com/images/thumb/8/85/Xy_front_measure_other.jpg/450px-Xy_front_measure_other.jpg",
+  "bytes": 23490
+ },
+ "Xy_pulley_tighten.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/5/59/Xy_pulley_tighten.jpg",
+  "snapshot": "20210508123630",
+  "url": "https://wiki.e3d-online.com/images/thumb/5/59/Xy_pulley_tighten.jpg/450px-Xy_pulley_tighten.jpg",
+  "bytes": 21674
+ },
+ "Y_motor_align.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/1/1b/Y_motor_align.jpg",
+  "snapshot": "20210508123634",
+  "url": "https://wiki.e3d-online.com/images/thumb/1/1b/Y_motor_align.jpg/450px-Y_motor_align.jpg",
+  "bytes": 19115
+ },
+ "Y_motor_grubs.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/f/f8/Y_motor_grubs.jpg",
+  "snapshot": "20210508123621",
+  "url": "https://wiki.e3d-online.com/images/thumb/f/f8/Y_motor_grubs.jpg/450px-Y_motor_grubs.jpg",
+  "bytes": 22658
+ },
+ "Y_motor_push.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/e/e8/Y_motor_push.jpg",
+  "snapshot": "20210508123626",
+  "url": "https://wiki.e3d-online.com/images/thumb/e/e8/Y_motor_push.jpg/450px-Y_motor_push.jpg",
+  "bytes": 20637
+ },
+ "Y_motor_screw.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/8/81/Y_motor_screw.jpg",
+  "snapshot": "20210508123636",
+  "url": "https://wiki.e3d-online.com/images/thumb/8/81/Y_motor_screw.jpg/450px-Y_motor_screw.jpg",
+  "bytes": 17359
+ },
+ "Z_check.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/6/65/Z_check.jpg",
+  "snapshot": "20210508123630",
+  "url": "https://wiki.e3d-online.com/images/thumb/6/65/Z_check.jpg/450px-Z_check.jpg",
+  "bytes": 25104
+ },
+ "Z_corner.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/9/97/Z_corner.jpg",
+  "snapshot": "20210508123633",
+  "url": "https://wiki.e3d-online.com/images/thumb/9/97/Z_corner.jpg/450px-Z_corner.jpg",
+  "bytes": 16424
+ },
+ "Z_rods.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/6/68/Z_rods.jpg",
+  "snapshot": "20210508123641",
+  "url": "https://wiki.e3d-online.com/images/thumb/6/68/Z_rods.jpg/450px-Z_rods.jpg",
+  "bytes": 27506
+ },
+ "Bed_up.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/e/e9/Bed_up.jpg",
+  "snapshot": "20210508123657",
+  "url": "https://wiki.e3d-online.com/images/thumb/e/e9/Bed_up.jpg/450px-Bed_up.jpg",
+  "bytes": 24158
+ },
+ "Lead_cover_bottom.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/0/01/Lead_cover_bottom.jpg",
+  "snapshot": "20210508123659",
+  "url": "https://wiki.e3d-online.com/images/thumb/0/01/Lead_cover_bottom.jpg/450px-Lead_cover_bottom.jpg",
+  "bytes": 10972
+ },
+ "Leadscrew_varients.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/7/7c/Leadscrew_varients.jpg",
+  "snapshot": "20210508123654",
+  "url": "https://wiki.e3d-online.com/images/thumb/7/7c/Leadscrew_varients.jpg/450px-Leadscrew_varients.jpg",
+  "bytes": 15824
+ },
+ "Leadscrew_fit.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/d/df/Leadscrew_fit.jpg",
+  "snapshot": "20210508123641",
+  "url": "https://wiki.e3d-online.com/images/thumb/d/df/Leadscrew_fit.jpg/450px-Leadscrew_fit.jpg",
+  "bytes": 22079
+ },
+ "Leadscrew_coupler.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/2/2f/Leadscrew_coupler.jpg",
+  "snapshot": "20210508123700",
+  "url": "https://wiki.e3d-online.com/images/thumb/2/2f/Leadscrew_coupler.jpg/450px-Leadscrew_coupler.jpg",
+  "bytes": 18546
+ },
+ "Leadscrew_leadscrew.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/b/bd/Leadscrew_leadscrew.jpg",
+  "snapshot": "20210508123710",
+  "url": "https://wiki.e3d-online.com/images/thumb/b/bd/Leadscrew_leadscrew.jpg/450px-Leadscrew_leadscrew.jpg",
+  "bytes": 32890
+ },
+ "Top_bottom.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/f/f9/Top_bottom.jpg",
+  "snapshot": "20210508123655",
+  "url": "https://wiki.e3d-online.com/images/thumb/f/f9/Top_bottom.jpg/450px-Top_bottom.jpg",
+  "bytes": 22350
+ },
+ "Top_bottoms.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/c/cc/Top_bottoms.jpg",
+  "snapshot": "20210508123654",
+  "url": "https://wiki.e3d-online.com/images/thumb/c/cc/Top_bottoms.jpg/450px-Top_bottoms.jpg",
+  "bytes": 27705
+ },
+ "Leadscrew_couplers.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/0/0e/Leadscrew_couplers.jpg",
+  "snapshot": "20210508123655",
+  "url": "https://wiki.e3d-online.com/images/thumb/0/0e/Leadscrew_couplers.jpg/450px-Leadscrew_couplers.jpg",
+  "bytes": 15587
+ },
+ "Bed_measure.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/3/34/Bed_measure.jpg",
+  "snapshot": "20210508123700",
+  "url": "https://wiki.e3d-online.com/images/thumb/3/34/Bed_measure.jpg/450px-Bed_measure.jpg",
+  "bytes": 19861
+ },
+ "Bed_measure_other.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/9/91/Bed_measure_other.jpg",
+  "snapshot": "20210508123656",
+  "url": "https://wiki.e3d-online.com/images/thumb/9/91/Bed_measure_other.jpg/450px-Bed_measure_other.jpg",
+  "bytes": 23030
+ },
+ "Clips.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/b/b3/Clips.jpg",
+  "snapshot": "20210508123703",
+  "url": "https://wiki.e3d-online.com/images/thumb/b/b3/Clips.jpg/450px-Clips.jpg",
+  "bytes": 9448
+ },
+ "Clips_squash.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/b/b5/Clips_squash.jpg",
+  "snapshot": "20210508123724",
+  "url": "https://wiki.e3d-online.com/images/thumb/b/b5/Clips_squash.jpg/450px-Clips_squash.jpg",
+  "bytes": 13751
+ },
+ "Clips_break.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/1/19/Clips_break.jpg",
+  "snapshot": "20210508123726",
+  "url": "https://wiki.e3d-online.com/images/thumb/1/19/Clips_break.jpg/450px-Clips_break.jpg",
+  "bytes": 14213
+ },
+ "Clips_prong.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/9/91/Clips_prong.jpg",
+  "snapshot": "20210508123728",
+  "url": "https://wiki.e3d-online.com/images/thumb/9/91/Clips_prong.jpg/450px-Clips_prong.jpg",
+  "bytes": 12419
+ },
+ "Clips_prong_bent.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/2/21/Clips_prong_bent.jpg",
+  "snapshot": "20210508123727",
+  "url": "https://wiki.e3d-online.com/images/thumb/2/21/Clips_prong_bent.jpg/450px-Clips_prong_bent.jpg",
+  "bytes": 9938
+ },
+ "Clips_ba.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/b/b5/Clips_ba.jpg",
+  "snapshot": "20210508123726",
+  "url": "https://wiki.e3d-online.com/images/thumb/b/b5/Clips_ba.jpg/450px-Clips_ba.jpg",
+  "bytes": 11874
+ },
+ "Glass.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/e/e2/Glass.jpg",
+  "snapshot": "20210508123725",
+  "url": "https://wiki.e3d-online.com/images/thumb/e/e2/Glass.jpg/450px-Glass.jpg",
+  "bytes": 37343
+ },
+ "Glass_clip.jpg": {
+  "kind": "thumb-300px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/6/6e/Glass_clip.jpg",
+  "snapshot": "20210523193657",
+  "url": "https://wiki.e3d-online.com/images/thumb/6/6e/Glass_clip.jpg/300px-Glass_clip.jpg",
+  "bytes": 19856
+ },
+ "Glass_cliped.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/e/e0/Glass_cliped.jpg",
+  "snapshot": "20210508123727",
+  "url": "https://wiki.e3d-online.com/images/thumb/e/e0/Glass_cliped.jpg/450px-Glass_cliped.jpg",
+  "bytes": 33070
+ },
+ "Glass_clips.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/4/47/Glass_clips.jpg",
+  "snapshot": "20210508123728",
+  "url": "https://wiki.e3d-online.com/images/thumb/4/47/Glass_clips.jpg/450px-Glass_clips.jpg",
+  "bytes": 37414
+ },
+ "Wiper.jpg": {
+  "kind": "thumb-300px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/1/15/Wiper.jpg",
+  "snapshot": "20210523193714",
+  "url": "https://wiki.e3d-online.com/images/thumb/1/15/Wiper.jpg/300px-Wiper.jpg",
+  "bytes": 12979
+ },
+ "Wiper_undo.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/a/ac/Wiper_undo.jpg",
+  "snapshot": "20210508123727",
+  "url": "https://wiki.e3d-online.com/images/thumb/a/ac/Wiper_undo.jpg/450px-Wiper_undo.jpg",
+  "bytes": 18024
+ },
+ "Wiper_adjust.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/d/db/Wiper_adjust.jpg",
+  "snapshot": "20210508123646",
+  "url": "https://wiki.e3d-online.com/images/thumb/d/db/Wiper_adjust.jpg/450px-Wiper_adjust.jpg",
+  "bytes": 20726
+ },
+ "Fan.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/3/32/Fan.jpg",
+  "snapshot": "20210508123731",
+  "url": "https://wiki.e3d-online.com/images/thumb/3/32/Fan.jpg/450px-Fan.jpg",
+  "bytes": 31312
+ },
+ "Check_y.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/c/c6/Check_y.jpg",
+  "snapshot": "20210508123646",
+  "url": "https://wiki.e3d-online.com/images/thumb/c/c6/Check_y.jpg/450px-Check_y.jpg",
+  "bytes": 23309
+ },
+ "Check_x.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/d/de/Check_x.jpg",
+  "snapshot": "20210508123719",
+  "url": "https://wiki.e3d-online.com/images/thumb/d/de/Check_x.jpg/450px-Check_x.jpg",
+  "bytes": 28821
+ },
+ "Ir.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/a/aa/Ir.jpg",
+  "snapshot": "20210508123719",
+  "url": "https://wiki.e3d-online.com/images/thumb/a/aa/Ir.jpg/450px-Ir.jpg",
+  "bytes": 22896
+ },
+ "Power_on.jpg": {
+  "kind": "thumb-300px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/e/e3/Power_on.jpg",
+  "snapshot": "20210523193623",
+  "url": "https://wiki.e3d-online.com/images/thumb/e/e3/Power_on.jpg/300px-Power_on.jpg",
+  "bytes": 11915
+ },
+ "Power_on_ready.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/8/87/Power_on_ready.jpg",
+  "snapshot": "20210508123804",
+  "url": "https://wiki.e3d-online.com/images/thumb/8/87/Power_on_ready.jpg/450px-Power_on_ready.jpg",
+  "bytes": 19785
+ },
+ "Display_info.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/a/a5/Display_info.jpg",
+  "snapshot": "20210508123814",
+  "url": "https://wiki.e3d-online.com/images/thumb/a/a5/Display_info.jpg/450px-Display_info.jpg",
+  "bytes": 16642
+ },
+ "Display_control.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/d/d4/Display_control.jpg",
+  "snapshot": "20210508123804",
+  "url": "https://wiki.e3d-online.com/images/thumb/d/d4/Display_control.jpg/450px-Display_control.jpg",
+  "bytes": 15864
+ },
+ "Display_Motion.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/1/1a/Display_Motion.jpg",
+  "snapshot": "20210508123804",
+  "url": "https://wiki.e3d-online.com/images/thumb/1/1a/Display_Motion.jpg/450px-Display_Motion.jpg",
+  "bytes": 17163
+ },
+ "Display_zoff.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/e/e7/Display_zoff.jpg",
+  "snapshot": "20210508123805",
+  "url": "https://wiki.e3d-online.com/images/thumb/e/e7/Display_zoff.jpg/450px-Display_zoff.jpg",
+  "bytes": 19300
+ },
+ "Display_zoffadj.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/c/ce/Display_zoffadj.jpg",
+  "snapshot": "20210508123805",
+  "url": "https://wiki.e3d-online.com/images/thumb/c/ce/Display_zoffadj.jpg/450px-Display_zoffadj.jpg",
+  "bytes": 15892
+ },
+ "Display_controlback.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/2/22/Display_controlback.jpg",
+  "snapshot": "20230520183453",
+  "url": "https://wiki.e3d-online.com/images/thumb/2/22/Display_controlback.jpg/450px-Display_controlback.jpg",
+  "bytes": 18544
+ },
+ "Display_store.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/8/87/Display_store.jpg",
+  "snapshot": "20230520183420",
+  "url": "https://wiki.e3d-online.com/images/thumb/8/87/Display_store.jpg/450px-Display_store.jpg",
+  "bytes": 17172
+ },
+ "Display_z_steps.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/5/5a/Display_z_steps.jpg",
+  "snapshot": "20210508123805",
+  "url": "https://wiki.e3d-online.com/images/thumb/5/5a/Display_z_steps.jpg/450px-Display_z_steps.jpg",
+  "bytes": 22540
+ },
+ "Display_z_steps_400.jpg": {
+  "kind": "thumb-300px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/f/f6/Display_z_steps_400.jpg",
+  "snapshot": "20210523193727",
+  "url": "https://wiki.e3d-online.com/images/thumb/f/f6/Display_z_steps_400.jpg/300px-Display_z_steps_400.jpg",
+  "bytes": 12906
+ },
+ "Display_autohome.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/7/7d/Display_autohome.jpg",
+  "snapshot": "20210508123818",
+  "url": "https://wiki.e3d-online.com/images/thumb/7/7d/Display_autohome.jpg/450px-Display_autohome.jpg",
+  "bytes": 17306
+ },
+ "Display_autohomed.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/d/db/Display_autohomed.jpg",
+  "snapshot": "20230520183520",
+  "url": "https://wiki.e3d-online.com/images/thumb/d/db/Display_autohomed.jpg/450px-Display_autohomed.jpg",
+  "bytes": 37012
+ },
+ "Display_5mm.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/f/f1/Display_5mm.jpg",
+  "snapshot": "20230520183415",
+  "url": "https://wiki.e3d-online.com/images/thumb/f/f1/Display_5mm.jpg/450px-Display_5mm.jpg",
+  "bytes": 20966
+ },
+ "Display_moveaxis.jpg": {
+  "kind": "thumb-300px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/4/46/Display_moveaxis.jpg",
+  "snapshot": "20210523193732",
+  "url": "https://wiki.e3d-online.com/images/thumb/4/46/Display_moveaxis.jpg/300px-Display_moveaxis.jpg",
+  "bytes": 11230
+ },
+ "Display_0.1.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/c/c7/Display_0.1.jpg",
+  "snapshot": "20210508123800",
+  "url": "https://wiki.e3d-online.com/images/thumb/c/c7/Display_0.1.jpg/450px-Display_0.1.jpg",
+  "bytes": 17147
+ },
+ "Display_z.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/1/1d/Display_z.jpg",
+  "snapshot": "20210508123809",
+  "url": "https://wiki.e3d-online.com/images/thumb/1/1d/Display_z.jpg/450px-Display_z.jpg",
+  "bytes": 18009
+ },
+ "Move_z.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/c/c4/Move_z.jpg",
+  "snapshot": "20210508123809",
+  "url": "https://wiki.e3d-online.com/images/thumb/c/c4/Move_z.jpg/450px-Move_z.jpg",
+  "bytes": 27535
+ },
+ "Cut_belt.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/d/df/Cut_belt.jpg",
+  "snapshot": "20210508123810",
+  "url": "https://wiki.e3d-online.com/images/thumb/d/df/Cut_belt.jpg/450px-Cut_belt.jpg",
+  "bytes": 12339
+ },
+ "Belt_bed.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/d/d8/Belt_bed.jpg",
+  "snapshot": "20210508123811",
+  "url": "https://wiki.e3d-online.com/images/thumb/d/d8/Belt_bed.jpg/450px-Belt_bed.jpg",
+  "bytes": 44249
+ },
+ "Ir_press.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/2/2e/Ir_press.jpg",
+  "snapshot": "20210508123743",
+  "url": "https://wiki.e3d-online.com/images/thumb/2/2e/Ir_press.jpg/450px-Ir_press.jpg",
+  "bytes": 38023
+ },
+ "Ir_tighten.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/9/96/Ir_tighten.jpg",
+  "snapshot": "20210508123744",
+  "url": "https://wiki.e3d-online.com/images/thumb/9/96/Ir_tighten.jpg/450px-Ir_tighten.jpg",
+  "bytes": 34591
+ },
+ "Z_autohomed.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/d/d9/Z_autohomed.jpg",
+  "snapshot": "20210508123811",
+  "url": "https://wiki.e3d-online.com/images/thumb/d/d9/Z_autohomed.jpg/450px-Z_autohomed.jpg",
+  "bytes": 27400
+ },
+ "Movez_5.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/b/bf/Movez_5.jpg",
+  "snapshot": "20210508123738",
+  "url": "https://wiki.e3d-online.com/images/thumb/b/bf/Movez_5.jpg/450px-Movez_5.jpg",
+  "bytes": 16545
+ },
+ "Movez_touch.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/d/da/Movez_touch.jpg",
+  "snapshot": "20210508123818",
+  "url": "https://wiki.e3d-online.com/images/thumb/d/da/Movez_touch.jpg/450px-Movez_touch.jpg",
+  "bytes": 25881
+ },
+ "Z_difference.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/8/88/Z_difference.jpg",
+  "snapshot": "20210508123819",
+  "url": "https://wiki.e3d-online.com/images/thumb/8/88/Z_difference.jpg/450px-Z_difference.jpg",
+  "bytes": 15998
+ },
+ "Z_offset.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/2/2c/Z_offset.jpg",
+  "snapshot": "20210508123818",
+  "url": "https://wiki.e3d-online.com/images/thumb/2/2c/Z_offset.jpg/450px-Z_offset.jpg",
+  "bytes": 16477
+ },
+ "Z_calibrated.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/9/9f/Z_calibrated.jpg",
+  "snapshot": "20210508123815",
+  "url": "https://wiki.e3d-online.com/images/thumb/9/9f/Z_calibrated.jpg/450px-Z_calibrated.jpg",
+  "bytes": 23727
+ },
+ "Zero_xy.jpg": {
+  "kind": "thumb-300px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/2/25/Zero_xy.jpg",
+  "snapshot": "20210523193747",
+  "url": "https://wiki.e3d-online.com/images/thumb/2/25/Zero_xy.jpg/300px-Zero_xy.jpg",
+  "bytes": 20507
+ },
+ "Move_x.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/6/67/Move_x.jpg",
+  "snapshot": "20210508123821",
+  "url": "https://wiki.e3d-online.com/images/thumb/6/67/Move_x.jpg/450px-Move_x.jpg",
+  "bytes": 17614
+ },
+ "Move_x_0.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/b/bb/Move_x_0.jpg",
+  "snapshot": "20210508123815",
+  "url": "https://wiki.e3d-online.com/images/thumb/b/bb/Move_x_0.jpg/450px-Move_x_0.jpg",
+  "bytes": 15888
+ },
+ "Move_x_offset.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/6/69/Move_x_offset.jpg",
+  "snapshot": "20210508123817",
+  "url": "https://wiki.e3d-online.com/images/thumb/6/69/Move_x_offset.jpg/450px-Move_x_offset.jpg",
+  "bytes": 25080
+ },
+ "Move_x_offset_adjust.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/f/f0/Move_x_offset_adjust.jpg",
+  "snapshot": "20210508123817",
+  "url": "https://wiki.e3d-online.com/images/thumb/f/f0/Move_x_offset_adjust.jpg/450px-Move_x_offset_adjust.jpg",
+  "bytes": 22053
+ },
+ "Move_x_offset_correct.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/1/1d/Move_x_offset_correct.jpg",
+  "snapshot": "20210508123828",
+  "url": "https://wiki.e3d-online.com/images/thumb/1/1d/Move_x_offset_correct.jpg/450px-Move_x_offset_correct.jpg",
+  "bytes": 25778
+ },
+ "Move_y_offset.jpg": {
+  "kind": "thumb-300px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/3/3d/Move_y_offset.jpg",
+  "snapshot": "20210523193753",
+  "url": "https://wiki.e3d-online.com/images/thumb/3/3d/Move_y_offset.jpg/300px-Move_y_offset.jpg",
+  "bytes": 12269
+ },
+ "Move_y_wrong.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/2/2a/Move_y_wrong.jpg",
+  "snapshot": "20210508123823",
+  "url": "https://wiki.e3d-online.com/images/thumb/2/2a/Move_y_wrong.jpg/450px-Move_y_wrong.jpg",
+  "bytes": 29121
+ },
+ "Move_y_trigger.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/1/1b/Move_y_trigger.jpg",
+  "snapshot": "20210508123822",
+  "url": "https://wiki.e3d-online.com/images/thumb/1/1b/Move_y_trigger.jpg/450px-Move_y_trigger.jpg",
+  "bytes": 21454
+ },
+ "Xy_set.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/7/7f/Xy_set.jpg",
+  "snapshot": "20210508123824",
+  "url": "https://wiki.e3d-online.com/images/thumb/7/7f/Xy_set.jpg/450px-Xy_set.jpg",
+  "bytes": 26608
+ },
+ "Loosen_z.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/a/ab/Loosen_z.jpg",
+  "snapshot": "20210508123823",
+  "url": "https://wiki.e3d-online.com/images/thumb/a/ab/Loosen_z.jpg/450px-Loosen_z.jpg",
+  "bytes": 14390
+ },
+ "Grease.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/c/cb/Grease.jpg",
+  "snapshot": "20210508123823",
+  "url": "https://wiki.e3d-online.com/images/thumb/c/cb/Grease.jpg/450px-Grease.jpg",
+  "bytes": 14163
+ },
+ "Z_bottomed.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/7/76/Z_bottomed.jpg",
+  "snapshot": "20210508123823",
+  "url": "https://wiki.e3d-online.com/images/thumb/7/76/Z_bottomed.jpg/450px-Z_bottomed.jpg",
+  "bytes": 15560
+ },
+ "Z_tight.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/5/50/Z_tight.jpg",
+  "snapshot": "20210508123823",
+  "url": "https://wiki.e3d-online.com/images/thumb/5/50/Z_tight.jpg/450px-Z_tight.jpg",
+  "bytes": 11918
+ },
+ "More_grease.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/b/bb/More_grease.jpg",
+  "snapshot": "20210508123746",
+  "url": "https://wiki.e3d-online.com/images/thumb/b/bb/More_grease.jpg/450px-More_grease.jpg",
+  "bytes": 29499
+ },
+ "Z_screws.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/c/c4/Z_screws.jpg",
+  "snapshot": "20210508123747",
+  "url": "https://wiki.e3d-online.com/images/thumb/c/c4/Z_screws.jpg/450px-Z_screws.jpg",
+  "bytes": 16083
+ },
+ "Tightening_lower_bed.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/6/6f/Tightening_lower_bed.jpg",
+  "snapshot": "20210508123747",
+  "url": "https://wiki.e3d-online.com/images/thumb/6/6f/Tightening_lower_bed.jpg/450px-Tightening_lower_bed.jpg",
+  "bytes": 35546
+ },
+ "Tightening_control.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/3/35/Tightening_control.jpg",
+  "snapshot": "20210508123743",
+  "url": "https://wiki.e3d-online.com/images/thumb/3/35/Tightening_control.jpg/450px-Tightening_control.jpg",
+  "bytes": 22498
+ },
+ "Tightening_temperature.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/6/60/Tightening_temperature.jpg",
+  "snapshot": "20210508123742",
+  "url": "https://wiki.e3d-online.com/images/thumb/6/60/Tightening_temperature.jpg/450px-Tightening_temperature.jpg",
+  "bytes": 21519
+ },
+ "Tightening_nozzle_1.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/6/62/Tightening_nozzle_1.jpg",
+  "snapshot": "20210508123754",
+  "url": "https://wiki.e3d-online.com/images/thumb/6/62/Tightening_nozzle_1.jpg/450px-Tightening_nozzle_1.jpg",
+  "bytes": 21605
+ },
+ "Tightening_285.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/b/b0/Tightening_285.jpg",
+  "snapshot": "20210508123743",
+  "url": "https://wiki.e3d-online.com/images/thumb/b/b0/Tightening_285.jpg/450px-Tightening_285.jpg",
+  "bytes": 20773
+ },
+ "Tightening_fans.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/6/65/Tightening_fans.jpg",
+  "snapshot": "20210508123748",
+  "url": "https://wiki.e3d-online.com/images/thumb/6/65/Tightening_fans.jpg/450px-Tightening_fans.jpg",
+  "bytes": 34230
+ },
+ "Tightening_wait.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/2/2a/Tightening_wait.jpg",
+  "snapshot": "20210508123804",
+  "url": "https://wiki.e3d-online.com/images/thumb/2/2a/Tightening_wait.jpg/450px-Tightening_wait.jpg",
+  "bytes": 26617
+ },
+ "Tightening_spanners.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/0/0c/Tightening_spanners.jpg",
+  "snapshot": "20210508123748",
+  "url": "https://wiki.e3d-online.com/images/thumb/0/0c/Tightening_spanners.jpg/450px-Tightening_spanners.jpg",
+  "bytes": 29882
+ },
+ "Tightening_cooldown.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/9/92/Tightening_cooldown.jpg",
+  "snapshot": "20210508123750",
+  "url": "https://wiki.e3d-online.com/images/thumb/9/92/Tightening_cooldown.jpg/450px-Tightening_cooldown.jpg",
+  "bytes": 27388
+ },
+ "Tightening_nozzle2.jpg": {
+  "kind": "thumb-300px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/4/4b/Tightening_nozzle2.jpg",
+  "snapshot": "20210523193808",
+  "url": "https://wiki.e3d-online.com/images/thumb/4/4b/Tightening_nozzle2.jpg/300px-Tightening_nozzle2.jpg",
+  "bytes": 15062
+ },
+ "Dual_align.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/1/1a/Dual_align.jpg",
+  "snapshot": "20210508123752",
+  "url": "https://wiki.e3d-online.com/images/thumb/1/1a/Dual_align.jpg/450px-Dual_align.jpg",
+  "bytes": 24014
+ },
+ "Dual_align_pin_centre.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/3/3c/Dual_align_pin_centre.jpg",
+  "snapshot": "20210508123756",
+  "url": "https://wiki.e3d-online.com/images/thumb/3/3c/Dual_align_pin_centre.jpg/450px-Dual_align_pin_centre.jpg",
+  "bytes": 29713
+ },
+ "Dual_align_pin_above.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/a/a3/Dual_align_pin_above.jpg",
+  "snapshot": "20210508123755",
+  "url": "https://wiki.e3d-online.com/images/thumb/a/a3/Dual_align_pin_above.jpg/450px-Dual_align_pin_above.jpg",
+  "bytes": 26428
+ },
+ "Dual_align_pin_move.jpg": {
+  "kind": "thumb-300px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/2/2e/Dual_align_pin_move.jpg",
+  "snapshot": "20210523193821",
+  "url": "https://wiki.e3d-online.com/images/thumb/2/2e/Dual_align_pin_move.jpg/300px-Dual_align_pin_move.jpg",
+  "bytes": 14936
+ },
+ "Dual_align_pin_fan_off.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/4/40/Dual_align_pin_fan_off.jpg",
+  "snapshot": "20210508123756",
+  "url": "https://wiki.e3d-online.com/images/thumb/4/40/Dual_align_pin_fan_off.jpg/450px-Dual_align_pin_fan_off.jpg",
+  "bytes": 40405
+ },
+ "Dual_align_pin_allen.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/e/e0/Dual_align_pin_allen.jpg",
+  "snapshot": "20210508123754",
+  "url": "https://wiki.e3d-online.com/images/thumb/e/e0/Dual_align_pin_allen.jpg/450px-Dual_align_pin_allen.jpg",
+  "bytes": 35857
+ },
+ "Dual_align_pin_right.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/d/d8/Dual_align_pin_right.jpg",
+  "snapshot": "20210508123754",
+  "url": "https://wiki.e3d-online.com/images/thumb/d/d8/Dual_align_pin_right.jpg/450px-Dual_align_pin_right.jpg",
+  "bytes": 27084
+ },
+ "Dual_align_pin_left.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/d/d4/Dual_align_pin_left.jpg",
+  "snapshot": "20210508123705",
+  "url": "https://wiki.e3d-online.com/images/thumb/d/d4/Dual_align_pin_left.jpg/450px-Dual_align_pin_left.jpg",
+  "bytes": 27623
+ },
+ "Dual_offset.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/a/a7/Dual_offset.jpg",
+  "snapshot": "20210508123700",
+  "url": "https://wiki.e3d-online.com/images/thumb/a/a7/Dual_offset.jpg/450px-Dual_offset.jpg",
+  "bytes": 31401
+ },
+ "Dual_offset_x_position.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/3/33/Dual_offset_x_position.jpg",
+  "snapshot": "20210508123701",
+  "url": "https://wiki.e3d-online.com/images/thumb/3/33/Dual_offset_x_position.jpg/450px-Dual_offset_x_position.jpg",
+  "bytes": 22894
+ },
+ "Dual_offset_x_position_move.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/4/48/Dual_offset_x_position_move.jpg",
+  "snapshot": "20210508123702",
+  "url": "https://wiki.e3d-online.com/images/thumb/4/48/Dual_offset_x_position_move.jpg/450px-Dual_offset_x_position_move.jpg",
+  "bytes": 26334
+ },
+ "Dual_offset_x_position_adj.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/8/88/Dual_offset_x_position_adj.jpg",
+  "snapshot": "20210508123705",
+  "url": "https://wiki.e3d-online.com/images/thumb/8/88/Dual_offset_x_position_adj.jpg/450px-Dual_offset_x_position_adj.jpg",
+  "bytes": 23223
+ },
+ "Dual_offset_y_position_y.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/1/12/Dual_offset_y_position_y.jpg",
+  "snapshot": "20210508123701",
+  "url": "https://wiki.e3d-online.com/images/thumb/1/12/Dual_offset_y_position_y.jpg/450px-Dual_offset_y_position_y.jpg",
+  "bytes": 24021
+ },
+ "Dual_offset_y_position.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/7/77/Dual_offset_y_position.jpg",
+  "snapshot": "20210508123710",
+  "url": "https://wiki.e3d-online.com/images/thumb/7/77/Dual_offset_y_position.jpg/450px-Dual_offset_y_position.jpg",
+  "bytes": 23580
+ },
+ "Dual_offset_y_position_move.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/9/99/Dual_offset_y_position_move.jpg",
+  "snapshot": "20210508123709",
+  "url": "https://wiki.e3d-online.com/images/thumb/9/99/Dual_offset_y_position_move.jpg/450px-Dual_offset_y_position_move.jpg",
+  "bytes": 22329
+ },
+ "Dual_offset_y_position_adj.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/a/ac/Dual_offset_y_position_adj.jpg",
+  "snapshot": "20210508123706",
+  "url": "https://wiki.e3d-online.com/images/thumb/a/ac/Dual_offset_y_position_adj.jpg/450px-Dual_offset_y_position_adj.jpg",
+  "bytes": 21517
+ },
+ "Dual_offset_calc.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/0/0d/Dual_offset_calc.jpg",
+  "snapshot": "20210508123725",
+  "url": "https://wiki.e3d-online.com/images/thumb/0/0d/Dual_offset_calc.jpg/450px-Dual_offset_calc.jpg",
+  "bytes": 10908
+ },
+ "Dual_m218.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/1/14/Dual_m218.jpg",
+  "snapshot": "20210508123643",
+  "url": "https://wiki.e3d-online.com/images/thumb/1/14/Dual_m218.jpg/450px-Dual_m218.jpg",
+  "bytes": 41554
+ },
+ "Autolevelling.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/1/11/Autolevelling.jpg",
+  "snapshot": "20210508123712",
+  "url": "https://wiki.e3d-online.com/images/thumb/1/11/Autolevelling.jpg/450px-Autolevelling.jpg",
+  "bytes": 18844
+ },
+ "Stickers.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/3/37/Stickers.jpg",
+  "snapshot": "20210508123715",
+  "url": "https://wiki.e3d-online.com/images/thumb/3/37/Stickers.jpg/450px-Stickers.jpg",
+  "bytes": 15551
+ },
+ "Stickers_back.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/8/8b/Stickers_back.jpg",
+  "snapshot": "20210508123711",
+  "url": "https://wiki.e3d-online.com/images/thumb/8/8b/Stickers_back.jpg/450px-Stickers_back.jpg",
+  "bytes": 15495
+ },
+ "Stickers_tissue.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/d/dd/Stickers_tissue.jpg",
+  "snapshot": "20210508123718",
+  "url": "https://wiki.e3d-online.com/images/thumb/d/dd/Stickers_tissue.jpg/450px-Stickers_tissue.jpg",
+  "bytes": 19089
+ },
+ "Stickers_align.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/b/b5/Stickers_align.jpg",
+  "snapshot": "20210508123711",
+  "url": "https://wiki.e3d-online.com/images/thumb/b/b5/Stickers_align.jpg/450px-Stickers_align.jpg",
+  "bytes": 18278
+ },
+ "Stickers_rub.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/a/ac/Stickers_rub.jpg",
+  "snapshot": "20210508123712",
+  "url": "https://wiki.e3d-online.com/images/thumb/a/ac/Stickers_rub.jpg/450px-Stickers_rub.jpg",
+  "bytes": 17342
+ },
+ "Stickers_peel.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/0/0f/Stickers_peel.jpg",
+  "snapshot": "20210508123717",
+  "url": "https://wiki.e3d-online.com/images/thumb/0/0f/Stickers_peel.jpg/450px-Stickers_peel.jpg",
+  "bytes": 19136
+ },
+ "Stickers_stuck.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/5/5c/Stickers_stuck.jpg",
+  "snapshot": "20210508123650",
+  "url": "https://wiki.e3d-online.com/images/thumb/5/5c/Stickers_stuck.jpg/450px-Stickers_stuck.jpg",
+  "bytes": 20558
+ },
+ "Stickers_e3d.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/c/c1/Stickers_e3d.jpg",
+  "snapshot": "20210508123718",
+  "url": "https://wiki.e3d-online.com/images/thumb/c/c1/Stickers_e3d.jpg/450px-Stickers_e3d.jpg",
+  "bytes": 17050
+ },
+ "Stickers_mib.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/1/19/Stickers_mib.jpg",
+  "snapshot": "20210508123719",
+  "url": "https://wiki.e3d-online.com/images/thumb/1/19/Stickers_mib.jpg/450px-Stickers_mib.jpg",
+  "bytes": 28760
+ },
+ "Stickers_1.1.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/1/18/Stickers_1.1.jpg",
+  "snapshot": "20210508123647",
+  "url": "https://wiki.e3d-online.com/images/thumb/1/18/Stickers_1.1.jpg/450px-Stickers_1.1.jpg",
+  "bytes": 23017
+ },
+ "Stickers_ks.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/f/f2/Stickers_ks.jpg",
+  "snapshot": "20210508123643",
+  "url": "https://wiki.e3d-online.com/images/thumb/f/f2/Stickers_ks.jpg/450px-Stickers_ks.jpg",
+  "bytes": 16360
+ },
+ "Stickers_done.jpg": {
+  "kind": "thumb-450px",
+  "pages": [
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/2/26/Stickers_done.jpg",
+  "snapshot": "20210508123643",
+  "url": "https://wiki.e3d-online.com/images/thumb/2/26/Stickers_done.jpg/450px-Stickers_done.jpg",
+  "bytes": 24379
+ },
+ "Oictoprint_website.jpg": {
   "kind": null,
   "pages": [
-   "Titan_Assembly"
+   "BigBox_OctoPrint_Upgrade"
   ],
-  "original_path": "/images/f/f0/TITAN-IDLER-FITTING.jpg"
+  "original_path": "/images/4/48/Oictoprint_website.jpg"
  },
- "TITAN-IDLER.png": {
+ "Oictoprint_download.jpg": {
   "kind": null,
   "pages": [
-   "Titan_Assembly"
+   "BigBox_OctoPrint_Upgrade"
   ],
-  "original_path": "/images/4/47/TITAN-IDLER.png"
+  "original_path": "/images/2/23/Oictoprint_download.jpg"
  },
- "TITAN-PTFE-PHOTO.jpg": {
-  "kind": "original",
-  "pages": [
-   "Titan_Assembly"
-  ],
-  "original_path": "/images/7/7c/TITAN-PTFE-PHOTO.jpg",
-  "snapshot": "20190928143717",
-  "url": "https://wiki.e3d-online.com/images/7/7c/TITAN-PTFE-PHOTO.jpg",
-  "bytes": 33158
- },
- "TITAN-LID.png": {
-  "kind": "original",
-  "pages": [
-   "Titan_Assembly"
-  ],
-  "original_path": "/images/1/1b/TITAN-LID.png",
-  "snapshot": "20190928143751",
-  "url": "https://wiki.e3d-online.com/images/1/1b/TITAN-LID.png",
-  "bytes": 152805
- },
- "TITAN-IDLER-PTFE.jpg": {
+ "Octoprint_write.jpg": {
   "kind": null,
   "pages": [
-   "Titan_Assembly"
+   "BigBox_OctoPrint_Upgrade"
   ],
-  "original_path": "/images/f/f0/TITAN-IDLER-PTFE.jpg"
+  "original_path": "/images/8/89/Octoprint_write.jpg"
+ },
+ "Octoprint_writing.jpg": {
+  "kind": null,
+  "pages": [
+   "BigBox_OctoPrint_Upgrade"
+  ],
+  "original_path": "/images/1/1b/Octoprint_writing.jpg"
+ },
+ "Putty_download.jpg": {
+  "kind": null,
+  "pages": [
+   "BigBox_OctoPrint_Upgrade"
+  ],
+  "original_path": "/images/e/ee/Putty_download.jpg"
+ },
+ "Insert_sd.jpg": {
+  "kind": null,
+  "pages": [
+   "BigBox_OctoPrint_Upgrade"
+  ],
+  "original_path": "/images/2/2e/Insert_sd.jpg"
+ },
+ "Push_sd.jpg": {
+  "kind": null,
+  "pages": [
+   "BigBox_OctoPrint_Upgrade"
+  ],
+  "original_path": "/images/b/bd/Push_sd.jpg"
+ },
+ "Insert_network.jpg": {
+  "kind": null,
+  "pages": [
+   "BigBox_OctoPrint_Upgrade"
+  ],
+  "original_path": "/images/b/b7/Insert_network.jpg"
+ },
+ "Putty_open.jpg": {
+  "kind": null,
+  "pages": [
+   "BigBox_OctoPrint_Upgrade"
+  ],
+  "original_path": "/images/9/94/Putty_open.jpg"
+ },
+ "Putty_alert.jpg": {
+  "kind": null,
+  "pages": [
+   "BigBox_OctoPrint_Upgrade"
+  ],
+  "original_path": "/images/b/b5/Putty_alert.jpg"
+ },
+ "Putty_login.jpg": {
+  "kind": null,
+  "pages": [
+   "BigBox_OctoPrint_Upgrade"
+  ],
+  "original_path": "/images/a/a3/Putty_login.jpg"
+ },
+ "Putty_config.jpg": {
+  "kind": null,
+  "pages": [
+   "BigBox_OctoPrint_Upgrade"
+  ],
+  "original_path": "/images/e/e9/Putty_config.jpg"
+ },
+ "Putty_raspi_config.jpg": {
+  "kind": null,
+  "pages": [
+   "BigBox_OctoPrint_Upgrade"
+  ],
+  "original_path": "/images/c/c5/Putty_raspi_config.jpg"
+ },
+ "Putty_expand.jpg": {
+  "kind": null,
+  "pages": [
+   "BigBox_OctoPrint_Upgrade"
+  ],
+  "original_path": "/images/8/88/Putty_expand.jpg"
+ },
+ "Putty_advanced.jpg": {
+  "kind": null,
+  "pages": [
+   "BigBox_OctoPrint_Upgrade"
+  ],
+  "original_path": "/images/1/15/Putty_advanced.jpg"
+ },
+ "Putty_reboot.jpg": {
+  "kind": null,
+  "pages": [
+   "BigBox_OctoPrint_Upgrade"
+  ],
+  "original_path": "/images/5/50/Putty_reboot.jpg"
+ },
+ "Browser.jpg": {
+  "kind": null,
+  "pages": [
+   "BigBox_OctoPrint_Upgrade"
+  ],
+  "original_path": "/images/7/7c/Browser.jpg"
+ },
+ "Reboot.jpg": {
+  "kind": null,
+  "pages": [
+   "BigBox_OctoPrint_Upgrade"
+  ],
+  "original_path": "/images/a/ac/Reboot.jpg"
+ },
+ "Bigbox_reboot.jpg": {
+  "kind": null,
+  "pages": [
+   "BigBox_OctoPrint_Upgrade"
+  ],
+  "original_path": "/images/f/f2/Bigbox_reboot.jpg"
+ },
+ "Bigbox_update.jpg": {
+  "kind": null,
+  "pages": [
+   "BigBox_OctoPrint_Upgrade"
+  ],
+  "original_path": "/images/3/30/Bigbox_update.jpg"
+ },
+ "Bigbox_reload.jpg": {
+  "kind": null,
+  "pages": [
+   "BigBox_OctoPrint_Upgrade"
+  ],
+  "original_path": "/images/8/80/Bigbox_reload.jpg"
+ },
+ "Logged_in.jpg": {
+  "kind": null,
+  "pages": [
+   "BigBox_OctoPrint_Upgrade"
+  ],
+  "original_path": "/images/3/3a/Logged_in.jpg"
+ },
+ "Serial_connection.jpg": {
+  "kind": null,
+  "pages": [
+   "BigBox_OctoPrint_Upgrade"
+  ],
+  "original_path": "/images/a/a7/Serial_connection.jpg"
+ },
+ "Printer_profile.jpg": {
+  "kind": null,
+  "pages": [
+   "BigBox_OctoPrint_Upgrade"
+  ],
+  "original_path": "/images/1/18/Printer_profile.jpg"
+ },
+ "Printer_scripts.jpg": {
+  "kind": null,
+  "pages": [
+   "BigBox_OctoPrint_Upgrade"
+  ],
+  "original_path": "/images/7/75/Printer_scripts.jpg"
+ },
+ "Printer_appearance.jpg": {
+  "kind": null,
+  "pages": [
+   "BigBox_OctoPrint_Upgrade"
+  ],
+  "original_path": "/images/1/1b/Printer_appearance.jpg"
+ },
+ "Printer_connect.jpg": {
+  "kind": null,
+  "pages": [
+   "BigBox_OctoPrint_Upgrade"
+  ],
+  "original_path": "/images/1/1f/Printer_connect.jpg"
+ },
+ "Printer_online.jpg": {
+  "kind": null,
+  "pages": [
+   "BigBox_OctoPrint_Upgrade"
+  ],
+  "original_path": "/images/2/2f/Printer_online.jpg"
+ },
+ "Printer_control.jpg": {
+  "kind": null,
+  "pages": [
+   "BigBox_OctoPrint_Upgrade"
+  ],
+  "original_path": "/images/b/bd/Printer_control.jpg"
+ },
+ "Plugins.jpg": {
+  "kind": null,
+  "pages": [
+   "BigBox_OctoPrint_Upgrade"
+  ],
+  "original_path": "/images/4/4f/Plugins.jpg"
+ },
+ "Plugins_by_date.jpg": {
+  "kind": null,
+  "pages": [
+   "BigBox_OctoPrint_Upgrade"
+  ],
+  "original_path": "/images/d/d0/Plugins_by_date.jpg"
+ },
+ "Plugins_eeprom.jpg": {
+  "kind": null,
+  "pages": [
+   "BigBox_OctoPrint_Upgrade"
+  ],
+  "original_path": "/images/d/dd/Plugins_eeprom.jpg"
+ },
+ "Plugins_paste.jpg": {
+  "kind": null,
+  "pages": [
+   "BigBox_OctoPrint_Upgrade"
+  ],
+  "original_path": "/images/5/50/Plugins_paste.jpg"
+ },
+ "Plugins_installing.jpg": {
+  "kind": null,
+  "pages": [
+   "BigBox_OctoPrint_Upgrade"
+  ],
+  "original_path": "/images/9/9d/Plugins_installing.jpg"
+ },
+ "Plugins_done.jpg": {
+  "kind": null,
+  "pages": [
+   "BigBox_OctoPrint_Upgrade"
+  ],
+  "original_path": "/images/f/f2/Plugins_done.jpg"
+ },
+ "Printing_timelapse.jpg": {
+  "kind": null,
+  "pages": [
+   "BigBox_OctoPrint_Upgrade"
+  ],
+  "original_path": "/images/c/c4/Printing_timelapse.jpg"
+ },
+ "Printing_terminal.jpg": {
+  "kind": null,
+  "pages": [
+   "BigBox_OctoPrint_Upgrade"
+  ],
+  "original_path": "/images/1/14/Printing_terminal.jpg"
+ },
+ "Printing_temperature.jpg": {
+  "kind": null,
+  "pages": [
+   "BigBox_OctoPrint_Upgrade"
+  ],
+  "original_path": "/images/5/51/Printing_temperature.jpg"
+ },
+ "Printing_print.jpg": {
+  "kind": null,
+  "pages": [
+   "BigBox_OctoPrint_Upgrade"
+  ],
+  "original_path": "/images/5/5f/Printing_print.jpg"
+ },
+ "Frame_back_b.jpg": {
+  "kind": "thumb-262px",
+  "pages": [
+   "Bill_Of_Materials"
+  ],
+  "original_path": "/images/5/52/Frame_back_b.jpg",
+  "snapshot": "20210521130624",
+  "url": "https://wiki.e3d-online.com/images/thumb/5/52/Frame_back_b.jpg/262px-Frame_back_b.jpg",
+  "bytes": 8993
+ },
+ "Frame_front_b.jpg": {
+  "kind": "thumb-262px",
+  "pages": [
+   "Bill_Of_Materials"
+  ],
+  "original_path": "/images/9/9a/Frame_front_b.jpg",
+  "snapshot": "20210521130638",
+  "url": "https://wiki.e3d-online.com/images/thumb/9/9a/Frame_front_b.jpg/262px-Frame_front_b.jpg",
+  "bytes": 5787
+ },
+ "Frame_left_b.jpg": {
+  "kind": "thumb-262px",
+  "pages": [
+   "Bill_Of_Materials"
+  ],
+  "original_path": "/images/4/45/Frame_left_b.jpg",
+  "snapshot": "20210521130632",
+  "url": "https://wiki.e3d-online.com/images/thumb/4/45/Frame_left_b.jpg/262px-Frame_left_b.jpg",
+  "bytes": 7276
+ },
+ "Frame_right_b.jpg": {
+  "kind": "thumb-262px",
+  "pages": [
+   "Bill_Of_Materials"
+  ],
+  "original_path": "/images/2/2e/Frame_right_b.jpg",
+  "snapshot": "20210521130640",
+  "url": "https://wiki.e3d-online.com/images/thumb/2/2e/Frame_right_b.jpg/262px-Frame_right_b.jpg",
+  "bytes": 7900
+ },
+ "Frame_base_b.jpg": {
+  "kind": "thumb-262px",
+  "pages": [
+   "Bill_Of_Materials"
+  ],
+  "original_path": "/images/e/e6/Frame_base_b.jpg",
+  "snapshot": "20210521130650",
+  "url": "https://wiki.e3d-online.com/images/thumb/e/e6/Frame_base_b.jpg/262px-Frame_base_b.jpg",
+  "bytes": 5929
+ },
+ "Frame_lower_support_b.jpg": {
+  "kind": "thumb-262px",
+  "pages": [
+   "Bill_Of_Materials"
+  ],
+  "original_path": "/images/c/c5/Frame_lower_support_b.jpg",
+  "snapshot": "20210521130649",
+  "url": "https://wiki.e3d-online.com/images/thumb/c/c5/Frame_lower_support_b.jpg/262px-Frame_lower_support_b.jpg",
+  "bytes": 6035
+ },
+ "Frame_upper_supports_b.jpg": {
+  "kind": "thumb-227px",
+  "pages": [
+   "Bill_Of_Materials"
+  ],
+  "original_path": "/images/4/44/Frame_upper_supports_b.jpg",
+  "snapshot": "20210521130651",
+  "url": "https://wiki.e3d-online.com/images/thumb/4/44/Frame_upper_supports_b.jpg/227px-Frame_upper_supports_b.jpg",
+  "bytes": 5950
+ },
+ "Frame_top_b.jpg": {
+  "kind": "thumb-262px",
+  "pages": [
+   "Bill_Of_Materials"
+  ],
+  "original_path": "/images/5/59/Frame_top_b.jpg",
+  "snapshot": "20210521130648",
+  "url": "https://wiki.e3d-online.com/images/thumb/5/59/Frame_top_b.jpg/262px-Frame_top_b.jpg",
+  "bytes": 3545
+ },
+ "Heated_bed_b.jpg": {
+  "kind": "thumb-262px",
+  "pages": [
+   "Bill_Of_Materials"
+  ],
+  "original_path": "/images/a/aa/Heated_bed_b.jpg",
+  "snapshot": "20210521130650",
+  "url": "https://wiki.e3d-online.com/images/thumb/a/aa/Heated_bed_b.jpg/262px-Heated_bed_b.jpg",
+  "bytes": 12217
+ },
+ "Frame_lcd_b.jpg": {
+  "kind": "thumb-273px",
+  "pages": [
+   "Bill_Of_Materials"
+  ],
+  "original_path": "/images/1/14/Frame_lcd_b.jpg",
+  "snapshot": "20210521130648",
+  "url": "https://wiki.e3d-online.com/images/thumb/1/14/Frame_lcd_b.jpg/273px-Frame_lcd_b.jpg",
+  "bytes": 9789
+ },
+ "Frame_misc_b.jpg": {
+  "kind": "thumb-436px",
+  "pages": [
+   "Bill_Of_Materials"
+  ],
+  "original_path": "/images/f/fb/Frame_misc_b.jpg",
+  "snapshot": "20210521130648",
+  "url": "https://wiki.e3d-online.com/images/thumb/f/fb/Frame_misc_b.jpg/436px-Frame_misc_b.jpg",
+  "bytes": 13534
+ },
+ "X-CARRIAGE_SINGLE.jpg": {
+  "kind": null,
+  "pages": [
+   "BigBox_Parts_Preparation",
+   "Pro_&_Lite_X-Carriage"
+  ],
+  "original_path": "/images/5/52/X-CARRIAGE_SINGLE.jpg"
+ },
+ "Single_x_carriage.jpg": {
+  "kind": null,
+  "pages": [
+   "BigBox_Parts_Preparation",
+   "Pro_&_Lite_X-Carriage"
+  ],
+  "original_path": "/images/9/9e/Single_x_carriage.jpg"
+ },
+ "Single_incorrect.jpg": {
+  "kind": null,
+  "pages": [
+   "BigBox_Parts_Preparation",
+   "Pro_&_Lite_X-Carriage"
+  ],
+  "original_path": "/images/6/60/Single_incorrect.jpg"
+ },
+ "Single_correct.jpg": {
+  "kind": null,
+  "pages": [
+   "BigBox_Parts_Preparation",
+   "Pro_&_Lite_X-Carriage"
+  ],
+  "original_path": "/images/f/f6/Single_correct.jpg"
+ },
+ "PRINT_FAN_DUCT.jpg": {
+  "kind": null,
+  "pages": [
+   "BigBox_Parts_Preparation",
+   "Print_Cooling_Fan"
+  ],
+  "original_path": "/images/d/d1/PRINT_FAN_DUCT.jpg"
+ },
+ "Assembled_print_fan.jpeg": {
+  "kind": null,
+  "pages": [
+   "BigBox_Parts_Preparation",
+   "Print_Cooling_Fan"
+  ],
+  "original_path": "/images/b/b9/Assembled_print_fan.jpeg"
+ },
+ "EXTRUDER_SINGLE.jpg": {
+  "kind": "thumb-800px",
+  "pages": [
+   "Single_Direct-Drive_Extruder"
+  ],
+  "original_path": "/images/b/b8/EXTRUDER_SINGLE.jpg",
+  "snapshot": "20200108032320",
+  "url": "https://wiki.e3d-online.com/images/thumb/b/b8/EXTRUDER_SINGLE.jpg/800px-EXTRUDER_SINGLE.jpg",
+  "bytes": 76993
+ },
+ "Bowden_coupler_apart.jpg": {
+  "kind": "thumb-300px",
+  "pages": [
+   "Dual_Direct-Drive_Extruders",
+   "Single_Direct-Drive_Extruder"
+  ],
+  "original_path": "/images/0/0f/Bowden_coupler_apart.jpg",
+  "snapshot": "20200102184410",
+  "url": "https://wiki.e3d-online.com/images/thumb/0/0f/Bowden_coupler_apart.jpg/300px-Bowden_coupler_apart.jpg",
+  "bytes": 7472
+ },
+ "Fitted_coupler.jpg": {
+  "kind": "thumb-300px",
+  "pages": [
+   "Single_Direct-Drive_Extruder"
+  ],
+  "original_path": "/images/1/1e/Fitted_coupler.jpg",
+  "snapshot": "20200110095004",
+  "url": "https://wiki.e3d-online.com/images/thumb/1/1e/Fitted_coupler.jpg/300px-Fitted_coupler.jpg",
+  "bytes": 8493
+ },
+ "Single_extruder_assembledf.jpg": {
+  "kind": "thumb-300px",
+  "pages": [
+   "Single_Direct-Drive_Extruder"
+  ],
+  "original_path": "/images/e/e8/Single_extruder_assembledf.jpg",
+  "snapshot": "20200116083143",
+  "url": "https://wiki.e3d-online.com/images/thumb/e/e8/Single_extruder_assembledf.jpg/300px-Single_extruder_assembledf.jpg",
+  "bytes": 10319
  },
  "EXTRUDER_DUAL.jpg": {
   "kind": "thumb-800px",
@@ -4080,16 +3858,6 @@
   "snapshot": "20191215231548",
   "url": "https://wiki.e3d-online.com/images/thumb/b/bf/EXTRUDER_DUAL.jpg/800px-EXTRUDER_DUAL.jpg",
   "bytes": 81233
- },
- "Bowden_coupler_apart.jpg": {
-  "kind": "thumb-300px",
-  "pages": [
-   "Dual_Direct-Drive_Extruders"
-  ],
-  "original_path": "/images/0/0f/Bowden_coupler_apart.jpg",
-  "snapshot": "20200102184410",
-  "url": "https://wiki.e3d-online.com/images/thumb/0/0f/Bowden_coupler_apart.jpg/300px-Bowden_coupler_apart.jpg",
-  "bytes": 7472
  },
  "Dual_springs.jpg": {
   "kind": "thumb-300px",
@@ -4271,35 +4039,384 @@
   "url": "https://wiki.e3d-online.com/images/thumb/0/00/Dual_both_extruders.jpg/300px-Dual_both_extruders.jpg",
   "bytes": 11414
  },
- "EXTRUDER_SINGLE.jpg": {
+ "TITAN-IN-THE-BOX-NEW.jpg": {
+  "kind": "original",
+  "pages": [
+   "Titan_Assembly"
+  ],
+  "original_path": "/images/e/ee/TITAN-IN-THE-BOX-NEW.jpg",
+  "snapshot": "20190928143619",
+  "url": "https://wiki.e3d-online.com/images/e/ee/TITAN-IN-THE-BOX-NEW.jpg",
+  "bytes": 211348
+ },
+ "TITAN-AFFIX-BODY.jpg": {
+  "kind": "original",
+  "pages": [
+   "Titan_Assembly"
+  ],
+  "original_path": "/images/5/5f/TITAN-AFFIX-BODY.jpg",
+  "snapshot": "20190928143631",
+  "url": "https://wiki.e3d-online.com/images/5/5f/TITAN-AFFIX-BODY.jpg",
+  "bytes": 23650
+ },
+ "TITAN-FLUSH-GEARS.png": {
+  "kind": "original",
+  "pages": [
+   "Titan_Assembly"
+  ],
+  "original_path": "/images/e/eb/TITAN-FLUSH-GEARS.png",
+  "snapshot": "20190708135326",
+  "url": "https://wiki.e3d-online.com/images/e/eb/TITAN-FLUSH-GEARS.png",
+  "bytes": 15160
+ },
+ "TITAN-FLUSH-GEARS-PHOTO.jpg": {
+  "kind": "original",
+  "pages": [
+   "Titan_Assembly"
+  ],
+  "original_path": "/images/1/17/TITAN-FLUSH-GEARS-PHOTO.jpg",
+  "snapshot": "20190928143650",
+  "url": "https://wiki.e3d-online.com/images/1/17/TITAN-FLUSH-GEARS-PHOTO.jpg",
+  "bytes": 28889
+ },
+ "MOTOR-TYPE.jpg": {
+  "kind": "thumb-1000px",
+  "pages": [
+   "Titan_Assembly"
+  ],
+  "original_path": "/images/e/e2/MOTOR-TYPE.jpg",
+  "snapshot": "20190928143701",
+  "url": "https://wiki.e3d-online.com/images/thumb/e/e2/MOTOR-TYPE.jpg/1000px-MOTOR-TYPE.jpg",
+  "bytes": 39603
+ },
+ "TITAN-PTFE.png": {
+  "kind": "original",
+  "pages": [
+   "Titan_Assembly"
+  ],
+  "original_path": "/images/e/e2/TITAN-PTFE.png",
+  "snapshot": "20190928143705",
+  "url": "https://wiki.e3d-online.com/images/e/e2/TITAN-PTFE.png",
+  "bytes": 55928
+ },
+ "TITAN-PTFE-PHOTO.jpg": {
+  "kind": "original",
+  "pages": [
+   "Titan_Assembly"
+  ],
+  "original_path": "/images/7/7c/TITAN-PTFE-PHOTO.jpg",
+  "snapshot": "20190928143717",
+  "url": "https://wiki.e3d-online.com/images/7/7c/TITAN-PTFE-PHOTO.jpg",
+  "bytes": 33158
+ },
+ "TITAN-IDLER-THUMBSCREW.jpg": {
+  "kind": "original",
+  "pages": [
+   "Titan_Assembly"
+  ],
+  "original_path": "/images/d/d0/TITAN-IDLER-THUMBSCREW.jpg",
+  "snapshot": "20190928143731",
+  "url": "https://wiki.e3d-online.com/images/d/d0/TITAN-IDLER-THUMBSCREW.jpg",
+  "bytes": 239160
+ },
+ "TITAN-IDLER-FITTING-NEW.jpg": {
+  "kind": "original",
+  "pages": [
+   "Titan_Assembly"
+  ],
+  "original_path": "/images/c/c6/TITAN-IDLER-FITTING-NEW.jpg",
+  "snapshot": "20190928143743",
+  "url": "https://wiki.e3d-online.com/images/c/c6/TITAN-IDLER-FITTING-NEW.jpg",
+  "bytes": 126659
+ },
+ "TITAN-LID.png": {
+  "kind": "original",
+  "pages": [
+   "Titan_Assembly"
+  ],
+  "original_path": "/images/1/1b/TITAN-LID.png",
+  "snapshot": "20190928143751",
+  "url": "https://wiki.e3d-online.com/images/1/1b/TITAN-LID.png",
+  "bytes": 152805
+ },
+ "TITAN-IDLER-PTFE-NEW.jpg": {
+  "kind": "original",
+  "pages": [
+   "Titan_Assembly"
+  ],
+  "original_path": "/images/7/7a/TITAN-IDLER-PTFE-NEW.jpg",
+  "snapshot": "20190928143803",
+  "url": "https://wiki.e3d-online.com/images/7/7a/TITAN-IDLER-PTFE-NEW.jpg",
+  "bytes": 141618
+ },
+ "MirroredDualExtruder.png": {
   "kind": "thumb-800px",
   "pages": [
-   "Single_Direct-Drive_Extruder"
+   "Titan_Assembly"
   ],
-  "original_path": "/images/b/b8/EXTRUDER_SINGLE.jpg",
-  "snapshot": "20200108032320",
-  "url": "https://wiki.e3d-online.com/images/thumb/b/b8/EXTRUDER_SINGLE.jpg/800px-EXTRUDER_SINGLE.jpg",
-  "bytes": 76993
+  "original_path": "/images/6/62/MirroredDualExtruder.png",
+  "snapshot": "20190928143817",
+  "url": "https://wiki.e3d-online.com/images/thumb/6/62/MirroredDualExtruder.png/800px-MirroredDualExtruder.png",
+  "bytes": 283454
  },
- "Fitted_coupler.jpg": {
-  "kind": "thumb-300px",
+ "SimpleMirrored.png": {
+  "kind": "original",
   "pages": [
-   "Single_Direct-Drive_Extruder"
+   "Titan_Assembly"
   ],
-  "original_path": "/images/1/1e/Fitted_coupler.jpg",
-  "snapshot": "20200110095004",
-  "url": "https://wiki.e3d-online.com/images/thumb/1/1e/Fitted_coupler.jpg/300px-Fitted_coupler.jpg",
-  "bytes": 8493
+  "original_path": "/images/6/67/SimpleMirrored.png",
+  "snapshot": "20190928143828",
+  "url": "https://wiki.e3d-online.com/images/6/67/SimpleMirrored.png",
+  "bytes": 34536
  },
- "Single_extruder_assembledf.jpg": {
-  "kind": "thumb-300px",
+ "MaxMirrored.png": {
+  "kind": "thumb-1000px",
   "pages": [
-   "Single_Direct-Drive_Extruder"
+   "Titan_Assembly"
   ],
-  "original_path": "/images/e/e8/Single_extruder_assembledf.jpg",
-  "snapshot": "20200116083143",
-  "url": "https://wiki.e3d-online.com/images/thumb/e/e8/Single_extruder_assembledf.jpg/300px-Single_extruder_assembledf.jpg",
-  "bytes": 10319
+  "original_path": "/images/9/96/MaxMirrored.png",
+  "snapshot": "20190928143841",
+  "url": "https://wiki.e3d-online.com/images/thumb/9/96/MaxMirrored.png/1000px-MaxMirrored.png",
+  "bytes": 121355
+ },
+ "IdlerMirrored.png": {
+  "kind": "original",
+  "pages": [
+   "Titan_Assembly"
+  ],
+  "original_path": "/images/b/b9/IdlerMirrored.png",
+  "snapshot": "20190928143853",
+  "url": "https://wiki.e3d-online.com/images/b/b9/IdlerMirrored.png",
+  "bytes": 35784
+ },
+ "Loosen-Idler.png": {
+  "kind": "thumb-400px",
+  "pages": [
+   "Titan_Assembly"
+  ],
+  "original_path": "/images/c/cb/Loosen-Idler.png",
+  "snapshot": "20190928143903",
+  "url": "https://wiki.e3d-online.com/images/thumb/c/cb/Loosen-Idler.png/400px-Loosen-Idler.png",
+  "bytes": 25368
+ },
+ "Insert-Filament.png": {
+  "kind": "original",
+  "pages": [
+   "Titan_Assembly"
+  ],
+  "original_path": "/images/0/05/Insert-Filament.png",
+  "snapshot": "20190928143915",
+  "url": "https://wiki.e3d-online.com/images/0/05/Insert-Filament.png",
+  "bytes": 78481
+ },
+ "Release-Idler.png": {
+  "kind": "thumb-800px",
+  "pages": [
+   "Titan_Assembly"
+  ],
+  "original_path": "/images/9/97/Release-Idler.png",
+  "snapshot": "20190928143927",
+  "url": "https://wiki.e3d-online.com/images/thumb/9/97/Release-Idler.png/800px-Release-Idler.png",
+  "bytes": 154569
+ },
+ "Rotate-Gear.png": {
+  "kind": "original",
+  "pages": [
+   "Titan_Assembly"
+  ],
+  "original_path": "/images/e/e5/Rotate-Gear.png",
+  "snapshot": "20190928143939",
+  "url": "https://wiki.e3d-online.com/images/e/e5/Rotate-Gear.png",
+  "bytes": 50506
+ },
+ "Idler-Force.png": {
+  "kind": "original",
+  "pages": [
+   "Titan_Assembly"
+  ],
+  "original_path": "/images/d/db/Idler-Force.png",
+  "snapshot": "20190928143951",
+  "url": "https://wiki.e3d-online.com/images/d/db/Idler-Force.png",
+  "bytes": 376486
+ },
+ "Titan-poor-mesh.png": {
+  "kind": "original",
+  "pages": [
+   "Titan_Assembly"
+  ],
+  "original_path": "/images/2/20/Titan-poor-mesh.png",
+  "snapshot": "20190928144004",
+  "url": "https://wiki.e3d-online.com/images/2/20/Titan-poor-mesh.png",
+  "bytes": 67734
+ },
+ "Dual_head_move.jpg": {
+  "kind": null,
+  "pages": [
+   "Dual_Extruders",
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/f/f2/Dual_head_move.jpg"
+ },
+ "Dual_head_move_ir.jpg": {
+  "kind": null,
+  "pages": [
+   "Dual_Extruders",
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/7/72/Dual_head_move_ir.jpg"
+ },
+ "Dual_head_ir_scrwe.jpg": {
+  "kind": null,
+  "pages": [
+   "Dual_Extruders",
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/4/46/Dual_head_ir_scrwe.jpg"
+ },
+ "Dual_boot.jpg": {
+  "kind": null,
+  "pages": [
+   "Dual_Extruders",
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/1/16/Dual_boot.jpg"
+ },
+ "Dual_powered.jpg": {
+  "kind": null,
+  "pages": [
+   "Dual_Extruders",
+   "Printer_Commissioning"
+  ],
+  "original_path": "/images/2/2c/Dual_powered.jpg"
+ },
+ "USB_Connection.JPG": {
+  "kind": "thumb-600px",
+  "pages": [
+   "BigBox_Firmware_Flashing_Guide"
+  ],
+  "original_path": "/images/e/e4/USB_Connection.JPG",
+  "snapshot": "20200127162603",
+  "url": "https://wiki.e3d-online.com/images/thumb/e/e4/USB_Connection.JPG/600px-USB_Connection.JPG",
+  "bytes": 40627
+ },
+ "Windows_RUMBA_Drivers_extracted.png": {
+  "kind": null,
+  "pages": [
+   "BigBox_Firmware_Flashing_Guide"
+  ],
+  "original_path": "/images/4/4e/Windows_RUMBA_Drivers_extracted.png"
+ },
+ "Windows_RUMBA_Drivers_installation_1.png": {
+  "kind": null,
+  "pages": [
+   "BigBox_Firmware_Flashing_Guide"
+  ],
+  "original_path": "/images/6/60/Windows_RUMBA_Drivers_installation_1.png"
+ },
+ "Windows_RUMBA_Drivers_installation_2.png": {
+  "kind": null,
+  "pages": [
+   "BigBox_Firmware_Flashing_Guide"
+  ],
+  "original_path": "/images/c/ca/Windows_RUMBA_Drivers_installation_2.png"
+ },
+ "Windows_Device_Manager_connected_RUMBA.png": {
+  "kind": null,
+  "pages": [
+   "BigBox_Firmware_Flashing_Guide"
+  ],
+  "original_path": "/images/1/1b/Windows_Device_Manager_connected_RUMBA.png"
+ },
+ "Windows_XLoader.png": {
+  "kind": null,
+  "pages": [
+   "BigBox_Firmware_Flashing_Guide"
+  ],
+  "original_path": "/images/f/f5/Windows_XLoader.png"
+ },
+ "Windows_XLoader_setup.png": {
+  "kind": null,
+  "pages": [
+   "BigBox_Firmware_Flashing_Guide"
+  ],
+  "original_path": "/images/7/71/Windows_XLoader_setup.png"
+ },
+ "Windows_XLoader_uploading.png": {
+  "kind": null,
+  "pages": [
+   "BigBox_Firmware_Flashing_Guide"
+  ],
+  "original_path": "/images/1/13/Windows_XLoader_uploading.png"
+ },
+ "Windows_XLoader_finished.png": {
+  "kind": null,
+  "pages": [
+   "BigBox_Firmware_Flashing_Guide"
+  ],
+  "original_path": "/images/2/20/Windows_XLoader_finished.png"
+ },
+ "HexUploader_setup.png": {
+  "kind": null,
+  "pages": [
+   "BigBox_Firmware_Flashing_Guide"
+  ],
+  "original_path": "/images/9/90/HexUploader_setup.png"
+ },
+ "HexUploader_file_selection.png": {
+  "kind": null,
+  "pages": [
+   "BigBox_Firmware_Flashing_Guide"
+  ],
+  "original_path": "/images/8/82/HexUploader_file_selection.png"
+ },
+ "HexUploader_writing.png": {
+  "kind": null,
+  "pages": [
+   "BigBox_Firmware_Flashing_Guide"
+  ],
+  "original_path": "/images/9/97/HexUploader_writing.png"
+ },
+ "HexUploader_finished.png": {
+  "kind": null,
+  "pages": [
+   "BigBox_Firmware_Flashing_Guide"
+  ],
+  "original_path": "/images/4/49/HexUploader_finished.png"
+ },
+ "OctoPrint_Plugin_Manager_dialog.png": {
+  "kind": null,
+  "pages": [
+   "BigBox_Firmware_Flashing_Guide"
+  ],
+  "original_path": "/images/4/42/OctoPrint_Plugin_Manager_dialog.png"
+ },
+ "OctoPrint_install_FirmwareUpdater_plugin.png": {
+  "kind": null,
+  "pages": [
+   "BigBox_Firmware_Flashing_Guide"
+  ],
+  "original_path": "/images/e/e2/OctoPrint_install_FirmwareUpdater_plugin.png"
+ },
+ "OctoPrint_FirmwareUpdater.png": {
+  "kind": null,
+  "pages": [
+   "BigBox_Firmware_Flashing_Guide"
+  ],
+  "original_path": "/images/f/f1/OctoPrint_FirmwareUpdater.png"
+ },
+ "OctoPrint_FirmwareUpdater_configuration.png": {
+  "kind": null,
+  "pages": [
+   "BigBox_Firmware_Flashing_Guide"
+  ],
+  "original_path": "/images/a/a1/OctoPrint_FirmwareUpdater_configuration.png"
+ },
+ "OctoPrint_FirmwareUpdater_flash_firmware.png": {
+  "kind": null,
+  "pages": [
+   "BigBox_Firmware_Flashing_Guide"
+  ],
+  "original_path": "/images/4/45/OctoPrint_FirmwareUpdater_flash_firmware.png"
  },
  "OctoPrint_install_BigBox_Firmware_plugin.png": {
   "kind": null,
@@ -4315,6 +4432,13 @@
   ],
   "original_path": "/images/7/7f/OctoPrint_BigBox_Firmware.png"
  },
+ "Arduino_include_library.png": {
+  "kind": null,
+  "pages": [
+   "BigBox_Firmware_Flashing_Guide"
+  ],
+  "original_path": "/images/4/47/Arduino_include_library.png"
+ },
  "EXTRUDER_IDLER.jpg": {
   "kind": null,
   "pages": [
@@ -4329,26 +4453,12 @@
   ],
   "original_path": "/images/0/09/Filament_idler_assembled.jpg"
  },
- "Dual_x_carriage_hotend.jpg": {
+ "1.1_Filament_idler_assembled.jpg": {
   "kind": null,
   "pages": [
    "BigBox_Parts_Preparation"
   ],
-  "original_path": "/images/5/54/Dual_x_carriage_hotend.jpg"
- },
- "IR_SENSOR_ASSEMBLY.jpg": {
-  "kind": null,
-  "pages": [
-   "BigBox_Parts_Preparation"
-  ],
-  "original_path": "/images/e/ef/IR_SENSOR_ASSEMBLY.jpg"
- },
- "Ir_sensor_assembled.jpg": {
-  "kind": null,
-  "pages": [
-   "BigBox_Parts_Preparation"
-  ],
-  "original_path": "/images/1/1e/Ir_sensor_assembled.jpg"
+  "original_path": "/images/2/24/1.1_Filament_idler_assembled.jpg"
  },
  "X-CARRIAGE_DUAL.JPG": {
   "kind": null,
@@ -4356,6 +4466,13 @@
    "BigBox_Parts_Preparation"
   ],
   "original_path": "/images/c/c2/X-CARRIAGE_DUAL.JPG"
+ },
+ "Dual_x_carriage_hotend.jpg": {
+  "kind": null,
+  "pages": [
+   "BigBox_Parts_Preparation"
+  ],
+  "original_path": "/images/5/54/Dual_x_carriage_hotend.jpg"
  },
  "Dual_x_carriage_0.jpg": {
   "kind": null,
@@ -4392,131 +4509,19 @@
   ],
   "original_path": "/images/a/ae/Dual_x_carriage_completed.jpg"
  },
- "1.1_Filament_idler_assembled.jpg": {
+ "IR_SENSOR_ASSEMBLY.jpg": {
   "kind": null,
   "pages": [
    "BigBox_Parts_Preparation"
   ],
-  "original_path": "/images/2/24/1.1_Filament_idler_assembled.jpg"
+  "original_path": "/images/e/ef/IR_SENSOR_ASSEMBLY.jpg"
  },
- "Fit_top.jpg": {
+ "Ir_sensor_assembled.jpg": {
   "kind": null,
   "pages": [
-   "BigBox_Printer_Sub-assemblies"
+   "BigBox_Parts_Preparation"
   ],
-  "original_path": "/images/8/8b/Fit_top.jpg"
- },
- "Bed_side.jpg": {
-  "kind": null,
-  "pages": [
-   "BigBox_Printer_Sub-assemblies"
-  ],
-  "original_path": "/images/b/b1/Bed_side.jpg"
- },
- "Y_front_right_clamp-tightening.jpg": {
-  "kind": null,
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/9/90/Y_front_right_clamp-tightening.jpg"
- },
- "X_axis_belt_tensioning.jpg": {
-  "kind": null,
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/8/8f/X_axis_belt_tensioning.jpg"
- },
- "Push_pulley_inside_view.jpg": {
-  "kind": null,
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/3/3c/Push_pulley_inside_view.jpg"
- },
- "Pulley_tightening_01.jpg": {
-  "kind": null,
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/7/72/Pulley_tightening_01.jpg"
- },
- "Y_axis_motor_pulley_tightening.jpg": {
-  "kind": null,
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/5/52/Y_axis_motor_pulley_tightening.jpg"
- },
- "Push_down_y_motor.jpg": {
-  "kind": null,
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/7/7e/Push_down_y_motor.jpg"
- },
- "Incorrect_ooze_wiper_position.jpg": {
-  "kind": null,
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/7/7a/Incorrect_ooze_wiper_position.jpg"
- },
- "Correct_ooze_wiper_position.jpg": {
-  "kind": null,
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/7/74/Correct_ooze_wiper_position.jpg"
- },
- "08_fitted.jpg": {
-  "kind": null,
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/5/5c/08_fitted.jpg"
- },
- "Before_and_after_06_finished.jpg": {
-  "kind": null,
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/3/36/Before_and_after_06_finished.jpg"
- },
- "03_break_off.jpg": {
-  "kind": null,
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/b/b8/03_break_off.jpg"
- },
- "07_fitting.jpg": {
-  "kind": null,
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/9/9e/07_fitting.jpg"
- },
- "Z_ruler.jpg": {
-  "kind": null,
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/9/9d/Z_ruler.jpg"
- },
- "Z_ruler_op.jpg": {
-  "kind": null,
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/8/8a/Z_ruler_op.jpg"
- },
- "Z_clamps.jpg": {
-  "kind": null,
-  "pages": [
-   "Printer_Commissioning"
-  ],
-  "original_path": "/images/a/a7/Z_clamps.jpg"
+  "original_path": "/images/1/1e/Ir_sensor_assembled.jpg"
  },
  "Display_disable.jpg": {
   "kind": null,
@@ -4678,145 +4683,5 @@
    "Printer_Commissioning"
   ],
   "original_path": "/images/1/13/Bedlevelling_store.jpg"
- },
- "TITAN-IN-THE-BOX-NEW.jpg": {
-  "kind": "original",
-  "pages": [
-   "Titan_Assembly"
-  ],
-  "original_path": "/images/e/ee/TITAN-IN-THE-BOX-NEW.jpg",
-  "snapshot": "20190928143619",
-  "url": "https://wiki.e3d-online.com/images/e/ee/TITAN-IN-THE-BOX-NEW.jpg",
-  "bytes": 211348
- },
- "TITAN-IDLER-THUMBSCREW.jpg": {
-  "kind": "original",
-  "pages": [
-   "Titan_Assembly"
-  ],
-  "original_path": "/images/d/d0/TITAN-IDLER-THUMBSCREW.jpg",
-  "snapshot": "20190928143731",
-  "url": "https://wiki.e3d-online.com/images/d/d0/TITAN-IDLER-THUMBSCREW.jpg",
-  "bytes": 239160
- },
- "TITAN-IDLER-FITTING-NEW.jpg": {
-  "kind": "original",
-  "pages": [
-   "Titan_Assembly"
-  ],
-  "original_path": "/images/c/c6/TITAN-IDLER-FITTING-NEW.jpg",
-  "snapshot": "20190928143743",
-  "url": "https://wiki.e3d-online.com/images/c/c6/TITAN-IDLER-FITTING-NEW.jpg",
-  "bytes": 126659
- },
- "TITAN-IDLER-PTFE-NEW.jpg": {
-  "kind": "original",
-  "pages": [
-   "Titan_Assembly"
-  ],
-  "original_path": "/images/7/7a/TITAN-IDLER-PTFE-NEW.jpg",
-  "snapshot": "20190928143803",
-  "url": "https://wiki.e3d-online.com/images/7/7a/TITAN-IDLER-PTFE-NEW.jpg",
-  "bytes": 141618
- },
- "MirroredDualExtruder.png": {
-  "kind": "thumb-800px",
-  "pages": [
-   "Titan_Assembly"
-  ],
-  "original_path": "/images/6/62/MirroredDualExtruder.png",
-  "snapshot": "20190928143817",
-  "url": "https://wiki.e3d-online.com/images/thumb/6/62/MirroredDualExtruder.png/800px-MirroredDualExtruder.png",
-  "bytes": 283454
- },
- "SimpleMirrored.png": {
-  "kind": "original",
-  "pages": [
-   "Titan_Assembly"
-  ],
-  "original_path": "/images/6/67/SimpleMirrored.png",
-  "snapshot": "20190928143828",
-  "url": "https://wiki.e3d-online.com/images/6/67/SimpleMirrored.png",
-  "bytes": 34536
- },
- "MaxMirrored.png": {
-  "kind": "thumb-1000px",
-  "pages": [
-   "Titan_Assembly"
-  ],
-  "original_path": "/images/9/96/MaxMirrored.png",
-  "snapshot": "20190928143841",
-  "url": "https://wiki.e3d-online.com/images/thumb/9/96/MaxMirrored.png/1000px-MaxMirrored.png",
-  "bytes": 121355
- },
- "IdlerMirrored.png": {
-  "kind": "original",
-  "pages": [
-   "Titan_Assembly"
-  ],
-  "original_path": "/images/b/b9/IdlerMirrored.png",
-  "snapshot": "20190928143853",
-  "url": "https://wiki.e3d-online.com/images/b/b9/IdlerMirrored.png",
-  "bytes": 35784
- },
- "Loosen-Idler.png": {
-  "kind": "thumb-400px",
-  "pages": [
-   "Titan_Assembly"
-  ],
-  "original_path": "/images/c/cb/Loosen-Idler.png",
-  "snapshot": "20190928143903",
-  "url": "https://wiki.e3d-online.com/images/thumb/c/cb/Loosen-Idler.png/400px-Loosen-Idler.png",
-  "bytes": 25368
- },
- "Insert-Filament.png": {
-  "kind": "original",
-  "pages": [
-   "Titan_Assembly"
-  ],
-  "original_path": "/images/0/05/Insert-Filament.png",
-  "snapshot": "20190928143915",
-  "url": "https://wiki.e3d-online.com/images/0/05/Insert-Filament.png",
-  "bytes": 78481
- },
- "Release-Idler.png": {
-  "kind": "thumb-800px",
-  "pages": [
-   "Titan_Assembly"
-  ],
-  "original_path": "/images/9/97/Release-Idler.png",
-  "snapshot": "20190928143927",
-  "url": "https://wiki.e3d-online.com/images/thumb/9/97/Release-Idler.png/800px-Release-Idler.png",
-  "bytes": 154569
- },
- "Rotate-Gear.png": {
-  "kind": "original",
-  "pages": [
-   "Titan_Assembly"
-  ],
-  "original_path": "/images/e/e5/Rotate-Gear.png",
-  "snapshot": "20190928143939",
-  "url": "https://wiki.e3d-online.com/images/e/e5/Rotate-Gear.png",
-  "bytes": 50506
- },
- "Idler-Force.png": {
-  "kind": "original",
-  "pages": [
-   "Titan_Assembly"
-  ],
-  "original_path": "/images/d/db/Idler-Force.png",
-  "snapshot": "20190928143951",
-  "url": "https://wiki.e3d-online.com/images/d/db/Idler-Force.png",
-  "bytes": 376486
- },
- "Titan-poor-mesh.png": {
-  "kind": "original",
-  "pages": [
-   "Titan_Assembly"
-  ],
-  "original_path": "/images/2/20/Titan-poor-mesh.png",
-  "snapshot": "20190928144004",
-  "url": "https://wiki.e3d-online.com/images/2/20/Titan-poor-mesh.png",
-  "bytes": 67734
  }
 }

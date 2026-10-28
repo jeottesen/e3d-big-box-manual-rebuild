@@ -1,0 +1,91 @@
+--- 20160727062859
++++ 20190723040004
+@@ -1 +1,4 @@
++This Wiki is not looked after anymore :( Please navigate to
++e3d-online.dozuki.com
++for up to date and improved documentation
+ NEVER try to flash the firmware while the printer is printing!
+@@ -4,7 +7,7 @@
+ Contents
+-1 (1) Flashing a new firmware
+-1.1 (1.1) Determining your BigBox version
+-1.2 (1.2) Connecting to the BigBox
+-1.2.1 (1.2.1) Without OctoPrint/OctoPi upgrade
+-1.2.2 (1.2.2) With OctoPrint/OctoPi upgrade
++1 Flashing a new firmware
++1.1 Determining your BigBox version
++1.2 Connecting to the BigBox
++1.2.1 Without OctoPrint/OctoPi upgrade
++1.2.2 With OctoPrint/OctoPi upgrade
+ 1.3 Flashing on Windows
+@@ -15,5 +18,8 @@
+ 1.6 Flashing on an RaspberryPi/OctoPi
+-1.7 Flashing with OctoPrint plugin
+-1.7.1 Installing and setting up the OctoPrint Firmware Update plugin
++1.7 Flashing with "Firmware Updater" (OctoPrint plugin)
++1.7.1 Installing and setting up "Firmware Updater"
+ 1.7.2 Flashing a new firmware
++1.8 Flashing with "BigBox Firmware" (Octoprint plugin)
++1.8.1 Installing and setting up "BigBox Firmware"
++1.8.2 Flashing a new firmware
+ 2 Building from source and flashing
+@@ -25,3 +31,3 @@
+ 3.1 Troubleshooting
+-(1) Flashing a new firmware
++Flashing a new firmware
+ Firmwares for the BigBox come as hex files.
+@@ -29,11 +35,11 @@
+ Flashing a new firmware may reset your stored settings and it is recommended to reset the settings too. So if you changed specific values like E steps, other steps settings, or other settings which can be stored be sure to note them down before you flash a new firmware.
+-(1.1) Determining your BigBox version
++Determining your BigBox version
+ To determine which version of the BigBox go to BigBox Version Overview.
+-(1.2) Connecting to the BigBox
++Connecting to the BigBox
+ You don't have to change anything on the RUMBA board in order to flash a new firmware!
+ The box should be switched on!
+-(1.2.1) Without OctoPrint/OctoPi upgrade
++Without OctoPrint/OctoPi upgrade
+ To connect to your BigBox use the USB port on the backside of the box. For this you need an USB cable with a Type B plug on one end.
+ [img 300px-USB_Connection.JPG]
+-(1.2.2) With OctoPrint/OctoPi upgrade
++With OctoPrint/OctoPi upgrade
+ If you have the upgrade there is no USB port on the backside of your box but only a network port which cannot be used to flash a new firmware.
+@@ -99,5 +105,5 @@
+ Flashing on an RPi depends on the used distribution, if you use OctoPi then this is Debian based and you can refer to #Flashing on Linux.
+-Flashing with OctoPrint plugin
+-Installing and setting up the OctoPrint Firmware Update plugin
+-Refer to #Flashing on Linux to install "avrdude" on your OctoPi. This is a prerequisite to use the OctoPrint plugin.
++Flashing with "Firmware Updater" (OctoPrint plugin)
++Installing and setting up "Firmware Updater"
++Refer to #Flashing on Linux to install "avrdude" on your OctoPi. This is a prerequisite to use this Octoprint plugin.
+ Unfortunately the plugin is not listed in the OctoPrint plugin repository but this is not a real problem.
+@@ -108,3 +114,3 @@
+ OctoPrint install FirmwareUpdater plugin
+-Insert the URL for the FirmwareUpdate plugin into the "...from URL" input box and click "Install". The process will tell you what to do.
++Insert the URL for the "Firmware Updater" plugin into the "...from URL" input box and click "Install". The process will tell you what to do.
+ At the time of writing this is https://github.com/OctoPrint/OctoPrint-FirmwareUpdater/archive/master.zip
+@@ -131,2 +137,23 @@
+ To complete the process go to #After flashing a new firmware and follow the steps there!
++Flashing with "BigBox Firmware" (Octoprint plugin)
++Thanks to a member of the community (tohara) there is another Octoprint plugin available. While created especially for the BigBox this plugin should also work with other electronics using Marlin firmware.
++Installing and setting up "BigBox Firmware"
++Unfortunately the plugin is not listed in the OctoPrint plugin repository but this is not a real problem.
++[img 300px-OctoPrint_Plugin_Manager_dialog.png]
++OctoPrint Plugin Manager dialog
++Open OctoPrint settings dialog and go to "Plugin Manager" section.
++[img 300px-OctoPrint_install_BigBox_Firmware_plugin.png]
++OctoPrint install BigBox Firmware plugin
++Insert the URL for the "BigBox Firmware" plugin into the "...from URL" input box and click "Install". The process will tell you what to do.
++At the time of writing this is https://github.com/tohara/OctoPrint-BigBoxFirmware/archive/master.zip
++The repository URL on Github is https://github.com/tohara/OctoPrint-BigBoxFirmware
++[img 300px-OctoPrint_BigBox_Firmware.png]
++OctoPrint BigBox Firmware
++After a successful installation and a restart of OctoPrint you can select the plugin from the settings menu.
++Flashing a new firmware
++This plugin is Git and profile based. That means you created profiles with settings for the firmware based on a Git repository with a Marlin firmware source in it.
++The plugin has several default profiles you can take as a base to create your own special profile with setting for your box or with features you want to use.
++Please refer to the Git repository of the plugin for its usage.
++If you have a profile ready you simply click the "Flash firmware button" of the profile. Then the firmware is setup with the settings of the profile, compiled and flashed right away to your box.
++At the time of writing the plugin works with the original Marlin firmware repository on Github, tohara has also a Marlin repository up with different Marlin releases and so does Alex9779.
+ Building from source and flashing
+

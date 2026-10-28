@@ -1,0 +1,35 @@
+--- 20160608013456
++++ 20160727151926
+@@ -12,2 +12,3 @@
+ 3.1 BigBox Dual Hybrid Titan Mirrored
++3.2 BigBox Dual Titan
+ 4 Remarks
+@@ -22,2 +23,3 @@
+ Firmware source repository
++Download firmware
+ BigBox Dual
+@@ -40,2 +42,3 @@
+ Firmware source repository
++Download firmware
+ BigBox Dual Hybrid Titan
+@@ -67,3 +70,3 @@
+ BigBox Dual Hybrid Titan Mirrored
+-aka Dual V1.1 with Titan extruders
++aka Dual V1.1 with Titan extruders derived from #BigBox Dual Hybrid Titan
+ Build volume
+@@ -73,2 +76,6 @@
+ Extruder 1 (left): Titan bowden (default E steps: 417.5)
++BigBox Dual Titan
++Build volume: 300 x 200 x 300 (for single nozzle and dual nozzle prints)
++Extruder 0 (left): Titan direct (default E steps: 417.5)
++Extruder 1 (right): Titan direct (default E steps: 417.5)
+ Remarks
+
+--- 20160727151926
++++ 20200803113800
+@@ -1 +1,4 @@
++This Wiki is not looked after anymore :( Please navigate to
++e3d-online.dozuki.com
++for up to date and improved documentation
+ Due to the open design of the BigBox there are already several versions in the wild. Also the design was refined after the Kickstarter campaign and the release of the Titan introduced additional options.
+

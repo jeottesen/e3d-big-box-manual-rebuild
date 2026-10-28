@@ -7,22 +7,32 @@ pages in raw/versions for a heading that matches, take that section (up to the n
 or higher level), and keep the fullest one. Output: raw/recovered/<Title>.html + raw/recovered/index.json.
 Run:  python3 -I scripts/recover.py
 """
-import html, json, os, re
+import html, json, os, re, urllib.parse
+import sys
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))   # sibling modules (python -I does not add the script folder)
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RAW = os.environ.get('BIGBOX_RAW', f'{ROOT}/raw')   # archive data lives outside git; override with BIGBOX_RAW
 VER, OUT = f'{RAW}/versions', f'{RAW}/recovered'
 os.makedirs(OUT, exist_ok=True)
 
-# missing page -> (parent pages to search, heading regex)
-TARGETS = {
-    'Dual_X-Carriage': (['BigBox_Parts_Preparation'], r'dual x.carriage'),
-    'Non-Titan_Idler_Arms': (['BigBox_Parts_Preparation'], r'(non.titan )?single (&|and) dual extruder filament idlers'),
-    'Single_&_Dual_Direct-Drive_IR_Sensor_Bracket': (['BigBox_Parts_Preparation'], r'single (&|and) dual direct.drive ir sensor bracket'),
-    'Single_Direct-Drive_Extruder': (['BigBox_Printer_Sub-assemblies'], r'single direct.drive extruder'),
-    'Mesh_Levelling_the_Non-Hybrid_Dual': (['Printer_Commissioning'], r'mesh levelling the (non.hybrid )?dual'),
-    'Non-Hybrid_Dual_Calibrating_Z_Offset': (['Printer_Commissioning'], r'(non.hybrid )?dual calibrating z.?offset|calibrating z.?offset dual'),
-}
+from targets import TARGETS   # missing page -> (parent pages to search, heading regex)
+
+# an archive or MediaWiki error page rather than an article
+ERR = re.compile(r'Temporarily Offline|Internal Server Error|Service Unavailable|Gateway Time-?out|Bad Gateway|'
+                 r'database error|MediaWiki internal error|Wayback Machine doesn.t have|Error 50\d|'
+                 r'There is currently no text in this page|Hrm\. ', re.I)
+
+def body_text(h):
+    """The article's text as a list of non-empty lines (image file names kept as '[img NAME]')."""
+    m = re.search(r'id="mw-content-text"[^>]*>(.*?)(?:<div class="printfooter"|<!-- NewPP)', h, re.S) or re.search(r'id="mw-content-text"[^>]*>(.*)', h, re.S)
+    b = m.group(1) if m else h
+    b = re.sub(r'<(script|style).*?</\1>|<!--.*?-->', '', b, flags=re.S)
+    b = re.sub(r'<img[^>]*?(?:alt="([^"]*)")?[^>]*?src="[^"]*?/([^/"]+)"[^>]*>',
+               lambda m: f'\n[img {urllib.parse.unquote(m.group(2))}]\n', b)
+    b = re.sub(r'</(p|li|h\d|tr|div|dd|dt|pre)>|<br\s*/?>', '\n', b)
+    b = html.unescape(re.sub(r'<[^>]+>', '', b))
+    return [l.strip() for l in b.splitlines() if l.strip() and not l.strip().startswith('[edit')]
 
 HEAD = re.compile(r'<h([2-6])\b[^>]*>(.*?)</h\1>', re.S)
 
@@ -43,6 +53,12 @@ def sections(h, rx):
         body = c[m.end():end]
         lines = [l for l in htext(re.sub(r'</(p|li|div|tr)>|<br\s*/?>', '\n', body)).splitlines() if l.strip()]
         yield title, m.group(0), body, len(lines)
+
+def find_section(h, rx, must=None, min_lines=1):
+    """First section of page html h whose heading matches rx (and whose text contains `must`). (title, body, lines) or None."""
+    for title, head, body, n in sections(h, rx):
+        if n >= min_lines and (must is None or must.lower() in htext(body).lower()): return title, body, n
+    return None
 
 def main():
     index = {}

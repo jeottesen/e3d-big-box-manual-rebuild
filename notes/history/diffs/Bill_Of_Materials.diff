@@ -1,0 +1,25 @@
+--- 20151227000916
++++ 20160126014315
+@@ -51,3 +51,4 @@
+ 2 x 484mm - X-Axis.
+-4 x 384mm - Z-Axis.
++2 x 384mm - Y-Axis.
++4 x 364mm - Z-Axis.
+ 2 x 325mm Spool Carrier (4 included for the BigBox Dual).
+
+--- 20160126014315
++++ 20160602172304
+@@ -42,3 +42,3 @@
+ 1 x 24v 60x60x10 Exhaust Fan.
+-1 x 24v 40x40x15 Blower Print Fan, 2 x for Dual.
++1 x 24v 40x40x20 Blower Print Fan, 2 x for Dual.
+ 1 x 24v 30x30x10 HotEnd Fan, 2 x for Dual.
+
+--- 20160602172304
++++ 20210128103759
+@@ -1 +1,4 @@
++This Wiki is not looked after anymore :( Please navigate to
++e3d-online.dozuki.com
++for up to date and improved documentation
+ Frame Components
+

@@ -1,0 +1,1563 @@
+--- 20151229114525
++++ 20160129222844
+@@ -1,164 +1,363 @@
+ Contents
+-1 Firmware
+-2 Tramming, Tensioning & Alignment
+-3 Y-Motor Drive Belt
+-4 The Oooze Dock
+-5 Fitting the Glass Build-Plate
+-6 Software
+-7 Where next?
+-Firmware
+-Rumba - The Rumba has been pre-flashed with Marlin. We will be making custom versions available on GitHub shortly.
+-Drivers - If you are connecting directly to your BigBox via USB Rumba requires drivers to be installed before your BigBox will work. The drivers are available from the RepRap Wiki
+-OctoPrint - For a step-by-step install guide for OctoPrint refer to the OctoPrint section below.
+-Tramming, Tensioning & Alignment
+-Note: Before beginning ensure the IR sensor is clear of the bed. To do this loosen the screws holding it in place and push it up to its highest position. Secure it in place by re-tightening the screws.
+-[img 300px-Y_front_right_clamp-tightening.jpg]
+-Next, tighten the side screws (internal (see image).
+-[img 300px-X_axis_belt_tensioning.jpg]
+-Now, you can tension the X axis belt tensioners. The x axis tensioner is under the end stop switch.
+-File:Placeholder Image.JPG
+-Check with a ruler that each side is the same distance from the front of the frame, and manually adjust each side on its carriage until the distances match.  The carriage should run smoothly.
+-[img 300px-Push_pulley_inside_view.jpg]
+-Then push the rear Y belt pulley from the side, to fit it up snugly to the washer and printed part.
+-[img 300px-Pulley_tightening_01.jpg]
+-Push whole assembly back until the grub screw on y pulley is visible. Tighten.
+-Repeat for other side, re-checking alignment with a ruler before tightening grub screw on other side to fix the alignment.
+-Move printhead slightly until the other 2 grub screws (on same y axes pulleys) are visible and can be tightened.
+-Y-Motor Drive Belt
+-[img 300px-Y_axis_motor_pulley_tightening.jpg]
+-Y motor pulley.
+-Line up the pulley, so it's not touching the motor block (image). – approx 1mm horizontally away from it.
+-Tighten grub screws on pulley.
+-[img 300px-Push_down_y_motor.jpg]
+-Push down on Y motor (block and printed part) (see image) and tighten its 3 fixing screws on rear. This gives tension to the Y pulley.
+-The Oooze Dock
+-[img 300px-Incorrect_ooze_wiper_position.jpg]
+-Incorrect Height.
+-Move the Print-Head near to the Oooze Wiper so the the nozzle is up against it.
+-[img 300px-Correct_ooze_wiper_position.jpg]
+-Loosen the screws holding the wiper dock (on rear of frame). Lower or raise the Ooze Wiper assembly until it’s just wiping the nozzle when x carriage moves over it.
+-Fitting the Glass Build-Plate
+-[img 300px-08_fitted.jpg]
+-[img 300px-Before_and_after_06_finished.jpg]
+-swiss clip before and after preparation
+-The glass bed is placed over the heated bed (Pro & Dual) / plain bed (lite only), and held into place with the swiss clips. The clips must be prepared in advance, as so…
+-[img 300px-03_break_off.jpg]
+-Swiss clip end snapped off
+-File:05 bend.jpg  Bend swiss clip with pliers until ends are horizontal with each other as so.
+-[img 300px-07_fitting.jpg]
+-Attach as shown: 2 on front and rear of bed; 1 on each side. You should have two spares.
+-Next
+-IED connection
+-ENSURE the Pi connector and USB for Pi is unplugged.
+-Insert the power cable ( not provided).
+-Turn the BigBox to face you with electronics cover removed, and visually check all the wires are in place. (apart from Pi which we’ve disconnected).
+-Switch on at rear.
+-Your BigBox should come alive! LCD screen should light up. BigBox Ready.
+-NEXT
+-Spool Clamp bearing holder and clamp bracket
+-1 x m4 30mm screw
+-1 x silver spring
+-3 x m4 flat washer
+-1 x 604ZZ bearing
+-hobbed goblin for extruder
+-With pliers, take square nut and fit into the clamp, like so.
+-Put the spring ontot eh 30mm screw and then fit washer. Insert into clamp (printed part).
+-Start screwing this assembly into the nut, adding a washer, then bearing, then washer. Screw in to hold them in place.
+-Add this to frame and tighten.
+-Get your hobbed gear and add to the motor drive shaft in the ‘extruder top’, tighening grub to flat side. (line up with bearing.)
+-Next
+-Inserting Filament.
+-Get the back of the PTFE liner, and cut it cleanly approx half way between the 3rd and 4th spine sections (on rear).
+-Pull spool brakcets slightly, and put spool clamp bearing into position.
+-Feed the filament through the PTFE tube, pulling the tubing out of the extruder at other end, and pushing filament into to top of the extruder until it stops.
+-Pull down the arm of the filament idler (see image) and push filament down as far as it will go, between the bearing and hob, and into the filament duct.
+-Screw/tighten idler until it’s just past horizontal. You can tension this more accurately later.
+-Remove hatch to expose electrics.
+-Plug in the IEC. Fans should whirr. Screen should come alive.
+-Select
+->Prepare
+->Move Axis
+->Move 1mm
+->X axis
+-turn the wheel and the x axis should move (only in one direction at this point).
+-Repeat all the above for Y:
+->Prepare
+->Move Axis
+->Move 1mm
+->Y axis
+-turn wheel to check y axis moves.
+-IR Sensor
+-Move the IR sensor down to level horizontally with the nozzle end.
+-Check end stop screws are in place. Visually check carriage!
+-Push button so the menu appears:
+->Prepare
+->Autohome
+->select autohome
+-The printer should then ‘home’. To just above (0,0).
+-Did it work? Congratulations! Move on!
+-Did it do something weird? Troubleshoot here…
+-Next
+-Set height of IR sensor.
+->Menu
+->Prepare
+->Disable Stepper motors
+-Now you should be able to move the top carriage freely by hand. Move it to centre.
+->Prepare
+->move avis
+->0.1mm
+->Z axis
+-Now turning the button you should be able to move the bed up and down.
+-(position where? Check with greg)
+->Menu
+->Prepare
+->Disable Stepper motors
+-- move to middle again.
+-Take remaining strip of GT2 belt (a one inch length is plenty).
+-Move the Z axis by rotating the lead screws manually (1 step at a time) until the nozzle is resting just above the bed, but not touching it.
+-Loosen IR sensor screw at the read and place GT2 belt under it on the bed. Rest the sensor printed part onto the belt and then retighten firmly. You have now set the height of the sensor.
+->menu
+->prepare
+->move axis
+->0.1mm
+->Z axis
+-Now turn the control button and move the bed down a few cm so that you can remove the belt you used for measuring the sensor height.
+-Now:
+->Menu
+->prepare
+->autohome
+-BigBox should home to (0,0) again.
+-Now disable steppers once more
+-Manually move the printhead to its docking position.
+-Push:
+->menu
+->control
+->temp
+->bed
+-- set to 80°
+->push
+->push again to get back to info screen.
+-Check the bed temperature gauge reaches 80° and then:
+->Prepare
+->cool down
+-Now:
+->control
+->temperature
+->nozzle
+->50°
+-Testing whether extruder fan comes on at 40°.
+-Once fan starts, get back and set nozzle temperature to 210°.
+-Let nozzle reach this temp. (watch on info screen).
+-Next:
+->prepare
+->move axis
+->1mm
+->extruder
+-turn the control button to manually extruder filament. Keep going until you see some plastic extruding. (Make sure you’ve already loaded the filament.)
+-Next
+->Prepare
+->Cooldown
+-Allow the hotEnd and nozzle to return to ambient temperatures. (Make a cup of tea.)
+-Software
+-OctoPi
+-S3D
++1 Belts, Pulleys & Rods
++1.1 X-Axis
++1.2 Y-Axis
++1.2.1 Y-Axis Motor
++1.3 Z-Axis
++2 Glass Build Plate
++2.1 Clips
++2.2 Glass
++3 Ooze Wiper
++4 Homing
++4.1 Pre-Checks
++4.2 Power On
++4.3 Calibrating Z Offset
++5 Zero X & Y
++6 Z-Axis Calibration
++7 Autolevelling
++7.1 Pro & Lite
++7.2 Dual
++8 Where next?
++Belts, Pulleys & Rods
++X-Axis
++[img 300px-X_m3_f.jpg]
++Rod clamps.
++Move the Printhead to the front of the printer.
++Tighten the clamps holding the X-Axis bars to the X-Axis Motor Mount.
++[img 300px-X_m3_r.jpg]
++Rod clamps.
++There are screws on both sides.
++[img 300px-X_m3_i.jpg]
++Rod clamps.
++Repeat this on the X-Axis Idler.
++[img 300px-X_pulley_align.jpg]
++Pulley.
++Position the X-Axis Pulley with a grub over the flat on the motor shaft.
++[img 300px-X_pulley_tighten.jpg]
++Pulley.
++Tighten the grub in the pulley, leave about 1mm of space between the bottom of the pulley and the motor.
++[img 300px-X_belt_tighten.jpg]
++Tension.
++Insert an Allen Key into the slot in the Printhead.
++Turning the Allen Key anticlockwise (undo) will tighten the belt.
++Watch this video of the belt being tightened | https://youtu.be/5X6I6plC3d8
++Watch this video of a correctly tensioned belt | https://youtu.be/0RpnXo2UQ0Y
++Y-Axis
++[img 300px-Xy_front.jpg]
++Slide forward.
++Move the Printhead to the front of the printer.
++We are assuming you have not tightened any of the pulley grubscrews or done up any of the screws holding the Y-Axis components to the frame. If you have done so please loosen them off now.
++[img 300px-Xy_front_tighten.jpg]
++Front screws.
++Making sure the Printhead is at the front of the printer, tighten the two screws holding the  Y-Axis Front Brackets to the frame.
++[img 300px-Xy_front_cork.jpg]
++Cork.
++Tightening up the screws will compress the cork pads on the Y-Axis Front Brackets. This is a good thing, however you will need to adjust the tension so the part sits squarely against the frame.
++Note: The cork will compress by 0.5mm - 1mm.
++[img 300px-Xy_back.jpg]
++To the back.
++After screwing up the both front Y-Axis Brackets move the Printhead to the back of the printer.
++[img 300px-Xy_back_tighten.jpg]
++Tighten.
++Tighten the two screws holding each of the Y-Axis Rear Brackets to the frame.
++The cork pads will compress in a similar way to the front. Ensure the parts are square.
++[img 300px-Xy_front_m3.jpg]
++Front again.
++Move the Printhead to the front of the printer again and tighten the screw in the side of the Y-Axis Front Brackets.
++[img 300px-Xy_back_m3.jpg]
++Back again.
++Move the Printhead to the back of the printer again and tighten the screw in the side of the Y-Axis Rear Brackets.
++Once complete the Y-Axis should run smooth and not feel lumpy or gritty. You may need to loosen some of the Y-Axis Brackets and re-adjust the position.
++Watch this video to see a smooth Y-Axis | https://youtu.be/PvswubV-zas
++[img 300px-Xy_pulley_push.jpg]
++Push the pulley.
++Using an Allen Key or similar push the pulley on the [[BigBox_Printer_main_assemblies:_Step_By_Step_Assembly_Process#Y-Axis_Rear-Bar_Assembly|Y-Axis Rear Bar Assembly inwards against the nylon washer.
++Repeat this with the other pulley.
++Note: Don't push too hard, you want a little bit of play.
++[img 300px-Xy_belt_tension.jpg]
++Tension the belt.
++Adjust the tension on the belt by tightening the screw at the front of the printer.
++Remember to do this for both belts.
++Watch this video to see the belt tension setting | https://youtu.be/dtdeFrBScJQ
++[img 300px-Xy_front_measure.jpg]
++Measure.
++Move the Printhead to the front of the printer.
++Position the one side of the X-Axis a known distance from the front of the frame. In this case I have chosen 70mm.
++[img 300px-Xy_front_measure_other.jpg]
++Measure the other side.
++Measure the opposite side.
++If there is any difference you can adjust it by holding one end in place and carefully moving the other end so they are both at the same distance. It may take a few goes to get it right. If you find it hard to adjust make sure the grubs on the pulleys are loose.
++[img 300px-Xy_pulley_tighten.jpg]
++Tighten the grub screw.
++Check the pulleys have not shifted while you have been adjusting the axes.
++Tighten the grub screws in the Y-Axis pulleys.
++Note: There are two screws in each pulley. There will be four in total.
++Y-Axis Motor
++[img 300px-Y_motor_align.jpg]
++Align the parts.
++Align the pulleys and belt as shown.
++[img 300px-Y_motor_grubs.jpg]
++Tighten the grubs.
++Tighten the grub screws on both pulleys.
++[img 300px-Y_motor_push.jpg]
++Push down.
++Push down the motor to tension the belt.
++[img 300px-Y_motor_screw.jpg]
++Tighten.
++Tighten the three screws securing the Y-Axis Motor Bracket.
++Z-Axis
++[img 300px-Z_ruler.jpg]
++Measure.
++On one side of the bed a hold a ruler against the edge, as close to the leadscrew as possible, with the base of the ruler resting against the Lower Support.
++Adjust the height of the bed by twisting the leadscrew (clockwise moves the bed up).
++Position the bed to a known specific height. In this case I have selected 170mm.
++[img 300px-Z_ruler_op.jpg]
++Measure.
++Move the ruler to the opposite side of the bed.
++Adjust the height of the bed to match the height set on the other side, 170mm.
++Confirm the position by measuring the other side again.
++Adjust accordingly until both are at the same height.
++[img 300px-Z_clamps.jpg]
++Tighten the clamps.
++When you are happy with the adjustments, tighten the clamps on the couplers.
++Check one last time with the ruler that the bed is in the correct position and level.
++Glass Build Plate
++Clips
++[img 300px-Clips.jpg]
++Rod clamps.
++8 x Bed Clips (Stretch Box).
++Select a clip from the bag.
++[img 300px-Clips_squash.jpg]
++Squash.
++Using a pair of pliers squash down the tip of the clip
++[img 300px-Clips_break.jpg]
++Break.
++Break off the tip.
++[img 300px-Clips_prong.jpg]
++Prong.
++Grip one of the prongs about 3mm from the end.
++[img 300px-Clips_prong_bent.jpg]
++Bent.
++Bend the ends as shown.
++[img 300px-Clips_ba.jpg]
++Before and After.
++Before and after.
++Repeat with all the clips.
++Glass
++[img 300px-Glass.jpg]
++Glass Plate.
++Pop the glass plate on the PCB
++[img 300px-Glass_clip.jpg]
++Clip on.
++Fit a clip at the front of the bed and clip it over the glass.
++[img 300px-Glass_cliped.jpg]
++Clip on.
++Fitted clip
++[img 300px-Glass_clips.jpg]
++Clips on.
++Fit six clips around the bed.
++Ooze Wiper
++[img 300px-Wiper.jpg]
++Ooze.
++Move the Printhead to the rear of the printer, just in front of the rubber Ooze Wiper Blade.
++[img 300px-Wiper_undo.jpg]
++Loosen.
++Loosen off the screws holding the Ooze Wiper & Dump Bucket to the frame.
++[img 300px-Wiper_adjust.jpg]
++Adjust.
++Adjust the Ooze Wiper up and down until just the tip of the nozzle will come into contact with the rubber.
++Tighen up the screws on the frame to hold the wiper in place.
++Homing
++Pre-Checks
++[img 300px-Fan.jpg]
++IR Sensor.
++Loosen the two screws holding the Print Cooling Fan to the X-Carriage.
++Move the fan up as far as it will go.
++Tighten the screws up again.
++[img 300px-Ir.jpg]
++IR Sensor.
++Loosen the two screws holding the IR Sensor to the X-Carriage.
++Move the Sensor down as far as it will go. It should protrude lower than the Nozzle.
++Tighten the screws up again.
++[img 300px-Check_y.jpg]
++Y Endstop.
++Manually move the Printhead forward and check the Y-Axis Endstop is triggered.
++[img 300px-Check_x.jpg]
++X Endstop.
++Manually move the Printhead left and check the X-Axis Endstop is triggered.
++Power On
++[img 300px-Power_on.jpg]
++Bootscreen.
++Power on your BigBox.
++[img 300px-Power_on_ready.jpg]
++Ready.
++The BigBox is now awaiting your command.
++[img 300px-Display_info.jpg]
++Info.
++Push the knob on the screen.
++[img 300px-Display_control.jpg]
++Control.
++Rotate the knob to select Control.
++Push the knob.
++[img 300px-Display_Motion.jpg]
++Motion.
++Rotate the knob to select Motion.
++Push the knob.
++[img 300px-Display_zoff.jpg]
++Z Offset:.
++Rotate the knob to select Z Offset:.
++Push the knob.
++[img 300px-Display_zoffadj.jpg]
++-05.00.
++Rotate the knob to select until the value reads -05.00.
++Note: The value is a negative number -.
++Push the knob.
++[img 300px-Display_controlback.jpg]
++Control.
++Rotate the knob to select Control to go back.
++Push the knob.
++[img 300px-Display_store.jpg]
++Store memory.
++Rotate the knob to select Store memory to save the offset.
++Push the knob.
++Note: The screen will not change when pressing the knob.
++Calibrating Z Offset
++[img 300px-Display_autohome.jpg]
++Auto Home.
++Using the knob navigate to the Prepare menu.
++Rotate the knob to select Auto home.
++Check the printer is clear of potential hazards.
++Push the knob.
++To see a video of the printer correctly homing look here | https://youtu.be/hDD1arof7YM
++[img 300px-Display_autohomed.jpg]
++Centered.
++After homing has completed the Printhead will stop in the middle of the build space.
++[img 300px-Display_5mm.jpg]
++5mm.
++The display will show a Z height of 5mm.
++The Nozzle is of course not 5mm above the bed, we need to correctly position the IR sensor and calibrate the Z Offset.
++Loosen the screws holding the IR Sensor to the X-Carriage. Move the IR Sensor as far up as it will go.
++[img 300px-Display_moveaxis.jpg]
++Move Axis.
++Navigate through to the Prepare menu.
++Select Move Axis.
++Push the knob.
++[img 300px-Display_0.1.jpg]
++0.1mm.
++Select Move 0.1mm.
++Push the knob.
++[img 300px-Display_z.jpg]
++Move Z.
++Select Move Z.
++Push the knob.
++[img 300px-Move_z.jpg]
++Move Z up.
++Using the knob carefully move the bed up so that the tip of the Nozzle is just touching the glass.
++[img 300px-Cut_belt.jpg]
++Cut a strip.
++Cut a short length of belt from the remaining scrap, about 50mm long.
++[img 300px-Belt_bed.jpg]
++Under the IR Sensor.
++Place the strip of belt under the IR Sensor at the back of the Printhead.
++[img 300px-Ir_press.jpg]
++Press down.
++Press the sensor down against the belt. Make sure it sits level.
++[img 300px-Ir_tighten.jpg]
++Tighten.
++Tighten the screws holding the IR sensor to the X-Carriage.
++[img 300px-Display_autohome.jpg]
++Auto Home.
++Navigate through the menu and run the Auto home sequence again.
++[img 300px-Z_autohomed.jpg]
++Z.
++The Nozzle will now be at the correct height above the glass and the IR Sensor will be clear of the bed too.
++Now we need to adjust the Z Offset as it is still incorrectly set at 5mm.
++[img 300px-Movez_5.jpg]
++Move Z.
++Navigate through the menus to Move Z in 0.1mm increments.
++[img 300px-Movez_touch.jpg]
++Correct.
++Move the bed up until the Nozzle is very slightly above the bed.
++[img 300px-Z_difference.jpg]
++Difference.
++Note the change in height.
++The adjustment is 0.5mm, we'll need to input that data into the Z Offset option in the Motion menu.
++This will likely be a different value for your BigBox.
++[img 300px-Z_offset.jpg]
++Z Offset.
++Navigate through Control, Motion, Z Offset.
++Set the Z Offset to -00.50mm
++[img 300px-Display_store.jpg]
++Store memory.
++Navigate back and select Store Memory.
++Note: The screen will not change when pressing the knob.
++[img 300px-Z_calibrated.jpg]
++Z Calibrated.
++Navigate the menu and begin the Auto home sequence.
++Confirm the Z Offset is correct by moving the bed up to meet the Nozzle. It should stop at 00.00 with the Nozzle just above the glass.
++Zero X & Y
++[img 300px-Zero_xy.jpg]
++Zero.
++The X & Y Axes will need Zeroing in relation to the build plate. The bed has 0,0 marked in the front left corner. We want to adjust the endstop triggers so the nozzle will be perfectly aligned to those coordinates.
++[img 300px-Move_x.jpg]
++Move X.
++After the homing sequence has completed navigate through the menus and select 1mm increments then Move X.
++[img 300px-Move_x_0.jpg]
++Move to 0.00.
++Move the X-Axis to 00.00
++[img 300px-Move_x_offset.jpg]
++Incorrect X.
++If the Y-Axis Endstop trigger is not correctly set the 0 position for X will of course be wrong.
++[img 300px-Move_x_offset_adjust.jpg]
++Adjust the screw.
++Turning the screw clockwise will move the trigger point further to the left.
++After you have made an adjustment re-run the Auto home sequence.
++[img 300px-Move_x_offset_correct.jpg]
++Correct position.
++A correctly set X-Endstop Trigger.
++[img 300px-Move_y_offset.jpg]
++Move Y.
++Repeat the process for the Y-Axis.
++[img 300px-Move_y_wrong.jpg]
++Incorrect Y.
++The incorrect position for Y.
++[img 300px-Move_y_trigger.jpg]
++Adjust Y.
++Adjust the Y-Endstop Trigger.
++[img 300px-Move_y_trigger.jpg]
++Adjust Y.
++Adjust the Y-Endstop Trigger.
++[img 300px-Xy_set.jpg]
++X & Y Zeroed.
++With both axes setup correctly you'll be able to position the Nozzle to 0,0.
++Z-Axis Calibration
++[img 300px-Loosen_z.jpg]
++Z-Bed Calibration.
++To get the best from the Z-Axis one needs to align the Z-Axis Motors with the bed.
++Begin by loosening the four screws holding the motors to the Lower Support. The motors should be able to freely wiggle around.
++[img 300px-Grease.jpg]
++Grease.
++Now is a good time to add a little lithium grease to the top of the leadscrews and rods.
++[img 300px-Z_bottomed.jpg]
++All the way down.
++Via the menus run the bed all the way down to the bottom.
++[img 300px-Z_tight.jpg]
++Tighten.
++Tighten the accessible screws holding the motors.
++[img 300px-More_grease.jpg]
++More grease.
++Apply some more grease to the leadscrews.
++[img 300px-Z_screws.jpg]
++Tighten.
++Raise the Z-Axis and tighten the other motor screws.
++Autolevelling
++Pro & Lite
++[img 300px-Autolevelling.jpg]
++Autolevelling.
++Check the printer is clear of potential hazards.
++Run an Auto home sequence, then via the Prepare menu, select Level Bed.
++To watch a video of the homing sequence click here | https://youtu.be/2_GjLWiQV_I
++If the Level Bed function performs correctly your printer is now correctly calibrated.
++Dual
++Coming Soon!
+ Where next?
+
+--- 20160129222844
++++ 20160229193837
+@@ -6,2 +6,3 @@
+ 1.3 Z-Axis
++1.4 Leadscrews
+ 2 Glass Build Plate
+@@ -73,3 +74,3 @@
+ Push the pulley.
+-Using an Allen Key or similar push the pulley on the [[BigBox_Printer_main_assemblies:_Step_By_Step_Assembly_Process#Y-Axis_Rear-Bar_Assembly|Y-Axis Rear Bar Assembly inwards against the nylon washer.
++Using an Allen Key or similar push the pulley on the Y-Axis Rear Bar Assembly inwards against the nylon washer.
+ Repeat this with the other pulley.
+@@ -107,18 +108,55 @@
+ Tighten the three screws securing the Y-Axis Motor Bracket.
++Make sure the motor stays horizontal. A misaligned motor can cause wear on the belts.
+ Z-Axis
+-[img 300px-Z_ruler.jpg]
++[img 300px-Z_check.jpg]
++Check.
++Make sure all the screws holding the Z-Bed printed corners are lose and that the parts are free to move. Check the Z-Tops are free too.
++[img 300px-Z_corner.jpg]
++Bed.
++Watch this video for instructions on Tramming the Z-Bed.
++https://youtu.be/1v27cCMtCCI
++[img 300px-Z_rods.jpg]
++Rod Tops.
++Watch this video for instructions on Tramming the Z-Rods.
++https://youtu.be/Is6ddMdZ63E
++Leadscrews
++[img 300px-Bed_up.jpg]
++Up.
++Raise up the bed and place an object underneath to keep it supported.
++[img 300px-Lead_cover_bottom.jpg]
++Cover.
++2 x Z-Axis Driver Bottoms (Printed Parts).
++4 x M3 Hex Half Nuts (Bag 5).
++Push the nuts into the recesses.
++[img 300px-Leadscrew_fit.jpg]
++Leadscrew.
++Pass a Leadscrew through the Bottom, and screw it into the nut.
++[img 300px-Leadscrew_coupler.jpg]
++Coupler.
++Continue to screw in the Leadscrew all the way down into the coupler until the bed begins to move upwards slightly. The Leadscrew needs to be in as far as it can go.
++[img 300px-Leadscrew_leadscrew.jpg]
++Both Leadscrews.
++Repeate for the other side.
++[img 300px-Lead_cover_bottom.jpg]
++Cover.
++2 x Z-Axis Driver Tops (Printed Parts).
++4 x M3 12mm Screws (Bag 9).
++Insert the screws into the Tops. Note the recesses for the screw caps.
++[img 300px-Top_bottom.jpg]
++Fit the Tops.
++Screw the tops to the Bottoms.
++[img 300px-Top_bottoms.jpg]
++Fit the Tops.
++Repeat with the other side.
++Remove the support under the Z-Bed.
++[img 300px-Leadscrew_couplers.jpg]
++Couplers.
++Watch this video for instructions on coupling the Leadscrews.
++https://youtu.be/8A-qU3_-mCk
++[img 300px-Bed_measure.jpg]
+ Measure.
+-On one side of the bed a hold a ruler against the edge, as close to the leadscrew as possible, with the base of the ruler resting against the Lower Support.
+-Adjust the height of the bed by twisting the leadscrew (clockwise moves the bed up).
+-Position the bed to a known specific height. In this case I have selected 170mm.
+-[img 300px-Z_ruler_op.jpg]
+-Measure.
+-Move the ruler to the opposite side of the bed.
+-Adjust the height of the bed to match the height set on the other side, 170mm.
+-Confirm the position by measuring the other side again.
+-Adjust accordingly until both are at the same height.
+-[img 300px-Z_clamps.jpg]
+-Tighten the clamps.
+-When you are happy with the adjustments, tighten the clamps on the couplers.
+-Check one last time with the ruler that the bed is in the correct position and level.
++Using a ruler measure one side of the bed at the brass nuts, from the lower support, to the top layer on the Z-Bed. Make note of its height.
++[img 300px-Bed_measure_other.jpg]
++Measure again.
++Measure the other end of the bed and adjust the height by twisting the Leadscrew. You may need to check each side a few times to get them perfectly aligned.
+ Glass Build Plate
+@@ -348,2 +386,3 @@
+ More grease.
++Tighten the screws securing the Brass nuts.
+ Apply some more grease to the leadscrews.
+
+--- 20160229193837
++++ 20160319024051
+@@ -10,3 +10,3 @@
+ 2.2 Glass
+-3 Ooze Wiper
++3 Ooze Wiper Adjustment
+ 4 Homing
+@@ -14,9 +14,19 @@
+ 4.2 Power On
++4.2.1 Pro & Lite Single Extruder
++4.2.2 Dual Extruders
+ 4.3 Calibrating Z Offset
++4.3.1 Pro & Lite
++4.3.2 Dual
+ 5 Zero X & Y
+ 6 Z-Axis Calibration
+-7 Autolevelling
+-7.1 Pro & Lite
+-7.2 Dual
+-8 Where next?
++7 Tightening the HotEnd
++8 Dual Nozzle Alignment
++8.1 Levelling
++8.2 Extruder Offset
++8.3 G-Code
++9 Bed levelling
++9.1 Auto-Levelling the Pro & Lite
++9.2 Mesh Levelling the Dual
++10 The Finishing Touches
++11 Where next?
+ Belts, Pulleys & Rods
+@@ -196,3 +206,3 @@
+ Fit six clips around the bed.
+-Ooze Wiper
++Ooze Wiper Adjustment
+ [img 300px-Wiper.jpg]
+@@ -214,7 +224,3 @@
+ Tighten the screws up again.
+-[img 300px-Ir.jpg]
+-IR Sensor.
+-Loosen the two screws holding the IR Sensor to the X-Carriage.
+-Move the Sensor down as far as it will go. It should protrude lower than the Nozzle.
+-Tighten the screws up again.
++If you have a BigBox Dual remember to move the second Print Cooling Fan.
+ [img 300px-Check_y.jpg]
+@@ -226,2 +232,8 @@
+ Power On
++Pro & Lite Single Extruder
++[img 300px-Ir.jpg]
++IR Sensor.
++Loosen the two screws holding the IR Sensor to the X-Carriage.
++Move the Sensor down as far as it will go. It should protrude lower than the Nozzle.
++Tighten the screws up again.
+ [img 300px-Power_on.jpg]
+@@ -261,3 +273,20 @@
+ Note: The screen will not change when pressing the knob.
++Dual Extruders
++[img 300px-Dual_head_move.jpg]
++Move.
++Push the Printhead to the centre of the build space.
++[img 300px-Dual_head_move_ir.jpg]
++ir.
++Adjust the height of the IR Sensor Bracket so it is level with the Nozzle.
++[img 300px-Dual_head_ir_scrwe.jpg]
++Tighten.
++Secure the IR Sensor.
++[img 300px-Dual_boot.jpg]
++Booting.
++Power on your BigBox.
++[img 300px-Dual_powered.jpg]
++Ready.
++If all is well you should see three temperature readouts, two nozzles and the heated bed. If you have a MAXTEMP or other error please refer to the support section of the BigBox forum at forum.e3d-online.com
+ Calibrating Z Offset
++Pro & Lite
+ [img 300px-Display_autohome.jpg]
+@@ -335,2 +364,58 @@
+ Confirm the Z Offset is correct by moving the bed up to meet the Nozzle. It should stop at 00.00 with the Nozzle just above the glass.
++Dual
++[img 300px-Display_autohome.jpg]
++Auto Home.
++Using the knob navigate to the Prepare menu.
++Rotate the knob to select Auto home.
++Check the printer is clear of potential hazards.
++Push the knob.
++To see a video of the Dual correctly homing go here | https://youtu.be/DBDXf6ysArk
++[img 300px-Display_disable.jpg]
++Disable Steppers.
++After the homing sequence has finished select Disable Steppers from the Prepare menu.
++[img 300px-Move_to_centre.jpg]
++Move.
++Move the Printhead to the centre of the bed.
++[img 300px-Undo_screws.jpg]
++Moved.
++Loosen off the screws holding the IR Sensor bracket and push the sensor up out the way.
++[img 300px-Twist_tr8.jpg]
++Rotate.
++You now need to manually move the bed up towards the nozzle.
++To do this you need to twist both leadscrews at the same time.
++[img 300px-Dual_bed_up.jpg]
++Adjust.
++Move the bed until one or both of the nozzles are just touching against the glass bed.
++[img 300px-Scrap_belt.jpg]
++Belt.
++Cut a length of belt approximately 30mm in length.
++[img 300px-Scrap_belt_bed.jpg]
++Belt on bed.
++Place the belt on the bed directly under the IR Sensor.
++Push the Sensor down against the belt.
++[img 300px-Ir_tighten_dual.jpg]
++Sensor.
++Tighten the IR Sensor Bracket screws.
++Note: Keep the IR Sensor pressed down with a finger while tightening the sensor.
++[img 300px-Dual_move_axis.jpg]
++Move.
++On the LCD go to the Prepare menu and select Move Axis.
++[img 300px-Dual_move_1mm.jpg]
++1mm.
++Select Move 1mm.
++[img 300px-Dual_move_z.jpg]
++Z.
++Select Z.
++[img 300px-Drop_dual_bed.jpg]
++Move Z.
++Move the Z axis so the bed drops away from the Nozzles.
++[img 300px-Drop_dual_bed_belt.jpg]
++Clear.
++Remove the belt from the heated bed.
++[img 300px-Display_autohomed_dual.jpg]
++Auto Home.
++Using the knob navigate to the Prepare menu.
++Rotate the knob to select Auto home.
++Check the printer is clear of potential hazards.
++Push the knob.
+ Zero X & Y
+@@ -391,4 +476,118 @@
+ Raise the Z-Axis and tighten the other motor screws.
+-Autolevelling
+-Pro & Lite
++Tightening the HotEnd
++[img 300px-Tightening_lower_bed.jpg]
++Lower the bed.
++To ensure a leak-free nozzle we need to perform the final tightening. This is done with the nozzle at temperature.
++Using the LCD lower the Z-Axis, somewhere around 200mm should be fine.
++Note: There is a firmware bug which causes the bed to change height and reset to 0, please refer to the forum for support | forum.e3d-online.com
++[img 300px-Tightening_control.jpg]
++Control.
++On the LCD select Control.
++[img 300px-Tightening_temperature.jpg]
++Temperature.
++Select Temperature.
++[img 300px-Tightening_nozzle_1.jpg]
++Nozzle 1.
++Select Nozzle 1.
++Note: If you have a Pro or Lite BigBox you will only have the option of selecting a single Nozzle.
++[img 300px-Tightening_285.jpg]
++285.
++Set the temperature to 285°.
++[img 300px-Tightening_fans.jpg]
++Fans!
++The HotEnd fan(s) are firmware controlled and programmed to come on at 40°. If this does not happen shutdown the printer and check your wiring.
++[img 300px-Tightening_wait.jpg]
++Wait.
++Wait for the temperature to reach it's mark.
++[img 300px-Tightening_spanners.jpg]
++Tighten.
++While holding the Heaterblock securely in a pair of pliers, tighten the nozzle.
++Precise instructions from the E3D v6 assembly documentation.
++When the HotEnd is at tempereature, tighten the nozzle whilst holding the heater block with a spanner. This will tighten the nozzle against the HeatBreak and ensure that your HotEnd does not leak. You want to aim for 3Nm of torque on the hot nozzle - this is about as much pressure as you can apply with one finger on a small spanner. The nozzle does not need to be torqued down incredibly tightly to form a good seal, when at lower tempreatures the aluminium will contract and hold the Nozzle and HeatBreak together.
++[img 300px-Tightening_cooldown.jpg]
++Off.
++After the nozzle has been tightened, turn it off.
++From the Prepare menu select Cooldown.
++The temperature will now be set to 0.
++Note: The display will not change when you press the knob. To check it has turned off the nozzle return to the main screen.
++[img 300px-Tightening_nozzle2.jpg]
++Nozzle 2.
++For those with a Dual you will need to repeat this process with Nozzle 2.
++Dual Nozzle Alignment
++Levelling
++[img 300px-Dual_align.jpg]
++Pin.
++To get the best performance from the BigBox Dual it is important to spend a few minutes aligning and levelling the two nozzles. I will demonstrate the method I use to align the two together.
++Find a suitably pointed object which we'll use as datum and reference point. I like to use pins.
++Note: Make sure the Printhead has been Autohomed before you begin, we'll need to use the X, Y & Z Axes to calculate the second extruder's offset.
++[img 300px-Dual_align_pin_centre.jpg]
++Centre Pin.
++After running the Autohome function place the pin at the from centre of the heated bed approximately 5mm back from the front, i.e. Y is at 5mm on the grid.
++[img 300px-Dual_align_pin_above.jpg]
++Positioned.
++Using the LCD lower the Z-Axis and move the Printhead so the left extruder sits as close to the top of the pin as you can get it without it actually touching. You will need to move the Axes in 0.1mm increments to get an accurate position.
++[img 300px-Dual_align_pin_move.jpg]
++Next Extruder.
++Using the LCD move the Printhead along the X-Axis in 01.mm increments until the right nozzle is close to the pin.  Stop before the nozzle touches it.
++[img 300px-Dual_align_pin_fan_off.jpg]
++Fan Off.
++Unclip the fan from the right HotEnd to access the front grubscrew.
++[img 300px-Dual_align_pin_allen.jpg]
++Allen.
++The right nozzle needs to have it's height adjusted level with the left nozzle.
++I find using a short 2mm Allen key is the most effective tool to adjust the grub screws.
++[img 300px-Dual_align_pin_fan_off.jpg]
++Fan Off.
++Tighten the grub screws at both the back and front of the HotEnd. You won't need to turn the spanner much, maybe half a turn, to get the alignment close.
++[img 300px-Dual_align_pin_right.jpg]
++Check Right.
++When there is enough clearance below the nozzle use the LCD to move the right nozzle over the top of the pin.
++[img 300px-Dual_align_pin_left.jpg]
++Check Left.
++Using the LCD move the Printhead to change which nozzle is over the pin.
++Note: Only adjust the height of the right extruder. It will take a few attempts to get it right, the longer you spend setting it up and the more precisely you can align the two nozzles the better your prints will be!
++When you are finished put the fan back on the HotEnd.
++Extruder Offset
++[img 300px-Dual_offset.jpg]
++Centre.
++To print correctly your BigBox needs to know the X & Y difference between the two nozzles.
++Align the left nozzle directly above the pin, Try to get it as close to central as you can. You will likely need to move both X & Y Axes.
++[img 300px-Dual_offset_x_position.jpg]
++X.
++Take note of the X position, in this case it is 149.8.
++[img 300px-Dual_offset_x_position_move.jpg]
++X.
++Move the printhead so that the right nozzle is exactly centered over the pin.
++[img 300px-Dual_offset_x_position_adj.jpg]
++X.
++Take note of the X position, in this case it is 114.6.
++[img 300px-Dual_offset_y_position_y.jpg]
++Y.
++Now we want to move in the Y-Axis.
++[img 300px-Dual_offset_y_position.jpg]
++Y.
++Make note of the starting position, 5.00.
++[img 300px-Dual_offset_y_position_move.jpg]
++Y.
++Move the Printhead so the nozzle sits exactly over the pin.
++[img 300px-Dual_offset_y_position_adj.jpg]
++Y.
++Make note of the new Y position, 5.4.
++[img 300px-Dual_offset_calc.jpg]
++Numbers.
++Using our measurements we can calculate the extruder offset.
++X
++149.8 - 114.6 = 35.2
++Y
++5.0 - 5.4 = -0.4
++G-Code
++[img 300px-Dual_m218.jpg]
++M218.
++The M218 G-Code command is used to set the extruder offset.
++For an in depth explanation visit the RepRap Wiki | reprap.org
++M218 T1 X35.2 Y-0.4
++The code needs to be sent to the BigBox each time the printer is turned on, or ideally just before a new print is started.
++The easiest way is to add the command to the start-script of your slicers profile. For additional support please visit the forums | forum.e3d-online.com
++Bed levelling
++Auto-Levelling the Pro & Lite
+ [img 300px-Autolevelling.jpg]
+@@ -398,5 +597,77 @@
+ To watch a video of the homing sequence click here | https://youtu.be/2_GjLWiQV_I
+-If the Level Bed function performs correctly your printer is now correctly calibrated.
+-Dual
+-Coming Soon!
++If the Level Bed function performs correctly your printer is now correctly calibrated and levelled.
++Mesh Levelling the Dual
++[img 300px-Bedlevelling_paper.jpg]
++Mesh levelling.
++The Mesh levelling sequence performs a more accurate and consistent function that the standard Auto levelling used by the Pro & Lite versions.
++The process is a little more involved but the results are worth the extra work.
++If you are interested in the mechanics of the process there is a short paper written by the engineer who implemented the system into Marlin | Mesh Bed Levelling.
++To begin cut a short strip of paper.
++[img 300px-Bedlevelling_start.jpg]
++Level Bed.
++Check the printer is clear of potential hazards.
++Via the Prepare menu, select Level Bed.
++The BigBox will home X, Y & Z and then move to a position approximately X10, Y10.
++[img 300px-Bedlevelling_paper_next.jpg]
++Papered.
++Place the strip of paper under the left nozzle.
++[img 300px-Bedlevelling_lcd_adj.jpg]
++LCD.
++The LCD will display a value of 4.0.
++Rotating the knob will adjust the position of the bed.
++Move the bed up so that the paper is just able to slide around under the nozzle.
++Push the knob to continue.
++[img 300px-Bedlevelling_next.jpg]
++Next.
++The Printhead will then move to the next position.
++[img 300px-Bedlevelling_next_adj.jpg]
++Adjust.
++Place the paper under the nozzle again and adjust the bed's height as before.
++[img 300px-Bedlevelling_last.jpg]
++Last one.
++There are a total of 9 points measured over the bed with the last being in the back right.
++[img 300px-Bedlevelling_home.jpg]
++Home.
++When the process has complete the Printhead will return to the home position, this time however it will move to X5, Y5, Z4. This can be seen on the LCD.
++[img 300px-Bedlevelling_store.jpg]
++Store.
++From the Control menu select Store memory.
++Note: The LCD will beep but nothing will change on the screen when the knob is pressed.
++The Mesh information will be permanently stored to the Rumba's EEPROM. You will not need to level the bed again unless you make any mechanical changes to the printer.
++The Finishing Touches
++[img 300px-Stickers.jpg]
++Stickers!
++The Stickers have been provided with acrylic kits.
++[img 300px-Stickers_back.jpg]
++Gently peel.
++They are a two part sticker with and they need the back removing first.
++Gently begin to peel off the back.
++[img 300px-Stickers_tissue.jpg]
++Stickers!
++The stickers should adhere to the tissue-like front covering.
++[img 300px-Stickers_align.jpg]
++Stickers!
++Line up the BigBox sticker on the front left side.
++[img 300px-Stickers_rub.jpg]
++Stickers!
++Press the sticker against the acrylic and rub it over a few times with the tip of your finger.
++[img 300px-Stickers_peel.jpg]
++Stickers!
++Carefully peel off the front tissue-like covering.
++[img 300px-Stickers_stuck.jpg]
++Stickers!
++The sticker should remain attached to the acrylic.
++[img 300px-Stickers_e3d.jpg]
++Stickers!
++Do the same with the E3D Logo, it sticks to the front right of the BigBox as shown.
++[img 300px-Stickers_mib.jpg]
++Stickers!
++And repeat with the Made In Britain sticker.
++This sticker goes at the top left of the frame.
++[img 300px-Stickers_ks.jpg]
++Stickers!
++The two Kickstarter logos fit one each to the sides.
++[img 300px-Stickers_done.jpg]
++Stickers!
++Done!
+ Where next?
+
+--- 20160319024051
++++ 20160404132147
+@@ -18,3 +18,3 @@
+ 4.3.1 Pro & Lite
+-4.3.2 Dual
++4.3.2 Calibrating Z Offset Dual
+ 5 Zero X & Y
+@@ -46,2 +46,4 @@
+ Position the X-Axis Pulley with a grub over the flat on the motor shaft.
++If necessary tighten the other grub screw a little to hold first grub screw
++in position adjacent to the flat on the shaft.
+ [img 300px-X_pulley_tighten.jpg]
+@@ -51,3 +53,3 @@
+ Tension.
+-Insert an Allen Key into the slot in the Printhead.
++Insert an 2.5 mm Allen Key into the slot in the Printhead.  The slot is immediately below the limit (micro) switch.
+ Turning the Allen Key anticlockwise (undo) will tighten the belt.
+@@ -111,3 +113,3 @@
+ Tighten the grubs.
+-Tighten the grub screws on both pulleys.
++Tighten the two grub screws on each pulley.
+ [img 300px-Y_motor_push.jpg]
+@@ -135,2 +137,4 @@
+ Raise up the bed and place an object underneath to keep it supported.
++Make sure that this object will come out again once you have finished the lead screw install WITHOUT
++you having to raise the bed, as to do this you will have to rotate each lead screw by hand.
+ [img 300px-Lead_cover_bottom.jpg]
+@@ -210,2 +214,4 @@
+ Move the Printhead to the rear of the printer, just in front of the rubber Ooze Wiper Blade.
++See step below for adjusting the fans, you may have to perform this step before the nozzles
++will come into contact with the wiper.
+ [img 300px-Wiper_undo.jpg]
+@@ -216,3 +222,3 @@
+ Adjust the Ooze Wiper up and down until just the tip of the nozzle will come into contact with the rubber.
+-Tighen up the screws on the frame to hold the wiper in place.
++Tighten up the screws on the frame to hold the wiper in place.
+ Homing
+@@ -362,5 +368,5 @@
+ Z Calibrated.
+-Navigate the menu and begin the Auto home sequence.
++Navigate the menu and begin the Auto home sequence. At the end of the autohome sequence the print head will NOT be offset from the bed at the distance you have set, it will be higher. This is fine.
+ Confirm the Z Offset is correct by moving the bed up to meet the Nozzle. It should stop at 00.00 with the Nozzle just above the glass.
+-Dual
++Calibrating Z Offset Dual
+ [img 300px-Display_autohome.jpg]
+@@ -371,2 +377,4 @@
+ Push the knob.
++The head(s) should move to (roughly) the origin i.e. X= 0.0 and Y = 0.0
++and the bed should move up with the nozzles a short distance from the glass plate and then stop.
+ To see a video of the Dual correctly homing go here | https://youtu.be/DBDXf6ysArk
+@@ -384,3 +392,3 @@
+ You now need to manually move the bed up towards the nozzle.
+-To do this you need to twist both leadscrews at the same time.
++To do this you need to twist both leadscrews (clockwise as viewed from above) at the same time.
+ [img 300px-Dual_bed_up.jpg]
+@@ -405,2 +413,7 @@
+ Select Move 1mm.
++This does NOT mean that the heads will immediately move 1mm !
++It means that when you get to the menu where you see X   (or Y or Z)  000.00
++that turning the knob will THEN move the heads in increments of 1mm.
++Move through the steps below until you see the axis you want to move in, select it
++you will then see 00.000  then move the knob and the heads will move.
+ [img 300px-Dual_move_z.jpg]
+@@ -424,2 +437,4 @@
+ The X & Y Axes will need Zeroing in relation to the build plate. The bed has 0,0 marked in the front left corner. We want to adjust the endstop triggers so the nozzle will be perfectly aligned to those coordinates.
++If you have screwed the end stops screws a long way in, the zero point the X-Carriage goes to when you hit home in the sequence below will be close to the X-Axis edge of the glass plate and the "home" action may push these clips along/off.  Adjust the Y-Axis end stop out a little to avoid this.
++As the zero point is very hard to see on the dual, placing the edge of a thick piece of paper or an envelope along the Y zero axis and marking the edge of the glass plate you can see from the front will allow you to look along and see if the nozzle is aligned at zero.
+ [img 300px-Move_x.jpg]
+@@ -430,2 +445,6 @@
+ Move the X-Axis to 00.00
++After the "home" sequence this 00.00  is where the machine THINKS 00.00 is (as it hits the X limit switch)
++Of course it may not be at 0. To adjust this first move the heads out of the way   (PREPARE - MOVE AXIS menu sequence)
++then adjust the X endstop and run the HOME sequence again and check if X is at zero on the plate.
++Loop through this until X= 00.00 on screen is when the nozzle is at X = 0 on the plate.
+ [img 300px-Move_x_offset.jpg]
+@@ -443,2 +462,3 @@
+ Repeat the process for the Y-Axis.
++Run "home" to see where the Y Axis limit switch is triggered, check this on the plate, adjust the Y endstop (just above the Pi Cam) and run "home" again to see if Y = 00.00 on screen is actually Y = 0 on the plate.  Loop round this process until they are.
+ [img 300px-Move_y_wrong.jpg]
+@@ -524,3 +544,3 @@
+ Centre Pin.
+-After running the Autohome function place the pin at the from centre of the heated bed approximately 5mm back from the front, i.e. Y is at 5mm on the grid.
++After running the Autohome function place the pin at the centre of the heated bed approximately 5mm back from the front, i.e. Y is at 5mm on the grid.
+ [img 300px-Dual_align_pin_above.jpg]
+@@ -530,3 +550,3 @@
+ Next Extruder.
+-Using the LCD move the Printhead along the X-Axis in 01.mm increments until the right nozzle is close to the pin.  Stop before the nozzle touches it.
++Using the LCD move the Printhead along the X-Axis in 1.0 mm increments until the right nozzle is close to the pin.  Stop before the nozzle touches it.
+ [img 300px-Dual_align_pin_fan_off.jpg]
+@@ -548,3 +568,3 @@
+ Note: Only adjust the height of the right extruder. It will take a few attempts to get it right, the longer you spend setting it up and the more precisely you can align the two nozzles the better your prints will be!
+-When you are finished put the fan back on the HotEnd.
++When you are finished put the fan back on the HotEnd.  DON'T remove or move the pin yet, you will need it for the next stage of calibration.
+ Extruder Offset
+@@ -566,2 +586,3 @@
+ Now we want to move in the Y-Axis.
++A small mirror on a stick is useful to see the Y alignment between the pin and the nozzle, place the mirror on the bed to the left or right of the X-Carriage and at about 45 degrees.
+ [img 300px-Dual_offset_y_position.jpg]
+
+--- 20160404132147
++++ 20160417003558
+@@ -241,2 +241,3 @@
+ IR Sensor.
++Dual adjustment is ten steps down the page
+ Loosen the two screws holding the IR Sensor to the X-Carriage.
+@@ -244,2 +245,3 @@
+ Tighten the screws up again.
++IF YOU HAVE ALREADY BUILT YOUR PRINTER AND YOU ARE FOLLOWING THIS PROCEDURE TO (RE) COMMISSION THEN YOU WILL NEED TO RESET THE DATA ON THE RUMBA, (OTHERWISE Z-AXIS CALIBRATION ETC WON'T WORK) BY SELECTING Restore failsafe.
+ [img 300px-Power_on.jpg]
+@@ -500,2 +502,3 @@
+ To ensure a leak-free nozzle we need to perform the final tightening. This is done with the nozzle at temperature.
++It is worth at this point checking that you can access the heater block and nozzle with your spanners (before the temperature rises) as access is a little restricted.
+ Using the LCD lower the Z-Axis, somewhere around 200mm should be fine.
+@@ -657,2 +660,3 @@
+ The Mesh information will be permanently stored to the Rumba's EEPROM. You will not need to level the bed again unless you make any mechanical changes to the printer.
++At this stage you may wish to adjust the height of the "print cooling" fans (those at the left and right of the nozzles)  These fans have a duct to prevent the air from them cooling the nozzles (look closely) as if the nozzle temperature drops too low the print will fail.   Adjust these fans so that they are a few mm higher than the tip of the nozzles.  i.e. just high enough to avoid the print itself and also high enough not to hit the wiper on the bucket.
+ The Finishing Touches
+
+--- 20160417003558
++++ 20160504034106
+@@ -27,3 +27,3 @@
+ 9 Bed levelling
+-9.1 Auto-Levelling the Pro & Lite
++9.1 Auto-Levelling the Pro, Lite & Hybrid
+ 9.2 Mesh Levelling the Dual
+@@ -477,2 +477,3 @@
+ With both axes setup correctly you'll be able to position the Nozzle to 0,0.
++Note: If you have the Hybrid Printhead, the right extruder (HE1) should be aligned to 0,0.
+ Z-Axis Calibration
+@@ -589,3 +590,3 @@
+ Now we want to move in the Y-Axis.
+-A small mirror on a stick is useful to see the Y alignment between the pin and the nozzle, place the mirror on the bed to the left or right of the X-Carriage and at about 45 degrees.
++A small mirror on a stick is useful to see the Y alignment between the pin and the nozzle, place the mirror on the bed to the left or right of the X-Carriage and at about 45 degrees. Turn the mirror until the two nozzles line up at which point you can see the offset wrt the pin.
+ [img 300px-Dual_offset_y_position.jpg]
+@@ -615,3 +616,3 @@
+ Bed levelling
+-Auto-Levelling the Pro & Lite
++Auto-Levelling the Pro, Lite & Hybrid
+ [img 300px-Autolevelling.jpg]
+
+--- 20160504034106
++++ 20160529172033
+@@ -1,34 +1,34 @@
+ Contents
+-1 Belts, Pulleys & Rods
+-1.1 X-Axis
+-1.2 Y-Axis
+-1.2.1 Y-Axis Motor
+-1.3 Z-Axis
+-1.4 Leadscrews
+-2 Glass Build Plate
+-2.1 Clips
+-2.2 Glass
+-3 Ooze Wiper Adjustment
+-4 Homing
+-4.1 Pre-Checks
+-4.2 Power On
+-4.2.1 Pro & Lite Single Extruder
+-4.2.2 Dual Extruders
+-4.3 Calibrating Z Offset
+-4.3.1 Pro & Lite
+-4.3.2 Calibrating Z Offset Dual
+-5 Zero X & Y
+-6 Z-Axis Calibration
+-7 Tightening the HotEnd
+-8 Dual Nozzle Alignment
+-8.1 Levelling
+-8.2 Extruder Offset
+-8.3 G-Code
+-9 Bed levelling
+-9.1 Auto-Levelling the Pro, Lite & Hybrid
+-9.2 Mesh Levelling the Dual
+-10 The Finishing Touches
++1 (1) Belts, Pulleys & Rods
++1.1 (1.1) X-Axis
++1.2 (1.2) Y-Axis
++1.2.1 (1.2.1) Y-Axis Motor
++1.3 (1.3) Z-Axis
++1.4 (1.4) Leadscrews
++2 (2) Glass Build Plate
++2.1 (2.1) Clips
++2.2 (2.2) Glass
++3 (3) Ooze Wiper Adjustment
++4 (4) Homing
++4.1 (4.1) Pre-Checks
++4.2 (4.2) Power On
++4.2.1 (4.2.1) Pro & Lite Single Extruder
++4.2.2 (4.2.2) Dual Extruders
++4.3 (4.3) Calibrating Z Offset
++4.3.1 (4.3.1) Pro & Lite
++4.3.2 (4.3.2) Calibrating Z Offset Dual
++5 (5) Zero X & Y
++6 (6) Z-Axis Calibration
++7 (7) Tightening the HotEnd
++8 (8) Dual Nozzle Alignment
++8.1 (8.1) Levelling
++8.2 (8.2) Extruder Offset
++8.3 (8.3) G-Code
++9 (9) Bed levelling
++9.1 (9.1) Auto-Levelling the Pro, Lite & Hybrid
++9.2 (9.2) Mesh Levelling the Dual
++10 (10) The Finishing Touches
+ 11 Where next?
+-Belts, Pulleys & Rods
+-X-Axis
++(1) Belts, Pulleys & Rods
++(1.1) X-Axis
+ [img 300px-X_m3_f.jpg]
+@@ -57,3 +57,3 @@
+ Watch this video of a correctly tensioned belt | https://youtu.be/0RpnXo2UQ0Y
+-Y-Axis
++(1.2) Y-Axis
+ [img 300px-Xy_front.jpg]
+@@ -107,3 +107,3 @@
+ Note: There are two screws in each pulley. There will be four in total.
+-Y-Axis Motor
++(1.2.1) Y-Axis Motor
+ [img 300px-Y_motor_align.jpg]
+@@ -121,6 +121,6 @@
+ Make sure the motor stays horizontal. A misaligned motor can cause wear on the belts.
+-Z-Axis
++(1.3) Z-Axis
+ [img 300px-Z_check.jpg]
+ Check.
+-Make sure all the screws holding the Z-Bed printed corners are lose and that the parts are free to move. Check the Z-Tops are free too.
++Make sure all the screws holding the Z-Bed printed corners are loose and that the parts are free to move. Check the Z-Tops are free too.
+ [img 300px-Z_corner.jpg]
+@@ -133,3 +133,3 @@
+ https://youtu.be/Is6ddMdZ63E
+-Leadscrews
++(1.4) Leadscrews
+ [img 300px-Bed_up.jpg]
+@@ -137,4 +137,3 @@
+ Raise up the bed and place an object underneath to keep it supported.
+-Make sure that this object will come out again once you have finished the lead screw install WITHOUT
+-you having to raise the bed, as to do this you will have to rotate each lead screw by hand.
++Make sure that it is possible to extract this object once you have finished the lead screw install WITHOUT having to raise the bed, as to do this you will have to rotate each lead screw by hand.  Tip: You could use a few thick books under the bed, which would be easy to slide out again.
+ [img 300px-Lead_cover_bottom.jpg]
+@@ -152,3 +151,3 @@
+ Both Leadscrews.
+-Repeate for the other side.
++Repeat on the other side.
+ [img 300px-Lead_cover_bottom.jpg]
+@@ -163,3 +162,3 @@
+ Fit the Tops.
+-Repeat with the other side.
++Repeat on the other side.
+ Remove the support under the Z-Bed.
+@@ -171,3 +170,3 @@
+ Measure.
+-Using a ruler measure one side of the bed at the brass nuts, from the lower support, to the top layer on the Z-Bed. Make note of its height.
++Using a ruler, measure one side of the bed at the brass nuts from the lower support, to the top layer on the Z-Bed. Make note of its height.
+ [img 300px-Bed_measure_other.jpg]
+@@ -175,4 +174,4 @@
+ Measure the other end of the bed and adjust the height by twisting the Leadscrew. You may need to check each side a few times to get them perfectly aligned.
+-Glass Build Plate
+-Clips
++(2) Glass Build Plate
++(2.1) Clips
+ [img 300px-Clips.jpg]
+@@ -197,3 +196,3 @@
+ Repeat with all the clips.
+-Glass
++(2.2) Glass
+ [img 300px-Glass.jpg]
+@@ -210,3 +209,3 @@
+ Fit six clips around the bed.
+-Ooze Wiper Adjustment
++(3) Ooze Wiper Adjustment
+ [img 300px-Wiper.jpg]
+@@ -223,4 +222,4 @@
+ Tighten up the screws on the frame to hold the wiper in place.
+-Homing
+-Pre-Checks
++(4) Homing
++(4.1) Pre-Checks
+ [img 300px-Fan.jpg]
+@@ -237,4 +236,4 @@
+ Manually move the Printhead left and check the X-Axis Endstop is triggered.
+-Power On
+-Pro & Lite Single Extruder
++(4.2) Power On
++(4.2.1) Pro & Lite Single Extruder
+ [img 300px-Ir.jpg]
+@@ -281,3 +280,3 @@
+ Note: The screen will not change when pressing the knob.
+-Dual Extruders
++(4.2.2) Dual Extruders
+ [img 300px-Dual_head_move.jpg]
+@@ -297,4 +296,4 @@
+ If all is well you should see three temperature readouts, two nozzles and the heated bed. If you have a MAXTEMP or other error please refer to the support section of the BigBox forum at forum.e3d-online.com
+-Calibrating Z Offset
+-Pro & Lite
++(4.3) Calibrating Z Offset
++(4.3.1) Pro & Lite
+ [img 300px-Display_autohome.jpg]
+@@ -372,3 +371,3 @@
+ Confirm the Z Offset is correct by moving the bed up to meet the Nozzle. It should stop at 00.00 with the Nozzle just above the glass.
+-Calibrating Z Offset Dual
++(4.3.2) Calibrating Z Offset Dual
+ [img 300px-Display_autohome.jpg]
+@@ -435,3 +434,3 @@
+ Push the knob.
+-Zero X & Y
++(5) Zero X & Y
+ [img 300px-Zero_xy.jpg]
+@@ -478,3 +477,3 @@
+ Note: If you have the Hybrid Printhead, the right extruder (HE1) should be aligned to 0,0.
+-Z-Axis Calibration
++(6) Z-Axis Calibration
+ [img 300px-Loosen_z.jpg]
+@@ -499,3 +498,3 @@
+ Raise the Z-Axis and tighten the other motor screws.
+-Tightening the HotEnd
++(7) Tightening the HotEnd
+ [img 300px-Tightening_lower_bed.jpg]
+@@ -539,4 +538,4 @@
+ For those with a Dual you will need to repeat this process with Nozzle 2.
+-Dual Nozzle Alignment
+-Levelling
++(8) Dual Nozzle Alignment
++(8.1) Levelling
+ [img 300px-Dual_align.jpg]
+@@ -573,3 +572,3 @@
+ When you are finished put the fan back on the HotEnd.  DON'T remove or move the pin yet, you will need it for the next stage of calibration.
+-Extruder Offset
++(8.2) Extruder Offset
+ [img 300px-Dual_offset.jpg]
+@@ -607,3 +606,3 @@
+ 5.0 - 5.4 = -0.4
+-G-Code
++(8.3) G-Code
+ [img 300px-Dual_m218.jpg]
+@@ -615,4 +614,4 @@
+ The easiest way is to add the command to the start-script of your slicers profile. For additional support please visit the forums | forum.e3d-online.com
+-Bed levelling
+-Auto-Levelling the Pro, Lite & Hybrid
++(9) Bed levelling
++(9.1) Auto-Levelling the Pro, Lite & Hybrid
+ [img 300px-Autolevelling.jpg]
+@@ -623,3 +622,3 @@
+ If the Level Bed function performs correctly your printer is now correctly calibrated and levelled.
+-Mesh Levelling the Dual
++(9.2) Mesh Levelling the Dual
+ [img 300px-Bedlevelling_paper.jpg]
+@@ -662,3 +661,3 @@
+ At this stage you may wish to adjust the height of the "print cooling" fans (those at the left and right of the nozzles)  These fans have a duct to prevent the air from them cooling the nozzles (look closely) as if the nozzle temperature drops too low the print will fail.   Adjust these fans so that they are a few mm higher than the tip of the nozzles.  i.e. just high enough to avoid the print itself and also high enough not to hit the wiper on the bucket.
+-The Finishing Touches
++(10) The Finishing Touches
+ [img 300px-Stickers.jpg]
+
+--- 20160529172033
++++ 20160612210157
+@@ -240,3 +240,3 @@
+ IR Sensor.
+-Dual adjustment is ten steps down the page
++Dual adjustment (4.2.2) is ten steps down the page
+ Loosen the two screws holding the IR Sensor to the X-Carriage.
+@@ -298,2 +298,3 @@
+ (4.3.1) Pro & Lite
++(Calibrating Z Offset Dual is in section 4.3.2 twenty steps below)
+ [img 300px-Display_autohome.jpg]
+@@ -526,5 +527,5 @@
+ Tighten.
+-While holding the Heaterblock securely in a pair of pliers, tighten the nozzle.
++While holding the Heater block securely in a pair of pliers, tighten the nozzle.
+ Precise instructions from the E3D v6 assembly documentation.
+-When the HotEnd is at tempereature, tighten the nozzle whilst holding the heater block with a spanner. This will tighten the nozzle against the HeatBreak and ensure that your HotEnd does not leak. You want to aim for 3Nm of torque on the hot nozzle - this is about as much pressure as you can apply with one finger on a small spanner. The nozzle does not need to be torqued down incredibly tightly to form a good seal, when at lower tempreatures the aluminium will contract and hold the Nozzle and HeatBreak together.
++When the HotEnd is at temperature, tighten the nozzle whilst holding the heater block with a spanner (5/8" may fit) . This will tighten the nozzle against the HeatBreak and ensure that your HotEnd does not leak. You want to aim for 3Nm of torque on the hot nozzle - this is about as much pressure as you can apply with one finger on a small spanner. The nozzle does not need to be torqued down incredibly tightly to form a good seal, when at lower temperatures the aluminium will contract and hold the Nozzle and HeatBreak together.
+ [img 300px-Tightening_cooldown.jpg]
+
+--- 20160612210157
++++ 20160627160851
+@@ -16,2 +16,3 @@
+ 4.2.2 (4.2.2) Dual Extruders
++4.2.3 (4.2.3) Z-Axis Leadscrew Steps-Per-MM
+ 4.3 (4.3) Calibrating Z Offset
+@@ -143,2 +144,8 @@
+ Push the nuts into the recesses.
++[img 300px-Leadscrew_varients.jpg]
++Leadscrews.
++There are two versions of Leadscrews & Brass Nuts.
++The older version has a 2mm pitch with 8 holes in the nuts.
++The newer versions have an 8mm pitch and 4 holes in the nuts.
++Note: Depending on the version you may need to change the Steps-Per-MM for Z. We will explain how to do this at a later stage.
+ [img 300px-Leadscrew_fit.jpg]
+@@ -296,2 +303,32 @@
+ If all is well you should see three temperature readouts, two nozzles and the heated bed. If you have a MAXTEMP or other error please refer to the support section of the BigBox forum at forum.e3d-online.com
++(4.2.3) Z-Axis Leadscrew Steps-Per-MM
++Only carry out this step if you have identified that you have the newer 8mm-Pitch Leadscrews & Nuts.
++[img 300px-Display_info.jpg]
++Info.
++Push the knob on the screen.
++[img 300px-Display_control.jpg]
++Control.
++Rotate the knob to select Control.
++Push the knob.
++[img 300px-Display_Motion.jpg]
++Motion.
++Rotate the knob to select Motion.
++Push the knob.
++[img 300px-Display_z_steps.jpg]
++Zsteps/mm.
++Rotate the knob to select Zsteps/mm.
++Push the knob.
++[img 300px-Display_z_steps_400.jpg]
++400.
++Rotate the knob to change the value from 1600 to 400.
++Push the knob.
++[img 300px-Display_controlback.jpg]
++Control.
++Rotate the knob to select Control to go back.
++Push the knob.
++[img 300px-Display_store.jpg]
++Store memory.
++Rotate the knob to select Store memory to save the offset.
++Push the knob.
++Note: The screen will not change when pressing the knob.
+ (4.3) Calibrating Z Offset
+@@ -692,2 +729,5 @@
+ This sticker goes at the top left of the frame.
++[img 300px-Stickers_1.1.jpg]
++Stickers!
++For owners of the v1.1 we have supplied BigBox v1.1 stickers for the back panel!
+ [img 300px-Stickers_ks.jpg]
+
+--- 20160627160851
++++ 20160906071225
+@@ -14,3 +14,3 @@
+ 4.2 (4.2) Power On
+-4.2.1 (4.2.1) Pro & Lite Single Extruder
++4.2.1 (4.2.1) Pro & All Hybrid Extruders
+ 4.2.2 (4.2.2) Dual Extruders
+@@ -18,4 +18,4 @@
+ 4.3 (4.3) Calibrating Z Offset
+-4.3.1 (4.3.1) Pro & Lite
+-4.3.2 (4.3.2) Calibrating Z Offset Dual
++4.3.1 (4.3.1) Pro, Lite & Hybrid Pro/Dual
++4.3.2 (4.3.2) Non-Hybrid Dual Calibrating Z Offset
+ 5 (5) Zero X & Y
+@@ -28,4 +28,4 @@
+ 9 (9) Bed levelling
+-9.1 (9.1) Auto-Levelling the Pro, Lite & Hybrid
+-9.2 (9.2) Mesh Levelling the Dual
++9.1 (9.1) Auto-Levelling the Pro, Lite & Hybrid Models
++9.2 (9.2) Mesh Levelling the Non-Hybrid Dual
+ 10 (10) The Finishing Touches
+@@ -244,6 +244,6 @@
+ (4.2) Power On
+-(4.2.1) Pro & Lite Single Extruder
++(4.2.1) Pro & All Hybrid Extruders
+ [img 300px-Ir.jpg]
+ IR Sensor.
+-Dual adjustment (4.2.2) is ten steps down the page
++Non-Hybrid Dual adjustment (4.2.2) is ten steps down the page
+ Loosen the two screws holding the IR Sensor to the X-Carriage.
+@@ -288,17 +288,3 @@
+ (4.2.2) Dual Extruders
+-[img 300px-Dual_head_move.jpg]
+-Move.
+-Push the Printhead to the centre of the build space.
+-[img 300px-Dual_head_move_ir.jpg]
+-ir.
+-Adjust the height of the IR Sensor Bracket so it is level with the Nozzle.
+-[img 300px-Dual_head_ir_scrwe.jpg]
+-Tighten.
+-Secure the IR Sensor.
+-[img 300px-Dual_boot.jpg]
+-Booting.
+-Power on your BigBox.
+-[img 300px-Dual_powered.jpg]
+-Ready.
+-If all is well you should see three temperature readouts, two nozzles and the heated bed. If you have a MAXTEMP or other error please refer to the support section of the BigBox forum at forum.e3d-online.com
++If you are building an older Non-Hybrid Dual Extruders | Click Here
+ (4.2.3) Z-Axis Leadscrew Steps-Per-MM
+@@ -334,3 +320,3 @@
+ (4.3) Calibrating Z Offset
+-(4.3.1) Pro & Lite
++(4.3.1) Pro, Lite & Hybrid Pro/Dual
+ (Calibrating Z Offset Dual is in section 4.3.2 twenty steps below)
+@@ -409,65 +395,4 @@
+ Confirm the Z Offset is correct by moving the bed up to meet the Nozzle. It should stop at 00.00 with the Nozzle just above the glass.
+-(4.3.2) Calibrating Z Offset Dual
+-[img 300px-Display_autohome.jpg]
+-Auto Home.
+-Using the knob navigate to the Prepare menu.
+-Rotate the knob to select Auto home.
+-Check the printer is clear of potential hazards.
+-Push the knob.
+-The head(s) should move to (roughly) the origin i.e. X= 0.0 and Y = 0.0
+-and the bed should move up with the nozzles a short distance from the glass plate and then stop.
+-To see a video of the Dual correctly homing go here | https://youtu.be/DBDXf6ysArk
+-[img 300px-Display_disable.jpg]
+-Disable Steppers.
+-After the homing sequence has finished select Disable Steppers from the Prepare menu.
+-[img 300px-Move_to_centre.jpg]
+-Move.
+-Move the Printhead to the centre of the bed.
+-[img 300px-Undo_screws.jpg]
+-Moved.
+-Loosen off the screws holding the IR Sensor bracket and push the sensor up out the way.
+-[img 300px-Twist_tr8.jpg]
+-Rotate.
+-You now need to manually move the bed up towards the nozzle.
+-To do this you need to twist both leadscrews (clockwise as viewed from above) at the same time.
+-[img 300px-Dual_bed_up.jpg]
+-Adjust.
+-Move the bed until one or both of the nozzles are just touching against the glass bed.
+-[img 300px-Scrap_belt.jpg]
+-Belt.
+-Cut a length of belt approximately 30mm in length.
+-[img 300px-Scrap_belt_bed.jpg]
+-Belt on bed.
+-Place the belt on the bed directly under the IR Sensor.
+-Push the Sensor down against the belt.
+-[img 300px-Ir_tighten_dual.jpg]
+-Sensor.
+-Tighten the IR Sensor Bracket screws.
+-Note: Keep the IR Sensor pressed down with a finger while tightening the sensor.
+-[img 300px-Dual_move_axis.jpg]
+-Move.
+-On the LCD go to the Prepare menu and select Move Axis.
+-[img 300px-Dual_move_1mm.jpg]
+-1mm.
+-Select Move 1mm.
+-This does NOT mean that the heads will immediately move 1mm !
+-It means that when you get to the menu where you see X   (or Y or Z)  000.00
+-that turning the knob will THEN move the heads in increments of 1mm.
+-Move through the steps below until you see the axis you want to move in, select it
+-you will then see 00.000  then move the knob and the heads will move.
+-[img 300px-Dual_move_z.jpg]
+-Z.
+-Select Z.
+-[img 300px-Drop_dual_bed.jpg]
+-Move Z.
+-Move the Z axis so the bed drops away from the Nozzles.
+-[img 300px-Drop_dual_bed_belt.jpg]
+-Clear.
+-Remove the belt from the heated bed.
+-[img 300px-Display_autohomed_dual.jpg]
+-Auto Home.
+-Using the knob navigate to the Prepare menu.
+-Rotate the knob to select Auto home.
+-Check the printer is clear of potential hazards.
+-Push the knob.
++(4.3.2) Non-Hybrid Dual Calibrating Z Offset
++If you are building an older Non-Hybrid and Calibrating Z Offset | Click Here
+ (5) Zero X & Y
+@@ -653,3 +578,3 @@
+ (9) Bed levelling
+-(9.1) Auto-Levelling the Pro, Lite & Hybrid
++(9.1) Auto-Levelling the Pro, Lite & Hybrid Models
+ [img 300px-Autolevelling.jpg]
+@@ -660,41 +585,4 @@
+ If the Level Bed function performs correctly your printer is now correctly calibrated and levelled.
+-(9.2) Mesh Levelling the Dual
+-[img 300px-Bedlevelling_paper.jpg]
+-Mesh levelling.
+-The Mesh levelling sequence performs a more accurate and consistent function that the standard Auto levelling used by the Pro & Lite versions.
+-The process is a little more involved but the results are worth the extra work.
+-If you are interested in the mechanics of the process there is a short paper written by the engineer who implemented the system into Marlin | Mesh Bed Levelling.
+-To begin cut a short strip of paper.
+-[img 300px-Bedlevelling_start.jpg]
+-Level Bed.
+-Check the printer is clear of potential hazards.
+-Via the Prepare menu, select Level Bed.
+-The BigBox will home X, Y & Z and then move to a position approximately X10, Y10.
+-[img 300px-Bedlevelling_paper_next.jpg]
+-Papered.
+-Place the strip of paper under the left nozzle.
+-[img 300px-Bedlevelling_lcd_adj.jpg]
+-LCD.
+-The LCD will display a value of 4.0.
+-Rotating the knob will adjust the position of the bed.
+-Move the bed up so that the paper is just able to slide around under the nozzle.
+-Push the knob to continue.
+-[img 300px-Bedlevelling_next.jpg]
+-Next.
+-The Printhead will then move to the next position.
+-[img 300px-Bedlevelling_next_adj.jpg]
+-Adjust.
+-Place the paper under the nozzle again and adjust the bed's height as before.
+-[img 300px-Bedlevelling_last.jpg]
+-Last one.
+-There are a total of 9 points measured over the bed with the last being in the back right.
+-[img 300px-Bedlevelling_home.jpg]
+-Home.
+-When the process has complete the Printhead will return to the home position, this time however it will move to X5, Y5, Z4. This can be seen on the LCD.
+-[img 300px-Bedlevelling_store.jpg]
+-Store.
+-From the Control menu select Store memory.
+-Note: The LCD will beep but nothing will change on the screen when the knob is pressed.
+-The Mesh information will be permanently stored to the Rumba's EEPROM. You will not need to level the bed again unless you make any mechanical changes to the printer.
+-At this stage you may wish to adjust the height of the "print cooling" fans (those at the left and right of the nozzles)  These fans have a duct to prevent the air from them cooling the nozzles (look closely) as if the nozzle temperature drops too low the print will fail.   Adjust these fans so that they are a few mm higher than the tip of the nozzles.  i.e. just high enough to avoid the print itself and also high enough not to hit the wiper on the bucket.
++(9.2) Mesh Levelling the Non-Hybrid Dual
++If you are building an older Non-Hybrid and Mesh Levelling | Click Here
+ (10) The Finishing Touches
+
+--- 20160906071225
++++ 20190723040155
+@@ -1 +1,4 @@
++This Wiki is not looked after anymore :( Please navigate to
++e3d-online.dozuki.com
++for up to date and improved documentation
+ Contents
+@@ -506,3 +509,3 @@
+ To get the best performance from the BigBox Dual it is important to spend a few minutes aligning and levelling the two nozzles. I will demonstrate the method I use to align the two together.
+-Find a suitably pointed object which we'll use as datum and reference point. I like to use pins.
++Find a suitably pointed object which we'll use as datum and reference point. I like to use pins, or you may find this printable tool helpful | Dual Extruder Alignment Tool
+ Note: Make sure the Printhead has been Autohomed before you begin, we'll need to use the X, Y & Z Axes to calculate the second extruder's offset.
+
