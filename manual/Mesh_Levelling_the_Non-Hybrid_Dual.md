@@ -1,6 +1,6 @@
 # Mesh Levelling the Non-Hybrid Dual
 
-Archived recovered from Printer_Commissioning 20160811132429 · source: wiki.e3d-online.com/wiki/Mesh_Levelling_the_Non-Hybrid_Dual
+Rebuilt page · source: wiki.e3d-online.com/wiki/Mesh_Levelling_the_Non-Hybrid_Dual
 
 Recovered from an older version of Printer Commissioning (20160811132429), section "(9.2) Mesh Levelling the Dual" — the separate wiki page is not in the archive.
 

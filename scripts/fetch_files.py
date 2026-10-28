@@ -31,7 +31,8 @@ for w in WANT:
     status = 'none'   # none: the archive has no usable PDF; failed: a download failed; ok
     for ts, orig in sorted(caps.get(w, []), reverse=True):  # newest capture first
         st, d = crawl.get_snapshot(f'https://web.archive.org/web/{ts}id_/{orig}', binary=True)
-        if d is None: status = 'failed'; break   # do not fall back to an older datasheet because a download failed
+        if st in (404, 410): continue             # listed in the index but gone: try the next capture
+        if d is None: status = 'failed'; break   # a real failure: do not fall back to an older datasheet because of it
         if d[:4] == b'%PDF':                      # a capture that downloaded but is not a PDF: try the next one
             open(f'{RAW}/files/{w}.pdf', 'wb').write(d)
             manifest[w] = {'snapshot': ts, 'url': orig, 'bytes': len(d)}; print(w, ts, len(d), flush=True); status = 'ok'; break

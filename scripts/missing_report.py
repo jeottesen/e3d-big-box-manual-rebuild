@@ -14,31 +14,42 @@ images = json.load(open(f'{RAW}/images.json'))
 recovered = json.load(open(f'{RAW}/recovered/index.json'))
 captures = json.load(open(f'{RAW}/versions/captures.json'))
 
-lines = ['# What the Wayback Machine does not have\n',
-         '## Pages with no archived copy of their own',
-         'Their text was rebuilt from older versions of the pages that used to contain them (or, where noted, found under a later URL).\n']
 pages = json.load(open(f'{RAW}/pages.json'))
+blocks = []   # (heading, intro, bullet list); written with blank lines around every heading and list
+
+def block(heading, intro, items):
+    blocks.append(f'## {heading}\n\n' + (intro + '\n\n' if intro else '') + ''.join(f'- {i}\n' for i in items))
+
+rebuilt = []
 for title, info in recovered.items():
     if title in ('Appendix_Older_Version_Content', 'Datasheets'): continue
     real = pages.get(title, {})
     if real.get('status') == 200:  # the build uses this real capture, whatever recover.py also extracted
-        lines.append(f'- {title}: found as a real page under a later URL form (capture {real["snapshot"]})')
-    elif info is None: lines.append(f'- {title}: not recoverable')
-    else: lines.append(f'- {title}: rebuilt from {info["parent"]} {info["version"]} ({info["lines"]} lines)')
+        rebuilt.append(f'{title}: found as a real page under a later URL form (capture {real["snapshot"]})')
+    elif info is None: rebuilt.append(f'{title}: not recoverable')
+    else: rebuilt.append(f'{title}: rebuilt from {info["parent"]} {info["version"]} ({info["lines"]} lines)')
+block('Pages with no archived copy of their own',
+      'Their text was rebuilt from older versions of the pages that used to contain them (or, where noted, found under a later URL).', rebuilt)
 
 no_caps = [t for t, rows in captures.items() if rows == []]
-lines += ['', '## Pages with no captures under either wiki URL form', *(f'- {t}' for t in no_caps)] if no_caps else []
+if no_caps: block('Pages with no captures under either wiki URL form', '', no_caps)
+skipped = [t for t, v in pages.items() if v.get('status') == 'no-valid-capture']
+if skipped: block('Pages left out because no capture is a real article', 'Stub pages such as "Coming Soon!".', skipped)
 
-miss = sorted(k for k, v in images.items() if not v.get('kind'))
-lines += ['', f'## Images with no archived copy ({len(miss)} files)',
-          'The manual shows a placeholder with the original file name for each.\n']
-for k in miss:
-    pages = sorted(set(images[k]['pages']))
-    lines.append(f'- {k} (seen in: {", ".join(pages[:3])}{"…" if len(pages) > 3 else ""})')
+def seen_in(k):
+    ps = sorted(set(images[k]['pages']))
+    return f'{k} (seen in: {", ".join(ps[:3])}{"…" if len(ps) > 3 else ""})'
+
+absent = sorted(k for k, v in images.items() if not v.get('kind') and not v.get('error') and not v.get('note'))
+dead = sorted(k for k, v in images.items() if v.get('note'))
+failed = sorted(k for k, v in images.items() if v.get('error'))
+block(f'Images with no archived copy ({len(absent)} files)', 'The manual shows a placeholder with the original file name for each.', [seen_in(k) for k in absent])
+if dead: block(f'Images the archive lists but cannot serve ({len(dead)} files)', 'Every capture in the archive index for these answers 404.', [seen_in(k) for k in dead])
+if failed: block(f'Images that failed to download ({len(failed)} files)', 'The archive has these. Re-run `scripts/fetch.py` to retry them.', [seen_in(k) for k in failed])
 
 kinds = {}
 for v in images.values():
-    kinds[(v.get('kind') or 'missing').split('-')[0]] = kinds.get((v.get('kind') or 'missing').split('-')[0], 0) + 1
-lines += ['', '## Image totals', f'- {len(images)} distinct images: ' + ', '.join(f'{n} {k}' for k, n in sorted(kinds.items()))]
-open(f'{RAW}/MISSING.md', 'w').write('\n'.join(lines) + '\n')
-print(f'wrote {RAW}/MISSING.md: {len(miss)} images missing')
+    k = (v.get('kind') or 'missing').split('-')[0]; kinds[k] = kinds.get(k, 0) + 1
+block('Image totals', '', [f'{len(images)} distinct images: ' + ', '.join(f'{n} {k}' for k, n in sorted(kinds.items()))])
+open(f'{RAW}/MISSING.md', 'w').write('# What the Wayback Machine does not have\n\n' + '\n'.join(blocks))
+print(f'wrote {RAW}/MISSING.md: {len(absent)} images missing, {len(dead)} dead, {len(failed)} failed')

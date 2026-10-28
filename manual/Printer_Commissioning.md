@@ -108,7 +108,7 @@ Watch this video to see a smooth Y-Axis \| **[https://youtu.be/PvswubV-zas](http
 
 Push the pulley.
 
-Using an Allen Key or similar push the pulley on the [Y-Axis Rear Bar Assembly](https://web.archive.org/web/20161018063904/http://wiki.e3d-online.com/wiki/BigBox_Printer_main_assemblies:_Step_By_Step_Assembly_Process "page not archived") inwards against the nylon washer.
+Using an Allen Key or similar push the pulley on the Y-Axis Rear Bar Assembly inwards against the nylon washer.
 
 Repeat this with the other pulley.
 
@@ -378,7 +378,7 @@ See step below for adjusting the fans, you may have to perform this step before 
 
 Loosen.
 
-Loosen off the screws holding the [Ooze Wiper & Dump Bucket](https://web.archive.org/web/20161018063904/http://wiki.e3d-online.com/wiki/BigBox_Printer_main_assemblies:_Step_By_Step_Assembly_Process "page not archived") to the frame.
+Loosen off the screws holding the Ooze Wiper & Dump Bucket to the frame.
 
 ![Wiper_adjust.jpg](../docs/images/Wiper_adjust.jpg)
 
@@ -902,7 +902,7 @@ Tighten.
 
 While holding the Heater block securely in a pair of pliers, tighten the nozzle.
 
-Precise instructions from the [E3D v6 assembly documentation](https://web.archive.org/web/20161018063904/http://wiki.e3d-online.com/wiki/E3D-v6_Assembly "page not archived").
+Precise instructions from the E3D v6 assembly documentation.
 
 *When the HotEnd is at temperature, tighten the nozzle whilst holding the heater block with a spanner (5/8" may fit) . This will tighten the nozzle against the HeatBreak and ensure that your HotEnd does not leak. You want to aim for 3Nm of torque on the hot nozzle - this is about as much pressure as you can apply with one finger on a small spanner. The nozzle does not need to be torqued down incredibly tightly to form a good seal, when at lower temperatures the aluminium will contract and hold the Nozzle and HeatBreak together.*
 
@@ -1176,7 +1176,7 @@ Done!
 
 ## Where next?
 
-Back to the [BigBox Main Assemblies](https://web.archive.org/web/20161018063904/http://wiki.e3d-online.com/wiki/Printer_main_assemblies:_Step_By_Step_Assembly_Process "page not archived")
+Back to the [BigBox Main Assemblies](Printer_main_assemblies_Step_By_Step_Assembly_Process.md "Printer main assemblies: Step By Step Assembly Process")
 
 Continue to the [BigBox Your First Print](Your_First_Print.md "Your First Print")
 

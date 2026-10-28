@@ -8,7 +8,7 @@ Also disconnect any other processes accessing the printer like OctoPrint or any 
 
 Do NOT cut the power while flashing this can damage your RUMBA board!
 
-# Flashing a new firmware
+## Flashing a new firmware
 
 Firmwares for the BigBox come as hex files.
 
@@ -16,23 +16,23 @@ The official source for firmware images is the release page of the official sour
 
 Flashing a new firmware may reset your stored settings and it is recommended to reset the settings too. So if you changed specific values like E steps, other steps settings, or other settings which can be stored be sure to note them down **before** you flash a new firmware.
 
-## Determining your BigBox version
+### Determining your BigBox version
 
 To determine which version of the BigBox go to [BigBox Version Overview](BigBox_Version_Overview.md "BigBox Version Overview").
 
-## Connecting to the BigBox
+### Connecting to the BigBox
 
 You don't have to change anything on the RUMBA board in order to flash a new firmware!
 
 The box should be switched on!
 
-### Without OctoPrint/OctoPi upgrade
+#### Without OctoPrint/OctoPi upgrade
 
 To connect to your BigBox use the USB port on the backside of the box. For this you need an USB cable with a Type B plug on one end.
 
 ![USB_Connection.JPG](../docs/images/USB_Connection.JPG)
 
-### With OctoPrint/OctoPi upgrade
+#### With OctoPrint/OctoPi upgrade
 
 If you have the upgrade there is no USB port on the backside of your box but only a network port which cannot be used to flash a new firmware.
 
@@ -42,9 +42,9 @@ To connect to your RUMBA temporarily for flashing you have to unplug the RPi fro
 
 ![Blue_usb_mini.jpg](../docs/images/Blue_usb_mini.jpg)
 
-## Flashing on Windows
+### Flashing on Windows
 
-### Driver Installation
+#### Driver Installation
 
 The Windows driver for the RUMBA board can be downloaded from the RepRap wiki:
 
@@ -64,7 +64,7 @@ Windows RUMBA Drivers installation 1
 
 Windows RUMBA Drivers installation 2
 
-### Flashing a new firmware
+#### Flashing a new firmware
 
 *\[image not archived: Windows_Device_Manager_connected_RUMBA.png\]*
 
@@ -102,7 +102,7 @@ After process is complete the RUMBA automatically resets and starts up.
 
 To complete the process go to [\#After flashing a new firmware](#after-flashing-a-new-firmware) and follow the steps there!
 
-## Flashing on OS X (Mac)
+### Flashing on OS X (Mac)
 
 Get [HexUploader](http://paulkaplan.me/HexUploader/) and start it.
 
@@ -134,7 +134,7 @@ After process is complete the RUMBA automatically resets and starts up.
 
 To complete the process go to [\#After flashing a new firmware](#after-flashing-a-new-firmware) and follow the steps there!
 
-## Flashing on Linux
+### Flashing on Linux
 
 To flash from Linux you can use the console and "avrdude". avrdude is available in most of the big distributions' package repositories like Ubuntu, Debian, RedHat.
 
@@ -150,13 +150,13 @@ After process is complete the RUMBA automatically resets and starts up.
 
 To complete the process go to [\#After flashing a new firmware](#after-flashing-a-new-firmware) and follow the steps there!
 
-## Flashing on an RaspberryPi/OctoPi
+### Flashing on an RaspberryPi/OctoPi
 
 Flashing on an RPi depends on the used distribution, if you use OctoPi then this is Debian based and you can refer to [\#Flashing on Linux](#flashing-on-linux).
 
-## Flashing with "Firmware Updater" (OctoPrint plugin)
+### Flashing with "Firmware Updater" (OctoPrint plugin)
 
-### Installing and setting up "Firmware Updater"
+#### Installing and setting up "Firmware Updater"
 
 Refer to [\#Flashing on Linux](#flashing-on-linux) to install "avrdude" on your OctoPi. This is a prerequisite to use this Octoprint plugin.
 
@@ -192,7 +192,7 @@ It is recommended to tell the plugin where "avrdude" is installed. On a normal O
 
 Open the configuration for the plugin by clicking the wrench in the upper right corner and enter that path in the input field.
 
-### Flashing a new firmware
+#### Flashing a new firmware
 
 Do NOT use the "Check for updates" or check the option "Check for firmware updates after connecting to printer" because this won't work for the BigBox or Marlin at the time of writing!
 
@@ -218,11 +218,11 @@ After process is complete the RUMBA automatically resets and starts up.
 
 To complete the process go to [\#After flashing a new firmware](#after-flashing-a-new-firmware) and follow the steps there!
 
-## Flashing with "BigBox Firmware" (Octoprint plugin)
+### Flashing with "BigBox Firmware" (Octoprint plugin)
 
 Thanks to a member of the community (tohara) there is another Octoprint plugin available. While created especially for the BigBox this plugin should also work with other electronics using Marlin firmware.
 
-### Installing and setting up "BigBox Firmware"
+#### Installing and setting up "BigBox Firmware"
 
 Unfortunately the plugin is not listed in the OctoPrint plugin repository but this is not a real problem.
 
@@ -248,7 +248,7 @@ OctoPrint BigBox Firmware
 
 After a successful installation and a restart of OctoPrint you can select the plugin from the settings menu.
 
-### Flashing a new firmware
+#### Flashing a new firmware
 
 This plugin is Git and profile based. That means you created profiles with settings for the firmware based on a Git repository with a Marlin firmware source in it.
 
@@ -260,9 +260,9 @@ If you have a profile ready you simply click the "Flash firmware button" of the 
 
 At the time of writing the plugin works with the original Marlin firmware repository on Github, [tohara](https://github.com/tohara) has also a Marlin repository up with different Marlin releases and so does [Alex9779](https://github.com/Alex9779).
 
-# Building from source and flashing
+## Building from source and flashing
 
-## Arduino IDE Setup
+### Arduino IDE Setup
 
 To connect the RUMBA board from your Windows PC you have to follow the directions in [\#Driver Installation](#driver-installation) to install the drivers for the RUMBA board to be recognized by Windows.
 
@@ -274,7 +274,7 @@ At the time of writing the current version is 1.6.9. Marlin requires at least 1.
 
 Arduino IDE is now installed, however, before we can build a new firmware there are some extra libraries required. These come bundled with the source code so will be setup in the next step.
 
-## Install additional libaries
+### Install additional libaries
 
 To be able to compile Marlin for the RUMBA board and the BigBox you have to install two additional libraries.
 
@@ -291,7 +291,7 @@ Add the following libraries to your installation:
 - LiquidCrystal_I2C
 - U8glib
 
-## Get the source code
+### Get the source code
 
 The official source code repository for the BigBox is located on Github [BigBox3D Github repository](https://github.com/BigBox3D/).
 
@@ -301,7 +301,7 @@ There is also an unofficial repository with a lot of branches for most of the av
 
 Either clone one of the repositories locally, fork it and clone your fork locally or download the source as a ZIP file and unpack.
 
-## Setting up the Arduino project
+### Setting up the Arduino project
 
 The source code for the firmware is stored in the Marlin folder. Navigate to the Marlin folder and double-click Marlin.ino. This should open Arduino IDE.
 
@@ -311,7 +311,7 @@ Select the following options from the menu to make sure the correct board and pr
 
 **Tools \> Processor \> "ATmega2560 (Mega 2560)"**
 
-# After flashing a new firmware
+## After flashing a new firmware
 
 It is recommended to reset the EEPROM of the RUMBA board after you flashed a new version. There have been reports of strange behaviours and a reset solved these issues.
 
@@ -321,12 +321,12 @@ If you have special values set, note them down and set them again after resettin
 
 To reset the EEPROM use the LCD.
 
-1.  Push the knob to get to leave the info screen and open the menus.
-2.  Scroll to the "Control" menu entry and push the knob.
-3.  Scroll to the "Load failsafe defaults" menu entry and push the knob.
-4.  Scroll to the "Save settings" menu entry and push the knob.
+1. Push the knob to get to leave the info screen and open the menus.
+2. Scroll to the "Control" menu entry and push the knob.
+3. Scroll to the "Load failsafe defaults" menu entry and push the knob.
+4. Scroll to the "Save settings" menu entry and push the knob.
 
-## Troubleshooting
+### Troubleshooting
 
 If your RUMBA board does not appear in the Windows device manager for example even you have installed the drivers or if uploading a new firmware fails with strange errors it may be due to a damaged USB2Serial firmware.
 

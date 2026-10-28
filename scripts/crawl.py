@@ -33,6 +33,7 @@ def get(url, binary=False, tries=5, final_codes=(404, 403, 410)):
     """Return (status, bytes|str|None). The final_codes statuses are answers; everything else is retried."""
     global fails
     stats['network'] += 1
+    codes = []   # what each failed attempt was: an HTTP status, or None for a network error
     for i in range(tries):
         time.sleep(DELAY)
         wait = 20 * 2 ** i
@@ -43,11 +44,15 @@ def get(url, binary=False, tries=5, final_codes=(404, 403, 410)):
                 return r.status, (d if binary else d.decode('utf-8', 'replace'))
         except urllib.error.HTTPError as e:
             if e.code in final_codes: fails = 0; return e.code, None
+            codes.append(e.code)
             wait = max(wait, int(e.headers.get('Retry-After', 0) or 0))
             print(f'  HTTP {e.code}; retry {i+1}/{tries} in {wait}s', flush=True)
         except Exception as e:
+            codes.append(None)
             print(f'  {type(e).__name__}; retry {i+1}/{tries} in {wait}s', flush=True)
         time.sleep(wait)
+    if not final_codes and len(codes) == tries and set(codes) <= {404, 410}:
+        fails = 0; return codes[-1], None   # gone every time: a dead capture the index still lists, not a failed download
     fails += 1
     if fails >= MAX_CONSEC_FAIL:
         print(f'ABORT: {fails} consecutive failed fetches; wait for the block to clear and re-run.', flush=True)
@@ -57,7 +62,9 @@ def get(url, binary=False, tries=5, final_codes=(404, 403, 410)):
 def get_snapshot(url, binary=False):
     """Fetch a capture that the CDX index says exists. A 403/404/410 for such a URL is not an answer, it is a
     refused or flaky request, so it is retried like any other error. Returns (200, data) or, after every
-    attempt failed, (0, None); callers must treat that as a failed download, not as 'not archived'."""
+    attempt failed, (0, None); callers must treat that as a failed download, not as 'not archived'.
+    A capture that answers 404 or 410 on every attempt is dead (the index lists it but the archive cannot serve it):
+    that returns (404, None) or (410, None), which callers treat as 'try another capture', not as a failure."""
     return get(url, binary, tries=3, final_codes=())
 
 def snap(url, ts, flavor):  # exact-timestamp raw capture; id_ = original bytes, im_ = image
@@ -114,7 +121,16 @@ def images_used(files):
 def width(p):
     m = re.search(r'/(\d+)px-[^/]+$', p); return int(m.group(1)) if m else 0
 
+def candidates(op, caps):
+    """Captures to try for an image, best first: the original, then thumbnails widest first; nearest TARGET first within each."""
+    near = lambda cs: sorted(cs, key=lambda c: abs(int(c[0]) - int(TARGET)))
+    out = [('original', c) for c in near(caps.get(op, []))]
+    for w, p in sorted(((width(p), p) for p in caps if p.startswith('/images/thumb/') and orig_path(p) == op), reverse=True):
+        out += [(f'thumb-{w}px', c) for c in near(caps[p])]
+    return out
+
 def images(inv, files):
+    """Fetch the images used by the given page versions. Returns the images whose download failed (not dead captures)."""
     seed_man = json.load(open(f'{SEED}/images.json')) if SEED and os.path.exists(f'{SEED}/images.json') else {}
     caps = {}
     for ts, orig, *_ in inv['images']:
@@ -126,32 +142,31 @@ def images(inv, files):
         fname = op.rsplit('/', 1)[1]
         if man.get(fname, {}).get('kind') == 'original' and os.path.exists(f'{RAW}/images/{fname}'):
             continue
-        choice, kind = None, None
-        if op in caps:
-            choice, kind = nearest(caps[op]), 'original'
-        else:  # widest thumbnail archived for this file
-            th = [(width(p), p) for p in caps if p.startswith('/images/thumb/') and orig_path(p) == op]
-            if th:
-                w, p = max(th); choice, kind = nearest(caps[p]), f'thumb-{w}px'
         old = man.get(fname, {})
+        dead = [list(d) for d in old.get('dead', [])]   # captures the index lists but the archive answered 404/410 for
+        cands = [(k, c) for k, c in candidates(op, caps) if list(c) not in dead]
+        kind, choice = cands[0] if cands else (None, None)
         if choice and old.get('kind') == kind and old.get('snapshot') == choice[0] and os.path.exists(f'{RAW}/images/{fname}'):
             continue  # already have exactly this capture
-        if not choice and fname in man and not man[fname].get('kind'):
+        if not choice and fname in man and not man[fname].get('error'):
             continue  # already known to be absent from the archive
         sd = seed_man.get(fname)
         if choice and sd and sd.get('kind') == kind and sd.get('snapshot') == choice[0] and from_seed(f'images/{fname}'):
             man[fname] = {**sd, 'pages': sorted(users)}; json.dump(man, open(mpath, 'w'), indent=1); continue
         rec = {'kind': None, 'pages': sorted(users), 'original_path': op}
-        if choice:
-            ts, orig = choice
+        for k, (ts, orig) in cands:
             st, d = get_snapshot(snap(orig, ts, 'im_'), binary=True)
             if st == 200 and d and not d.startswith(b'<'):
                 open(f'{RAW}/images/{fname}', 'wb').write(d)
-                rec.update(kind=kind, snapshot=ts, url=orig, bytes=len(d))
-            else:
-                rec['error'] = f'download failed (status {st})' if not d else 'the archive returned a page, not an image'
-                failed.append(fname)
+                rec.update(kind=k, snapshot=ts, url=orig, bytes=len(d)); break
+            if st in (404, 410):
+                dead.append([ts, orig]); continue   # listed in the index but gone: try the next capture
+            rec['error'] = f'download failed (status {st})' if not d else 'the archive returned a page, not an image'
+            failed.append(fname); break
+        if dead: rec['dead'] = dead
+        if not rec['kind'] and not rec.get('error') and cands: rec['note'] = 'every capture the index lists for this image is dead (404)'
         man[fname] = rec
-        print(fname, rec['kind'], rec.get('bytes', 0), '  <-- DOWNLOAD FAILED: ' + rec['error'] if rec.get('error') else '', flush=True)
+        extra = '  <-- DOWNLOAD FAILED: ' + rec['error'] if rec.get('error') else (f'  (skipped {len(dead)} dead capture(s))' if dead else '')
+        print(fname, rec['kind'], rec.get('bytes', 0), extra, flush=True)
         json.dump(man, open(mpath, 'w'), indent=1)
     return failed

@@ -13,8 +13,8 @@ Optionally set `BIGBOX_SEED` to a read-only folder laid out like a data folder. 
 **The pipeline only fetches what the manual needs**: the newest good capture of each page it links to, a few older versions of specific pages (see step 1), and the images those use. It does not download the wiki's edit history. Steps 1 and 2 use the network; the rest are offline.
 
 | # | Command | What it does |
-|---|---|---|
-| 1 | `fetch.py` | Starts at `BigBox_Build_Manual` and follows links. For each page it takes the **newest good capture** (stepping back if that capture is an error page). For pages the archive never saved, it looks back through older versions of the parent page, newest first, and stops at the first version that still has the section. For the removed sections kept in the appendix, which date from the earliest captures, it bisects the page's versions instead (falling back to the newest-first scan if the section is not in the oldest capture). It then fetches only the images those page versions use: the full-size original if archived, otherwise the widest archived thumbnail. |
+| --- | --- | --- |
+| 1 | `fetch.py` | Starts at `BigBox_Build_Manual` and follows links to wiki pages (not `File:`, `Special:` and the other wiki namespaces, and not pages about other E3D products; a colon alone does not make a title a namespace). For each page it takes the **newest good capture** (stepping back if that capture is an error page). For pages the archive never saved, it looks back through older versions of the parent page, newest first, and stops at the first version that still has the section. For the removed sections kept in the appendix, which date from the earliest captures, it bisects the page's versions instead (falling back to the newest-first scan if the section is not in the oldest capture). It then fetches only the images those page versions use: the full-size original if archived, otherwise the widest archived thumbnail. |
 | 2 | `fetch_files.py` | Downloads the PDF datasheets that apply to the BigBox (V6 hotend, NEMA17 motors, DC fans). |
 | 3 | `recover.py` | Rebuilds the pages the archive never saved by cutting their section out of the older parent-page version found in step 1. |
 | 4 | `appendix.py` | Builds the "Older version content" appendix and the Datasheets page. |
@@ -22,6 +22,7 @@ Optionally set `BIGBOX_SEED` to a read-only folder laid out like a data folder. 
 | 6 | `missing_report.py` | Writes `MISSING.md`: what the archive does not have. |
 | 7 | `markdown.py` | Converts the HTML in `docs/` to GitHub Markdown in `manual/` (needs [pandoc](https://pandoc.org): `mise use -g pandoc`). Images and PDFs are not copied; the Markdown links to `docs/images` and `docs/files`. Heading links are rewritten to GitHub's anchors. Override the folders with `BIGBOX_SITE` and `BIGBOX_MD`. |
 | 8 | `check_markdown.py` | Checks that every link and image in `manual/` resolves and every `#section` anchor exists. |
+| 9 | `markdownlint-cli2` | Lints all Markdown in the repository, including the generated `manual/`. Install with `mise use -g npm:markdownlint-cli2`; the rules that do not fit this content are switched off, with reasons, in `.markdownlint-cli2.jsonc`. |
 
 `targets.py` holds what cannot be derived from the archive: which missing pages to rebuild and from where, which removed sections go in the appendix, and which PDFs apply. Edit it to change those choices.
 
@@ -42,6 +43,8 @@ How the wiki's pages changed over time was analysed once, from about 250 archive
 - **The wiki's closure notice is removed** from every page (it pointed to a site that no longer exists). The index page mentions it once.
 - **Images** that exist only as thumbnails are used as thumbnails. Images with no capture show a placeholder with the original file name.
 - **Pages the archive lacks** (Dual X-Carriage, Non-Titan Idler Arms, the IR sensor bracket, Mesh Levelling, Z-Offset calibration) were inline sections of bigger pages until Sept 2016, so they are cut from the last such version. Each says so on the page.
+- **Links to pages the archive does not have are plain text.** They are not turned into links to the archive, since the archive has nothing to show.
+- **File names are safe on every OS.** Titles such as `Printer_main_assemblies:_Step_By_Step_Assembly_Process` become `Printer_main_assemblies_Step_By_Step_Assembly_Process`, because a colon in a file name breaks a Windows checkout.
 - **Stub pages are skipped.** `BigBox_Troubleshooting` never had content beyond "Coming Soon!", so it has no valid capture and is left out.
 
 ## Pitfalls found while building this
@@ -56,16 +59,15 @@ How the wiki's pages changed over time was analysed once, from about 250 archive
 - **Seeded:** from an empty data folder seeded with a previous download, the first six steps ran without errors and without any network request, touching 47 page versions where the full archive holds about 250.
 - **Partly live:** the same run with a deliberately damaged seed (two pages' captures and files, three images and one PDF removed) fetched those live (7 requests) and produced an identical site, with byte-identical downloads.
 - **Fully live:** a run with no seed at all downloaded everything (490 requests, about 40 minutes, a handful of transient connection errors that recovered) and matched the committed `docs/` except for one thumbnail, `Z_difference.jpg`. The archive refused that single download once, the pipeline recorded the image as "not archived", and the same download worked a minute later. That is what the retry and failure reporting above fix.
-- **Failure handling:** with a stubbed network, a refused download that succeeds on retry is fetched; one that keeps failing is reported as a failed download (not as missing) and a re-run fetches it; and a failed page download stops the run instead of using an older capture.
+- **Failure handling:** with a stubbed network, a refused download that succeeds on retry is fetched; a capture that is 404 every time is skipped, remembered and replaced by the next capture; one that keeps failing with anything else is reported as a failed download (not as missing); and a failed page download stops the run instead of using an older capture. The live run also found a real dead capture: the archive lists a 600 px capture of `RJ45_panel_mount_cable.jpg` that always answers 404, while its 450 px capture downloads fine.
 - **Markdown:** `check_markdown.py` reports every link and image in `manual/` resolving.
 
-## Failed downloads
+## Failed downloads and dead captures
 
-A capture that the archive's index lists should always be downloadable, so a refused or failed request (including a 403, 404 or 410) is treated as transient and retried, then reported if it keeps failing. It is never mistaken for "not archived".
+The archive's index sometimes lists a capture it cannot serve, and a working capture sometimes fails once. The two are handled differently:
 
-- An **image** that still fails is marked with an error in `images.json` and listed when `fetch.py` ends; `fetch.py` then exits non-zero. Re-running retries only those images.
-- A **page version** that fails stops the run with a clear message. It never falls back to an older capture of the page.
-- A **datasheet** that fails is reported the same way by `fetch_files.py`, and does not fall back to an older PDF.
-- After 4 failed downloads in a row the run stops, so a blocked connection does not hammer the archive.
+- A capture that answers **404 or 410 on every attempt** is *dead*: the archive's own data is broken. It is noted, skipped, and remembered so later runs do not retry it. For an image the next capture is tried instead (the original, then thumbnails from widest to narrowest); for a page version, an older capture; for a datasheet, an older PDF. If every capture of an image is dead the image shows as not archived.
+- Anything else that goes wrong (a 403, a server error, a network error, or an HTML page instead of an image) is a **failure**, even after retries. It is never mistaken for "not archived" and never falls through to a lower-quality or older capture. An image that fails is marked with an error in `images.json` and listed when `fetch.py` ends, and `fetch.py` exits non-zero; a page version that fails stops the run with a message; `fetch_files.py` reports failed datasheets the same way. Re-running retries only what failed.
+- Every download of a listed capture is retried before it counts as either, and after 4 failed downloads in a row the run stops, so a blocked connection does not hammer the archive.
 
-Lookups that are expected to sometimes find nothing (such as asking the index about a page) still treat 404 as a plain answer.
+Lookups that are expected to sometimes find nothing (such as asking the index about a page) treat 404 as a plain answer.

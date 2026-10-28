@@ -1,6 +1,6 @@
 # Dual X-Carriage
 
-Archived recovered from BigBox_Parts_Preparation 20160807071206 · source: wiki.e3d-online.com/wiki/Dual_X-Carriage
+Rebuilt page · source: wiki.e3d-online.com/wiki/Dual_X-Carriage
 
 Recovered from an older version of BigBox Parts Preparation (20160807071206), section "(8) Dual X-Carriage" — the separate wiki page is not in the archive.
 

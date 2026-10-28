@@ -3,6 +3,7 @@
 Model-written from the diffs only: not checked against the pages, and no network was used. Dates are archive capture times.
 
 ## Overall
+
 - All 13 pages are real wiki text; no vandalism or spam in any diff.
 - 12 of 13 newest versions end with the same closure notice ("This Wiki is not looked after anymore... e3d-online.dozuki.com"), added in captures from 2019 to 2021.
 - Main damage: in Aug–Sep 2016, non-Hybrid build steps were replaced by "Click Here" links in Parts_Preparation, Printer_Sub-assemblies and Printer_Commissioning.
@@ -11,8 +12,9 @@ Model-written from the diffs only: not checked against the pages, and no network
 - `Dual_Direct-Drive_Extruders/CHANGES.diff` is empty on purpose: two captures of the same revision (6617).
 
 ## Per page: newest version trustworthy?
+
 | Page | Verdict | Note |
-|---|---|---|
+| --- | --- | --- |
 | BigBox_Build_Manual | yes | index only; sub-lists dropped (last present 20160219012812) |
 | BigBox_Firmware_Flashing_Guide | yes | plugin section depends on third-party repos |
 | BigBox_OctoPrint_Upgrade | yes, after fixing `[[]]` link | Printer Appearance steps removed (last 20160224080850) |
@@ -27,6 +29,7 @@ Model-written from the diffs only: not checked against the pages, and no network
 | Your_First_Print | yes, check steps/mm | S3D/Slic3r section dropped (last 20151230221140) |
 
 ## Rescue candidates (last version containing the content)
+
 - Sub-assemblies direct-drive steps: 20160703140933
 - Parts_Preparation non-Hybrid steps: 20160807071206
 - Printer_Commissioning Dual steps: 20160627160851
@@ -34,6 +37,7 @@ Model-written from the diffs only: not checked against the pages, and no network
 - Your_First_Print S3D/Slic3r section: 20151230221140
 
 ## Corrections (from a follow-up check of the claims above against the saved pages)
+
 - The closure notice ("This Wiki is not looked after anymore", pointing to e3d-online.dozuki.com) is in the latest version of **all 13** pages, not 12, and it sits at the top of the article.
 - **OctoPrint "Printer Appearance" was never removed.** It is still in the latest OctoPrint Upgrade page. The "removed 2016-02-24" claim and its rescue-candidate entry are wrong.
 - Software "Dual Experimental.fff" notes were last present in **20160601234712**, not 20160120094151 (the text is identical in both).
@@ -42,6 +46,7 @@ Model-written from the diffs only: not checked against the pages, and no network
 - Checked against the pages: the Single and Dual Direct-Drive Extruder pages, Pro & Lite X-Carriage, Print Cooling Fan and Dual Extruders contain every line of the old inline text. Only their images are missing.
 
 ## Follow-up checks (second round)
+
 - **Images in older versions:** 19 images from older Sub-assemblies, Commissioning and Parts Preparation versions were not shown in the manual. 17 were superseded draft content (Dec 2015 – Jan 2016) with no archived copy. The other 2 (`X_m3_f.jpg`, `EXTRUDER_HYBRID_TITAN_DIRECT.jpg`) were a build bug, now fixed (below).
 - **Build bug fixed:** the table-of-contents remover in `tools/build.py` deleted content after the contents list on some pages. It now removes only the balanced TOC `<div>`. After the fix, every text line of every latest version (apart from TOC entries) is in the built page, and all 466 images the latest versions reference are shown (as a picture or a placeholder).
 - **Bill of Materials:** complete as archived. 43 items in the latest version against 42 in the earliest; the differences are a fan size (40x40x15 to 40x40x20) and the rod lines. Bearings, Wiring and Printed Parts are empty headings in every saved version, so that is an archive gap.

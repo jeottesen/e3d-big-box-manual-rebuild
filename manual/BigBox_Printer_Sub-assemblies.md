@@ -418,7 +418,7 @@ Fix the Rumba to the posts.
 
 ### (12.5) PT100 Amplifier(s)
 
-##### (12.5.1) Single Extruder
+#### (12.5.1) Single Extruder
 
 ![Single_pt100-amp.jpg](../docs/images/Single_pt100-amp.jpg)
 
@@ -914,6 +914,6 @@ You can now mount the LCD to the Frame.
 
 Back to the [BigBox Parts Preparation](BigBox_Parts_Preparation.md "BigBox Parts Preparation")
 
-Continue to the [BigBox Main Assembly Process](https://web.archive.org/web/20161018063904/http://wiki.e3d-online.com/wiki/Printer_main_assemblies:_Step_By_Step_Assembly_Process "page not archived")
+Continue to the [BigBox Main Assembly Process](Printer_main_assemblies_Step_By_Step_Assembly_Process.md "Printer main assemblies: Step By Step Assembly Process")
 
 Home to the [BigBox Build Manual Main Index](BigBox_Build_Manual.md "BigBox Build Manual")

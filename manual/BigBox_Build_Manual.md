@@ -4,13 +4,13 @@ Archived 20200803120509 · source: wiki.e3d-online.com/wiki/BigBox_Build_Manual
 
 ![Bigbox_logo.png](../docs/images/Bigbox_logo.png)
 
-### Introduction
+## Introduction
 
 Please read the [BigBox Pre-Build](BigBox_Pre-Build.md "BigBox Pre-Build") section before beginning to work on your BigBox. It contains important information about how to assemble your printer, a list of all the fixings with bag numbers and tools you will need.
 
 If you have a Factory Assembled BigBox you can skip straight to [Your First Print](Your_First_Print.md "Your First Print")!
 
-### [BigBox Versions Overview](BigBox_Version_Overview.md "BigBox Version Overview")
+## [BigBox Versions Overview](BigBox_Version_Overview.md "BigBox Version Overview")
 
 E3D supported versions
 
@@ -36,11 +36,11 @@ Remarks
 
 Kickstarter upgrade to Hybrid/V1.1
 
-### Design Files - Plans & Parts List
+## Design Files - Plans & Parts List
 
 The BigBox Design Files are available from Thingiverse at \| [https://www.thingiverse.com/thing:1521722](https://www.thingiverse.com/thing:1521722)
 
-### [BigBox Pre-Build](BigBox_Pre-Build.md "BigBox Pre-Build")
+## [BigBox Pre-Build](BigBox_Pre-Build.md "BigBox Pre-Build")
 
 **What’s In the Box.**
 
@@ -68,7 +68,7 @@ Nut-Traps.
 
 Hex-Half Nuts in Engraved Frame Holes.
 
-### [BigBox Parts Preparation](BigBox_Parts_Preparation.md "BigBox Parts Preparation")
+## [BigBox Parts Preparation](BigBox_Parts_Preparation.md "BigBox Parts Preparation")
 
 Y-Axis Rear Brackets.
 
@@ -104,7 +104,7 @@ Z-Axis Drag Chain Anchors.
 
 IEC Socket.
 
-### [BigBox Printer Sub-assemblies](BigBox_Printer_Sub-assemblies.md "BigBox Printer Sub-assemblies")
+## [BigBox Printer Sub-assemblies](BigBox_Printer_Sub-assemblies.md "BigBox Printer Sub-assemblies")
 
 Single Extruder.
 
@@ -124,7 +124,7 @@ Base Assembly.
 
 Frame Assembly.
 
-### [Printer main assemblies: Step By Step Assembly Process](https://web.archive.org/web/20161018063904/http://wiki.e3d-online.com/wiki/Printer_main_assemblies:_Step_By_Step_Assembly_Process "page not archived")
+## [Printer main assemblies: Step By Step Assembly Process](Printer_main_assemblies_Step_By_Step_Assembly_Process.md "Printer main assemblies: Step By Step Assembly Process")
 
 Y-Axis Rear-Bar Assembly
 
@@ -184,7 +184,7 @@ Ooze Wiper & Dump Bucket
 
 Spool Carrier
 
-### [Printer Commissioning](Printer_Commissioning.md "Printer Commissioning")
+## [Printer Commissioning](Printer_Commissioning.md "Printer Commissioning")
 
 Belts, Pulleys & Rods
 
@@ -206,7 +206,7 @@ Z-Axis Calibration
 
 Autolevelling
 
-### [Your First Print](Your_First_Print.md "Your First Print")
+## [Your First Print](Your_First_Print.md "Your First Print")
 
 Loading Filament
 
@@ -214,7 +214,7 @@ Calibrating The Filament
 
 Printing
 
-### [BigBox OctoPrint Upgrade](BigBox_OctoPrint_Upgrade.md "BigBox OctoPrint Upgrade")
+## [BigBox OctoPrint Upgrade](BigBox_OctoPrint_Upgrade.md "BigBox OctoPrint Upgrade")
 
 Prepping the SD Card
 
@@ -228,11 +228,11 @@ Plugins
 
 Printing
 
-### BigBox Support
+## BigBox Support
 
 The best place to go for further help and advice is the [BigBox forum](http://forum.bigbox-3d.com).
 
-### [BigBox Software](BigBox_Software.md "BigBox Software")
+## [BigBox Software](BigBox_Software.md "BigBox Software")
 
 The BigBox software tool-chain.
 
@@ -246,7 +246,7 @@ Slic3r.
 
 Repetier.
 
-### BigBox Community Generated Help & Guides
+## BigBox Community Generated Help & Guides
 
 [**BigBox Forum \| Guides, Mods, and Upgrades**](http://forum.e3d-online.com/index.php?forums/guides-mods-and-upgrades.26/) *(A huge collection of help, tips and tricks).*
 
@@ -262,7 +262,7 @@ Repetier.
 
 [Using platformio to flash firmware from RPi](https://forum.e3d-online.com/index.php?threads/using-platformio-to-flash-firmware-from-rpi.720/)
 
-### BigBox printer projects
+## BigBox printer projects
 
 **[Picture](http://www.instructables.com/id/Picture-The-3D-Printed-Raspberry-Pi-Camera/)** - A digital camera powered by the Raspberry Pi and designed to be 3D printed with a BigBox!
 

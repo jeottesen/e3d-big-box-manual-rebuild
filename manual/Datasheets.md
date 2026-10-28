@@ -1,7 +1,5 @@
 # Datasheets
 
-Archived recovered from wiki-hosted files various · source: wiki.e3d-online.com/wiki/Datasheets
-
 PDF datasheets and drawings that were hosted on the wiki and apply to BigBox parts (V6 hotend, stepper motors, fans). Volcano and heater-mat datasheets were left out as they are not BigBox parts.
 
 - [V6-175-ASSM.pdf](../docs/files/V6-175-ASSM.pdf) — E3D V6 1.75 mm hotend, assembly drawing (archived 20170110, 107 KB; description inferred from the file name)

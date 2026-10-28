@@ -1,6 +1,6 @@
 # Non-Titan Idler Arms
 
-Archived recovered from BigBox_Parts_Preparation 20160807071206 · source: wiki.e3d-online.com/wiki/Non-Titan_Idler_Arms
+Rebuilt page · source: wiki.e3d-online.com/wiki/Non-Titan_Idler_Arms
 
 Recovered from an older version of BigBox Parts Preparation (20160807071206), section "(4) Single & Dual Extruder Filament Idlers" — the separate wiki page is not in the archive.
 
