@@ -1,0 +1,6 @@
+# archive data (saved page versions, CDX inventories, raw HTML) lives outside git
+/raw/
+/work/
+__pycache__/
+*.pyc
+.claude/

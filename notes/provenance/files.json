@@ -1,0 +1,52 @@
+{
+ "V6-175-ASSM": {
+  "snapshot": "20170110155716",
+  "url": "http://wiki.e3d-online.com:80/images/1/15/V6-175-ASSM.pdf",
+  "bytes": 109930
+ },
+ "V6-175-BREAK": {
+  "snapshot": "20201112011059",
+  "url": "https://wiki.e3d-online.com/images/0/09/V6-175-BREAK.pdf",
+  "bytes": 132230
+ },
+ "V6-175-SINK": {
+  "snapshot": "20220405185818",
+  "url": "https://wiki.e3d-online.com/images/b/b5/V6-175-SINK.pdf",
+  "bytes": 136807
+ },
+ "V6-300-BREAK": {
+  "snapshot": "20201111192958",
+  "url": "https://wiki.e3d-online.com/images/f/f3/V6-300-BREAK.pdf",
+  "bytes": 132423
+ },
+ "V6-300-SINK-D": {
+  "snapshot": "20211122075618",
+  "url": "https://wiki.e3d-online.com/images/9/9b/V6-300-SINK-D.pdf",
+  "bytes": 136259
+ },
+ "V6-BLOCK-CARTRIDGE": {
+  "snapshot": "20191015012605",
+  "url": "https://wiki.e3d-online.com/images/a/ab/V6-BLOCK-CARTRIDGE.pdf",
+  "bytes": 152140
+ },
+ "V6-NOZZLE-ALL": {
+  "snapshot": "20220810083424",
+  "url": "https://wiki.e3d-online.com/images/3/3a/V6-NOZZLE-ALL.pdf",
+  "bytes": 146017
+ },
+ "E-MOTOR-NEMA17-ALL_PUBLIC": {
+  "snapshot": "20240222164010",
+  "url": "https://wiki.e3d-online.com/images/2/2e/E-MOTOR-NEMA17-ALL_PUBLIC.pdf",
+  "bytes": 150675
+ },
+ "Motor-Datasheet-All": {
+  "snapshot": "20230416050250",
+  "url": "https://wiki.e3d-online.com/images/c/c4/Motor-Datasheet-All.pdf",
+  "bytes": 4629122
+ },
+ "DC_Fans": {
+  "snapshot": "20161019144704",
+  "url": "http://wiki.e3d-online.com:80/images/b/b0/DC_Fans.pdf",
+  "bytes": 94851
+ }
+}
