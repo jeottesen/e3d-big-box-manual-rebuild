@@ -17,10 +17,8 @@ RAW = os.environ.get('BIGBOX_RAW', f'{ROOT}/raw')   # archive data lives outside
 
 def saved_versions(page):
     """(timestamp, path) of every saved version of a page, newest first."""
-    out = []
-    for d in ('versions', 'versions_removed/unchanged'):
-        p = f'{RAW}/{d}/{page}'
-        if os.path.isdir(p): out += [(f[:-5], f'{p}/{f}') for f in os.listdir(p) if f.endswith('.html')]
+    p = f'{RAW}/versions/{page}'
+    out = [(f[:-5], f'{p}/{f}') for f in os.listdir(p) if f.endswith('.html')] if os.path.isdir(p) else []
     return sorted(out, reverse=True)
 
 def newest_with_section(page, rx, must):

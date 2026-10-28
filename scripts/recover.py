@@ -7,7 +7,7 @@ pages in raw/versions for a heading that matches, take that section (up to the n
 or higher level), and keep the fullest one. Output: raw/recovered/<Title>.html + raw/recovered/index.json.
 Run:  python3 -I scripts/recover.py
 """
-import html, json, os, re
+import html, json, os, re, urllib.parse
 import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))   # sibling modules (python -I does not add the script folder)
 
@@ -17,6 +17,22 @@ VER, OUT = f'{RAW}/versions', f'{RAW}/recovered'
 os.makedirs(OUT, exist_ok=True)
 
 from targets import TARGETS   # missing page -> (parent pages to search, heading regex)
+
+# an archive or MediaWiki error page rather than an article
+ERR = re.compile(r'Temporarily Offline|Internal Server Error|Service Unavailable|Gateway Time-?out|Bad Gateway|'
+                 r'database error|MediaWiki internal error|Wayback Machine doesn.t have|Error 50\d|'
+                 r'There is currently no text in this page|Hrm\. ', re.I)
+
+def body_text(h):
+    """The article's text as a list of non-empty lines (image file names kept as '[img NAME]')."""
+    m = re.search(r'id="mw-content-text"[^>]*>(.*?)(?:<div class="printfooter"|<!-- NewPP)', h, re.S) or re.search(r'id="mw-content-text"[^>]*>(.*)', h, re.S)
+    b = m.group(1) if m else h
+    b = re.sub(r'<(script|style).*?</\1>|<!--.*?-->', '', b, flags=re.S)
+    b = re.sub(r'<img[^>]*?(?:alt="([^"]*)")?[^>]*?src="[^"]*?/([^/"]+)"[^>]*>',
+               lambda m: f'\n[img {urllib.parse.unquote(m.group(2))}]\n', b)
+    b = re.sub(r'</(p|li|h\d|tr|div|dd|dt|pre)>|<br\s*/?>', '\n', b)
+    b = html.unescape(re.sub(r'<[^>]+>', '', b))
+    return [l.strip() for l in b.splitlines() if l.strip() and not l.strip().startswith('[edit')]
 
 HEAD = re.compile(r'<h([2-6])\b[^>]*>(.*?)</h\1>', re.S)
 

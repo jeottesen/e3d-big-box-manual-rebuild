@@ -15,7 +15,7 @@ Run:  python3 -I scripts/fetch.py
 """
 import html, json, os, re, sys, urllib.parse
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))   # sibling modules (python -I does not add the script folder)
-import clean, crawl, recover
+import crawl, recover
 from targets import APPENDIX, TARGETS
 
 RAW = crawl.RAW
@@ -64,6 +64,7 @@ def fetch_version(title, orig, ts):
     path = version_path(title, ts)
     if not os.path.exists(path):
         rel = f'versions/{title.replace("/", "_")}/{ts}.html'
+        # a seed from an older data folder may keep some versions under versions_removed/
         if any(crawl.from_seed(r, rel) for r in (rel, rel.replace('versions/', 'versions_removed/unchanged/'),
                                                  rel.replace('versions/', 'versions_removed/errors/'))):
             tally['seeded_versions'] += 1
@@ -77,7 +78,7 @@ def fetch_version(title, orig, ts):
 
 def valid(h):
     """A real article: has a body, no error text, and more than a stub's worth of text."""
-    return 'id="mw-content-text"' in h and not clean.ERR.search(h[:6000]) and len(clean.body_text(h)) >= 5
+    return 'id="mw-content-text"' in h and not recover.ERR.search(h[:6000]) and len(recover.body_text(h)) >= 5
 
 def latest_good(title):
     for ts, orig in captures(title):

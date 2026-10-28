@@ -1,0 +1,687 @@
+--- 20151225011855
++++ 20160106202900
+@@ -12,8 +12,9 @@
+ 11 Spool Holder Outer Fronts
+-12 Print Cooling Fan & Duct
++12 Print Cooling Fan
+ 13 Y-Axis Motor Mount
+ 14 IR Sensor Bracket
+-15 Z-Axis Drag Chain
+-16 IEC Assembly and Preparation
+-17 Where next?
++15 Spool Carrier Clamp
++16 Z-Axis Drag Chain Anchors
++17 IEC Socket
++18 Where next?
+ For a full list of Fixings, including Bag Numbers please refer to the Fixings Section of the Bill Of Materials.
+@@ -26,2 +27,3 @@
+ Remove the backing from the Cork and affix to the printed part.
++Note: Do not fit the Cork Pad until all other components have been fitted.
+ Do not tighten the M3 x 16mm screw. This is done at a later stage.
+@@ -34,2 +36,3 @@
+ Remove the backing from the Cork and affix to the printed part.
++Note: Do not fit the Cork Pad until all other components have been fitted.
+ Do not tighten the M3 x 18mm screws. This is done at a later stage.
+@@ -65,3 +68,3 @@
+ [img 300px-Single_x_carriage.jpg]
+-BigBox Single Extruder X-Carriage
++BigBox Single Extruder X-Carriage.
+ By hand, run a 4mm drill bit through the centre hole.
+@@ -71,8 +74,16 @@
+ Use needle-nose pliers for pushing nuts in to awkward positions.
++[img 300px-Single_incorrect.jpg]
++Incorrectly Fitted.
++It is recommended that you test fit the Extruder Heatsink in the X-Carriage.
++Due to very close tolerances the Heatsink can be difficult to install.
++You can use a needle-file or a small piece of sandpaper to gently smooth-out the hole.
++This photo shows an incorrectly fitted Heatsink.
++[img 300px-Single_correct.jpg]
++Correctly Fitted.
++When fitted correctly the Heatsink will sit flush with the X-Carriage.
++This photo shows a correctly fitted Heatsink.
+ Dual X-Carriage
+-File:Placeholder Image.JPG  This is the title of the placeholder
+-Exploded drawing #8
++[img 800px-X-CARRIAGE_DUAL.JPG]
+ [img 300px-Dual_x_carriage_hotend.jpg]
+ BigBox hotEnd Mount
+-For Dual versions
+ Run 4mm drill bit through the centre holes.
+@@ -81,2 +92,3 @@
+ Use needlenose pliers for pushing nuts in in at awkward angles.
++Two rubber O-Rings fit into the two 16mm holes where the E3D Heatsinks fit.
+ Heated Bed Corners
+@@ -99,3 +111,3 @@
+ Requires x2 for lite & Pro and x4 for dual
+-Print Cooling Fan & Duct
++Print Cooling Fan
+ [img 800px-PRINT_FAN_DUCT.jpg]
+@@ -118,7 +130,16 @@
+ Insert IR sensor with prongs facing up and on the ‘higher’ side of the bracket. Screw together.
+-Z-Axis Drag Chain
++Spool Carrier Clamp
++[img 800px-SPOOL-HOLDER_CLAMP.jpg]
++[img 300px-Spool_carrier_assembled.jpg]
++Picture of an Spool Clamp.
++You will require two for a Dual BigBox.
++Z-Axis Drag Chain Anchors
+ [img 800px-Z-AXIS_DRAG_CHAIN.jpg]
+-IEC Assembly and Preparation
++[img 300px-Z_drag_anchors.jpg]
++Z-Axis Drag Anchors.
++IEC Socket
+ [img 300px-IED-switch.jpg]
+ IEC Socket, Fuse & Switch.
++If you are not comfortable or 100% certain of how to wire the IEC socket please seek the help and advice of a professional electrician.
++Do not guess.
+ [img 300px-Iec_02.jpg]
+
+--- 20160106202900
++++ 20160116202113
+@@ -58,2 +58,3 @@
+ Note: Using needle-nose pliers can help when installing the M3 Square nuts.
++Do not hit the bearing with a hammer.
+ X-Axis Motor Mount
+@@ -65,2 +66,3 @@
+ From the drag chain which has only one end-cap, remove the end-cap and fit it to the mount.
++Do not hit the bearing with a hammer.
+ Pro & Lite X-Carriage
+@@ -99,2 +101,3 @@
+ Affix with M3 x 12mm screws and square nuts. Do not fully tighten. There are four to assemble.
++Do not hit the bearings with a hammer.
+ Outer Spools Rear (Left & Right)
+
+--- 20160116202113
++++ 20160219022404
+@@ -44,2 +44,3 @@
+ Use the M4 20mm Bolt to pull the M4 Square nut into the recess at base of idler 'legs'. Do this without the lock-washer fitted and remove after assembly.
++You are required to assemble two idlers for your BigBox.
+ Single & Dual Extruder Filament Idlers
+
+--- 20160219022404
++++ 20160229195714
+@@ -24,3 +24,3 @@
+ BigBox Y-Axis Rear Brackets
+-Take care when fitting the 688-ZZ bearings into the Y-Axis rear brackets, check there is no plastic obstructing the recess. Secure with the bearing retainer. They can be a very tight fit and are easily pressed into the part by pushing against a flat surface, a desk for example.
++Take care when fitting the 688-ZZ (8mm ID x 16mm OD x 5mm W) bearings into the Y-Axis rear brackets, check there is no plastic obstructing the recess. Secure with the bearing retainer. They can be a very tight fit and are easily pressed into the part by pushing against a flat surface, a desk for example.
+ The M4 Square Nuts can be easily fitted using an M4 x 30mm screw. Wind the nut on the screw and gently tap into place using a hammer. It is also recommended to use an M4 16mm screw the pull the nuts into position from behind.
+@@ -37,2 +37,3 @@
+ Note: Do not fit the Cork Pad until all other components have been fitted.
++Tip: To get the nut through the round hole drop it in the hole, then use the end of an allen key to level it and use a fixing from the rear to pull it into place.
+ Do not tighten the M3 x 18mm screws. This is done at a later stage.
+@@ -42,3 +43,3 @@
+ BigBox Y-Axis Belt Idler
+-Part-thread the 20 mm grub screw through the idler arms. Carefully, fit the washers and bearings over the screw between the arms of the printed part, in this order: Washer-Bearing-Washer-Bearing-Washer. Squash the part between your fingers when doing up the grub screw.
++Part-thread the 20 mm grub screw through the idler arms. Carefully, fit the washers and F-604-ZZ (4mm ID x 12mm OD x 4mm W x 1mm F) bearings over the screw between the arms of the printed part, in this order: Washer-Bearing-Washer-Bearing-Washer. Squash the part between your fingers when doing up the grub screw.
+ Use the M4 20mm Bolt to pull the M4 Square nut into the recess at base of idler 'legs'. Do this without the lock-washer fitted and remove after assembly.
+@@ -49,4 +50,5 @@
+ Extruder filament idler
+-Part-thread the M4 12mm grub screw through the idler arms, carefully feeding on the washer-bearing-washer before tightening.
+-Note: The grub screw is 2mm shorter than the thickness of the idler. Take care to center it in the part. The 604zz Bearing(s) are in the Extruder Box.
++Part-thread the M4 12mm grub screw through the idler arms, carefully feeding on the 604-ZZ (4mm ID x 12mm OD x 4mm W) bearing and washer before tightening (washer-bearing-washer).
++Note: The grub screw is 2mm shorter than the thickness of the idler. Take care to center it in the part.
++The 604zz Bearing(s) are in the Extruder Box.
+ X-Axis Idler Carriage
+@@ -55,5 +57,5 @@
+ X-Axis Idler
+-Centre the LM8LUU bearing in the Idler.
++Centre the LM8LUU (8mm ID x 15mm OD x 45mm W) bearing in the Idler.
+ Do not tighten the M3 x 10mm (3) or the M3 x 12mm (4) screws, this will done at a later stage.
+-Follow image guidelines when fitting the Idler bearings Washer-Bearing-Washer-Bearing-Washer.
++Follow image guidelines when fitting the F-604-ZZ (4mm ID x 12mm OD x 4mm W x 1mm F) Idler bearings Washer-Bearing-Washer-Bearing-Washer.
+ Note: Using needle-nose pliers can help when installing the M3 Square nuts.
+@@ -64,3 +66,3 @@
+ X-Axis Motor Mount
+-Centre the LM8LUU bearing in the Idler.
++Centre the LM8LUU (8mm ID x 15mm OD x 45mm W) bearing in the Idler.
+ Do not tighten the M3 x 10mm or the M3 x 16mm screws, this will be done at a later stage.
+@@ -90,8 +92,24 @@
+ [img 300px-Dual_x_carriage_hotend.jpg]
+-BigBox hotEnd Mount
+-Run 4mm drill bit through the centre holes.
+-Insert M4 12mm grub screws at angle but do not over tighten (they must not protrude into the 16mm hole where the HotEnds will be be mounted.)
+-If they don't go in properly don't force them as they could cross thread. Take care to ensure screws are aligned.
+-Use needlenose pliers for pushing nuts in in at awkward angles.
+-Two rubber O-Rings fit into the two 16mm holes where the E3D Heatsinks fit.
++Dual HotEnd Mount
++Run a 4mm drill bit through the centre holes and the 4mm holes on the corners.
++Before proceeding follow the steps shown above for the Pro & Lite X-Carriage and test-fitting the extruders into the holes.
++[img 300px-Dual_x_carriage_0.jpg]
++O-Ring
++2 x Rubber O-Rings (Dual Extruder Box).
++[img 300px-Dual_x_carriage_0_fitted.jpg]
++O-Rings
++Insert the two rubber O-Rings into the Holes where the HotEnd Fits.
++[img 300px-Dual_x_carriage_grubs.jpg]
++Grubs & Nuts
++4 x M4 12mm Grubs Screws (Bag 14).
++4 x M4 Square Nuts (Bag 12).
++The four M4 Square nuts fit into the recesses through the holes which the HotEnds fit. The nuts go in at an angle, using a pair of needle-nose pliers can help during installation.
++[img 300px-Dual_x_carriage_corners.jpg]
++Nuts
++4 x M4 Square Nuts (Bag 12).
++Fit the four nuts into the corner sockets. They can be pulled into place using an M4 16mm screw (Bag 14).
++[img 300px-Dual_x_carriage_completed.jpg]
++Finished
++8 x M3 Square Nuts (Bag 6).
++Insert the M3 Square nuts into the Carriage. Use a pair of needle-nose pliers to ease fitment.
+ Heated Bed Corners
+@@ -100,3 +118,3 @@
+ A Heated bed corner.
+-Push the bearing into the printed part of the . It does not need to be centered.
++Push the LM8LUU (8mm ID x 15mm OD x 45mm W) bearing into the printed part of the . It does not need to be centered.
+ Affix with M3 x 12mm screws and square nuts. Do not fully tighten. There are four to assemble.
+@@ -107,4 +125,4 @@
+ Spool Holder.
+-Add (Washer bearing bearing washer) to the slot on each printed part. Tighten.
+-Do this to both, then add bracket to one with the m4 16mm screws and nuts. Ensure correct way up..
++Add 634-ZZ (4mm ID x 16mm OD x 5mm W) bearings to the slot on each printed part (Washer bearing bearing washer).
++Build each side of the spool holder.
+ You will require two sets for the BigBox Dual.
+@@ -121,4 +139,5 @@
+ Turning the fan mount over, line up the blower fan and attach using an M3 x 22mm screw, inserting square nut on the rear side. Tighten.
+-Use the 2x 30mm screws to attached the rest of the fan corners, note that there are no nuts. These are fitted at a later stage.
++Use the 2x M3 30mm screws to attached the rest of the fan corners, note that there are no nuts. These are fitted at a later stage.
+ The wire comes out the side.
++Note: You'll need two assemblies for the Dual, the additional fan for the Dual is in the Dual Extruder Box.
+ Y-Axis Motor Mount
+@@ -131,2 +150,5 @@
+ [img 800px-IR_SENSOR_ASSEMBLY.jpg]
++[img 300px-Ir_sensor_pcb.jpg]
++IR Sensor.
++The IR Sensor.
+ [img 300px-Ir_sensor_assembled.jpg]
+@@ -134,2 +156,3 @@
+ Insert IR sensor with prongs facing up and on the ‘higher’ side of the bracket. Screw together.
++Note: There was an error in the fixings kit and in some instances M2.5 Hex Nuts have been supplied and not Square nuts.
+ Spool Carrier Clamp
+@@ -138,3 +161,4 @@
+ Picture of an Spool Clamp.
+-You will require two for a Dual BigBox.
++You will require two for a Dual BigBox, the extra 634-ZZ (4mm ID x 16mm OD x 5mm W) is in the Dual Extruder Box.
++Note: The screw only needs to be finger tight. Do not over-tighten the clamp.
+ Z-Axis Drag Chain Anchors
+
+--- 20160229195714
++++ 20160310175055
+@@ -106,2 +106,3 @@
+ The four M4 Square nuts fit into the recesses through the holes which the HotEnds fit. The nuts go in at an angle, using a pair of needle-nose pliers can help during installation.
++Note: If you are short of M4 12mm Grub Screws check the corrections bag inside the Stretch Box.
+ [img 300px-Dual_x_carriage_corners.jpg]
+@@ -148,2 +149,3 @@
+ Take care when removing the backing from the cork.
++Note: Check you are fitting the 16T GT2 Pulley and NOT the 20T.
+ IR Sensor Bracket
+
+--- 20160310175055
++++ 20160325002913
+@@ -25,5 +25,7 @@
+ Take care when fitting the 688-ZZ (8mm ID x 16mm OD x 5mm W) bearings into the Y-Axis rear brackets, check there is no plastic obstructing the recess. Secure with the bearing retainer. They can be a very tight fit and are easily pressed into the part by pushing against a flat surface, a desk for example.
++Note : These bearings are the two with the larger hole.
+ The M4 Square Nuts can be easily fitted using an M4 x 30mm screw. Wind the nut on the screw and gently tap into place using a hammer. It is also recommended to use an M4 16mm screw the pull the nuts into position from behind.
++Once in place check they are seated securely by shaking gently. If they come loose they are not seated correctly. These nuts will be inaccessible later on so it is vital to ensure they do not become dislodged.
+ Remove the backing from the Cork and affix to the printed part.
+-Note: Do not fit the Cork Pad until all other components have been fitted.
++Note : Do not fit the Cork Pad until all other components have been fitted.
+ Do not tighten the M3 x 16mm screw. This is done at a later stage.
+@@ -35,5 +37,6 @@
+ Note that the lower nut does go into the round hole - internally it opens up to be a square hole.
++Once in place check they are seated securely by shaking gently. If they come loose they are not seated correctly. These nuts will be inaccessible later on so it is vital to ensure they do not become dislodged.
+ Remove the backing from the Cork and affix to the printed part.
+-Note: Do not fit the Cork Pad until all other components have been fitted.
+-Tip: To get the nut through the round hole drop it in the hole, then use the end of an allen key to level it and use a fixing from the rear to pull it into place.
++Note : Do not fit the Cork Pad until all other components have been fitted.
++Tip : To get the nut through the round hole drop it in the hole, then use the end of an allen key to level it and use a fixing from the rear to pull it into place.
+ Do not tighten the M3 x 18mm screws. This is done at a later stage.
+@@ -45,3 +48,3 @@
+ Use the M4 20mm Bolt to pull the M4 Square nut into the recess at base of idler 'legs'. Do this without the lock-washer fitted and remove after assembly.
+-You are required to assemble two idlers for your BigBox.
++Note : You are required to assemble two idlers for your BigBox.
+ Single & Dual Extruder Filament Idlers
+@@ -51,4 +54,4 @@
+ Part-thread the M4 12mm grub screw through the idler arms, carefully feeding on the 604-ZZ (4mm ID x 12mm OD x 4mm W) bearing and washer before tightening (washer-bearing-washer).
+-Note: The grub screw is 2mm shorter than the thickness of the idler. Take care to center it in the part.
+-The 604zz Bearing(s) are in the Extruder Box.
++Note : The grub screw is 2mm shorter than the thickness of the idler. Take care to center it in the part.
++Note : The 604zz Bearing(s) are in the Extruder Box.
+ X-Axis Idler Carriage
+@@ -60,3 +63,4 @@
+ Follow image guidelines when fitting the F-604-ZZ (4mm ID x 12mm OD x 4mm W x 1mm F) Idler bearings Washer-Bearing-Washer-Bearing-Washer.
+-Note: Using needle-nose pliers can help when installing the M3 Square nuts.
++When fitting the M3 x 25 screw, lightly screw this in (it will self tap). This is used during the commissioning stage to set the X endstop point, so it's not being used in the typical fashion in which a screw is used. Do not screw it all the way in. It should protrude as per the above diagram.
++Note : Using needle-nose pliers can help when installing the M3 Square nuts.
+ Do not hit the bearing with a hammer.
+@@ -68,3 +72,3 @@
+ Do not tighten the M3 x 10mm or the M3 x 16mm screws, this will be done at a later stage.
+-From the drag chain which has only one end-cap, remove the end-cap and fit it to the mount.
++Note : Drag-Chain-End is from the drag chain which has only one end-cap, remove this end-cap and fit it to the mount.
+ Do not hit the bearing with a hammer.
+@@ -78,3 +82,3 @@
+ Help pull the M4 Square Nuts into the four corners using M4 x 16mm screws.
+-Use needle-nose pliers for pushing nuts in to awkward positions.
++Note : Use needle-nose pliers for pushing nuts in to awkward positions.
+ [img 300px-Single_incorrect.jpg]
+@@ -106,3 +110,3 @@
+ The four M4 Square nuts fit into the recesses through the holes which the HotEnds fit. The nuts go in at an angle, using a pair of needle-nose pliers can help during installation.
+-Note: If you are short of M4 12mm Grub Screws check the corrections bag inside the Stretch Box.
++Note : If you are short of M4 12mm Grub Screws check the corrections bag inside the Stretch Box.
+ [img 300px-Dual_x_carriage_corners.jpg]
+@@ -128,3 +132,3 @@
+ Build each side of the spool holder.
+-You will require two sets for the BigBox Dual.
++Note : You will require two sets for the BigBox Dual.
+ Spool Holder Outer Fronts
+@@ -133,3 +137,3 @@
+ An assembled holder.
+-Requires x2 for lite & Pro and x4 for dual
++Note : Requires x2 for lite & Pro and x4 for dual
+ Print Cooling Fan
+@@ -142,3 +146,3 @@
+ The wire comes out the side.
+-Note: You'll need two assemblies for the Dual, the additional fan for the Dual is in the Dual Extruder Box.
++Note : You'll need two assemblies for the Dual, the additional fan for the Dual is in the Dual Extruder Box.
+ Y-Axis Motor Mount
+@@ -149,3 +153,4 @@
+ Take care when removing the backing from the cork.
+-Note: Check you are fitting the 16T GT2 Pulley and NOT the 20T.
++Note : Check you are fitting the 16T GT2 Pulley and NOT the 20T.
++If you have an Astrosyn damper, now is as good a time as any to fit it. Before mounting to the motor to the motor mount, place the damper over the motor shaft. There's only one way to do this properly as the damper is keyed. Look for the holes without threads to be laid against the motor. If your motor didn't come with screws, you'll need to find two M3x6 screws to connect the damper to the motor. There will be only two screws connecting the damper to the mount. Next, connect the motor/damper assembly to the motor mount. Ideally you want two M3 x 8 screws for the job, but two of the original M3x10 indicated above will do the job. The most important thing is that the screws which connect the damper to the motor mount do not continue all the way to the motor. The point of the damper is to create a complete separation between motor vibrations and the case.
+ IR Sensor Bracket
+@@ -158,3 +163,3 @@
+ Insert IR sensor with prongs facing up and on the ‘higher’ side of the bracket. Screw together.
+-Note: There was an error in the fixings kit and in some instances M2.5 Hex Nuts have been supplied and not Square nuts.
++Note : There was an error in the fixings kit and in some instances M2.5 Hex Nuts have been supplied and not Square nuts.
+ Spool Carrier Clamp
+@@ -164,3 +169,3 @@
+ You will require two for a Dual BigBox, the extra 634-ZZ (4mm ID x 16mm OD x 5mm W) is in the Dual Extruder Box.
+-Note: The screw only needs to be finger tight. Do not over-tighten the clamp.
++Note : The screw only needs to be finger tight. Do not over-tighten the clamp.
+ Z-Axis Drag Chain Anchors
+@@ -169,2 +174,3 @@
+ Z-Axis Drag Anchors.
++Note : These are from the other drag chain, which has both ends attached.
+ IEC Socket
+
+--- 20160325002913
++++ 20160414214705
+@@ -9,12 +9,14 @@
+ 8 Dual X-Carriage
+-9 Heated Bed Corners
+-10 Outer Spools Rear (Left & Right)
+-11 Spool Holder Outer Fronts
+-12 Print Cooling Fan
+-13 Y-Axis Motor Mount
+-14 IR Sensor Bracket
+-15 Spool Carrier Clamp
+-16 Z-Axis Drag Chain Anchors
+-17 IEC Socket
+-18 Where next?
++9 Hybrid X-Carriage
++10 Heated Bed Corners
++11 Outer Spools Rear (Left & Right)
++12 Spool Holder Outer Fronts
++13 Print Cooling Fan
++14 Y-Axis Motor Mount
++15 Single & Dual Direct-Drive IR Sensor Bracket
++16 Hybrid IR Sensor Bracket
++17 Spool Carrier Clamp
++18 Z-Axis Drag Chain Anchors
++19 IEC Socket
++20 Where next?
+ For a full list of Fixings, including Bag Numbers please refer to the Fixings Section of the Bill Of Materials.
+@@ -64,3 +66,4 @@
+ When fitting the M3 x 25 screw, lightly screw this in (it will self tap). This is used during the commissioning stage to set the X endstop point, so it's not being used in the typical fashion in which a screw is used. Do not screw it all the way in. It should protrude as per the above diagram.
+-Note : Using needle-nose pliers can help when installing the M3 Square nuts.
++Note: Using needle-nose pliers can help when installing the M3 Square nuts.
++Note: If you are building a Hybrid X-Carriage replace the M3 x 25mm Bolt (Item 3 in the exploded diagram) with an M3 x 10mm Bolt.
+ Do not hit the bearing with a hammer.
+@@ -119,2 +122,41 @@
+ Insert the M3 Square nuts into the Carriage. Use a pair of needle-nose pliers to ease fitment.
++Hybrid X-Carriage
++Assemble the Hybrid X-Carriage in the same way for both Dual & Pro BigBoxes.
++800px
++[img 300px-V1.1_x_carriage_m4.jpg]
++Nut.
++2 x M4 Square Nut (Bag 12).
++1 x Hybrid X-Carriage (Printed Parts).
++Fit the nuts into the recesses in the X-Carriage.
++[img 300px-V1.1_x_carriage_m4_pull.jpg]
++Pull through.
++You can use an M4 16mm bolt to pull the nut into the recess.
++[img 300px-V1.1_x_carriage_m4_grub.jpg]
++Grub Screws.
++4 x M4 Square Nut (Bag 12).
++4 x M4 12mm Grub Screw (Bag 14).
++Insert the four M4 Square nuts into the holes before screwing in the Grubs.
++[img 300px-V1.1_x_carriage_rings.jpg]
++O'Ring(s).
++2 x O-Ring (Extruder Box).
++Fit the rings inside the X-Carriage.
++Note: If you are building a BigBox Pro you can install a single ring if you wish.
++[img 300px-V1.1_x_carriage_m3_nut.jpg]
++Nuts.
++2 x M3 Square Nut (Bag 6).
++Insert the nuts into the two holes on the X-Carriage.
++Note: Check the nuts have gone all the way down as far as they can go.
++[img 300px-V1.1_x_carriage_m3_more_nut.jpg]
++More Nuts.
++4 x M3 Square Nut (Bag 6).
++Fit four nuts into the openings as shown.
++[img 300px-V1.1_x_carriage_m3_even_more_nuts.jpg]
++Even More Nuts.
++4 x M3 Square Nut (Bag 6).
++Fit four nuts into the openings as shown.
++[img 300px-V1.1_x_carriage_mount.jpg]
++Clamp.
++2 x M3 Square Nut (Bag 6).
++1 x Hybrid X-Carriage Rear Bearing Clamp (Printed Parts).
++Insert the two M3 square nuts into the holes on the top of the X-Carriage Rear Bearing Clamp.
+ Heated Bed Corners
+@@ -146,2 +188,3 @@
+ The wire comes out the side.
++It is worth checking that the mount moves smoothly in the X-Carriage before you assemble it on the printer as the fans have to be moved up and down on the slots for calibrations etc.  and it is difficult to clean them up once assembled.
+ Note : You'll need two assemblies for the Dual, the additional fan for the Dual is in the Dual Extruder Box.
+@@ -155,3 +198,3 @@
+ If you have an Astrosyn damper, now is as good a time as any to fit it. Before mounting to the motor to the motor mount, place the damper over the motor shaft. There's only one way to do this properly as the damper is keyed. Look for the holes without threads to be laid against the motor. If your motor didn't come with screws, you'll need to find two M3x6 screws to connect the damper to the motor. There will be only two screws connecting the damper to the mount. Next, connect the motor/damper assembly to the motor mount. Ideally you want two M3 x 8 screws for the job, but two of the original M3x10 indicated above will do the job. The most important thing is that the screws which connect the damper to the motor mount do not continue all the way to the motor. The point of the damper is to create a complete separation between motor vibrations and the case.
+-IR Sensor Bracket
++Single & Dual Direct-Drive IR Sensor Bracket
+ [img 800px-IR_SENSOR_ASSEMBLY.jpg]
+@@ -163,3 +206,12 @@
+ Insert IR sensor with prongs facing up and on the ‘higher’ side of the bracket. Screw together.
++It is worth checking now that the IR sensor mount moves smoothly in the slots on the X-Carriage as the sensor has to be moved up and down during calibration.  It is very difficult to clean up the sensor mount and the X-Carriage slots once the sensor is mounted.
+ Note : There was an error in the fixings kit and in some instances M2.5 Hex Nuts have been supplied and not Square nuts.
++Hybrid IR Sensor Bracket
++800px
++[img 300px-Ir_sensor_pcb.jpg]
++IR Sensor.
++The IR Sensor.
++[img 300px-Ir_sensor_pcb_assembled.jpg]
++IR Sensor Bracket.
++Assemble as shown.
+ Spool Carrier Clamp
+
+--- 20160414214705
++++ 20160510043010
+@@ -67,3 +67,3 @@
+ Note: Using needle-nose pliers can help when installing the M3 Square nuts.
+-Note: If you are building a Hybrid X-Carriage replace the M3 x 25mm Bolt (Item 3 in the exploded diagram) with an M3 x 10mm Bolt.
++Note: If you are building a Hybrid X-Carriage replace the M3 x 25mm Bolt (Item 10 in the exploded diagram) with an M3 x 10mm Bolt.
+ Do not hit the bearing with a hammer.
+
+--- 20160510043010
++++ 20160531054257
+@@ -1,24 +1,24 @@
+ Contents
+-1 Y-Axis Rear Brackets (Left & Right)
+-2 Y-Axis Front Brackets (Left & Right)
+-3 Y-Axis Belt Idlers
+-4 Single & Dual Extruder Filament Idlers
+-5 X-Axis Idler Carriage
+-6 X-Axis Motor Mount
+-7 Pro & Lite X-Carriage
+-8 Dual X-Carriage
+-9 Hybrid X-Carriage
+-10 Heated Bed Corners
+-11 Outer Spools Rear (Left & Right)
+-12 Spool Holder Outer Fronts
+-13 Print Cooling Fan
+-14 Y-Axis Motor Mount
+-15 Single & Dual Direct-Drive IR Sensor Bracket
+-16 Hybrid IR Sensor Bracket
+-17 Spool Carrier Clamp
+-18 Z-Axis Drag Chain Anchors
+-19 IEC Socket
++1 (1) Y-Axis Rear Brackets (Left & Right)
++2 (2) Y-Axis Front Brackets (Left & Right)
++3 (3) Y-Axis Belt Idlers
++4 (4) Single & Dual Extruder Filament Idlers
++5 (5) X-Axis Idler Carriage
++6 (6) X-Axis Motor Mount
++7 (7) Pro & Lite X-Carriage
++8 (8) Dual X-Carriage
++9 (9) Hybrid X-Carriage
++10 (10) Heated Bed Corners
++11 (11) Outer Spools Rear (Left & Right)
++12 (12) Spool Holder Outer Fronts
++13 (13) Print Cooling Fan (v1.0)
++14 (14) Y-Axis Motor Mount
++15 (15) Single & Dual Direct-Drive IR Sensor Bracket
++16 (16) Hybrid IR Sensor Bracket
++17 (17) Spool Carrier Clamp
++18 (18) Z-Axis Drag Chain Anchors
++19 (19) IEC Socket
+ 20 Where next?
+ For a full list of Fixings, including Bag Numbers please refer to the Fixings Section of the Bill Of Materials.
+-Y-Axis Rear Brackets (Left & Right)
++(1) Y-Axis Rear Brackets (Left & Right)
+ [img 800px-Y-AXIS_REAR.jpg]
+@@ -33,3 +33,3 @@
+ Do not tighten the M3 x 16mm screw. This is done at a later stage.
+-Y-Axis Front Brackets (Left & Right)
++(2) Y-Axis Front Brackets (Left & Right)
+ [img 800px-Y-AXIS_FRONT.jpg]
+@@ -44,3 +44,3 @@
+ Do not tighten the M3 x 18mm screws. This is done at a later stage.
+-Y-Axis Belt Idlers
++(3) Y-Axis Belt Idlers
+ [img 800px-Y-AXIS_IDLER.jpg]
+@@ -51,3 +51,3 @@
+ Note : You are required to assemble two idlers for your BigBox.
+-Single & Dual Extruder Filament Idlers
++(4) Single & Dual Extruder Filament Idlers
+ [img 800px-EXTRUDER_IDLER.jpg]
+@@ -58,3 +58,3 @@
+ Note : The 604zz Bearing(s) are in the Extruder Box.
+-X-Axis Idler Carriage
++(5) X-Axis Idler Carriage
+ [img 800px-X-AXIS_IDLER_CARRIAGE.jpg]
+@@ -69,3 +69,3 @@
+ Do not hit the bearing with a hammer.
+-X-Axis Motor Mount
++(6) X-Axis Motor Mount
+ [img 800px-X-AXIS_MOTOR_CARRIAGE.jpg]
+@@ -77,3 +77,3 @@
+ Do not hit the bearing with a hammer.
+-Pro & Lite X-Carriage
++(7) Pro & Lite X-Carriage
+ [img 800px-X-CARRIAGE_SINGLE.jpg]
+@@ -96,3 +96,3 @@
+ This photo shows a correctly fitted Heatsink.
+-Dual X-Carriage
++(8) Dual X-Carriage
+ [img 800px-X-CARRIAGE_DUAL.JPG]
+@@ -122,3 +122,3 @@
+ Insert the M3 Square nuts into the Carriage. Use a pair of needle-nose pliers to ease fitment.
+-Hybrid X-Carriage
++(9) Hybrid X-Carriage
+ Assemble the Hybrid X-Carriage in the same way for both Dual & Pro BigBoxes.
+@@ -161,3 +161,3 @@
+ Insert the two M3 square nuts into the holes on the top of the X-Carriage Rear Bearing Clamp.
+-Heated Bed Corners
++(10) Heated Bed Corners
+ [img 800px-HEATED_BED_CORNERS.jpg]
+@@ -168,3 +168,3 @@
+ Do not hit the bearings with a hammer.
+-Outer Spools Rear (Left & Right)
++(11) Outer Spools Rear (Left & Right)
+ [img 800px-SPOOL-HOLDER_OUTER.jpg]
+@@ -175,3 +175,3 @@
+ Note : You will require two sets for the BigBox Dual.
+-Spool Holder Outer Fronts
++(12) Spool Holder Outer Fronts
+ [img 800px-SPOOL-HOLDER_INNER.jpg]
+@@ -180,3 +180,3 @@
+ Note : Requires x2 for lite & Pro and x4 for dual
+-Print Cooling Fan
++(13) Print Cooling Fan (v1.0)
+ [img 800px-PRINT_FAN_DUCT.jpg]
+@@ -190,3 +190,3 @@
+ Note : You'll need two assemblies for the Dual, the additional fan for the Dual is in the Dual Extruder Box.
+-Y-Axis Motor Mount
++(14) Y-Axis Motor Mount
+ [img 800px-Y-AXIS_MOTOR.jpg]
+@@ -198,3 +198,3 @@
+ If you have an Astrosyn damper, now is as good a time as any to fit it. Before mounting to the motor to the motor mount, place the damper over the motor shaft. There's only one way to do this properly as the damper is keyed. Look for the holes without threads to be laid against the motor. If your motor didn't come with screws, you'll need to find two M3x6 screws to connect the damper to the motor. There will be only two screws connecting the damper to the mount. Next, connect the motor/damper assembly to the motor mount. Ideally you want two M3 x 8 screws for the job, but two of the original M3x10 indicated above will do the job. The most important thing is that the screws which connect the damper to the motor mount do not continue all the way to the motor. The point of the damper is to create a complete separation between motor vibrations and the case.
+-Single & Dual Direct-Drive IR Sensor Bracket
++(15) Single & Dual Direct-Drive IR Sensor Bracket
+ [img 800px-IR_SENSOR_ASSEMBLY.jpg]
+@@ -208,3 +208,3 @@
+ Note : There was an error in the fixings kit and in some instances M2.5 Hex Nuts have been supplied and not Square nuts.
+-Hybrid IR Sensor Bracket
++(16) Hybrid IR Sensor Bracket
+ 800px
+@@ -216,3 +216,3 @@
+ Assemble as shown.
+-Spool Carrier Clamp
++(17) Spool Carrier Clamp
+ [img 800px-SPOOL-HOLDER_CLAMP.jpg]
+@@ -222,3 +222,3 @@
+ Note : The screw only needs to be finger tight. Do not over-tighten the clamp.
+-Z-Axis Drag Chain Anchors
++(18) Z-Axis Drag Chain Anchors
+ [img 800px-Z-AXIS_DRAG_CHAIN.jpg]
+@@ -227,3 +227,3 @@
+ Note : These are from the other drag chain, which has both ends attached.
+-IEC Socket
++(19) IEC Socket
+ [img 300px-IED-switch.jpg]
+
+--- 20160531054257
++++ 20160616135240
+@@ -55,2 +55,3 @@
+ Extruder filament idler
++If you are building a Titan BigBox you can skip this step.
+ Part-thread the M4 12mm grub screw through the idler arms, carefully feeding on the 604-ZZ (4mm ID x 12mm OD x 4mm W) bearing and washer before tightening (washer-bearing-washer).
+@@ -58,2 +59,7 @@
+ Note : The 604zz Bearing(s) are in the Extruder Box.
++[img 300px-1.1_Filament_idler_assembled.jpg]
++Hybrid filament idler
++If you are building a Titan BigBox you can skip this step.
++This is the updated Hybrid Idler.
++Note : The 604zz Bearing(s) are in with the Printed Parts.
+ (5) X-Axis Idler Carriage
+@@ -184,2 +190,3 @@
+ Completed fan assembly.
++If you are building a Hybrid BigBox you can skip this step.
+ Fix the two parts together back to back to create a single assembly, as seen, with the 8mm screw & square nut.
+
+--- 20160616135240
++++ 20160807071206
+@@ -51,2 +51,3 @@
+ Note : You are required to assemble two idlers for your BigBox.
++Note : Do not ream-out the holes for the grub-screw.
+ (4) Single & Dual Extruder Filament Idlers
+
+--- 20160807071206
++++ 20160905102412
+@@ -4,3 +4,3 @@
+ 3 (3) Y-Axis Belt Idlers
+-4 (4) Single & Dual Extruder Filament Idlers
++4 (4) Non-Titan Single & Dual Extruder Filament Idlers
+ 5 (5) X-Axis Idler Carriage
+@@ -52,15 +52,4 @@
+ Note : Do not ream-out the holes for the grub-screw.
+-(4) Single & Dual Extruder Filament Idlers
+-[img 800px-EXTRUDER_IDLER.jpg]
+-[img 300px-Filament_idler_assembled.jpg]
+-Extruder filament idler
+-If you are building a Titan BigBox you can skip this step.
+-Part-thread the M4 12mm grub screw through the idler arms, carefully feeding on the 604-ZZ (4mm ID x 12mm OD x 4mm W) bearing and washer before tightening (washer-bearing-washer).
+-Note : The grub screw is 2mm shorter than the thickness of the idler. Take care to center it in the part.
+-Note : The 604zz Bearing(s) are in the Extruder Box.
+-[img 300px-1.1_Filament_idler_assembled.jpg]
+-Hybrid filament idler
+-If you are building a Titan BigBox you can skip this step.
+-This is the updated Hybrid Idler.
+-Note : The 604zz Bearing(s) are in with the Printed Parts.
++(4) Non-Titan Single & Dual Extruder Filament Idlers
++If you are building an older Non-Titan version and require Idlers arms | Click Here
+ (5) X-Axis Idler Carriage
+@@ -85,48 +74,7 @@
+ (7) Pro & Lite X-Carriage
+-[img 800px-X-CARRIAGE_SINGLE.jpg]
+-[img 300px-Single_x_carriage.jpg]
+-BigBox Single Extruder X-Carriage.
+-By hand, run a 4mm drill bit through the centre hole.
+-Insert M4 x 20mm screws in at an angle but do not over tighten, they must not protrude into the 16mm hole where the HotEnd fits.
+-If they don't go in properly don't force them as they could cross thread. Take care to ensure screws are aligned.
+-Help pull the M4 Square Nuts into the four corners using M4 x 16mm screws.
+-Note : Use needle-nose pliers for pushing nuts in to awkward positions.
+-[img 300px-Single_incorrect.jpg]
+-Incorrectly Fitted.
+-It is recommended that you test fit the Extruder Heatsink in the X-Carriage.
+-Due to very close tolerances the Heatsink can be difficult to install.
+-You can use a needle-file or a small piece of sandpaper to gently smooth-out the hole.
+-This photo shows an incorrectly fitted Heatsink.
+-[img 300px-Single_correct.jpg]
+-Correctly Fitted.
+-When fitted correctly the Heatsink will sit flush with the X-Carriage.
+-This photo shows a correctly fitted Heatsink.
++If you are building an older Non-Hybrid Pro & Lite X-Carriage | Click Here
+ (8) Dual X-Carriage
+-[img 800px-X-CARRIAGE_DUAL.JPG]
+-[img 300px-Dual_x_carriage_hotend.jpg]
+-Dual HotEnd Mount
+-Run a 4mm drill bit through the centre holes and the 4mm holes on the corners.
+-Before proceeding follow the steps shown above for the Pro & Lite X-Carriage and test-fitting the extruders into the holes.
+-[img 300px-Dual_x_carriage_0.jpg]
+-O-Ring
+-2 x Rubber O-Rings (Dual Extruder Box).
+-[img 300px-Dual_x_carriage_0_fitted.jpg]
+-O-Rings
+-Insert the two rubber O-Rings into the Holes where the HotEnd Fits.
+-[img 300px-Dual_x_carriage_grubs.jpg]
+-Grubs & Nuts
+-4 x M4 12mm Grubs Screws (Bag 14).
+-4 x M4 Square Nuts (Bag 12).
+-The four M4 Square nuts fit into the recesses through the holes which the HotEnds fit. The nuts go in at an angle, using a pair of needle-nose pliers can help during installation.
+-Note : If you are short of M4 12mm Grub Screws check the corrections bag inside the Stretch Box.
+-[img 300px-Dual_x_carriage_corners.jpg]
+-Nuts
+-4 x M4 Square Nuts (Bag 12).
+-Fit the four nuts into the corner sockets. They can be pulled into place using an M4 16mm screw (Bag 14).
+-[img 300px-Dual_x_carriage_completed.jpg]
+-Finished
+-8 x M3 Square Nuts (Bag 6).
+-Insert the M3 Square nuts into the Carriage. Use a pair of needle-nose pliers to ease fitment.
++If you are building an older Non-Hybrid Dual X-Carriage | Click Here
+ (9) Hybrid X-Carriage
+-Assemble the Hybrid X-Carriage in the same way for both Dual & Pro BigBoxes.
++Assemble the Hybrid X-Carriage in the same way for both Hybrid Dual & Pro BigBoxes.
+ 800px
+@@ -188,12 +136,3 @@
+ (13) Print Cooling Fan (v1.0)
+-[img 800px-PRINT_FAN_DUCT.jpg]
+-[img 300px-Assembled_print_fan.jpeg]
+-Completed fan assembly.
+-If you are building a Hybrid BigBox you can skip this step.
+-Fix the two parts together back to back to create a single assembly, as seen, with the 8mm screw & square nut.
+-Turning the fan mount over, line up the blower fan and attach using an M3 x 22mm screw, inserting square nut on the rear side. Tighten.
+-Use the 2x M3 30mm screws to attached the rest of the fan corners, note that there are no nuts. These are fitted at a later stage.
+-The wire comes out the side.
+-It is worth checking that the mount moves smoothly in the X-Carriage before you assemble it on the printer as the fans have to be moved up and down on the slots for calibrations etc.  and it is difficult to clean them up once assembled.
+-Note : You'll need two assemblies for the Dual, the additional fan for the Dual is in the Dual Extruder Box.
++If you are building an older Non-Hybrid Print Cooling Fan(s) | Click Here
+ (14) Y-Axis Motor Mount
+@@ -207,11 +146,3 @@
+ (15) Single & Dual Direct-Drive IR Sensor Bracket
+-[img 800px-IR_SENSOR_ASSEMBLY.jpg]
+-[img 300px-Ir_sensor_pcb.jpg]
+-IR Sensor.
+-The IR Sensor.
+-[img 300px-Ir_sensor_assembled.jpg]
+-Picture of an assembled IR sensor.
+-Insert IR sensor with prongs facing up and on the ‘higher’ side of the bracket. Screw together.
+-It is worth checking now that the IR sensor mount moves smoothly in the slots on the X-Carriage as the sensor has to be moved up and down during calibration.  It is very difficult to clean up the sensor mount and the X-Carriage slots once the sensor is mounted.
+-Note : There was an error in the fixings kit and in some instances M2.5 Hex Nuts have been supplied and not Square nuts.
++If you are building an older Non-Hybrid Single & Dual Direct-Drive IR Sensor Bracket | Click Here
+ (16) Hybrid IR Sensor Bracket
+
+--- 20160905102412
++++ 20191219134618
+@@ -1 +1,4 @@
++This Wiki is not looked after anymore :( Please navigate to
++e3d-online.dozuki.com
++for up to date and improved documentation
+ Contents
+

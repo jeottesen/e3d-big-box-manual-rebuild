@@ -21,7 +21,7 @@ for t, info in (json.load(open(rec_path)).items() if os.path.exists(rec_path) el
         pages[t] = open(f'{RAW}/recovered/{t}.html').read()
         meta[t] = {'snapshot': f'recovered from {info["parent"]} {info["version"]}'}
 latest_titles = set()
-lat_path = f'{RAW}/versions/latest.json'   # latest good (non-error) version per page, written by clean.py
+lat_path = f'{RAW}/versions/latest.json'   # latest good (non-error) version per page, written by fetch.py
 for t, v in (json.load(open(lat_path)).items() if os.path.exists(lat_path) else []):
     if v:
         latest_titles.add(t)

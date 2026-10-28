@@ -1,0 +1,64 @@
+--- 20160120094140
++++ 20160224080850
+@@ -104,3 +104,3 @@
+ Serial Port /dev/ttyACM0
+-Baudrate 23400
++Baudrate 230400
+ Tick | Auto-connect to printer on server start
+@@ -203,3 +203,3 @@
+ Back to Your First Print
+-Continue to the Quick-Start Guide
++Continue to the [[]]
+ Home to the BigBox Build Manual Main Index
+
+--- 20160224080850
++++ 20160327021215
+@@ -144,7 +144,2 @@
+ Colour: As you wish
+-[img 300px-Printer_appearance.jpg]
+-Printer Appearance.
+-Click Appearance.
+-Title: BigBox Pro or BigBox Dual
+-Colour: As you wish
+ Click the big blue Save button.
+
+--- 20160327021215
++++ 20160427130511
+@@ -18,2 +18,4 @@
+ To begin click Download OctoPi.
++(Marlin is mentioned later on... this is the firmware written to the memory (EPROM) on the Rumba)
++http://reprap.org/wiki/Marlin
+ [img 300px-Octoprint_write.jpg]
+@@ -34,3 +36,5 @@
+ Push.
++Look through the slot to see where the card fits, and so you don't insert it above or below the contacts.
+ Push the SD Card into the slot.
++The slot is spring loaded so you should feel the card click into place.
+ [img 300px-Insert_network.jpg]
+@@ -87,2 +91,3 @@
+ You can close PuTTY as it is no longer required.
++(If you want to setup the camera you will have to login again after completing the steps below)
+ [img 300px-Bigbox_update.jpg]
+@@ -91,2 +96,3 @@
+ If you are presented with an Update Available pop-up, click Update Now.
++You may only get the update AFTER you login (if you setup access control)
+ Note: The system will restart during the update process. If this does not happen a window will pop up asking you to manually restart. This can be done via the System drop-down menu.
+@@ -95,2 +101,3 @@
+ After the update has completed you will be prompted to Please Reload, click Reload Now to do so.
++You may get a system restart FAILED if so wait and you will shortly get the Reload Now button
+ Settings
+@@ -130,3 +137,5 @@
+ To After print job is cancelled add;
++(note that these commands below in bold go right at the start)
+ ;dock
++T0
+ G1 X70 Y200 F3000
+
+--- 20160427130511
++++ 20190723040244
+@@ -1 +1,4 @@
++This Wiki is not looked after anymore :( Please navigate to
++e3d-online.dozuki.com
++for up to date and improved documentation
+ Contents
+

@@ -1,0 +1,224 @@
+--- 20151230221140
++++ 20160130224103
+@@ -1,10 +1,171 @@
+-Simplify3D
+-We have an alpha release of the BigBox S3D profile. It will work with all versions (Lite / Pro / Dual) but do note it is only for a single extruder.
+-https://dl.dropboxusercontent.com/u/54348751/BigBoxSingle-alpha-settings.fff
+-Slic3r
+-We have an alpha release of the BigBox Slic3r profile. It will work with all versions (Lite / Pro / Dual) but do note it is only for a single extruder.
+-https://dl.dropboxusercontent.com/u/54348751/BigBox_Slic3r_config_bundle.ini
++Contents
++1 Loading Filament
++2 Calibrating The Filament
++3 Printing
++4 Where next?
++Loading Filament
++[img 300px-Boxed_spool.jpg]
++Box Of Filament.
++We recommend E3D Online's range of Everyday & Premium Filament for your daily printing needs!
++[img 300px-Spool_tube.jpg]
++Clip.
++Press down the Bowden clip on the top of the Extruder.
++[img 300px-Spool_tube_out.jpg]
++Remove the tube.
++Pull the feed tube free.
++[img 300px-Spool_unpacked.jpg]
++Opened.
++Remove the filament from it's packaging.
++[img 300px-Spool_kink.jpg]
++Trimed.
++Cut off the kink.
++[img 300px-Spool_carrier_back.jpg]
++Rear.
++Pull back the Spool Carrier at the rear of the printer and place the spool on it.
++[img 300px-Spool_forward.jpg]
++Carrier.
++Slide the Carrier forward.
++[img 300px-Spool_tube_feed.jpg]
++Tube.
++Feed the lose end of the filament up into the guide tube.
++[img 300px-Spool_tube_filament.jpg]
++Feed.
++Continue feeding until the filament comes out the end of the guide tube.
++[img 300px-Spool_clamped.jpg]
++Clamp.
++Lock the spool onto the Carrier with the Spool Clamp.
++[img 300px-Spool_clamped_up.jpg]
++Clamp.
++Tighten the screw to hold the clamp in position.
++Check the spool can freely rotate on the carrier
++[img 300px-Spool_pull.jpg]
++Pull.
++Pull the filament through the tube.
++[img 300px-Filament_insert.jpg]
++Insert.
++Feed it into the extruder.
++[img 300px-Filament_arm.jpg]
++Push down.
++Push down the filament idler arm and feed the filament past the gear into the feed hole.
++Feed the filament as far down as it will go.
++[img 300px-Tube_refit.jpg]
++Re-fit the tube.
++Put the guide tube back into the Bowden Coupler.
++[img 300px-Idler_tension.jpg]
++Idler.
++Adjust the tension of the Filament Idler
++Calibrating The Filament
++[img 300px-Display_temperature.jpg]
++Temperature.
++To get the best from your printer you will need to calibrate the correct number of Steps-Per-mm for each filament you wish to use. This is a very simple process and only needs to be done once for each filament spool. The increase in print quality is well worth the extra few minutes spent.
++Navigate through the Control menu, select Temperature.
++Push the knob.
++[img 300px-Display_nozzle.jpg]
++Nozzle.
++Select Nozzle:.
++Push the knob.
++[img 300px-Display_nozzle.jpg]
++210°C.
++Adjust the temperature to 210.
++Push the knob.
++Note: Check the manufacturers print temperature for the filament you want to calibrate. During this instructional section we are using E3D's Everyday PLA.
++[img 300px-Display_210.jpg]
++210°C.
++The Hotend will now heat up to 210°C.
++[img 300px-Display_40.jpg]
++40°C.
++The Hotend fan will come on at 40°C.
++If the fan does not come on check the fan wiring. If you can not immediately fix the problem turn off the printer and refer to the BigBox Troubleshooting pages.
++[img 300px-Sd_insert.jpg]
++SD Card.
++Insert the provided SD card into the side of the LCD.
++If you do not have the files pre-loaded on your SD Card they are available from http://files.e3d-online.com/BigBox/SD_Card/
++[img 300px-Display_card_inserted.jpg]
++Card Inserted.
++If the card has been inserted and detected a message will display on the screen.
++[img 300px-Filament_pull_out.jpg]
++Pull out.
++Unclip the feed tube from the Bowden Clip and pull back the tube to expose some filament.
++[img 300px-Filament_ruler.jpg]
++Ruler.
++Place a ruler against the clip and run the filament along it.
++[img 300px-Filament_mark.jpg]
++Mark.
++Using a felt-tip pen or other implement mark the filament at the 120mm (12cm) line.
++[img 300px-Display_print_from_sd.jpg]
++Print.
++Navigate the LCD menu and select Print From SD.
++[img 300px-Display_calibrate.jpg]
++calibration.
++Highlight calibration.
++Push the knob.
++[img 300px-Display_extruder_0.jpg]
++calibration.
++Highlight extruder_0.gcode.
++Check the nozzle temperature has reached 210°C and make sure the printer is free from obstruction.
++Push the knob.
++To watch a video of the calibration click here | https://youtu.be/pwVBydX4xyA
++[img 300px-Ruler_measure.jpg]
++Measure.
++When the filament has finished extruding measure the position of the mark. In this instance it reads 18mm.
++Taking our original measurement of 120mm and using some simple arithmetic we can deduce the extruder extruded 102mm, instead of the requested 100mm.
++[img 300px-304_steps.jpg]
++Current steps.
++Navigate via the menus to Control then Motion.
++Scroll to the bottom and you will see the current steps-per-mm, listed as Esteps/mm: +304.0
++To calculate the required values;
++current steps-per-mm * 100 / measured value in mm
++304 * 100 / 102 = 298
++The new steps-per-mm is 298.
++[img 300px-298_steps.jpg]
++New steps.
++Adjust the value for E to 298.
++Remember to select store memory to save the new value.
++[img 300px-Steps_correct.jpg]
++Correct.
++Re-run through the measuring portion of the calibration again.
++If the values calculated are correct the extruder should use exactly 100mm of filament.
++Note: It may take a few attempts to find the correct number of steps.
++[img 300px-Spool_steps.jpg]
++Marked.
++When you have the right value it is a good idea to write the steps-per-mm on the filament spool so you can quickly setup the printer when you change filaments.
++Note: The values for each filament will be specific to your printer. If you use your filament on another machine it is very likely the values will be different.
++Printing
++[img 300px-Sliced_benchy.jpg]
++#3DBenchy.
++We have preloaded the SD card with gcode for the #3DBenchy. The STL file is included on the card too.
++[img 300px-Display_temperatures.jpg]
++Temperatures.
++Check that the printer is clear from obstructions.
++Perform the Auto home then Level bed functions via the LCD.
++Navigate via Control - Temperatures
++Set the nozzle temperature to 210°C and the bed to 50°C.
++Wait a few minutes while the Hotend and Heated Bed warm up.
++[img 300px-Display_benchy.jpg]
++Benchy.
++Select 3DBenchy.gcode from the SD Card.
++Check the temperatures are at their required values.
++Push the knob.
++[img 300px-Benchy_printing.jpg]
++Benchy in progress.
++Action shot.
++[img 300px-Stop_printing.jpg]
++Stopped.
++If you need to stop the print for any reason, to change the offset for example, use the function via the LCD.
++[img 300px-Move_printhead.jpg]
++Move it.
++You will be able to push the Printhead out of the way by hand once the print has been stopped. I recommend moving it into the docked position.
++[img 300px-Move_begin.jpg]
++Restarted.
++Before restarting the print you need to run the Auto home sequence.
++[img 300px-Printing_running.jpg]
++Benchy.
++Smooth lines.
++[img 300px-Benchy_finished.jpg]
++Benchy finished.
++The Benchy takes 1 hour 15 minutes to complete.
++Never leave your printer unattended while it is printing.
+ Where next?
+ Back to Printer Commissioning
+-Continue to the Quick-Start Guide
++Continue to the BigBox OctoPrint Upgrade
+ Home to the BigBox Build Manual Main Index
+
+--- 20160130224103
++++ 20160401232202
+@@ -57,2 +57,3 @@
+ Calibrating The Filament
++Please note that we are using PLA during this guide. If you are using a different material please refer to the manufacturer's specification for printing temperate information.
+ [img 300px-Display_temperature.jpg]
+@@ -133,2 +134,3 @@
+ Printing
++Please note that we are using PLA during this guide. If you are using a different material please refer to the manufacturer's specification for printing temperate information.
+ [img 300px-Sliced_benchy.jpg]
+@@ -159,3 +161,3 @@
+ Restarted.
+-Before restarting the print you need to run the Auto home sequence.
++Before restarting the print you need to run the Auto home sequence and you'll also need to run Level Bed if you are using a Pro or Lite BigBox.
+ [img 300px-Printing_running.jpg]
+
+--- 20160401232202
++++ 20160807072159
+@@ -57,2 +57,10 @@
+ Calibrating The Filament
++Extruder Steps-Per-MM
++To set the Steps-Per-MM via the LCD, press the LCD knob and navigate to Control > Motion > Esteps / mm
++0.9° Stepper Motors
++Non-Titan Hybrid Extruders using the larger 0.9° Stepper Motors set the Steps-Per-MM to 304.
++Titan Hybrid Extruders using the larger 0.9° Stepper Motors set the Steps-Per-MM to 852.
++1.8° Stepper Motors
++Motors Non-Titan Hybrid Extruders using the smaller 1.8° Stepper Motors set the Steps-Per-MM to 152.
++Titan Hybrid Extruders using the smaller 1.8° Stepper Motors set the Steps-Per-MM to 417.5.
+ Please note that we are using PLA during this guide. If you are using a different material please refer to the manufacturer's specification for printing temperate information.
+@@ -120,2 +128,3 @@
+ The new steps-per-mm is 298.
++Note: This will be different for your printer.
+ [img 300px-298_steps.jpg]
+
+--- 20160807072159
++++ 20200127192243
+@@ -1 +1,4 @@
++This Wiki is not looked after anymore :( Please navigate to
++e3d-online.dozuki.com
++for up to date and improved documentation
+ Contents
+

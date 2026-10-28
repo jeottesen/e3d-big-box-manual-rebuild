@@ -1,0 +1,434 @@
+--- 20151225011832
++++ 20160106203355
+@@ -8,3 +8,3 @@
+ 7 Your First Print
+-8 Quick start guide
++8 Quick-Start Guide
+ 9 Troubleshooting
+@@ -16,35 +16,79 @@
+ Introduction
+-This documentation is currently a work-in-progress.
+-The Parts Preparation and Sub-assemblies sections are fairly well completed, however the main Step-by-Step assembly process page is still in need of a fair amount of work. We are working to get the docs completed by Monday 21st Dec. If there is anything that is un-clear please do hold-fire and ask us. Commenting on pages with suggestions and contributions to content are both greatly appreciated.
++This documentation is a work-in-progress!
++Please read the BigBox Pre-Build section before beginning to work on your BigBox. It contains important information about how to assemble your printer, a list of all the fixings with bag numbers and tools you will need.
++If you have a Factory Assembled BigBox you can skip straight to the Quick-Start Guide!
+ BigBox Pre-Build
+-The BigBox Pre-Build includes information on;
+-Bill Of Materials.
+-The list of required tools.
+-A list of recommended tools.
+-A list of consumables.
++What’s In the Box.
++Fixings Errors.
++Exploded Diagrams.
++Preparation.
++Tools required.
++Recommended tools.
++Consumables.
++Estimated Build Time.
++Health & Safety.
+ Terminology.
+-Tips & Tricks.
+-Health & Safety.
++Tips & tricks.
++Nut-Traps.
++Hex-Half Nuts in Engraved Frame Holes.
+ BigBox Parts Preparation
+-Pre-assembly and preparation of printed parts.
+-Y-Axis Components.
+-X-Axis Components.
+-Z-Axis Bed Components.
+-Single & Dual X-Carriage.
+-Spool Holders.
+-Print Fan(s).
+-Sensors.
+-IEC Cable.
++Y-Axis Rear Brackets.
++Y-Axis Front Brackets.
++Y-Axis Belt Idlers.
++Single & Dual Extruder Filament Idlers.
++X-Axis Idler Carriage.
++X-Axis Motor Mount.
++Pro & Lite X-Carriage.
++Dual X-Carriage.
++Heated Bed Corners.
++Outer Spools Rear.
++Spool Holder Outer Fronts.
++Print Cooling Fan.
++Y-Axis Motor Mount.
++IR Sensor Bracket.
++Spool Carrier Clamp.
++Z-Axis Drag Chain Anchors.
++IEC Socket.
+ BigBox Printer Sub-assemblies
+-Building sub-assemblies that will later be installed into your BigBox.
+-Single & Dual Extruders.
+-X-Axis Sub-Assembly.
+-Z-Axis Bed Sub-Assembly.
+-LCD Enclosure.
+-Electronics Base Sub-Assembly.
+-Frame Sub-Assembly.
++Single Extruder.
++Dual Extruder.
++X-Axis Assembly.
++Electronics Cover.
++Spool Carrier.
++Z-Axis Bed Assembly.
++Z-Axis Drag Chain Assembly.
++Base Assembly.
++Frame Assembly.
+ Printer main assemblies: Step By Step Assembly Process
+-Main assembly instructions for your BigBox Printer.
++Y-Axis Rear-Bar Assembly.
++Y-Axis Rear-Bar Installation.
++X-Axis / Y-Axis Assembly.
++X-Axis / Y-Axis Installation.
++X-Axis Motor Installation.
++X-Carriage (Pro & Lite).
++X-Carriage Belt.
++Y-Axis Endstop.
++Y-Axis Motor Install.
++Y-Axis Belts.
++X-Axis Cable Conduits.
++X-Axis Drag Chain.
++Frame Top.
++Cable Spine.
++Spool Holder Brackets.
++Frame Ancillaries.
++Control Connection.
++Pro / Lite Printhead Assembly.
++Dual Printhead Assembly.
++Y-Axis Motor Cable.
++Pi Camera Assembly.
++Z Axis Assembly.
++Spool Bracket Attachment.
++Attaching Base Board to Frame Assembly.
++Connecting Wiring.
++Plug in the Z motor.
++Heated Bed Wiring.
++PT100 Connection.
++Fan wiring.
++Ooze Wiper & Dump Bucket.
+ Printer Commissioning
+-Configuring your BigBox for printing.
+ Tensioning belts.
+@@ -56,8 +100,6 @@
+ Your First Print
+-Preparing a model for printing.
+-Simplify3D Settings.
+-Slicing a model.
++Slicer Profiles.
++Preparing a model.
+ Starting a print.
+-Quick start guide
+-For factory assembled BigBox Pro Printers refer to this section to get printing!
++Quick-Start Guide
+ Powering On.
+
+--- 20160106203355
++++ 20160119191318
+@@ -8,8 +8,9 @@
+ 7 Your First Print
+-8 Quick-Start Guide
+-9 Troubleshooting
+-10 Support and further advice
+-11 Software
+-12 Maintenance
+-13 BigBox printer projects
++8 BigBox OctoPrint Upgrade
++9 BigBox Quick-Start Guide
++10 BigBox Troubleshooting
++11 BigBox Support
++12 BigBox Software
++13 BigBox Maintenance
++14 BigBox printer projects
+ [img 550px-Bigbox_logo.png]
+@@ -18,3 +19,3 @@
+ Please read the BigBox Pre-Build section before beginning to work on your BigBox. It contains important information about how to assemble your printer, a list of all the fixings with bag numbers and tools you will need.
+-If you have a Factory Assembled BigBox you can skip straight to the Quick-Start Guide!
++If you have a Factory Assembled BigBox you can skip straight to Your First Print!
+ BigBox Pre-Build
+@@ -62,44 +63,54 @@
+ Printer main assemblies: Step By Step Assembly Process
+-Y-Axis Rear-Bar Assembly.
+-Y-Axis Rear-Bar Installation.
+-X-Axis / Y-Axis Assembly.
+-X-Axis / Y-Axis Installation.
+-X-Axis Motor Installation.
+-X-Carriage (Pro & Lite).
+-X-Carriage Belt.
+-Y-Axis Endstop.
+-Y-Axis Motor Install.
+-Y-Axis Belts.
+-X-Axis Cable Conduits.
+-X-Axis Drag Chain.
+-Frame Top.
+-Cable Spine.
+-Spool Holder Brackets.
+-Frame Ancillaries.
+-Control Connection.
+-Pro / Lite Printhead Assembly.
+-Dual Printhead Assembly.
+-Y-Axis Motor Cable.
+-Pi Camera Assembly.
+-Z Axis Assembly.
+-Spool Bracket Attachment.
+-Attaching Base Board to Frame Assembly.
+-Connecting Wiring.
+-Plug in the Z motor.
+-Heated Bed Wiring.
+-PT100 Connection.
+-Fan wiring.
+-Ooze Wiper & Dump Bucket.
++Y-Axis Rear-Bar Assembly
++Y-Axis Rear-Bar Installation
++X-Axis / Y-Axis Assembly
++X-Axis / Y-Axis Installation
++X-Axis Motor Installation
++X-Carriage (Pro & Lite)
++Y-Axis Endstop
++Y-Axis Motor Install
++Y-Axis Belts
++X-Axis Cable Conduits
++X-Axis Drag Chain
++Frame Top
++Spool Holder Brackets
++Cable Spine
++Frame Ancillaries
++Control Connection
++Pro / Lite Printhead Assembly
++Dual Printhead Assembly
++OctoPrint Upgrade Camera Install
++Prepping The Wiring
++Fitting The Base
++Wiring
++Power-On Test
++Tuning The Stepper Drivers
++Closing Up the Base
++Y-Axis Frame Endstop
++Z-Axis
++Ooze Wiper & Dump Bucket
++Spool Carrier
+ Printer Commissioning
+-Tensioning belts.
+-Checking for lose fixings.
+-Aligning & Levelling the Z-Axis.
+-Powering On
+-Installing OctoPi
+-Fine tuning your printer.
++Belts, Pulleys & Rods
++X-Axis
++Y-Axis
++Z-Axis
++Glass Build Plate
++Ooze Wiper
++Homing
++Zero X & Y
++Z-Axis Calibration
++Autolevelling
+ Your First Print
+-Slicer Profiles.
+-Preparing a model.
+-Starting a print.
+-Quick-Start Guide
++Loading Filament
++Calibrating The Filament
++Printing
++BigBox OctoPrint Upgrade
++Prepping the SD Card
++Terminal Configuration
++Login Options & Update
++Settings
++Plugins
++Printing
++BigBox Quick-Start Guide
+ Powering On.
+@@ -109,3 +120,3 @@
+ Starting a Print.
+-Troubleshooting
++BigBox Troubleshooting
+ Don't Panic. We'll get your BigBox working!
+@@ -116,5 +127,5 @@
+ Print quality.
+-Support and further advice
++BigBox Support
+ The best place to go for further help and advice is the BigBox forum.
+-Software
++BigBox Software
+ The BigBox software tool-chain.
+@@ -125,3 +136,3 @@
+ Repetier.
+-Maintenance
++BigBox Maintenance
+ Keeping your BigBox in tip-top condition.
+
+--- 20160119191318
++++ 20160219012812
+@@ -9,11 +9,9 @@
+ 8 BigBox OctoPrint Upgrade
+-9 BigBox Quick-Start Guide
+-10 BigBox Troubleshooting
+-11 BigBox Support
+-12 BigBox Software
+-13 BigBox Maintenance
+-14 BigBox printer projects
++9 BigBox Troubleshooting
++10 BigBox Support
++11 BigBox Software
++12 BigBox Maintenance
++13 BigBox printer projects
+ [img 550px-Bigbox_logo.png]
+ Introduction
+-This documentation is a work-in-progress!
+ Please read the BigBox Pre-Build section before beginning to work on your BigBox. It contains important information about how to assemble your printer, a list of all the fixings with bag numbers and tools you will need.
+@@ -114,8 +112,2 @@
+ Printing
+-BigBox Quick-Start Guide
+-Powering On.
+-Autolevelling.
+-Selecting the right filament.
+-Preparing a Model.
+-Starting a Print.
+ BigBox Troubleshooting
+
+--- 20160219012812
++++ 20160313202154
+@@ -9,7 +9,6 @@
+ 8 BigBox OctoPrint Upgrade
+-9 BigBox Troubleshooting
+-10 BigBox Support
+-11 BigBox Software
+-12 BigBox Maintenance
+-13 BigBox printer projects
++9 BigBox Support
++10 BigBox Software
++11 BigBox Community Generated Help & Guides
++12 BigBox printer projects
+ [img 550px-Bigbox_logo.png]
+@@ -112,9 +111,2 @@
+ Printing
+-BigBox Troubleshooting
+-Don't Panic. We'll get your BigBox working!
+-Power.
+-Motion.
+-Extrusion.
+-Bed adhesion.
+-Print quality.
+ BigBox Support
+@@ -128,11 +120,11 @@
+ Repetier.
+-BigBox Maintenance
+-Keeping your BigBox in tip-top condition.
+-Belts & Pulleys.
+-Rods & Bearings.
+-Motors.
+-Electronics.
+-Wiring.
+-HotEnd & Extruder.
++BigBox Community Generated Help & Guides
++Livi's BigBox Pre-Build Guide
++Livi's MLP Edition Exploded Diagrams (Note some may be out of date, but they are still a  great reference).
++John's 3D Build & Printing Tools
++Liam's Printed Parts Check-List
++Shao's BigBox Dual Build Log
++Using platformio to flash firmware from RPi
+ BigBox printer projects
+ Picture - A digital camera powered by the Raspberry Pi and designed to be 3D printed with a BigBox!
++Handled Drills (Hole Reamers) - Sometimes an electric drill is simply too powerful for delicate parts. The answer is a handle for your drill bits!
+
+--- 20160313202154
++++ 20160329123925
+@@ -121,2 +121,3 @@
+ BigBox Community Generated Help & Guides
++BigBox Forum | Guides, Mods, and Upgrades (A huge collection of help, tips and tricks).
+ Livi's BigBox Pre-Build Guide
+
+--- 20160329123925
++++ 20160519190054
+@@ -2,13 +2,14 @@
+ 1 Introduction
+-2 BigBox Pre-Build
+-3 BigBox Parts Preparation
+-4 BigBox Printer Sub-assemblies
+-5 Printer main assemblies: Step By Step Assembly Process
+-6 Printer Commissioning
+-7 Your First Print
+-8 BigBox OctoPrint Upgrade
+-9 BigBox Support
+-10 BigBox Software
+-11 BigBox Community Generated Help & Guides
+-12 BigBox printer projects
++2 Design Files - Plans & Parts List
++3 BigBox Pre-Build
++4 BigBox Parts Preparation
++5 BigBox Printer Sub-assemblies
++6 Printer main assemblies: Step By Step Assembly Process
++7 Printer Commissioning
++8 Your First Print
++9 BigBox OctoPrint Upgrade
++10 BigBox Support
++11 BigBox Software
++12 BigBox Community Generated Help & Guides
++13 BigBox printer projects
+ [img 550px-Bigbox_logo.png]
+@@ -17,2 +18,4 @@
+ If you have a Factory Assembled BigBox you can skip straight to Your First Print!
++Design Files - Plans & Parts List
++The BigBox Design Files are available from Thingiverse at | https://www.thingiverse.com/thing:1521722
+ BigBox Pre-Build
+
+--- 20160519190054
++++ 20160616135235
+@@ -2,14 +2,15 @@
+ 1 Introduction
+-2 Design Files - Plans & Parts List
+-3 BigBox Pre-Build
+-4 BigBox Parts Preparation
+-5 BigBox Printer Sub-assemblies
+-6 Printer main assemblies: Step By Step Assembly Process
+-7 Printer Commissioning
+-8 Your First Print
+-9 BigBox OctoPrint Upgrade
+-10 BigBox Support
+-11 BigBox Software
+-12 BigBox Community Generated Help & Guides
+-13 BigBox printer projects
++2 BigBox Versions Overview
++3 Design Files - Plans & Parts List
++4 BigBox Pre-Build
++5 BigBox Parts Preparation
++6 BigBox Printer Sub-assemblies
++7 Printer main assemblies: Step By Step Assembly Process
++8 Printer Commissioning
++9 Your First Print
++10 BigBox OctoPrint Upgrade
++11 BigBox Support
++12 BigBox Software
++13 BigBox Community Generated Help & Guides
++14 BigBox printer projects
+ [img 550px-Bigbox_logo.png]
+@@ -18,2 +19,15 @@
+ If you have a Factory Assembled BigBox you can skip straight to Your First Print!
++BigBox Versions Overview
++E3D supported versions
++BigBox Pro
++BigBox Dual
++BigBox Pro Hybrid Titan
++BigBox Dual Hybrid Titan
++Derived versions
++BigBox Pro Hybrid
++BigBox Dual Hybrid
++Special (community built) versions
++BigBox Dual Hybrid Titan Mirrored
++Remarks
++Kickstarter upgrade to Hybrid/V1.1
+ Design Files - Plans & Parts List
+
+--- 20160616135235
++++ 20191022143926
+@@ -1 +1,4 @@
++This Wiki is not looked after anymore :( Please navigate to
++e3d-online.dozuki.com
++for up to date and improved documentation
+ Contents
+

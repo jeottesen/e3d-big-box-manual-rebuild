@@ -1,0 +1,48 @@
+--- 20160120094151
++++ 20160703140937
+@@ -9,14 +9,10 @@
+ Marlin is a firmware for RepRap 3D printers, the software that resides on the controller board and controls the input/output, voltage states, and movement of the 3D printer.
+-The firmware is available for download and is pre-configured for your BigBox including things like PID settings. We will periodically update this software as the need arises so consider subscribing to the repository.
+-BigBox Pro Firmware - Github Repo
+-BigBox Dual Firmware - Github Repo
++The firmware is available for download and is pre-configured for your BigBox including things like PID settings. We will periodically update this software as the need arises so consider subscribing to the repositories.
++github.com/BigBox3D
++The source has been configured for use in Dual machines by default, you will need to change the config files if you are running a Pro. Search for BigBox tags to find the settings that need alterations.
++For instructions on flashing the firmware read the | Firmware Flashing Guide on the forum.
++We have precompiled version-specific firmware builds and uploaded them to GitHub | github.com/BigBox3D/Firmware
+ BigBox Slicer Profiles
+ Simplify3D
+-The provided profiles are centered around printing E3D's Everyday PLA, you will need to adjust the profile settings to suite your chosen filament.
+-Pro.fff
+-This is the standard profile for Pro & Lite BigBox Printers.
+-Dual.fff
+-This is the standard profile for Dual BigBox Printers.
+-Dual Experimental.fff
+-This profile features an experimental Layer-Change script which removed the need to use a Prime-Pillar or an Ooze-Sheild. Use with caution. Note: This profile should only be used when printing with both extruders and using two filaments. Choosing this profile when only one extruder is in use will cause errors with your prints. You will need to change the steps-per-mm in the Tool Change Script to match your filaments.
++Simplify3D profiles are available from GitHub | github.com/BigBox3D/Simplify3D
+ Slic3r
+
+--- 20160703140937
++++ 20160807072149
+@@ -11,8 +11,8 @@
+ github.com/BigBox3D
+-The source has been configured for use in Dual machines by default, you will need to change the config files if you are running a Pro. Search for BigBox tags to find the settings that need alterations.
+-For instructions on flashing the firmware read the | Firmware Flashing Guide on the forum.
+-We have precompiled version-specific firmware builds and uploaded them to GitHub | github.com/BigBox3D/Firmware
++The source is configured for the current production state of the BigBox, you may have to alter it if you have a different setup. Have look at the branches for the four support setups.
++For instructions on flashing the firmware read the BigBox Firmware Flashing Guide.
++We have precompiled version-specific firmware builds and uploaded them to GitHub BigBox Marlin Firmware Releases.
+ BigBox Slicer Profiles
+ Simplify3D
+-Simplify3D profiles are available from GitHub | github.com/BigBox3D/Simplify3D
++Simplify3D profiles are available in our Settings repository for Simplify3D on GitHub.
+ Slic3r
+
+--- 20160807072149
++++ 20190723040448
+@@ -1 +1,4 @@
++This Wiki is not looked after anymore :( Please navigate to
++e3d-online.dozuki.com
++for up to date and improved documentation
+ Contents
+

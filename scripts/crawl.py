@@ -1,13 +1,10 @@
 #!/usr/bin/env python3
-"""Fetch the E3D BigBox wiki from the Wayback Machine using its CDX API.
+"""Wayback Machine helpers used by fetch.py and fetch_files.py: polite fetching, the CDX image inventory,
+the BIGBOX_SEED layer, and choosing and downloading images.
 
-1. inventory: two bulk CDX queries list every captured wiki page and image (cached in raw/cdx_*.json).
-2. pages: crawl from BigBox_Build_Manual, fetching the capture nearest TARGET by exact timestamp.
-3. images: for each image used, prefer the full-res original path, else the widest archived thumbnail.
-
-Polite by design: one connection, fixed delay, Retry-After honoured, exponential backoff,
-aborts after repeated failures. Everything is cached so re-runs only fetch what is missing.
-Run:  python3 -I scripts/crawl.py [inventory|pages|images|all]
+Polite by design: one connection, fixed delay, Retry-After honoured, exponential backoff, abort after repeated
+failures. Image choice: the full-size original if the archive has it, else the widest archived thumbnail.
+Not run directly; see scripts/README.md.
 """
 import gzip, json, os, re, shutil, sys, time, html, urllib.request, urllib.parse, urllib.error
 
@@ -82,66 +79,11 @@ def inventory(names=('wiki', 'index', 'images')):
         out[name] = json.load(open(path))
     return out
 
-def index(rows, keyf):
-    idx = {}
-    for ts, orig, *_ in rows:
-        idx.setdefault(keyf(orig), []).append((ts, orig))
-    return idx
-
 def nearest(caps, target=TARGET):
     return min(caps, key=lambda c: abs(int(c[0]) - int(target)))
 
-# ---------- 2. pages ----------
+# pages the manual does not follow (other E3D products)
 OTHER = re.compile(r'^(Main_Page|FAQs|CAD|E3D|Cyclops|Kraken|Ultimaker|Acceptable_Guide|Frame_Fixings)|v6|Lite6|PT100', re.I)
-
-def slug(t): return urllib.parse.unquote(t).replace('/', '_')
-def title_of(orig):
-    u = urllib.parse.urlparse(orig)
-    if '/wiki/' in u.path:
-        return urllib.parse.unquote(u.path.split('/wiki/', 1)[1]).replace(' ', '_')
-    q = urllib.parse.parse_qs(u.query)  # plain index.php?title=X only (no action=, oldid=, ...)
-    return q['title'][0].replace(' ', '_') if list(q) == ['title'] else None
-
-def page_links(h):
-    m = re.search(r'id="mw-content-text".*?<div class="printfooter"', h, re.S) or re.search(r'id="mw-content-text".*', h, re.S)
-    out = set()
-    for href in re.findall(r'href="(?:https?://wiki\.e3d-online\.com)?(/wiki/[^"#?]+)"', m.group(0) if m else h):
-        t = urllib.parse.unquote(html.unescape(href)[6:])
-        if ':' in t.split('/')[0] or t.endswith('.jpg'): continue  # Special:, Talk:, File:, ...
-        out.add(t)
-    return out
-
-def pages(inv):
-    os.makedirs(f'{RAW}/pages', exist_ok=True)
-    rows = [r for r in inv['wiki'] + inv['index'] if title_of(r[1])]
-    idx = index(rows, lambda o: title_of(o).lower())
-    log_path = f'{RAW}/pages.json'
-    log = json.load(open(log_path)) if os.path.exists(log_path) else {}
-    todo, seen, skipped = ['BigBox_Build_Manual'], set(), set()
-    while todo:
-        t = todo.pop()
-        if t.lower() in seen: continue
-        seen.add(t.lower())
-        cache = f'{RAW}/pages/{slug(t)}.html'
-        if os.path.exists(cache):
-            h = open(cache).read()
-        else:
-            caps = idx.get(t.lower())
-            if not caps:
-                log[t] = {'status': 'not-in-archive'}; print(t, 'NOT IN ARCHIVE', flush=True); continue
-            ts, orig = nearest(caps)
-            st, h = get(snap(orig, ts, 'id_'))
-            log[t] = {'status': st, 'snapshot': ts, 'url': orig}
-            print(t, st, ts, flush=True)
-            if h:
-                open(cache, 'w').write(h)
-                json.dump(log, open(log_path, 'w'), indent=1)
-        if not h: continue
-        for l in page_links(h):
-            (skipped if OTHER.search(l) else set()).add(l)
-            if not OTHER.search(l): todo.append(l)
-    json.dump(log, open(log_path, 'w'), indent=1)
-    json.dump(sorted(skipped), open(f'{RAW}/skipped_other_products.json', 'w'), indent=1)
 
 # ---------- 3. images ----------
 def orig_path(path):
@@ -149,21 +91,10 @@ def orig_path(path):
     m = re.match(r'(/images)/thumb/(.+?)/[^/]+$', path)
     return f'{m.group(1)}/{m.group(2)}' if m else path
 
-def all_saved_pages():
-    """(name, path) of every saved page and version in the data folder."""
-    pdir = f'{RAW}/pages'
-    files = [(f[:-5], f'{pdir}/{f}') for f in sorted(os.listdir(pdir))] if os.path.isdir(pdir) else []
-    vdir = f'{RAW}/versions'   # every archived version too: older versions hold images later removed
-    if os.path.isdir(vdir):
-        for t in sorted(os.listdir(vdir)):
-            if os.path.isdir(f'{vdir}/{t}'):
-                files += [(t, f'{vdir}/{t}/{v}') for v in sorted(os.listdir(f'{vdir}/{t}')) if v.endswith('.html')]
-    return files
-
-def images_used(files=None):
-    """Image file -> pages using it, over the given (name, path) list or every saved page and version."""
+def images_used(files):
+    """Image file -> pages using it, over the given (name, path) list of saved page versions."""
     used = {}
-    for name, path in (all_saved_pages() if files is None else files):
+    for name, path in files:
         h = open(path).read()
         m = re.search(r'id="mw-content-text".*?<div class="printfooter"', h, re.S)
         for tag in re.findall(r'<img[^>]*>', m.group(0) if m else h):
@@ -177,7 +108,7 @@ def images_used(files=None):
 def width(p):
     m = re.search(r'/(\d+)px-[^/]+$', p); return int(m.group(1)) if m else 0
 
-def images(inv, files=None):
+def images(inv, files):
     seed_man = json.load(open(f'{SEED}/images.json')) if SEED and os.path.exists(f'{SEED}/images.json') else {}
     caps = {}
     for ts, orig, *_ in inv['images']:
@@ -213,9 +144,3 @@ def images(inv, files=None):
         man[fname] = rec
         print(fname, rec['kind'], rec.get('bytes', 0), flush=True)
         json.dump(man, open(mpath, 'w'), indent=1)
-
-if __name__ == '__main__':
-    step = sys.argv[1] if len(sys.argv) > 1 else 'all'
-    inv = inventory()
-    if step in ('pages', 'all'): pages(inv)
-    if step in ('images', 'all'): images(inv)

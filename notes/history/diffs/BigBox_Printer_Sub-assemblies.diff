@@ -1,0 +1,849 @@
+--- 20151225025355
++++ 20160110121514
+@@ -7,21 +7,22 @@
+ 6 Z-Axis Bed Assembly
+-7 Base Assembly
+-7.1 Microbarb Brass Inserts
+-7.2 Feet
+-7.3 Power Supply Unit (PSU)
+-7.4 Rumba
+-7.5 PT100 Amplifier(s)
+-7.5.1 Pro & Lite Single Extruder
+-7.5.2 Dual Single Extruder
+-7.6 PSU - Rumba Wiring
+-7.7 PT100 Wiring
+-7.7.1 Pro & Lite Single Extruder
+-7.7.2 Dual Double Extruders
+-7.8 OctoPrint Upgrades
+-7.9 Z-Axis Cables
+-8 Frame Assembly
+-8.1 A Note on Nut-Traps
+-8.2 Main Frame
+-8.3 The LCD Enclosure
+-9 Where next?
++7 Z-Axis Drag Chain Assembly
++8 Base Assembly
++8.1 Microbarb Brass Inserts
++8.2 Feet
++8.3 Power Supply Unit (PSU)
++8.4 Rumba
++8.5 PT100 Amplifier(s)
++8.5.1 Pro & Lite Single Extruder
++8.5.2 Dual Single Extruder
++8.6 PSU - Rumba Wiring
++8.7 PT100 Wiring
++8.7.1 Pro & Lite Single Extruder
++8.7.2 Dual Double Extruders
++8.8 OctoPrint Upgrades
++8.9 Z-Axis Cables
++9 Frame Assembly
++9.1 A Note on Nut-Traps
++9.2 Main Frame
++9.3 The LCD Enclosure
++10 Where next?
+ Single Extruder
+@@ -44,3 +45,3 @@
+ Note how the couplers (15) assemble with the lettering facing upwards.
+-Fit the Motors to the Extruder before fitting the Filament Idlers.
++Fit the Motors (0.9°) to the Extruder before fitting the Filament Idlers.
+ The Motor Cable Connector faces downwards.
+@@ -64,3 +65,3 @@
+ Spool Carrier
+-800px
++[img 800px-Spool_carrier_exploded.jpg]
+ [img 300px-Assembled_spool_carrier.jpg]
+@@ -154,2 +155,23 @@
+ The Heated Bed PCB correctly installed to the Z-Axis Bed assembly.
++Z-Axis Drag Chain Assembly
++[img 300px-Z_drag_parts.jpg]
++Components.
++1 x Drag Chain (Motion Box).
++2 x Z-Axis Drag Chain Anchors.
++1 x Heated Bed Wiring (Electronics Box).
++[img 300px-Z_drag_end.jpg]
++Match Ends.
++Select the Heated Bed Drag Anchor (shown in the image) and match it to the corresponding end of the Drag Chain.
++[img 300px-Z_drag_end_feed.jpg]
++Cable Ends.
++Feed the end of the wires through the Drag Chain.
++[img 300px-Z_drag_end_through.jpg]
++Wires through the Drag Chain.
++Pull the cable fully through.
++[img 300px-Z_drag_end_attached.jpg]
++End attached.
++Reattach the Heated Bed Drag Chain Anchor.
++[img 300px-Z_drag_complete.jpg]
++Finished.
++To finish the Drag Chain reattach the remaining anchor to the chain.
+ Base Assembly
+@@ -194,3 +216,3 @@
+ Power Selector.
+-Check the A/C power supply in your country and move the switch to match. The PSU is set to 230V by default.
++Check the mains A/C power supply in your country and move the switch to match. The PSU is set to 230V by default.
+ [img 300px-Fixed_psu.jpg]
+@@ -454,2 +476,3 @@
+ The LCD is now complete.
++You can now mount the LCD to the Frame.
+ Where next?
+
+--- 20160110121514
++++ 20160116202132
+@@ -18,4 +18,4 @@
+ 8.7 PT100 Wiring
+-8.7.1 Pro & Lite Single Extruder
+-8.7.2 Dual Double Extruders
++8.7.1 Pro & Lite | Single Extruder
++8.7.2 Dual | Double Extruders
+ 8.8 OctoPrint Upgrades
+@@ -132,2 +132,3 @@
+ Fit the M3 screws through the bed. Do not over-tighten the screws. Leave the two screw holes free at the back of the bed where the drag chain will eventually connect.
++Note: Leave the two M3 35mm Screws in each corner, which screw through the  Bed Corners, lose for now. They will be tightened later in the build manual.
+ [img 300px-Bed_side.jpg]
+@@ -141,3 +142,3 @@
+ 4 x M3 15mm Female-Female Stand-Offs (Bag 16).
+-screw four 15mm Stand-Off on each corner. Do not screw them all the way down, leave a 2-3mm gap at the bottom.
++Screw four 15mm Stand-Off on each corner. Do not screw them all the way down, leave a 2-3mm gap at the bottom.
+ [img 300px-Bed.jpg]
+@@ -283,3 +284,3 @@
+ PT100 Wiring
+-Pro & Lite Single Extruder
++Pro & Lite | Single Extruder
+ [img 300px-Single_pt100_wire.jpg]
+@@ -291,3 +292,3 @@
+ Check the cable is correctly plugged to the Rumba, refer to the Rumba Schematic (COMING SOON).
+-Dual Double Extruders
++Dual | Double Extruders
+ [img 300px-Dual_pt100_wire.jpg]
+@@ -402,2 +403,4 @@
+ Do not over-tighten the nut-traps. As soon as you feel them tighten up, an extra quarter of a turn is all you need. Over-tightening can lead to failure of the part(s).
++[img 300px-Nut_traps.jpg]
++The Nut Traps are available to download from Thingiverse.
+ [img 300px-FRAME-LUG_Photo.jpg]
+
+--- 20160116202132
++++ 20160123233053
+@@ -316,3 +316,3 @@
+ 4 x 5mm Nylon Spacers (Bag 1).
+-Attach the DC/DC Converter to the Base with the screw terminals facing towards the Rumba.
++Attach the Raspberry Pi to the Base with the USB Ports facing towards the Rumba.
+ [img 300px-Pi_wires.jpg]
+
+--- 20160123233053
++++ 20160201191614
+@@ -75,2 +75,3 @@
+ 8 x M3 Lock-Washers (Bag 6).
++Before starting this step please read through this post on google+. This only applies to the first 20-30 kits which were sent out before we paused shipping. If you are unsure please visit the forum at forum.e3d-online.com.
+ Install the two Brass Nuts to the Top layer of the heated bed.
+@@ -121,2 +122,8 @@
+ Slot the struts into the bottom layer.
++[img 300px-Ends_x.jpg]
++Centres.
++2 x Drive Supports (Printed Parts).
++1 x Bed Centre (Printed Part).
++Place the two Drive Supports so they slot into the two Struts.
++Place the Centre as shown.
+ [img 300px-Fit_top.jpg]
+@@ -133,5 +140,2 @@
+ Note: Leave the two M3 35mm Screws in each corner, which screw through the  Bed Corners, lose for now. They will be tightened later in the build manual.
+-[img 300px-Bed_side.jpg]
+-Side View.
+-There should be no bending of the top and bottom layers.
+ [img 300px-Position_bearings.jpg]
+
+--- 20160201191614
++++ 20160301023859
+@@ -32,2 +32,3 @@
+ Note how the coupler (14) assembles with the lettering facing upwards.
++Note: The couplers are in the Extruder Box.
+ [img 300px-Fitted_coupler.jpg]
+@@ -38,2 +39,3 @@
+ The Motor Cable Connector faces downwards.
++For detailed assembly instructions please refer below to the Dual Extruder.
+ Fit the Extruder Filament Idler, assembled during the previous assembly stage, to the extruder after the motor has been attached.
+@@ -41,3 +43,2 @@
+ [img 800px-EXTRUDER_DUAL.jpg]
+-This Section is still being edited
+ [img 300px-Bowden_coupler_apart.jpg]
+@@ -45,4 +46,72 @@
+ Note how the couplers (15) assemble with the lettering facing upwards.
+-Fit the Motors (0.9°) to the Extruder before fitting the Filament Idlers.
+-The Motor Cable Connector faces downwards.
++Note: The couplers are in the Extruder Box, the Dual requires two.
++[img 300px-Dual_springs.jpg]
++Tension Springs.
++2 x M4 30mm (Bag 17).
++2 x M4 Square Nut (Bag 12).
++2 x M4 Washer (Bag 13).
++Build two Filament Idler Tension Springs as shown.
++[img 300px-Dual_parts.jpg]
++Tension Springs.
++Fit two bowden couplers in the Left & Right Cable Brackets.
++Assemble the parts required to build the Dual Extruder Top. Refer to the Exploded Diagram.
++[img 300px-Dual_right.jpg]
++Right Cable Bracket.
++1 x M3 10mm Screw (Bag 9).
++1 x Right Cable Bracket (Printed Part).
++Fit the M3 10mm Screw into the assembly.
++[img 300px-Dual_right_motor.jpg]
++Motor.
++Loosely attach the motor.
++[img 300px-Dual_motors.jpg]
++Both Motors.
++Repeat on the other side.
++[img 300px-Dual_idlers.jpg]
++Idlers.
++2 X M3 35mm Screw (Bag 11).
++Slot in the Extruder Idlers. They can be a bit tricky.
++Secure each one with an M3 35mm Screw.
++[img 300px-Dual_motors_screw.jpg]
++Screws.
++2 X M3 35mm Screw (Bag 11).
++2 X M3 25mm Screw (Bag 7).
++Fit the remaining screws to secure the motors.
++Tighten the M3 10mm Screw hidden behind the Idlers.
++[img 300px-Dual_idler_spring.jpg]
++Idler Spring.
++Position an idlers spring as shown.
++[img 300px-Dual_idler_spring_compress.jpg]
++Compress.
++Compress the spring and push the screw into the slot in the Idler.
++[img 300px-Dual_idler_spring_fit.jpg]
++Fitted.
++The washer sits in a recess in the Idler.
++[img 300px-Dual_idler_other.jpg]
++Fitted.
++Repeat with the other side.
++[img 300px-Dual_hob.jpg]
++Hob.
++2 x M3 3mm Grub Screw (Bag 17).
++2 x HobGoblin (Extruder Box).
++Assemble two Hobs.
++[img 300px-Dual_shaft.jpg]
++shaft.
++Using pliers gently grab one of the Motor shafts.
++[img 300px-Dual_shaft_rotated.jpg]
++Rotate.
++Position the shaft with the flat facing towards the spring.
++[img 300px-Dual_shaft_hub_fitted.jpg]
++Hobbed.
++Fit the hob over the shaft with the grub closest to the motor.
++Gently screw in the grub, do not do it up, the hob needs to be able to move along the shaft.
++[img 300px-Dual_filament.jpg]
++Filament.
++Feed the length of scrap filament through the extruder.
++Move the filament backwards and forwards, the hob should centre itself to the filament path.
++[img 300px-Dual_grub_tight.jpg]
++Filament track.
++Tighten the grub screw when you are happy with the position.
++[img 300px-Dual_both_extruders.jpg]
++Finished.
++Repeat with the other extruder.
+ X-Axis Assembly
+@@ -52,3 +121,4 @@
+ Place the previously assembled X-Axis Idler Carriage on it's back with the two holes facing upwards and into each of the two holes insert a 484mm rod.
+-Slide an LM8LUU bearing onto each rod. Now slide the X-Axis Motor Mount onto the rods, checking the orientation is correct before you do so.
++Slide an LM8LUU (8mm ID x 15mm OD x 45mm W) bearing onto each rod. Now slide the X-Axis Motor Mount onto the rods, checking the orientation is correct before you do so.
++Do not tighten the screws in the rod clamps. This is done at a later stage.
+ Electronics Cover
+@@ -92,3 +162,3 @@
+ Screwed corner.
+-3 x M3 16mm Screws (Bag 10).
++3 x M3 18mm Screws (Bag 8).
+ 3 x M3 Lock Screws (Bag 6).
+@@ -98,3 +168,3 @@
+ M3 20mm.
+-1 x M3 20mm Screw (Bag 8).
++1 x M3 20mm Screw (Bag 9).
+ Insert the M3 screw from the underneath of the Top layer.
+@@ -125,12 +195,6 @@
+ 2 x Drive Supports (Printed Parts).
+-1 x Bed Centre (Printed Part).
+ Place the two Drive Supports so they slot into the two Struts.
+-Place the Centre as shown.
+-[img 300px-Fit_top.jpg]
+-Top Layer.
+-1 x Completed Top layer.
+-Place the Top Layer onto the struts making sure the alignment is correct.
+-Check the top layer matches the same orientation as the Bottom Layer.
+ [img 300px-Insert_screws.jpg]
+ Screws.
++1 x Completed Top layer.
+ 15 x M3 35mm Screws (Bag 11).
+@@ -138,2 +202,4 @@
+ 15 x M3 Half Nuts (Bag 5).
++Place the Top Layer onto the struts making sure the alignment is correct.
++Check the top layer matches the same orientation as the Bottom Layer.
+ Fit the M3 screws through the bed. Do not over-tighten the screws. Leave the two screw holes free at the back of the bed where the drag chain will eventually connect.
+@@ -143,2 +209,3 @@
+ The four bearings need to be moved so that the top of the bearings are level with the top of the screws. Using a ruler can help with the alignment.
++When in position tighten the bearing clamps.
+ [img 300px-Bed_standoffs.jpg]
+@@ -479,2 +546,3 @@
+ The LCD showing the SD slot.
++Fit the Top and Bottom panels to the LCD Enclosure.
+ Check the position of the left side to ensure the opening lines up with the SD slot.
+
+--- 20160301023859
++++ 20160313202238
+@@ -141,3 +141,3 @@
+ [img 300px-Fitted_brass_nut.jpg]
+-Brass Nut.
++Brass Nut. Shown with engraved text down.
+ 2 x Brass Nuts (Motion Box).
+@@ -147,3 +147,3 @@
+ Install the two Brass Nuts to the Top layer of the heated bed.
+-Make sure the nuts are attached to the side with the text engraved.
++Insert the Brass Nuts from the underneath side of the Top Layer of the heated bed (The flange should be on the side with the engraved text).
+ [img 300px-Lock_nut.jpg]
+@@ -204,3 +204,3 @@
+ Check the top layer matches the same orientation as the Bottom Layer.
+-Fit the M3 screws through the bed. Do not over-tighten the screws. Leave the two screw holes free at the back of the bed where the drag chain will eventually connect.
++Fit the M3 screws through the bed, from the top. Do not over-tighten the screws. Leave the two screw holes free at the back of the bed where the drag chain will eventually connect.
+ Note: Leave the two M3 35mm Screws in each corner, which screw through the  Bed Corners, lose for now. They will be tightened later in the build manual.
+@@ -263,3 +263,3 @@
+ Microbarb inserted.
+-They may need hammering into place.
++Be careful hammering the microbarbs into place, it is possible to crack the acrylic.  You can use a nylon spacer and an appropriate size screw to pull them into place.
+ [img 300px-All_base_microbarb.jpg]
+
+--- 20160313202238
++++ 20160331113526
+@@ -32,3 +32,3 @@
+ Note how the coupler (14) assembles with the lettering facing upwards.
+-Note: The couplers are in the Extruder Box.
++Note : The couplers are in the Extruder Box.
+ [img 300px-Fitted_coupler.jpg]
+@@ -39,3 +39,3 @@
+ The Motor Cable Connector faces downwards.
+-For detailed assembly instructions please refer below to the Dual Extruder.
++Note : For detailed assembly instructions please refer below to the Dual Extruder.
+ Fit the Extruder Filament Idler, assembled during the previous assembly stage, to the extruder after the motor has been attached.
+@@ -46,3 +46,3 @@
+ Note how the couplers (15) assemble with the lettering facing upwards.
+-Note: The couplers are in the Extruder Box, the Dual requires two.
++Note : The couplers are in the Extruder Box, the Dual requires two.
+ [img 300px-Dual_springs.jpg]
+@@ -138,3 +138,3 @@
+ A complete Spool Carrier
+-The Dual BigBox requires two Spool Carriers.
++Note : The Dual BigBox requires two Spool Carriers.
+ Z-Axis Bed Assembly
+@@ -163,3 +163,3 @@
+ 3 x M3 18mm Screws (Bag 8).
+-3 x M3 Lock Screws (Bag 6).
++3 x M3 Lock-Washers (Bag 6).
+ 3 x M3 Half Nuts (Bag 5).
+@@ -205,3 +205,3 @@
+ Fit the M3 screws through the bed, from the top. Do not over-tighten the screws. Leave the two screw holes free at the back of the bed where the drag chain will eventually connect.
+-Note: Leave the two M3 35mm Screws in each corner, which screw through the  Bed Corners, lose for now. They will be tightened later in the build manual.
++Note : Leave the two M3 35mm Screws in each corner, which screw through the  Bed Corners, lose for now. They will be tightened later in the build manual.
+ [img 300px-Position_bearings.jpg]
+@@ -209,2 +209,3 @@
+ The four bearings need to be moved so that the top of the bearings are level with the top of the screws. Using a ruler can help with the alignment.
++By placing a 3mm Allen key between the slots on the bearing holder and carefully applying a small amount of GENTLE pressure it allows the bearings to move more freely.
+ When in position tighten the bearing clamps.
+@@ -218,3 +219,3 @@
+ Place the Heated Bed PCB onto the Bed assembly.
+-Note the orientation of the PCB Bed and the Z-Axis Assembly.
++Note : Check the orientation of the PCB Bed and the Z-Axis Assembly.
+ [img 300px-Bed_fixings.jpg]
+@@ -250,3 +251,3 @@
+ Microbarb Brass Inserts
+-Before you can start to build the base plate you will need to install a selection of Microbarbs Brass Inserts. Please refer to the guides below when fitting the inserts.
++Before you can start to build the base plate you will need to install a selection of Microbarbs Brass Inserts. Please refer to the guides below when fitting the inserts. There are three different sizes.
+ You will be fitting inserts from both sides of the base plate. The side of the sheet with engraving / text on it is referred to as the top.
+@@ -255,2 +256,3 @@
+ Fitment pattern for the Feet.
++M3 Microbarbs (Bag 5)
+ [img 300px-Rumba_microbarb.jpg]
+@@ -258,2 +260,3 @@
+ Fitment pattern for the Rumba & PT100(s).
++M3 Microbarbs (Bag 5)
+ [img 300px-Rpi_microbarb.jpg]
+@@ -261,5 +264,7 @@
+ Fitment pattern for the Raspberry Pi & DC/DC Converter, only applicable if you have the OctoPrint upgrade.
++M2 Microbarbs (Bag 2), M2.5 Microbarbs (Bag 4)
++Don't worry if the smallest inserts don't stay put (found to happen with acrylic). Put them aside and then use your hand to hold them in place when it comes time to screw into them when the Pi is fitted.
+ [img 300px-Base_microbarb.jpg]
+ Microbarb inserted.
+-Be careful hammering the microbarbs into place, it is possible to crack the acrylic.  You can use a nylon spacer and an appropriate size screw to pull them into place.
++Be careful hammering the microbarbs into place, it is possible to crack the acrylic.  You can use a nylon spacer and an appropriate size screw to pull them into place. A 3/16 socket is ideal in place of a nylon spacer.
+ [img 300px-All_base_microbarb.jpg]
+@@ -267,3 +272,3 @@
+ All brass inserts fitted.
+-Note: Inserts are fitted to both sides of the base.
++Note : Inserts are fitted to both sides of the base.
+ Feet
+@@ -272,3 +277,3 @@
+ 8 x M3 10mm Screws (Bag 8).
+-8 x Printed Feet.
++8 x Printed Feet (Printed Parts Box).
+ Begin by fixing the feet to the base with 8 x M3 10mm screws.
+@@ -288,3 +293,4 @@
+ Power Selector.
+-Check the mains A/C power supply in your country and move the switch to match. The PSU is set to 230V by default.
++Check the mains A/C power supply in your country and move the switch to match.
++Note : The PSU is set to 230V by default.
+ [img 300px-Fixed_psu.jpg]
+@@ -308,4 +314,4 @@
+ PT100 & Cable.
+-A PT100 Amplifier Board.
+-Single Amplifier Cable.
++A PT100 Amplifier Board. (Extruder Box)
++Single Amplifier Cable. (Extruder Box)
+ [img 300px-Fitted_single_pt100-amp.jpg]
+@@ -367,2 +373,3 @@
+ Connect the cable to the PT100.
++Note the different colours of the two cables connected to the PT100 boards
+ [img 300px-Dual_pt100_wire-to_rumba.jpg]
+@@ -377,3 +384,4 @@
+ DC/DC Converter.
+-Remove the Raspberry Pi and DC/DC Converter from their packaging. The 8gb SD Card is in the same bag as the Raspberry Pi, keep it somewhere safe for a later stage.
++Remove the Raspberry Pi and DC/DC Converter from their packaging.
++The 8gb SD Card is in the same bag as the Raspberry Pi, keep it somewhere safe for a later stage.
+ [img 300px-Dc_converter.jpg]
+@@ -474,2 +482,3 @@
+ Do not over-tighten the nut-traps. As soon as you feel them tighten up, an extra quarter of a turn is all you need. Over-tightening can lead to failure of the part(s).
++Tip : there are approximatly 150 NUT traps used in the frame assembly. it us recommended that the nuts are held in place by either superglue or tape. doing this in advance save a lot of time and expletives later on.
+ [img 300px-Nut_traps.jpg]
+
+--- 20160331113526
++++ 20160501231911
+@@ -1,29 +1,33 @@
+ Contents
+-1 Single Extruder
+-2 Dual Extruder
+-3 X-Axis Assembly
+-4 Electronics Cover
+-5 Spool Carrier
+-6 Z-Axis Bed Assembly
+-7 Z-Axis Drag Chain Assembly
+-8 Base Assembly
+-8.1 Microbarb Brass Inserts
+-8.2 Feet
+-8.3 Power Supply Unit (PSU)
+-8.4 Rumba
+-8.5 PT100 Amplifier(s)
+-8.5.1 Pro & Lite Single Extruder
+-8.5.2 Dual Single Extruder
+-8.6 PSU - Rumba Wiring
+-8.7 PT100 Wiring
+-8.7.1 Pro & Lite | Single Extruder
+-8.7.2 Dual | Double Extruders
+-8.8 OctoPrint Upgrades
+-8.9 Z-Axis Cables
+-9 Frame Assembly
+-9.1 A Note on Nut-Traps
+-9.2 Main Frame
+-9.3 The LCD Enclosure
+-10 Where next?
+-Single Extruder
++1 Single Direct-Drive Extruder
++2 Dual Direct-Drive Extruders
++3 Hybrid Titan Extruder (Direct)
++4 Hybrid Titan Extruder (Bowden)
++5 Hybrid Non-Titan Extruder (Direct)
++6 Hybrid Non-Titan Extruder (Bowden)
++7 X-Axis Assembly
++8 Electronics Cover
++9 Spool Carrier
++10 Z-Axis Bed Assembly
++11 Z-Axis Drag Chain Assembly
++12 Base Assembly
++12.1 Microbarb Brass Inserts
++12.2 Feet
++12.3 Power Supply Unit (PSU)
++12.4 Rumba
++12.5 PT100 Amplifier(s)
++12.5.1 Single Extruder
++12.5.2 Dual Single Extruder
++12.6 PSU - Rumba Wiring
++12.7 PT100 Wiring
++12.7.1 Single Extruder
++12.7.2 Dual Extruders
++12.8 OctoPrint Upgrades
++12.9 Z-Axis Cables
++13 Frame Assembly
++13.1 A Note on Nut-Traps
++13.2 Main Frame
++13.3 The LCD Enclosure
++14 Where next?
++Single Direct-Drive Extruder
+ [img 800px-EXTRUDER_SINGLE.jpg]
+@@ -36,2 +40,4 @@
+ The bowden is pushed into the cable bracket.
++You can see it fitted flush with the top surface in the next picture.
++The function of the bowden coupler (when the inner clip is fitted) is to hold the ptfe tube which directs the filament into the hotend.  The ptfe tube pushes into the clip when in use and can be removed by pushing down on the clip. (Don't insert the ptfe now !  this is just for explanation)
+ [img 300px-Single_extruder_assembledf.jpg]
+@@ -39,5 +45,5 @@
+ The Motor Cable Connector faces downwards.
+-Note : For detailed assembly instructions please refer below to the Dual Extruder.
++Note : For detailed assembly instructions please refer below to the Dual Extruder.</span>
+ Fit the Extruder Filament Idler, assembled during the previous assembly stage, to the extruder after the motor has been attached.
+-Dual Extruder
++Dual Direct-Drive Extruders
+ [img 800px-EXTRUDER_DUAL.jpg]
+@@ -116,2 +122,13 @@
+ Repeat with the other extruder.
++Hybrid Titan Extruder (Direct)
++[img 800px-EXTRUDER_HYBRID_TITAN_DIRECT.jpg]
++Titan Assembly
++Hybrid Titan Extruder (Bowden)
++Because we assemble this onto the frame, this step will be saved until the frame is assembled.
++Hybrid Non-Titan Extruder (Direct)
++[img 800px-EXTRUDER_HYBRID_NON-TITAN_DIRECT.jpg]
++[img 300px-Non-titan-direct.jpg]
++Non-Titan Direct Extruder.
++Hybrid Non-Titan Extruder (Bowden)
++Because we assemble this onto the frame, this step will be saved until the frame is assembled.
+ X-Axis Assembly
+@@ -311,3 +328,3 @@
+ PT100 Amplifier(s)
+-Pro & Lite Single Extruder
++Single Extruder
+ [img 300px-Single_pt100-amp.jpg]
+@@ -361,3 +378,3 @@
+ PT100 Wiring
+-Pro & Lite | Single Extruder
++Single Extruder
+ [img 300px-Single_pt100_wire.jpg]
+@@ -369,3 +386,3 @@
+ Check the cable is correctly plugged to the Rumba, refer to the Rumba Schematic (COMING SOON).
+-Dual | Double Extruders
++Dual Extruders
+ [img 300px-Dual_pt100_wire.jpg]
+@@ -482,3 +499,3 @@
+ Do not over-tighten the nut-traps. As soon as you feel them tighten up, an extra quarter of a turn is all you need. Over-tightening can lead to failure of the part(s).
+-Tip : there are approximatly 150 NUT traps used in the frame assembly. it us recommended that the nuts are held in place by either superglue or tape. doing this in advance save a lot of time and expletives later on.
++Tip : there are approximatly 150 NUT traps used in the frame assembly. It is recommended that the nuts are held in place by either superglue or tape. doing this in advance save a lot of time and expletives later on.
+ [img 300px-Nut_traps.jpg]
+
+--- 20160501231911
++++ 20160526201732
+@@ -1,33 +1,33 @@
+ Contents
+-1 Single Direct-Drive Extruder
+-2 Dual Direct-Drive Extruders
+-3 Hybrid Titan Extruder (Direct)
+-4 Hybrid Titan Extruder (Bowden)
+-5 Hybrid Non-Titan Extruder (Direct)
+-6 Hybrid Non-Titan Extruder (Bowden)
+-7 X-Axis Assembly
+-8 Electronics Cover
+-9 Spool Carrier
+-10 Z-Axis Bed Assembly
+-11 Z-Axis Drag Chain Assembly
+-12 Base Assembly
+-12.1 Microbarb Brass Inserts
+-12.2 Feet
+-12.3 Power Supply Unit (PSU)
+-12.4 Rumba
+-12.5 PT100 Amplifier(s)
+-12.5.1 Single Extruder
+-12.5.2 Dual Single Extruder
+-12.6 PSU - Rumba Wiring
+-12.7 PT100 Wiring
+-12.7.1 Single Extruder
+-12.7.2 Dual Extruders
+-12.8 OctoPrint Upgrades
+-12.9 Z-Axis Cables
+-13 Frame Assembly
+-13.1 A Note on Nut-Traps
+-13.2 Main Frame
+-13.3 The LCD Enclosure
++1 (1) Single Direct-Drive Extruder
++2 (2) Dual Direct-Drive Extruders
++3 (3) Hybrid Titan Extruder (Direct)
++4 (4) Hybrid Titan Extruder (Bowden)
++5 (5) Hybrid Non-Titan Extruder (Direct)
++6 (6) Hybrid Non-Titan Extruder (Bowden)
++7 (7) X-Axis Assembly
++8 (8) Electronics Cover
++9 (9) Spool Carrier
++10 (10) Z-Axis Bed Assembly
++11 (11) Z-Axis Drag Chain Assembly
++12 (12) Base Assembly
++12.1 (12.1) Microbarb Brass Inserts
++12.2 (12.2) Feet
++12.3 (12.3) Power Supply Unit (PSU)
++12.4 (12.4) Rumba
++12.5 (12.5) PT100 Amplifier(s)
++12.5.1 (12.5.1) Single Extruder
++12.5.2 (12.5.2)Dual Single Extruder
++12.6 (12.6) PSU - Rumba Wiring
++12.7 (12.7) PT100 Wiring
++12.7.1 (12.7.1)Single Extruder
++12.7.2 (12.7.2) Dual Extruders
++12.8 (12.8) OctoPrint Upgrades
++12.9 (12.9) Z-Axis Cables
++13 (13) Frame Assembly
++13.1 (13.1) A Note on Nut-Traps
++13.2 (13.2) Main Frame
++13.3 (13.3) The LCD Enclosure
+ 14 Where next?
+-Single Direct-Drive Extruder
++(1) Single Direct-Drive Extruder
+ [img 800px-EXTRUDER_SINGLE.jpg]
+@@ -47,3 +47,3 @@
+ Fit the Extruder Filament Idler, assembled during the previous assembly stage, to the extruder after the motor has been attached.
+-Dual Direct-Drive Extruders
++(2) Dual Direct-Drive Extruders
+ [img 800px-EXTRUDER_DUAL.jpg]
+@@ -122,8 +122,8 @@
+ Repeat with the other extruder.
+-Hybrid Titan Extruder (Direct)
++(3) Hybrid Titan Extruder (Direct)
+ [img 800px-EXTRUDER_HYBRID_TITAN_DIRECT.jpg]
+ Titan Assembly
+-Hybrid Titan Extruder (Bowden)
++(4) Hybrid Titan Extruder (Bowden)
+ Because we assemble this onto the frame, this step will be saved until the frame is assembled.
+-Hybrid Non-Titan Extruder (Direct)
++(5) Hybrid Non-Titan Extruder (Direct)
+ [img 800px-EXTRUDER_HYBRID_NON-TITAN_DIRECT.jpg]
+@@ -131,5 +131,5 @@
+ Non-Titan Direct Extruder.
+-Hybrid Non-Titan Extruder (Bowden)
++(6) Hybrid Non-Titan Extruder (Bowden)
+ Because we assemble this onto the frame, this step will be saved until the frame is assembled.
+-X-Axis Assembly
++(7) X-Axis Assembly
+ [img 800px-X-AXIS_ASSEMBLY.jpg]
+@@ -140,3 +140,3 @@
+ Do not tighten the screws in the rod clamps. This is done at a later stage.
+-Electronics Cover
++(8) Electronics Cover
+ [img 800px-ELECTRONICS_COVER.jpg]
+@@ -151,3 +151,3 @@
+ Attach the corners to the cover.
+-Spool Carrier
++(9) Spool Carrier
+ [img 800px-Spool_carrier_exploded.jpg]
+@@ -156,3 +156,3 @@
+ Note : The Dual BigBox requires two Spool Carriers.
+-Z-Axis Bed Assembly
++(10) Z-Axis Bed Assembly
+ [img 300px-Fitted_brass_nut.jpg]
+@@ -245,3 +245,3 @@
+ The Heated Bed PCB correctly installed to the Z-Axis Bed assembly.
+-Z-Axis Drag Chain Assembly
++(11) Z-Axis Drag Chain Assembly
+ [img 300px-Z_drag_parts.jpg]
+@@ -266,4 +266,4 @@
+ To finish the Drag Chain reattach the remaining anchor to the chain.
+-Base Assembly
+-Microbarb Brass Inserts
++(12) Base Assembly
++(12.1) Microbarb Brass Inserts
+ Before you can start to build the base plate you will need to install a selection of Microbarbs Brass Inserts. Please refer to the guides below when fitting the inserts. There are three different sizes.
+@@ -290,3 +290,3 @@
+ Note : Inserts are fitted to both sides of the base.
+-Feet
++(12.2) Feet
+ [img 300px-Adding_microbarbs.jpg]
+@@ -299,3 +299,3 @@
+ All eight Feet attached to the base.
+-Power Supply Unit (PSU)
++(12.3) Power Supply Unit (PSU)
+ [img 300px-Psu_screw.jpg]
+@@ -315,3 +315,3 @@
+ PSU Completed.
+-Rumba
++(12.4) Rumba
+ [img 300px-Stand_offs.jpg]
+@@ -327,4 +327,4 @@
+ Fix the Rumba to the posts.
+-PT100 Amplifier(s)
+-Single Extruder
++(12.5) PT100 Amplifier(s)
++(12.5.1) Single Extruder
+ [img 300px-Single_pt100-amp.jpg]
+@@ -338,3 +338,3 @@
+ Fit the Amplifier to the Base board with the white PT100 Cable connector facing towards the PSU.
+-Dual Single Extruder
++(12.5.2)Dual Single Extruder
+ [img 300px-Dual_pt100-amp.jpg]
+@@ -348,3 +348,3 @@
+ Fit the Amplifier to the Base board with the white PT100 Cable connector facing towards the PSU.
+-PSU - Rumba Wiring
++(12.6) PSU - Rumba Wiring
+ [img 300px-Cable_tie.jpg]
+@@ -377,4 +377,4 @@
+ Secure the cables with the Cable Tie.
+-PT100 Wiring
+-Single Extruder
++(12.7) PT100 Wiring
++(12.7.1)Single Extruder
+ [img 300px-Single_pt100_wire.jpg]
+@@ -386,3 +386,3 @@
+ Check the cable is correctly plugged to the Rumba, refer to the Rumba Schematic (COMING SOON).
+-Dual Extruders
++(12.7.2) Dual Extruders
+ [img 300px-Dual_pt100_wire.jpg]
+@@ -395,3 +395,3 @@
+ Check the cable is correctly plugged to the Rumba, refer to the Rumba Schematic (COMING SOON).
+-OctoPrint Upgrades
++(12.8) OctoPrint Upgrades
+ If you do not have the Raspberry Pi Upgrade skip to the Z-Axis Cables install
+@@ -444,3 +444,3 @@
+ Strap down the cables using the three previously fitted Cable Ties.
+-Z-Axis Cables
++(12.9) Z-Axis Cables
+ [img 300px-Z_cables.jpg]
+@@ -492,4 +492,4 @@
+ All done.
+-Frame Assembly
+-A Note on Nut-Traps
++(13) Frame Assembly
++(13.1) A Note on Nut-Traps
+ [img 800px-FRAME-LUG_DRAWING.jpg]
+@@ -504,3 +504,3 @@
+ An M3 Square Nut Pressed into a Nut Trap.
+-Main Frame
++(13.2) Main Frame
+ [img 300px-Frame-Assembly-stage-1.JPG]
+@@ -540,3 +540,3 @@
+ Do not fit Nut Traps into the frame above the level of the Lower Support.
+-The LCD Enclosure
++(13.3) The LCD Enclosure
+ [img 300px-Laser_cut_lcd_parts.jpeg]
+
+--- 20160526201732
++++ 20160605074104
+@@ -124,3 +124,8 @@
+ [img 800px-EXTRUDER_HYBRID_TITAN_DIRECT.jpg]
+-Titan Assembly
++[img 300px-1.1_titan_pinion.jpg]
++Gear.
++Please refer to E3D's Titan Assembly instructions.
++Leave 1.5mm Between the gear and the motor chassis.
++Note: The Grub Screw needs to be positioned towards the motor.
++Tighten the grub screw to secure the gear.
+ (4) Hybrid Titan Extruder (Bowden)
+@@ -269,3 +274,3 @@
+ Before you can start to build the base plate you will need to install a selection of Microbarbs Brass Inserts. Please refer to the guides below when fitting the inserts. There are three different sizes.
+-You will be fitting inserts from both sides of the base plate. The side of the sheet with engraving / text on it is referred to as the top.
++You will be fitting inserts from either side of the base plate. The side of the sheet with engraving / text on it is referred to as the top.
+ [img 300px-Feet_microbarb.jpg]
+
+--- 20160605074104
++++ 20160615040446
+@@ -551,2 +551,3 @@
+ LCD cable plugs.
++Newer screen have already had their sockets swapped around. Please compare with the image below to see if they have already been swapped for you.
+ Open the bag containing the LCD. Remove the cables and turn the two black sockets on the rear by 180°, carefully pulling them off the connectors before replacing.
+
+--- 20160615040446
++++ 20160703140933
+@@ -456,3 +456,3 @@
+ Plug one in.
+-Get a spare Stepper Motor and plug one of the cables into it.
++Get a spare Stepper Motor and plug one of the cables into it. (1.8 Degree, 200 Step)
+ [img 300px-Split_pairs.jpg]
+
+--- 20160703140933
++++ 20160822094923
+@@ -32,92 +32,5 @@
+ (1) Single Direct-Drive Extruder
+-[img 800px-EXTRUDER_SINGLE.jpg]
+-[img 300px-Bowden_coupler_apart.jpg]
+-Bowden Coupler Parts.
+-Note how the coupler (14) assembles with the lettering facing upwards.
+-Note : The couplers are in the Extruder Box.
+-[img 300px-Fitted_coupler.jpg]
+-Bowden Coupler fitted to cable bracket.
+-The bowden is pushed into the cable bracket.
+-You can see it fitted flush with the top surface in the next picture.
+-The function of the bowden coupler (when the inner clip is fitted) is to hold the ptfe tube which directs the filament into the hotend.  The ptfe tube pushes into the clip when in use and can be removed by pushing down on the clip. (Don't insert the ptfe now !  this is just for explanation)
+-[img 300px-Single_extruder_assembledf.jpg]
+-Completed Single Extruder
+-The Motor Cable Connector faces downwards.
+-Note : For detailed assembly instructions please refer below to the Dual Extruder.</span>
+-Fit the Extruder Filament Idler, assembled during the previous assembly stage, to the extruder after the motor has been attached.
++If you are building an older Non-Hybrid Single Direct-Drive Extruder | Click Here
+ (2) Dual Direct-Drive Extruders
+-[img 800px-EXTRUDER_DUAL.jpg]
+-[img 300px-Bowden_coupler_apart.jpg]
+-Bowden Coupler Parts.
+-Note how the couplers (15) assemble with the lettering facing upwards.
+-Note : The couplers are in the Extruder Box, the Dual requires two.
+-[img 300px-Dual_springs.jpg]
+-Tension Springs.
+-2 x M4 30mm (Bag 17).
+-2 x M4 Square Nut (Bag 12).
+-2 x M4 Washer (Bag 13).
+-Build two Filament Idler Tension Springs as shown.
+-[img 300px-Dual_parts.jpg]
+-Tension Springs.
+-Fit two bowden couplers in the Left & Right Cable Brackets.
+-Assemble the parts required to build the Dual Extruder Top. Refer to the Exploded Diagram.
+-[img 300px-Dual_right.jpg]
+-Right Cable Bracket.
+-1 x M3 10mm Screw (Bag 9).
+-1 x Right Cable Bracket (Printed Part).
+-Fit the M3 10mm Screw into the assembly.
+-[img 300px-Dual_right_motor.jpg]
+-Motor.
+-Loosely attach the motor.
+-[img 300px-Dual_motors.jpg]
+-Both Motors.
+-Repeat on the other side.
+-[img 300px-Dual_idlers.jpg]
+-Idlers.
+-2 X M3 35mm Screw (Bag 11).
+-Slot in the Extruder Idlers. They can be a bit tricky.
+-Secure each one with an M3 35mm Screw.
+-[img 300px-Dual_motors_screw.jpg]
+-Screws.
+-2 X M3 35mm Screw (Bag 11).
+-2 X M3 25mm Screw (Bag 7).
+-Fit the remaining screws to secure the motors.
+-Tighten the M3 10mm Screw hidden behind the Idlers.
+-[img 300px-Dual_idler_spring.jpg]
+-Idler Spring.
+-Position an idlers spring as shown.
+-[img 300px-Dual_idler_spring_compress.jpg]
+-Compress.
+-Compress the spring and push the screw into the slot in the Idler.
+-[img 300px-Dual_idler_spring_fit.jpg]
+-Fitted.
+-The washer sits in a recess in the Idler.
+-[img 300px-Dual_idler_other.jpg]
+-Fitted.
+-Repeat with the other side.
+-[img 300px-Dual_hob.jpg]
+-Hob.
+-2 x M3 3mm Grub Screw (Bag 17).
+-2 x HobGoblin (Extruder Box).
+-Assemble two Hobs.
+-[img 300px-Dual_shaft.jpg]
+-shaft.
+-Using pliers gently grab one of the Motor shafts.
+-[img 300px-Dual_shaft_rotated.jpg]
+-Rotate.
+-Position the shaft with the flat facing towards the spring.
+-[img 300px-Dual_shaft_hub_fitted.jpg]
+-Hobbed.
+-Fit the hob over the shaft with the grub closest to the motor.
+-Gently screw in the grub, do not do it up, the hob needs to be able to move along the shaft.
+-[img 300px-Dual_filament.jpg]
+-Filament.
+-Feed the length of scrap filament through the extruder.
+-Move the filament backwards and forwards, the hob should centre itself to the filament path.
+-[img 300px-Dual_grub_tight.jpg]
+-Filament track.
+-Tighten the grub screw when you are happy with the position.
+-[img 300px-Dual_both_extruders.jpg]
+-Finished.
+-Repeat with the other extruder.
++If you are building an older Non-Hybrid Dual Direct-Drive Extruders | Click Here
+ (3) Hybrid Titan Extruder (Direct)
+
+--- 20160822094923
++++ 20190723035857
+@@ -1 +1,4 @@
++This Wiki is not looked after anymore :( Please navigate to
++e3d-online.dozuki.com
++for up to date and improved documentation
+ Contents
+

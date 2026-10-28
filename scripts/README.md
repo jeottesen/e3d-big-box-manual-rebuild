@@ -10,7 +10,7 @@ Optionally set `BIGBOX_SEED` to a read-only folder laid out like a data folder. 
 
 ## The pipeline
 
-Only the manual's own pages are fetched. Steps 1 and 2 use the network; steps 3 to 6 are offline.
+**The pipeline only fetches what the manual needs**: the newest good capture of each page it links to, a few older versions of specific pages (see step 1), and the images those use. It does not download the wiki's edit history. Steps 1 and 2 use the network; steps 3 to 6 are offline.
 
 | # | Command | What it does |
 |---|---|---|
@@ -25,17 +25,14 @@ Only the manual's own pages are fetched. Steps 1 and 2 use the network; steps 3 
 
 Every fetching step caches what it has and can be re-run safely. They are polite to the Wayback Machine (one connection, a delay between requests, backoff on errors) and stop after repeated failures.
 
-## Optional: the full edit history
+## Other files
 
-These are for analysis, not for building the manual. They download every distinct archived version of each page, so they are much slower.
+- `crawl.py` – helpers used by `fetch.py` and `fetch_files.py` (polite fetching, the image inventory, choosing and downloading images, the seed folder). Not run directly.
+- `targets.py` – see above.
 
-| Command | What it does |
-|---|---|
-| `versions.py all` | Finds every capture of each page under both wiki URL forms (`/wiki/Title` from 2015–16 and `/Title` from 2018+), keeps one file per distinct content hash, and writes text diffs between versions. |
-| `clean.py --apply` | Moves error pages, mid-history dips and text-identical duplicates to `versions_removed/`, and writes the latest good version of each page. |
-| `crawl.py pages` / `crawl.py images` | The original crawler: the manual's pages nearest 2016-10-18, and images for every saved version. `fetch.py` uses this file's helpers. |
+## Edit history
 
-`notes/CLEAN_REPORT.md` and `notes/ANALYSIS.md` came from this full-history run.
+How the wiki's pages changed over time was analysed once, from about 250 archived versions, with two scripts that have since been removed because the build doesn't need them. The results are in `notes/`: `ANALYSIS.md`, `CLEAN_REPORT.md` and `history/` (see `notes/README.md`). The scripts are in this repository's git history, in pull request #1.
 
 ## Choices baked in
 

@@ -1,0 +1,115 @@
+--- 20151225024022
++++ 20160113181934
+@@ -6,3 +6,2 @@
+ Make sure you have a suitable work-space to build your BigBox. There are a large number of components, parts and fixings and you'll need to have lots of space.
+-You may find it useful to download the latest version of the exploded drawings as a PDF.
+ Tools required
+@@ -14,5 +13,6 @@
+ Hobby Knife
++M1.5 Allen Key/screwdriver
+ M2 Allen Key/screwdriver
++M2.5 Allen Key/screwdriver
+ M3 allen key/screwdriver
+-M4 allen key/screwdriver
+ Flat tip screwdrivers (small and medium size)
+@@ -30,2 +30,3 @@
+ Tweezers.
++Fine-Tip Permanent Marker.
+ Consumables
+@@ -43,3 +44,3 @@
+ If you are unsure about anything, please ask - the BigBox team are here to help.
+-Terminology/3D Printer Jargon
++Terminology
+ Extruder - This is the whole assembly that sits on top of the X carriage. It is the mechanism that moves the filament into the HotEnd.
+
+--- 20160113181934
++++ 20160219023105
+@@ -13,6 +13,6 @@
+ Hobby Knife
+-M1.5 Allen Key/screwdriver
+-M2 Allen Key/screwdriver
+-M2.5 Allen Key/screwdriver
+-M3 allen key/screwdriver
++M2 - 1.5mm Allen Key/screwdriver
++M2.5 - 2mm Allen Key/screwdriver
++M3 - 2.5mm Allen key/screwdriver
++M4 - 3mm Allen key/screwdriver
+ Flat tip screwdrivers (small and medium size)
+@@ -37,3 +37,3 @@
+ Estimated Build Time
+-We will try and give an estimate of how long each sub-section should take. The whole build should take you about 2 days to complete.
++The whole build should take you about 2 days to complete.
+ Health & Safety
+
+--- 20160219023105
++++ 20160305060711
+@@ -13,2 +13,4 @@
+ Hobby Knife
++Multi-meter.
++Ceramic screwdriver (2mm tip).
+ M2 - 1.5mm Allen Key/screwdriver
+@@ -24,8 +26,7 @@
+ Recommended tools
+-Multi-meter.
+ Print removal tool, such as putty knife/pallet knife.
+ Digital vernier calipers.
+-Ceramic screwdriver.
+ Brass bristled brush.
+ Tweezers.
++Torch / Light.
+ Fine-Tip Permanent Marker.
+@@ -66,2 +67,7 @@
+ In a lot cases when attaching to the frame we use holes with the engraved profile of a hex-nut. This engraving provides a little something for the nut to grip to when you are tightening up the screw. This means you should not have to use a spanner.
++BigBox Community Generated Help & Guides
++Livi's BigBox Pre-Build Guide
++Livi's MLP Edition Exploded Diagrams (Note some may be out of date, but they are still a  great reference).
++John's 3D Build & Printing Tools
++Liam's Printed Parts Check-List
+ Where next?
+
+--- 20160305060711
++++ 20160402121704
+@@ -13,3 +13,3 @@
+ Hobby Knife
+-Multi-meter.
++Multi-meter. (Digital is preferable and to two decimal places e.g.  x.yy)
+ Ceramic screwdriver (2mm tip).
+@@ -66,8 +66,3 @@
+ Hex-Half Nuts in Engraved Frame Holes
+-In a lot cases when attaching to the frame we use holes with the engraved profile of a hex-nut. This engraving provides a little something for the nut to grip to when you are tightening up the screw. This means you should not have to use a spanner.
+-BigBox Community Generated Help & Guides
+-Livi's BigBox Pre-Build Guide
+-Livi's MLP Edition Exploded Diagrams (Note some may be out of date, but they are still a  great reference).
+-John's 3D Build & Printing Tools
+-Liam's Printed Parts Check-List
++In a lot of cases when attaching to the frame we use holes with the engraved profile of a hex-nut. This engraving provides a little something for the nut to grip to when you are tightening up the screw. This means you should not have to use a spanner.
+ Where next?
+
+--- 20160402121704
++++ 20160504032957
+@@ -22,5 +22,7 @@
+ 30cm ruler
+-Needle-nose pliers
++Needle-nose pliers.. the longer and thinner the better.
+ Small file
+ Lighter or other safe heat source
++If you have the OctoPrint Upgrade
++An SD card reader to write the OctoPi image
+ Recommended tools
+@@ -30,3 +32,3 @@
+ Tweezers.
+-Torch / Light.
++Torch / Light... Anglepoise type (or larger) is useful.
+ Fine-Tip Permanent Marker.
+@@ -60,2 +62,3 @@
+ The best Tip we can give is - Don't guess! If you are not 100% certain of how something goes together ask for help on the forum.e3d-online.com.
++ALWAYS READ THROUGH THE COMPLETE SECTION YOU ARE WORKING ON BEFORE COMMENCING THAT PART OF THE BUILD.
+ There will be some helpful hints throughout the build manual where extra tips can help with specific assemblies.
+
+--- 20160504032957
++++ 20200127191907
+@@ -1 +1,4 @@
++This Wiki is not looked after anymore :( Please navigate to
++e3d-online.dozuki.com
++for up to date and improved documentation
+ What’s In the Box
