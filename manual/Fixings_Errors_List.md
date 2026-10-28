@@ -6,7 +6,7 @@ The initial order of fixings from our supplier contained errors. This error appl
 
 When the fixings kit is corrected, it will be labelled **Fixings Kit - Revision 2** and this error list will no longer apply.
 
-### Fixings Errors
+## Fixings Errors
 
 Bag 1
 
@@ -36,7 +36,7 @@ M4 12mm Grub Screws - 2 listed, requires 6.
 
 **Any additional or missing fixings have been added to the Stretch Box (BigBox orders) or the fixings bag (Fixings Kit orders)**.
 
-### Where next?
+## Where next?
 
 Return to the [BigBox Pre-Build](BigBox_Pre-Build.md "BigBox Pre-Build")
 

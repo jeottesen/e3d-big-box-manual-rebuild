@@ -70,7 +70,11 @@ def fetch_version(title, orig, ts):
             tally['seeded_versions'] += 1
         else:
             st, h = crawl.get_snapshot(crawl.snap(orig, ts, 'id_'))
-            if h is None:   # never fall back to an older capture because a download failed
+            if st in (404, 410):   # the archive lists this capture but cannot serve it: forget it, the caller tries an older one
+                print(f'  note: {title} {ts} is listed by the archive but returns {st}; skipping that capture', flush=True)
+                caps[title] = [r for r in caps.get(title, []) if r[0] != ts]; json.dump(caps, open(CAPS_PATH, 'w'), indent=1)
+                return None
+            if h is None:   # a real failure: never fall back to an older capture because of it
                 sys.exit(f'Could not download {title} {ts} (status {st}). Re-run to retry; what was fetched is kept.')
             os.makedirs(os.path.dirname(path), exist_ok=True); open(path, 'w').write(h)
             tally['network_versions'] += 1
@@ -90,12 +94,14 @@ def latest_good(title):
 # ---------- 1. discover the pages the manual needs ----------
 LINK = re.compile(r'href="(?:https?://wiki\.e3d-online\.com)?/(?:wiki/)?([^"#?/][^"#?]*)"')
 NOT_PAGES = ('images/', 'resources/', 'index.php', 'web/', 'skins/', 'load.php', 'extensions/')
+# wiki namespaces that are not manual pages; a colon alone does not make a title a namespace page
+NAMESPACES = re.compile(r'^(File|Image|Media|Special|Talk|User|Category|Template|Help|MediaWiki|E3D-Online)(_talk)?:', re.I)
 
 def links(h):
     out = []
     for m in LINK.finditer(recover.content(h)):
         t = urllib.parse.unquote(html.unescape(m.group(1))).replace(' ', '_')
-        if t.startswith(NOT_PAGES) or ':' in t.split('/')[0] or crawl.OTHER.search(t): continue   # File:, Special:, other products
+        if t.startswith(NOT_PAGES) or NAMESPACES.match(t) or crawl.OTHER.search(t): continue   # File:, Special:, other products
         out.append(t)
     return out
 

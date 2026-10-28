@@ -2,7 +2,7 @@
 
 Archived 20210416002713 · source: wiki.e3d-online.com/wiki/Bill_Of_Materials
 
-### Frame Components
+## Frame Components
 
 - ![Frame_back_b.jpg](../docs/images/Frame_back_b.jpg)
 
@@ -70,7 +70,7 @@ Archived 20210416002713 · source: wiki.e3d-online.com/wiki/Bill_Of_Materials
 
 9 x Miscellaneous parts, 5 x Base Struts, 2 x Spool Holder Brackets, 2 x Ooze Bucket Brackets.
 
-### Electronics
+## Electronics
 
 Rumba with fitted Stepper Drivers. 4x for Pro & Lite and 5x for Dual.
 
@@ -82,7 +82,7 @@ IR Sensor Probe for Z-Axis.
 
 A/C PSU 400W.
 
-### Fans
+## Fans
 
 1 x 24v 60x60x10 Exhaust Fan.
 
@@ -92,13 +92,13 @@ A/C PSU 400W.
 
 1 x 12v 50x50x10 Electronics Fan.
 
-### Motors
+## Motors
 
 3 x 400-Step Stepper Motors (4 x for Dual), X-Axis, Y-Axis, Extruder(s).
 
 2 x 200-Step Stepper Motors, Z-Axis.
 
-### Rods
+## Rods
 
 - 1 x 532mm - Y-Axis Rear-Bar.
 - 2 x 484mm - X-Axis.
@@ -106,9 +106,9 @@ A/C PSU 400W.
 - 4 x 364mm - Z-Axis.
 - 2 x 325mm Spool Carrier (4 included for the BigBox Dual).
 
-### Bearings
+## Bearings
 
-### E3D HotEnd(s)
+## E3D HotEnd(s)
 
 V6 Heatsink.
 
@@ -128,15 +128,15 @@ Plastic Bowden Clip, single part.
 
 Embedded Plastic Bowden Coupler, two parts.
 
-### Wiring
+## Wiring
 
-### Printed Parts
+## Printed Parts
 
-### Fixings
+## Fixings
 
 Fixing List pdf \| [https://dl.dropboxusercontent.com/u/54348751/BigBox_Fixings.pdf](https://dl.dropboxusercontent.com/u/54348751/BigBox_Fixings.pdf)
 
-### OctoPrint Upgrade Extras
+## OctoPrint Upgrade Extras
 
 Raspberry Pi 2 & 8GB MicroSD Card.
 
@@ -150,7 +150,7 @@ DC/DC Converter.
 
 35cm Rumba to DC/DC Converter Cable.
 
-### Where next?
+## Where next?
 
 Return to the [BigBox Pre-Build](BigBox_Pre-Build.md "BigBox Pre-Build")
 

@@ -1,0 +1,10 @@
+{
+  // Rules that do not fit this repository, and why.
+  "config": {
+    "MD013": false,                          // line length: the wiki's paragraphs are single long lines
+    "MD024": { "siblings_only": true },      // the wiki repeats headings such as "Single Extruder" under different parents
+    "MD026": { "punctuation": ",;:!" },        // the newer wiki pages use sentence headings that end in a full stop
+    "MD036": false,                          // the wiki's image captions and notes are italic or bold lines on purpose
+    "MD059": false                           // link text such as "Click Here" is the wiki's own wording
+  }
+}

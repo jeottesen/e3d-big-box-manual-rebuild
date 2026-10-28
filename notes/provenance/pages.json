@@ -29,6 +29,11 @@
   "snapshot": "20210415233707",
   "url": "https://wiki.e3d-online.com/BigBox_Printer_Sub-assemblies"
  },
+ "Printer_main_assemblies:_Step_By_Step_Assembly_Process": {
+  "status": 200,
+  "snapshot": "20200127192408",
+  "url": "https://wiki.e3d-online.com/Printer_main_assemblies:_Step_By_Step_Assembly_Process"
+ },
  "Printer_Commissioning": {
   "status": 200,
   "snapshot": "20210415222724",
@@ -90,6 +95,22 @@
   "status": 200,
   "snapshot": "20230509125052",
   "url": "https://wiki.e3d-online.com/Titan_Assembly"
+ },
+ "Single_Direct-Drive_X-Carriage": {
+  "status": "not-in-archive"
+ },
+ "Dual_Direct-Drive_X-Carriage": {
+  "status": "not-in-archive"
+ },
+ "Single_Direct-Drive_Printhead_Assembly": {
+  "status": 200,
+  "snapshot": "20220930193817",
+  "url": "https://wiki.e3d-online.com/Single_Direct-Drive_Printhead_Assembly"
+ },
+ "Dual_Direct-Drive_Printhead_Assembly": {
+  "status": 200,
+  "snapshot": "20220930194123",
+  "url": "https://wiki.e3d-online.com/Dual_Direct-Drive_Printhead_Assembly"
  },
  "Dual_Extruders": {
   "status": 200,

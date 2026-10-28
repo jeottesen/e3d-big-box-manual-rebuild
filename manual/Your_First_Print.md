@@ -162,7 +162,7 @@ The Hotend will now heat up to 210°C.
 
 The Hotend fan will come on at 40°C.
 
-If the fan does not come on check the fan wiring. If you can not immediately fix the problem turn off the printer and refer to the [BigBox Troubleshooting](https://web.archive.org/web/20161018063904/http://wiki.e3d-online.com/wiki/BigBox_Troubleshooting "page not archived") pages.
+If the fan does not come on check the fan wiring. If you can not immediately fix the problem turn off the printer and refer to the BigBox Troubleshooting pages.
 
 ![Sd_insert.jpg](../docs/images/Sd_insert.jpg)
 

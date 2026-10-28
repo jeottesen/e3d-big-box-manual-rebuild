@@ -105,8 +105,8 @@ Unfortunately the Kickstarter BigBox does not have that change so the build volu
 
 Currently there are two options to get to or near the full build volume:
 
-1.  Cut the top frame part
-2.  Use a slightly modified hybrid head
+1. Cut the top frame part
+2. Use a slightly modified hybrid head
 
 Solution 1 allows you to use all the factory parts for the BigBox V1.1 by cutting about 10mm of the inner right side of the top frame part. The DXF for the new is available on Thingiverse ([http://www.thingiverse.com/thing:1521722](http://www.thingiverse.com/thing:1521722)) in the ZIP file "DXF.zip" named "top.dxf".
 

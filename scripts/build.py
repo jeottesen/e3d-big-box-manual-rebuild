@@ -34,7 +34,7 @@ img{max-width:100%;height:auto}.missing{display:inline-block;border:1px dashed #
 nav a{margin-right:1rem}table{border-collapse:collapse}td,th{border:1px solid #ccc;padding:.3rem .5rem}
 .src{color:#777;font-size:.8em}h1,h2,h3{line-height:1.2}'''
 
-def slug(t): return urllib.parse.unquote(t).replace('/', '_')
+def slug(t): return re.sub(r'[<>:"|?*\\]', '_', re.sub(r':_', '_', urllib.parse.unquote(t).replace('/', '_')))   # safe file name on every OS: no colons
 
 def strip_div(body, open_rx):
     """Remove every <div> matching open_rx together with its matching </div>, counting nested divs."""
@@ -89,10 +89,11 @@ def fix_links(body, to_anchor):
             if t.lower() in local:
                 t = local[t.lower()]
                 return f'href="{"#" + slug(t) if to_anchor else slug(t) + ".html"}{frag}"'
-            return f'href="https://web.archive.org/web/{TARGET}/http://wiki.e3d-online.com/wiki/{m2.group(1)}" title="page not archived"'
+            return 'href="#unarchived-page"'   # the archive does not have this page: its link is removed below
         if href.startswith('/web/'): return f'href="https://web.archive.org{html.escape(href)}{frag}"'
         return m.group(0)
-    return re.sub(r'href="([^"]+)"', repl, body)
+    body = re.sub(r'href="([^"]+)"', repl, body)
+    return re.sub(r'<a\b[^>]*href="#unarchived-page"[^>]*>(.*?)</a>', r'\1', body, flags=re.S)   # plain text, not a link
 
 os.makedirs(f'{SITE}/files', exist_ok=True)   # wiki-hosted PDF datasheets (see fetch_files.py / appendix.py)
 if os.path.isdir(f'{RAW}/files'):
@@ -101,12 +102,16 @@ if os.path.isdir(f'{RAW}/files'):
 TARGET = '20161018063904'
 # index first, then the archived pages alphabetically, then rebuilt pages, appendix and datasheets in the order recover/appendix wrote them
 rebuilt = [t for t, info in (json.load(open(rec_path)).items() if os.path.exists(rec_path) else []) if info and t in pages and t not in latest_titles]
+extras = {t for t, info in (json.load(open(rec_path)).items() if os.path.exists(rec_path) else []) if info and info.get('heading') in ('appendix', 'datasheets')}
 order = ['BigBox_Build_Manual'] + sorted(t for t in pages if t != 'BigBox_Build_Manual' and t not in rebuilt) + rebuilt
 stats, sections = {}, []
 for t in order:
     b = fix_links(fix_images(extract(pages[t]), stats), False)
     snap = meta.get(t, {}).get('snapshot', '?')
-    head = f'<h1>{html.escape(t.replace("_", " "))}</h1><p class="src">Archived {snap} · source: wiki.e3d-online.com/wiki/{html.escape(t)}</p>'
+    if t in latest_titles: src = f'Archived {snap} · source: wiki.e3d-online.com/wiki/{html.escape(t)}'
+    elif t in extras: src = ''   # the appendix and datasheets pages are not wiki pages
+    else: src = f'Rebuilt page · source: wiki.e3d-online.com/wiki/{html.escape(t)}'   # the note under the title says where from
+    head = f'<h1>{html.escape(t.replace("_", " "))}</h1>' + (f'<p class="src">{src}</p>' if src else '')
     nav = '<nav><a href="index.html">Contents</a></nav>'
     open(f'{SITE}/{slug(t)}.html', 'w').write(f'<!doctype html><meta charset="utf-8"><title>{html.escape(t)}</title><style>{STYLE}</style>{nav}{head}{b}')
     sections.append((t, fix_links(fix_images(extract(pages[t]), {}), True), head))

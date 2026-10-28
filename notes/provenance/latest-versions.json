@@ -5,6 +5,7 @@
  "BigBox_Version_Overview": "20210128113613",
  "BigBox_Parts_Preparation": "20221201075921",
  "BigBox_Printer_Sub-assemblies": "20210415233707",
+ "Printer_main_assemblies:_Step_By_Step_Assembly_Process": "20200127192408",
  "Printer_Commissioning": "20210415222724",
  "BigBox_OctoPrint_Upgrade": "20230529010658",
  "BigBox_Software": "20201204024242",
@@ -15,6 +16,8 @@
  "Single_Direct-Drive_Extruder": "20191220164342",
  "Dual_Direct-Drive_Extruders": "20191215173602",
  "Titan_Assembly": "20230509125052",
+ "Single_Direct-Drive_Printhead_Assembly": "20220930193817",
+ "Dual_Direct-Drive_Printhead_Assembly": "20220930194123",
  "Dual_Extruders": "20161105151950",
  "BigBox_Firmware_Flashing_Guide": "20201204013533"
 }

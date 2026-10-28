@@ -1,7 +1,5 @@
 # Appendix Older Version Content
 
-Archived recovered from older versions of several pages BigBox_Software 20160601234712, Your_First_Print 20151230221140, Your_First_Print 20151230221140 · source: wiki.e3d-online.com/wiki/Appendix_Older_Version_Content
-
 Content that appeared in older versions of this manual and was later removed, kept here for completeness. It is not part of the current build instructions.
 
 ## Slicer profiles (older Software page)

@@ -46,6 +46,23 @@ def body(h):
     h = re.sub(r'<span class="missing">(.*?)</span>', r'<em>\1</em>', h)   # image-not-archived placeholders
     return h
 
+def normalize_headings(md):
+    """One H1 (the page title), then the wiki's headings shifted to start at H2, with no skipped levels.
+    Wiki pages use H1 or H3 as their top section level and sometimes jump levels; GitHub (and linters) want a tree."""
+    lines, found, fenced = md.split('\n'), [], False
+    for i, line in enumerate(lines):
+        if line.startswith('```'): fenced = not fenced
+        m = None if fenced else re.match(r'(#{1,6})\s', line)
+        if m: found.append((i, len(m.group(1))))
+    body = found[1:]                      # found[0] is the page title
+    if not body: return md
+    shift, prev = 2 - min(level for _, level in body), 1
+    for i, level in body:
+        new = min(max(level + shift, 2), 6, prev + 1)
+        lines[i] = '#' * new + lines[i][level:]
+        prev = new
+    return '\n'.join(lines)
+
 def convert(page, h, pages, amap):
     own = amap[page]
     def link(m):
@@ -67,11 +84,11 @@ def convert(page, h, pages, amap):
     h = re.sub(r'<a\b[^>]*\bhref="#([^"]*)"[^>]*>(.*?)</a>', lambda m: m.group(0) if html.unescape(m.group(1)) in own else m.group(2), h, flags=re.S)
     h = re.sub(r'href="([^"]*)"', link, h)
     h = re.sub(r'src="images/', 'src="../docs/images/', h)
-    md = subprocess.run([PANDOC, '-f', 'html', '-t', 'gfm-raw_html', '--wrap=none'], input=h, capture_output=True, text=True, check=True).stdout
+    md = subprocess.run([PANDOC, '-f', 'html', '-t', 'gfm-raw_html', '--wrap=none', '--tab-stop=3'], input=h, capture_output=True, text=True, check=True).stdout   # tab-stop 3: '1. text', not '1.  text'
     md = re.sub(r'(?m)^\\\n', '', md)            # lines holding only a backslash (a <br> between blocks)
     md = re.sub(r'\\\n(?=\n)', '\n', md)         # a hard line break at the end of a paragraph
     md = re.sub(r'[ \t]+\n', '\n', md)
-    return re.sub(r'\n{3,}', '\n\n', md).strip() + '\n'
+    return normalize_headings(re.sub(r'\n{3,}', '\n\n', md).strip()) + '\n'
 
 def main():
     files = sorted(f for f in os.listdir(SITE) if f.endswith('.html') and f != 'manual.html')

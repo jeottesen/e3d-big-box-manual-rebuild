@@ -2,19 +2,19 @@
 
 Archived 20200127191907 · source: wiki.e3d-online.com/wiki/BigBox_Pre-Build
 
-### What’s In the Box
+## What’s In the Box
 
 For a list of everything you should have in your box, please refer to the **[Bill Of Materials](Bill_Of_Materials.md "Bill Of Materials")**.
 
-#### Fixings Errors
+### Fixings Errors
 
 **Please Note:** There was a mistake in the fixings-kits we had prepared for us. The kit was missing some items. These have been included in a separate bag in the "Stretch Box". If you find yourself running out of a particular type of fixing, or it seems to be missing all together, refer to the [Fixings Errors List](Fixings_Errors_List.md "Fixings Errors List")!
 
-### Preparation
+## Preparation
 
 Make sure you have a suitable work-space to build your BigBox. There are a large number of components, parts and fixings and you'll need to have lots of space.
 
-### Tools required
+## Tools required
 
 Hammer
 
@@ -56,7 +56,7 @@ Lighter or other safe heat source
 
 An SD card reader to write the OctoPi image
 
-### Recommended tools
+## Recommended tools
 
 Print removal tool, such as putty knife/pallet knife.
 
@@ -70,7 +70,7 @@ Torch / Light... Anglepoise type (or larger) is useful.
 
 Fine-Tip Permanent Marker.
 
-### Consumables
+## Consumables
 
 Low-Tac sticky tape.
 
@@ -80,11 +80,11 @@ Glass cleaner.
 
 Lint free wipes.
 
-### Estimated Build Time
+## Estimated Build Time
 
 The whole build should take you about 2 days to complete.
 
-### Health & Safety
+## Health & Safety
 
 Never work on the BigBox when it is connected to the mains.
 
@@ -96,7 +96,7 @@ The printer has numerous moving parts - when it is operating this can represent 
 
 If you are unsure about anything, please ask - the BigBox team are here to help.
 
-### Terminology
+## Terminology
 
 *Extruder* - This is the whole assembly that sits on top of the X carriage. It is the mechanism that moves the filament into the HotEnd.
 
@@ -122,7 +122,7 @@ If you are unsure about anything, please ask - the BigBox team are here to help.
 
 *Heated Bed* - Is a PCB component that sits on the Z carriage and heats up. This is there to enable the printing of high temperature plastics.
 
-### Tips & tricks
+## Tips & tricks
 
 The best Tip we can give is - Don't guess! If you are not 100% certain of how something goes together ask for help on the **[forum.e3d-online.com](http://forum.e3d-online.com/)**.
 
@@ -132,17 +132,17 @@ There will be some helpful hints throughout the build manual where extra tips ca
 
 Some of the assemblies are a little complicated. While it can be very frustrating when things don't fit together as you expect please do not use excessive force when installing parts. If things are not going as you expected please visit the forum at **[forum.e3d-online.com](http://forum.e3d-online.com/)**
 
-### Nut-Traps
+## Nut-Traps
 
 The frame is held together using M3 x 18 screws and matching Square Nuts. These square nuts don't go directly into the frame, instead they live inside little black injection molded Nut-Traps. Their job is to remove stress-concentrations in the frame. They can be a little tricky at first, we have found that a little tape on the back can help to hold the nuts in place.
 
 **Do not over-tighten the nut-traps. As soon as you feel them tighten up, an extra quarter of a turn is all you need. Over-tightening can lead to failure of the part(s).**
 
-### Hex-Half Nuts in Engraved Frame Holes
+## Hex-Half Nuts in Engraved Frame Holes
 
 In a lot of cases when attaching to the frame we use holes with the engraved profile of a hex-nut. This engraving provides a little something for the nut to grip to when you are tightening up the screw. This means you should not have to use a spanner.
 
-### Where next?
+## Where next?
 
 Continue to the [BigBox Parts Preparation](BigBox_Parts_Preparation.md "BigBox Parts Preparation")
 
