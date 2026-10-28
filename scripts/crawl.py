@@ -29,8 +29,8 @@ def from_seed(rel, dest=None):
 
 fails = 0
 
-def get(url, binary=False, tries=5):
-    """Return (status, bytes|str|None). 404/403/410 are final answers; everything else is retried."""
+def get(url, binary=False, tries=5, final_codes=(404, 403, 410)):
+    """Return (status, bytes|str|None). The final_codes statuses are answers; everything else is retried."""
     global fails
     stats['network'] += 1
     for i in range(tries):
@@ -42,7 +42,7 @@ def get(url, binary=False, tries=5):
                 if d[:2] == b'\x1f\x8b': d = gzip.decompress(d)   # some captures arrive gzipped
                 return r.status, (d if binary else d.decode('utf-8', 'replace'))
         except urllib.error.HTTPError as e:
-            if e.code in (404, 403, 410): fails = 0; return e.code, None
+            if e.code in final_codes: fails = 0; return e.code, None
             wait = max(wait, int(e.headers.get('Retry-After', 0) or 0))
             print(f'  HTTP {e.code}; retry {i+1}/{tries} in {wait}s', flush=True)
         except Exception as e:
@@ -53,6 +53,12 @@ def get(url, binary=False, tries=5):
         print(f'ABORT: {fails} consecutive failed fetches; wait for the block to clear and re-run.', flush=True)
         sys.exit(2)
     return 0, None
+
+def get_snapshot(url, binary=False):
+    """Fetch a capture that the CDX index says exists. A 403/404/410 for such a URL is not an answer, it is a
+    refused or flaky request, so it is retried like any other error. Returns (200, data) or, after every
+    attempt failed, (0, None); callers must treat that as a failed download, not as 'not archived'."""
+    return get(url, binary, tries=3, final_codes=())
 
 def snap(url, ts, flavor):  # exact-timestamp raw capture; id_ = original bytes, im_ = image
     return f'https://web.archive.org/web/{ts}{flavor}/{url}'
@@ -115,6 +121,7 @@ def images(inv, files):
         caps.setdefault(urllib.parse.unquote(urllib.parse.urlparse(orig).path), []).append((ts, orig))
     mpath = f'{RAW}/images.json'
     man = json.load(open(mpath)) if os.path.exists(mpath) else {}
+    failed = []   # images the archive has but that could not be downloaded this time
     for op, users in images_used(files).items():
         fname = op.rsplit('/', 1)[1]
         if man.get(fname, {}).get('kind') == 'original' and os.path.exists(f'{RAW}/images/{fname}'):
@@ -137,10 +144,14 @@ def images(inv, files):
         rec = {'kind': None, 'pages': sorted(users), 'original_path': op}
         if choice:
             ts, orig = choice
-            st, d = get(snap(orig, ts, 'im_'), binary=True)
+            st, d = get_snapshot(snap(orig, ts, 'im_'), binary=True)
             if st == 200 and d and not d.startswith(b'<'):
                 open(f'{RAW}/images/{fname}', 'wb').write(d)
                 rec.update(kind=kind, snapshot=ts, url=orig, bytes=len(d))
+            else:
+                rec['error'] = f'download failed (status {st})' if not d else 'the archive returned a page, not an image'
+                failed.append(fname)
         man[fname] = rec
-        print(fname, rec['kind'], rec.get('bytes', 0), flush=True)
+        print(fname, rec['kind'], rec.get('bytes', 0), '  <-- DOWNLOAD FAILED: ' + rec['error'] if rec.get('error') else '', flush=True)
         json.dump(man, open(mpath, 'w'), indent=1)
+    return failed

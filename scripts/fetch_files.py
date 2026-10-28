@@ -5,7 +5,7 @@ Uses the image CDX inventory (raw/cdx_images.json) to pick each file's newest PD
 to raw/files/ with a manifest. Skips Volcano / silicone heater mat / Super Whopper: not BigBox parts.
 Polite: one connection, delay, retries. Run:  python3 -I scripts/fetch_files.py
 """
-import gzip, json, os, time, urllib.error, urllib.parse, urllib.request
+import json, os, urllib.parse
 import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))   # sibling modules (python -I does not add the script folder)
 import crawl
@@ -13,21 +13,7 @@ from targets import WANT_FILES as WANT
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RAW = os.environ.get('BIGBOX_RAW', f'{ROOT}/raw')   # archive data lives outside git; override with BIGBOX_RAW
-UA = 'bigbox-manual-archiver/2.0 (personal documentation backup; single connection)'
 os.makedirs(f'{RAW}/files', exist_ok=True)
-
-def fetch(url, tries=4):
-    for i in range(tries):
-        time.sleep(2.5)
-        try:
-            with urllib.request.urlopen(urllib.request.Request(url, headers={'User-Agent': UA}), timeout=120) as r:
-                d = r.read()
-                return gzip.decompress(d) if d[:2] == b'\x1f\x8b' else d
-        except urllib.error.HTTPError as e:
-            if e.code in (403, 404, 410): return None
-        except Exception: pass
-        time.sleep(20 * 2 ** i)
-    return False
 
 caps = {}
 for ts, orig, *_ in json.load(open(f'{RAW}/cdx_images.json')):
@@ -36,16 +22,22 @@ for ts, orig, *_ in json.load(open(f'{RAW}/cdx_images.json')):
 
 manifest_path = f'{RAW}/files.json'
 manifest = json.load(open(manifest_path)) if os.path.exists(manifest_path) else {}
+failed = []
 for w in WANT:
     if w in manifest and os.path.exists(f'{RAW}/files/{w}.pdf'): continue
     seeded = json.load(open(f'{crawl.SEED}/files.json')).get(w) if crawl.SEED and os.path.exists(f'{crawl.SEED}/files.json') else None
     if seeded and crawl.from_seed(f'files/{w}.pdf'):
         manifest[w] = seeded; json.dump(manifest, open(manifest_path, 'w'), indent=1); print(w, 'from seed'); continue
-    for ts, orig in sorted(caps.get(w, []), reverse=True):  # newest capture first; fall back if one is bad
-        d = fetch(f'https://web.archive.org/web/{ts}id_/{orig}')
-        if d and d[:4] == b'%PDF':
+    status = 'none'   # none: the archive has no usable PDF; failed: a download failed; ok
+    for ts, orig in sorted(caps.get(w, []), reverse=True):  # newest capture first
+        st, d = crawl.get_snapshot(f'https://web.archive.org/web/{ts}id_/{orig}', binary=True)
+        if d is None: status = 'failed'; break   # do not fall back to an older datasheet because a download failed
+        if d[:4] == b'%PDF':                      # a capture that downloaded but is not a PDF: try the next one
             open(f'{RAW}/files/{w}.pdf', 'wb').write(d)
-            manifest[w] = {'snapshot': ts, 'url': orig, 'bytes': len(d)}; print(w, ts, len(d), flush=True); break
-    else:
-        manifest[w] = None; print(w, 'NOT FETCHED', flush=True)
+            manifest[w] = {'snapshot': ts, 'url': orig, 'bytes': len(d)}; print(w, ts, len(d), flush=True); status = 'ok'; break
+    if status != 'ok':
+        manifest[w] = None
+        print(w, 'DOWNLOAD FAILED' if status == 'failed' else 'NOT ARCHIVED', flush=True)
+        if status == 'failed': failed.append(w)
     json.dump(manifest, open(manifest_path, 'w'), indent=1)
+if failed: sys.exit(f'\n{len(failed)} datasheet download(s) FAILED: {", ".join(failed)}. The archive has them; re-run to retry only those.')

@@ -55,9 +55,17 @@ How the wiki's pages changed over time was analysed once, from about 250 archive
 
 - **Seeded:** from an empty data folder seeded with a previous download, the first six steps ran without errors and without any network request, touching 47 page versions where the full archive holds about 250.
 - **Partly live:** the same run with a deliberately damaged seed (two pages' captures and files, three images and one PDF removed) fetched those live (7 requests) and produced an identical site, with byte-identical downloads.
-- **Fully live:** a run with no seed at all downloaded everything (490 requests, about 40 minutes, a handful of transient connection errors that recovered) and matched the committed `docs/` except for one image (see below).
+- **Fully live:** a run with no seed at all downloaded everything (490 requests, about 40 minutes, a handful of transient connection errors that recovered) and matched the committed `docs/` except for one thumbnail, `Z_difference.jpg`. The archive refused that single download once, the pipeline recorded the image as "not archived", and the same download worked a minute later. That is what the retry and failure reporting above fix.
+- **Failure handling:** with a stubbed network, a refused download that succeeds on retry is fetched; one that keeps failing is reported as a failed download (not as missing) and a re-run fetches it; and a failed page download stops the run instead of using an older capture.
 - **Markdown:** `check_markdown.py` reports every link and image in `manual/` resolving.
 
-## Known issue
+## Failed downloads
 
-If the archive refuses an image or page download once (for example a transient 403 or 404), `fetch.py` currently treats it as "not archived": the fully live run lost one thumbnail (`Z_difference.jpg`) that way, and the same download succeeded a minute later. Re-running does not retry an image that was recorded as missing. A failed download should be retried, and reported as a failure instead of a missing image.
+A capture that the archive's index lists should always be downloadable, so a refused or failed request (including a 403, 404 or 410) is treated as transient and retried, then reported if it keeps failing. It is never mistaken for "not archived".
+
+- An **image** that still fails is marked with an error in `images.json` and listed when `fetch.py` ends; `fetch.py` then exits non-zero. Re-running retries only those images.
+- A **page version** that fails stops the run with a clear message. It never falls back to an older capture of the page.
+- A **datasheet** that fails is reported the same way by `fetch_files.py`, and does not fall back to an older PDF.
+- After 4 failed downloads in a row the run stops, so a blocked connection does not hammer the archive.
+
+Lookups that are expected to sometimes find nothing (such as asking the index about a page) still treat 404 as a plain answer.
