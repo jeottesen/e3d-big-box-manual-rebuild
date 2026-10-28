@@ -69,8 +69,9 @@ def fetch_version(title, orig, ts):
                                                  rel.replace('versions/', 'versions_removed/errors/'))):
             tally['seeded_versions'] += 1
         else:
-            st, h = crawl.get(crawl.snap(orig, ts, 'id_'))
-            if not h: return None
+            st, h = crawl.get_snapshot(crawl.snap(orig, ts, 'id_'))
+            if h is None:   # never fall back to an older capture because a download failed
+                sys.exit(f'Could not download {title} {ts} (status {st}). Re-run to retry; what was fetched is kept.')
             os.makedirs(os.path.dirname(path), exist_ok=True); open(path, 'w').write(h)
             tally['network_versions'] += 1
     tally['versions_used'][f'{title} {ts}'] = True
@@ -171,9 +172,12 @@ if __name__ == '__main__':
     files = [(t, version_path(t, ts)) for t, ts in latest.items()]
     files += [(p, version_path(p, ts)) for p, tss in extra.items() for ts in tss]
     print(f'Images used by {len(files)} page versions:')
-    crawl.images(crawl.inventory(('images',)), files)
+    failed = crawl.images(crawl.inventory(('images',)), files)
     n_extra = sum(len(v) for v in extra.values())
     print(f'\nDone. {len(latest)} pages ({len(absent)} not archived), {n_extra} older versions kept for recovery/appendix, '
           f'{len(tally["versions_used"])} page versions touched in total '
           f'({tally["seeded_versions"]} from seed, {tally["network_versions"]} downloaded); '
           f'{crawl.stats["seeded"]} files seeded, {crawl.stats["network"]} network requests.')
+    if failed:
+        sys.exit(f'\n{len(failed)} image download(s) FAILED, so they are missing from the manual for now: {", ".join(failed)}.\n'
+                 'The archive has them. Re-run fetch.py to retry only those.')
