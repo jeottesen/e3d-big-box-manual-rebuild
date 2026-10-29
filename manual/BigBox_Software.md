@@ -2,6 +2,15 @@
 
 Archived 20201204024242 · source: wiki.e3d-online.com/wiki/BigBox_Software
 
+**Contents**
+
+- [Marlin](#marlin)
+- [BigBox Slicer Profiles](#bigbox-slicer-profiles)
+  - [Simplify3D](#simplify3d)
+  - [Slic3r](#slic3r)
+- [OctoPrint](#octoprint)
+- [Where next?](#where-next)
+
 ## Marlin
 
 Marlin is a firmware for RepRap 3D printers, the software that resides on the controller board and controls the input/output, voltage states, and movement of the 3D printer.

@@ -2,6 +2,22 @@
 
 Archived 20200127191907 · source: wiki.e3d-online.com/wiki/BigBox_Pre-Build
 
+**Contents**
+
+- [What’s In the Box](#whats-in-the-box)
+  - [Fixings Errors](#fixings-errors)
+- [Preparation](#preparation)
+- [Tools required](#tools-required)
+- [Recommended tools](#recommended-tools)
+- [Consumables](#consumables)
+- [Estimated Build Time](#estimated-build-time)
+- [Health & Safety](#health--safety)
+- [Terminology](#terminology)
+- [Tips & tricks](#tips--tricks)
+- [Nut-Traps](#nut-traps)
+- [Hex-Half Nuts in Engraved Frame Holes](#hex-half-nuts-in-engraved-frame-holes)
+- [Where next?](#where-next)
+
 ## What’s In the Box
 
 For a list of everything you should have in your box, please refer to the **[Bill Of Materials](Bill_Of_Materials.md "Bill Of Materials")**.

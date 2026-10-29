@@ -22,7 +22,7 @@ def block(heading, intro, items):
 
 rebuilt = []
 for title, info in recovered.items():
-    if title in ('Appendix_Older_Version_Content', 'Datasheets'): continue
+    if info and info.get('heading') in ('appendix', 'datasheets', 'downloads'): continue   # generated pages, not rebuilt wiki pages
     real = pages.get(title, {})
     if real.get('status') == 200:  # the build uses this real capture, whatever recover.py also extracted
         rebuilt.append(f'{title}: found as a real page under a later URL form (capture {real["snapshot"]})')

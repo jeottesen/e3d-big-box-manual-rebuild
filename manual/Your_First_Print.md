@@ -2,6 +2,13 @@
 
 Archived 20201204013802 · source: wiki.e3d-online.com/wiki/Your_First_Print
 
+**Contents**
+
+- [Loading Filament](#loading-filament)
+- [Calibrating The Filament](#calibrating-the-filament)
+- [Printing](#printing)
+- [Where next?](#where-next)
+
 ## Loading Filament
 
 ![Boxed_spool.jpg](../docs/images/Boxed_spool.jpg)

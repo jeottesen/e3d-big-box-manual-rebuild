@@ -2,6 +2,39 @@
 
 Archived 20210415233707 · source: wiki.e3d-online.com/wiki/BigBox_Printer_Sub-assemblies
 
+**Contents**
+
+- [(1) Single Direct-Drive Extruder](#1-single-direct-drive-extruder)
+- [(2) Dual Direct-Drive Extruders](#2-dual-direct-drive-extruders)
+- [(3) Hybrid Titan Extruder (Direct)](#3-hybrid-titan-extruder-direct)
+- [(4) Hybrid Titan Extruder (Bowden)](#4-hybrid-titan-extruder-bowden)
+- [(5) Hybrid Non-Titan Extruder (Direct)](#5-hybrid-non-titan-extruder-direct)
+- [(6) Hybrid Non-Titan Extruder (Bowden)](#6-hybrid-non-titan-extruder-bowden)
+- [(7) X-Axis Assembly](#7-x-axis-assembly)
+- [(8) Electronics Cover](#8-electronics-cover)
+- [(9) Spool Carrier](#9-spool-carrier)
+- [(10) Z-Axis Bed Assembly](#10-z-axis-bed-assembly)
+- [(11) Z-Axis Drag Chain Assembly](#11-z-axis-drag-chain-assembly)
+- [(12) Base Assembly](#12-base-assembly)
+  - [(12.1) Microbarb Brass Inserts](#121-microbarb-brass-inserts)
+  - [(12.2) Feet](#122-feet)
+  - [(12.3) Power Supply Unit (PSU)](#123-power-supply-unit-psu)
+  - [(12.4) Rumba](#124-rumba)
+  - [(12.5) PT100 Amplifier(s)](#125-pt100-amplifiers)
+    - [(12.5.1) Single Extruder](#1251-single-extruder)
+    - [(12.5.2)Dual Single Extruder](#1252dual-single-extruder)
+  - [(12.6) PSU - Rumba Wiring](#126-psu---rumba-wiring)
+  - [(12.7) PT100 Wiring](#127-pt100-wiring)
+    - [(12.7.1)Single Extruder](#1271single-extruder)
+    - [(12.7.2) Dual Extruders](#1272-dual-extruders)
+  - [(12.8) OctoPrint Upgrades](#128-octoprint-upgrades)
+  - [(12.9) Z-Axis Cables](#129-z-axis-cables)
+- [(13) Frame Assembly](#13-frame-assembly)
+  - [(13.1) A Note on Nut-Traps](#131-a-note-on-nut-traps)
+  - [(13.2) Main Frame](#132-main-frame)
+  - [(13.3) The LCD Enclosure](#133-the-lcd-enclosure)
+- [Where next?](#where-next)
+
 ## (1) Single Direct-Drive Extruder
 
 If you are building an older **Non-Hybrid** Single Direct-Drive Extruder \| [Click Here](Single_Direct-Drive_Extruder.md "Single Direct-Drive Extruder")

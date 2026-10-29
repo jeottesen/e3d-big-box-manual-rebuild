@@ -2,6 +2,17 @@
 
 Archived 20220930194123 · source: wiki.e3d-online.com/wiki/Dual_Direct-Drive_Printhead_Assembly
 
+**Contents**
+
+- [(20.1) Fitting the Dual Extruders.](#201-fitting-the-dual-extruders)
+- [(20.2) Assembly of the E3D HotEnds.](#202-assembly-of-the-e3d-hotends)
+- [(20.3) Installing the HotEnds.](#203-installing-the-hotends)
+- [(20.4) IR Sensor Cable.](#204-ir-sensor-cable)
+- [(20.5) Motor Cables.](#205-motor-cables)
+- [(20.6) X-Axis Endstop.](#206-x-axis-endstop)
+- [(20.7) Cable Management.](#207-cable-management)
+- [(20.8) Rear Spine.](#208-rear-spine)
+
 *\[image not archived: PRINT-HEAD\_(DUAL).jpg\]*
 
 ## (20.1) Fitting the Dual Extruders.

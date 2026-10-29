@@ -2,6 +2,16 @@
 
 Archived 20230529010658 · source: wiki.e3d-online.com/wiki/BigBox_OctoPrint_Upgrade
 
+**Contents**
+
+- [Prepping the SD Card](#prepping-the-sd-card)
+- [Terminal Configuration](#terminal-configuration)
+- [Login Options & Update](#login-options--update)
+- [Settings](#settings)
+- [Plugins](#plugins)
+- [Printing](#printing)
+- [Where Next?](#where-next)
+
 ## Prepping the SD Card
 
 *\[image not archived: Oictoprint_website.jpg\]*

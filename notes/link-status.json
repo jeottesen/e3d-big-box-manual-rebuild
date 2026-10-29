@@ -1,0 +1,1008 @@
+{
+ "http://e3d-online.com/All-Filament&filter=5,24": {
+  "status": "untested",
+  "text": "Everyday & Premium Filament",
+  "pages": [
+   "Your_First_Print"
+  ]
+ },
+ "http://e3d-online.com/All-Filament&filter=5,24,11": {
+  "status": "dead",
+  "checked": "2026-10-29",
+  "by": "maintainer",
+  "text": "E3D's Everyday PLA",
+  "pages": [
+   "Appendix_Older_Version_Content"
+  ]
+ },
+ "http://e3d-online.com/index.php?route=product/product&product_id=356": {
+  "status": "untested",
+  "text": "Ceramic Screwdriver",
+  "pages": [
+   "Printer_main_assemblies_Step_By_Step_Assembly_Process"
+  ]
+ },
+ "http://files.e3d-online.com/BigBox/SD_Card/": {
+  "status": "untested",
+  "text": "http://files.e3d-online.com/BigBox/SD_Card/",
+  "pages": [
+   "Your_First_Print"
+  ]
+ },
+ "http://files.e3d-online.com/BigBox/Slicer%20Configs/Simplify3D/bigbox_dual.fff": {
+  "status": "untested",
+  "text": "Dual.fff",
+  "pages": [
+   "Appendix_Older_Version_Content"
+  ]
+ },
+ "http://files.e3d-online.com/BigBox/Slicer%20Configs/Simplify3D/bigbox_dual_experimental.fff": {
+  "status": "untested",
+  "text": "Dual Experimental.fff",
+  "pages": [
+   "Appendix_Older_Version_Content"
+  ]
+ },
+ "http://files.e3d-online.com/BigBox/Slicer%20Configs/Simplify3D/bigbox_pro.fff": {
+  "status": "untested",
+  "text": "Pro.fff",
+  "pages": [
+   "Appendix_Older_Version_Content"
+  ]
+ },
+ "http://files.e3d-online.com/Titan/ASM_EX_THUMB_SCREW.stl": {
+  "status": "untested",
+  "text": "Model of Assembled Titan in STL format",
+  "pages": [
+   "Titan_Assembly"
+  ]
+ },
+ "http://files.e3d-online.com/Titan/ASM_EX_THUMB_SCREW.stp": {
+  "status": "untested",
+  "text": "Model of Assembled Titan in STP format",
+  "pages": [
+   "Titan_Assembly"
+  ]
+ },
+ "http://files.e3d-online.com/Titan/BRACKET_PRINTED.pdf": {
+  "status": "dead",
+  "checked": "2026-10-29",
+  "by": "maintainer",
+  "text": "Mounting Bracket Engineering Drawing",
+  "pages": [
+   "Titan_Assembly"
+  ]
+ },
+ "http://files.e3d-online.com/Titan/Titan%20Assembly%20Supplementary.pdf": {
+  "status": "untested",
+  "text": "Supplementary Assembly Drawings / Notes",
+  "pages": [
+   "Titan_Assembly"
+  ]
+ },
+ "http://forum.bigbox-3d.com": {
+  "status": "untested",
+  "text": "BigBox forum",
+  "pages": [
+   "BigBox_Build_Manual"
+  ]
+ },
+ "http://forum.e3d-online.com/": {
+  "status": "untested",
+  "text": "forum.e3d-online.com",
+  "pages": [
+   "BigBox_Pre-Build",
+   "BigBox_Printer_Sub-assemblies"
+  ]
+ },
+ "http://forum.e3d-online.com/index.php?forums/guides-mods-and-upgrades.26/": {
+  "status": "untested",
+  "text": "BigBox Forum | Guides, Mods, and Upgrades",
+  "pages": [
+   "BigBox_Build_Manual"
+  ]
+ },
+ "http://forum.e3d-online.com/index.php?threads/how-to-attach-a-bb-dual-to-the-rumba-board.599/#post-4300": {
+  "status": "untested",
+  "text": "Pro Wiring connections",
+  "pages": [
+   "Printer_main_assemblies_Step_By_Step_Assembly_Process"
+  ]
+ },
+ "http://forum.e3d-online.com/index.php?threads/y-axis-belts-belt-appears-to-be-fitted-upside-down.732": {
+  "status": "untested",
+  "text": "forum.e3d-online.com",
+  "pages": [
+   "Printer_main_assemblies_Step_By_Step_Assembly_Process"
+  ]
+ },
+ "http://octoprint.org/": {
+  "status": "untested",
+  "text": "octoprint.org",
+  "pages": [
+   "BigBox_OctoPrint_Upgrade",
+   "BigBox_Software"
+  ]
+ },
+ "http://paulkaplan.me/HexUploader/": {
+  "status": "untested",
+  "text": "HexUploader",
+  "pages": [
+   "BigBox_Firmware_Flashing_Guide"
+  ]
+ },
+ "http://plugins.octoprint.org/plugins/autoselect/": {
+  "status": "untested",
+  "text": "Autoselect",
+  "pages": [
+   "BigBox_OctoPrint_Upgrade"
+  ]
+ },
+ "http://plugins.octoprint.org/plugins/displayz/": {
+  "status": "untested",
+  "text": "DisplayZ",
+  "pages": [
+   "BigBox_OctoPrint_Upgrade"
+  ]
+ },
+ "http://plugins.octoprint.org/plugins/stats/": {
+  "status": "untested",
+  "text": "Printer Statistics",
+  "pages": [
+   "BigBox_OctoPrint_Upgrade"
+  ]
+ },
+ "http://reprap.org/wiki/G-code#M218:_Set_Hotend_Offset": {
+  "status": "untested",
+  "text": "reprap.org",
+  "pages": [
+   "Printer_Commissioning"
+  ]
+ },
+ "http://reprap.org/wiki/Marlin": {
+  "status": "untested",
+  "text": "http://reprap.org/wiki/Marlin",
+  "pages": [
+   "BigBox_OctoPrint_Upgrade"
+  ]
+ },
+ "http://reprap.org/wiki/RUMBA#RUMBA_USB_Driver_for_Windows": {
+  "status": "untested",
+  "text": "http://reprap.org/wiki/RUMBA#RUMBA_USB_Driver_for_Windows",
+  "pages": [
+   "BigBox_Firmware_Flashing_Guide"
+  ]
+ },
+ "http://reprap.org/wiki/RUMBA#USB_connection_.28Writing_in_progress.29": {
+  "status": "untested",
+  "text": "here",
+  "pages": [
+   "BigBox_Firmware_Flashing_Guide"
+  ]
+ },
+ "http://russemotto.com/xloader/XLoader.zip": {
+  "status": "untested",
+  "text": "XLoader",
+  "pages": [
+   "BigBox_Firmware_Flashing_Guide"
+  ]
+ },
+ "http://slic3r.org/": {
+  "status": "untested",
+  "text": "Slic3r",
+  "pages": [
+   "Appendix_Older_Version_Content",
+   "BigBox_Software"
+  ]
+ },
+ "http://thelittlebox.co/theshop/index.php?route=product/product&path=66_77&product_id=107": {
+  "status": "untested",
+  "text": "Multimeter",
+  "pages": [
+   "Printer_main_assemblies_Step_By_Step_Assembly_Process"
+  ]
+ },
+ "http://www.3dbenchy.com/": {
+  "status": "untested",
+  "text": "#3DBenchy",
+  "pages": [
+   "Your_First_Print"
+  ]
+ },
+ "http://www.7-zip.org/": {
+  "status": "untested",
+  "text": "7zip",
+  "pages": [
+   "BigBox_OctoPrint_Upgrade"
+  ]
+ },
+ "http://www.chiark.greenend.org.uk/~sgtatham/putty/download.html": {
+  "status": "untested",
+  "text": "Download",
+  "pages": [
+   "BigBox_OctoPrint_Upgrade"
+  ]
+ },
+ "http://www.instructables.com/id/Picture-The-3D-Printed-Raspberry-Pi-Camera/": {
+  "status": "blocked",
+  "text": "Picture",
+  "pages": [
+   "BigBox_Build_Manual"
+  ],
+  "checked": "2026-10-29",
+  "by": "script",
+  "note": "the sandbox proxy does not allow this host"
+ },
+ "http://www.linuxfoundation.org/": {
+  "status": "untested",
+  "text": "Linux",
+  "pages": [
+   "BigBox_OctoPrint_Upgrade"
+  ]
+ },
+ "http://www.thingiverse.com/thing:1472259": {
+  "status": "untested",
+  "text": "customisable spacer",
+  "pages": [
+   "Titan_Assembly"
+  ]
+ },
+ "http://www.thingiverse.com/thing:1477900": {
+  "status": "untested",
+  "text": "E3D Titan Bracket",
+  "pages": [
+   "Titan_Assembly"
+  ]
+ },
+ "http://www.thingiverse.com/thing:1515488": {
+  "status": "untested",
+  "text": "http://www.thingiverse.com/thing:1515488",
+  "pages": [
+   "BigBox_Version_Overview"
+  ]
+ },
+ "http://www.thingiverse.com/thing:1521722": {
+  "status": "untested",
+  "text": "http://www.thingiverse.com/thing:1521722",
+  "pages": [
+   "BigBox_Version_Overview"
+  ]
+ },
+ "https://dl.dropboxusercontent.com/u/54348751/BigBoxSingle-alpha-settings.fff": {
+  "status": "untested",
+  "text": "https://dl.dropboxusercontent.com/u/54348751/BigBoxSingle-alpha-settings.fff",
+  "pages": [
+   "Appendix_Older_Version_Content"
+  ]
+ },
+ "https://dl.dropboxusercontent.com/u/54348751/BigBox_Fixings.pdf": {
+  "status": "dead",
+  "checked": "2026-10-29",
+  "by": "maintainer",
+  "note": "no copy in the Wayback Machine",
+  "text": "https://dl.dropboxusercontent.com/u/54348751/BigBox_Fixings.pdf",
+  "pages": [
+   "Bill_Of_Materials"
+  ]
+ },
+ "https://dl.dropboxusercontent.com/u/54348751/BigBox_Slic3r_config_bundle.ini": {
+  "status": "untested",
+  "text": "BigBox_Slic3r_config_bundle.ini",
+  "pages": [
+   "Appendix_Older_Version_Content",
+   "BigBox_Software"
+  ]
+ },
+ "https://docs.google.com/document/d/1zl_MQIf-aFD4pc7TauehwL7SaKXNig-ABx_l33cSCJA/edit": {
+  "status": "untested",
+  "text": "Livi's BigBox Pre-Build Guide",
+  "pages": [
+   "BigBox_Build_Manual"
+  ]
+ },
+ "https://drive.google.com/file/d/0B8NaxduLlxIQSEhSdnUzV2FodGs/view?usp=sharing": {
+  "status": "untested",
+  "text": "Liam's Printed Parts Check-List",
+  "pages": [
+   "BigBox_Build_Manual"
+  ]
+ },
+ "https://en.wikipedia.org/wiki/Flexible_flat_cable": {
+  "status": "untested",
+  "text": "FFC",
+  "pages": [
+   "Printer_main_assemblies_Step_By_Step_Assembly_Process"
+  ]
+ },
+ "https://en.wikipedia.org/wiki/Mains_electricity_by_country": {
+  "status": "untested",
+  "text": "mains A/C power supply in your country",
+  "pages": [
+   "BigBox_Printer_Sub-assemblies",
+   "Printer_main_assemblies_Step_By_Step_Assembly_Process"
+  ]
+ },
+ "https://en.wikipedia.org/wiki/Secure_Shell": {
+  "status": "untested",
+  "text": "SSH",
+  "pages": [
+   "BigBox_OctoPrint_Upgrade"
+  ]
+ },
+ "https://en.wikipedia.org/wiki/Zero_insertion_force": {
+  "status": "untested",
+  "text": "ZIF",
+  "pages": [
+   "Printer_main_assemblies_Step_By_Step_Assembly_Process"
+  ]
+ },
+ "https://forum.e3d-online.com": {
+  "status": "untested",
+  "text": "forum.e3d-online.com",
+  "pages": [
+   "Dual_Extruders",
+   "Printer_Commissioning"
+  ]
+ },
+ "https://forum.e3d-online.com/index.php?threads/shaos-bigbox-dual-build-log.685/": {
+  "status": "untested",
+  "text": "Shao's BigBox Dual Build Log",
+  "pages": [
+   "BigBox_Build_Manual"
+  ]
+ },
+ "https://forum.e3d-online.com/index.php?threads/using-platformio-to-flash-firmware-from-rpi.720/": {
+  "status": "untested",
+  "text": "Using platformio to flash firmware from RPi",
+  "pages": [
+   "BigBox_Build_Manual"
+  ]
+ },
+ "https://github.com/Alex9779": {
+  "status": "ok",
+  "text": "Alex9779",
+  "pages": [
+   "BigBox_Firmware_Flashing_Guide"
+  ],
+  "checked": "2026-10-29",
+  "by": "script",
+  "code": 200
+ },
+ "https://github.com/Alex9779/BigBox-Settings/blob/master/BigBoxBedAssembly.stl": {
+  "status": "ok",
+  "text": "BigBoxBedAssembly.stl",
+  "pages": [
+   "Downloads"
+  ],
+  "checked": "2026-10-29",
+  "by": "script",
+  "code": 200
+ },
+ "https://github.com/Alex9779/BigBox-Settings/blob/master/Dual%20Titan/Simplify3D/BigBox%20Dual%20Titan.fff": {
+  "status": "ok",
+  "text": "BigBox Dual Titan.fff",
+  "pages": [
+   "Downloads"
+  ],
+  "checked": "2026-10-29",
+  "by": "script",
+  "code": 200
+ },
+ "https://github.com/Alex9779/BigBox-Settings/blob/master/Dual/Simplify3D/BigBox%20Dual.fff": {
+  "status": "ok",
+  "text": "BigBox Dual.fff",
+  "pages": [
+   "Downloads"
+  ],
+  "checked": "2026-10-29",
+  "by": "script",
+  "code": 200
+ },
+ "https://github.com/Alex9779/BigBox-Settings/blob/master/Hybrid-Dual/Simplify3D/BigBox%20Hybrid-Dual%20Mirrored.fff": {
+  "status": "ok",
+  "text": "BigBox Hybrid-Dual Mirrored.fff",
+  "pages": [
+   "Downloads"
+  ],
+  "checked": "2026-10-29",
+  "by": "script",
+  "code": 200
+ },
+ "https://github.com/Alex9779/BigBox-Settings/blob/master/Hybrid-Dual/Simplify3D/BigBox%20Hybrid-Dual.fff": {
+  "status": "ok",
+  "text": "BigBox Hybrid-Dual.fff",
+  "pages": [
+   "Downloads"
+  ],
+  "checked": "2026-10-29",
+  "by": "script",
+  "code": 200
+ },
+ "https://github.com/Alex9779/BigBox-Settings/blob/master/Hybrid-Pro/Simplify3D/BigBox%20Hybrid-Pro.fff": {
+  "status": "ok",
+  "text": "BigBox Hybrid-Pro.fff",
+  "pages": [
+   "Downloads"
+  ],
+  "checked": "2026-10-29",
+  "by": "script",
+  "code": 200
+ },
+ "https://github.com/Alex9779/BigBox-Settings/blob/master/Pro/Simplify3D/BigBox%20Pro.fff": {
+  "status": "ok",
+  "text": "BigBox Pro.fff",
+  "pages": [
+   "Downloads"
+  ],
+  "checked": "2026-10-29",
+  "by": "script",
+  "code": 200
+ },
+ "https://github.com/Alex9779/BigBox-Settings/blob/master/README.md": {
+  "status": "ok",
+  "text": "BigBox-Settings: README",
+  "pages": [
+   "Downloads"
+  ],
+  "checked": "2026-10-29",
+  "by": "script",
+  "code": 200
+ },
+ "https://github.com/Alex9779/Marlin": {
+  "status": "ok",
+  "text": "https://github.com/Alex9779/Marlin",
+  "pages": [
+   "BigBox_Firmware_Flashing_Guide"
+  ],
+  "checked": "2026-10-29",
+  "by": "script",
+  "code": 200
+ },
+ "https://github.com/BigBox3D": {
+  "status": "ok",
+  "text": "github.com/BigBox3D",
+  "pages": [
+   "BigBox_Software"
+  ],
+  "checked": "2026-10-29",
+  "by": "script",
+  "code": 200
+ },
+ "https://github.com/BigBox3D/": {
+  "status": "ok",
+  "text": "BigBox3D Github repository",
+  "pages": [
+   "BigBox_Firmware_Flashing_Guide"
+  ],
+  "checked": "2026-10-29",
+  "by": "script",
+  "code": 200
+ },
+ "https://github.com/BigBox3D/Firmware/blob/master/README.md": {
+  "status": "ok",
+  "text": "Firmware README",
+  "pages": [
+   "Downloads"
+  ],
+  "checked": "2026-10-29",
+  "by": "script",
+  "code": 200
+ },
+ "https://github.com/BigBox3D/Firmware/blob/master/marlin_direct_dual.hex": {
+  "status": "ok",
+  "text": "marlin_direct_dual.hex",
+  "pages": [
+   "Downloads"
+  ],
+  "checked": "2026-10-29",
+  "by": "script",
+  "code": 200
+ },
+ "https://github.com/BigBox3D/Firmware/blob/master/marlin_direct_pro.hex": {
+  "status": "ok",
+  "text": "marlin_direct_pro.hex",
+  "pages": [
+   "Downloads"
+  ],
+  "checked": "2026-10-29",
+  "by": "script",
+  "code": 200
+ },
+ "https://github.com/BigBox3D/Firmware/blob/master/marlin_hybrid_dual.hex": {
+  "status": "ok",
+  "text": "marlin_hybrid_dual.hex",
+  "pages": [
+   "Downloads"
+  ],
+  "checked": "2026-10-29",
+  "by": "script",
+  "code": 200
+ },
+ "https://github.com/BigBox3D/Firmware/blob/master/marlin_hybrid_dual_mesh.hex": {
+  "status": "ok",
+  "text": "marlin_hybrid_dual_mesh.hex",
+  "pages": [
+   "Downloads"
+  ],
+  "checked": "2026-10-29",
+  "by": "script",
+  "code": 200
+ },
+ "https://github.com/BigBox3D/Firmware/blob/master/marlin_hybrid_pro.hex": {
+  "status": "ok",
+  "text": "marlin_hybrid_pro.hex",
+  "pages": [
+   "Downloads"
+  ],
+  "checked": "2026-10-29",
+  "by": "script",
+  "code": 200
+ },
+ "https://github.com/BigBox3D/Firmware/blob/master/marlin_hybrid_pro_mesh.hex": {
+  "status": "ok",
+  "text": "marlin_hybrid_pro_mesh.hex",
+  "pages": [
+   "Downloads"
+  ],
+  "checked": "2026-10-29",
+  "by": "script",
+  "code": 200
+ },
+ "https://github.com/BigBox3D/Marlin": {
+  "status": "ok",
+  "text": "BigBox Marlin source",
+  "pages": [
+   "Downloads"
+  ],
+  "checked": "2026-10-29",
+  "by": "script",
+  "code": 200
+ },
+ "https://github.com/BigBox3D/Marlin/releases": {
+  "status": "ok",
+  "text": "BigBox Firmware Releases",
+  "pages": [
+   "BigBox_Firmware_Flashing_Guide",
+   "BigBox_Software"
+  ],
+  "checked": "2026-10-29",
+  "by": "script",
+  "code": 200
+ },
+ "https://github.com/BigBox3D/Marlin/releases/download/1.1.0-RC6/Marlin.Dual.hex": {
+  "status": "ok",
+  "text": "Download firmware",
+  "pages": [
+   "BigBox_Version_Overview"
+  ],
+  "checked": "2026-10-29",
+  "by": "script",
+  "code": 200,
+  "note": "redirects",
+  "final": "https://release-assets.githubusercontent.com/github-production-release-asset/60181734/882914a2-4948-11e6-923a-affded7ba1d3?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-10-29T03%3A33%3A40Z&rscd=attachment%3B+filename%3DMarlin.Dual.hex&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-10-29T02%3A33%3A30Z&ske=2026-10-29T03%3A33%3A40Z&sks=b&skv=2018-11-09&sig=see7Kpt4s7ggihAZg3KLS6NCMTInUGbwssGCfGDjxu0%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc5MzI0MjQxMSwibmJmIjoxNzkzMjQyMTExLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.nQXHoHdWqr45HnU0sPCO3-gEPVLNOmWMyAlGq-WwTO4&response-content-disposition=attachment%3B%20filename%3DMarlin.Dual.hex&response-content-type=application%2Foctet-stream"
+ },
+ "https://github.com/BigBox3D/Marlin/releases/download/1.1.0-RC6/Marlin.Hybrid-Dual.hex": {
+  "status": "ok",
+  "text": "Download firmware",
+  "pages": [
+   "BigBox_Version_Overview"
+  ],
+  "checked": "2026-10-29",
+  "by": "script",
+  "code": 200,
+  "note": "redirects",
+  "final": "https://release-assets.githubusercontent.com/github-production-release-asset/60181734/884a9c26-4948-11e6-9d96-15efe538bc90?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-10-29T03%3A31%3A41Z&rscd=attachment%3B+filename%3DMarlin.Hybrid-Dual.hex&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-10-29T02%3A31%3A16Z&ske=2026-10-29T03%3A31%3A41Z&sks=b&skv=2018-11-09&sig=OsWNzNDS9gTTNv%2F2Uf4fNaliPZzbxEwsHpZItnxB6N0%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc5MzI0MjQxMiwibmJmIjoxNzkzMjQyMTEyLCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.zccgKKK7WEiC2T-f4zo6d6RoBezBvu_OR01_K6r0lfE&response-content-disposition=attachment%3B%20filename%3DMarlin.Hybrid-Dual.hex&response-content-type=application%2Foctet-stream"
+ },
+ "https://github.com/BigBox3D/Marlin/releases/download/1.1.0-RC6/Marlin.Hybrid-Pro.hex": {
+  "status": "ok",
+  "text": "Download firmware",
+  "pages": [
+   "BigBox_Version_Overview"
+  ],
+  "checked": "2026-10-29",
+  "by": "script",
+  "code": 200,
+  "note": "redirects",
+  "final": "https://release-assets.githubusercontent.com/github-production-release-asset/60181734/884ef2f8-4948-11e6-8160-db00feece8be?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-10-29T03%3A28%3A59Z&rscd=attachment%3B+filename%3DMarlin.Hybrid-Pro.hex&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-10-29T02%3A28%3A52Z&ske=2026-10-29T03%3A28%3A59Z&sks=b&skv=2018-11-09&sig=CuODhSDIDGyfScCRVl7ZFVj%2BOiQpLR5PzATbOhPAaLQ%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc5MzI0MjQxNCwibmJmIjoxNzkzMjQyMTE0LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.erv23A1xWljeVk3Gx6iFkUh4D9gvdW8NcJhansz97so&response-content-disposition=attachment%3B%20filename%3DMarlin.Hybrid-Pro.hex&response-content-type=application%2Foctet-stream"
+ },
+ "https://github.com/BigBox3D/Marlin/releases/download/1.1.0-RC6/Marlin.Pro.hex": {
+  "status": "ok",
+  "text": "Download firmware",
+  "pages": [
+   "BigBox_Version_Overview"
+  ],
+  "checked": "2026-10-29",
+  "by": "script",
+  "code": 200,
+  "note": "redirects",
+  "final": "https://release-assets.githubusercontent.com/github-production-release-asset/60181734/884a1bde-4948-11e6-9c53-57460da866e9?sp=r&sv=2018-11-09&sr=b&spr=https&se=2026-10-29T03%3A41%3A53Z&rscd=attachment%3B+filename%3DMarlin.Pro.hex&rsct=application%2Foctet-stream&skoid=96c2d410-5711-43a1-aedd-ab1947aa7ab0&sktid=398a6654-997b-47e9-b12b-9515b896b4de&skt=2026-10-29T02%3A41%3A12Z&ske=2026-10-29T03%3A41%3A53Z&sks=b&skv=2018-11-09&sig=qFwcDjikr7ex1Q8Lru91UzX4WKoWrtQpfH5k7rPrlQg%3D&jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmVsZWFzZS1hc3NldHMuZ2l0aHVidXNlcmNvbnRlbnQuY29tIiwia2V5Ijoia2V5MSIsImV4cCI6MTc5MzI0MjQxNSwibmJmIjoxNzkzMjQyMTE1LCJwYXRoIjoicmVsZWFzZWFzc2V0cHJvZHVjdGlvbi5ibG9iLmNvcmUud2luZG93cy5uZXQifQ.hd2t-1ofHlrUgyk4-SNOe3TiQYmKCugkQvXOU71DhVU&response-content-disposition=attachment%3B%20filename%3DMarlin.Pro.hex&response-content-type=application%2Foctet-stream"
+ },
+ "https://github.com/BigBox3D/Marlin/tree/Dual": {
+  "status": "ok",
+  "text": "Firmware source repository",
+  "pages": [
+   "BigBox_Version_Overview"
+  ],
+  "checked": "2026-10-29",
+  "by": "script",
+  "code": 200
+ },
+ "https://github.com/BigBox3D/Marlin/tree/Hybrid-Dual": {
+  "status": "ok",
+  "text": "Firmware source repository",
+  "pages": [
+   "BigBox_Version_Overview"
+  ],
+  "checked": "2026-10-29",
+  "by": "script",
+  "code": 200
+ },
+ "https://github.com/BigBox3D/Marlin/tree/Hybrid-Pro": {
+  "status": "ok",
+  "text": "Firmware source repository",
+  "pages": [
+   "BigBox_Version_Overview"
+  ],
+  "checked": "2026-10-29",
+  "by": "script",
+  "code": 200
+ },
+ "https://github.com/BigBox3D/Marlin/tree/Pro": {
+  "status": "ok",
+  "text": "Firmware source repository",
+  "pages": [
+   "BigBox_Version_Overview"
+  ],
+  "checked": "2026-10-29",
+  "by": "script",
+  "code": 200
+ },
+ "https://github.com/BigBox3D/SD-Card/blob/master/3DBenchy.stl": {
+  "status": "ok",
+  "text": "3DBenchy.stl",
+  "pages": [
+   "Downloads"
+  ],
+  "checked": "2026-10-29",
+  "by": "script",
+  "code": 200
+ },
+ "https://github.com/BigBox3D/SD-Card/blob/master/Dual/3DBenchy.gcode": {
+  "status": "ok",
+  "text": "Dual/3DBenchy.gcode",
+  "pages": [
+   "Downloads"
+  ],
+  "checked": "2026-10-29",
+  "by": "script",
+  "code": 200
+ },
+ "https://github.com/BigBox3D/SD-Card/blob/master/Dual/calibration/extruder_0.gcode": {
+  "status": "ok",
+  "text": "Dual/calibration/extruder_0.gcode",
+  "pages": [
+   "Downloads"
+  ],
+  "checked": "2026-10-29",
+  "by": "script",
+  "code": 200
+ },
+ "https://github.com/BigBox3D/SD-Card/blob/master/Dual/calibration/extruder_1.gcode": {
+  "status": "ok",
+  "text": "Dual/calibration/extruder_1.gcode",
+  "pages": [
+   "Downloads"
+  ],
+  "checked": "2026-10-29",
+  "by": "script",
+  "code": 200
+ },
+ "https://github.com/BigBox3D/SD-Card/blob/master/Pro/3DBenchy.gcode": {
+  "status": "ok",
+  "text": "Pro/3DBenchy.gcode",
+  "pages": [
+   "Downloads"
+  ],
+  "checked": "2026-10-29",
+  "by": "script",
+  "code": 200
+ },
+ "https://github.com/BigBox3D/SD-Card/blob/master/Pro/calibration/extruder_0.gcode": {
+  "status": "ok",
+  "text": "Pro/calibration/extruder_0.gcode",
+  "pages": [
+   "Downloads"
+  ],
+  "checked": "2026-10-29",
+  "by": "script",
+  "code": 200
+ },
+ "https://github.com/BigBox3D/Simplify3D": {
+  "status": "ok",
+  "text": "Settings repository for Simplify3D",
+  "pages": [
+   "BigBox_Software"
+  ],
+  "checked": "2026-10-29",
+  "by": "script",
+  "code": 200
+ },
+ "https://github.com/BigBox3D/Simplify3D/blob/master/BigBox%20Dual.fff": {
+  "status": "ok",
+  "text": "BigBox Dual.fff",
+  "pages": [
+   "Downloads"
+  ],
+  "checked": "2026-10-29",
+  "by": "script",
+  "code": 200
+ },
+ "https://github.com/BigBox3D/Simplify3D/blob/master/BigBox%20Hybrid-Dual.fff": {
+  "status": "ok",
+  "text": "BigBox Hybrid-Dual.fff",
+  "pages": [
+   "Downloads"
+  ],
+  "checked": "2026-10-29",
+  "by": "script",
+  "code": 200
+ },
+ "https://github.com/BigBox3D/Simplify3D/blob/master/BigBox%20Hybrid-Pro.fff": {
+  "status": "ok",
+  "text": "BigBox Hybrid-Pro.fff",
+  "pages": [
+   "Downloads"
+  ],
+  "checked": "2026-10-29",
+  "by": "script",
+  "code": 200
+ },
+ "https://github.com/BigBox3D/Simplify3D/blob/master/BigBox%20Print%20Farm.fff": {
+  "status": "ok",
+  "text": "BigBox Print Farm.fff",
+  "pages": [
+   "Downloads"
+  ],
+  "checked": "2026-10-29",
+  "by": "script",
+  "code": 200
+ },
+ "https://github.com/BigBox3D/Simplify3D/blob/master/BigBox%20Pro.fff": {
+  "status": "ok",
+  "text": "BigBox Pro.fff",
+  "pages": [
+   "Downloads"
+  ],
+  "checked": "2026-10-29",
+  "by": "script",
+  "code": 200
+ },
+ "https://github.com/MarlinFirmware/Marlin/wiki/Manual-bed-leveling---mesh-bed-leveling": {
+  "status": "ok",
+  "text": "Mesh Bed Levelling",
+  "pages": [
+   "Mesh_Levelling_the_Non-Hybrid_Dual"
+  ],
+  "checked": "2026-10-29",
+  "by": "script",
+  "code": 200,
+  "note": "redirects",
+  "final": "https://github.com/MarlinFirmware/Marlin"
+ },
+ "https://github.com/OctoPrint/OctoPrint-FirmwareUpdater": {
+  "status": "ok",
+  "text": "https://github.com/OctoPrint/OctoPrint-FirmwareUpdater",
+  "pages": [
+   "BigBox_Firmware_Flashing_Guide"
+  ],
+  "checked": "2026-10-29",
+  "by": "script",
+  "code": 200
+ },
+ "https://github.com/OctoPrint/OctoPrint-FirmwareUpdater/archive/master.zip": {
+  "status": "ok",
+  "text": "https://github.com/OctoPrint/OctoPrint-FirmwareUpdater/archive/master.zip",
+  "pages": [
+   "BigBox_Firmware_Flashing_Guide"
+  ],
+  "checked": "2026-10-29",
+  "by": "script",
+  "code": 200,
+  "note": "redirects",
+  "final": "https://codeload.github.com/OctoPrint/OctoPrint-FirmwareUpdater/zip/refs/heads/master"
+ },
+ "https://github.com/tohara": {
+  "status": "ok",
+  "text": "tohara",
+  "pages": [
+   "BigBox_Firmware_Flashing_Guide"
+  ],
+  "checked": "2026-10-29",
+  "by": "script",
+  "code": 200
+ },
+ "https://github.com/tohara/OctoPrint-BigBoxFirmware": {
+  "status": "ok",
+  "text": "https://github.com/tohara/OctoPrint-BigBoxFirmware",
+  "pages": [
+   "BigBox_Firmware_Flashing_Guide"
+  ],
+  "checked": "2026-10-29",
+  "by": "script",
+  "code": 200
+ },
+ "https://github.com/tohara/OctoPrint-BigBoxFirmware/archive/master.zip": {
+  "status": "ok",
+  "text": "https://github.com/tohara/OctoPrint-BigBoxFirmware/archive/master.zip",
+  "pages": [
+   "BigBox_Firmware_Flashing_Guide"
+  ],
+  "checked": "2026-10-29",
+  "by": "script",
+  "code": 200,
+  "note": "redirects",
+  "final": "https://codeload.github.com/tohara/OctoPrint-BigBoxFirmware/zip/refs/heads/master"
+ },
+ "https://plus.google.com/+JohnEsc/posts/9tea8wS1qoa": {
+  "status": "untested",
+  "text": "John's 3D Build & Printing Tools",
+  "pages": [
+   "BigBox_Build_Manual"
+  ]
+ },
+ "https://plus.google.com/101981424292504602513/posts/AxB4jxjbyMM": {
+  "status": "untested",
+  "text": "this post on google+",
+  "pages": [
+   "BigBox_Printer_Sub-assemblies"
+  ]
+ },
+ "https://www.arduino.cc/en/Main/Software": {
+  "status": "untested",
+  "text": "https://www.arduino.cc/en/Main/Software",
+  "pages": [
+   "BigBox_Firmware_Flashing_Guide"
+  ]
+ },
+ "https://www.dropbox.com/s/zlaknl7vw509144/BigBox%20Updated%20Pictures.zip?dl=0": {
+  "status": "untested",
+  "text": "Livi's MLP Edition Exploded Diagrams",
+  "pages": [
+   "BigBox_Build_Manual"
+  ]
+ },
+ "https://www.raspberrypi.org/": {
+  "status": "untested",
+  "text": "Raspberry Pi",
+  "pages": [
+   "BigBox_Software"
+  ]
+ },
+ "https://www.raspberrypi.org/documentation/installation/installing-images/README.md": {
+  "status": "untested",
+  "text": "installing images",
+  "pages": [
+   "BigBox_OctoPrint_Upgrade"
+  ]
+ },
+ "https://www.simplify3d.com/": {
+  "status": "untested",
+  "text": "Simplify3D",
+  "pages": [
+   "Appendix_Older_Version_Content",
+   "BigBox_Software"
+  ]
+ },
+ "https://www.thingiverse.com/thing:1272287": {
+  "status": "untested",
+  "text": "Thingiverse",
+  "pages": [
+   "BigBox_Printer_Sub-assemblies"
+  ]
+ },
+ "https://www.thingiverse.com/thing:1387197": {
+  "status": "untested",
+  "text": "Handled Drills (Hole Reamers)",
+  "pages": [
+   "BigBox_Build_Manual"
+  ]
+ },
+ "https://www.thingiverse.com/thing:1521722": {
+  "status": "untested",
+  "text": "https://www.thingiverse.com/thing:1521722",
+  "pages": [
+   "BigBox_Build_Manual"
+  ]
+ },
+ "https://www.thingiverse.com/thing:1686515": {
+  "status": "untested",
+  "text": "Dual Extruder Alignment Tool",
+  "pages": [
+   "Printer_Commissioning"
+  ]
+ },
+ "https://www.youtube.com/watch?v=Xjmj0j0pcRM": {
+  "status": "untested",
+  "text": "https://www.youtube.com/watch?v=Xjmj0j0pcRM",
+  "pages": [
+   "Printer_main_assemblies_Step_By_Step_Assembly_Process"
+  ]
+ },
+ "https://youtu.be/0RpnXo2UQ0Y": {
+  "status": "untested",
+  "text": "https://youtu.be/0RpnXo2UQ0Y",
+  "pages": [
+   "Printer_Commissioning"
+  ]
+ },
+ "https://youtu.be/1v27cCMtCCI": {
+  "status": "untested",
+  "text": "https://youtu.be/1v27cCMtCCI",
+  "pages": [
+   "Printer_Commissioning"
+  ]
+ },
+ "https://youtu.be/2_GjLWiQV_I": {
+  "status": "untested",
+  "text": "https://youtu.be/2_GjLWiQV_I",
+  "pages": [
+   "Printer_Commissioning"
+  ]
+ },
+ "https://youtu.be/5X6I6plC3d8": {
+  "status": "untested",
+  "text": "https://youtu.be/5X6I6plC3d8",
+  "pages": [
+   "Printer_Commissioning"
+  ]
+ },
+ "https://youtu.be/8A-qU3_-mCk": {
+  "status": "untested",
+  "text": "https://youtu.be/8A-qU3_-mCk",
+  "pages": [
+   "Printer_Commissioning"
+  ]
+ },
+ "https://youtu.be/DBDXf6ysArk": {
+  "status": "untested",
+  "text": "https://youtu.be/DBDXf6ysArk",
+  "pages": [
+   "Non-Hybrid_Dual_Calibrating_Z_Offset"
+  ]
+ },
+ "https://youtu.be/Is6ddMdZ63E": {
+  "status": "untested",
+  "text": "https://youtu.be/Is6ddMdZ63E",
+  "pages": [
+   "Printer_Commissioning"
+  ]
+ },
+ "https://youtu.be/PvswubV-zas": {
+  "status": "untested",
+  "text": "https://youtu.be/PvswubV-zas",
+  "pages": [
+   "Printer_Commissioning"
+  ]
+ },
+ "https://youtu.be/dtdeFrBScJQ": {
+  "status": "untested",
+  "text": "https://youtu.be/dtdeFrBScJQ",
+  "pages": [
+   "Printer_Commissioning"
+  ]
+ },
+ "https://youtu.be/hDD1arof7YM": {
+  "status": "untested",
+  "text": "https://youtu.be/hDD1arof7YM",
+  "pages": [
+   "Printer_Commissioning"
+  ]
+ },
+ "https://youtu.be/pwVBydX4xyA": {
+  "status": "untested",
+  "text": "https://youtu.be/pwVBydX4xyA",
+  "pages": [
+   "Your_First_Print"
+  ]
+ }
+}

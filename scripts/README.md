@@ -22,7 +22,8 @@ Optionally set `BIGBOX_SEED` to a read-only folder laid out like a data folder. 
 | 6 | `missing_report.py` | Writes `MISSING.md`: what the archive does not have. |
 | 7 | `markdown.py` | Converts the HTML in `docs/` to GitHub Markdown in `manual/` (needs [pandoc](https://pandoc.org): `mise use -g pandoc`). Images and PDFs are not copied; the Markdown links to `docs/images` and `docs/files`. Heading links are rewritten to GitHub's anchors. Override the folders with `BIGBOX_SITE` and `BIGBOX_MD`. |
 | 8 | `check_markdown.py` | Checks that every link and image in `manual/` resolves and every `#section` anchor exists. |
-| 9 | `markdownlint-cli2` | Lints all Markdown in the repository, including the generated `manual/`. Install with `mise use -g npm:markdownlint-cli2`; the rules that do not fit this content are switched off, with reasons, in `.markdownlint-cli2.jsonc`. |
+| 9 | `check_links.py` | `list` records every external link in `notes/link-status.json` and writes `notes/external-links.md`; `check` tests them (it needs a network that allows the hosts) and records the result. A link whose status is `dead` keeps its text in the manual and is labelled "(dead link)", with a link to the Wayback Machine copy if there is one. A host the sandbox does not allow is recorded as `blocked`, never as dead. |
+| 10 | `markdownlint-cli2` | Lints all Markdown in the repository, including the generated `manual/`. Install with `mise use -g npm:markdownlint-cli2`; the rules that do not fit this content are switched off, with reasons, in `.markdownlint-cli2.jsonc`. |
 
 `targets.py` holds what cannot be derived from the archive: which missing pages to rebuild and from where, which removed sections go in the appendix, and which PDFs apply. Edit it to change those choices.
 
@@ -43,6 +44,9 @@ How the wiki's pages changed over time was analysed once, from about 250 archive
 - **The wiki's closure notice is removed** from every page (it pointed to a site that no longer exists). The index page mentions it once.
 - **Images** that exist only as thumbnails are used as thumbnails. Images with no capture show a placeholder with the original file name.
 - **Pages the archive lacks** (Dual X-Carriage, Non-Titan Idler Arms, the IR sensor bracket, Mesh Levelling, Z-Offset calibration) were inline sections of bigger pages until Sept 2016, so they are cut from the last such version. Each says so on the page.
+- **Every page with four or more sections has a contents list**, like the wiki's, and on the Build Manual page each heading that links to another page also lists that page's sections.
+- **Dead external links are labelled, not hidden.** Which links are dead comes from `notes/link-status.json` (see `check_links.py`).
+- **The Downloads page** says where the files the wiki hosted can be found now (the BigBox GitHub repositories and a community settings repository). They are linked, not copied, because four of the five repositories have no licence. The list is in `targets.py`.
 - **Links to pages the archive does not have are plain text.** They are not turned into links to the archive, since the archive has nothing to show.
 - **File names are safe on every OS.** Titles such as `Printer_main_assemblies:_Step_By_Step_Assembly_Process` become `Printer_main_assemblies_Step_By_Step_Assembly_Process`, because a colon in a file name breaks a Windows checkout.
 - **Stub pages are skipped.** `BigBox_Troubleshooting` never had content beyond "Coming Soon!", so it has no valid capture and is left out.

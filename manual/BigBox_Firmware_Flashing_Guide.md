@@ -2,6 +2,30 @@
 
 Archived 20201204013533 · source: wiki.e3d-online.com/wiki/BigBox_Firmware_Flashing_Guide
 
+**Contents**
+
+- [Determining your BigBox version](#determining-your-bigbox-version)
+- [Connecting to the BigBox](#connecting-to-the-bigbox)
+  - [Without OctoPrint/OctoPi upgrade](#without-octoprintoctopi-upgrade)
+  - [With OctoPrint/OctoPi upgrade](#with-octoprintoctopi-upgrade)
+- [Flashing on Windows](#flashing-on-windows)
+  - [Driver Installation](#driver-installation)
+  - [Flashing a new firmware](#flashing-a-new-firmware-1)
+- [Flashing on OS X (Mac)](#flashing-on-os-x-mac)
+- [Flashing on Linux](#flashing-on-linux)
+- [Flashing on an RaspberryPi/OctoPi](#flashing-on-an-raspberrypioctopi)
+- [Flashing with "Firmware Updater" (OctoPrint plugin)](#flashing-with-firmware-updater-octoprint-plugin)
+  - [Installing and setting up "Firmware Updater"](#installing-and-setting-up-firmware-updater)
+  - [Flashing a new firmware](#flashing-a-new-firmware-2)
+- [Flashing with "BigBox Firmware" (Octoprint plugin)](#flashing-with-bigbox-firmware-octoprint-plugin)
+  - [Installing and setting up "BigBox Firmware"](#installing-and-setting-up-bigbox-firmware)
+  - [Flashing a new firmware](#flashing-a-new-firmware-3)
+- [Arduino IDE Setup](#arduino-ide-setup)
+- [Install additional libaries](#install-additional-libaries)
+- [Get the source code](#get-the-source-code)
+- [Setting up the Arduino project](#setting-up-the-arduino-project)
+- [Troubleshooting](#troubleshooting)
+
 NEVER try to flash the firmware while the printer is printing!
 
 Also disconnect any other processes accessing the printer like OctoPrint or any other host applications!

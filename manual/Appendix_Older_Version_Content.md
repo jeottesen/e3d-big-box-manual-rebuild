@@ -1,6 +1,14 @@
 # Appendix Older Version Content
 
-Content that appeared in older versions of this manual and was later removed, kept here for completeness. It is not part of the current build instructions.
+**Contents**
+
+- [Slicer profiles (older Software page)](#slicer-profiles-older-software-page)
+  - [Simplify3D](#simplify3d)
+  - [Slic3r](#slic3r)
+- [Simplify3D alpha profile (older First Print page)](#simplify3d-alpha-profile-older-first-print-page)
+- [Slic3r alpha profile (older First Print page)](#slic3r-alpha-profile-older-first-print-page)
+
+Content that appeared in older versions of this manual and was later removed, kept here for completeness. It is not part of the current build instructions. Current copies of the profiles and firmware are listed on the [Downloads](Downloads.md) page.
 
 ## Slicer profiles (older Software page)
 
@@ -8,7 +16,7 @@ From the BigBox Software page, version 20160601234712. Describes the Simplify3D 
 
 ### [Simplify3D](https://www.simplify3d.com/)
 
-The provided profiles are centered around printing [E3D's Everyday PLA](http://e3d-online.com/All-Filament&filter=5,24,11), you will need to adjust the profile settings to suite your chosen filament.
+The provided profiles are centered around printing E3D's Everyday PLA *(dead link)*, you will need to adjust the profile settings to suite your chosen filament.
 
 [Pro.fff](http://files.e3d-online.com/BigBox/Slicer%20Configs/Simplify3D/bigbox_pro.fff)
 

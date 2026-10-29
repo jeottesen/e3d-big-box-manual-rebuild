@@ -2,6 +2,33 @@
 
 Archived 20230509125052 · source: wiki.e3d-online.com/wiki/Titan_Assembly
 
+**Contents**
+
+- [Plastic Parts](#plastic-parts)
+- [Fixings Kit](#fixings-kit)
+- [Gears](#gears)
+- [Bearings](#bearings)
+- [Other](#other)
+- [Extruder Body](#extruder-body)
+- [Gears](#gears-1)
+- [Heatsink / Bowden Adaptor & Filament Guide](#heatsink--bowden-adaptor--filament-guide)
+- [Idler Lever](#idler-lever)
+- [Lid](#lid)
+- [Gear Alignment Check](#gear-alignment-check)
+- [PTFE in Idler](#ptfe-in-idler)
+- [Mounting Options](#mounting-options)
+- [Assembly & Commissioning](#assembly--commissioning)
+- [Firmware Calibration](#firmware-calibration)
+- [Loading and Unloading](#loading-and-unloading)
+- [Adjusting Idler Force](#adjusting-idler-force)
+- [HotEnd Removal](#hotend-removal)
+  - [Weight](#weight)
+  - [Wear on Idler](#wear-on-idler)
+- ["Clicking" sound during retractions](#clicking-sound-during-retractions)
+- [Filament slipping off hobbed area of Filament Drive Shaft](#filament-slipping-off-hobbed-area-of-filament-drive-shaft)
+- [Drive gear hard to turn when lid tightened](#drive-gear-hard-to-turn-when-lid-tightened)
+- [HotEnd is wobbly](#hotend-is-wobbly)
+
 ## What's in the Box
 
 ![TITAN-IN-THE-BOX-NEW.jpg](../docs/images/TITAN-IN-THE-BOX-NEW.jpg)
@@ -276,7 +303,7 @@ To remove the HotEnd, relieve tension in the idler then remove the front 4 screw
 - [Model of Assembled Titan in STL format](http://files.e3d-online.com/Titan/ASM_EX_THUMB_SCREW.stl)
 - [Model of Assembled Titan in STP format](http://files.e3d-online.com/Titan/ASM_EX_THUMB_SCREW.stp)
 - [E3D Titan Bracket](http://www.thingiverse.com/thing:1477900)
-- [Mounting Bracket Engineering Drawing](http://files.e3d-online.com/Titan/BRACKET_PRINTED.pdf)
+- Mounting Bracket Engineering Drawing *(dead link)*
 
 ## FAQ
 

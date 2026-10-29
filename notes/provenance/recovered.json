@@ -41,5 +41,11 @@
   "version": "various",
   "heading": "datasheets",
   "lines": 10
+ },
+ "Downloads": {
+  "parent": "GitHub repositories",
+  "version": "2026-10-29",
+  "heading": "downloads",
+  "lines": 31
  }
 }

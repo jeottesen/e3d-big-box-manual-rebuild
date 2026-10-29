@@ -2,6 +2,40 @@
 
 Archived 20210415222724 · source: wiki.e3d-online.com/wiki/Printer_Commissioning
 
+**Contents**
+
+- [(1) Belts, Pulleys & Rods](#1-belts-pulleys--rods)
+  - [(1.1) X-Axis](#11-x-axis)
+  - [(1.2) Y-Axis](#12-y-axis)
+    - [(1.2.1) Y-Axis Motor](#121-y-axis-motor)
+  - [(1.3) Z-Axis](#13-z-axis)
+  - [(1.4) Leadscrews](#14-leadscrews)
+- [(2) Glass Build Plate](#2-glass-build-plate)
+  - [(2.1) Clips](#21-clips)
+  - [(2.2) Glass](#22-glass)
+- [(3) Ooze Wiper Adjustment](#3-ooze-wiper-adjustment)
+- [(4) Homing](#4-homing)
+  - [(4.1) Pre-Checks](#41-pre-checks)
+  - [(4.2) Power On](#42-power-on)
+    - [(4.2.1) Pro & All Hybrid Extruders](#421-pro--all-hybrid-extruders)
+    - [(4.2.2) Dual Extruders](#422-dual-extruders)
+    - [(4.2.3) Z-Axis Leadscrew Steps-Per-MM](#423-z-axis-leadscrew-steps-per-mm)
+  - [(4.3) Calibrating Z Offset](#43-calibrating-z-offset)
+    - [(4.3.1) Pro, Lite & Hybrid Pro/Dual](#431-pro-lite--hybrid-produal)
+    - [(4.3.2) Non-Hybrid Dual Calibrating Z Offset](#432-non-hybrid-dual-calibrating-z-offset)
+- [(5) Zero X & Y](#5-zero-x--y)
+- [(6) Z-Axis Calibration](#6-z-axis-calibration)
+- [(7) Tightening the HotEnd](#7-tightening-the-hotend)
+- [(8) Dual Nozzle Alignment](#8-dual-nozzle-alignment)
+  - [(8.1) Levelling](#81-levelling)
+  - [(8.2) Extruder Offset](#82-extruder-offset)
+  - [(8.3) G-Code](#83-g-code)
+- [(9) Bed levelling](#9-bed-levelling)
+  - [(9.1) Auto-Levelling the Pro, Lite & Hybrid Models](#91-auto-levelling-the-pro-lite--hybrid-models)
+  - [(9.2) Mesh Levelling the Non-Hybrid Dual](#92-mesh-levelling-the-non-hybrid-dual)
+- [(10) The Finishing Touches](#10-the-finishing-touches)
+- [Where next?](#where-next)
+
 ## (1) Belts, Pulleys & Rods
 
 ### (1.1) X-Axis

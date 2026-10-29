@@ -2,6 +2,29 @@
 
 Archived 20221201075921 · source: wiki.e3d-online.com/wiki/BigBox_Parts_Preparation
 
+**Contents**
+
+- [(1) Y-Axis Rear Brackets (Left & Right)](#1-y-axis-rear-brackets-left--right)
+- [(2) Y-Axis Front Brackets (Left & Right)](#2-y-axis-front-brackets-left--right)
+- [(3) Y-Axis Belt Idlers](#3-y-axis-belt-idlers)
+- [(4) Non-Titan Single & Dual Extruder Filament Idlers](#4-non-titan-single--dual-extruder-filament-idlers)
+- [(5) X-Axis Idler Carriage](#5-x-axis-idler-carriage)
+- [(6) X-Axis Motor Mount](#6-x-axis-motor-mount)
+- [(7) Pro & Lite X-Carriage](#7-pro--lite-x-carriage)
+- [(8) Dual X-Carriage](#8-dual-x-carriage)
+- [(9) Hybrid X-Carriage](#9-hybrid-x-carriage)
+- [(10) Heated Bed Corners](#10-heated-bed-corners)
+- [(11) Outer Spools Rear (Left & Right)](#11-outer-spools-rear-left--right)
+- [(12) Spool Holder Outer Fronts](#12-spool-holder-outer-fronts)
+- [(13) Print Cooling Fan (v1.0)](#13-print-cooling-fan-v10)
+- [(14) Y-Axis Motor Mount](#14-y-axis-motor-mount)
+- [(15) Single & Dual Direct-Drive IR Sensor Bracket](#15-single--dual-direct-drive-ir-sensor-bracket)
+- [(16) Hybrid IR Sensor Bracket](#16-hybrid-ir-sensor-bracket)
+- [(17) Spool Carrier Clamp](#17-spool-carrier-clamp)
+- [(18) Z-Axis Drag Chain Anchors](#18-z-axis-drag-chain-anchors)
+- [(19) IEC Socket](#19-iec-socket)
+- [Where next?](#where-next)
+
 **For a full list of Fixings, including Bag Numbers please refer to the [Fixings Section](Bill_Of_Materials.md#fixings "Bill Of Materials") of the [Bill Of Materials](Bill_Of_Materials.md "Bill Of Materials").**
 
 ## (1) Y-Axis Rear Brackets (Left & Right)

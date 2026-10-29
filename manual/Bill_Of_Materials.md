@@ -2,6 +2,21 @@
 
 Archived 20210416002713 · source: wiki.e3d-online.com/wiki/Bill_Of_Materials
 
+**Contents**
+
+- [Frame Components](#frame-components)
+- [Electronics](#electronics)
+- [Fans](#fans)
+- [Motors](#motors)
+- [Rods](#rods)
+- [Bearings](#bearings)
+- [E3D HotEnd(s)](#e3d-hotends)
+- [Wiring](#wiring)
+- [Printed Parts](#printed-parts)
+- [Fixings](#fixings)
+- [OctoPrint Upgrade Extras](#octoprint-upgrade-extras)
+- [Where next?](#where-next)
+
 ## Frame Components
 
 - ![Frame_back_b.jpg](../docs/images/Frame_back_b.jpg)
@@ -134,7 +149,7 @@ Embedded Plastic Bowden Coupler, two parts.
 
 ## Fixings
 
-Fixing List pdf \| [https://dl.dropboxusercontent.com/u/54348751/BigBox_Fixings.pdf](https://dl.dropboxusercontent.com/u/54348751/BigBox_Fixings.pdf)
+Fixing List pdf \| `https://dl.dropboxusercontent.com/u/54348751/BigBox_Fixings.pdf` *(dead link)*
 
 ## OctoPrint Upgrade Extras
 

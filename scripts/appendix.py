@@ -10,7 +10,7 @@ Run after recover.py:  python3 -I scripts/appendix.py
 import html, json, os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))   # sibling modules (python -I does not add the script folder)
 from recover import find_section
-from targets import APPENDIX
+from targets import APPENDIX, DOWNLOADS
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RAW = os.environ.get('BIGBOX_RAW', f'{ROOT}/raw')   # archive data lives outside git; override with BIGBOX_RAW
@@ -56,5 +56,19 @@ rows = ''.join(f'<li><a href="files/{n}.pdf">{n}.pdf</a> — {DESC.get(n, "datas
 open(f'{RAW}/recovered/Datasheets.html', 'w').write(f'<div id="mw-content-text"><p>PDF datasheets and drawings that were hosted on the wiki and apply to BigBox parts '
                                                    f'(V6 hotend, stepper motors, fans). Volcano and heater-mat datasheets were left out as they are not BigBox parts.</p><ul>{rows}</ul></div>')
 index['Datasheets'] = {'parent': 'wiki-hosted files', 'version': 'various', 'heading': 'datasheets', 'lines': len(files)}
+# a page saying where the files the wiki hosted can be found now
+dl = ['<p>Files the wiki linked to that are no longer on the wiki, and where to find them now. They are linked, not copied: '
+      'most of these repositories have no licence. Checked against the repositories on 2026-10-29.</p>']
+for heading, intro, items in DOWNLOADS:
+    dl.append(f'<h2>{html.escape(heading)}</h2><p>{html.escape(intro)}</p><ul>' + ''.join(
+        '<li>' + (f'<a href="{html.escape(url)}">{html.escape(text)}</a>' if url else html.escape(text)) + (f' – {html.escape(note)}' if note else '') + '</li>'
+        for text, url, note in items) + '</ul>')
+open(f'{RAW}/recovered/Downloads.html', 'w').write('<div id="mw-content-text">' + ''.join(dl) + '</div>')
+index['Downloads'] = {'parent': 'GitHub repositories', 'version': '2026-10-29', 'heading': 'downloads', 'lines': sum(len(i) for _, _, i in DOWNLOADS)}
+# the appendix points to it
+ap = f'{RAW}/recovered/Appendix_Older_Version_Content.html'
+text = open(ap).read().replace('It is not part of the current build instructions.</p>',
+    'It is not part of the current build instructions. Current copies of the profiles and firmware are listed on the <a href="/wiki/Downloads">Downloads</a> page.</p>', 1)
+open(ap, 'w').write(text)
 json.dump(index, open(index_path, 'w'), indent=1)
 print('wrote appendix with', len(parts), 'sections;', len([v for v in files.values() if v]), 'datasheets')

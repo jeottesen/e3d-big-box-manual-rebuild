@@ -2,6 +2,18 @@
 
 Archived 20220930193817 · source: wiki.e3d-online.com/wiki/Single_Direct-Drive_Printhead_Assembly
 
+**Contents**
+
+- [(19.1) Extruder](#191-extruder)
+- [(19.2) IR Sensor & Print Fan](#192-ir-sensor--print-fan)
+- [(19.3) Assembly of the E3D HotEnd.](#193-assembly-of-the-e3d-hotend)
+- [(19.4) Installing the HotEnd.](#194-installing-the-hotend)
+- [(19.5) X-Axis Endstop](#195-x-axis-endstop)
+- [(19.6) IR Sensor Cable](#196-ir-sensor-cable)
+- [(19.7) Extruder Motor Cable](#197-extruder-motor-cable)
+- [(19.8) Printhead wiring](#198-printhead-wiring)
+- [(19.9) The Rear Spine](#199-the-rear-spine)
+
 *\[image not archived: PRINT-HEAD\_(SINGLE).jpg\]*
 
 ## (19.1) Extruder
