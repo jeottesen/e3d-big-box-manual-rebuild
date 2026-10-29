@@ -35,7 +35,7 @@ Simplify3D profiles are available in our [Settings repository for Simplify3D](ht
 
 We have an alpha release of the BigBox Slic3r profile. It will work with all versions (Lite / Pro / Dual) but do note it is only for a single extruder.
 
-[BigBox_Slic3r_config_bundle.ini](https://dl.dropboxusercontent.com/u/54348751/BigBox_Slic3r_config_bundle.ini)
+BigBox_Slic3r_config_bundle.ini *(dead link)*
 
 ## OctoPrint
 

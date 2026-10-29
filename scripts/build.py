@@ -82,10 +82,10 @@ def fix_images(body, stats):
     body = re.sub(r'<a [^>]*class="image"[^>]*>\s*(<img[^>]*>)\s*</a>', r'\1', body)  # drop links to File: pages
     return re.sub(r'<img[^>]*>', repl, body)
 
-HEADING = re.compile(r'<h([2-6])\b([^>]*)>(.*?)</h\1>', re.S)
+HEADING = re.compile(r'<h([1-6])\b([^>]*)>(.*?)</h\1>', re.S)   # the page title is added separately, so any h1 in a body is a section (Titan Assembly uses them)
 
 def with_heading_ids(body):
-    """Give every h2-h6 an id (the wiki puts it on an inner span; rebuilt sections have none).
+    """Give every h1-h6 an id (the wiki puts it on an inner span; rebuilt sections have none).
     Returns the body and [(level, id, text)] for the contents list."""
     heads, used = [], set()
     def repl(m):

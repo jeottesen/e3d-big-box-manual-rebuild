@@ -3,6 +3,8 @@
 
   list              read the HTML in docs/, add every external link to notes/link-status.json, and write
                     notes/external-links.md (a table of every link, its text, the pages it is on and its status)
+  archive           infer which hosts are down (three or more 503s, none working) and look up a Wayback Machine copy
+                    of every dead link that has none (needs the network; `check` does this at the end)
   check [--host H] [--recheck]
                     test links and record the result in notes/link-status.json; needs the network
                     (--host limits it to one host; --recheck tests links that already have a result)
@@ -95,13 +97,35 @@ def probe(url):
     except Exception as e: return 'unknown', None, f'{type(e).__name__}: {e}', ''
 
 def wayback_copy(url):
-    """URL of a Wayback Machine capture of a dead link, or None."""
+    """URL of the newest Wayback Machine capture (status 200) of a dead link, or None. Uses the capture index, then the availability API."""
+    def fetch(api):
+        with urllib.request.urlopen(urllib.request.Request(api, headers={'User-Agent': UA}), timeout=45) as r: return r.read().decode('utf-8', 'replace')
     try:
-        api = 'https://archive.org/wayback/available?url=' + urllib.parse.quote(url, safe='')
-        with urllib.request.urlopen(urllib.request.Request(api, headers={'User-Agent': UA}), timeout=30) as r:
-            snap = json.load(r).get('archived_snapshots', {}).get('closest')
+        row = fetch('https://web.archive.org/cdx/search/cdx?output=txt&fl=timestamp,original&filter=statuscode:200&limit=-1&url=' + urllib.parse.quote(url, safe='')).split()
+        if len(row) == 2 and re.match(r'\d{14}$', row[0]): return f'https://web.archive.org/web/{row[0]}/{row[1].replace(":80", "", 1)}'
+    except Exception: pass
+    try:
+        snap = json.loads(fetch('https://archive.org/wayback/available?url=' + urllib.parse.quote(url, safe=''))).get('archived_snapshots', {}).get('closest')
         return snap['url'].replace('http://', 'https://', 1) if snap and snap.get('available') and str(snap.get('status')) == '200' else None
     except Exception: return None
+
+def infer_down_hosts(status):
+    """A host where at least three links answered 503 and none worked is down: its other links are dead too."""
+    hosts = {}
+    for u, e in status.items(): hosts.setdefault(urllib.parse.urlparse(u).netloc.lower(), []).append(e)
+    for host, es in hosts.items():
+        if sum(e['status'] == 'unknown' and e.get('code') == 503 for e in es) >= 3 and not any(e['status'] == 'ok' for e in es):
+            for e in es:
+                if e['status'] in ('unknown', 'blocked', 'untested') and e.get('by') != 'maintainer':
+                    e.update(status='dead', by='script', note=f'{host} answers 503 for every link tested; the site is down')
+                    print(f'  {host}: marked dead (every link answers 503)', flush=True)
+
+def fill_archived(status):
+    for url, e in status.items():
+        if e['status'] == 'dead' and not e.get('archived'):
+            arch = wayback_copy(url)
+            if arch: e['archived'] = arch; print(f'  archived copy: {url[:80]}', flush=True)
+            time.sleep(DELAY)
 
 def cmd_check(host, recheck):
     status = load()
@@ -122,16 +146,21 @@ def cmd_check(host, recheck):
         for k, v in (('code', code), ('note', note), ('final', final)):
             if v: e[k] = v
             else: e.pop(k, None)
-        if st == 'dead' and not e.get('archived'):
-            arch = wayback_copy(url)
-            if arch: e['archived'] = arch
         print(f'[{n}/{len(todo)}] {st:8} {code or "":4} {url[:90]}  {note}', flush=True)
         save(status)
+    cmd_archive()
+
+def cmd_archive():
+    """Infer which hosts are down, then look up Wayback copies of every dead link that has none."""
+    status = load()
+    infer_down_hosts(status); save(status)
+    fill_archived(status); save(status)
     cmd_list()
 
 if __name__ == '__main__':
     args = sys.argv[1:]
     if args[:1] == ['list']: cmd_list()
+    elif args[:1] == ['archive']: cmd_archive()
     elif args[:1] == ['check']:
         host = args[args.index('--host') + 1].lower() if '--host' in args else None
         cmd_check(host, '--recheck' in args)

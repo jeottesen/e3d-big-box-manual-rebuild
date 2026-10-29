@@ -131,7 +131,7 @@ Brass Nut. Shown with engraved text down.
 - 8 x M3 10mm Screws (Bag 8).
 - 8 x M3 Lock-Washers (Bag 6).
 
-Before starting this step please read through [this post on google+](https://plus.google.com/101981424292504602513/posts/AxB4jxjbyMM). This only applies to the first 20-30 kits which were sent out before we paused shipping. If you are unsure please visit the forum at [forum.e3d-online.com](http://forum.e3d-online.com/).
+Before starting this step please read through [this post on google+](https://plus.google.com/101981424292504602513/posts/AxB4jxjbyMM). This only applies to the first 20-30 kits which were sent out before we paused shipping. If you are unsure please visit the forum at forum.e3d-online.com *(dead link; [archived copy](https://web.archive.org/web/20240324165937/https://forum.e3d-online.com/))*.
 
 Install the two Brass Nuts to the Top layer of the heated bed.
 

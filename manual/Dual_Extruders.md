@@ -30,4 +30,4 @@ Power on your BigBox.
 
 Ready.
 
-If all is well you should see three temperature readouts, two nozzles and the heated bed. If you have a MAXTEMP or other error please refer to the support section of the BigBox forum at [forum.e3d-online.com](https://forum.e3d-online.com)\
+If all is well you should see three temperature readouts, two nozzles and the heated bed. If you have a MAXTEMP or other error please refer to the support section of the BigBox forum at forum.e3d-online.com *(dead link; [archived copy](https://web.archive.org/web/20240324165937/https://forum.e3d-online.com/))*\

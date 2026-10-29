@@ -890,7 +890,7 @@ It is worth at this point checking that you can access the heater block and nozz
 
 Using the LCD lower the Z-Axis, somewhere around 200mm should be fine.
 
-**Note**: There is a firmware bug which causes the bed to change height and reset to 0, please refer to the forum for support \| [forum.e3d-online.com](https://forum.e3d-online.com)
+**Note**: There is a firmware bug which causes the bed to change height and reset to 0, please refer to the forum for support \| forum.e3d-online.com *(dead link; [archived copy](https://web.archive.org/web/20240324165937/https://forum.e3d-online.com/))*
 
 ![Tightening_control.jpg](../docs/images/Tightening_control.jpg)
 
@@ -1108,7 +1108,7 @@ For an in depth explanation visit the RepRap Wiki \| [reprap.org](http://reprap.
 
 The code needs to be sent to the BigBox each time the printer is turned on, or ideally just before a new print is started.
 
-The easiest way is to add the command to the start-script of your slicers profile. For additional support please visit the forums \| [forum.e3d-online.com](https://forum.e3d-online.com)
+The easiest way is to add the command to the start-script of your slicers profile. For additional support please visit the forums \| forum.e3d-online.com *(dead link; [archived copy](https://web.archive.org/web/20240324165937/https://forum.e3d-online.com/))*
 
 ## (9) Bed levelling
 

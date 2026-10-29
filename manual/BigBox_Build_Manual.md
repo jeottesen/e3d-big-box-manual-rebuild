@@ -361,7 +361,7 @@ Printing
 
 ## BigBox Support
 
-The best place to go for further help and advice is the [BigBox forum](http://forum.bigbox-3d.com).
+The best place to go for further help and advice is the BigBox forum *(dead link)*.
 
 ## [BigBox Software](BigBox_Software.md "BigBox Software")
 
@@ -384,19 +384,19 @@ Repetier.
 
 ## BigBox Community Generated Help & Guides
 
-[**BigBox Forum \| Guides, Mods, and Upgrades**](http://forum.e3d-online.com/index.php?forums/guides-mods-and-upgrades.26/) *(A huge collection of help, tips and tricks).*
+**BigBox Forum \| Guides, Mods, and Upgrades** *(dead link; [archived copy](https://web.archive.org/web/20160622040336/http://forum.e3d-online.com/index.php?forums/guides-mods-and-upgrades.26/))* *(A huge collection of help, tips and tricks).*
 
-[Livi's BigBox Pre-Build Guide](https://docs.google.com/document/d/1zl_MQIf-aFD4pc7TauehwL7SaKXNig-ABx_l33cSCJA/edit)
+Livi's BigBox Pre-Build Guide *(dead link)*
 
 [Livi's MLP Edition Exploded Diagrams](https://www.dropbox.com/s/zlaknl7vw509144/BigBox%20Updated%20Pictures.zip?dl=0) *(Note some may be out of date, but they are still a great reference).*
 
 [John's 3D Build & Printing Tools](https://plus.google.com/+JohnEsc/posts/9tea8wS1qoa)
 
-[Liam's Printed Parts Check-List](https://drive.google.com/file/d/0B8NaxduLlxIQSEhSdnUzV2FodGs/view?usp=sharing)
+Liam's Printed Parts Check-List *(dead link)*
 
-[Shao's BigBox Dual Build Log](https://forum.e3d-online.com/index.php?threads/shaos-bigbox-dual-build-log.685/)
+Shao's BigBox Dual Build Log *(dead link)*
 
-[Using platformio to flash firmware from RPi](https://forum.e3d-online.com/index.php?threads/using-platformio-to-flash-firmware-from-rpi.720/)
+Using platformio to flash firmware from RPi *(dead link)*
 
 ## BigBox printer projects
 

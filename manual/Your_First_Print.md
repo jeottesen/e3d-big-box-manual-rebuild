@@ -15,7 +15,7 @@ Archived 20201204013802 · source: wiki.e3d-online.com/wiki/Your_First_Print
 
 Box Of Filament.
 
-We recommend E3D Online's range of [Everyday & Premium Filament](http://e3d-online.com/All-Filament&filter=5,24) for your daily printing needs!
+We recommend E3D Online's range of Everyday & Premium Filament *(dead link; [archived copy](https://web.archive.org/web/20160902222958/http://e3d-online.com:80/All-Filament&filter=5,24))* for your daily printing needs!
 
 ![Spool_tube.jpg](../docs/images/Spool_tube.jpg)
 
@@ -177,7 +177,7 @@ SD Card.
 
 Insert the provided SD card into the side of the LCD.
 
-If you do not have the files pre-loaded on your SD Card they are available from **[http://files.e3d-online.com/BigBox/SD_Card/](http://files.e3d-online.com/BigBox/SD_Card/)**
+If you do not have the files pre-loaded on your SD Card they are available from **`http://files.e3d-online.com/BigBox/SD_Card/` *(dead link; [archived copy](https://web.archive.org/web/20161102033305/http://files.e3d-online.com/BigBox/SD_Card/))***
 
 ![Display_card_inserted.jpg](../docs/images/Display_card_inserted.jpg)
 

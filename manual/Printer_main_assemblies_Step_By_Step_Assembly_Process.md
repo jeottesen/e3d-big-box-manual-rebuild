@@ -285,7 +285,7 @@ Note the position of the cable socket. **Do not tighten the M4 screws at this ti
 
 ## (11) Y-Axis Belts
 
-This can be quite a tricky step. If you are having problems fitting the Y-Axis belts please have a quick read through this post on the forum \| [forum.e3d-online.com](http://forum.e3d-online.com/index.php?threads/y-axis-belts-belt-appears-to-be-fitted-upside-down.732)
+This can be quite a tricky step. If you are having problems fitting the Y-Axis belts please have a quick read through this post on the forum \| forum.e3d-online.com *(dead link)*
 
 ![Y_axis_idler.jpg](../docs/images/Y_axis_idler.jpg)
 
@@ -1702,7 +1702,7 @@ Scroll down 20 images for Dual
 
 Connections.
 
-[Pro Wiring connections](http://forum.e3d-online.com/index.php?threads/how-to-attach-a-bb-dual-to-the-rumba-board.599/#post-4300).
+Pro Wiring connections *(dead link)*.
 
 ![Pt100_wires.jpg](../docs/images/Pt100_wires.jpg)
 
@@ -1840,7 +1840,7 @@ Finally the [Electronics Cover Fan](BigBox_Printer_Sub-assemblies.md "BigBox Pri
 
 Connections.
 
-[Dual Wiring connections](http://forum.e3d-online.com/index.php?threads/how-to-attach-a-bb-dual-to-the-rumba-board.599/#post-4300).
+Dual Wiring connections *(dead link)*.
 
 ![Dual_wiring_seperate.jpg](../docs/images/Dual_wiring_seperate.jpg)
 
