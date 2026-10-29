@@ -122,7 +122,24 @@ def add_section_lists(body, self_slug, heads_by_slug):
         top = min(level for level, _, _ in heads)
         items = ''.join(f'<li><a href="{link.group(1)}.html#{html.escape(hid)}">{html.escape(text)}</a></li>' for level, hid, text in heads if level == top)
         return m.group(0) + f'<div class="sections"><ul>{items}</ul></div>'
-    return HEADING.sub(repl, body)
+    body = HEADING.sub(repl, body)
+    # The wiki also left each linked page's section names behind as plain text; the lists above replace them.
+    # Under Versions Overview that text is a label followed by version names, so the names move under the matching link.
+    # Software has an intro line, which stays.
+    def tidy(m):
+        div, rest = m.group(1), m.group(2)
+        blocks = re.findall(r'<dl>.*?</dl>|<p>.*?</p>', rest, re.S)
+        if 'BigBox_Version_Overview.html' in div:
+            label = None
+            for block in blocks:
+                if block.startswith('<p>'): label = re.sub(r'<[^>]+>|\s+', ' ', block).strip()
+                elif label:
+                    names = ''.join(f'<li>{n.strip()}</li>' for n in re.findall(r'<dd>(.*?)</dd>', block, re.S))
+                    div = re.sub(rf'(>{re.escape(html.escape(label))}</a>)(</li>)', rf'\1<ul>{names}</ul>\2', div, count=1)
+            return div
+        keep = [bl for bl in blocks if 'BigBox_Software.html' in div and bl.startswith('<p>The BigBox')]
+        return div + ''.join(keep)
+    return re.sub(r'(<div class="sections">.*?</div>)((?:\s*(?:<dl>(?:(?!<h\d).)*?</dl>|<p>(?:(?!<h\d).)*?</p>))*)', tidy, body, flags=re.S)
 
 def mark_dead(body):
     """A link the status file says is dead keeps its text and is labelled; if the archive has a copy, that is linked too."""

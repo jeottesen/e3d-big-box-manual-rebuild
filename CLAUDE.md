@@ -19,3 +19,8 @@ E3D BigBox 3D printer manual, recovered from the Wayback Machine. See README.md 
 - `notes/link-status.json` records which external links are dead. Update it by running `scripts/check_links.py`; edit it by hand only to record a link the maintainer has reported dead. The build labels dead links; it never hides them.
 - Be polite to the Wayback Machine: one connection, a delay between requests, back off on errors, stop after repeated failures.
 - Work on a branch and open a pull request. Don't push to `main`.
+
+## Cost
+
+- Watch credit use. Do simple, mechanical tasks (searching, listing, link checks, bulk fetches, running scripts and summarising their output) with Haiku subagents (`model: haiku`), and keep Sonnet for design decisions and judgement calls.
+- Don't re-read large generated files or re-run full fetches when a targeted check will do.

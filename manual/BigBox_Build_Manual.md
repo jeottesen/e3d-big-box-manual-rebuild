@@ -30,34 +30,18 @@ If you have a Factory Assembled BigBox you can skip straight to [Your First Prin
 ## [BigBox Versions Overview](BigBox_Version_Overview.md "BigBox Version Overview")
 
 - [E3D supported versions](BigBox_Version_Overview.md#e3d-supported-versions)
+  - BigBox Pro
+  - BigBox Dual
+  - BigBox Pro Hybrid Titan
+  - BigBox Dual Hybrid Titan
 - [Derived versions](BigBox_Version_Overview.md#derived-versions)
+  - BigBox Pro Hybrid
+  - BigBox Dual Hybrid
 - [Special (community built) versions](BigBox_Version_Overview.md#special-community-built-versions)
+  - BigBox Dual Hybrid Titan Mirrored
 - [Remarks](BigBox_Version_Overview.md#remarks)
+  - Kickstarter upgrade to Hybrid/V1.1
 - [Where next?](BigBox_Version_Overview.md#where-next)
-
-E3D supported versions
-
-BigBox Pro
-
-BigBox Dual
-
-BigBox Pro Hybrid Titan
-
-BigBox Dual Hybrid Titan
-
-Derived versions
-
-BigBox Pro Hybrid
-
-BigBox Dual Hybrid
-
-Special (community built) versions
-
-BigBox Dual Hybrid Titan Mirrored
-
-Remarks
-
-Kickstarter upgrade to Hybrid/V1.1
 
 ## Design Files - Plans & Parts List
 
@@ -77,32 +61,6 @@ The BigBox Design Files are available from Thingiverse at \| [https://www.thingi
 - [Nut-Traps](BigBox_Pre-Build.md#nut-traps)
 - [Hex-Half Nuts in Engraved Frame Holes](BigBox_Pre-Build.md#hex-half-nuts-in-engraved-frame-holes)
 - [Where next?](BigBox_Pre-Build.md#where-next)
-
-**What’s In the Box.**
-
-Fixings Errors.
-
-**Exploded Diagrams**.
-
-Preparation.
-
-**Tools required**.
-
-Recommended tools.
-
-Consumables.
-
-Estimated Build Time.
-
-Health & Safety.
-
-Terminology.
-
-Tips & tricks.
-
-Nut-Traps.
-
-Hex-Half Nuts in Engraved Frame Holes.
 
 ## [BigBox Parts Preparation](BigBox_Parts_Preparation.md "BigBox Parts Preparation")
 
@@ -127,40 +85,6 @@ Hex-Half Nuts in Engraved Frame Holes.
 - [(19) IEC Socket](BigBox_Parts_Preparation.md#19-iec-socket)
 - [Where next?](BigBox_Parts_Preparation.md#where-next)
 
-Y-Axis Rear Brackets.
-
-Y-Axis Front Brackets.
-
-Y-Axis Belt Idlers.
-
-Single & Dual Extruder Filament Idlers.
-
-X-Axis Idler Carriage.
-
-X-Axis Motor Mount.
-
-Pro & Lite X-Carriage.
-
-Dual X-Carriage.
-
-Heated Bed Corners.
-
-Outer Spools Rear.
-
-Spool Holder Outer Fronts.
-
-Print Cooling Fan.
-
-Y-Axis Motor Mount.
-
-IR Sensor Bracket.
-
-Spool Carrier Clamp.
-
-Z-Axis Drag Chain Anchors.
-
-IEC Socket.
-
 ## [BigBox Printer Sub-assemblies](BigBox_Printer_Sub-assemblies.md "BigBox Printer Sub-assemblies")
 
 - [(1) Single Direct-Drive Extruder](BigBox_Printer_Sub-assemblies.md#1-single-direct-drive-extruder)
@@ -177,24 +101,6 @@ IEC Socket.
 - [(12) Base Assembly](BigBox_Printer_Sub-assemblies.md#12-base-assembly)
 - [(13) Frame Assembly](BigBox_Printer_Sub-assemblies.md#13-frame-assembly)
 - [Where next?](BigBox_Printer_Sub-assemblies.md#where-next)
-
-Single Extruder.
-
-Dual Extruder.
-
-X-Axis Assembly.
-
-Electronics Cover.
-
-Spool Carrier.
-
-Z-Axis Bed Assembly.
-
-Z-Axis Drag Chain Assembly.
-
-Base Assembly.
-
-Frame Assembly.
 
 ## [Printer main assemblies: Step By Step Assembly Process](Printer_main_assemblies_Step_By_Step_Assembly_Process.md "Printer main assemblies: Step By Step Assembly Process")
 
@@ -232,64 +138,6 @@ Frame Assembly.
 - [(32) Z-Axis](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#32-z-axis)
 - [Where next?](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#where-next)
 
-Y-Axis Rear-Bar Assembly
-
-Y-Axis Rear-Bar Installation
-
-X-Axis / Y-Axis Assembly
-
-X-Axis / Y-Axis Installation
-
-X-Axis Motor Installation
-
-X-Carriage (Pro & Lite)
-
-Y-Axis Endstop
-
-Y-Axis Motor Install
-
-Y-Axis Belts
-
-X-Axis Cable Conduits
-
-X-Axis Drag Chain
-
-Frame Top
-
-Spool Holder Brackets
-
-Cable Spine
-
-Frame Ancillaries
-
-Control Connection
-
-Pro / Lite Printhead Assembly
-
-Dual Printhead Assembly
-
-OctoPrint Upgrade Camera Install
-
-Prepping The Wiring
-
-Fitting The Base
-
-Wiring
-
-Power-On Test
-
-Tuning The Stepper Drivers
-
-Closing Up the Base
-
-Y-Axis Frame Endstop
-
-Z-Axis
-
-Ooze Wiper & Dump Bucket
-
-Spool Carrier
-
 ## [Printer Commissioning](Printer_Commissioning.md "Printer Commissioning")
 
 - [(1) Belts, Pulleys & Rods](Printer_Commissioning.md#1-belts-pulleys--rods)
@@ -304,38 +152,12 @@ Spool Carrier
 - [(10) The Finishing Touches](Printer_Commissioning.md#10-the-finishing-touches)
 - [Where next?](Printer_Commissioning.md#where-next)
 
-Belts, Pulleys & Rods
-
-X-Axis
-
-Y-Axis
-
-Z-Axis
-
-Glass Build Plate
-
-Ooze Wiper
-
-Homing
-
-Zero X & Y
-
-Z-Axis Calibration
-
-Autolevelling
-
 ## [Your First Print](Your_First_Print.md "Your First Print")
 
 - [Loading Filament](Your_First_Print.md#loading-filament)
 - [Calibrating The Filament](Your_First_Print.md#calibrating-the-filament)
 - [Printing](Your_First_Print.md#printing)
 - [Where next?](Your_First_Print.md#where-next)
-
-Loading Filament
-
-Calibrating The Filament
-
-Printing
 
 ## [BigBox OctoPrint Upgrade](BigBox_OctoPrint_Upgrade.md "BigBox OctoPrint Upgrade")
 
@@ -346,18 +168,6 @@ Printing
 - [Plugins](BigBox_OctoPrint_Upgrade.md#plugins)
 - [Printing](BigBox_OctoPrint_Upgrade.md#printing)
 - [Where Next?](BigBox_OctoPrint_Upgrade.md#where-next)
-
-Prepping the SD Card
-
-Terminal Configuration
-
-Login Options & Update
-
-Settings
-
-Plugins
-
-Printing
 
 ## BigBox Support
 
@@ -371,16 +181,6 @@ The best place to go for further help and advice is the BigBox forum *(dead link
 - [Where next?](BigBox_Software.md#where-next)
 
 The BigBox software tool-chain.
-
-Marlin.
-
-OctoPi.
-
-Simplify3D.
-
-Slic3r.
-
-Repetier.
 
 ## BigBox Community Generated Help & Guides
 
