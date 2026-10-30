@@ -345,7 +345,7 @@ Before restarting the print you need to run the **Auto home** sequence and you'l
 
 Smooth lines.
 
-*\[image not archived: "Benchy_finished.jpg" Caption: "Benchy finished."\]*
+\[image not archived: "Benchy_finished.jpg" Caption: "Benchy finished."\]
 
 The Benchy takes 1 hour 15 minutes to complete.
 

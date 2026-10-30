@@ -43,11 +43,11 @@ def body(h):
     h = re.sub(r'</?dl\b[^>]*>', '', h)                             # wiki indentation: <dl><dd>text</dd></dl>
     h = re.sub(r'<dd\b[^>]*>', '<p>', h); h = h.replace('</dd>', '</p>')
     h = re.sub(r'<dt\b[^>]*>(.*?)</dt>', r'<p><strong>\1</strong></p>', h, flags=re.S)
-    # an image that is not archived becomes one italic line, with its caption if the thumbnail box had one
+    # an image that is not archived becomes one plain line, with its caption if the thumbnail box had one
     cap = r'<div class="thumbcaption">(?:<div class="magnify">.*?</div>)?\s*(.*?)</div>'
     h = re.sub(r'<span class="missing">\[image not archived: ([^\]<]*)\]</span>\s*' + cap,
-               lambda m: '<p><em>[image not archived: "%s"%s]</em></p>' % (m.group(1), f' Caption: "{m.group(2).strip()}"' if re.sub(r'<[^>]+>|\s', '', m.group(2)) else ''), h, flags=re.S)
-    h = re.sub(r'<span class="missing">\[image not archived: ([^\]<]*)\]</span>', r'<em>[image not archived: "\1"]</em>', h)
+               lambda m: '<p>[image not archived: "%s"%s]</p>' % (m.group(1), f' Caption: "{m.group(2).strip()}"' if re.sub(r'<[^>]+>|\s', '', m.group(2)) else ''), h, flags=re.S)
+    h = re.sub(r'<span class="missing">\[image not archived: ([^\]<]*)\]</span>', r'<p>[image not archived: "\1"]</p>', h)
     h = re.sub(cap,   # a thumbnail's caption goes under its image, in italics
                lambda m: f'<p><em>{m.group(1).strip()}</em></p>' if re.sub(r'<[^>]+>|\s', '', m.group(1)) else '', h, flags=re.S)
     return h
