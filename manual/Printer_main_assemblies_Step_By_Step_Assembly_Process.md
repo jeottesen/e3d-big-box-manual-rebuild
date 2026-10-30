@@ -359,7 +359,7 @@ Finally fit the free end into the X-Axis Idler and secure with a grub.
 
 ![REAR-RIGHT-BACK_CABLE_CONDUIT.jpg](../docs/images/REAR-RIGHT-BACK_CABLE_CONDUIT.jpg)
 
-*Drawn from sheet 29 of the exploded drawings PDF; the wiki's image of this drawing was low resolution and the PDF has it larger.*
+*Drawn from sheet 29 of the exploded drawings PDF; the wiki's image of this drawing was low resolution and the PDF has it larger. [The wiki's original](../docs/images/original/REAR-RIGHT-BACK_CABLE_CONDUIT.jpg) is kept.*
 
 ![Cable_Conduit.jpg](../docs/images/Cable_Conduit.jpg)
 

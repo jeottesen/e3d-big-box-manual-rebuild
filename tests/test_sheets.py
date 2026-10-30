@@ -50,10 +50,10 @@ class Provenance(unittest.TestCase):
     def test_every_image_is_in_the_repository(self):
         self.assertEqual([im['file'] for s in SHEETS.values() for im in s['images'] if not os.path.exists(os.path.join(ROOT, 'docs/images', im['file']))], [])
 
-    def test_an_enlarged_or_redrawn_image_keeps_its_original_when_it_has_one_to_keep(self):
+    def test_an_enlarged_or_redrawn_image_keeps_the_wikis_original(self):
         for s in SHEETS.values():
             for im in s['images']:
-                if im['role'] == 'enlarged': self.assertTrue(os.path.exists(os.path.join(ROOT, 'docs/images/original', im['file'])), im['file'])
+                if im['role'] in ('enlarged', 'redrawn'): self.assertTrue(os.path.exists(os.path.join(ROOT, 'docs/images/original', im['file'])), im['file'])
 
     def test_no_image_belongs_to_two_sheets(self):
         owners = {}

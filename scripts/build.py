@@ -88,15 +88,17 @@ def fix_images(body, stats):
         if not s: return tag
         if '/resources/' in s.group(1): return ''
         fn = thumb_file(s.group(1))
-        if fn in REDRAW and os.path.exists(f'{RAW}/rendered/{fn}'):   # drawn from the PDF instead (see scripts/render_sheets.py)
+        if fn in REDRAW and os.path.exists(f'{ROOT}/docs/images/{fn}'):   # drawn from the PDF or enlarged (scripts/render_sheets.py): the committed image replaces the wiki's
             sheet, kind = REDRAW[fn]
-            copy(f'{RAW}/rendered/{fn}', f'{SITE}/images/{fn}')
+            copy(f'{ROOT}/docs/images/{fn}', f'{SITE}/images/{fn}')
             stats['rendered'] = stats.get('rendered', 0) + 1
-            if kind == 'enlarged':   # the original stays, and the note links to it
+            kept = ''
+            if kind != 'lost' and os.path.exists(f'{ROOT}/docs/images/original/{fn}'):   # the wiki's own image stays, and the note links to it
                 os.makedirs(f'{SITE}/images/original', exist_ok=True)
-                if os.path.exists(f'{RAW}/images/{fn}'): copy(f'{RAW}/images/{fn}', f'{SITE}/images/original/{fn}')
-                note = f'Enlarged to twice the size from the wiki\'s low-resolution image; <a href="images/original/{urllib.parse.quote(fn)}">the original</a> is kept.'
-            else: note = f'Drawn from sheet {sheet} of the exploded drawings PDF; {REDRAW_NOTE[kind]}.'
+                copy(f'{ROOT}/docs/images/original/{fn}', f'{SITE}/images/original/{fn}')
+                kept = f' <a href="images/original/{urllib.parse.quote(fn)}">The wiki\'s original</a> is kept.'
+            if kind == 'enlarged': note = f'Enlarged to twice the size from the wiki\'s low-resolution image.{kept}'
+            else: note = f'Drawn from sheet {sheet} of the exploded drawings PDF; {REDRAW_NOTE[kind]}.{kept}'
             return f'<img src="images/{urllib.parse.quote(fn)}" alt="{html.escape(fn)}"><p class="derived"><em>{note}</em></p>'
         rec = imgs.get(fn)
         if rec and rec.get('kind') and os.path.exists(f'{RAW}/images/{fn}'):

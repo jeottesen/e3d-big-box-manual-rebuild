@@ -46,7 +46,7 @@ description = "Compare the tools' proposals with the reviewed data (run propose 
 run = "python3 -I scripts/drift.py"
 
 [tasks.render]
-description = "Draw the PDF sheets that stand in for wiki images, and enlarge low-resolution drawings (writes <data folder>/rendered/; cheap, so it always runs)"
+description = "Draw the PDF sheets that stand in for wiki images, and enlarge low-resolution drawings, into docs/images/ (committed; the wiki original is kept in docs/images/original/). Run it when data/sheets changes"
 depends = ["deps"]
 run = "python3 -I scripts/render_sheets.py"
 
@@ -77,7 +77,6 @@ run = [
 
 [tasks.build]
 description = "Everything: build docs/ and manual/ from the reviewed data, then run the checks"
-depends = ["render"]
 run = [
   "mise run markdown",
   "mise run check",

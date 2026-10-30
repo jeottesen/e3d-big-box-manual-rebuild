@@ -4,7 +4,7 @@ Archived 20191220164342 · source: wiki.e3d-online.com/wiki/Single_Direct-Drive_
 
 ![EXTRUDER_SINGLE.jpg](../docs/images/EXTRUDER_SINGLE.jpg)
 
-*Drawn from sheet 14 of the exploded drawings PDF; the wiki's image of this drawing was low resolution and the PDF has it larger.*
+*Drawn from sheet 14 of the exploded drawings PDF; the wiki's image of this drawing was low resolution and the PDF has it larger. [The wiki's original](../docs/images/original/EXTRUDER_SINGLE.jpg) is kept.*
 
 ![Bowden_coupler_apart.jpg](../docs/images/Bowden_coupler_apart.jpg)
 
