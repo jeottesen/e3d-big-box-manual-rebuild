@@ -199,7 +199,7 @@ If you are building an older **Non-Hybrid** Dual Direct-Drive X-Carriage \| Clic
 
 ## (8) Hybrid X-Carriage
 
-[800px](/index.php?title=Special:Upload&wpDestFile=V1.1_x_carriage_assembly.jpg "File:V1.1 x carriage assembly.jpg")
+\[image not archived: "V1.1_x_carriage_assembly.jpg"\]
 
 ![V1.1_x_carriage_fit.jpg](../docs/images/V1.1_x_carriage_fit.jpg)
 

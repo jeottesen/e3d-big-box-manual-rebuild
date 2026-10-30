@@ -94,8 +94,8 @@ DOWNLOADS = [
 
 # Which build section each sheet of the exploded drawings belongs to: sheet -> (page, "(n)" prefix of the section heading).
 # Only sheets whose title clearly matches a section are listed; a missing sheet gets no build link (a wrong link is worse
-# than none). Sheets 8, 15 and 17 have no readable title or table in the archived PDF; 11, 18, 19, 25 and 29 have titles that
-# do not obviously match a section. These need a manual look.
+# than none). Sheets 8, 15 and 17 are blank in the archived PDF; 11, 18, 19, 25 and 29 have titles that do not obviously
+# match a section. These need a manual look.
 SHEET_SECTIONS = {
     1: ('BigBox_Parts_Preparation', '(1)'), 2: ('BigBox_Parts_Preparation', '(2)'), 3: ('BigBox_Parts_Preparation', '(3)'),
     4: ('BigBox_Parts_Preparation', '(4)'), 5: ('BigBox_Parts_Preparation', '(5)'), 6: ('BigBox_Parts_Preparation', '(6)'),

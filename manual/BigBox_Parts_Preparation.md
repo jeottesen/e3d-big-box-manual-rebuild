@@ -141,7 +141,7 @@ If you are building an older **Non-Hybrid** Dual X-Carriage \| [Click Here](Dual
 
 Assemble the Hybrid X-Carriage in the same way for both Hybrid Dual & Pro BigBoxes.
 
-[800px](/index.php?title=Special:Upload&wpDestFile=V1.1_x_carriage.jpg "File:V1.1 x carriage.jpg")
+\[image not archived: "V1.1_x_carriage.jpg"\]
 
 ![V1.1_x_carriage_m4.jpg](../docs/images/V1.1_x_carriage_m4.jpg)
 
@@ -274,7 +274,7 @@ If you are building an older **Non-Hybrid** Single & Dual Direct-Drive IR Sensor
 
 ## (16) Hybrid IR Sensor Bracket
 
-[800px](/index.php?title=Special:Upload&wpDestFile=V1.1_ir_sensor_bracket "File:V1.1 ir sensor bracket")
+\[image not archived: "V1.1_ir_sensor_bracket"\]
 
 ![Ir_sensor_pcb.jpg](../docs/images/Ir_sensor_pcb.jpg)
 

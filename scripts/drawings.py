@@ -105,12 +105,15 @@ def main():
         s['title'] = title(s.pop('_words'))
         s['page'] = i
         items = [int(r['item']) for r in s['rows'] if '.' not in r['item']]   # sub-items (11.1, 11.2) belong to their parent
-        if not s['rows']: problems.append(f'sheet {i}: no parts list in the text layer (needs OCR or a manual look)')
+        lines = (page.extract_text() or '').splitlines()
+        if not s['rows'] and 'PARTS LIST' not in lines:
+            s['blank'] = True   # nothing but the title block: a blank sheet in the PDF, nothing to read
+            notes.append(f'sheet {i}: blank in the PDF (no parts list, no title)'); sheets.append(s); continue
+        if not s['rows']: problems.append(f'sheet {i}: a parts list is in the text but no rows could be read')
         elif len(set(items)) != len(items) or 1 not in items: problems.append(f'sheet {i}: item numbers {items} repeat or have no item 1; check against the drawing')
         elif items != list(range(1, len(items) + 1)): notes.append(f'sheet {i}: item numbers are not 1..n in order (as on the drawing): {items}')
         if not s['title']: problems.append(f'sheet {i}: no title found')
         # cross-check: the plain text extraction lists the table as one line per row, between the header and the title block
-        lines = (page.extract_text() or '').splitlines()
         if 'PARTS LIST' in lines:
             start = lines.index('PARTS LIST') + 2
             end = next((n for n, l in enumerate(lines) if l.startswith('E3D BigBox Part Explosions')), len(lines))

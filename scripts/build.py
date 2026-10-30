@@ -80,6 +80,10 @@ def fix_images(body, stats):
             return f'<img src="images/{urllib.parse.quote(fn)}" alt="{html.escape(fn)}">'
         stats['missing'] = stats.get('missing', 0) + 1
         return f'<span class="missing">[image not archived: {html.escape(fn)}]</span>'
+    def never_uploaded(m):   # the wiki's red link for a file that was never uploaded; it points at Special:Upload, which is no use here
+        stats['missing'] = stats.get('missing', 0) + 1
+        return f'<span class="missing">[image not archived: {html.escape(urllib.parse.unquote(html.unescape(m.group(1))))}]</span>'
+    body = re.sub(r'<a [^>]*href="[^"]*Special:Upload[^"]*?wpDestFile=([^"&]+)[^"]*"[^>]*>.*?</a>', never_uploaded, body, flags=re.S)
     body = re.sub(r'<a [^>]*class="image"[^>]*>\s*(<img[^>]*>)\s*</a>', r'\1', body)  # drop links to File: pages
     return re.sub(r'<img[^>]*>', repl, body)
 
@@ -169,22 +173,18 @@ def add_drawing_parts(body, parts, heads_by_slug):
     def note(extra=''):
         return ('<p class="derived"><em>This list is not from the wiki page, which left it empty. It is compiled from the parts lists in the '
                 f'<a href="{PDF_LINK}">exploded drawings</a> (EXPLODED_DRAWINGS.pdf, sheets 1 to {len(parts["sheets"])}). {extra}</em></p>')
-    unread = [sh['sheet'] for sh in parts['sheets'] if not sh['rows']]
-    gap = f'Sheets {", ".join(map(str, unread))} have no readable parts list in the archived PDF, so their parts are missing here.' if unread else ''
     rows = [(sh['sheet'], r) for sh in parts['sheets'] for r in sh['rows']]
     printed = [(n, r) for n, r in rows if r['description'] in ('Printed Part', 'Printed Parts Box')]
     tr = ''.join(f'<tr><td>{esc(r["part"])}</td><td>{r["qty"]}</td><td>{"printed" if r["description"] == "Printed Part" else "from the Printed Parts Box"}</td>'
                  f'<td>{drawing(n)}</td><td>{section(n) or "–"}</td></tr>' for n, r in printed)
-    printed_html = note(gap) + f'<table><thead><tr><th>Part</th><th>Qty</th><th>Source</th><th>Drawing</th><th>Build section</th></tr></thead><tbody>{tr}</tbody></table>'
+    printed_html = note() + f'<table><thead><tr><th>Part</th><th>Qty</th><th>Source</th><th>Drawing</th><th>Build section</th></tr></thead><tbody>{tr}</tbody></table>'
     fixings = {}
     for n, r in rows:
-        if r['description'].startswith('Fixings'): fixings.setdefault((r['description'], r['part']), []).append((n, int(r['qty'])))
+        if r['description'].startswith('Fixings'): fixings.setdefault((r['description'], r['part']), []).append(n)
     def bag_no(d): return int(''.join(c for c in d if c.isdigit()) or 0)
-    tr = ''.join(f'<tr><td>{esc(bag)}</td><td>{esc(part)}</td><td>{sum(q for _, q in uses)}</td>'
-                 f'<td>{", ".join(f"{drawing(n)} ({q})" for n, q in uses)}</td></tr>'
-                 for (bag, part), uses in sorted(fixings.items(), key=lambda kv: (bag_no(kv[0][0]), kv[0][1])))
-    fixings_html = note('Quantities are added up across the sheets that list the fixing; the sheets are shown with their own count in brackets. ' + gap) + \
-        f'<table><thead><tr><th>Fixings bag</th><th>Fixing</th><th>Total qty</th><th>Used on</th></tr></thead><tbody>{tr}</tbody></table>'
+    tr = ''.join(f'<tr><td>{esc(bag)}</td><td>{esc(part)}</td><td>{", ".join(drawing(n) for n in sheets)}</td></tr>'
+                 for (bag, part), sheets in sorted(fixings.items(), key=lambda kv: (bag_no(kv[0][0]), kv[0][1])))
+    fixings_html = note() + f'<table><thead><tr><th>Fixings bag</th><th>Fixing</th><th>Drawings</th></tr></thead><tbody>{tr}</tbody></table>'
     body = re.sub(r'(<h3><span class="mw-headline" id="Printed_Parts">Printed Parts</span></h3>)', lambda m: m.group(1) + printed_html, body, count=1)
     return re.sub(r'(<h3><span class="mw-headline" id="Fixings">Fixings</span></h3>)', lambda m: m.group(1) + fixings_html, body, count=1)
 
