@@ -17,7 +17,7 @@ import numpy as np
 import pypdfium2 as pdfium
 from PIL import Image, ImageFilter
 import crawl
-from targets import SHEET_IMAGES
+from targets import SHEET_IMAGES, MATCH_OVERRIDES
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PDF = f'{ROOT}/docs/files/EXPLODED_DRAWINGS.pdf'
@@ -30,7 +30,7 @@ def key(t): return re.sub(r'[^A-Z0-9]', '', t.upper())
 
 def candidates():
     out = {}
-    for d in (f'{ROOT}/docs/images', f'{crawl.RAW}/images'):   # the raw capture wins when there is one
+    for d in (f'{ROOT}/docs/images', f'{ROOT}/docs/images/original', f'{crawl.RAW}/images'):   # the original wiki capture wins when there is one
         if not os.path.isdir(d): continue
         for f in sorted(os.listdir(d)):
             stem, ext = os.path.splitext(f)
@@ -81,7 +81,10 @@ def main():
         r = {'status': status, 'sheet': n if status != 'no match' else None, 'visual': round(best, 3), 'next_best': round(second, 3), 'next_sheet': n2,
              'sheets_with_this_title': by_title, 'rows_shared': None if shared is None else round(shared, 2), 'image_width': w,
              'sheet_title': parts[n]['title'], 'image_sheet_no': ocr.get(name, {}).get('sheet'), 'image_of': ocr.get(name, {}).get('of')}
-        if status == 'confirmed' and w < LOW_RES: r['action'] = 'redraw'       # same drawing, and the PDF has it at a better size
+        if name in MATCH_OVERRIDES:   # decided by eye (targets.MATCH_OVERRIDES): the drawing may be a different view or revision
+            r.update({'status': 'confirmed', 'sheet': MATCH_OVERRIDES[name], 'manual': True, 'sheet_title': parts[MATCH_OVERRIDES[name]]['title']})
+        elif status == 'confirmed' and w < LOW_RES: r['action'] = 'redraw'
+        elif status == 'no match' and w < LOW_RES: r['action'] = 'enlarge'      # no PDF sheet to redraw it from: make it larger, keeping the original       # same drawing, and the PDF has it at a better size
         result[name] = r
     json.dump({'source': 'scripts/match_sheets.py', 'matches': result}, open(OUT, 'w'), indent=1)
     for name, r in sorted(result.items(), key=lambda kv: (kv[1]['sheet'] or 99, kv[0])):

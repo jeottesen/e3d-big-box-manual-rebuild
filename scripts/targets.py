@@ -129,3 +129,23 @@ SHEET_IMAGES = {
     'PRINT_FAN_DUCT.jpg': 12,
     'IR_SENSOR_ASSEMBLY.jpg': 13,
 }
+
+# Matches decided by eye, for images the matcher could not confirm: image -> PDF sheet. They link to that sheet and are never redrawn.
+MATCH_OVERRIDES = {
+    'HEATED_BED_CORNERS.jpg': 9,   # the wiki's image is the same drawing from another angle
+}
+
+# OCR misreads on the image-only drawing sheets, checked against the drawing by eye: what the OCR read -> what the drawing says.
+# (EXTRUDER_DUAL.jpg is only 800 px wide.) scripts/drawing_images.py applies these and treats the rows as checked.
+OCR_FIXES = {
+    'EXTRUDER BOOY(DUAL)': 'EXTRUDER BODY (DUAL)',
+    'Motox Box-0.9Deg': 'Motor Box - 0.9Deg',
+    'E-AXIS CABLE BRACKET(DUAL)(R)': 'E-AXIS CABLE BRACKET (DUAL)(R)',
+    'E-AXIS CABLE BRACKET(DUAL)IL)': 'E-AXIS CABLE BRACKET (DUAL)(L)',
+    'M3x2S.Socket CapScrew': 'M3 x 25 Socket Cap Screw',
+    'MAWasher': 'M4 Washer',
+    'HOBDGOBLIN-SOOIO': 'HOBBGOBLIN-500ID',
+    'M3x 3Skt Grb Screw Knurled Point': 'M3 x 3 Skt Grub Screw Knurled Point',
+    'M2Hex Nut': 'M2 Hex Nut',   # it is an M2 nut, not the M3 one in the PDF's Fixings Bag 3 (confirmed against the drawing)
+}
+# (lookup ignores spaces and case, so 'M2 HexNut' and 'M2Hex Nut' both match)

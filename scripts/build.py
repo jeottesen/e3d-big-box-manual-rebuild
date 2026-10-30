@@ -68,6 +68,7 @@ matches = json.load(open(MATCHES_PATH))['matches'] if os.path.exists(MATCHES_PAT
 # images drawn from the exploded drawings PDF by scripts/render_sheets.py: name -> (sheet, 'lost' or 'redrawn')
 REDRAW = {n: (sh, 'lost') for n, sh in SHEET_IMAGES.items()}
 REDRAW.update({n: (m['sheet'], 'redrawn') for n, m in matches.items() if m.get('action') == 'redraw'})
+REDRAW.update({n: (None, 'enlarged') for n, m in matches.items() if m.get('action') == 'enlarge'})   # no PDF sheet: the wiki's image made larger, original kept
 REDRAW_NOTE = {'lost': "the wiki's own copy of this image was not archived",
                'redrawn': "the wiki's image of this drawing was low resolution and the PDF has it larger"}
 
@@ -86,8 +87,12 @@ def fix_images(body, stats):
             sheet, kind = REDRAW[fn]
             shutil.copy(f'{RAW}/rendered/{fn}', f'{SITE}/images/{fn}')
             stats['rendered'] = stats.get('rendered', 0) + 1
-            return (f'<img src="images/{urllib.parse.quote(fn)}" alt="{html.escape(fn)}">'
-                    f'<p class="derived"><em>Drawn from sheet {sheet} of the exploded drawings PDF; {REDRAW_NOTE[kind]}.</em></p>')
+            if kind == 'enlarged':   # the original stays, and the note links to it
+                os.makedirs(f'{SITE}/images/original', exist_ok=True)
+                if os.path.exists(f'{RAW}/images/{fn}'): shutil.copy(f'{RAW}/images/{fn}', f'{SITE}/images/original/{fn}')
+                note = f'Enlarged to twice the size from the wiki\'s low-resolution image; <a href="images/original/{urllib.parse.quote(fn)}">the original</a> is kept.'
+            else: note = f'Drawn from sheet {sheet} of the exploded drawings PDF; {REDRAW_NOTE[kind]}.'
+            return f'<img src="images/{urllib.parse.quote(fn)}" alt="{html.escape(fn)}"><p class="derived"><em>{note}</em></p>'
         rec = imgs.get(fn)
         if rec and rec.get('kind') and os.path.exists(f'{RAW}/images/{fn}'):
             shutil.copy(f'{RAW}/images/{fn}', f'{SITE}/images/{fn}')
@@ -201,7 +206,7 @@ def add_drawing_parts(body, parts, images, heads_by_slug):
             rows.append((drawing(sh['sheet']), section(SHEET_SECTIONS.get(sh['sheet'])), r))
     for sh in (images or {}).get('sheets', []):
         k = norm(sh['title'])
-        if not sh['rows'] or any(t == k or t.startswith(k) or k.startswith(t) for t in pdf_titles): continue   # the PDF has this sheet
+        if not sh['rows'] or sh['image'] in SHEET_IMAGES or matches.get(sh['image'], {}).get('status') == 'confirmed' or any(t == k or t.startswith(k) or k.startswith(t) for t in pdf_titles): continue   # the PDF has this sheet
         for r in sh['rows']:
             if r.get('review'): left_out += 1; continue
             rows.append((f'<a href="images/{urllib.parse.quote(sh["image"])}">{esc(sh["title"].lower())} (image)</a>', section(IMAGE_SECTIONS.get(sh['image'])), r))

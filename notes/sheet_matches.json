@@ -55,7 +55,8 @@
    "image_width": 800,
    "sheet_title": "EXTRUDER (SINGLE)",
    "image_sheet_no": 16,
-   "image_of": 36
+   "image_of": 36,
+   "action": "enlarge"
   },
   "EXTRUDER_HYBRID_NON-TITAN_DIRECT.jpg": {
    "status": "no match",
@@ -92,11 +93,11 @@
    "sheets_with_this_title": [
     14
    ],
-   "rows_shared": 0.69,
+   "rows_shared": 0.93,
    "image_width": 800,
    "sheet_title": "EXTRUDER (SINGLE)",
-   "image_sheet_no": 15,
-   "image_of": 36,
+   "image_sheet_no": 14,
+   "image_of": 29,
    "action": "redraw"
   },
   "FRAME-LUG_DRAWING.jpg": {
@@ -113,8 +114,8 @@
    "image_of": 1
   },
   "HEATED_BED_CORNERS.jpg": {
-   "status": "check",
-   "sheet": 10,
+   "status": "confirmed",
+   "sheet": 9,
    "visual": 0.66,
    "next_best": 0.621,
    "next_sheet": 4,
@@ -123,9 +124,10 @@
    ],
    "rows_shared": 0.25,
    "image_width": 1200,
-   "sheet_title": "SPOOL-HOLDER OUTER (L)",
+   "sheet_title": "HEATED BED CORNERS",
    "image_sheet_no": 9,
-   "image_of": 36
+   "image_of": 36,
+   "manual": true
   },
   "MOUNT_SPOOL-HOLDER_OUTER.jpg": {
    "status": "confirmed",
@@ -169,8 +171,8 @@
    "rows_shared": 1.0,
    "image_width": 1169,
    "sheet_title": "REAR-RIGHT-BACK CABLE CONDUIT",
-   "image_sheet_no": 31,
-   "image_of": 37,
+   "image_sheet_no": 29,
+   "image_of": 29,
    "action": "redraw"
   },
   "SPINE.jpg": {
@@ -271,7 +273,7 @@
    "sheets_with_this_title": [
     6
    ],
-   "rows_shared": 0.89,
+   "rows_shared": 1.0,
    "image_width": 1200,
    "sheet_title": "X-AXIS MOTOR CARRIAGE",
    "image_sheet_no": 6,
@@ -362,7 +364,7 @@
    "sheets_with_this_title": [
     27
    ],
-   "rows_shared": 1.0,
+   "rows_shared": 0.86,
    "image_width": 1200,
    "sheet_title": "Y-AXIS MOTOR MOUNT",
    "image_sheet_no": 29,

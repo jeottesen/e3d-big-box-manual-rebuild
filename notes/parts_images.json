@@ -31,7 +31,8 @@
      "confidence": 0.98,
      "review": false
     }
-   ]
+   ],
+   "in_pdf": false
   },
   {
    "image": "E3D-V6_HOTEND_ASSEMBLY_BIGBOX.jpg",
@@ -159,7 +160,8 @@
      "confidence": 0.99,
      "review": false
     }
-   ]
+   ],
+   "in_pdf": true
   },
   {
    "image": "ELECTRONICS_COVER.jpg",
@@ -223,7 +225,8 @@
      "confidence": 0.99,
      "review": false
     }
-   ]
+   ],
+   "in_pdf": true
   },
   {
    "image": "EXTRUDER_DUAL.jpg",
@@ -234,17 +237,25 @@
     {
      "item": "",
      "qty": "1",
-     "part": "EXTRUDER BOOY(DUAL)",
+     "part": "EXTRUDER BODY (DUAL)",
      "description": "Printed Part",
      "confidence": 0.84,
-     "review": true
+     "ocr": {
+      "part": "EXTRUDER BOOY (DUAL)",
+      "description": "Printed Part"
+     },
+     "review": false
     },
     {
      "item": "2",
      "qty": "2",
      "part": "NEMA17-400",
-     "description": "Motox Box-0.9Deg",
+     "description": "Motor Box - 0.9Deg",
      "confidence": 0.85,
+     "ocr": {
+      "part": "NEMA17-400",
+      "description": "Motox Box-0.9Deg"
+     },
      "review": false
     },
     {
@@ -258,7 +269,7 @@
     {
      "item": "",
      "qty": "1",
-     "part": "E-AXIS CABLE BRACKET(DUAL)(R)",
+     "part": "E-AXIS CABLE BRACKET (DUAL)(R)",
      "description": "Printed Part",
      "confidence": 0.89,
      "review": false
@@ -266,9 +277,13 @@
     {
      "item": "6",
      "qty": "1",
-     "part": "E-AXIS CABLE BRACKET(DUAL)IL)",
+     "part": "E-AXIS CABLE BRACKET (DUAL)(L)",
      "description": "Printed Part",
      "confidence": 0.89,
+     "ocr": {
+      "part": "E-AXIS CABLE BRACKET (DUAL)IL)",
+      "description": "Printed Part"
+     },
      "review": false
     },
     {
@@ -278,8 +293,8 @@
      "description": "Fixings Bag 7",
      "confidence": 0.86,
      "ocr": {
-      "part": "M3x2S.Socket CapScrew",
-      "description": "Fxings Bog7"
+      "part": "M3x 2S.Socket Cap Screw",
+      "description": "Fxings Bog 7"
      },
      "review": false
     },
@@ -291,7 +306,7 @@
      "confidence": 0.65,
      "ocr": {
       "part": "M3 x 10 Socket Cap Screw",
-      "description": "Foings Bog8"
+      "description": "Foings Bog 8"
      },
      "review": false
     },
@@ -299,20 +314,24 @@
      "item": "9",
      "qty": "2",
      "part": "M4 x 30 Socket Cap Screw",
-     "description": "Fixings Bag 7",
+     "description": "Fixings Bag 17",
      "confidence": 0.87,
      "ocr": {
       "part": "M4 x 30 Socket Cap Screw",
-      "description": "Fiings Bag17"
+      "description": "Fiings Bag 17"
      },
      "review": false
     },
     {
      "item": "10",
      "qty": "2",
-     "part": "MAWasher",
+     "part": "M4 Washer",
      "description": "Fixings Bag 13",
      "confidence": 0.85,
+     "ocr": {
+      "part": "MAWasher",
+      "description": "Fixings Bag 13"
+     },
      "review": false
     },
     {
@@ -338,9 +357,13 @@
     {
      "item": "13",
      "qty": "2",
-     "part": "HOBDGOBLIN-SOOIO",
+     "part": "HOBBGOBLIN-500ID",
      "description": "Extruder Box",
      "confidence": 0.87,
+     "ocr": {
+      "part": "HOBDGOBLIN-SOOIO",
+      "description": "Extruder Box"
+     },
      "review": false
     },
     {
@@ -363,7 +386,8 @@
      "confidence": 0.93,
      "review": false
     }
-   ]
+   ],
+   "in_pdf": false
   },
   {
    "image": "EXTRUDER_HYBRID_NON-TITAN_DIRECT.jpg",
@@ -486,7 +510,7 @@
     {
      "item": "15",
      "qty": "2",
-     "part": "M2Hex Nut",
+     "part": "M2 Hex Nut",
      "description": "Fixings Bag 3",
      "confidence": 0.96,
      "review": false
@@ -499,7 +523,8 @@
      "confidence": 0.96,
      "review": false
     }
-   ]
+   ],
+   "in_pdf": false
   },
   {
    "image": "EXTRUDER_HYBRID_TITAN_DIRECT.jpg",
@@ -510,10 +535,10 @@
     {
      "item": "1",
      "qty": "2",
-     "part": "M2Hex Nut",
+     "part": "M2 Hex Nut",
      "description": "Fixings Bag 3",
      "confidence": 0.74,
-     "review": true
+     "review": false
     },
     {
      "item": "2",
@@ -539,55 +564,8 @@
      "confidence": 0.99,
      "review": false
     }
-   ]
-  },
-  {
-   "image": "EXTRUDER_IDLER.jpg",
-   "title": "EXTRUDER IDLER",
-   "sheet": 4,
-   "of": 29,
-   "rows": [
-    {
-     "item": "1",
-     "qty": "2",
-     "part": "M4 Washer",
-     "description": "Fixings Bag 13",
-     "confidence": 1.0,
-     "review": false
-    },
-    {
-     "item": "2",
-     "qty": "1",
-     "part": "BEARING-604ZZ",
-     "description": "Bearing Box",
-     "confidence": 0.95,
-     "review": false
-    },
-    {
-     "item": "3",
-     "qty": "1",
-     "part": "E-AXIS IDLER",
-     "description": "Printed Part",
-     "confidence": 0.96,
-     "review": false
-    },
-    {
-     "item": "",
-     "qty": "4",
-     "part": "M4 x 12 Socket Grub Screw (Flat Point)",
-     "description": "Fixings Bag 14",
-     "confidence": 0.97,
-     "review": false
-    },
-    {
-     "item": "5",
-     "qty": "1",
-     "part": "Nylon Spacer 3.2ID 6OD 15L",
-     "description": "Fixings Bag 16",
-     "confidence": 0.98,
-     "review": false
-    }
-   ]
+   ],
+   "in_pdf": false
   },
   {
    "image": "EXTRUDER_SINGLE.jpg",
@@ -671,7 +649,7 @@
      "item": "",
      "qty": "10",
      "part": "I",
-     "description": "M4SquareNut FixingsBag12",
+     "description": "M4 Square Nut Fixings Bag 12",
      "confidence": 0.67,
      "review": true
     },
@@ -707,7 +685,8 @@
      "confidence": 0.95,
      "review": false
     }
-   ]
+   ],
+   "in_pdf": true
   },
   {
    "image": "FRAME-LUG_DRAWING.jpg",
@@ -715,6 +694,7 @@
    "sheet": 1,
    "of": 1,
    "rows": [],
+   "in_pdf": false,
    "skipped": true
   },
   {
@@ -755,63 +735,8 @@
      "confidence": 0.97,
      "review": false
     }
-   ]
-  },
-  {
-   "image": "IR_SENSOR_ASSEMBLY.jpg",
-   "title": "IR SENSOR ASSEMBLY",
-   "sheet": 13,
-   "of": 29,
-   "rows": [
-    {
-     "item": "1",
-     "qty": "1",
-     "part": "IR-SENSOR HOUSING",
-     "description": "Printed Part",
-     "confidence": 0.99,
-     "review": false
-    },
-    {
-     "item": "2",
-     "qty": "1",
-     "part": "IR-SENSOR",
-     "description": "Electronics Box",
-     "confidence": 0.99,
-     "review": false
-    },
-    {
-     "item": "3",
-     "qty": "2",
-     "part": "M2.5 x 6 Socket Cap Screw",
-     "description": "Fixings Bag 5",
-     "confidence": 0.98,
-     "review": false
-    },
-    {
-     "item": "4",
-     "qty": "2",
-     "part": "M3 Square Nut",
-     "description": "Fixings Bag 6",
-     "confidence": 0.97,
-     "review": false
-    },
-    {
-     "item": "5",
-     "qty": "2",
-     "part": "M3 x 12 Socket Cap Screw",
-     "description": "Fixings Bag 9",
-     "confidence": 0.98,
-     "review": false
-    },
-    {
-     "item": "6",
-     "qty": "2",
-     "part": "M2.5 Square Nut",
-     "description": "Fixings Bag 4",
-     "confidence": 1.0,
-     "review": false
-    }
-   ]
+   ],
+   "in_pdf": true
   },
   {
    "image": "MOUNT_SPOOL-HOLDER_OUTER.jpg",
@@ -859,7 +784,8 @@
      "confidence": 0.96,
      "review": false
     }
-   ]
+   ],
+   "in_pdf": true
   },
   {
    "image": "MOUNT_Y-AXIS_MOTOR.jpg",
@@ -891,71 +817,8 @@
      "confidence": 1.0,
      "review": false
     }
-   ]
-  },
-  {
-   "image": "PRINT_FAN_DUCT.jpg",
-   "title": "PRINT FAN DUCT",
-   "sheet": 12,
-   "of": 29,
-   "rows": [
-    {
-     "item": "1",
-     "qty": "1",
-     "part": "PRINT FAN BRACKET",
-     "description": "Printed Part",
-     "confidence": 0.99,
-     "review": false
-    },
-    {
-     "item": "2",
-     "qty": "1",
-     "part": "PRINT FAN DUCT",
-     "description": "Printed Part",
-     "confidence": 0.99,
-     "review": false
-    },
-    {
-     "item": "3",
-     "qty": "2",
-     "part": "M3 Square Nut",
-     "description": "Fixings Bag 6",
-     "confidence": 0.99,
-     "review": false
-    },
-    {
-     "item": "4",
-     "qty": "1",
-     "part": "M3 x 8 Socket Cap Screw",
-     "description": "Fixings Bag 15",
-     "confidence": 0.99,
-     "review": false
-    },
-    {
-     "item": "5",
-     "qty": "1",
-     "part": "FAN-SNAIL-BLOWER",
-     "description": "Fan Box",
-     "confidence": 0.99,
-     "review": false
-    },
-    {
-     "item": "6",
-     "qty": "1",
-     "part": "M3 x 22 Socket Cap Screw",
-     "description": "Fixings Bag 11",
-     "confidence": 0.98,
-     "review": false
-    },
-    {
-     "item": "7",
-     "qty": "2",
-     "part": "M3 x 30 Socket Cap Screw",
-     "description": "Fixings Bag 10",
-     "confidence": 0.98,
-     "review": false
-    }
-   ]
+   ],
+   "in_pdf": true
   },
   {
    "image": "REAR-RIGHT-BACK_CABLE_CONDUIT.jpg",
@@ -987,7 +850,8 @@
      "confidence": 0.99,
      "review": false
     }
-   ]
+   ],
+   "in_pdf": true
   },
   {
    "image": "SPINE.jpg",
@@ -1059,7 +923,8 @@
      "confidence": 0.96,
      "review": false
     }
-   ]
+   ],
+   "in_pdf": true
   },
   {
    "image": "SPOOL-HOLDER_CLAMP.jpg",
@@ -1123,7 +988,8 @@
      "confidence": 0.96,
      "review": false
     }
-   ]
+   ],
+   "in_pdf": false
   },
   {
    "image": "SPOOL-HOLDER_INNER.jpg",
@@ -1155,7 +1021,8 @@
      "confidence": 0.95,
      "review": false
     }
-   ]
+   ],
+   "in_pdf": true
   },
   {
    "image": "SPOOL-HOLDER_OUTER.jpg",
@@ -1219,7 +1086,8 @@
      "confidence": 0.96,
      "review": false
     }
-   ]
+   ],
+   "in_pdf": true
   },
   {
    "image": "X-AXIS_ASSEMBLY.jpg",
@@ -1259,7 +1127,8 @@
      "confidence": 0.99,
      "review": false
     }
-   ]
+   ],
+   "in_pdf": true
   },
   {
    "image": "X-AXIS_IDLER_CARRIAGE.jpg",
@@ -1363,7 +1232,8 @@
      "confidence": 0.99,
      "review": false
     }
-   ]
+   ],
+   "in_pdf": true
   },
   {
    "image": "X-AXIS_MOTOR_CARRIAGE.jpg",
@@ -1422,7 +1292,7 @@
     {
      "item": "7",
      "qty": "2",
-     "part": "M2Hex Nut",
+     "part": "M2 Hex Nut",
      "description": "Fixings Bag 3",
      "confidence": 0.99,
      "review": false
@@ -1443,7 +1313,8 @@
      "confidence": 0.96,
      "review": false
     }
-   ]
+   ],
+   "in_pdf": true
   },
   {
    "image": "X-AXIS_MOTOR_INSTALL.jpg",
@@ -1491,47 +1362,8 @@
      "confidence": 0.94,
      "review": false
     }
-   ]
-  },
-  {
-   "image": "X-CARRIAGE_SINGLE.jpg",
-   "title": "X-CARRIAGE SINGLE",
-   "sheet": 7,
-   "of": 29,
-   "rows": [
-    {
-     "item": "1",
-     "qty": "1",
-     "part": "X-CARRIAGE SINGLE",
-     "description": "Printed Part",
-     "confidence": 0.99,
-     "review": false
-    },
-    {
-     "item": "2",
-     "qty": "8",
-     "part": "M3 Square Nut",
-     "description": "Fixings Bag 6",
-     "confidence": 0.99,
-     "review": false
-    },
-    {
-     "item": "3",
-     "qty": "6",
-     "part": "M4 Square Nut",
-     "description": "Fixings Bag 12",
-     "confidence": 0.99,
-     "review": false
-    },
-    {
-     "item": "4",
-     "qty": "2",
-     "part": "M4 x 20 Socket Cap Screw",
-     "description": "Fixings Bag 17",
-     "confidence": 0.98,
-     "review": false
-    }
-   ]
+   ],
+   "in_pdf": true
   },
   {
    "image": "XY-AXIS_ASSEMBLY.jpg",
@@ -1555,7 +1387,8 @@
      "confidence": 0.99,
      "review": false
     }
-   ]
+   ],
+   "in_pdf": true
   },
   {
    "image": "Y-AXIS_FRONT.jpg",
@@ -1611,7 +1444,8 @@
      "confidence": 0.92,
      "review": false
     }
-   ]
+   ],
+   "in_pdf": true
   },
   {
    "image": "Y-AXIS_FRONT_ASSEMBLY.jpg",
@@ -1651,7 +1485,8 @@
      "confidence": 0.95,
      "review": false
     }
-   ]
+   ],
+   "in_pdf": true
   },
   {
    "image": "Y-AXIS_IDLER.jpg",
@@ -1715,7 +1550,8 @@
      "confidence": 0.98,
      "review": false
     }
-   ]
+   ],
+   "in_pdf": true
   },
   {
    "image": "Y-AXIS_MOTOR.jpg",
@@ -1734,13 +1570,9 @@
     {
      "item": "2",
      "qty": "1",
-     "part": "Y-MOTOR MOUNT CORK (Self Adhesive)",
+     "part": "Y-MOTOR MOUNT CORK (Se If Adhesive)",
      "description": "Printed Parts Box",
      "confidence": 0.95,
-     "ocr": {
-      "part": "Y-MOTOR MOUNT CORK(SeIfAdhesive)",
-      "description": "Printed Parts Box"
-     },
      "review": false
     },
     {
@@ -1783,7 +1615,8 @@
      "confidence": 0.96,
      "review": false
     }
-   ]
+   ],
+   "in_pdf": true
   },
   {
    "image": "Y-AXIS_REAR.jpg",
@@ -1863,7 +1696,8 @@
      "confidence": 0.94,
      "review": false
     }
-   ]
+   ],
+   "in_pdf": true
   },
   {
    "image": "Y-AXIS_REAR_ASSEMBLY.jpg",
@@ -1875,7 +1709,7 @@
      "item": "1",
      "qty": "1",
      "part": "Y-AXIS REAR (L)",
-     "description": "PartPreparation Designedby",
+     "description": "Part Preparation Designedby",
      "confidence": 0.95,
      "review": false
     },
@@ -1883,7 +1717,7 @@
      "item": "3",
      "qty": "2",
      "part": "1",
-     "description": "1 Y-AXIS BACK(R) ROD-SS-8-532 Rod Kit(Longest) PartPreparation E3DOnline-JR",
+     "description": "1 Y-AXIS BACK (R) ROD-SS-8-532 Rod Kit (Longest) Part Preparation E3DOnline-JR",
      "confidence": 0.95,
      "review": false
     },
@@ -1899,7 +1733,7 @@
      "item": "5",
      "qty": "1",
      "part": "GT2-36T-8ID",
-     "description": "MotionBox（36Tooth，8mmID) BIGBOX",
+     "description": "Motion Box（36Tooth，8mm ID) BIGBOX",
      "confidence": 0.94,
      "review": false
     },
@@ -1919,7 +1753,8 @@
      "confidence": 0.99,
      "review": false
     }
-   ]
+   ],
+   "in_pdf": true
   },
   {
    "image": "Z-AXIS_BASE_BRACKETS.jpg",
@@ -1959,7 +1794,8 @@
      "confidence": 0.95,
      "review": false
     }
-   ]
+   ],
+   "in_pdf": false
   },
   {
    "image": "Z-AXIS_DRAG_CHAIN.jpg",
@@ -2007,7 +1843,8 @@
      "confidence": 0.96,
      "review": false
     }
-   ]
+   ],
+   "in_pdf": false
   },
   {
    "image": "Z-AXIS_TOP_BRACKETS.jpg",
@@ -2042,13 +1879,9 @@
     {
      "item": "4",
      "qty": "1",
-     "part": "ROD-G.H.SS-8-384",
+     "part": "ROD-G.H.SS-8-364",
      "description": "Rod Kit",
      "confidence": 0.99,
-     "ocr": {
-      "part": "ROD-G.H.SS-8-364",
-      "description": "Rod Kit"
-     },
      "review": false
     },
     {
@@ -2067,14 +1900,9 @@
      "confidence": 0.98,
      "review": false
     }
-   ]
+   ],
+   "in_pdf": false
   }
  ],
- "problems": [
-  "EXTRUDER_DUAL.jpg: 1 of 14 rows the OCR was unsure of and could not match to a known name: no item no. EXTRUDER BOOY(DUAL)",
-  "EXTRUDER_HYBRID_NON-TITAN_DIRECT.jpg: item numbers ['1', '2', '3', '4', '5', '6', '7', '8', '6', '10', '11', '12', '13', '14', '15', '16'] repeat; one was probably misread",
-  "EXTRUDER_HYBRID_TITAN_DIRECT.jpg: 1 of 4 rows the OCR was unsure of and could not match to a known name: 1 M2Hex Nut",
-  "EXTRUDER_SINGLE.jpg: 1 of 14 rows the OCR was unsure of and could not match to a known name: no item no. I",
-  "FRAME-LUG_DRAWING.jpg: no PARTS LIST heading found"
- ]
+ "problems": []
 }
