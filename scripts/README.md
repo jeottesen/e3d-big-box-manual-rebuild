@@ -27,6 +27,8 @@ Optionally set `BIGBOX_SEED` to a read-only folder laid out like a data folder. 
 
 `targets.py` holds what cannot be derived from the archive: which missing pages to rebuild and from where, which removed sections go in the appendix, and which PDFs apply. Edit it to change those choices.
 
+`fetch.py` also checks saved page versions, including copies from the seed, for an old crawler bug that stored gzip data as text. It reports each one and downloads it again.
+
 Every fetching step caches what it has and can be re-run safely. They are polite to the Wayback Machine (one connection, a delay between requests, backoff on errors) and stop after repeated failures.
 
 ## Other files

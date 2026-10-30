@@ -22,7 +22,7 @@ RAW = crawl.RAW
 VER = f'{RAW}/versions'
 START = 'BigBox_Build_Manual'
 os.makedirs(VER, exist_ok=True)
-tally = {'versions_used': {}, 'seeded_versions': 0, 'network_versions': 0}
+tally = {'versions_used': {}, 'seeded_versions': 0, 'network_versions': 0, 'corrupt': []}
 
 # ---------- captures of a page ----------
 CAPS_PATH = f'{VER}/captures.json'
@@ -60,14 +60,26 @@ def captures(title):
 # ---------- page versions ----------
 def version_path(title, ts): return f'{VER}/{title.replace("/", "_")}/{ts}.html'
 
+def corrupt(path):
+    """A saved version that is gzip data decoded as text (an old crawler bug): it starts with the gzip magic byte, then U+FFFD."""
+    with open(path, 'rb') as f: return f.read(4) == b'\x1f\xef\xbf\xbd'
+
 def fetch_version(title, orig, ts):
     path = version_path(title, ts)
+    rel = f'versions/{title.replace("/", "_")}/{ts}.html'
+    if os.path.exists(path) and corrupt(path):
+        print(f'  note: {title} {ts} was saved corrupt (undecoded gzip); downloading it again', flush=True)
+        os.remove(path); tally['corrupt'].append(f'{title} {ts}')
+        use_seed = False
+    else: use_seed = True
     if not os.path.exists(path):
-        rel = f'versions/{title.replace("/", "_")}/{ts}.html'
         # a seed from an older data folder may keep some versions under versions_removed/
-        if any(crawl.from_seed(r, rel) for r in (rel, rel.replace('versions/', 'versions_removed/unchanged/'),
-                                                 rel.replace('versions/', 'versions_removed/errors/'))):
-            tally['seeded_versions'] += 1
+        seeded = use_seed and any(crawl.from_seed(r, rel) for r in (rel, rel.replace('versions/', 'versions_removed/unchanged/'),
+                                                                     rel.replace('versions/', 'versions_removed/errors/')))
+        if seeded and corrupt(path):   # the seed has the same bug: don't keep its copy
+            print(f'  note: the seed copy of {title} {ts} is corrupt (undecoded gzip); downloading it instead', flush=True)
+            os.remove(path); tally['corrupt'].append(f'{title} {ts}'); seeded = False
+        if seeded: tally['seeded_versions'] += 1
         else:
             st, h = crawl.get_snapshot(crawl.snap(orig, ts, 'id_'))
             if st in (404, 410):   # the archive lists this capture but cannot serve it: forget it, the caller tries an older one
@@ -182,7 +194,7 @@ if __name__ == '__main__':
     n_extra = sum(len(v) for v in extra.values())
     print(f'\nDone. {len(latest)} pages ({len(absent)} not archived), {n_extra} older versions kept for recovery/appendix, '
           f'{len(tally["versions_used"])} page versions touched in total '
-          f'({tally["seeded_versions"]} from seed, {tally["network_versions"]} downloaded); '
+          f'({tally["seeded_versions"]} from seed, {tally["network_versions"]} downloaded, {len(tally["corrupt"])} corrupt copies replaced); '
           f'{crawl.stats["seeded"]} files seeded, {crawl.stats["network"]} network requests.')
     if failed:
         sys.exit(f'\n{len(failed)} image download(s) FAILED, so they are missing from the manual for now: {", ".join(failed)}.\n'
