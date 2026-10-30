@@ -62,6 +62,8 @@ def extract(h):
     body = re.sub(r'<a [^>]*href="[^"]*?/(?:wiki/)?(?:File|Special|Media):[^"]*"[^>]*>(.*?)</a>', r'\1', body, flags=re.S)  # image-info links: keep contents only
     return body
 
+from targets import SHEET_IMAGES
+
 def fix_images(body, stats):
     def thumb_file(src):
         p = urllib.parse.unquote(urllib.parse.urlparse(html.unescape(src)).path)
@@ -78,6 +80,11 @@ def fix_images(body, stats):
             shutil.copy(f'{RAW}/images/{fn}', f'{SITE}/images/{fn}')
             stats[rec['kind'].split('-')[0]] = stats.get(rec['kind'].split('-')[0], 0) + 1
             return f'<img src="images/{urllib.parse.quote(fn)}" alt="{html.escape(fn)}">'
+        if fn in SHEET_IMAGES and os.path.exists(f'{RAW}/rendered/{fn}'):   # a drawing the archive lost, drawn from its sheet in the PDF instead
+            shutil.copy(f'{RAW}/rendered/{fn}', f'{SITE}/images/{fn}')
+            stats['rendered'] = stats.get('rendered', 0) + 1
+            return (f'<img src="images/{urllib.parse.quote(fn)}" alt="{html.escape(fn)}">'
+                    f'<p class="derived"><em>Drawn from sheet {SHEET_IMAGES[fn]} of the exploded drawings PDF; the wiki\'s own copy of this image was not archived.</em></p>')
         stats['missing'] = stats.get('missing', 0) + 1
         return f'<span class="missing">[image not archived: {html.escape(fn)}]</span>'
     def never_uploaded(m):   # the wiki's red link for a file that was never uploaded; it points at Special:Upload, which is no use here
@@ -179,7 +186,7 @@ def add_drawing_parts(body, parts, images, heads_by_slug):
         k = norm(sh['title'])
         if not sh['rows'] or any(t == k or t.startswith(k) or k.startswith(t) for t in pdf_titles): continue   # the PDF has this sheet
         for r in sh['rows']:
-            if r['confidence'] < 0.85: left_out += 1; continue
+            if r.get('review'): left_out += 1; continue
             rows.append((f'<a href="images/{urllib.parse.quote(sh["image"])}">{esc(sh["title"].lower())} (image)</a>', section(IMAGE_SECTIONS.get(sh['image'])), r))
     ocr = ' Sheets marked (image) exist only as pictures on the wiki; they were read by OCR and may contain mistakes.' if any('(image)' in d for d, _, _ in rows) else ''
     cut = f' {left_out} rows the OCR was not sure about are left out.' if left_out else ''

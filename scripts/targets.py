@@ -118,3 +118,14 @@ IMAGE_SECTIONS = {
     'SPOOL-HOLDER_CLAMP.jpg': ('BigBox_Parts_Preparation', '(17)'),
     'Y-AXIS_REAR_ASSEMBLY.jpg': ('Printer_main_assemblies_Step_By_Step_Assembly_Process', '(1)'),
 }
+
+# Drawing images the wiki used but the archive did not keep, whose sheet is in the exploded drawings PDF: file name -> sheet.
+# scripts/render_sheets.py draws these sheets from the PDF and the build uses them in place of the missing image.
+# Checked by eye against the page each one appears on. (X-CARRIAGE_DUAL, PRINT-HEAD_(SINGLE) and PRINT-HEAD_(DUAL) have no
+# sheet in the PDF: sheet 8 is blank.)
+SHEET_IMAGES = {
+    'EXTRUDER_IDLER.jpg': 4,
+    'X-CARRIAGE_SINGLE.jpg': 7,
+    'PRINT_FAN_DUCT.jpg': 12,
+    'IR_SENSOR_ASSEMBLY.jpg': 13,
+}

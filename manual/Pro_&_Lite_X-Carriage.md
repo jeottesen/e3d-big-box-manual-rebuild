@@ -2,7 +2,9 @@
 
 Archived 20160824110747 · source: wiki.e3d-online.com/wiki/Pro\_&\_Lite_X-Carriage · [archive link](https://web.archive.org/web/20160824110747/http://wiki.e3d-online.com:80/wiki/Pro_%26_Lite_X-Carriage)
 
-\[image not archived: "X-CARRIAGE_SINGLE.jpg"\]
+![X-CARRIAGE_SINGLE.jpg](../docs/images/X-CARRIAGE_SINGLE.jpg)
+
+*Drawn from sheet 7 of the exploded drawings PDF; the wiki's own copy of this image was not archived.*
 
 \[image not archived: "Single_x_carriage.jpg" Caption: "BigBox Single Extruder X-Carriage."\]
 

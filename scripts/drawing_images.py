@@ -14,7 +14,7 @@ The OCR drops the spaces inside names, so names are matched to the exact strings
 where possible and re-spaced by rule otherwise. Every sheet is checked (item numbers, quantities, OCR confidence);
 anything doubtful is listed under "problems" for a manual look.
 """
-import json, os, re, sys
+import difflib, json, os, re, sys
 import numpy as np
 from PIL import Image
 from rapidocr_onnxruntime import RapidOCR
@@ -79,6 +79,16 @@ def respace(text, vocab):
     t = re.sub(r'(?<=[A-Za-z0-9])(?=\()', ' ', t)       # Nut(Half) -> Nut (Half)
     return t
 
+BAG = re.compile(r'F\w{1,7}\s*B\w{1,3}\s*(\d{1,2})', re.I)   # 'Foings Bog8', 'Fxinss Bag 12': the OCR garbles 'Fixings Bag' more than anything else
+
+def normalise(text, vocab):
+    """Put the OCR text right where we can: 'Fixings Bag N' by pattern, then the closest exact string from the PDF."""
+    m = BAG.fullmatch(text.strip())
+    if m: return f'Fixings Bag {m.group(1)}'
+    if not text or key(text) in vocab: return vocab.get(key(text), text)
+    close = difflib.get_close_matches(key(text), list(vocab), n=1, cutoff=0.88)   # M2Hex Nut -> M3 Hex Nut, MAWasher -> M4 Washer
+    return vocab[close[0]] if close else text
+
 def read(ocr, path):
     im = Image.open(path).convert('RGB')
     scale = max(1.0, 2400 / im.width)
@@ -114,8 +124,15 @@ def table(words, vocab):
         elif len(texts) >= 3 and texts[0].isdigit() and not texts[1].isdigit(): num, qty, rest = '', texts[0], texts[1:]   # the narrow ITEM column is sometimes not read
         else: num = None
         if num is not None:
-            rows.append({'item': num, 'qty': qty, 'part': respace(rest[0], vocab), 'description': respace(' '.join(rest[1:]), vocab) if len(rest) > 1 else '',
-                         'confidence': round(min(w['c'] for w in g), 2)})
+            part = respace(rest[0], vocab); desc = respace(' '.join(rest[1:]), vocab) if len(rest) > 1 else ''
+            fixed_part, fixed_desc = normalise(part, vocab), normalise(desc, vocab)
+            conf = round(min(w['c'] for w in g), 2)
+            row = {'item': num, 'qty': qty, 'part': fixed_part, 'description': fixed_desc, 'confidence': conf}
+            if (fixed_part, fixed_desc) != (part, desc): row['ocr'] = {'part': part, 'description': desc}   # what the OCR gave, before the correction
+            # a missing item number does not matter; a row is for review when the OCR was unsure and the text is not a string known from the PDF
+            known = lambda t: not t or key(t) in vocab
+            row['review'] = conf < MIN_CONF and not (known(fixed_part) and known(fixed_desc) and conf >= 0.6)
+            rows.append(row)
             if last != item['cy']: spacing = cy - last
             last = cy
         elif rows: continue   # text from the drawing itself, not a row
@@ -136,8 +153,8 @@ def main():
             items = [r['item'] for r in rows if r['item'] and '.' not in r['item']]
             if not rows: problems.append(f'{f}: PARTS LIST found but no rows could be read')
             elif len(set(items)) != len(items): problems.append(f'{f}: item numbers {items} repeat; one was probably misread')
-            weak = [r for r in rows if r['confidence'] < MIN_CONF]
-            if weak: problems.append(f'{f}: low OCR confidence on {len(weak)} of {len(rows)} rows ({", ".join(r["item"] for r in weak)}); check against the image')
+            weak = [r for r in rows if r['review']]
+            if weak: problems.append(f'{f}: {len(weak)} of {len(rows)} rows the OCR was unsure of and could not match to a known name: {"; ".join((r["item"] or "no item no.") + " " + r["part"] for r in weak)}')
         sheets.append(entry)
         print(f'{f}: {len(entry["rows"])} rows, sheet {entry["sheet"]}/{entry["of"]}')
     json.dump({'source': 'OCR (rapidocr) of the drawing images in docs/images', 'sheets': sheets, 'problems': problems}, open(OUT, 'w'), indent=1, ensure_ascii=False)

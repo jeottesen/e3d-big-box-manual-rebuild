@@ -4,7 +4,9 @@ Rebuilt page · source: wiki.e3d-online.com/wiki/Non-Titan_Idler_Arms · [archiv
 
 Recovered from an older version of BigBox Parts Preparation (20160807071206), section "(4) Single & Dual Extruder Filament Idlers" — the separate wiki page is not in the archive.
 
-\[image not archived: "EXTRUDER_IDLER.jpg"\]
+![EXTRUDER_IDLER.jpg](../docs/images/EXTRUDER_IDLER.jpg)
+
+*Drawn from sheet 4 of the exploded drawings PDF; the wiki's own copy of this image was not archived.*
 
 \[image not archived: "Filament_idler_assembled.jpg" Caption: "Extruder filament idler"\]
 

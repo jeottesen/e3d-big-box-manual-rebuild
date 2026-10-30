@@ -22,6 +22,8 @@ pyclipper==1.4.0
     # via rapidocr-onnxruntime
 pypdf==6.21.4
     # via -r requirements.in
+pypdfium2==5.14.0
+    # via -r requirements.in
 pyyaml==6.0.3
     # via rapidocr-onnxruntime
 rapidocr-onnxruntime==1.4.4

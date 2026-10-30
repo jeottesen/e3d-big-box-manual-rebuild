@@ -37,6 +37,11 @@ run = [
   "python3 -I scripts/drawing_images.py",
 ]
 
+[tasks.render]
+description = "Draw the PDF sheets that stand in for drawing images the archive did not keep"
+depends = ["deps"]
+run = "python3 -I scripts/render_sheets.py"
+
 [tasks.site]
 description = "Build the HTML manual into docs/"
 run = "python3 -I scripts/build.py"
@@ -55,7 +60,7 @@ run = [
 
 [tasks.build]
 description = "Everything: read the drawings, build docs/ and manual/, then check them"
-depends = ["extract"]
+depends = ["extract", "render"]
 run = [
   "mise run markdown",
   "mise run check",
