@@ -1,0 +1,83 @@
+{
+ "id": "pdf-06",
+ "title": "X-AXIS MOTOR CARRIAGE",
+ "source": {
+  "kind": "pdf",
+  "file": "docs/files/EXPLODED_DRAWINGS.pdf",
+  "sha256": "659ab7e3f4c9d042f2082aeaf231af6e9901d9c25841854a618e5caae793cbe2",
+  "page": 6
+ },
+ "images": [
+  {
+   "file": "X-AXIS_MOTOR_CARRIAGE.jpg",
+   "role": "wiki"
+  }
+ ],
+ "rows": [
+  {
+   "item": "1",
+   "qty": 1,
+   "part": "X-AXIS MOTOR CARRIAGE",
+   "description": "Printed Part",
+   "how": "pdf-text"
+  },
+  {
+   "item": "2",
+   "qty": 2,
+   "part": "M3 x 10 Socket Cap Screw",
+   "description": "Fixings Bag 8",
+   "how": "pdf-text"
+  },
+  {
+   "item": "3",
+   "qty": 2,
+   "part": "M3 x 16 Socket Cap Screw",
+   "description": "Fixings Bag 10",
+   "how": "pdf-text"
+  },
+  {
+   "item": "4",
+   "qty": 4,
+   "part": "M3 Ext Lock Washer",
+   "description": "Fixings Bag 6",
+   "how": "pdf-text"
+  },
+  {
+   "item": "5",
+   "qty": 4,
+   "part": "M3 Square Nut",
+   "description": "Fixings Bag 6",
+   "how": "pdf-text"
+  },
+  {
+   "item": "6",
+   "qty": 1,
+   "part": "BEARING-LM8LUU",
+   "description": "Bearing Kit",
+   "how": "pdf-text"
+  },
+  {
+   "item": "7",
+   "qty": 2,
+   "part": "M3 Hex Nut",
+   "description": "Fixings Bag 3",
+   "how": "pdf-text"
+  },
+  {
+   "item": "8",
+   "qty": 1,
+   "part": "DRAG-CHAIN-END",
+   "description": "Motion Box",
+   "how": "pdf-text"
+  },
+  {
+   "item": "9",
+   "qty": 2,
+   "part": "M3 x 8 Csk Platite 30 Screws",
+   "description": "Fixings Bag 2",
+   "how": "pdf-text"
+  }
+ ],
+ "confirmed": null,
+ "notes": ""
+}

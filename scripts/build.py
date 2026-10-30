@@ -68,21 +68,13 @@ def extract(h):
     body = re.sub(r'<a [^>]*href="[^"]*?/(?:wiki/)?(?:File|Special|Media):[^"]*"[^>]*>(.*?)</a>', r'\1', body, flags=re.S)  # image-info links: keep contents only
     return body
 
-from targets import SHEET_IMAGES
-MATCHES_PATH = f'{ROOT}/notes/sheet_matches.json'   # written by scripts/match_sheets.py
-matches = json.load(open(MATCHES_PATH))['matches'] if os.path.exists(MATCHES_PATH) else {}
-# images drawn from the exploded drawings PDF by scripts/render_sheets.py: name -> (sheet, 'lost' or 'redrawn')
-REDRAW = {n: (sh, 'lost') for n, sh in SHEET_IMAGES.items()}
-REDRAW.update({n: (m['sheet'], 'redrawn') for n, m in matches.items() if m.get('action') == 'redraw'})
-REDRAW.update({n: (None, 'enlarged') for n, m in matches.items() if m.get('action') == 'enlarge'})   # no PDF sheet: the wiki's image made larger, original kept
+from sections import HEADING, embedded_sections, thumb_file
+import truth
+SHEETS = truth.load_truth()   # the reviewed per-sheet data (data/sheets/*.json): the build reads this and nothing the tools propose
+# images drawn from the exploded drawings PDF by scripts/render_sheets.py: name -> (sheet, 'lost', 'redrawn' or 'enlarged')
+REDRAW = {im['file']: (sh['source'].get('page'), im['role']) for sh in SHEETS.values() for im in sh['images'] if im['role'] != 'wiki'}
 REDRAW_NOTE = {'lost': "the wiki's own copy of this image was not archived",
                'redrawn': "the wiki's image of this drawing was low resolution and the PDF has it larger"}
-
-def thumb_file(src):
-    """The file name of an image from its src, whether the wiki gave the full image or a thumbnail of it."""
-    p = urllib.parse.unquote(urllib.parse.urlparse(html.unescape(src)).path)
-    m = re.match(r'/images/thumb/[^/]+/[^/]+/([^/]+)/', p)
-    return m.group(1) if m else p.rsplit('/', 1)[-1]
 
 def fix_images(body, stats):
     def repl(m):
@@ -91,15 +83,17 @@ def fix_images(body, stats):
         if not s: return tag
         if '/resources/' in s.group(1): return ''
         fn = thumb_file(s.group(1))
-        if fn in REDRAW and os.path.exists(f'{RAW}/rendered/{fn}'):   # drawn from the PDF instead (see scripts/render_sheets.py)
+        if fn in REDRAW and os.path.exists(f'{ROOT}/docs/images/{fn}'):   # drawn from the PDF or enlarged (scripts/render_sheets.py): the committed image replaces the wiki's
             sheet, kind = REDRAW[fn]
-            copy(f'{RAW}/rendered/{fn}', f'{SITE}/images/{fn}')
+            copy(f'{ROOT}/docs/images/{fn}', f'{SITE}/images/{fn}')
             stats['rendered'] = stats.get('rendered', 0) + 1
-            if kind == 'enlarged':   # the original stays, and the note links to it
+            kept = ''
+            if kind != 'lost' and os.path.exists(f'{ROOT}/docs/images/original/{fn}'):   # the wiki's own image stays, and the note links to it
                 os.makedirs(f'{SITE}/images/original', exist_ok=True)
-                if os.path.exists(f'{RAW}/images/{fn}'): copy(f'{RAW}/images/{fn}', f'{SITE}/images/original/{fn}')
-                note = f'Enlarged to twice the size from the wiki\'s low-resolution image; <a href="images/original/{urllib.parse.quote(fn)}">the original</a> is kept.'
-            else: note = f'Drawn from sheet {sheet} of the exploded drawings PDF; {REDRAW_NOTE[kind]}.'
+                copy(f'{ROOT}/docs/images/original/{fn}', f'{SITE}/images/original/{fn}')
+                kept = f' <a href="images/original/{urllib.parse.quote(fn)}">The wiki\'s original</a> is kept.'
+            if kind == 'enlarged': note = f'Enlarged to twice the size from the wiki\'s low-resolution image.{kept}'
+            else: note = f'Drawn from sheet {sheet} of the exploded drawings PDF; {REDRAW_NOTE[kind]}.{kept}'
             return f'<img src="images/{urllib.parse.quote(fn)}" alt="{html.escape(fn)}"><p class="derived"><em>{note}</em></p>'
         rec = imgs.get(fn)
         if rec and rec.get('kind') and os.path.exists(f'{RAW}/images/{fn}'):
@@ -114,33 +108,6 @@ def fix_images(body, stats):
     body = re.sub(r'<a [^>]*href="[^"]*Special:Upload[^"]*?wpDestFile=([^"&]+)[^"]*"[^>]*>.*?</a>', never_uploaded, body, flags=re.S)
     body = re.sub(r'<a [^>]*class="image"[^>]*>\s*(<img[^>]*>)\s*</a>', r'\1', body)  # drop links to File: pages
     return re.sub(r'<img[^>]*>', repl, body)
-
-HEADING = re.compile(r'<h([1-6])\b([^>]*)>(.*?)</h\1>', re.S)   # the page title is added separately, so any h1 in a body is a section (Titan Assembly uses them)
-IMG_SRC = re.compile(r'<img\b[^>]*?\ssrc="([^"]+)"')
-NOT_BUILD_PAGES = {'BigBox_Build_Manual', 'Bill_Of_Materials', 'Downloads', 'Datasheets', 'Appendix_Older_Version_Content'}   # pages that are not build steps
-
-def embedded_sections(prepared):
-    """image file name -> [(page slug, heading id, heading text)]: where the manual shows each image.
-    The manual is the source of truth for which step a drawing belongs to: the wiki author placed each drawing under the step
-    that uses it. An image belongs to the nearest heading above it that starts with a step number, "(20.2)" or "(8)", else the
-    nearest heading of any kind. Headings are taken in document order, so an image in a gallery or table still finds its heading."""
-    out = {}
-    for t, (body, heads) in prepared.items():
-        if t in NOT_BUILD_PAGES: continue
-        marks = sorted([(m.start(), 'h', i) for i, m in enumerate(HEADING.finditer(body))] + [(m.start(), 'i', m.group(1)) for m in IMG_SRC.finditer(body)])
-        stack = []   # the headings above this point, outermost first: (level, id, text)
-        for _, kind, v in marks:
-            if kind == 'h':
-                level, hid, text = heads[v]
-                while stack and stack[-1][0] >= level: stack.pop()
-                stack.append((level, hid, text))
-            else:
-                # a drawing above the page's first heading (the sub-pages are mostly one drawing) belongs to the page itself
-                chosen = next((h for h in reversed(stack) if re.match(r'\(\d', h[2])), stack[-1]) if stack else (0, None, t.replace('_', ' '))
-                found = out.setdefault(thumb_file(v), [])
-                if (slug(t), chosen[1], chosen[2]) not in found: found.append((slug(t), chosen[1], chosen[2]))
-    return out
-
 
 captures = json.load(open(f'{RAW}/versions/captures.json')) if os.path.exists(f'{RAW}/versions/captures.json') else {}
 recovered = json.load(open(rec_path)) if os.path.exists(rec_path) else {}
@@ -206,15 +173,12 @@ def add_section_lists(body, self_slug, heads_by_slug):
         return div + ''.join(keep)
     return re.sub(r'(<div class="sections">.*?</div>)((?:\s*(?:<dl>(?:(?!<h\d).)*?</dl>|<p>(?:(?!<h\d).)*?</p>))*)', tidy, body, flags=re.S)
 
-PARTS_PATH = f'{ROOT}/notes/parts.json'   # written by scripts/drawings.py from the exploded drawings
-IMAGE_PARTS_PATH = f'{ROOT}/notes/parts_images.json'   # written by scripts/drawing_images.py (OCR of the drawing images)
 PDF_LINK = 'files/EXPLODED_DRAWINGS.pdf'   # the copy kept in the repository (the archive's capture of 2016-01-09)
 
-def add_drawing_parts(body, parts, images, sections_by_image):
+def add_drawing_parts(body, sheets, sections_by_image):
     """On the Bill of Materials page: fill the empty Printed Parts section and add a fixings table under Fixings, from the
-    parts lists in the exploded drawings. Both are marked as coming from the drawings, not from the wiki page.
-    Sheets come from the PDF's text; sheets that are only images on the wiki were read by OCR, and rows it was unsure of are left out."""
-    from targets import SHEET_IMAGES
+    reviewed sheets (data/sheets). Both are marked as coming from the drawings, not from the wiki page.
+    PDF sheets are exact text. Sheets that are only images on the wiki were read by OCR; their rows are used once a person has confirmed the sheet."""
     esc = html.escape
     def sections_for(names):   # every step of the manual that shows one of these images
         links, seen = [], set()
@@ -223,31 +187,22 @@ def add_drawing_parts(body, parts, images, sections_by_image):
                 if (page, hid) not in seen:
                     seen.add((page, hid)); links.append(f'<a href="{page}.html{"#" + html.escape(hid) if hid else ""}">{esc(text)}</a>')
         return '; '.join(links)
-    def norm(t): return re.sub(r'[^A-Z0-9]', '', t.upper())
-    pdf_titles = [norm(sh['title']) for sh in parts['sheets'] if sh['rows']]
     rows, left_out = [], 0   # (drawing link, build section link, row)
-    sheet_image, sheet_images = {}, {}   # sheet -> its main image / every image of it: wiki images the matcher confirmed, and those drawn from the PDF to replace a lost one
-    for name, m in matches.items():
-        if m['status'] == 'confirmed': sheet_image.setdefault(m['sheet'], name); sheet_images.setdefault(m['sheet'], []).append(name)
-    for name, (sheet, kind) in REDRAW.items():
-        if kind == 'lost': sheet_image.setdefault(sheet, name); sheet_images.setdefault(sheet, []).append(name)
-    def drawing(n):   # the image of the sheet if there is one, with the PDF sheet it is; otherwise the sheet's page in the PDF
-        name = sheet_image.get(n)
-        if name: return f'<a href="images/{urllib.parse.quote(name)}">{esc(os.path.splitext(name)[0].replace("_", " ").lower())}</a> (sheet {n})'
-        return f'<a href="{PDF_LINK}#page={n}">sheet {n} of the PDF</a>'
-    for sh in parts['sheets']:
-        for r in sh['rows']:
-            rows.append((drawing(sh['sheet']), sections_for(sheet_images.get(sh['sheet'], [])), r))
-    for sh in (images or {}).get('sheets', []):
-        k = norm(sh['title'])
-        if not sh['rows'] or sh['image'] in SHEET_IMAGES or matches.get(sh['image'], {}).get('status') == 'confirmed' or any(t == k or t.startswith(k) or k.startswith(t) for t in pdf_titles): continue   # the PDF has this sheet
-        for r in sh['rows']:
-            if r.get('review'): left_out += 1; continue
-            rows.append((f'<a href="images/{urllib.parse.quote(sh["image"])}">{esc(sh["title"].lower())} (image)</a>', sections_for([sh['image']]), r))
-    ocr = ' Sheets marked (image) exist only as pictures on the wiki; they were read by OCR and may contain mistakes.' if any('(image)' in d for d, _, _ in rows) else ''
-    cut = f' {left_out} rows the OCR was not sure about are left out.' if left_out else ''
+    for sh in sorted(sheets.values(), key=lambda x: (x['source']['kind'] != 'pdf', x['id'])):   # the PDF's sheets first, then the image-only ones
+        files = [im['file'] for im in sh['images']]
+        if sh['source']['kind'] == 'pdf':
+            n = sh['source']['page']
+            drawing = (f'<a href="images/{urllib.parse.quote(files[0])}">{esc(os.path.splitext(files[0])[0].replace("_", " ").lower())}</a> (sheet {n})' if files
+                       else f'<a href="{PDF_LINK}#page={n}">sheet {n} of the PDF</a>')
+        else:
+            if sh['confirmed'] is None: left_out += len(sh['rows']); continue   # read by OCR and not yet checked by a person
+            drawing = f'<a href="images/{urllib.parse.quote(files[0])}">{esc(sh["title"].lower())} (image)</a>'
+        for r in sh['rows']: rows.append((drawing, sections_for(files), r))
+    last_pdf_page = max(sh['source']['page'] for sh in sheets.values() if sh['source']['kind'] == 'pdf')
+    ocr = ' Sheets marked (image) exist only as pictures on the wiki; they were read by OCR and checked by a person.' if any('(image)' in d for d, _, _ in rows) else ''
+    cut = f' {left_out} rows read by OCR are left out until they are checked.' if left_out else ''
     note = ('<p class="derived"><em>This list is not from the wiki page, which left it empty. It is compiled from the parts lists in the '
-            f'<a href="{PDF_LINK}">exploded drawings PDF</a> (EXPLODED_DRAWINGS.pdf, sheets 1 to {len(parts["sheets"])}) and the drawing images on the wiki. Each row links to the drawing, with its sheet number in the PDF.{ocr}{cut}</em></p>')
+            f'<a href="{PDF_LINK}">exploded drawings PDF</a> (EXPLODED_DRAWINGS.pdf, sheets 1 to {last_pdf_page}) and the drawing images on the wiki. Each row links to the drawing, with its sheet number in the PDF.{ocr}{cut}</em></p>')
     printed = [(d, sec, r) for d, sec, r in rows if r['description'] in ('Printed Part', 'Printed Parts Box')]
     tr = ''.join(f'<tr><td>{esc(r["part"])}</td><td>{r["qty"]}</td><td>{"printed" if r["description"] == "Printed Part" else "from the Printed Parts Box"}</td>'
                  f'<td>{d}</td><td>{sec or "–"}</td></tr>' for d, sec, r in printed)
@@ -301,8 +256,8 @@ order = ['BigBox_Build_Manual'] + sorted(t for t in pages if t != 'BigBox_Build_
 stats, sections = {}, []
 prepared = {t: with_heading_ids(extract(pages[t])) for t in order}   # (body, headings) per page
 heads_by_slug = {slug(t): heads for t, (_, heads) in prepared.items()}
-if os.path.exists(PARTS_PATH) and 'Bill_Of_Materials' in prepared:
-    prepared['Bill_Of_Materials'] = (add_drawing_parts(prepared['Bill_Of_Materials'][0], json.load(open(PARTS_PATH)), json.load(open(IMAGE_PARTS_PATH)) if os.path.exists(IMAGE_PARTS_PATH) else None, embedded_sections(prepared)), prepared['Bill_Of_Materials'][1])
+if SHEETS and 'Bill_Of_Materials' in prepared:
+    prepared['Bill_Of_Materials'] = (add_drawing_parts(prepared['Bill_Of_Materials'][0], SHEETS, embedded_sections({t: body for t, (body, _) in prepared.items()}, slug)), prepared['Bill_Of_Materials'][1])
 for t in order:
     body0, heads = prepared[t]
     b = fix_links(fix_images(body0, stats), False)

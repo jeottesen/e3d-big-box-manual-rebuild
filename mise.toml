@@ -28,28 +28,25 @@ run = [
   "python3 -I scripts/appendix.py",
 ]
 
-[tasks.extract]
-description = "Read the parts lists off the exploded drawings (PDF text, then OCR for the sheets that are only images)"
+[tasks.propose]
+description = "Run the extraction tools: PDF text, OCR of the image-only sheets, and matching images to sheets. They write proposals to work/proposed/ (git-ignored); `mise run drift` compares those with the reviewed data in data/sheets/"
 depends = ["deps"]
-sources = ["scripts/drawings.py", "scripts/drawing_images.py", "scripts/ocr_text.py", "scripts/targets.py", "scripts/crawl.py", "requirements.txt",
-           "docs/files/EXPLODED_DRAWINGS.pdf", "docs/images/*.jpg", "docs/images/original/*.jpg", "notes/sheet_matches.json"]
-outputs = ["notes/parts.json", "notes/parts_images.json", "notes/OCR_REVIEW.md"]
+sources = ["scripts/drawings.py", "scripts/drawing_images.py", "scripts/match_sheets.py", "scripts/match_logic.py", "scripts/ocr_text.py", "scripts/targets.py",
+           "scripts/crawl.py", "scripts/truth.py", "requirements.txt", "docs/files/EXPLODED_DRAWINGS.pdf", "docs/images/*.jpg", "docs/images/original/*.jpg"]
+outputs = ["work/proposed/parts.json", "work/proposed/parts_images.json", "work/proposed/sheet_matches.json"]
 run = [
   "python3 -I scripts/drawings.py",
   "python3 -I scripts/drawing_images.py",
-  "touch notes/parts.json notes/parts_images.json notes/OCR_REVIEW.md",   # an unchanged result is not rewritten; this marks it up to date
+  "python3 -I scripts/match_sheets.py",
+  "touch work/proposed/parts.json work/proposed/parts_images.json work/proposed/sheet_matches.json",   # an unchanged result is not rewritten; this marks it up to date
 ]
 
-[tasks.match]
-description = "Match the wiki's drawing images to sheets of the exploded drawings PDF (writes notes/sheet_matches.json; run extract first, and it re-runs when the result changes)"
-depends = ["deps", "extract"]
-sources = ["scripts/match_sheets.py", "scripts/match_logic.py", "scripts/targets.py", "requirements.txt", "docs/files/EXPLODED_DRAWINGS.pdf",
-           "docs/images/*.jpg", "docs/images/original/*.jpg", "notes/parts.json", "notes/parts_images.json"]
-outputs = ["notes/sheet_matches.json"]
-run = ["python3 -I scripts/match_sheets.py", "touch notes/sheet_matches.json"]
+[tasks.drift]
+description = "Compare the tools' proposals with the reviewed data (run propose first). Accept a change on purpose: python3 -I scripts/drift.py --accept ID [--confirm NAME]"
+run = "python3 -I scripts/drift.py"
 
 [tasks.render]
-description = "Draw the PDF sheets that stand in for wiki images, and enlarge low-resolution drawings (writes <data folder>/rendered/; cheap, so it always runs)"
+description = "Draw the PDF sheets that stand in for wiki images, and enlarge low-resolution drawings, into docs/images/ (committed; the wiki original is kept in docs/images/original/). Run it when data/sheets changes"
 depends = ["deps"]
 run = "python3 -I scripts/render_sheets.py"
 
@@ -79,8 +76,7 @@ run = [
 ]
 
 [tasks.build]
-description = "Everything: read the drawings, build docs/ and manual/, then check them"
-depends = ["extract", "render"]
+description = "Everything: build docs/ and manual/ from the reviewed data, then run the checks"
 run = [
   "mise run markdown",
   "mise run check",

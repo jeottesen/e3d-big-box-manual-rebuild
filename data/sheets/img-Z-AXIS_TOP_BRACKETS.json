@@ -1,0 +1,74 @@
+{
+ "id": "img-Z-AXIS_TOP_BRACKETS",
+ "title": "Z-AXIS TOP BRACKETS",
+ "source": {
+  "kind": "image",
+  "file": "docs/images/Z-AXIS_TOP_BRACKETS.jpg",
+  "sha256": "936f6c8827e4f1122e9d36747494803d10c9fea8aa42c6578f98a2f4a2646802",
+  "image_sheet": [
+   38,
+   38
+  ]
+ },
+ "images": [
+  {
+   "file": "Z-AXIS_TOP_BRACKETS.jpg",
+   "role": "wiki"
+  }
+ ],
+ "rows": [
+  {
+   "item": "1",
+   "qty": 1,
+   "part": "Z-AXIS TOP BOTTOM",
+   "description": "Printed Part",
+   "how": "ocr",
+   "confidence": 0.99
+  },
+  {
+   "item": "2",
+   "qty": 1,
+   "part": "Z-AXIS TOP TOP",
+   "description": "Printed Part",
+   "how": "ocr",
+   "confidence": 0.99
+  },
+  {
+   "item": "3",
+   "qty": 1,
+   "part": "Z-AXIS TOP CAP",
+   "description": "Printed Part",
+   "how": "ocr",
+   "confidence": 0.98
+  },
+  {
+   "item": "4",
+   "qty": 1,
+   "part": "ROD-G.H.SS-8-364",
+   "description": "Rod Kit",
+   "how": "ocr",
+   "confidence": 0.99
+  },
+  {
+   "item": "5",
+   "qty": 2,
+   "part": "M3 Hex Nut (Half)",
+   "description": "Fixings Bag 5",
+   "how": "ocr",
+   "confidence": 0.96
+  },
+  {
+   "item": "6",
+   "qty": 2,
+   "part": "M3 x 12 Socket Cap Screw",
+   "description": "Fixings Bag 9",
+   "how": "ocr",
+   "confidence": 0.98
+  }
+ ],
+ "confirmed": {
+  "by": "jeottesen",
+  "on": "2026-10-30"
+ },
+ "notes": ""
+}

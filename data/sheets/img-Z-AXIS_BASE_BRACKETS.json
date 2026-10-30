@@ -1,0 +1,58 @@
+{
+ "id": "img-Z-AXIS_BASE_BRACKETS",
+ "title": "Z-AXIS BASE BRACKETS",
+ "source": {
+  "kind": "image",
+  "file": "docs/images/Z-AXIS_BASE_BRACKETS.jpg",
+  "sha256": "439e7023693747b37f0ec1cdd0ac9a10449c345065c1ec8cb72e183b0449081a",
+  "image_sheet": [
+   32,
+   36
+  ]
+ },
+ "images": [
+  {
+   "file": "Z-AXIS_BASE_BRACKETS.jpg",
+   "role": "wiki"
+  }
+ ],
+ "rows": [
+  {
+   "item": "1",
+   "qty": 1,
+   "part": "Z-AXIS BASE BRACKET LOWER",
+   "description": "Printed Part",
+   "how": "ocr",
+   "confidence": 0.99
+  },
+  {
+   "item": "2",
+   "qty": 1,
+   "part": "Z-AXIS BASE BRACKET UPPER",
+   "description": "Printed Part",
+   "how": "ocr",
+   "confidence": 0.99
+  },
+  {
+   "item": "3",
+   "qty": 2,
+   "part": "M3 x 12 Socket Cap Screw",
+   "description": "Fixings Bag 9",
+   "how": "ocr",
+   "confidence": 0.97
+  },
+  {
+   "item": "4",
+   "qty": 2,
+   "part": "M3 Hex Nut (Half)",
+   "description": "Fixings Bag 5",
+   "how": "ocr",
+   "confidence": 0.95
+  }
+ ],
+ "confirmed": {
+  "by": "jeottesen",
+  "on": "2026-10-30"
+ },
+ "notes": ""
+}

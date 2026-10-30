@@ -4,7 +4,7 @@ Archived 20191215173602 · source: wiki.e3d-online.com/wiki/Dual_Direct-Drive_Ex
 
 ![EXTRUDER_DUAL.jpg](../docs/images/EXTRUDER_DUAL.jpg)
 
-*Enlarged to twice the size from the wiki's low-resolution image; [the original](../docs/images/original/EXTRUDER_DUAL.jpg) is kept.*
+*Enlarged to twice the size from the wiki's low-resolution image. [The wiki's original](../docs/images/original/EXTRUDER_DUAL.jpg) is kept.*
 
 ![Bowden_coupler_apart.jpg](../docs/images/Bowden_coupler_apart.jpg)
 

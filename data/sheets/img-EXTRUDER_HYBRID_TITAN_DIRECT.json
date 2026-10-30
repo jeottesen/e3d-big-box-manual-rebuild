@@ -1,0 +1,62 @@
+{
+ "id": "img-EXTRUDER_HYBRID_TITAN_DIRECT",
+ "title": "EXTRUDER HYBRID TITAN DIRECT",
+ "source": {
+  "kind": "image",
+  "file": "docs/images/EXTRUDER_HYBRID_TITAN_DIRECT.jpg",
+  "sha256": "05be15b134d59ba33c32f7f453997bf1487e431e6902d73d1409751c299541d8",
+  "image_sheet": [
+   18,
+   41
+  ]
+ },
+ "images": [
+  {
+   "file": "EXTRUDER_HYBRID_TITAN_DIRECT.jpg",
+   "role": "wiki"
+  }
+ ],
+ "rows": [
+  {
+   "item": "1",
+   "qty": 2,
+   "part": "M3 Hex Nut",
+   "description": "Fixings Bag 3",
+   "how": "hand",
+   "confidence": 0.74,
+   "read_as": {
+    "part": "M2 Hex Nut",
+    "description": "Fixings Bag 3"
+   }
+  },
+  {
+   "item": "2",
+   "qty": 1,
+   "part": "E-AXIS CARRIAGE TOP HYBRID TITAN DIRECT",
+   "description": "Printed Part",
+   "how": "ocr",
+   "confidence": 0.96
+  },
+  {
+   "item": "3",
+   "qty": 1,
+   "part": "NEMA17",
+   "description": "SEE NOTESONDRAWING",
+   "how": "ocr",
+   "confidence": 0.93
+  },
+  {
+   "item": "",
+   "qty": 4,
+   "part": "E3D-TITAN",
+   "description": "SEE NOTESONDRAWING",
+   "how": "ocr",
+   "confidence": 0.99
+  }
+ ],
+ "confirmed": {
+  "by": "jeottesen",
+  "on": "2026-10-30"
+ },
+ "notes": ""
+}
