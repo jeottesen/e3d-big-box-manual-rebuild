@@ -68,18 +68,13 @@ def extract(h):
     body = re.sub(r'<a [^>]*href="[^"]*?/(?:wiki/)?(?:File|Special|Media):[^"]*"[^>]*>(.*?)</a>', r'\1', body, flags=re.S)  # image-info links: keep contents only
     return body
 
+from sections import HEADING, embedded_sections, thumb_file
 import truth
 SHEETS = truth.load_truth()   # the reviewed per-sheet data (data/sheets/*.json): the build reads this and nothing the tools propose
 # images drawn from the exploded drawings PDF by scripts/render_sheets.py: name -> (sheet, 'lost', 'redrawn' or 'enlarged')
 REDRAW = {im['file']: (sh['source'].get('page'), im['role']) for sh in SHEETS.values() for im in sh['images'] if im['role'] != 'wiki'}
 REDRAW_NOTE = {'lost': "the wiki's own copy of this image was not archived",
                'redrawn': "the wiki's image of this drawing was low resolution and the PDF has it larger"}
-
-def thumb_file(src):
-    """The file name of an image from its src, whether the wiki gave the full image or a thumbnail of it."""
-    p = urllib.parse.unquote(urllib.parse.urlparse(html.unescape(src)).path)
-    m = re.match(r'/images/thumb/[^/]+/[^/]+/([^/]+)/', p)
-    return m.group(1) if m else p.rsplit('/', 1)[-1]
 
 def fix_images(body, stats):
     def repl(m):
@@ -113,33 +108,6 @@ def fix_images(body, stats):
     body = re.sub(r'<a [^>]*href="[^"]*Special:Upload[^"]*?wpDestFile=([^"&]+)[^"]*"[^>]*>.*?</a>', never_uploaded, body, flags=re.S)
     body = re.sub(r'<a [^>]*class="image"[^>]*>\s*(<img[^>]*>)\s*</a>', r'\1', body)  # drop links to File: pages
     return re.sub(r'<img[^>]*>', repl, body)
-
-HEADING = re.compile(r'<h([1-6])\b([^>]*)>(.*?)</h\1>', re.S)   # the page title is added separately, so any h1 in a body is a section (Titan Assembly uses them)
-IMG_SRC = re.compile(r'<img\b[^>]*?\ssrc="([^"]+)"')
-NOT_BUILD_PAGES = {'BigBox_Build_Manual', 'Bill_Of_Materials', 'Downloads', 'Datasheets', 'Appendix_Older_Version_Content'}   # pages that are not build steps
-
-def embedded_sections(prepared):
-    """image file name -> [(page slug, heading id, heading text)]: where the manual shows each image.
-    The manual is the source of truth for which step a drawing belongs to: the wiki author placed each drawing under the step
-    that uses it. An image belongs to the nearest heading above it that starts with a step number, "(20.2)" or "(8)", else the
-    nearest heading of any kind. Headings are taken in document order, so an image in a gallery or table still finds its heading."""
-    out = {}
-    for t, (body, heads) in prepared.items():
-        if t in NOT_BUILD_PAGES: continue
-        marks = sorted([(m.start(), 'h', i) for i, m in enumerate(HEADING.finditer(body))] + [(m.start(), 'i', m.group(1)) for m in IMG_SRC.finditer(body)])
-        stack = []   # the headings above this point, outermost first: (level, id, text)
-        for _, kind, v in marks:
-            if kind == 'h':
-                level, hid, text = heads[v]
-                while stack and stack[-1][0] >= level: stack.pop()
-                stack.append((level, hid, text))
-            else:
-                # a drawing above the page's first heading (the sub-pages are mostly one drawing) belongs to the page itself
-                chosen = next((h for h in reversed(stack) if re.match(r'\(\d', h[2])), stack[-1]) if stack else (0, None, t.replace('_', ' '))
-                found = out.setdefault(thumb_file(v), [])
-                if (slug(t), chosen[1], chosen[2]) not in found: found.append((slug(t), chosen[1], chosen[2]))
-    return out
-
 
 captures = json.load(open(f'{RAW}/versions/captures.json')) if os.path.exists(f'{RAW}/versions/captures.json') else {}
 recovered = json.load(open(rec_path)) if os.path.exists(rec_path) else {}
@@ -289,7 +257,7 @@ stats, sections = {}, []
 prepared = {t: with_heading_ids(extract(pages[t])) for t in order}   # (body, headings) per page
 heads_by_slug = {slug(t): heads for t, (_, heads) in prepared.items()}
 if SHEETS and 'Bill_Of_Materials' in prepared:
-    prepared['Bill_Of_Materials'] = (add_drawing_parts(prepared['Bill_Of_Materials'][0], SHEETS, embedded_sections(prepared)), prepared['Bill_Of_Materials'][1])
+    prepared['Bill_Of_Materials'] = (add_drawing_parts(prepared['Bill_Of_Materials'][0], SHEETS, embedded_sections({t: body for t, (body, _) in prepared.items()}, slug)), prepared['Bill_Of_Materials'][1])
 for t in order:
     body0, heads = prepared[t]
     b = fix_links(fix_images(body0, stats), False)

@@ -24,7 +24,7 @@ E3D BigBox 3D printer manual, recovered from the Wayback Machine. See README.md 
 
 ## Source of truth
 
-- The manual is the source of truth for which step a part or drawing belongs to. The wiki author placed each drawing under the step that uses it, and that is ground truth from the source, not a guess from a title or a sheet number. A build-section link comes from the heading a drawing is embedded under (`embedded_sections` in `scripts/build.py`); a drawing shown in several steps links all of them. When the manual and a drawing's own name or numbering disagree about where something belongs, the manual wins. Don't add hand tables that map names to sections.
+- The manual is the source of truth for which step a part or drawing belongs to. The wiki author placed each drawing under the step that uses it, and that is ground truth from the source, not a guess from a title or a sheet number. A build-section link comes from the heading a drawing is embedded under (`embedded_sections` in `scripts/sections.py`, tested in `tests/test_sections.py`); a drawing shown in several steps links all of them. When the manual and a drawing's own name or numbering disagree about where something belongs, the manual wins. Don't add hand tables that map names to sections.
 - Likewise the reviewed data (`data/sheets/`) is the truth for each sheet's parts list, and a person's reading of a drawing outranks the tools. The tools only propose (to `work/proposed/`) and never write `data/`; `scripts/drift.py` reports what differs and a change is accepted on purpose. A hand correction is recorded in the sheet file (`how: hand`, with what the tool read in `read_as`); `OCR_FIXES` in `scripts/targets.py` only tells the tools about it so they stop proposing the old text.
 
 ## Rules

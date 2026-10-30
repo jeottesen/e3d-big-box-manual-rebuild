@@ -25,4 +25,4 @@ The extraction tools (`scripts/drawings.py`, `scripts/drawing_images.py`, `scrip
 
 ## Build sections
 
-The build section a part links to is not stored here. It comes from where the manual shows the sheet's drawing (`embedded_sections` in `scripts/build.py`), because the manual is the source of truth for which step a drawing belongs to.
+The build section a part links to is not stored here. It comes from where the manual shows the sheet's drawing (`embedded_sections` in `scripts/sections.py`), because the manual is the source of truth for which step a drawing belongs to.
