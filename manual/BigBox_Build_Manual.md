@@ -1,6 +1,6 @@
 # BigBox Build Manual
 
-Archived 20200803120509 · source: wiki.e3d-online.com/wiki/BigBox_Build_Manual
+Archived 20200803120509 · source: wiki.e3d-online.com/wiki/BigBox_Build_Manual · [archive link](https://web.archive.org/web/20200803120509/https://wiki.e3d-online.com/BigBox_Build_Manual)
 
 **Contents**
 

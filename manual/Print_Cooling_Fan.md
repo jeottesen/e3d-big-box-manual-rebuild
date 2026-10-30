@@ -1,6 +1,6 @@
 # Print Cooling Fan
 
-Archived 20161025052640 · source: wiki.e3d-online.com/wiki/Print_Cooling_Fan
+Archived 20161025052640 · source: wiki.e3d-online.com/wiki/Print_Cooling_Fan · [archive link](https://web.archive.org/web/20161025052640/http://wiki.e3d-online.com:80/wiki/Print_Cooling_Fan)
 
 *\[image not archived: PRINT_FAN_DUCT.jpg\]*
 

@@ -1,6 +1,6 @@
 # Printer Commissioning
 
-Archived 20210415222724 · source: wiki.e3d-online.com/wiki/Printer_Commissioning
+Archived 20210415222724 · source: wiki.e3d-online.com/wiki/Printer_Commissioning · [archive link](https://web.archive.org/web/20210415222724/https://wiki.e3d-online.com/Printer_Commissioning)
 
 **Contents**
 

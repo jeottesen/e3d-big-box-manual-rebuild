@@ -1,6 +1,6 @@
 # Single Direct-Drive Printhead Assembly
 
-Archived 20220930193817 · source: wiki.e3d-online.com/wiki/Single_Direct-Drive_Printhead_Assembly
+Archived 20220930193817 · source: wiki.e3d-online.com/wiki/Single_Direct-Drive_Printhead_Assembly · [archive link](https://web.archive.org/web/20220930193817/https://wiki.e3d-online.com/Single_Direct-Drive_Printhead_Assembly)
 
 **Contents**
 

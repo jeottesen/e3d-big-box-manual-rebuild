@@ -1,6 +1,6 @@
 # Printer main assemblies: Step By Step Assembly Process
 
-Archived 20200127192408 · source: wiki.e3d-online.com/wiki/Printer_main_assemblies:\_Step_By_Step_Assembly_Process
+Archived 20200127192408 · source: wiki.e3d-online.com/wiki/Printer_main_assemblies:\_Step_By_Step_Assembly_Process · [archive link](https://web.archive.org/web/20200127192408/https://wiki.e3d-online.com/Printer_main_assemblies:_Step_By_Step_Assembly_Process)
 
 **Contents**
 

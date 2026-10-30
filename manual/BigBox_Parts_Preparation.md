@@ -1,6 +1,6 @@
 # BigBox Parts Preparation
 
-Archived 20221201075921 · source: wiki.e3d-online.com/wiki/BigBox_Parts_Preparation
+Archived 20221201075921 · source: wiki.e3d-online.com/wiki/BigBox_Parts_Preparation · [archive link](https://web.archive.org/web/20221201075921/https://wiki.e3d-online.com/BigBox_Parts_Preparation)
 
 **Contents**
 

@@ -1,6 +1,6 @@
 # Pro & Lite X-Carriage
 
-Archived 20160824110747 · source: wiki.e3d-online.com/wiki/Pro\_&\_Lite_X-Carriage
+Archived 20160824110747 · source: wiki.e3d-online.com/wiki/Pro\_&\_Lite_X-Carriage · [archive link](https://web.archive.org/web/20160824110747/http://wiki.e3d-online.com:80/wiki/Pro_%26_Lite_X-Carriage)
 
 *\[image not archived: X-CARRIAGE_SINGLE.jpg\]*
 

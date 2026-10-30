@@ -1,6 +1,6 @@
 # Bill Of Materials
 
-Archived 20210416002713 · source: wiki.e3d-online.com/wiki/Bill_Of_Materials
+Archived 20210416002713 · source: wiki.e3d-online.com/wiki/Bill_Of_Materials · [archive link](https://web.archive.org/web/20210416002713/https://wiki.e3d-online.com/Bill_Of_Materials)
 
 **Contents**
 

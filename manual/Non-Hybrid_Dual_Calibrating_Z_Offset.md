@@ -1,6 +1,6 @@
 # Non-Hybrid Dual Calibrating Z Offset
 
-Rebuilt page · source: wiki.e3d-online.com/wiki/Non-Hybrid_Dual_Calibrating_Z_Offset
+Rebuilt page · source: wiki.e3d-online.com/wiki/Non-Hybrid_Dual_Calibrating_Z_Offset · [archive link (parent page)](https://web.archive.org/web/20160811132429/http://wiki.e3d-online.com:80/wiki/Printer_Commissioning)
 
 Recovered from an older version of Printer Commissioning (20160811132429), section "(4.3.2) Calibrating Z Offset Dual" — the separate wiki page is not in the archive.
 

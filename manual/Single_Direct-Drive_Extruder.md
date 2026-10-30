@@ -1,6 +1,6 @@
 # Single Direct-Drive Extruder
 
-Archived 20191220164342 · source: wiki.e3d-online.com/wiki/Single_Direct-Drive_Extruder
+Archived 20191220164342 · source: wiki.e3d-online.com/wiki/Single_Direct-Drive_Extruder · [archive link](https://web.archive.org/web/20191220164342/https://wiki.e3d-online.com/Single_Direct-Drive_Extruder)
 
 ![EXTRUDER_SINGLE.jpg](../docs/images/EXTRUDER_SINGLE.jpg)
 

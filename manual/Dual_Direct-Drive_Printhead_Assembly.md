@@ -1,6 +1,6 @@
 # Dual Direct-Drive Printhead Assembly
 
-Archived 20220930194123 · source: wiki.e3d-online.com/wiki/Dual_Direct-Drive_Printhead_Assembly
+Archived 20220930194123 · source: wiki.e3d-online.com/wiki/Dual_Direct-Drive_Printhead_Assembly · [archive link](https://web.archive.org/web/20220930194123/https://wiki.e3d-online.com/Dual_Direct-Drive_Printhead_Assembly)
 
 **Contents**
 

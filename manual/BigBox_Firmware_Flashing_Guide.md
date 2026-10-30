@@ -1,6 +1,6 @@
 # BigBox Firmware Flashing Guide
 
-Archived 20201204013533 · source: wiki.e3d-online.com/wiki/BigBox_Firmware_Flashing_Guide
+Archived 20201204013533 · source: wiki.e3d-online.com/wiki/BigBox_Firmware_Flashing_Guide · [archive link](https://web.archive.org/web/20201204013533/https://wiki.e3d-online.com/BigBox_Firmware_Flashing_Guide)
 
 **Contents**
 

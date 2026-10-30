@@ -1,6 +1,6 @@
 # BigBox Printer Sub-assemblies
 
-Archived 20210415233707 · source: wiki.e3d-online.com/wiki/BigBox_Printer_Sub-assemblies
+Archived 20210415233707 · source: wiki.e3d-online.com/wiki/BigBox_Printer_Sub-assemblies · [archive link](https://web.archive.org/web/20210415233707/https://wiki.e3d-online.com/BigBox_Printer_Sub-assemblies)
 
 **Contents**
 

@@ -1,6 +1,6 @@
 # Your First Print
 
-Archived 20201204013802 · source: wiki.e3d-online.com/wiki/Your_First_Print
+Archived 20201204013802 · source: wiki.e3d-online.com/wiki/Your_First_Print · [archive link](https://web.archive.org/web/20201204013802/https://wiki.e3d-online.com/Your_First_Print)
 
 **Contents**
 

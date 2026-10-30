@@ -1,6 +1,6 @@
 # Dual Extruders
 
-Archived 20161105151950 · source: wiki.e3d-online.com/wiki/Dual_Extruders
+Archived 20161105151950 · source: wiki.e3d-online.com/wiki/Dual_Extruders · [archive link](https://web.archive.org/web/20161105151950/http://wiki.e3d-online.com:80/wiki/Dual_Extruders)
 
 *\[image not archived: Dual_head_move.jpg\]*
 

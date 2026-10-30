@@ -1,6 +1,6 @@
 # BigBox Software
 
-Archived 20201204024242 · source: wiki.e3d-online.com/wiki/BigBox_Software
+Archived 20201204024242 · source: wiki.e3d-online.com/wiki/BigBox_Software · [archive link](https://web.archive.org/web/20201204024242/https://wiki.e3d-online.com/BigBox_Software)
 
 **Contents**
 

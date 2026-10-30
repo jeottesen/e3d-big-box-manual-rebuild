@@ -84,6 +84,13 @@ def fix_images(body, stats):
 
 HEADING = re.compile(r'<h([1-6])\b([^>]*)>(.*?)</h\1>', re.S)   # the page title is added separately, so any h1 in a body is a section (Titan Assembly uses them)
 
+captures = json.load(open(f'{RAW}/versions/captures.json')) if os.path.exists(f'{RAW}/versions/captures.json') else {}
+recovered = json.load(open(rec_path)) if os.path.exists(rec_path) else {}
+def wayback_link(title, snap, label='archive link'):
+    """A link to the capture the page was taken from, using the URL form that capture was saved under."""
+    url = next((u for ts, u, *_ in captures.get(title, []) if ts == snap), None) or f'https://wiki.e3d-online.com/wiki/{title}'
+    return f'<a href="https://web.archive.org/web/{snap}/{html.escape(url, quote=True)}">{label}</a>'
+
 def with_heading_ids(body):
     """Give every h1-h6 an id (the wiki puts it on an inner span; rebuilt sections have none).
     Returns the body and [(level, id, text)] for the contents list."""
@@ -185,9 +192,12 @@ for t in order:
     b = fix_links(fix_images(body0, stats), False)
     if t == 'BigBox_Build_Manual': b = add_section_lists(b, slug(t), heads_by_slug)
     snap = meta.get(t, {}).get('snapshot', '?')
-    if t in latest_titles: src = f'Archived {snap} · source: wiki.e3d-online.com/wiki/{html.escape(t)}'
+    if t in latest_titles: src = f'Archived {snap} · source: wiki.e3d-online.com/wiki/{html.escape(t)} · {wayback_link(t, snap)}'
     elif t in extras: src = ''   # the appendix and datasheets pages are not wiki pages
-    else: src = f'Rebuilt page · source: wiki.e3d-online.com/wiki/{html.escape(t)}'   # the note under the title says where from
+    else:   # rebuilt pages: the note under the title says where from; link the parent page's capture the text was cut from
+        parent = recovered.get(t) or {}
+        link = f' · {wayback_link(parent["parent"], parent["version"], "archive link (parent page)")}' if parent.get('parent') else ''
+        src = f'Rebuilt page · source: wiki.e3d-online.com/wiki/{html.escape(t)}{link}'
     head = f'<h1>{html.escape(t.replace("_", " "))}</h1>' + (f'<p class="src">{src}</p>' if src else '')
     nav = '<nav><a href="index.html">All pages</a></nav>'
     open(f'{SITE}/{slug(t)}.html', 'w').write(f'<!doctype html><meta charset="utf-8"><title>{html.escape(t)}</title><style>{STYLE}</style>{nav}{head}{toc_html(heads)}{b}')

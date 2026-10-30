@@ -1,6 +1,6 @@
 # BigBox OctoPrint Upgrade
 
-Archived 20230529010658 · source: wiki.e3d-online.com/wiki/BigBox_OctoPrint_Upgrade
+Archived 20230529010658 · source: wiki.e3d-online.com/wiki/BigBox_OctoPrint_Upgrade · [archive link](https://web.archive.org/web/20230529010658/https://wiki.e3d-online.com/BigBox_OctoPrint_Upgrade)
 
 **Contents**
 

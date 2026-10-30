@@ -1,6 +1,6 @@
 # Dual Direct-Drive Extruders
 
-Archived 20191215173602 · source: wiki.e3d-online.com/wiki/Dual_Direct-Drive_Extruders
+Archived 20191215173602 · source: wiki.e3d-online.com/wiki/Dual_Direct-Drive_Extruders · [archive link](https://web.archive.org/web/20191215173602/https://wiki.e3d-online.com/Dual_Direct-Drive_Extruders)
 
 ![EXTRUDER_DUAL.jpg](../docs/images/EXTRUDER_DUAL.jpg)
 
