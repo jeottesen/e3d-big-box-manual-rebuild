@@ -17,7 +17,7 @@ E3D BigBox 3D printer manual, recovered from the Wayback Machine. See README.md 
 
 ## Checks
 
-- Run `mise run check` before committing. It runs the tests (`tests/`, standard library only), `ruff` (config in `ruff.toml`), `scripts/check_markdown.py` and `markdownlint-cli2`. `.github/workflows/check.yml` does the same in CI on pull requests and pushes to `main`.
+- Run `mise run check` before committing. It runs the tests (`tests/`, standard library only), `ruff` (config in `ruff.toml`), `scripts/check_markdown.py` and `markdownlint-cli2`. `.github/workflows/check.yml` does the same in CI but is switched off (manual start only) until this repo has a self-hosted runner set; see the comments in the file.
 - The tests read the committed data (`notes/*.json`, `docs/`), so they need no venv and no `raw/` folder. They fail if an extraction leaves anything unchecked, repeats a Bill of Materials row, changes a number in a correction, or breaks a link from the Bill of Materials to a drawing or a build section. If a test fails after a re-run, look at why before changing the test.
 
 ## Rules

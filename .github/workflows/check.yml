@@ -1,13 +1,18 @@
 # The mandatory checks, as a workflow: tests, ruff, the link and image check on manual/, and markdownlint.
 # It is the same as running `mise run check` locally.
 #
-# Runs on pull requests, on pushes to main, and by hand.
+# OFF until this repo has self-hosted runners: it only runs when started by hand. GitHub-hosted runners are not an option (no
+# Actions credit), and the ARC runner set in server-config is registered to a different repo (laughing-octo-waffle), so
+# `runs-on` would find no runner here. Once a runner set exists for this repo, set `runs-on` to its name and replace the
+# `on:` block with:
+#
+#   on:
+#     pull_request:
+#     push:
+#       branches: [main]
 name: check
 
 on:
-  pull_request:
-  push:
-    branches: [main]
   workflow_dispatch:
 
 jobs:
