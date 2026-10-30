@@ -6,11 +6,11 @@ The PDF is vector, so its text can be read exactly; no OCR is involved. Each she
 The pdf text comes out one glyph at a time with its position, so rows and columns are rebuilt from positions.
 
 It needs a third-party package (pypdf, in requirements.txt), so it runs as its own step, `extract`, only when its
-inputs change, and writes notes/parts.json, which the build reads:
+inputs change, and writes work/proposed/parts.json (a proposal; the reviewed data is data/sheets/):
 
     mise run extract        (or: python3 -I scripts/drawings.py [--pdf FILE] in the venv from requirements.txt)
 
-Output: notes/parts.json, one entry per sheet: title, sheet number, and the parts list rows. Rows that do not
+Output: work/proposed/parts.json, one entry per sheet: title, sheet number, and the parts list rows. Rows that do not
 look right (item numbers that do not run 1..n, an empty field) are listed under "problems" for a manual look.
 """
 import json, os, re, sys
@@ -19,7 +19,8 @@ import crawl
 from pypdf import PdfReader
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-OUT = f'{ROOT}/notes/parts.json'
+from truth import PROPOSED
+OUT = f'{PROPOSED}/parts.json'   # a proposal: scripts/drift.py compares it with the reviewed data in data/sheets/
 PDF_URL = 'http://files.e3d-online.com/BigBox/EXPLODED_DRAWINGS.pdf'
 PDF_TS = '20160109071827'
 PDF_PATH = f'{ROOT}/docs/files/EXPLODED_DRAWINGS.pdf'   # a copy is kept in the repository; downloaded from the archive only if it is missing

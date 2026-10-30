@@ -1,0 +1,69 @@
+{
+ "id": "pdf-18",
+ "title": "X-AXIS ASSEMBLY",
+ "source": {
+  "kind": "pdf",
+  "file": "docs/files/EXPLODED_DRAWINGS.pdf",
+  "sha256": "659ab7e3f4c9d042f2082aeaf231af6e9901d9c25841854a618e5caae793cbe2",
+  "page": 18
+ },
+ "images": [
+  {
+   "file": "Y-AXIS_REAR_ASSEMBLY.jpg",
+   "role": "wiki"
+  }
+ ],
+ "rows": [
+  {
+   "item": "1",
+   "qty": 1,
+   "part": "Y-AXIS REAR (L)",
+   "description": "Part Preparation",
+   "how": "pdf-text"
+  },
+  {
+   "item": "2",
+   "qty": 1,
+   "part": "Y-AXIS BACK (R)",
+   "description": "Part Preparation",
+   "how": "pdf-text"
+  },
+  {
+   "item": "3",
+   "qty": 1,
+   "part": "ROD-SS-8-532",
+   "description": "Rod Kit (Longest)",
+   "how": "pdf-text"
+  },
+  {
+   "item": "4",
+   "qty": 2,
+   "part": "Nylon Washer 8 x 16 x 1.6",
+   "description": "Fixings Bag 13",
+   "how": "pdf-text"
+  },
+  {
+   "item": "5",
+   "qty": 1,
+   "part": "GT2-36T-8ID",
+   "description": "Motion Box (36 Tooth, 8mm ID)",
+   "how": "pdf-text"
+  },
+  {
+   "item": "6",
+   "qty": 2,
+   "part": "GT2-20T-8ID",
+   "description": "Motion Box (20 Tooth, 8mm ID)",
+   "how": "pdf-text"
+  },
+  {
+   "item": "7",
+   "qty": 1,
+   "part": "GT2-BELT-CLOSED-66T",
+   "description": "Motion Box",
+   "how": "pdf-text"
+  }
+ ],
+ "confirmed": null,
+ "notes": ""
+}

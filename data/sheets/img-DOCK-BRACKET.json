@@ -1,0 +1,50 @@
+{
+ "id": "img-DOCK-BRACKET",
+ "title": "DOCK-BRACKET",
+ "source": {
+  "kind": "image",
+  "file": "docs/images/DOCK-BRACKET.jpg",
+  "sha256": "5031aea599f5744f761d20b862e343df4efe55c109690040975a8a068f0b5aec",
+  "image_sheet": [
+   35,
+   36
+  ]
+ },
+ "images": [
+  {
+   "file": "DOCK-BRACKET.jpg",
+   "role": "wiki"
+  }
+ ],
+ "rows": [
+  {
+   "item": "1",
+   "qty": 1,
+   "part": "DOCK-BRACKET",
+   "description": "Printed Part",
+   "how": "ocr",
+   "confidence": 0.99
+  },
+  {
+   "item": "2",
+   "qty": 5,
+   "part": "M3 Microbarb Nut (Brass)",
+   "description": "Fixings Bag 2",
+   "how": "ocr",
+   "confidence": 0.95
+  },
+  {
+   "item": "3",
+   "qty": 5,
+   "part": "M3 x 10 Socket Cap Screw",
+   "description": "Fixings Bag 8",
+   "how": "ocr",
+   "confidence": 0.98
+  }
+ ],
+ "confirmed": {
+  "by": "jeottesen",
+  "on": "2026-10-30"
+ },
+ "notes": ""
+}

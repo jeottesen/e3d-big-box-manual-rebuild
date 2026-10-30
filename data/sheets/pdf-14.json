@@ -1,0 +1,118 @@
+{
+ "id": "pdf-14",
+ "title": "EXTRUDER (SINGLE)",
+ "source": {
+  "kind": "pdf",
+  "file": "docs/files/EXPLODED_DRAWINGS.pdf",
+  "sha256": "659ab7e3f4c9d042f2082aeaf231af6e9901d9c25841854a618e5caae793cbe2",
+  "page": 14
+ },
+ "images": [
+  {
+   "file": "EXTRUDER_SINGLE.jpg",
+   "role": "redrawn"
+  }
+ ],
+ "rows": [
+  {
+   "item": "1",
+   "qty": 1,
+   "part": "EXTRUDER BODY (SINGLE)",
+   "description": "Printed Part",
+   "how": "pdf-text"
+  },
+  {
+   "item": "2",
+   "qty": 1,
+   "part": "NEMA17-400",
+   "description": "Motor Box - 400 Step Motor",
+   "how": "pdf-text"
+  },
+  {
+   "item": "3",
+   "qty": 1,
+   "part": "EXTRUDER CABLE BRACKET",
+   "description": "Printed Part",
+   "how": "pdf-text"
+  },
+  {
+   "item": "4",
+   "qty": 2,
+   "part": "M3 x 35 Socket Cap Screw",
+   "description": "Fixings Bag 11",
+   "how": "pdf-text"
+  },
+  {
+   "item": "5",
+   "qty": 1,
+   "part": "M3 x 25 Socket Cap Screw",
+   "description": "Fixings Bag 7",
+   "how": "pdf-text"
+  },
+  {
+   "item": "6",
+   "qty": 1,
+   "part": "M3 x 10 Socket Cap Screw",
+   "description": "Fixings Bag 8",
+   "how": "pdf-text"
+  },
+  {
+   "item": "7",
+   "qty": 1,
+   "part": "M4 x 30 Socket Cap Screw",
+   "description": "Fixings Bag 17",
+   "how": "pdf-text"
+  },
+  {
+   "item": "8",
+   "qty": 1,
+   "part": "M4 Washer",
+   "description": "Fixings Bag 13",
+   "how": "pdf-text"
+  },
+  {
+   "item": "9",
+   "qty": 1,
+   "part": "Extruder Spring",
+   "description": "Extruder Box - Black Spring",
+   "how": "pdf-text"
+  },
+  {
+   "item": "10",
+   "qty": 1,
+   "part": "M4 Square Nut",
+   "description": "Fixings Bag 12",
+   "how": "pdf-text"
+  },
+  {
+   "item": "11",
+   "qty": 1,
+   "part": "EXTRUDER IDLER",
+   "description": "Part Assembly",
+   "how": "pdf-text"
+  },
+  {
+   "item": "12",
+   "qty": 1,
+   "part": "HOBBGOBLIN-500ID",
+   "description": "Extruder Box",
+   "how": "pdf-text"
+  },
+  {
+   "item": "13",
+   "qty": 1,
+   "part": "M3 x 3 Skt Grub Screw Knurled Point",
+   "description": "Fixings Bag 17",
+   "how": "pdf-text"
+  },
+  {
+   "item": "14",
+   "qty": 1,
+   "part": "Bowden Coupling",
+   "description": "See Docs",
+   "how": "pdf-text"
+  }
+ ],
+ "confirmed": null,
+ "notes": ""
+}

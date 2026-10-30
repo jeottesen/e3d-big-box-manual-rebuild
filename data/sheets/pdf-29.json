@@ -1,0 +1,41 @@
+{
+ "id": "pdf-29",
+ "title": "REAR-RIGHT-BACK CABLE CONDUIT",
+ "source": {
+  "kind": "pdf",
+  "file": "docs/files/EXPLODED_DRAWINGS.pdf",
+  "sha256": "659ab7e3f4c9d042f2082aeaf231af6e9901d9c25841854a618e5caae793cbe2",
+  "page": 29
+ },
+ "images": [
+  {
+   "file": "REAR-RIGHT-BACK_CABLE_CONDUIT.jpg",
+   "role": "redrawn"
+  }
+ ],
+ "rows": [
+  {
+   "item": "1",
+   "qty": 3,
+   "part": "RRB-CABLE-CONDUIT",
+   "description": "Printed Part",
+   "how": "pdf-text"
+  },
+  {
+   "item": "2",
+   "qty": 3,
+   "part": "M3 Hex Nut",
+   "description": "Fixings Bag 3",
+   "how": "pdf-text"
+  },
+  {
+   "item": "3",
+   "qty": 3,
+   "part": "M3 x 25 Socket Cap Screw",
+   "description": "Fixings Bag 7",
+   "how": "pdf-text"
+  }
+ ],
+ "confirmed": null,
+ "notes": ""
+}

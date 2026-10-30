@@ -1,0 +1,76 @@
+{
+ "id": "pdf-24",
+ "title": "SPINE",
+ "source": {
+  "kind": "pdf",
+  "file": "docs/files/EXPLODED_DRAWINGS.pdf",
+  "sha256": "659ab7e3f4c9d042f2082aeaf231af6e9901d9c25841854a618e5caae793cbe2",
+  "page": 24
+ },
+ "images": [
+  {
+   "file": "SPINE.jpg",
+   "role": "wiki"
+  }
+ ],
+ "rows": [
+  {
+   "item": "1",
+   "qty": 1,
+   "part": "SPINE-LARGE",
+   "description": "Printed Part",
+   "how": "pdf-text"
+  },
+  {
+   "item": "2",
+   "qty": 2,
+   "part": "SPINE-MED",
+   "description": "Printed Part",
+   "how": "pdf-text"
+  },
+  {
+   "item": "3",
+   "qty": 2,
+   "part": "SPINE-SMALL",
+   "description": "Printed Part",
+   "how": "pdf-text"
+  },
+  {
+   "item": "4",
+   "qty": 2,
+   "part": "SPINE-Y",
+   "description": "Printed Part",
+   "how": "pdf-text"
+  },
+  {
+   "item": "5",
+   "qty": 10,
+   "part": "M4 x 16 Socket Cap Screw",
+   "description": "Fixings Bag 14",
+   "how": "pdf-text"
+  },
+  {
+   "item": "6",
+   "qty": 4,
+   "part": "M3 x 20 Socket Cap Screw",
+   "description": "Fixings Bag 9",
+   "how": "pdf-text"
+  },
+  {
+   "item": "7",
+   "qty": 10,
+   "part": "M4 Hex Nut (Half)",
+   "description": "Fixings Kit 11",
+   "how": "pdf-text"
+  },
+  {
+   "item": "8",
+   "qty": 4,
+   "part": "M3 Hex Nut (Half)",
+   "description": "Fixings Bag 5",
+   "how": "pdf-text"
+  }
+ ],
+ "confirmed": null,
+ "notes": ""
+}

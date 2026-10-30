@@ -1,0 +1,125 @@
+{
+ "id": "pdf-26",
+ "title": "E3D-v6 HOTEND",
+ "source": {
+  "kind": "pdf",
+  "file": "docs/files/EXPLODED_DRAWINGS.pdf",
+  "sha256": "659ab7e3f4c9d042f2082aeaf231af6e9901d9c25841854a618e5caae793cbe2",
+  "page": 26
+ },
+ "images": [
+  {
+   "file": "E3D-V6_HOTEND_ASSEMBLY_BIGBOX.jpg",
+   "role": "wiki"
+  }
+ ],
+ "rows": [
+  {
+   "item": "1",
+   "qty": 1,
+   "part": "E3D-v6 Nozzle (1.75mm x 0.4mm)",
+   "description": "Extruder Box -> E3D V6 Bag",
+   "how": "pdf-text"
+  },
+  {
+   "item": "2",
+   "qty": 1,
+   "part": "E3D-v6 Heatbreak (1.75mm)",
+   "description": "Extruder Box -> E3D V6 Bag",
+   "how": "pdf-text"
+  },
+  {
+   "item": "3",
+   "qty": 1,
+   "part": "E3D-v6 Heatsink (1.75mm)",
+   "description": "Extruder Box -> E3D V6 Bag",
+   "how": "pdf-text"
+  },
+  {
+   "item": "4",
+   "qty": 1,
+   "part": "E3D-v6 Heater Block",
+   "description": "Extruder Box -> E3D V6 Bag",
+   "how": "pdf-text"
+  },
+  {
+   "item": "5",
+   "qty": 1,
+   "part": "Bowden Coupling Body",
+   "description": "Installed",
+   "how": "pdf-text"
+  },
+  {
+   "item": "6",
+   "qty": 1,
+   "part": "Bowden Coupling Colet",
+   "description": "E3D V6 Bag",
+   "how": "pdf-text"
+  },
+  {
+   "item": "7",
+   "qty": 1,
+   "part": "PT100",
+   "description": "Extruder Box",
+   "how": "pdf-text"
+  },
+  {
+   "item": "8",
+   "qty": 1,
+   "part": "HEATER-CARTRIDGE-24V-30W",
+   "description": "Extruder Box",
+   "how": "pdf-text"
+  },
+  {
+   "item": "9",
+   "qty": 1,
+   "part": "M3 x 3 Skt Grub Screw Knurled Point",
+   "description": "Extruder Box -> E3D V6 Bag -> Fixings Kit",
+   "how": "pdf-text"
+  },
+  {
+   "item": "10",
+   "qty": 1,
+   "part": "M3 x 10 Dome Head Socket Screw",
+   "description": "Extruder Box -> E3D V6 Bag -> Fixings Kit",
+   "how": "pdf-text"
+  },
+  {
+   "item": "11",
+   "qty": 1,
+   "part": "E3D-V6 Fan Duct",
+   "description": "Extruder Box",
+   "how": "pdf-text"
+  },
+  {
+   "item": "11.1",
+   "qty": 1,
+   "part": "E3D-v6 Heater Block",
+   "description": "Extruder Box -> E3D V6 Bag",
+   "how": "pdf-text"
+  },
+  {
+   "item": "11.2",
+   "qty": 1,
+   "part": "30x30x30 DC Fan (24v)",
+   "description": "LCD / Fans Box (+ Extruder Box for Duals)",
+   "how": "pdf-text"
+  },
+  {
+   "item": "11.3",
+   "qty": 4,
+   "part": "2.5 x 15 Screws for Plastic",
+   "description": "Extruder Box -> E3D V6 Bag -> Fixings Kit",
+   "how": "pdf-text"
+  },
+  {
+   "item": "12",
+   "qty": 1,
+   "part": "PTFE-63",
+   "description": "Extruder Box -> E3D V6 Bag",
+   "how": "pdf-text"
+  }
+ ],
+ "confirmed": null,
+ "notes": ""
+}

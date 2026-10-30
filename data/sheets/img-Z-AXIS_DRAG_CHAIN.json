@@ -1,0 +1,66 @@
+{
+ "id": "img-Z-AXIS_DRAG_CHAIN",
+ "title": "Z-AXIS DRAG CHAIN",
+ "source": {
+  "kind": "image",
+  "file": "docs/images/Z-AXIS_DRAG_CHAIN.jpg",
+  "sha256": "f74662fe0a3793a277f5d305e09f1eaa619242f44c8b6ed5138eef55b83c7262",
+  "image_sheet": [
+   36,
+   36
+  ]
+ },
+ "images": [
+  {
+   "file": "Z-AXIS_DRAG_CHAIN.jpg",
+   "role": "wiki"
+  }
+ ],
+ "rows": [
+  {
+   "item": "1",
+   "qty": 1,
+   "part": "DRAG-CHAIN-END FEMALE",
+   "description": "Motion Box",
+   "how": "ocr",
+   "confidence": 0.9
+  },
+  {
+   "item": "2",
+   "qty": 1,
+   "part": "DRAG-CHAIN-END",
+   "description": "Motion Box",
+   "how": "ocr",
+   "confidence": 0.92
+  },
+  {
+   "item": "3",
+   "qty": 1,
+   "part": "Z-AXIS DRAG-CHAIN ANCHOR BASE",
+   "description": "Printed Part",
+   "how": "ocr",
+   "confidence": 0.98
+  },
+  {
+   "item": "",
+   "qty": 1,
+   "part": "Z-AXIS DRAG-CHAIN ANCHOR BED",
+   "description": "Printed Part",
+   "how": "ocr",
+   "confidence": 0.99
+  },
+  {
+   "item": "5",
+   "qty": 4,
+   "part": "M3 x 8 Csk Platite 30 Screws",
+   "description": "Fixings Bag 2",
+   "how": "ocr",
+   "confidence": 0.96
+  }
+ ],
+ "confirmed": {
+  "by": "jeottesen",
+  "on": "2026-10-30"
+ },
+ "notes": ""
+}

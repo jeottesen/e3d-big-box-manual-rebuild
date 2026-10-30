@@ -1,0 +1,62 @@
+{
+ "id": "pdf-02",
+ "title": "Y-AXIS FRONT (L)",
+ "source": {
+  "kind": "pdf",
+  "file": "docs/files/EXPLODED_DRAWINGS.pdf",
+  "sha256": "659ab7e3f4c9d042f2082aeaf231af6e9901d9c25841854a618e5caae793cbe2",
+  "page": 2
+ },
+ "images": [
+  {
+   "file": "Y-AXIS_FRONT.jpg",
+   "role": "wiki"
+  }
+ ],
+ "rows": [
+  {
+   "item": "1",
+   "qty": 1,
+   "part": "Y-AXIS FRONT (R)",
+   "description": "Printed Part",
+   "how": "pdf-text"
+  },
+  {
+   "item": "2",
+   "qty": 1,
+   "part": "M3 Square Nut",
+   "description": "Fixings Bag 6",
+   "how": "pdf-text"
+  },
+  {
+   "item": "3",
+   "qty": 2,
+   "part": "M4 Square Nut",
+   "description": "Fixings Bag 12",
+   "how": "pdf-text"
+  },
+  {
+   "item": "4",
+   "qty": 1,
+   "part": "M3 x 18 Socket Cap Screw",
+   "description": "Fixings Bag 8",
+   "how": "pdf-text"
+  },
+  {
+   "item": "5",
+   "qty": 1,
+   "part": "M3 Ext Lock Washer",
+   "description": "Fixings Bag 6",
+   "how": "pdf-text"
+  },
+  {
+   "item": "6",
+   "qty": 1,
+   "part": "Y-AXIS FRONT CORK (L & R) (Self Adhesive)",
+   "description": "Printed Parts Box",
+   "how": "pdf-text"
+  }
+ ],
+ "confirmed": null,
+ "notes": ""
+}

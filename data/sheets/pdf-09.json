@@ -1,0 +1,48 @@
+{
+ "id": "pdf-09",
+ "title": "HEATED BED CORNERS",
+ "source": {
+  "kind": "pdf",
+  "file": "docs/files/EXPLODED_DRAWINGS.pdf",
+  "sha256": "659ab7e3f4c9d042f2082aeaf231af6e9901d9c25841854a618e5caae793cbe2",
+  "page": 9
+ },
+ "images": [
+  {
+   "file": "HEATED_BED_CORNERS.jpg",
+   "role": "wiki"
+  }
+ ],
+ "rows": [
+  {
+   "item": "1",
+   "qty": 1,
+   "part": "HEATED BED CORNERS",
+   "description": "Printed Part",
+   "how": "pdf-text"
+  },
+  {
+   "item": "2",
+   "qty": 2,
+   "part": "M3 Square Nut",
+   "description": "Fixings Bag 6",
+   "how": "pdf-text"
+  },
+  {
+   "item": "3",
+   "qty": 2,
+   "part": "M3 x 12 Socket Cap Screw",
+   "description": "Fixings Bag 9",
+   "how": "pdf-text"
+  },
+  {
+   "item": "4",
+   "qty": 1,
+   "part": "BEARING-LM8LUU",
+   "description": "Bearing Kit",
+   "how": "pdf-text"
+  }
+ ],
+ "confirmed": null,
+ "notes": ""
+}

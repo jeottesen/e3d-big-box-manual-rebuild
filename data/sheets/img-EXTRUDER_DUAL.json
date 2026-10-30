@@ -1,0 +1,178 @@
+{
+ "id": "img-EXTRUDER_DUAL",
+ "title": "EXTRUDER DUAL",
+ "source": {
+  "kind": "image",
+  "file": "docs/images/original/EXTRUDER_DUAL.jpg",
+  "sha256": "c4ea4a17e7d65f109e6af1956dc863b8d13bbff2cd50ec4a6e56cd9fd66254b4",
+  "image_sheet": [
+   16,
+   36
+  ]
+ },
+ "images": [
+  {
+   "file": "EXTRUDER_DUAL.jpg",
+   "role": "enlarged"
+  }
+ ],
+ "rows": [
+  {
+   "item": "",
+   "qty": 1,
+   "part": "EXTRUDER BODY (DUAL)",
+   "description": "Printed Part",
+   "how": "hand",
+   "confidence": 0.84,
+   "read_as": {
+    "part": "EXTRUDER BOOY (DUAL)",
+    "description": "Printed Part"
+   }
+  },
+  {
+   "item": "2",
+   "qty": 2,
+   "part": "NEMA17-400",
+   "description": "Motor Box - 0.9Deg",
+   "how": "hand",
+   "confidence": 0.85,
+   "read_as": {
+    "part": "NEMA17-400",
+    "description": "Motox Box-0.9Deg"
+   }
+  },
+  {
+   "item": "3",
+   "qty": 2,
+   "part": "EXTRUDER IDLER",
+   "description": "Part Assembly",
+   "how": "ocr",
+   "confidence": 0.9
+  },
+  {
+   "item": "",
+   "qty": 1,
+   "part": "E-AXIS CABLE BRACKET (DUAL)(R)",
+   "description": "Printed Part",
+   "how": "ocr",
+   "confidence": 0.89
+  },
+  {
+   "item": "6",
+   "qty": 1,
+   "part": "E-AXIS CABLE BRACKET (DUAL)(L)",
+   "description": "Printed Part",
+   "how": "hand",
+   "confidence": 0.89,
+   "read_as": {
+    "part": "E-AXIS CABLE BRACKET (DUAL)IL)",
+    "description": "Printed Part"
+   }
+  },
+  {
+   "item": "7",
+   "qty": 2,
+   "part": "M3 x 25 Socket Cap Screw",
+   "description": "Fixings Bag 7",
+   "how": "hand",
+   "confidence": 0.86,
+   "read_as": {
+    "part": "M3 x 2S.Socket Cap Screw",
+    "description": "Fxings Bog 7"
+   }
+  },
+  {
+   "item": "8",
+   "qty": 2,
+   "part": "M3 x 10 Socket Cap Screw",
+   "description": "Fixings Bag 8",
+   "how": "ocr+fix",
+   "confidence": 0.65,
+   "read_as": {
+    "part": "M3 x 10 Socket Cap Screw",
+    "description": "Foings Bog 8"
+   }
+  },
+  {
+   "item": "9",
+   "qty": 2,
+   "part": "M4 x 30 Socket Cap Screw",
+   "description": "Fixings Bag 17",
+   "how": "ocr+fix",
+   "confidence": 0.87,
+   "read_as": {
+    "part": "M4 x 30 Socket Cap Screw",
+    "description": "Fiings Bag 17"
+   }
+  },
+  {
+   "item": "10",
+   "qty": 2,
+   "part": "M4 Washer",
+   "description": "Fixings Bag 13",
+   "how": "hand",
+   "confidence": 0.85,
+   "read_as": {
+    "part": "MAWasher",
+    "description": "Fixings Bag 13"
+   }
+  },
+  {
+   "item": "11",
+   "qty": 2,
+   "part": "Extruder Spring",
+   "description": "Extruder Box - Black Spring",
+   "how": "ocr",
+   "confidence": 0.9
+  },
+  {
+   "item": "12",
+   "qty": 2,
+   "part": "M4 Square Nut",
+   "description": "Fixings Bag 12",
+   "how": "ocr+fix",
+   "confidence": 0.82,
+   "read_as": {
+    "part": "M4 Square Nut",
+    "description": "Fxinss Bag 12"
+   }
+  },
+  {
+   "item": "13",
+   "qty": 2,
+   "part": "HOBBGOBLIN-500ID",
+   "description": "Extruder Box",
+   "how": "hand",
+   "confidence": 0.87,
+   "read_as": {
+    "part": "HOBDGOBLIN-SOOIO",
+    "description": "Extruder Box"
+   }
+  },
+  {
+   "item": "14",
+   "qty": 2,
+   "part": "M3 x 3 Skt Grub Screw Knurled Point",
+   "description": "Fixings Bag 17",
+   "how": "hand",
+   "confidence": 0.86,
+   "read_as": {
+    "part": "M3 x 3Skt Grb Screw Knurled Point",
+    "description": "Fxings Bog 17"
+   }
+  },
+  {
+   "item": "15",
+   "qty": 2,
+   "part": "Bowden Coupling",
+   "description": "See Docs",
+   "how": "ocr",
+   "confidence": 0.93
+  }
+ ],
+ "confirmed": {
+  "by": "jeottesen",
+  "on": "2026-10-30"
+ },
+ "notes": ""
+}
