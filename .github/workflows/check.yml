@@ -12,7 +12,7 @@ on:
 
 jobs:
   check:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted   # GitHub-hosted runners need Actions credit; this repo uses its own runners
     steps:
       - uses: actions/checkout@v4
       - uses: jdx/mise-action@v2   # installs the tools pinned in mise.toml
