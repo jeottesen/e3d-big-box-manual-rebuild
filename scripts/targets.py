@@ -92,33 +92,6 @@ DOWNLOADS = [
       ('ASM_EX_THUMB_SCREW.stl', None, 'the Titan thumb screw model linked from Titan Assembly; the archive has the .stp version above but not this file')]),
 ]
 
-# Which build section each sheet of the exploded drawings belongs to: sheet -> (page, "(n)" prefix of the section heading).
-# Only sheets whose title clearly matches a section are listed; a missing sheet gets no build link (a wrong link is worse
-# than none). Sheets 8, 15 and 17 are blank in the archived PDF; 11, 18, 19, 25 and 29 have titles that do not obviously
-# match a section. These need a manual look.
-SHEET_SECTIONS = {
-    1: ('BigBox_Parts_Preparation', '(1)'), 2: ('BigBox_Parts_Preparation', '(2)'), 3: ('BigBox_Parts_Preparation', '(3)'),
-    4: ('BigBox_Parts_Preparation', '(4)'), 5: ('BigBox_Parts_Preparation', '(5)'), 6: ('BigBox_Parts_Preparation', '(6)'),
-    7: ('BigBox_Parts_Preparation', '(7)'), 9: ('BigBox_Parts_Preparation', '(10)'), 10: ('BigBox_Parts_Preparation', '(11)'),
-    12: ('BigBox_Parts_Preparation', '(13)'), 13: ('BigBox_Parts_Preparation', '(15)'), 27: ('BigBox_Parts_Preparation', '(14)'),
-    14: ('BigBox_Printer_Sub-assemblies', '(1)'), 16: ('BigBox_Printer_Sub-assemblies', '(7)'), 28: ('BigBox_Printer_Sub-assemblies', '(8)'),
-    20: ('Printer_main_assemblies_Step_By_Step_Assembly_Process', '(3)'), 21: ('Printer_main_assemblies_Step_By_Step_Assembly_Process', '(5)'),
-    22: ('Printer_main_assemblies_Step_By_Step_Assembly_Process', '(6)'), 23: ('Printer_main_assemblies_Step_By_Step_Assembly_Process', '(10)'),
-    24: ('Printer_main_assemblies_Step_By_Step_Assembly_Process', '(16)'),
-    26: ('Single_Direct-Drive_Printhead_Assembly', '(19.3)'),
-}
-
-# The same for the sheets that exist only as images on the wiki (docs/images), keyed by file name. A sheet that matches a
-# sheet of the PDF by title is read from the PDF instead (its text is exact), so it is not listed here.
-IMAGE_SECTIONS = {
-    'EXTRUDER_DUAL.jpg': ('BigBox_Printer_Sub-assemblies', '(2)'),
-    'EXTRUDER_HYBRID_TITAN_DIRECT.jpg': ('BigBox_Printer_Sub-assemblies', '(3)'),
-    'EXTRUDER_HYBRID_NON-TITAN_DIRECT.jpg': ('BigBox_Printer_Sub-assemblies', '(5)'),
-    'Z-AXIS_DRAG_CHAIN.jpg': ('BigBox_Printer_Sub-assemblies', '(11)'),
-    'SPOOL-HOLDER_CLAMP.jpg': ('BigBox_Parts_Preparation', '(17)'),
-    'Y-AXIS_REAR_ASSEMBLY.jpg': ('Printer_main_assemblies_Step_By_Step_Assembly_Process', '(1)'),
-}
-
 # Drawing images the wiki used but the archive did not keep, whose sheet is in the exploded drawings PDF: file name -> sheet.
 # scripts/render_sheets.py draws these sheets from the PDF and the build uses them in place of the missing image.
 # Checked by eye against the page each one appears on. (X-CARRIAGE_DUAL, PRINT-HEAD_(SINGLE) and PRINT-HEAD_(DUAL) have no
@@ -145,6 +118,6 @@ OCR_FIXES = {
     'MAWasher': 'M4 Washer',
     'HOBDGOBLIN-SOOIO': 'HOBBGOBLIN-500ID',
     'M3x 3Skt Grb Screw Knurled Point': 'M3 x 3 Skt Grub Screw Knurled Point',
-    'M2Hex Nut': 'M2 Hex Nut',   # it is an M2 nut, not the M3 one in the PDF's Fixings Bag 3 (confirmed against the drawing)
+    'M2Hex Nut': 'M3 Hex Nut',   # the OCR reads the 3 as a 2; Fixings Bag 3 holds the M3 hex nut and no M2 screws or nuts are listed anywhere (confirmed by the maintainer)
 }
 # (lookup ignores spaces and case, so 'M2 HexNut' and 'M2Hex Nut' both match)

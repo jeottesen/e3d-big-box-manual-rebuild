@@ -1,6 +1,6 @@
 # OCR review
 
-The drawing sheets that exist only as images on the wiki (not in the exploded drawings PDF) are read by OCR in `scripts/drawing_images.py`. This page is written by that script and lists what to check by eye. The images that are also PDF sheets are not listed: the Bill of Materials uses the PDF's exact text for them. 9 image sheets, 59 rows; 0 to check, 12 fields corrected automatically.
+The drawing sheets that exist only as images on the wiki (not in the exploded drawings PDF) are read by OCR in `scripts/drawing_images.py`. This page is written by that script and lists what to check by eye. The images that are also PDF sheets are not listed: the Bill of Materials uses the PDF's exact text for them. 9 image sheets, 59 rows; 0 to check, 14 fields corrected automatically.
 
 ## Rows to check
 
@@ -24,6 +24,8 @@ Fixed against the exact names in the PDF; listed so they can be spot-checked.
 | EXTRUDER_DUAL.jpg | 13 | part | HOBDGOBLIN-SOOIO | HOBBGOBLIN-500ID |
 | EXTRUDER_DUAL.jpg | 14 | part | M3 x 3Skt Grb Screw Knurled Point | M3 x 3 Skt Grub Screw Knurled Point |
 | EXTRUDER_DUAL.jpg | 14 | description | Fxings Bog 17 | Fixings Bag 17 |
+| EXTRUDER_HYBRID_NON-TITAN_DIRECT.jpg | 15 | part | M2 Hex Nut | M3 Hex Nut |
+| EXTRUDER_HYBRID_TITAN_DIRECT.jpg | 1 | part | M2 Hex Nut | M3 Hex Nut |
 
 ## No parts list found
 

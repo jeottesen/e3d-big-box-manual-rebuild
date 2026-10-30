@@ -59,7 +59,27 @@ class Bom(unittest.TestCase):
             for href in row[4][1]:
                 page, _, frag = href.partition('#')
                 with open(os.path.join(ROOT, 'docs', page), encoding='utf-8') as f: html = f.read()
-                self.assertIn(f'id="{frag}"', html, href)
+                if frag: self.assertIn(f'id="{frag}"', html, href)   # a link with no heading is to a page that is itself the step
+
+    def sections_of(self, part):   # the text of the Build section cell for the row with this part name
+        rows = [r for r in TABLES['Printed_Parts'] if r[0][0] == part]
+        self.assertTrue(rows, part)
+        return rows[0][4][0]
+
+    def test_sections_come_from_where_the_manual_shows_the_drawing(self):
+        # the manual is the source of truth: a drawing's step is the heading it is embedded under, not a guess from its title or number
+        self.assertIn('Z-Axis Drag Chain Anchors', self.sections_of('Z-AXIS DRAG-CHAIN ANCHOR BASE'))   # not the sub-assembly its name suggests
+        self.assertIn('Cable Spine', self.sections_of('SPINE-LARGE'))
+        self.assertIn('Y-Axis Motor Mount', self.sections_of('Y-AXIS MOTOR MOUNT'))
+
+    def test_a_part_whose_drawing_is_shown_nowhere_has_no_link_not_a_guess(self):
+        # PDF sheet 22 has no image in the manual, so its parts are not linked to a step
+        self.assertEqual(self.sections_of('X-AXIS CARRIAGE BEARING CLAMP'), '–')
+
+    def test_most_printed_parts_have_a_build_section(self):
+        rows = TABLES['Printed_Parts']
+        without = [r[0][0] for r in rows if not r[4][1]]
+        self.assertLess(len(without), len(rows) * 0.1, without)
 
     def test_the_pdf_link_is_at_the_top_of_each_section(self):
         with open(os.path.join(ROOT, 'docs/Bill_Of_Materials.html'), encoding='utf-8') as f: html = f.read()

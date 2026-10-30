@@ -41,6 +41,12 @@ class FixRow(unittest.TestCase):
         part, desc, by_hand = fix_row('MAWasher', 'Fixings Bag 13', 0.8, self.vocab, self.by_desc, {key('MAWasher'): 'M4 Washer'})
         self.assertEqual((part, by_hand), ('M4 Washer', True))
 
+class HandFixes(unittest.TestCase):
+    def test_the_m3_hex_nut_misread_as_m2_is_a_hand_fix(self):
+        # no M2 screws or nuts are listed anywhere in the drawings; the OCR reads the 3 as a 2. The automatic rules must not
+        # make this change (they never change a number), so it is checked and recorded by hand.
+        self.assertEqual(OCR_FIXES['M2Hex Nut'], 'M3 Hex Nut')
+
 class CommittedData(unittest.TestCase):
     """The same rule, checked on what is committed: only a hand fix (OCR_FIXES) may change the digits of a name."""
     def test_automatic_corrections_keep_digits(self):

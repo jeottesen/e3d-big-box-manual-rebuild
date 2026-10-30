@@ -510,9 +510,13 @@
     {
      "item": "15",
      "qty": "2",
-     "part": "M2 Hex Nut",
+     "part": "M3 Hex Nut",
      "description": "Fixings Bag 3",
      "confidence": 0.96,
+     "ocr": {
+      "part": "M2 Hex Nut",
+      "description": "Fixings Bag 3"
+     },
      "review": false
     },
     {
@@ -535,9 +539,13 @@
     {
      "item": "1",
      "qty": "2",
-     "part": "M2 Hex Nut",
+     "part": "M3 Hex Nut",
      "description": "Fixings Bag 3",
      "confidence": 0.74,
+     "ocr": {
+      "part": "M2 Hex Nut",
+      "description": "Fixings Bag 3"
+     },
      "review": false
     },
     {
@@ -1292,9 +1300,13 @@
     {
      "item": "7",
      "qty": "2",
-     "part": "M2 Hex Nut",
+     "part": "M3 Hex Nut",
      "description": "Fixings Bag 3",
      "confidence": 0.99,
+     "ocr": {
+      "part": "M2 Hex Nut",
+      "description": "Fixings Bag 3"
+     },
      "review": false
     },
     {
