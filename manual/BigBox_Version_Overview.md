@@ -1,6 +1,23 @@
 # BigBox Version Overview
 
-Archived 20210128113613 · source: wiki.e3d-online.com/wiki/BigBox_Version_Overview
+Archived 20210128113613 · source: wiki.e3d-online.com/wiki/BigBox_Version_Overview · [archive link](https://web.archive.org/web/20210128113613/https://wiki.e3d-online.com/BigBox_Version_Overview)
+
+**Contents**
+
+- [E3D supported versions](#e3d-supported-versions)
+  - [BigBox Pro](#bigbox-pro)
+  - [BigBox Dual](#bigbox-dual)
+  - [BigBox Pro Hybrid Titan](#bigbox-pro-hybrid-titan)
+  - [BigBox Dual Hybrid Titan](#bigbox-dual-hybrid-titan)
+- [Derived versions](#derived-versions)
+  - [BigBox Pro Hybrid](#bigbox-pro-hybrid)
+  - [BigBox Dual Hybrid](#bigbox-dual-hybrid)
+- [Special (community built) versions](#special-community-built-versions)
+  - [BigBox Dual Hybrid Titan Mirrored](#bigbox-dual-hybrid-titan-mirrored)
+  - [BigBox Dual Titan](#bigbox-dual-titan)
+- [Remarks](#remarks)
+  - [Kickstarter upgrade to Hybrid/V1.1](#kickstarter-upgrade-to-hybridv11)
+- [Where next?](#where-next)
 
 Due to the open design of the BigBox there are already several versions in the wild. Also the design was refined after the Kickstarter campaign and the release of the Titan introduced additional options.
 

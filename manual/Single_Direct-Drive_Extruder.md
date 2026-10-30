@@ -1,12 +1,12 @@
 # Single Direct-Drive Extruder
 
-Archived 20191220164342 · source: wiki.e3d-online.com/wiki/Single_Direct-Drive_Extruder
+Archived 20191220164342 · source: wiki.e3d-online.com/wiki/Single_Direct-Drive_Extruder · [archive link](https://web.archive.org/web/20191220164342/https://wiki.e3d-online.com/Single_Direct-Drive_Extruder)
 
 ![EXTRUDER_SINGLE.jpg](../docs/images/EXTRUDER_SINGLE.jpg)
 
 ![Bowden_coupler_apart.jpg](../docs/images/Bowden_coupler_apart.jpg)
 
-Bowden Coupler Parts.
+*Bowden Coupler Parts.*
 
 Note how the coupler (14) assembles with the lettering facing upwards.
 
@@ -14,7 +14,7 @@ Note how the coupler (14) assembles with the lettering facing upwards.
 
 ![Fitted_coupler.jpg](../docs/images/Fitted_coupler.jpg)
 
-Bowden Coupler fitted to cable bracket.
+*Bowden Coupler fitted to cable bracket.*
 
 The bowden is pushed into the cable bracket.
 
@@ -24,7 +24,7 @@ The function of the bowden coupler (when the inner clip is fitted) is to hold th
 
 ![Single_extruder_assembledf.jpg](../docs/images/Single_extruder_assembledf.jpg)
 
-Completed Single Extruder
+*Completed Single Extruder*
 
 The Motor Cable Connector faces downwards.
 

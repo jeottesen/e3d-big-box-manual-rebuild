@@ -1,6 +1,22 @@
 # BigBox Pre-Build
 
-Archived 20200127191907 · source: wiki.e3d-online.com/wiki/BigBox_Pre-Build
+Archived 20200127191907 · source: wiki.e3d-online.com/wiki/BigBox_Pre-Build · [archive link](https://web.archive.org/web/20200127191907/https://wiki.e3d-online.com/BigBox_Pre-Build)
+
+**Contents**
+
+- [What’s In the Box](#whats-in-the-box)
+  - [Fixings Errors](#fixings-errors)
+- [Preparation](#preparation)
+- [Tools required](#tools-required)
+- [Recommended tools](#recommended-tools)
+- [Consumables](#consumables)
+- [Estimated Build Time](#estimated-build-time)
+- [Health & Safety](#health--safety)
+- [Terminology](#terminology)
+- [Tips & tricks](#tips--tricks)
+- [Nut-Traps](#nut-traps)
+- [Hex-Half Nuts in Engraved Frame Holes](#hex-half-nuts-in-engraved-frame-holes)
+- [Where next?](#where-next)
 
 ## What’s In the Box
 
@@ -124,13 +140,13 @@ If you are unsure about anything, please ask - the BigBox team are here to help.
 
 ## Tips & tricks
 
-The best Tip we can give is - Don't guess! If you are not 100% certain of how something goes together ask for help on the **[forum.e3d-online.com](http://forum.e3d-online.com/)**.
+The best Tip we can give is - Don't guess! If you are not 100% certain of how something goes together ask for help on the **forum.e3d-online.com *(dead link; [archived copy](https://web.archive.org/web/20240324165937/https://forum.e3d-online.com/))***.
 
 ALWAYS READ THROUGH THE COMPLETE SECTION YOU ARE WORKING ON BEFORE COMMENCING THAT PART OF THE BUILD.
 
 There will be some helpful hints throughout the build manual where extra tips can help with specific assemblies.
 
-Some of the assemblies are a little complicated. While it can be very frustrating when things don't fit together as you expect please do not use excessive force when installing parts. If things are not going as you expected please visit the forum at **[forum.e3d-online.com](http://forum.e3d-online.com/)**
+Some of the assemblies are a little complicated. While it can be very frustrating when things don't fit together as you expect please do not use excessive force when installing parts. If things are not going as you expected please visit the forum at **forum.e3d-online.com *(dead link; [archived copy](https://web.archive.org/web/20240324165937/https://forum.e3d-online.com/))***
 
 ## Nut-Traps
 

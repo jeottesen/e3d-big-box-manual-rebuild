@@ -1,6 +1,6 @@
 # Fixings Errors List
 
-Archived 20160601234734 · source: wiki.e3d-online.com/wiki/Fixings_Errors_List
+Archived 20160601234734 · source: wiki.e3d-online.com/wiki/Fixings_Errors_List · [archive link](https://web.archive.org/web/20160601234734/http://wiki.e3d-online.com:80/wiki/Fixings_Errors_List)
 
 The initial order of fixings from our supplier contained errors. This error applies to all Kickstarter rewards that include fixings as well as customers who purchased a BigBox or BigBox Fixings Kit after the campaign.
 

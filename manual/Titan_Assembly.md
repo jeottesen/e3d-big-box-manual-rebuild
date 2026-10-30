@@ -1,6 +1,41 @@
 # Titan Assembly
 
-Archived 20230509125052 · source: wiki.e3d-online.com/wiki/Titan_Assembly
+Archived 20230509125052 · source: wiki.e3d-online.com/wiki/Titan_Assembly · [archive link](https://web.archive.org/web/20230509125052/https://wiki.e3d-online.com/Titan_Assembly)
+
+**Contents**
+
+- [What's in the Box](#whats-in-the-box)
+  - [Plastic Parts](#plastic-parts)
+  - [Fixings Kit](#fixings-kit)
+  - [Gears](#gears)
+  - [Bearings](#bearings)
+  - [Other](#other)
+- [Disassembly](#disassembly)
+- [Assembly Steps](#assembly-steps)
+  - [Extruder Body](#extruder-body)
+  - [Gears](#gears-1)
+  - [Heatsink / Bowden Adaptor & Filament Guide](#heatsink--bowden-adaptor--filament-guide)
+  - [Idler Lever](#idler-lever)
+  - [Lid](#lid)
+  - [Gear Alignment Check](#gear-alignment-check)
+  - [PTFE in Idler](#ptfe-in-idler)
+- [Mirrored Titan](#mirrored-titan)
+  - [Mounting Options](#mounting-options)
+  - [Assembly & Commissioning](#assembly--commissioning)
+- [Usage](#usage)
+  - [Firmware Calibration](#firmware-calibration)
+  - [Loading and Unloading](#loading-and-unloading)
+  - [Adjusting Idler Force](#adjusting-idler-force)
+  - [HotEnd Removal](#hotend-removal)
+- [Downloads](#downloads)
+- [FAQ](#faq)
+  - [Weight](#weight)
+  - [Wear on Idler](#wear-on-idler)
+- [Troubleshooting](#troubleshooting)
+  - ["Clicking" sound during retractions](#clicking-sound-during-retractions)
+  - [Filament slipping off hobbed area of Filament Drive Shaft](#filament-slipping-off-hobbed-area-of-filament-drive-shaft)
+  - [Drive gear hard to turn when lid tightened](#drive-gear-hard-to-turn-when-lid-tightened)
+  - [HotEnd is wobbly](#hotend-is-wobbly)
 
 ## What's in the Box
 
@@ -271,12 +306,12 @@ To remove the HotEnd, relieve tension in the idler then remove the front 4 screw
 
 ## Downloads
 
-- [Supplementary Assembly Drawings / Notes](http://files.e3d-online.com/Titan/Titan%20Assembly%20Supplementary.pdf)
+- Supplementary Assembly Drawings / Notes *(dead link; [archived copy](https://web.archive.org/web/20160527143731/http://files.e3d-online.com/Titan/Titan_Assembly_Supplementary.pdf))*
 - [NEMA17 Face-Plate Spacer](http://www.thingiverse.com/thing:1472259)
-- [Model of Assembled Titan in STL format](http://files.e3d-online.com/Titan/ASM_EX_THUMB_SCREW.stl)
-- [Model of Assembled Titan in STP format](http://files.e3d-online.com/Titan/ASM_EX_THUMB_SCREW.stp)
+- Model of Assembled Titan in STL format *(dead link)*
+- Model of Assembled Titan in STP format *(dead link; [archived copy](https://web.archive.org/web/20170910104341/http://files.e3d-online.com/Titan/ASM_EX_THUMB_SCREW.stp))*
 - [E3D Titan Bracket](http://www.thingiverse.com/thing:1477900)
-- [Mounting Bracket Engineering Drawing](http://files.e3d-online.com/Titan/BRACKET_PRINTED.pdf)
+- Mounting Bracket Engineering Drawing *(dead link)*
 
 ## FAQ
 
