@@ -928,8 +928,8 @@
     {
      "item": "2",
      "qty": "3",
-     "part": "M4 x 20 Socket Cap ScrewFixings Bag 17",
-     "description": ""
+     "part": "M4 x 20 Socket Cap Screw",
+     "description": "Fixings Bag 17"
     }
    ],
    "title": "MOUNT Y-AXIS MOTOR",
@@ -1084,8 +1084,8 @@
     {
      "item": "9",
      "qty": "1",
-     "part": "M3 x 3 Skt Grub Screw Knurled PointExtruder Box -> E3D V6 Bag -> Fixings Kit",
-     "description": ""
+     "part": "M3 x 3 Skt Grub Screw Knurled Point",
+     "description": "Extruder Box -> E3D V6 Bag -> Fixings Kit"
     },
     {
      "item": "10",

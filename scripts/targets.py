@@ -107,3 +107,14 @@ SHEET_SECTIONS = {
     24: ('Printer_main_assemblies_Step_By_Step_Assembly_Process', '(16)'),
     26: ('Single_Direct-Drive_Printhead_Assembly', '(19.3)'),
 }
+
+# The same for the sheets that exist only as images on the wiki (docs/images), keyed by file name. A sheet that matches a
+# sheet of the PDF by title is read from the PDF instead (its text is exact), so it is not listed here.
+IMAGE_SECTIONS = {
+    'EXTRUDER_DUAL.jpg': ('BigBox_Printer_Sub-assemblies', '(2)'),
+    'EXTRUDER_HYBRID_TITAN_DIRECT.jpg': ('BigBox_Printer_Sub-assemblies', '(3)'),
+    'EXTRUDER_HYBRID_NON-TITAN_DIRECT.jpg': ('BigBox_Printer_Sub-assemblies', '(5)'),
+    'Z-AXIS_DRAG_CHAIN.jpg': ('BigBox_Printer_Sub-assemblies', '(11)'),
+    'SPOOL-HOLDER_CLAMP.jpg': ('BigBox_Parts_Preparation', '(17)'),
+    'Y-AXIS_REAR_ASSEMBLY.jpg': ('Printer_main_assemblies_Step_By_Step_Assembly_Process', '(1)'),
+}

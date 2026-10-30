@@ -6,8 +6,13 @@ E3D BigBox 3D printer manual, recovered from the Wayback Machine. See README.md 
 
 - `manual/` – the manual as Markdown (browsable on GitHub); it links to the images and PDFs in `docs/`
 - `docs/` – the HTML build, for GitHub Pages later
-- `scripts/` – recovery and build scripts (Python, standard library only; `markdown.py` also needs pandoc). The one exception is `drawings.py`, which needs `pypdf` and is run by hand, not by the build
-- `notes/` – what is missing, the history analysis, which archive snapshot each page and image came from, and `parts.json` (the parts lists read from the exploded drawings, used by the build to fill in the Bill of Materials)
+- `scripts/` – recovery and build scripts (Python, standard library only; `markdown.py` also needs pandoc). The exceptions are `drawings.py` and `drawing_images.py`, which need the packages in `requirements.txt` and run as the `extract` step
+- `notes/` – what is missing, the history analysis, which archive snapshot each page and image came from, and `parts.json` and `parts_images.json` (the parts lists read from the exploded drawings, used by the build to fill in the Bill of Materials)
+
+## Build
+
+- `mise.toml` pins the tools and defines the tasks: `mise install`, then `mise run build` (read the drawings, build `docs/` and `manual/`, check them). `mise run fetch` fills `raw/` from the Wayback Machine; `mise run extract`, `site`, `markdown` and `check` are the steps on their own.
+- Python packages are in `requirements.txt`, compiled from `requirements.in` with `uv pip compile requirements.in --python-version 3.13 -o requirements.txt`. mise installs them into `.venv` (git-ignored).
 
 ## Rules
 

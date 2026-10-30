@@ -154,37 +154,48 @@ def add_section_lists(body, self_slug, heads_by_slug):
     return re.sub(r'(<div class="sections">.*?</div>)((?:\s*(?:<dl>(?:(?!<h\d).)*?</dl>|<p>(?:(?!<h\d).)*?</p>))*)', tidy, body, flags=re.S)
 
 PARTS_PATH = f'{ROOT}/notes/parts.json'   # written by scripts/drawings.py from the exploded drawings
+IMAGE_PARTS_PATH = f'{ROOT}/notes/parts_images.json'   # written by scripts/drawing_images.py (OCR of the drawing images)
 PDF_LINK = 'https://web.archive.org/web/20160109071827/http://files.e3d-online.com/BigBox/EXPLODED_DRAWINGS.pdf'
 
-def add_drawing_parts(body, parts, heads_by_slug):
+def add_drawing_parts(body, parts, images, heads_by_slug):
     """On the Bill of Materials page: fill the empty Printed Parts section and add a fixings table under Fixings, from the
-    parts lists in the exploded drawings. Both are marked as coming from the drawings, not from the wiki page."""
-    from targets import SHEET_SECTIONS
+    parts lists in the exploded drawings. Both are marked as coming from the drawings, not from the wiki page.
+    Sheets come from the PDF's text; sheets that are only images on the wiki were read by OCR, and rows it was unsure of are left out."""
+    from targets import SHEET_SECTIONS, IMAGE_SECTIONS
     esc = html.escape
-    titles = {sh['sheet']: sh['title'] for sh in parts['sheets']}
-    def drawing(n): return f'<a href="{PDF_LINK}#page={n}">sheet {n}</a>'
-    def section(n):
-        ref = SHEET_SECTIONS.get(n)
+    def section(ref):
         if not ref: return ''
         page, prefix = ref
         for level, hid, text in heads_by_slug.get(page, []):
-            if text.startswith(prefix + ' ') : return f'<a href="{page}.html#{html.escape(hid)}">{esc(text)}</a>'
+            if text.startswith(prefix + ' '): return f'<a href="{page}.html#{html.escape(hid)}">{esc(text)}</a>'
         return ''
-    def note(extra=''):
-        return ('<p class="derived"><em>This list is not from the wiki page, which left it empty. It is compiled from the parts lists in the '
-                f'<a href="{PDF_LINK}">exploded drawings</a> (EXPLODED_DRAWINGS.pdf, sheets 1 to {len(parts["sheets"])}). {extra}</em></p>')
-    rows = [(sh['sheet'], r) for sh in parts['sheets'] for r in sh['rows']]
-    printed = [(n, r) for n, r in rows if r['description'] in ('Printed Part', 'Printed Parts Box')]
+    def norm(t): return re.sub(r'[^A-Z0-9]', '', t.upper())
+    pdf_titles = [norm(sh['title']) for sh in parts['sheets'] if sh['rows']]
+    rows, left_out = [], 0   # (drawing link, build section link, row)
+    for sh in parts['sheets']:
+        for r in sh['rows']:
+            rows.append((f'<a href="{PDF_LINK}#page={sh["sheet"]}">sheet {sh["sheet"]}</a>', section(SHEET_SECTIONS.get(sh['sheet'])), r))
+    for sh in (images or {}).get('sheets', []):
+        k = norm(sh['title'])
+        if not sh['rows'] or any(t == k or t.startswith(k) or k.startswith(t) for t in pdf_titles): continue   # the PDF has this sheet
+        for r in sh['rows']:
+            if r['confidence'] < 0.85: left_out += 1; continue
+            rows.append((f'<a href="images/{urllib.parse.quote(sh["image"])}">{esc(sh["title"].lower())} (image)</a>', section(IMAGE_SECTIONS.get(sh['image'])), r))
+    ocr = ' Sheets marked (image) exist only as pictures on the wiki; they were read by OCR and may contain mistakes.' if any('(image)' in d for d, _, _ in rows) else ''
+    cut = f' {left_out} rows the OCR was not sure about are left out.' if left_out else ''
+    note = ('<p class="derived"><em>This list is not from the wiki page, which left it empty. It is compiled from the parts lists in the '
+            f'<a href="{PDF_LINK}">exploded drawings</a> (EXPLODED_DRAWINGS.pdf, sheets 1 to {len(parts["sheets"])}) and the drawing images on the wiki.{ocr}{cut}</em></p>')
+    printed = [(d, sec, r) for d, sec, r in rows if r['description'] in ('Printed Part', 'Printed Parts Box')]
     tr = ''.join(f'<tr><td>{esc(r["part"])}</td><td>{r["qty"]}</td><td>{"printed" if r["description"] == "Printed Part" else "from the Printed Parts Box"}</td>'
-                 f'<td>{drawing(n)}</td><td>{section(n) or "–"}</td></tr>' for n, r in printed)
-    printed_html = note() + f'<table><thead><tr><th>Part</th><th>Qty</th><th>Source</th><th>Drawing</th><th>Build section</th></tr></thead><tbody>{tr}</tbody></table>'
+                 f'<td>{d}</td><td>{sec or "–"}</td></tr>' for d, sec, r in printed)
+    printed_html = note + f'<table><thead><tr><th>Part</th><th>Qty</th><th>Source</th><th>Drawing</th><th>Build section</th></tr></thead><tbody>{tr}</tbody></table>'
     fixings = {}
-    for n, r in rows:
-        if r['description'].startswith('Fixings'): fixings.setdefault((r['description'], r['part']), []).append(n)
+    for d, sec, r in rows:
+        if r['description'].startswith('Fixings'): fixings.setdefault((r['description'], r['part']), []).append(d)
     def bag_no(d): return int(''.join(c for c in d if c.isdigit()) or 0)
-    tr = ''.join(f'<tr><td>{esc(bag)}</td><td>{esc(part)}</td><td>{", ".join(drawing(n) for n in sheets)}</td></tr>'
-                 for (bag, part), sheets in sorted(fixings.items(), key=lambda kv: (bag_no(kv[0][0]), kv[0][1])))
-    fixings_html = note() + f'<table><thead><tr><th>Fixings bag</th><th>Fixing</th><th>Drawings</th></tr></thead><tbody>{tr}</tbody></table>'
+    tr = ''.join(f'<tr><td>{esc(bag)}</td><td>{esc(part)}</td><td>{", ".join(ds)}</td></tr>'
+                 for (bag, part), ds in sorted(fixings.items(), key=lambda kv: (bag_no(kv[0][0]), kv[0][1])))
+    fixings_html = note + f'<table><thead><tr><th>Fixings bag</th><th>Fixing</th><th>Drawings</th></tr></thead><tbody>{tr}</tbody></table>'
     body = re.sub(r'(<h3><span class="mw-headline" id="Printed_Parts">Printed Parts</span></h3>)', lambda m: m.group(1) + printed_html, body, count=1)
     return re.sub(r'(<h3><span class="mw-headline" id="Fixings">Fixings</span></h3>)', lambda m: m.group(1) + fixings_html, body, count=1)
 
@@ -228,7 +239,7 @@ stats, sections = {}, []
 prepared = {t: with_heading_ids(extract(pages[t])) for t in order}   # (body, headings) per page
 heads_by_slug = {slug(t): heads for t, (_, heads) in prepared.items()}
 if os.path.exists(PARTS_PATH) and 'Bill_Of_Materials' in prepared:
-    prepared['Bill_Of_Materials'] = (add_drawing_parts(prepared['Bill_Of_Materials'][0], json.load(open(PARTS_PATH)), heads_by_slug), prepared['Bill_Of_Materials'][1])
+    prepared['Bill_Of_Materials'] = (add_drawing_parts(prepared['Bill_Of_Materials'][0], json.load(open(PARTS_PATH)), json.load(open(IMAGE_PARTS_PATH)) if os.path.exists(IMAGE_PARTS_PATH) else None, heads_by_slug), prepared['Bill_Of_Materials'][1])
 for t in order:
     body0, heads = prepared[t]
     b = fix_links(fix_images(body0, stats), False)

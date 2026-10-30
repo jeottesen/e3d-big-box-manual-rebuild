@@ -1,0 +1,62 @@
+# Tools and tasks for building the manual.   mise install && mise run build
+# The archive data lives outside git, in raw/ (override with BIGBOX_RAW); `mise run fetch` fills it from the Wayback Machine.
+
+[tools]
+python = "3.13"
+"aqua:astral-sh/uv" = "latest"
+pandoc = "3.13"                       # scripts/markdown.py
+node = "24"                           # only to run markdownlint-cli2
+"npm:markdownlint-cli2" = "0.24"
+
+[env]
+# the scripts that need packages (requirements.txt) run in this venv; the rest are standard library only
+_.python.venv = { path = ".venv", create = true }
+
+[tasks.deps]
+description = "Install the Python packages in requirements.txt into .venv"
+sources = ["requirements.txt"]
+outputs = [".venv/.deps-installed"]
+run = ["uv pip install --quiet -r requirements.txt", "touch .venv/.deps-installed"]
+
+[tasks.fetch]
+description = "Fetch the pages the manual needs from the Wayback Machine into raw/ (network; polite and cached)"
+run = [
+  "python3 -I scripts/fetch.py",
+  "python3 -I scripts/fetch_files.py",
+  "python3 -I scripts/recover.py",
+  "python3 -I scripts/appendix.py",
+]
+
+[tasks.extract]
+description = "Read the parts lists off the exploded drawings (PDF text, then OCR for the sheets that are only images)"
+depends = ["deps"]
+sources = ["scripts/drawings.py", "scripts/drawing_images.py", "docs/images/*.jpg"]
+outputs = ["notes/parts.json", "notes/parts_images.json"]
+run = [
+  "python3 -I scripts/drawings.py",
+  "python3 -I scripts/drawing_images.py",
+]
+
+[tasks.site]
+description = "Build the HTML manual into docs/"
+run = "python3 -I scripts/build.py"
+
+[tasks.markdown]
+description = "Convert docs/ to the GitHub Markdown in manual/"
+depends = ["site"]
+run = "python3 -I scripts/markdown.py"
+
+[tasks.check]
+description = "Check every link and image in manual/, and lint all the Markdown"
+run = [
+  "python3 -I scripts/check_markdown.py",
+  "markdownlint-cli2 \"**/*.md\"",
+]
+
+[tasks.build]
+description = "Everything: read the drawings, build docs/ and manual/, then check them"
+depends = ["extract"]
+run = [
+  "mise run markdown",
+  "mise run check",
+]

@@ -5,10 +5,10 @@ The PDF is vector, so its text can be read exactly; no OCR is involved. Each she
 (ITEM, QTY, PART NUMBER, DESCRIPTION) and a title block with the sheet title and "n / N" sheet number.
 The pdf text comes out one glyph at a time with its position, so rows and columns are rebuilt from positions.
 
-This is the one script that needs a third-party package (pypdf), so it is not part of the normal build. Run it
-only to refresh notes/parts.json, which the build reads:
+It needs a third-party package (pypdf, in requirements.txt), so it runs as its own step, `extract`, only when its
+inputs change, and writes notes/parts.json, which the build reads:
 
-    uv run --with pypdf python3 -I scripts/drawings.py            (add --pdf FILE to use a local copy)
+    mise run extract        (or: python3 -I scripts/drawings.py [--pdf FILE] in the venv from requirements.txt)
 
 Output: notes/parts.json, one entry per sheet: title, sheet number, and the parts list rows. Rows that do not
 look right (item numbers that do not run 1..n, an empty field) are listed under "problems" for a manual look.
@@ -22,11 +22,11 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = f'{ROOT}/notes/parts.json'
 PDF_URL = 'http://files.e3d-online.com/BigBox/EXPLODED_DRAWINGS.pdf'
 PDF_TS = '20160109071827'
-PDF_PATH = f'{crawl.RAW}/files/EXPLODED_DRAWINGS.pdf'
+PDF_PATH = f'{crawl.RAW}/drawings/EXPLODED_DRAWINGS.pdf'   # not under files/, which the build publishes
 
 def get_pdf():
     if len(sys.argv) > 2 and sys.argv[1] == '--pdf': return sys.argv[2]
-    if not os.path.exists(PDF_PATH) and not crawl.from_seed('files/EXPLODED_DRAWINGS.pdf'):
+    if not os.path.exists(PDF_PATH) and not crawl.from_seed('drawings/EXPLODED_DRAWINGS.pdf'):
         st, data = crawl.get_snapshot(crawl.snap(PDF_URL, PDF_TS, 'id_'), binary=True)
         if not data: sys.exit(f'Could not download the exploded drawings (status {st}).')
         os.makedirs(os.path.dirname(PDF_PATH), exist_ok=True); open(PDF_PATH, 'wb').write(data)
@@ -87,8 +87,12 @@ def sheet(page):
     if xs:   # the description column starts at the same x on every row of a sheet; re-read with a split there in case a part name ran into it
         dx = max(set(round(x) for x in xs), key=[round(x) for x in xs].count)
         again = table_rows(words(gl, split_x=dx - 1))
-        if len(again) > len(rows): rows = again
-    for r in rows: r.pop('_x')
+        described = lambda rs: sum(1 for r in rs if r['description'])
+        if len(again) >= len(rows) and described(again) > described(rows): rows = again   # a glued row has no description of its own
+    for r in rows:
+        r.pop('_x')
+        glued = re.fullmatch(r'(.*?[a-z)\d])(Fixings (?:Kit )?Bag \d+)', r['part'])   # a sheet with no other description cells gives no column to split at
+        if glued and not r['description']: r['part'], r['description'] = glued.group(1), glued.group(2)
     full = ' '.join(w[2] for w in ws)
     n = re.search(r'(?<![\d/])(\d{1,2})\s*/\s*(\d{1,2})(?![\d/])', full)
     return {'sheet': int(n.group(1)) if n else None, 'of': int(n.group(2)) if n else None, 'rows': rows, '_words': ws}

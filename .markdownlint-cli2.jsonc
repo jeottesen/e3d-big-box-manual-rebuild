@@ -1,4 +1,5 @@
 {
+  "ignores": [".venv/**", "raw/**"],   // installed packages and the archive data are not ours to lint
   // Rules that do not fit this repository, and why.
   "config": {
     "MD013": false,                          // line length: the wiki's paragraphs are single long lines

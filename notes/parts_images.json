@@ -1,0 +1,1638 @@
+{
+ "source": "OCR (rapidocr) of the drawing images in docs/images",
+ "sheets": [
+  {
+   "image": "DOCK-BRACKET.jpg",
+   "title": "DOCK-BRACKET",
+   "sheet": 35,
+   "of": 36,
+   "rows": [
+    {
+     "item": "1",
+     "qty": "1",
+     "part": "DOCK-BRACKET",
+     "description": "Printed Part",
+     "confidence": 0.99
+    },
+    {
+     "item": "2",
+     "qty": "5",
+     "part": "M3 Microbarb Nut (Brass)",
+     "description": "Fixings Bag 2",
+     "confidence": 0.95
+    },
+    {
+     "item": "3",
+     "qty": "5",
+     "part": "M3 x 10 Socket Cap Screw",
+     "description": "Fixings Bag 8",
+     "confidence": 0.98
+    }
+   ]
+  },
+  {
+   "image": "E3D-V6_HOTEND_ASSEMBLY_BIGBOX.jpg",
+   "title": "E3D-V6 HOTEND ASSEMBLY BIGBOX",
+   "sheet": 28,
+   "of": 36,
+   "rows": [
+    {
+     "item": "1",
+     "qty": "1",
+     "part": "E3D-v6 Nozzle (1.75mm x 0.4mm)",
+     "description": "Extruder Box -> E3D V6 Bag",
+     "confidence": 0.96
+    },
+    {
+     "item": "2",
+     "qty": "1",
+     "part": "E3D-v6 Heatbreak (1.75mm)",
+     "description": "Extruder Box -> E3D V6 Bag",
+     "confidence": 0.97
+    },
+    {
+     "item": "3",
+     "qty": "1",
+     "part": "E3D-v6 Heatsink (1.75mm)",
+     "description": "Extruder Box -> E3D V6 Bag",
+     "confidence": 0.96
+    },
+    {
+     "item": "4",
+     "qty": "1",
+     "part": "E3D-v6 Heater Block",
+     "description": "Extruder Box -> E3D V6 Bag",
+     "confidence": 0.97
+    },
+    {
+     "item": "5",
+     "qty": "1",
+     "part": "Bowden Coupling Body",
+     "description": "Installed",
+     "confidence": 0.96
+    },
+    {
+     "item": "6",
+     "qty": "1",
+     "part": "Bowden Coupling Colet",
+     "description": "E3D V6 Bag",
+     "confidence": 0.93
+    },
+    {
+     "item": "7",
+     "qty": "1",
+     "part": "PT100",
+     "description": "Extruder Box",
+     "confidence": 1.0
+    },
+    {
+     "item": "",
+     "qty": "8",
+     "part": "HEATER-CARTRIDGE-24V-30W",
+     "description": "Extruder Box",
+     "confidence": 0.99
+    },
+    {
+     "item": "9",
+     "qty": "1",
+     "part": "M3 x 3 Skt Grub Screw Knurled Point",
+     "description": "Extruder Box -> E3D V6 Bag -> Fixings Kit",
+     "confidence": 0.99
+    },
+    {
+     "item": "10",
+     "qty": "1",
+     "part": "M3 x 10 Dome Head Socket Screw",
+     "description": "Extruder Box -> E3D V6 Bag -> Fixings Kit",
+     "confidence": 0.98
+    },
+    {
+     "item": "11",
+     "qty": "1",
+     "part": "E3D-V6 Fan Duct",
+     "description": "Extruder Box",
+     "confidence": 0.99
+    },
+    {
+     "item": "11.1",
+     "qty": "1",
+     "part": "E3D-v6 Heater Block",
+     "description": "Extruder Box -> E3D V6 Bag",
+     "confidence": 0.98
+    },
+    {
+     "item": "11.2",
+     "qty": "1",
+     "part": "30x30x30 DC Fan (24v)",
+     "description": "LCD / Fans Box (+ Extruder Box for Duals)",
+     "confidence": 0.95
+    },
+    {
+     "item": "11.3",
+     "qty": "4",
+     "part": "2.5 x 15 Screws for Plastic",
+     "description": "Extruder Box -> E3D V6 Bag -> Fixings Kit",
+     "confidence": 0.98
+    },
+    {
+     "item": "12",
+     "qty": "1",
+     "part": "PTFE-63",
+     "description": "Extruder Box -> E3D V6 Bag",
+     "confidence": 0.99
+    }
+   ]
+  },
+  {
+   "image": "ELECTRONICS_COVER.jpg",
+   "title": "ELECTRONICS COVER",
+   "sheet": 30,
+   "of": 36,
+   "rows": [
+    {
+     "item": "1",
+     "qty": "1",
+     "part": "ELECTRONICS-COVER",
+     "description": "Laser Cut Part",
+     "confidence": 0.98
+    },
+    {
+     "item": "2",
+     "qty": "4",
+     "part": "ELECTRONICS-COVER-BRACKET",
+     "description": "Printed Part",
+     "confidence": 0.99
+    },
+    {
+     "item": "3",
+     "qty": "8",
+     "part": "M3 x 10 Socket Cap Screw",
+     "description": "Fixings Bag 8",
+     "confidence": 0.99
+    },
+    {
+     "item": "4",
+     "qty": "4",
+     "part": "M3 x 20 Socket Cap Screw",
+     "description": "Fixings Bag 9",
+     "confidence": 0.98
+    },
+    {
+     "item": "5",
+     "qty": "4",
+     "part": "M3 Hex Nut (Half)",
+     "description": "Fixings Bag 5",
+     "confidence": 0.95
+    },
+    {
+     "item": "6",
+     "qty": "4",
+     "part": "M3 Microbarb Nut (Brass)",
+     "description": "Fixings Bag 2",
+     "confidence": 0.95
+    },
+    {
+     "item": "7",
+     "qty": "1",
+     "part": "FAN-50-50-10",
+     "description": "Fan Box",
+     "confidence": 0.99
+    }
+   ]
+  },
+  {
+   "image": "EXTRUDER_DUAL.jpg",
+   "title": "EXTRUDER DUAL",
+   "sheet": 16,
+   "of": 36,
+   "rows": [
+    {
+     "item": "",
+     "qty": "1",
+     "part": "EXTRUDER BOOY(DUAL)",
+     "description": "Printed Part",
+     "confidence": 0.84
+    },
+    {
+     "item": "2",
+     "qty": "2",
+     "part": "NEMA17-400",
+     "description": "Motox Box-0.9Deg",
+     "confidence": 0.85
+    },
+    {
+     "item": "3",
+     "qty": "2",
+     "part": "EXTRUDER IDLER",
+     "description": "Part Assembly",
+     "confidence": 0.9
+    },
+    {
+     "item": "",
+     "qty": "1",
+     "part": "E-AXIS CABLE BRACKET(DUAL)(R)",
+     "description": "Printed Part",
+     "confidence": 0.89
+    },
+    {
+     "item": "6",
+     "qty": "1",
+     "part": "E-AXIS CABLE BRACKET(DUAL)IL)",
+     "description": "Printed Part",
+     "confidence": 0.89
+    },
+    {
+     "item": "7",
+     "qty": "2",
+     "part": "M3x2S.Socket CapScrew",
+     "description": "Fxings Bog7",
+     "confidence": 0.86
+    },
+    {
+     "item": "8",
+     "qty": "2",
+     "part": "M3 x 10 Socket Cap Screw",
+     "description": "Foings Bog8",
+     "confidence": 0.65
+    },
+    {
+     "item": "9",
+     "qty": "2",
+     "part": "M4 x 30 Socket Cap Screw",
+     "description": "Fiings Bag17",
+     "confidence": 0.87
+    },
+    {
+     "item": "10",
+     "qty": "2",
+     "part": "MAWasher",
+     "description": "Fixings Bag 13",
+     "confidence": 0.85
+    },
+    {
+     "item": "11",
+     "qty": "2",
+     "part": "Extruder Spring",
+     "description": "Extruder Box - Black Spring",
+     "confidence": 0.9
+    },
+    {
+     "item": "12",
+     "qty": "2",
+     "part": "M4 Square Nut",
+     "description": "Fxinss Bag 12",
+     "confidence": 0.82
+    },
+    {
+     "item": "13",
+     "qty": "2",
+     "part": "HOBDGOBLIN-SOOIO",
+     "description": "Extruder Box",
+     "confidence": 0.87
+    },
+    {
+     "item": "14",
+     "qty": "2",
+     "part": "M3x 3Skt Grb Screw Knurled Point",
+     "description": "Fxings Bog 17",
+     "confidence": 0.86
+    },
+    {
+     "item": "15",
+     "qty": "2",
+     "part": "Bowden Coupling",
+     "description": "See Docs",
+     "confidence": 0.93
+    }
+   ]
+  },
+  {
+   "image": "EXTRUDER_HYBRID_NON-TITAN_DIRECT.jpg",
+   "title": "EXTRUDER HYBRID NON-TITAN DIRECT",
+   "sheet": 19,
+   "of": 41,
+   "rows": [
+    {
+     "item": "1",
+     "qty": "1",
+     "part": "E-AXIS CARRIAGE TOP HYBRID NON-TITAN DIRECT GUIDE",
+     "description": "Printed Part",
+     "confidence": 0.99
+    },
+    {
+     "item": "2",
+     "qty": "1",
+     "part": "E-AXIS CARRIAGE TOP HYBRID NON-TITAN DIRECT LEVER",
+     "description": "Printed Part",
+     "confidence": 0.95
+    },
+    {
+     "item": "3",
+     "qty": "1",
+     "part": "E-AXIS CARRIAGE TOP HYBRID NON-TITAN DIRECT BODY",
+     "description": "Printed Part",
+     "confidence": 0.96
+    },
+    {
+     "item": "4",
+     "qty": "1",
+     "part": "NEMA17-400",
+     "description": "Motor Box-0.9Deg",
+     "confidence": 0.94
+    },
+    {
+     "item": "5",
+     "qty": "1",
+     "part": "Bowden Coupling",
+     "description": "See Docs",
+     "confidence": 0.98
+    },
+    {
+     "item": "6",
+     "qty": "1",
+     "part": "HOBBGOBLIN-500ID",
+     "description": "Extruder Box",
+     "confidence": 0.96
+    },
+    {
+     "item": "7",
+     "qty": "1",
+     "part": "M3 x 3 Skt Grub Screw Knurled Point",
+     "description": "Fixings Bag 17",
+     "confidence": 0.96
+    },
+    {
+     "item": "8",
+     "qty": "1",
+     "part": "M4 x 30 Socket Cap Screw",
+     "description": "Fixings Bag 17",
+     "confidence": 0.96
+    },
+    {
+     "item": "6",
+     "qty": "1",
+     "part": "M4 Washer",
+     "description": "Fixings Bag 13",
+     "confidence": 0.99
+    },
+    {
+     "item": "10",
+     "qty": "1",
+     "part": "Extruder Spring",
+     "description": "Extruder Box - Black Spring",
+     "confidence": 0.99
+    },
+    {
+     "item": "11",
+     "qty": "1",
+     "part": "M4 Square Nut",
+     "description": "Fixings Bag 12",
+     "confidence": 0.99
+    },
+    {
+     "item": "12",
+     "qty": "1",
+     "part": "Nylon Spacer 3.2ID 6OD 15L",
+     "description": "Fixings Bag 16",
+     "confidence": 0.95
+    },
+    {
+     "item": "13",
+     "qty": "1",
+     "part": "M3 x 25 Socket Cap Screw",
+     "description": "Fixings Bag 7",
+     "confidence": 0.93
+    },
+    {
+     "item": "14",
+     "qty": "2",
+     "part": "M3 x 30 Socket Cap Screw",
+     "description": "Fixings Bag 10",
+     "confidence": 0.99
+    },
+    {
+     "item": "15",
+     "qty": "2",
+     "part": "M2Hex Nut",
+     "description": "Fixings Bag 3",
+     "confidence": 0.96
+    },
+    {
+     "item": "16",
+     "qty": "1",
+     "part": "M3 x 10 Socket Cap Screw",
+     "description": "Fixings Bag 8",
+     "confidence": 0.96
+    }
+   ]
+  },
+  {
+   "image": "EXTRUDER_HYBRID_TITAN_DIRECT.jpg",
+   "title": "EXTRUDER HYBRID TITAN DIRECT",
+   "sheet": 18,
+   "of": 41,
+   "rows": [
+    {
+     "item": "1",
+     "qty": "2",
+     "part": "M2Hex Nut",
+     "description": "Fixings Bag 3",
+     "confidence": 0.74
+    },
+    {
+     "item": "2",
+     "qty": "1",
+     "part": "E-AXIS CARRIAGE TOP HYBRID TITAN DIRECT",
+     "description": "Printed Part",
+     "confidence": 0.96
+    },
+    {
+     "item": "3",
+     "qty": "1",
+     "part": "NEMA17",
+     "description": "SEE NOTESONDRAWING",
+     "confidence": 0.93
+    },
+    {
+     "item": "",
+     "qty": "4",
+     "part": "E3D-TITAN",
+     "description": "SEE NOTESONDRAWING",
+     "confidence": 0.99
+    }
+   ]
+  },
+  {
+   "image": "EXTRUDER_SINGLE.jpg",
+   "title": "EXTRUDER SINGLE",
+   "sheet": 15,
+   "of": 36,
+   "rows": [
+    {
+     "item": "1",
+     "qty": "1",
+     "part": "EXT RUOERE OD Y(SINGLE)",
+     "description": "Printed Part",
+     "confidence": 0.93
+    },
+    {
+     "item": "3",
+     "qty": "1",
+     "part": "EXT RUOER CABLE BRACKET",
+     "description": "Printed Part",
+     "confidence": 0.88
+    },
+    {
+     "item": "4",
+     "qty": "2",
+     "part": "M3 x 35 Socket Cap Screw",
+     "description": "Foongs Beg 11",
+     "confidence": 0.87
+    },
+    {
+     "item": "5",
+     "qty": "1",
+     "part": "M3 x 25 Socket Cap Screw",
+     "description": "Fixings Bag 7",
+     "confidence": 0.74
+    },
+    {
+     "item": "6",
+     "qty": "1",
+     "part": "M3 x 10 Socket Cap Screw",
+     "description": "Foongs Bog8",
+     "confidence": 0.83
+    },
+    {
+     "item": "",
+     "qty": "7",
+     "part": "M4 x 30 Socket Cap Screw",
+     "description": "Foxings Bog 17",
+     "confidence": 0.83
+    },
+    {
+     "item": "8",
+     "qty": "1",
+     "part": "MAWasher",
+     "description": "Foxings Bog 13",
+     "confidence": 0.81
+    },
+    {
+     "item": "9",
+     "qty": "1",
+     "part": "Extruder Spring",
+     "description": "Extruder Box-ElackSpring",
+     "confidence": 0.91
+    },
+    {
+     "item": "10",
+     "qty": "1",
+     "part": "MASquare Mut",
+     "description": "Fixings Bag 12",
+     "confidence": 0.86
+    },
+    {
+     "item": "11",
+     "qty": "1",
+     "part": "EXT RUOER IDLER",
+     "description": "Part Aevemby",
+     "confidence": 0.8
+    },
+    {
+     "item": "12",
+     "qty": "1",
+     "part": "HOBBGOBLIN-SOOTO",
+     "description": "Extruder Box",
+     "confidence": 0.87
+    },
+    {
+     "item": "13",
+     "qty": "1",
+     "part": "M3x3 Skt GrubScrewKeuriedPoint",
+     "description": "Fioings Bog 17",
+     "confidence": 0.8
+    },
+    {
+     "item": "14",
+     "qty": "1",
+     "part": "Boaden Couplng",
+     "description": "See Docs",
+     "confidence": 0.88
+    }
+   ]
+  },
+  {
+   "image": "FRAME-LUG_DRAWING.jpg",
+   "title": "FRAME-LUG DRAWING",
+   "sheet": 1,
+   "of": 1,
+   "rows": [],
+   "skipped": true
+  },
+  {
+   "image": "HEATED_BED_CORNERS.jpg",
+   "title": "HEATED BED CORNERS",
+   "sheet": 9,
+   "of": 36,
+   "rows": [
+    {
+     "item": "1",
+     "qty": "1",
+     "part": "HEATED BED CORNERS",
+     "description": "Printed Part",
+     "confidence": 0.96
+    },
+    {
+     "item": "2",
+     "qty": "2",
+     "part": "M3 Square Nut",
+     "description": "Fixings Bag 6",
+     "confidence": 0.95
+    },
+    {
+     "item": "3",
+     "qty": "2",
+     "part": "M3 x 12 Socket Cap Screw",
+     "description": "Fixings Bag 9",
+     "confidence": 0.97
+    },
+    {
+     "item": "4",
+     "qty": "1",
+     "part": "BEARING-LM8LUU",
+     "description": "Bearing Kit",
+     "confidence": 0.97
+    }
+   ]
+  },
+  {
+   "image": "MOUNT_SPOOL-HOLDER_OUTER.jpg",
+   "title": "MOUNT SPOOL-HOLDER OUTER",
+   "sheet": 27,
+   "of": 36,
+   "rows": [
+    {
+     "item": "1",
+     "qty": "1",
+     "part": "SPOOL-HOLDER INNER",
+     "description": "Part Prep",
+     "confidence": 0.99
+    },
+    {
+     "item": "2",
+     "qty": "3",
+     "part": "M3 Hex Nut (Half)",
+     "description": "Fixings Bag 5",
+     "confidence": 0.93
+    },
+    {
+     "item": "3",
+     "qty": "2",
+     "part": "M4 Washer",
+     "description": "Fixings Bag 13",
+     "confidence": 0.99
+    },
+    {
+     "item": "4",
+     "qty": "2",
+     "part": "BEARING-634ZZ",
+     "description": "Bearing Box",
+     "confidence": 0.97
+    },
+    {
+     "item": "5",
+     "qty": "3",
+     "part": "M3 x 20 Socket Cap Screw",
+     "description": "Fixings Bag 9",
+     "confidence": 0.96
+    }
+   ]
+  },
+  {
+   "image": "MOUNT_Y-AXIS_MOTOR.jpg",
+   "title": "MOUNT Y-AXIS MOTOR",
+   "sheet": 25,
+   "of": 36,
+   "rows": [
+    {
+     "item": "7",
+     "qty": "3",
+     "part": "M4 Ext Lock Washer",
+     "description": "Fixings Bag 12",
+     "confidence": 0.99
+    },
+    {
+     "item": "8",
+     "qty": "3",
+     "part": "M4 x 20 Socket Cap Screw",
+     "description": "Fixings Bag 17",
+     "confidence": 0.98
+    },
+    {
+     "item": "10",
+     "qty": "1",
+     "part": "MOTOR-CONNECTOR",
+     "description": "",
+     "confidence": 1.0
+    }
+   ]
+  },
+  {
+   "image": "REAR-RIGHT-BACK_CABLE_CONDUIT.jpg",
+   "title": "REAR-RIGHT-BACK CABLE CONDUIT",
+   "sheet": 31,
+   "of": 37,
+   "rows": [
+    {
+     "item": "1",
+     "qty": "3",
+     "part": "RRB-CABLE-CONDUIT",
+     "description": "Printed Part",
+     "confidence": 0.97
+    },
+    {
+     "item": "2",
+     "qty": "3",
+     "part": "M3 x 25 Socket Cap Screw",
+     "description": "Fixings Bag 7",
+     "confidence": 0.95
+    },
+    {
+     "item": "3",
+     "qty": "3",
+     "part": "M3 Hex Nut",
+     "description": "Fixings Bag 3",
+     "confidence": 0.99
+    }
+   ]
+  },
+  {
+   "image": "SPINE.jpg",
+   "title": "SPINE",
+   "sheet": 26,
+   "of": 36,
+   "rows": [
+    {
+     "item": "1",
+     "qty": "1",
+     "part": "SPINE-LARGE",
+     "description": "Printed Part",
+     "confidence": 0.99
+    },
+    {
+     "item": "2",
+     "qty": "2",
+     "part": "SPINE-MED",
+     "description": "Printed Part",
+     "confidence": 0.99
+    },
+    {
+     "item": "3",
+     "qty": "2",
+     "part": "SPINE-SMALL",
+     "description": "Printed Part",
+     "confidence": 0.99
+    },
+    {
+     "item": "4",
+     "qty": "2",
+     "part": "SPINE-Y",
+     "description": "Printed Part",
+     "confidence": 0.97
+    },
+    {
+     "item": "5",
+     "qty": "10",
+     "part": "M4 x 16 Socket Cap Screw",
+     "description": "Fixings Bag 14",
+     "confidence": 0.98
+    },
+    {
+     "item": "9",
+     "qty": "4",
+     "part": "M3 x 20 Socket Cap Screw",
+     "description": "Fixings Bag 9",
+     "confidence": 0.98
+    },
+    {
+     "item": "7",
+     "qty": "10",
+     "part": "M4 Hex Nut (Half)",
+     "description": "Fixings Kit 11",
+     "confidence": 0.95
+    },
+    {
+     "item": "8",
+     "qty": "4",
+     "part": "M3 Hex Nut (Half)",
+     "description": "Fixings Bag 5",
+     "confidence": 0.96
+    }
+   ]
+  },
+  {
+   "image": "SPOOL-HOLDER_CLAMP.jpg",
+   "title": "SPOOL-HOLDER CLAMP",
+   "sheet": 37,
+   "of": 37,
+   "rows": [
+    {
+     "item": "1",
+     "qty": "1",
+     "part": "SPOOL-HOLDER CLAMP INNER",
+     "description": "Printed Part",
+     "confidence": 0.97
+    },
+    {
+     "item": "2",
+     "qty": "1",
+     "part": "SPOOL-HOLDER CLAMP OUTER",
+     "description": "Printed Part",
+     "confidence": 0.99
+    },
+    {
+     "item": "3",
+     "qty": "1",
+     "part": "M4 x 30 Socket Cap Screw",
+     "description": "Fixings Bag 17",
+     "confidence": 0.96
+    },
+    {
+     "item": "4",
+     "qty": "1",
+     "part": "M4 Square Nut",
+     "description": "Fixings Bag 12",
+     "confidence": 0.99
+    },
+    {
+     "item": "5",
+     "qty": "3",
+     "part": "M4 Washer",
+     "description": "Fixings Bag 13",
+     "confidence": 0.96
+    },
+    {
+     "item": "6",
+     "qty": "1",
+     "part": "Spool-Holder Spring",
+     "description": "Extruder Box-Silver Spring",
+     "confidence": 0.99
+    },
+    {
+     "item": "7",
+     "qty": "1",
+     "part": "BEARING-688ZZ",
+     "description": "Bearing Box",
+     "confidence": 0.96
+    }
+   ]
+  },
+  {
+   "image": "SPOOL-HOLDER_INNER.jpg",
+   "title": "SPOOL-HOLDER INNER",
+   "sheet": 12,
+   "of": 36,
+   "rows": [
+    {
+     "item": "1",
+     "qty": "1",
+     "part": "SPOOL-HOLDER INNER",
+     "description": "Printed Part",
+     "confidence": 0.98
+    },
+    {
+     "item": "2",
+     "qty": "1",
+     "part": "M4 x 20 Socket Cap Screw",
+     "description": "Fixings Bag 17",
+     "confidence": 0.98
+    },
+    {
+     "item": "3",
+     "qty": "1",
+     "part": "M4 Square Nut",
+     "description": "Fixings Bag 12",
+     "confidence": 0.95
+    }
+   ]
+  },
+  {
+   "image": "SPOOL-HOLDER_OUTER.jpg",
+   "title": "SPOOL-HOLDER OUTER",
+   "sheet": 10,
+   "of": 36,
+   "rows": [
+    {
+     "item": "1",
+     "qty": "1",
+     "part": "SPOOL-HOLDER OUTER (L)",
+     "description": "Printed Part",
+     "confidence": 0.96
+    },
+    {
+     "item": "2",
+     "qty": "2",
+     "part": "BEARING-634ZZ",
+     "description": "Bearing Box",
+     "confidence": 0.99
+    },
+    {
+     "item": "3",
+     "qty": "2",
+     "part": "M4 Washer",
+     "description": "Fixings Bag 13",
+     "confidence": 0.93
+    },
+    {
+     "item": "4",
+     "qty": "2",
+     "part": "M3 x 16 Socket Cap Screw",
+     "description": "Fixings Bag 10",
+     "confidence": 0.97
+    },
+    {
+     "item": "5",
+     "qty": "1",
+     "part": "M4 x 20 Socket Cap Screw",
+     "description": "Fixings Bag 17",
+     "confidence": 0.97
+    },
+    {
+     "item": "6",
+     "qty": "1",
+     "part": "M4 Square Nut",
+     "description": "Fixings Bag 12",
+     "confidence": 0.95
+    },
+    {
+     "item": "7",
+     "qty": "2",
+     "part": "M3 Square Nut",
+     "description": "Fixings Bag 6",
+     "confidence": 0.96
+    }
+   ]
+  },
+  {
+   "image": "X-AXIS_ASSEMBLY.jpg",
+   "title": "X-AXIS ASSEMBLY",
+   "sheet": 18,
+   "of": 36,
+   "rows": [
+    {
+     "item": "1",
+     "qty": "1",
+     "part": "X-AXIS IDLER CARRIAGE",
+     "description": "Part Preparation",
+     "confidence": 0.97
+    },
+    {
+     "item": "2",
+     "qty": "1",
+     "part": "X-AXIS MOTOR CARRIAGE",
+     "description": "Part Preparation",
+     "confidence": 0.99
+    },
+    {
+     "item": "3",
+     "qty": "2",
+     "part": "ROD-G.H.SS-8-484",
+     "description": "Rod Kit",
+     "confidence": 0.99
+    },
+    {
+     "item": "4",
+     "qty": "2",
+     "part": "BEARING-LM8LUU",
+     "description": "Bearing Kit",
+     "confidence": 0.99
+    }
+   ]
+  },
+  {
+   "image": "X-AXIS_IDLER_CARRIAGE.jpg",
+   "title": "X-AXIS IDLER CARRIAGE",
+   "sheet": 5,
+   "of": 36,
+   "rows": [
+    {
+     "item": "1",
+     "qty": "1",
+     "part": "X-AXIS IDLER CARRIAGE",
+     "description": "Printed Part",
+     "confidence": 0.86
+    },
+    {
+     "item": "2",
+     "qty": "1",
+     "part": "BEARING-LM8LUU",
+     "description": "Bearing Kit",
+     "confidence": 0.97
+    },
+    {
+     "item": "3",
+     "qty": "2",
+     "part": "M3 x 10 Socket Cap Screw",
+     "description": "Fixings Bag 8",
+     "confidence": 0.94
+    },
+    {
+     "item": "4",
+     "qty": "2",
+     "part": "M3 x 12 Socket Cap Screw",
+     "description": "Fixings Bag 9",
+     "confidence": 0.99
+    },
+    {
+     "item": "5",
+     "qty": "4",
+     "part": "M3 Square Nut",
+     "description": "Fixings Bag 6",
+     "confidence": 0.94
+    },
+    {
+     "item": "9",
+     "qty": "4",
+     "part": "M3 Ext Lock Washer",
+     "description": "Fixings Bag 6",
+     "confidence": 0.98
+    },
+    {
+     "item": "7",
+     "qty": "2",
+     "part": "BEARING-F604ZZ",
+     "description": "Bearing Box",
+     "confidence": 0.95
+    },
+    {
+     "item": "8",
+     "qty": "3",
+     "part": "M4 Washer",
+     "description": "Fixings Bag 13",
+     "confidence": 0.98
+    },
+    {
+     "item": "6",
+     "qty": "1",
+     "part": "M4 Ext Lock Washer",
+     "description": "Fixings Bag 12",
+     "confidence": 0.99
+    },
+    {
+     "item": "10",
+     "qty": "1",
+     "part": "M3 x 25 Socket Cap Screw",
+     "description": "Fixings Bag 7",
+     "confidence": 0.98
+    },
+    {
+     "item": "11",
+     "qty": "1",
+     "part": "M4 x 30 Socket Cap Screw",
+     "description": "Fixings Bag 17",
+     "confidence": 0.98
+    },
+    {
+     "item": "12",
+     "qty": "1",
+     "part": "M4 Square Nut",
+     "description": "Fixings Bag 12",
+     "confidence": 0.99
+    }
+   ]
+  },
+  {
+   "image": "X-AXIS_MOTOR_CARRIAGE.jpg",
+   "title": "X-AXIS MOTOR CARRIAGE",
+   "sheet": 6,
+   "of": 36,
+   "rows": [
+    {
+     "item": "1",
+     "qty": "1",
+     "part": "X-AXIS MOTOR CARRIAGE",
+     "description": "Printed Part",
+     "confidence": 0.95
+    },
+    {
+     "item": "2",
+     "qty": "2",
+     "part": "M3 x 10 Socket Cap Screw",
+     "description": "Fixings Bag 8",
+     "confidence": 0.96
+    },
+    {
+     "item": "3",
+     "qty": "2",
+     "part": "M3 x 16 Socket Cap Screw",
+     "description": "Fixings Bag 10",
+     "confidence": 0.95
+    },
+    {
+     "item": "4",
+     "qty": "4",
+     "part": "M3 Ext Lock Washer",
+     "description": "Fixings Bag 6",
+     "confidence": 0.99
+    },
+    {
+     "item": "5",
+     "qty": "4",
+     "part": "M3 Square Nut",
+     "description": "Fixings Bag 6",
+     "confidence": 0.99
+    },
+    {
+     "item": "6",
+     "qty": "1",
+     "part": "BEARING-LM8LUU",
+     "description": "Bearing Kit",
+     "confidence": 0.94
+    },
+    {
+     "item": "7",
+     "qty": "2",
+     "part": "M2Hex Nut",
+     "description": "Fixings Bag 3",
+     "confidence": 0.99
+    },
+    {
+     "item": "8",
+     "qty": "1",
+     "part": "DRAG-CHAIN-END",
+     "description": "Motion Box",
+     "confidence": 0.99
+    },
+    {
+     "item": "9",
+     "qty": "2",
+     "part": "M3 x 8 Csk Platite 30 Screws",
+     "description": "Fixings Bag 2",
+     "confidence": 0.96
+    }
+   ]
+  },
+  {
+   "image": "X-AXIS_MOTOR_INSTALL.jpg",
+   "title": "X-AXIS MOTOR INSTALL",
+   "sheet": 23,
+   "of": 36,
+   "rows": [
+    {
+     "item": "1",
+     "qty": "1",
+     "part": "Y-AXIS FRONT ASSEMBLY",
+     "description": "",
+     "confidence": 0.99
+    },
+    {
+     "item": "2",
+     "qty": "1",
+     "part": "NEMA17-400",
+     "description": "Motor Box-0.9Deg（42BYGHM809",
+     "confidence": 0.98
+    },
+    {
+     "item": "3",
+     "qty": "4",
+     "part": "M3 x 10 Socket Cap Screw",
+     "description": "Fixings Bag 8",
+     "confidence": 0.98
+    },
+    {
+     "item": "4",
+     "qty": "4",
+     "part": "M3 Ext Lock Washer",
+     "description": "Fixings Bag 6",
+     "confidence": 0.99
+    },
+    {
+     "item": "5",
+     "qty": "1",
+     "part": "GT2-20T-5ID",
+     "description": "Motion Box (20 Tooth, 5mm ID)",
+     "confidence": 0.94
+    }
+   ]
+  },
+  {
+   "image": "XY-AXIS_ASSEMBLY.jpg",
+   "title": "XY-AXIS ASSEMBLY",
+   "sheet": 22,
+   "of": 36,
+   "rows": [
+    {
+     "item": "1",
+     "qty": "1",
+     "part": "Y-AXIS FRONT ASSEMBLY",
+     "description": "",
+     "confidence": 0.99
+    },
+    {
+     "item": "2",
+     "qty": "1",
+     "part": "Y-AXIS BACK ASSEMBLY",
+     "description": "",
+     "confidence": 0.99
+    }
+   ]
+  },
+  {
+   "image": "Y-AXIS_FRONT.jpg",
+   "title": "Y-AXIS FRONT",
+   "sheet": 2,
+   "of": 36,
+   "rows": [
+    {
+     "item": "1",
+     "qty": "1",
+     "part": "Y-AXIS FRONT (R)",
+     "description": "Printed Part",
+     "confidence": 0.96
+    },
+    {
+     "item": "2",
+     "qty": "1",
+     "part": "M3 Square Nut",
+     "description": "Fixings Bag 6",
+     "confidence": 0.96
+    },
+    {
+     "item": "3",
+     "qty": "2",
+     "part": "M4 Square Nut",
+     "description": "Fixings Bag 12",
+     "confidence": 0.99
+    },
+    {
+     "item": "4",
+     "qty": "1",
+     "part": "M3 x 18 Socket Cap Screw",
+     "description": "Fixings Bag 8",
+     "confidence": 0.98
+    },
+    {
+     "item": "5",
+     "qty": "1",
+     "part": "M3 Ext Lock Washer",
+     "description": "Fixings Bag 6",
+     "confidence": 0.99
+    },
+    {
+     "item": "6",
+     "qty": "1",
+     "part": "Y-AXIS FRONT CORK (L & R) (Self Adhesive)",
+     "description": "Printed Parts Box",
+     "confidence": 0.92
+    }
+   ]
+  },
+  {
+   "image": "Y-AXIS_FRONT_ASSEMBLY.jpg",
+   "title": "Y-AXIS FRONT ASSEMBLY",
+   "sheet": 21,
+   "of": 36,
+   "rows": [
+    {
+     "item": "1",
+     "qty": "2",
+     "part": "ROD-G.H.SS-8-384",
+     "description": "Rod Kit",
+     "confidence": 0.93
+    },
+    {
+     "item": "2",
+     "qty": "1",
+     "part": "X-AXIS CARRIAGE ASSEMBLY",
+     "description": "",
+     "confidence": 0.99
+    },
+    {
+     "item": "3",
+     "qty": "1",
+     "part": "Y-AXIS FRONT (L)",
+     "description": "Part Preparation",
+     "confidence": 0.96
+    },
+    {
+     "item": "4",
+     "qty": "1",
+     "part": "Y-AXIS FRONT (R)",
+     "description": "Part Preparation",
+     "confidence": 0.95
+    }
+   ]
+  },
+  {
+   "image": "Y-AXIS_IDLER.jpg",
+   "title": "Y-AXIS IDLER",
+   "sheet": 3,
+   "of": 36,
+   "rows": [
+    {
+     "item": "1",
+     "qty": "1",
+     "part": "Y-AXIS BELT TENSIONER",
+     "description": "Printed Part",
+     "confidence": 0.97
+    },
+    {
+     "item": "2",
+     "qty": "2",
+     "part": "BEARING-F604ZZ",
+     "description": "Bearing Box",
+     "confidence": 0.99
+    },
+    {
+     "item": "3",
+     "qty": "3",
+     "part": "M4 Washer",
+     "description": "Fixings Bag 13",
+     "confidence": 0.99
+    },
+    {
+     "item": "4",
+     "qty": "1",
+     "part": "M4 x 20 Socket Grub Screw (Flat Point)",
+     "description": "Fixings Bag 13",
+     "confidence": 0.95
+    },
+    {
+     "item": "5",
+     "qty": "1",
+     "part": "M4 Square Nut",
+     "description": "Fixings Bag 12",
+     "confidence": 0.99
+    },
+    {
+     "item": "6",
+     "qty": "1",
+     "part": "M4 Ext Lock Washer",
+     "description": "Fixings Bag 12",
+     "confidence": 0.98
+    },
+    {
+     "item": "",
+     "qty": "1",
+     "part": "M4 x 20 Socket Cap Screw",
+     "description": "Fixings Bag 17",
+     "confidence": 0.98
+    }
+   ]
+  },
+  {
+   "image": "Y-AXIS_MOTOR.jpg",
+   "title": "Y-AXIS MOTOR",
+   "sheet": 29,
+   "of": 36,
+   "rows": [
+    {
+     "item": "1",
+     "qty": "1",
+     "part": "Y-AXIS MOTOR MOUNT",
+     "description": "Printed Part",
+     "confidence": 0.98
+    },
+    {
+     "item": "2",
+     "qty": "1",
+     "part": "Y-MOTOR MOUNT CORK(SeIfAdhesive)",
+     "description": "Printed Parts Box",
+     "confidence": 0.95
+    },
+    {
+     "item": "3",
+     "qty": "1",
+     "part": "NEMA17-400",
+     "description": "Motor Box-0.9Deg",
+     "confidence": 0.96
+    },
+    {
+     "item": "9",
+     "qty": "1",
+     "part": "GT2-16T-5ID",
+     "description": "Motion Box (16 Tooth, 5mm ID)",
+     "confidence": 0.95
+    },
+    {
+     "item": "4",
+     "qty": "4",
+     "part": "M3 x 10 Socket Cap Screw",
+     "description": "Fixings Bag 8",
+     "confidence": 0.98
+    },
+    {
+     "item": "5",
+     "qty": "4",
+     "part": "M3 Ext Lock Washer",
+     "description": "Fixings Bag 6",
+     "confidence": 0.96
+    },
+    {
+     "item": "6",
+     "qty": "3",
+     "part": "M4 Square Nut",
+     "description": "Fixings Bag 12",
+     "confidence": 0.96
+    }
+   ]
+  },
+  {
+   "image": "Y-AXIS_REAR.jpg",
+   "title": "Y-AXIS REAR",
+   "sheet": 1,
+   "of": 36,
+   "rows": [
+    {
+     "item": "",
+     "qty": "1",
+     "part": "Y-AXIS REAR (L)",
+     "description": "Printed Part",
+     "confidence": 0.96
+    },
+    {
+     "item": "3",
+     "qty": "2",
+     "part": "M4 Square Nut",
+     "description": "Fixings Bag 12",
+     "confidence": 0.95
+    },
+    {
+     "item": "4",
+     "qty": "3",
+     "part": "M3 Square Nut",
+     "description": "Fixings Bag 6",
+     "confidence": 0.96
+    },
+    {
+     "item": "5",
+     "qty": "2",
+     "part": "M3 x 12 Socket Cap Screw",
+     "description": "Fixings Bag 9",
+     "confidence": 0.94
+    },
+    {
+     "item": "6",
+     "qty": "3",
+     "part": "M3 Ext Lock Washer",
+     "description": "Fixings Bag 6",
+     "confidence": 0.99
+    },
+    {
+     "item": "7",
+     "qty": "1",
+     "part": "Y-AXIS REAR (L&R) BEARING RETAINER",
+     "description": "Printed Part",
+     "confidence": 0.97
+    },
+    {
+     "item": "8",
+     "qty": "1",
+     "part": "BEARING-688ZZ",
+     "description": "Bearing Box",
+     "confidence": 0.88
+    },
+    {
+     "item": "9",
+     "qty": "1",
+     "part": "M3 x 16 Socket Cap Screw",
+     "description": "Fixings Bag 10",
+     "confidence": 0.98
+    },
+    {
+     "item": "10",
+     "qty": "1",
+     "part": "Y-AXIS BACK (L) CORK (Self Adhesive)",
+     "description": "Printed Parts Box",
+     "confidence": 0.94
+    }
+   ]
+  },
+  {
+   "image": "Y-AXIS_REAR_ASSEMBLY.jpg",
+   "title": "Y-AXIS REAR ASSEMBLY",
+   "sheet": 20,
+   "of": 36,
+   "rows": [
+    {
+     "item": "1",
+     "qty": "1",
+     "part": "Y-AXIS REAR (L)",
+     "description": "PartPreparation Designedby",
+     "confidence": 0.95
+    },
+    {
+     "item": "3",
+     "qty": "2",
+     "part": "1",
+     "description": "1 Y-AXIS BACK(R) ROD-SS-8-532 Rod Kit(Longest) PartPreparation E3DOnline-JR",
+     "confidence": 0.95
+    },
+    {
+     "item": "4",
+     "qty": "2",
+     "part": "Nylon Washer 8 x 16 x 1.6",
+     "description": "Fixings Bag 13",
+     "confidence": 0.97
+    },
+    {
+     "item": "5",
+     "qty": "1",
+     "part": "GT2-36T-8ID",
+     "description": "MotionBox（36Tooth，8mmID) BIGBOX",
+     "confidence": 0.94
+    },
+    {
+     "item": "6",
+     "qty": "2",
+     "part": "GT2-20T-8ID",
+     "description": "Motion Box (20 Tooth, 8mm ID)",
+     "confidence": 0.91
+    },
+    {
+     "item": "7",
+     "qty": "1",
+     "part": "GT2-BELT-CLOSED-66T",
+     "description": "Motion Box",
+     "confidence": 0.99
+    }
+   ]
+  },
+  {
+   "image": "Z-AXIS_BASE_BRACKETS.jpg",
+   "title": "Z-AXIS BASE BRACKETS",
+   "sheet": 32,
+   "of": 36,
+   "rows": [
+    {
+     "item": "1",
+     "qty": "1",
+     "part": "Z-AXIS BASE BRACKET LOWER",
+     "description": "Printed Part",
+     "confidence": 0.99
+    },
+    {
+     "item": "2",
+     "qty": "1",
+     "part": "Z-AXIS BASE BRACKET UPPER",
+     "description": "Printed Part",
+     "confidence": 0.99
+    },
+    {
+     "item": "3",
+     "qty": "2",
+     "part": "M3 x 12 Socket Cap Screw",
+     "description": "Fixings Bag 9",
+     "confidence": 0.97
+    },
+    {
+     "item": "4",
+     "qty": "2",
+     "part": "M3 Hex Nut (Half)",
+     "description": "Fixings Bag 5",
+     "confidence": 0.95
+    }
+   ]
+  },
+  {
+   "image": "Z-AXIS_DRAG_CHAIN.jpg",
+   "title": "Z-AXIS DRAG CHAIN",
+   "sheet": 36,
+   "of": 36,
+   "rows": [
+    {
+     "item": "1",
+     "qty": "1",
+     "part": "DRAG-CHAIN-END FEMALE",
+     "description": "Motion Box",
+     "confidence": 0.9
+    },
+    {
+     "item": "2",
+     "qty": "1",
+     "part": "DRAG-CHAIN-END",
+     "description": "Motion Box",
+     "confidence": 0.92
+    },
+    {
+     "item": "3",
+     "qty": "1",
+     "part": "Z-AXIS DRAG-CHAIN ANCHOR BASE",
+     "description": "Printed Part",
+     "confidence": 0.98
+    },
+    {
+     "item": "",
+     "qty": "1",
+     "part": "Z-AXIS DRAG-CHAIN ANCHOR BED",
+     "description": "Printed Part",
+     "confidence": 0.99
+    },
+    {
+     "item": "5",
+     "qty": "4",
+     "part": "M3 x 8 Csk Platite 30 Screws",
+     "description": "Fixings Bag 2",
+     "confidence": 0.96
+    }
+   ]
+  },
+  {
+   "image": "Z-AXIS_TOP_BRACKETS.jpg",
+   "title": "Z-AXIS TOP BRACKETS",
+   "sheet": 38,
+   "of": 38,
+   "rows": [
+    {
+     "item": "1",
+     "qty": "1",
+     "part": "Z-AXIS TOP BOTTOM",
+     "description": "Printed Part",
+     "confidence": 0.99
+    },
+    {
+     "item": "2",
+     "qty": "1",
+     "part": "Z-AXIS TOP TOP",
+     "description": "Printed Part",
+     "confidence": 0.99
+    },
+    {
+     "item": "3",
+     "qty": "1",
+     "part": "Z-AXIS TOP CAP",
+     "description": "Printed Part",
+     "confidence": 0.98
+    },
+    {
+     "item": "4",
+     "qty": "1",
+     "part": "ROD-G.H.SS-8-364",
+     "description": "Rod Kit",
+     "confidence": 0.99
+    },
+    {
+     "item": "5",
+     "qty": "2",
+     "part": "M3 Hex Nut (Half)",
+     "description": "Fixings Bag 5",
+     "confidence": 0.96
+    },
+    {
+     "item": "6",
+     "qty": "2",
+     "part": "M3 x 12 Socket Cap Screw",
+     "description": "Fixings Bag 9",
+     "confidence": 0.98
+    }
+   ]
+  }
+ ],
+ "problems": [
+  "EXTRUDER_DUAL.jpg: low OCR confidence on 3 of 14 rows (, 8, 12); check against the image",
+  "EXTRUDER_HYBRID_NON-TITAN_DIRECT.jpg: item numbers ['1', '2', '3', '4', '5', '6', '7', '8', '6', '10', '11', '12', '13', '14', '15', '16'] repeat; one was probably misread",
+  "EXTRUDER_HYBRID_TITAN_DIRECT.jpg: low OCR confidence on 1 of 4 rows (1); check against the image",
+  "EXTRUDER_SINGLE.jpg: low OCR confidence on 6 of 13 rows (5, 6, , 8, 11, 13); check against the image",
+  "FRAME-LUG_DRAWING.jpg: no PARTS LIST heading found"
+ ]
+}

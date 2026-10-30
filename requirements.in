@@ -1,0 +1,5 @@
+# Packages for the two scripts that are not standard-library only.
+# requirements.txt is compiled from this file:  uv pip compile requirements.in --python-version 3.13 -o requirements.txt
+pypdf             # scripts/drawings.py: read the parts lists from the exploded drawings PDF
+rapidocr_onnxruntime   # scripts/drawing_images.py: OCR for the drawing sheets that are only images (bundles its models)
+pillow            # scripts/drawing_images.py: open and resize the images
