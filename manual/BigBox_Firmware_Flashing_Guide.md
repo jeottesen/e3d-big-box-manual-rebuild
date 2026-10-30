@@ -77,51 +77,51 @@ The Windows driver for the RUMBA board can be downloaded from the RepRap wiki:
 
 [http://reprap.org/wiki/RUMBA#RUMBA_USB_Driver_for_Windows](http://reprap.org/wiki/RUMBA#RUMBA_USB_Driver_for_Windows)
 
-*\[image not archived: Windows_RUMBA_Drivers_extracted.png\]*
+🖼️ \[image not archived: Windows_RUMBA_Drivers_extracted.png\]
 
-Windows RUMBA Drivers extracted
+*Windows RUMBA Drivers extracted*
 
 Download the ZIP file, extract the installer and run it. Follow the installer steps until completion accepting any default options.
 
-*\[image not archived: Windows_RUMBA_Drivers_installation_1.png\]*
+🖼️ \[image not archived: Windows_RUMBA_Drivers_installation_1.png\]
 
-Windows RUMBA Drivers installation 1
+*Windows RUMBA Drivers installation 1*
 
-*\[image not archived: Windows_RUMBA_Drivers_installation_2.png\]*
+🖼️ \[image not archived: Windows_RUMBA_Drivers_installation_2.png\]
 
-Windows RUMBA Drivers installation 2
+*Windows RUMBA Drivers installation 2*
 
 #### Flashing a new firmware
 
-*\[image not archived: Windows_Device_Manager_connected_RUMBA.png\]*
+🖼️ \[image not archived: Windows_Device_Manager_connected_RUMBA.png\]
 
-Windows Device Manager connected RUMBA
+*Windows Device Manager connected RUMBA*
 
 After you installed the driver and connect the RUMBA over USB it should be listed in the device manager.
 
 Take note of the COM port.
 
-*\[image not archived: Windows_XLoader.png\]*
+🖼️ \[image not archived: Windows_XLoader.png\]
 
-Windows XLoader
+*Windows XLoader*
 
 Get [XLoader](http://russemotto.com/xloader/XLoader.zip), unzip then start it.
 
-*\[image not archived: Windows_XLoader_setup.png\]*
+🖼️ \[image not archived: Windows_XLoader_setup.png\]
 
-Windows XLoader setup
+*Windows XLoader setup*
 
 Point it to the desired hex file you want to flash, select the appropriate device for the RUMBA (Mega(ATMEGA2560)), the COM port you noted in the device manager and the correct BAUD rate (115200).
 
-*\[image not archived: Windows_XLoader_uploading.png\]*
+🖼️ \[image not archived: Windows_XLoader_uploading.png\]
 
-Windows XLoader uploading
+*Windows XLoader uploading*
 
 Click "Upload" and if everything goes right your new firmware will be flashed to the RUMBA.
 
-*\[image not archived: Windows_XLoader_finished.png\]*
+🖼️ \[image not archived: Windows_XLoader_finished.png\]
 
-Windows XLoader finished
+*Windows XLoader finished*
 
 After writing and if all went well the screen will look like this.
 
@@ -133,27 +133,27 @@ To complete the process go to [\#After flashing a new firmware](#after-flashing-
 
 Get [HexUploader](http://paulkaplan.me/HexUploader/) and start it.
 
-*\[image not archived: HexUploader_setup.png\]*
+🖼️ \[image not archived: HexUploader_setup.png\]
 
-HexUploader setup
+*HexUploader setup*
 
 Select the appropriate device for the RUMBA (Mega - ATMega 2560), the "Serial Port" (usbmodem1421 in my case) and the correct "Baud Rate" (115200)
 
-*\[image not archived: HexUploader_file_selection.png\]*
+🖼️ \[image not archived: HexUploader_file_selection.png\]
 
-HexUploader file selection
+*HexUploader file selection*
 
 Click "Upload a Hex File" and select the desired hex file you want to flash and click "Open".
 
-*\[image not archived: HexUploader_writing.png\]*
+🖼️ \[image not archived: HexUploader_writing.png\]
 
-HexUploader writing
+*HexUploader writing*
 
 HexUploader writes the the file to the RUMBA board.
 
-*\[image not archived: HexUploader_finished.png\]*
+🖼️ \[image not archived: HexUploader_finished.png\]
 
-HexUploader finished
+*HexUploader finished*
 
 After writing it will verify the upload and if all went well the screen will look like this.
 
@@ -189,15 +189,15 @@ Refer to [\#Flashing on Linux](#flashing-on-linux) to install "avrdude" on your 
 
 Unfortunately the plugin is not listed in the OctoPrint plugin repository but this is not a real problem.
 
-*\[image not archived: OctoPrint_Plugin_Manager_dialog.png\]*
+🖼️ \[image not archived: OctoPrint_Plugin_Manager_dialog.png\]
 
-OctoPrint Plugin Manager dialog
+*OctoPrint Plugin Manager dialog*
 
 Open OctoPrint settings dialog and go to "Plugin Manager" section.
 
-*\[image not archived: OctoPrint_install_FirmwareUpdater_plugin.png\]*
+🖼️ \[image not archived: OctoPrint_install_FirmwareUpdater_plugin.png\]
 
-OctoPrint install FirmwareUpdater plugin
+*OctoPrint install FirmwareUpdater plugin*
 
 Insert the URL for the "Firmware Updater" plugin into the "...from URL" input box and click "Install". The process will tell you what to do.
 
@@ -205,15 +205,15 @@ At the time of writing this is [https://github.com/OctoPrint/OctoPrint-FirmwareU
 
 The repository URL on Github is [https://github.com/OctoPrint/OctoPrint-FirmwareUpdater](https://github.com/OctoPrint/OctoPrint-FirmwareUpdater)
 
-*\[image not archived: OctoPrint_FirmwareUpdater.png\]*
+🖼️ \[image not archived: OctoPrint_FirmwareUpdater.png\]
 
-OctoPrint FirmwareUpdater
+*OctoPrint FirmwareUpdater*
 
 After a successful installation and a restart of OctoPrint you can select the plugin from the settings menu.
 
-*\[image not archived: OctoPrint_FirmwareUpdater_configuration.png\]*
+🖼️ \[image not archived: OctoPrint_FirmwareUpdater_configuration.png\]
 
-OctoPrint FirmwareUpdater configuration
+*OctoPrint FirmwareUpdater configuration*
 
 It is recommended to tell the plugin where "avrdude" is installed. On a normal OctoPi installation "avrdude" will be at "/usr/bin/avrdude".
 
@@ -223,15 +223,15 @@ Open the configuration for the plugin by clicking the wrench in the upper right 
 
 Do NOT use the "Check for updates" or check the option "Check for firmware updates after connecting to printer" because this won't work for the BigBox or Marlin at the time of writing!
 
-*\[image not archived: OctoPrint_FirmwareUpdater.png\]*
+🖼️ \[image not archived: OctoPrint_FirmwareUpdater.png\]
 
-OctoPrint FirmwareUpdater
+*OctoPrint FirmwareUpdater*
 
 To flash a firmware file with the plugin disconnect OctoPrint from the printer, and open the plugin via the settings dialog.
 
-*\[image not archived: OctoPrint_FirmwareUpdater_flash_firmware.png\]*
+🖼️ \[image not archived: OctoPrint_FirmwareUpdater_flash_firmware.png\]
 
-OctoPrint FirmwareUpdater flash firmware
+*OctoPrint FirmwareUpdater flash firmware*
 
 Point the plugin to a file on local drive with the "Brose" button or copy and paste a link to a hex file in the "...from URL" input field.
 
@@ -253,15 +253,15 @@ Thanks to a member of the community (tohara) there is another Octoprint plugin a
 
 Unfortunately the plugin is not listed in the OctoPrint plugin repository but this is not a real problem.
 
-*\[image not archived: OctoPrint_Plugin_Manager_dialog.png\]*
+🖼️ \[image not archived: OctoPrint_Plugin_Manager_dialog.png\]
 
-OctoPrint Plugin Manager dialog
+*OctoPrint Plugin Manager dialog*
 
 Open OctoPrint settings dialog and go to "Plugin Manager" section.
 
-*\[image not archived: OctoPrint_install_BigBox_Firmware_plugin.png\]*
+🖼️ \[image not archived: OctoPrint_install_BigBox_Firmware_plugin.png\]
 
-OctoPrint install BigBox Firmware plugin
+*OctoPrint install BigBox Firmware plugin*
 
 Insert the URL for the "BigBox Firmware" plugin into the "...from URL" input box and click "Install". The process will tell you what to do.
 
@@ -269,9 +269,9 @@ At the time of writing this is [https://github.com/tohara/OctoPrint-BigBoxFirmwa
 
 The repository URL on Github is [https://github.com/tohara/OctoPrint-BigBoxFirmware](https://github.com/tohara/OctoPrint-BigBoxFirmware)
 
-*\[image not archived: OctoPrint_BigBox_Firmware.png\]*
+🖼️ \[image not archived: OctoPrint_BigBox_Firmware.png\]
 
-OctoPrint BigBox Firmware
+*OctoPrint BigBox Firmware*
 
 After a successful installation and a restart of OctoPrint you can select the plugin from the settings menu.
 
@@ -307,9 +307,9 @@ To be able to compile Marlin for the RUMBA board and the BigBox you have to inst
 
 Fortunately the Arduino IDE includes a library manager for some versions now.
 
-*\[image not archived: Arduino_include_library.png\]*
+🖼️ \[image not archived: Arduino_include_library.png\]
 
-Arduino include library
+*Arduino include library*
 
 Go to the menu "Sketch" -\> "Include library" -\> "Manage Libraries..." to open the library manager.
 

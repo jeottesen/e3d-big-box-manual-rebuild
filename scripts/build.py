@@ -78,7 +78,7 @@ def fix_images(body, stats):
             stats[rec['kind'].split('-')[0]] = stats.get(rec['kind'].split('-')[0], 0) + 1
             return f'<img src="images/{urllib.parse.quote(fn)}" alt="{html.escape(fn)}">'
         stats['missing'] = stats.get('missing', 0) + 1
-        return f'<span class="missing">[image not archived: {html.escape(fn)}]</span>'
+        return f'<span class="missing">🖼️ [image not archived: {html.escape(fn)}]</span>'
     body = re.sub(r'<a [^>]*class="image"[^>]*>\s*(<img[^>]*>)\s*</a>', r'\1', body)  # drop links to File: pages
     return re.sub(r'<img[^>]*>', repl, body)
 

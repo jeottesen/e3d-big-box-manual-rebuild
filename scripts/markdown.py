@@ -43,7 +43,9 @@ def body(h):
     h = re.sub(r'</?dl\b[^>]*>', '', h)                             # wiki indentation: <dl><dd>text</dd></dl>
     h = re.sub(r'<dd\b[^>]*>', '<p>', h); h = h.replace('</dd>', '</p>')
     h = re.sub(r'<dt\b[^>]*>(.*?)</dt>', r'<p><strong>\1</strong></p>', h, flags=re.S)
-    h = re.sub(r'<span class="missing">(.*?)</span>', r'<em>\1</em>', h)   # image-not-archived placeholders
+    h = re.sub(r'<span class="missing">(.*?)</span>', r'\1', h)   # image-not-archived placeholders (the icon marks them)
+    h = re.sub(r'<div class="thumbcaption">(?:<div class="magnify">.*?</div>)?\s*(.*?)</div>',   # a thumbnail's caption goes under its image, in italics
+               lambda m: f'<p><em>{m.group(1).strip()}</em></p>' if re.sub(r'<[^>]+>|\s', '', m.group(1)) else '', h, flags=re.S)
     return h
 
 def normalize_headings(md):

@@ -4,11 +4,11 @@ Rebuilt page · source: wiki.e3d-online.com/wiki/Non-Titan_Idler_Arms · [archiv
 
 Recovered from an older version of BigBox Parts Preparation (20160807071206), section "(4) Single & Dual Extruder Filament Idlers" — the separate wiki page is not in the archive.
 
-*\[image not archived: EXTRUDER_IDLER.jpg\]*
+🖼️ \[image not archived: EXTRUDER_IDLER.jpg\]
 
-*\[image not archived: Filament_idler_assembled.jpg\]*
+🖼️ \[image not archived: Filament_idler_assembled.jpg\]
 
-Extruder filament idler
+*Extruder filament idler*
 
 If you are building a Titan BigBox you can skip this step.
 
@@ -18,9 +18,9 @@ Part-thread the M4 12mm grub screw through the idler arms, carefully feeding on 
 
 **Note :** The 604zz Bearing(s) are in the Extruder Box.
 
-*\[image not archived: 1.1_Filament_idler_assembled.jpg\]*
+🖼️ \[image not archived: 1.1_Filament_idler_assembled.jpg\]
 
-Hybrid filament idler
+*Hybrid filament idler*
 
 If you are building a Titan BigBox you can skip this step.
 

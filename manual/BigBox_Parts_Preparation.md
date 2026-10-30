@@ -33,7 +33,7 @@ Archived 20221201075921 · source: wiki.e3d-online.com/wiki/BigBox_Parts_Prepara
 
 ![Y-axis_rear.jpg](../docs/images/Y-axis_rear.jpg)
 
-BigBox Y-Axis Rear Brackets
+*BigBox Y-Axis Rear Brackets*
 
 Take care when fitting the 688-ZZ (*8mm ID x 16mm OD x 5mm W*) bearings into the Y-Axis rear brackets, check there is no plastic obstructing the recess. Secure with the bearing retainer. They can be a very tight fit and are easily pressed into the part by pushing against a flat surface, a desk for example.
 
@@ -55,7 +55,7 @@ Remove the backing from the Cork and affix to the printed part.
 
 ![Y-axis_front_brackets.jpg](../docs/images/Y-axis_front_brackets.jpg)
 
-BigBox Y-Axis Brackets
+*BigBox Y-Axis Brackets*
 
 The M4 Square Nuts can be easily fitted using an M4 x 30mm screw. Wind the nut on the screw and gently tap into place using a hammer. It is also recommended to use an M4 16mm screw the pull the nuts into position from behind.
 
@@ -77,7 +77,7 @@ Remove the backing from the Cork and affix to the printed part.
 
 ![Y-axis_belt_idler.jpg](../docs/images/Y-axis_belt_idler.jpg)
 
-BigBox Y-Axis Belt Idler
+*BigBox Y-Axis Belt Idler*
 
 Part-thread the 20 mm grub screw through the idler arms. Carefully, fit the washers and F-604-ZZ (*4mm ID x 12mm OD x 4mm W x 1mm F*) bearings over the screw between the arms of the printed part, in this order: *Washer-Bearing-Washer-Bearing-Washer.* Squash the part between your fingers when doing up the grub screw.
 
@@ -97,7 +97,7 @@ If you are building an older **Non-Titan** version and require Idlers arms \| [C
 
 ![X-Axis_idler.jpg](../docs/images/X-Axis_idler.jpg)
 
-X-Axis Idler
+*X-Axis Idler*
 
 Centre the LM8LUU (*8mm ID x 15mm OD x 45mm W*) bearing in the Idler.
 
@@ -119,7 +119,7 @@ Do not hit the bearing with a hammer.
 
 ![X-axis_motor.jpg](../docs/images/X-axis_motor.jpg)
 
-X-Axis Motor Mount
+*X-Axis Motor Mount*
 
 Centre the LM8LUU (*8mm ID x 15mm OD x 45mm W*) bearing in the Idler.
 
@@ -145,7 +145,7 @@ Assemble the Hybrid X-Carriage in the same way for both Hybrid Dual & Pro BigBox
 
 ![V1.1_x_carriage_m4.jpg](../docs/images/V1.1_x_carriage_m4.jpg)
 
-Nut.
+*Nut.*
 
 - 2 x M4 Square Nut (Bag 12).
 - 1 x Hybrid X-Carriage (Printed Parts).
@@ -154,13 +154,13 @@ Fit the nuts into the recesses in the X-Carriage.
 
 ![V1.1_x_carriage_m4_pull.jpg](../docs/images/V1.1_x_carriage_m4_pull.jpg)
 
-Pull through.
+*Pull through.*
 
 You can use an M4 16mm bolt to pull the nut into the recess.
 
 ![V1.1_x_carriage_m4_grub.jpg](../docs/images/V1.1_x_carriage_m4_grub.jpg)
 
-Grub Screws.
+*Grub Screws.*
 
 - 4 x M4 Square Nut (Bag 12).
 - 4 x M4 12mm Grub Screw (Bag 14).
@@ -169,7 +169,7 @@ Insert the four M4 Square nuts into the holes before screwing in the Grubs.
 
 ![V1.1_x_carriage_rings.jpg](../docs/images/V1.1_x_carriage_rings.jpg)
 
-O'Ring(s).
+*O'Ring(s).*
 
 - 2 x O-Ring (Extruder Box).
 
@@ -179,7 +179,7 @@ Fit the rings inside the X-Carriage.
 
 ![V1.1_x_carriage_m3_nut.jpg](../docs/images/V1.1_x_carriage_m3_nut.jpg)
 
-Nuts.
+*Nuts.*
 
 - 2 x M3 Square Nut (Bag 6).
 
@@ -189,7 +189,7 @@ Insert the nuts into the two holes on the X-Carriage.
 
 ![V1.1_x_carriage_m3_more_nut.jpg](../docs/images/V1.1_x_carriage_m3_more_nut.jpg)
 
-More Nuts.
+*More Nuts.*
 
 - 4 x M3 Square Nut (Bag 6).
 
@@ -197,7 +197,7 @@ Fit four nuts into the openings as shown.
 
 ![V1.1_x_carriage_m3_even_more_nuts.jpg](../docs/images/V1.1_x_carriage_m3_even_more_nuts.jpg)
 
-Even More Nuts.
+*Even More Nuts.*
 
 - 4 x M3 Square Nut (Bag 6).
 
@@ -205,7 +205,7 @@ Fit four nuts into the openings as shown.
 
 ![V1.1_x_carriage_mount.jpg](../docs/images/V1.1_x_carriage_mount.jpg)
 
-Clamp.
+*Clamp.*
 
 - 2 x M3 Square Nut (Bag 6).
 - 1 x Hybrid X-Carriage Rear Bearing Clamp (Printed Parts).
@@ -218,7 +218,7 @@ Insert the two M3 square nuts into the holes on the top of the X-Carriage Rear B
 
 ![Heated_bed_corner.jpg](../docs/images/Heated_bed_corner.jpg)
 
-A Heated bed corner.
+*A Heated bed corner.*
 
 Push the LM8LUU (*8mm ID x 15mm OD x 45mm W*) bearing into the printed part of the . It does not need to be centered.
 
@@ -232,7 +232,7 @@ Do not hit the bearings with a hammer.
 
 ![Spool_outer_rear_left_bracket.jpg](../docs/images/Spool_outer_rear_left_bracket.jpg)
 
-Spool Holder.
+*Spool Holder.*
 
 Add 634-ZZ (*4mm ID x 16mm OD x 5mm W*) bearings to the slot on each printed part *(Washer bearing bearing washer)*.
 
@@ -246,7 +246,7 @@ Build each side of the spool holder.
 
 ![Spool_outer_front_bracket.jpg](../docs/images/Spool_outer_front_bracket.jpg)
 
-An assembled holder.
+*An assembled holder.*
 
 **Note :** Requires **x2** for lite & Pro and **x4** for dual
 
@@ -260,7 +260,7 @@ If you are building an older **Non-Hybrid** Print Cooling Fan(s) \| [Click Here]
 
 ![Y_axis_motor_assembled.jpeg](../docs/images/Y_axis_motor_assembled.jpeg)
 
-The completed Y-Axis Motor assembly.
+*The completed Y-Axis Motor assembly.*
 
 Note the location of the Stepper Motor cable connector and the orientation of the pulley. Take care when removing the backing from the cork.
 
@@ -278,13 +278,13 @@ If you are building an older **Non-Hybrid** Single & Dual Direct-Drive IR Sensor
 
 ![Ir_sensor_pcb.jpg](../docs/images/Ir_sensor_pcb.jpg)
 
-IR Sensor.
+*IR Sensor.*
 
 The IR Sensor.
 
 ![Ir_sensor_pcb_assembled.jpg](../docs/images/Ir_sensor_pcb_assembled.jpg)
 
-IR Sensor Bracket.
+*IR Sensor Bracket.*
 
 Assemble as shown.
 
@@ -294,7 +294,7 @@ Assemble as shown.
 
 ![Spool_carrier_assembled.jpg](../docs/images/Spool_carrier_assembled.jpg)
 
-Picture of an Spool Clamp.
+*Picture of an Spool Clamp.*
 
 You will require two for a Dual BigBox, the extra 634-ZZ (*4mm ID x 16mm OD x 5mm W*) is in the Dual Extruder Box.
 
@@ -306,7 +306,7 @@ You will require two for a Dual BigBox, the extra 634-ZZ (*4mm ID x 16mm OD x 5m
 
 ![Z_drag_anchors.jpg](../docs/images/Z_drag_anchors.jpg)
 
-Z-Axis Drag Anchors.
+*Z-Axis Drag Anchors.*
 
 **Note :** These are from the other drag chain, which has both ends attached.
 
@@ -314,7 +314,7 @@ Z-Axis Drag Anchors.
 
 ![IED-switch.jpg](../docs/images/IED-switch.jpg)
 
-IEC Socket, Fuse & Switch.
+*IEC Socket, Fuse & Switch.*
 
 **If you are not comfortable or 100% certain of how to wire the IEC socket please seek the help and advice of a professional electrician.**
 
@@ -322,43 +322,43 @@ IEC Socket, Fuse & Switch.
 
 ![Iec_02.jpg](../docs/images/Iec_02.jpg)
 
-IEC & Link.
+*IEC & Link.*
 
 Plug the short Link Cable onto the IEC plug at the position marked L.
 
 ![Iec_03.jpg](../docs/images/Iec_03.jpg)
 
-Link Cable Connected.
+*Link Cable Connected.*
 
 Plug the other end of the Link Cable onto the switch as shown.
 
 ![Connect-live-brown.jpg](../docs/images/Connect-live-brown.jpg)
 
-Link cable tucked in.
+*Link cable tucked in.*
 
 Tuck the Link Cable into the IEC Housing as shown.
 
 ![Iec_05.jpg](../docs/images/Iec_05.jpg)
 
-The blue cable connected.
+*The blue cable connected.*
 
 Plug the blue Neutral IEC-PSU cable onto the IEC connector marked N as shown.
 
 ![IED-wiring-1.jpg](../docs/images/IED-wiring-1.jpg)
 
-The earth cable connected.
+*The earth cable connected.*
 
 Plug the yellow/green earth IEC-PSU cable onto the IEC connector as shown.
 
 ![Iec_07.jpg](../docs/images/Iec_07.jpg)
 
-Live connected.
+*Live connected.*
 
 Plug the brown IEC-PSU cable onto the switch as shown.
 
 ![IED-all-wires-twist.jpg](../docs/images/IED-all-wires-twist.jpg)
 
-The correct orientation.
+*The correct orientation.*
 
 Position the IEC-PSU cable as shown.
 

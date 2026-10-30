@@ -4,9 +4,9 @@ Rebuilt page · source: wiki.e3d-online.com/wiki/Mesh_Levelling_the_Non-Hybrid_D
 
 Recovered from an older version of Printer Commissioning (20160811132429), section "(9.2) Mesh Levelling the Dual" — the separate wiki page is not in the archive.
 
-*\[image not archived: Bedlevelling_paper.jpg\]*
+🖼️ \[image not archived: Bedlevelling_paper.jpg\]
 
-Mesh levelling.
+*Mesh levelling.*
 
 The Mesh levelling sequence performs a more accurate and consistent function that the standard Auto levelling used by the Pro & Lite versions.
 
@@ -16,9 +16,9 @@ If you are interested in the mechanics of the process there is a short paper wri
 
 To begin cut a short strip of paper.
 
-*\[image not archived: Bedlevelling_start.jpg\]*
+🖼️ \[image not archived: Bedlevelling_start.jpg\]
 
-Level Bed.
+*Level Bed.*
 
 Check the printer is clear of potential hazards.
 
@@ -26,15 +26,15 @@ Via the **Prepare** menu, select **Level Bed**.
 
 The BigBox will home X, Y & Z and then move to a position approximately X10, Y10.
 
-*\[image not archived: Bedlevelling_paper_next.jpg\]*
+🖼️ \[image not archived: Bedlevelling_paper_next.jpg\]
 
-Papered.
+*Papered.*
 
 Place the strip of paper under the left nozzle.
 
-*\[image not archived: Bedlevelling_lcd_adj.jpg\]*
+🖼️ \[image not archived: Bedlevelling_lcd_adj.jpg\]
 
-LCD.
+*LCD.*
 
 The LCD will display a value of 4.0.
 
@@ -44,33 +44,33 @@ Move the bed up so that the paper is just able to slide around under the nozzle.
 
 Push the knob to continue.
 
-*\[image not archived: Bedlevelling_next.jpg\]*
+🖼️ \[image not archived: Bedlevelling_next.jpg\]
 
-Next.
+*Next.*
 
 The Printhead will then move to the next position.
 
-*\[image not archived: Bedlevelling_next_adj.jpg\]*
+🖼️ \[image not archived: Bedlevelling_next_adj.jpg\]
 
-Adjust.
+*Adjust.*
 
 Place the paper under the nozzle again and adjust the bed's height as before.
 
-*\[image not archived: Bedlevelling_last.jpg\]*
+🖼️ \[image not archived: Bedlevelling_last.jpg\]
 
-Last one.
+*Last one.*
 
 There are a total of 9 points measured over the bed with the last being in the back right.
 
-*\[image not archived: Bedlevelling_home.jpg\]*
+🖼️ \[image not archived: Bedlevelling_home.jpg\]
 
-Home.
+*Home.*
 
 When the process has complete the Printhead will return to the home position, this time however **it will move to X5, Y5, Z4.** This can be seen on the LCD.
 
-*\[image not archived: Bedlevelling_store.jpg\]*
+🖼️ \[image not archived: Bedlevelling_store.jpg\]
 
-Store.
+*Store.*
 
 From the **Control** menu select **Store memory**.
 

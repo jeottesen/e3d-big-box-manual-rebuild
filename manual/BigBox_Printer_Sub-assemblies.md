@@ -49,7 +49,7 @@ If you are building an older **Non-Hybrid** Dual Direct-Drive Extruders \| [Clic
 
 ![1.1_titan_pinion.jpg](../docs/images/1.1_titan_pinion.jpg)
 
-Gear.
+*Gear.*
 
 Please refer to E3D's [Titan Assembly](Titan_Assembly.md "Titan Assembly") instructions.
 
@@ -69,7 +69,7 @@ Because we assemble this onto the frame, this step will be saved until the frame
 
 ![Non-titan-direct.jpg](../docs/images/Non-titan-direct.jpg)
 
-Non-Titan Direct Extruder.
+*Non-Titan Direct Extruder.*
 
 ## (6) Hybrid Non-Titan Extruder (Bowden)
 
@@ -81,7 +81,7 @@ Because we assemble this onto the frame, this step will be saved until the frame
 
 ![Assembled_x_axis.jpg](../docs/images/Assembled_x_axis.jpg)
 
-The assembled X-Axis.
+*The assembled X-Axis.*
 
 Place the previously assembled *[X-Axis Idler Carriage](BigBox_Parts_Preparation.md "BigBox Parts Preparation")* on it's back with the two holes facing upwards and into each of the two holes insert a 484mm rod.
 
@@ -95,19 +95,19 @@ Slide an LM8LUU (*8mm ID x 15mm OD x 45mm W*) bearing onto each rod. Now slide t
 
 ![Electronics_cover_barbs.jpg](../docs/images/Electronics_cover_barbs.jpg)
 
-M3 Microbarbs.
+*M3 Microbarbs.*
 
 Press the M3 Microbarbs into the Electronics Cover.
 
 ![Electronics_cover_fitting_fan.jpg](../docs/images/Electronics_cover_fitting_fan.jpg)
 
-Attach the fan.
+*Attach the fan.*
 
 Secure the fan to the electronics cover so air is drawn through the laser cut part.
 
 ![Electronics_cover_assembled.jpg](../docs/images/Electronics_cover_assembled.jpg)
 
-The completed cover.
+*The completed cover.*
 
 Attach the corners to the cover.
 
@@ -117,7 +117,7 @@ Attach the corners to the cover.
 
 ![Assembled_spool_carrier.jpg](../docs/images/Assembled_spool_carrier.jpg)
 
-A complete Spool Carrier
+*A complete Spool Carrier*
 
 **Note :** The Dual BigBox requires two Spool Carriers.
 
@@ -125,7 +125,7 @@ A complete Spool Carrier
 
 ![Fitted_brass_nut.jpg](../docs/images/Fitted_brass_nut.jpg)
 
-Brass Nut. Shown with engraved text down.
+*Brass Nut. Shown with engraved text down.*
 
 - 2 x Brass Nuts (Motion Box).
 - 8 x M3 10mm Screws (Bag 8).
@@ -139,7 +139,7 @@ Install the two Brass Nuts to the Top layer of the heated bed.
 
 ![Lock_nut.jpg](../docs/images/Lock_nut.jpg)
 
-M3 Nyock Nut.
+*M3 Nyock Nut.*
 
 - 1 x M3 Nylock Nut (Bag 15).
 
@@ -147,7 +147,7 @@ Place the nylock nut onto the top of the heated bed (the opposite side to the br
 
 ![Corner_nut_trap.jpg](../docs/images/Corner_nut_trap.jpg)
 
-Corner Nut Trap.
+*Corner Nut Trap.*
 
 - 1 x Corner Nut Traps (Laser Cut Part).
 
@@ -155,7 +155,7 @@ Place the Corner Nut Trap over the nylock nut.
 
 ![Corner_top.jpg](../docs/images/Corner_top.jpg)
 
-Corner Top.
+*Corner Top.*
 
 - 1 x Corner Top (Laser Cut Part).
 
@@ -163,7 +163,7 @@ Place the Corner Top over the Corner Nut Trap.
 
 ![Corner_top_complete.jpg](../docs/images/Corner_top_complete.jpg)
 
-Screwed corner.
+*Screwed corner.*
 
 - 3 x M3 18mm Screws (Bag 8).
 - 3 x M3 Lock-Washers (Bag 6).
@@ -173,7 +173,7 @@ Secure the corner with the M3 screws, washers and nuts.
 
 ![Corner_top_20mm.jpg](../docs/images/Corner_top_20mm.jpg)
 
-M3 20mm.
+*M3 20mm.*
 
 - 1 x M3 20mm Screw (Bag 9).
 
@@ -181,25 +181,25 @@ Insert the M3 screw from the underneath of the Top layer.
 
 ![Corner_top_20mm_showing.jpg](../docs/images/Corner_top_20mm_showing.jpg)
 
-The Screw coming out the corner.
+*The Screw coming out the corner.*
 
 Tighten the M3 screw so the top protrudes from the corner.
 
 ![Finished_top.jpg](../docs/images/Finished_top.jpg)
 
-The finished top layer.
+*The finished top layer.*
 
 Repeat the process for the other three corners.
 
 ![Bottom_layer.jpg](../docs/images/Bottom_layer.jpg)
 
-Bottom Layer.
+*Bottom Layer.*
 
 Place the bottom layer onto a small box or other item to raise it off your worktop.
 
 ![Insert_corner.jpg](../docs/images/Insert_corner.jpg)
 
-Corners.
+*Corners.*
 
 - 4 x *[Bed Corners](BigBox_Parts_Preparation.md "BigBox Parts Preparation")*.
 
@@ -207,13 +207,13 @@ Insert the four corners into the bottom layer.
 
 ![All_corners.jpg](../docs/images/All_corners.jpg)
 
-Four Corners.
+*Four Corners.*
 
 Align the corners as shown.
 
 ![Insert_supports.jpg](../docs/images/Insert_supports.jpg)
 
-Supports.
+*Supports.*
 
 - 4 x Large Struts (Laser Cut Part).
 - 2 x Medium Struts (Laser Cut Part).
@@ -223,7 +223,7 @@ Slot the struts into the bottom layer.
 
 ![Ends_x.jpg](../docs/images/Ends_x.jpg)
 
-Centres.
+*Centres.*
 
 - 2 x Drive Supports (Printed Parts).
 
@@ -231,7 +231,7 @@ Place the two Drive Supports so they slot into the two Struts.
 
 ![Insert_screws.jpg](../docs/images/Insert_screws.jpg)
 
-Screws.
+*Screws.*
 
 - 1 x Completed Top layer.
 - 15 x M3 35mm Screws (Bag 11).
@@ -248,7 +248,7 @@ Fit the M3 screws through the bed, from the top. **Do not over-tighten the screw
 
 ![Position_bearings.jpg](../docs/images/Position_bearings.jpg)
 
-Leveling the bearings.
+*Leveling the bearings.*
 
 The four bearings need to be moved so that the top of the bearings are level with the top of the screws. Using a ruler can help with the alignment.
 
@@ -258,7 +258,7 @@ When in position tighten the bearing clamps.
 
 ![Bed_standoffs.jpg](../docs/images/Bed_standoffs.jpg)
 
-Stand-Off.
+*Stand-Off.*
 
 - 4 x M3 15mm Female-Female Stand-Offs (Bag 16).
 
@@ -266,7 +266,7 @@ Screw four 15mm Stand-Off on each corner. Do not screw them all the way down, le
 
 ![Bed.jpg](../docs/images/Bed.jpg)
 
-Bed.
+*Bed.*
 
 - 1 x Variable Power Density Heated Bed PCB.
 
@@ -276,7 +276,7 @@ Place the Heated Bed PCB onto the Bed assembly.
 
 ![Bed_fixings.jpg](../docs/images/Bed_fixings.jpg)
 
-Bed Corner.
+*Bed Corner.*
 
 - 8 x M3 Washers (Bag 7).
 - 4 x M3 6mm Screws (Bag 7).
@@ -285,7 +285,7 @@ Secure each corner of the PCB to the Bed assembly using 2 x M3 washers and a M3 
 
 ![Bed_attached.jpg](../docs/images/Bed_attached.jpg)
 
-Secured PCB.
+*Secured PCB.*
 
 The Heated Bed PCB correctly installed to the Z-Axis Bed assembly.
 
@@ -293,7 +293,7 @@ The Heated Bed PCB correctly installed to the Z-Axis Bed assembly.
 
 ![Z_drag_parts.jpg](../docs/images/Z_drag_parts.jpg)
 
-Components.
+*Components.*
 
 - 1 x Drag Chain (Motion Box).
 - 2 x *[Z-Axis Drag Chain Anchors.](BigBox_Parts_Preparation.md "BigBox Parts Preparation")*
@@ -301,31 +301,31 @@ Components.
 
 ![Z_drag_end.jpg](../docs/images/Z_drag_end.jpg)
 
-Match Ends.
+*Match Ends.*
 
 Select the Heated Bed Drag Anchor (shown in the image) and match it to the corresponding end of the Drag Chain.
 
 ![Z_drag_end_feed.jpg](../docs/images/Z_drag_end_feed.jpg)
 
-Cable Ends.
+*Cable Ends.*
 
 Feed the end of the wires through the Drag Chain.
 
 ![Z_drag_end_through.jpg](../docs/images/Z_drag_end_through.jpg)
 
-Wires through the Drag Chain.
+*Wires through the Drag Chain.*
 
 Pull the cable fully through.
 
 ![Z_drag_end_attached.jpg](../docs/images/Z_drag_end_attached.jpg)
 
-End attached.
+*End attached.*
 
 Reattach the Heated Bed Drag Chain Anchor.
 
 ![Z_drag_complete.jpg](../docs/images/Z_drag_complete.jpg)
 
-Finished.
+*Finished.*
 
 To finish the Drag Chain reattach the remaining anchor to the chain.
 
@@ -339,7 +339,7 @@ Before you can start to build the base plate you will need to install a selectio
 
 ![Feet_microbarb.jpg](../docs/images/Feet_microbarb.jpg)
 
-Microbarb feet fitment positions.
+*Microbarb feet fitment positions.*
 
 Fitment pattern for the Feet.
 
@@ -347,7 +347,7 @@ M3 Microbarbs (Bag 5)
 
 ![Rumba_microbarb.jpg](../docs/images/Rumba_microbarb.jpg)
 
-Microbarb Rumba & PT100 fitment positions.
+*Microbarb Rumba & PT100 fitment positions.*
 
 Fitment pattern for the Rumba & PT100(s).
 
@@ -355,7 +355,7 @@ M3 Microbarbs (Bag 5)
 
 ![Rpi_microbarb.jpg](../docs/images/Rpi_microbarb.jpg)
 
-Microbarb Raspberry Pi & DC/DC Converter.
+*Microbarb Raspberry Pi & DC/DC Converter.*
 
 Fitment pattern for the Raspberry Pi & DC/DC Converter, only applicable if you have the OctoPrint upgrade.
 
@@ -365,13 +365,13 @@ Don't worry if the smallest inserts don't stay put (found to happen with acrylic
 
 ![Base_microbarb.jpg](../docs/images/Base_microbarb.jpg)
 
-Microbarb inserted.
+*Microbarb inserted.*
 
 Be careful hammering the microbarbs into place, it is possible to crack the acrylic. You can use a nylon spacer and an appropriate size screw to pull them into place. A 3/16 socket is ideal in place of a nylon spacer.
 
 ![All_base_microbarb.jpg](../docs/images/All_base_microbarb.jpg)
 
-All fitted.
+*All fitted.*
 
 All brass inserts fitted.
 
@@ -381,7 +381,7 @@ All brass inserts fitted.
 
 ![Adding_microbarbs.jpg](../docs/images/Adding_microbarbs.jpg)
 
-Adding the feet
+*Adding the feet*
 
 - 8 x M3 10mm Screws (Bag 8).
 - 8 x Printed Feet (Printed Parts Box).
@@ -390,7 +390,7 @@ Begin by fixing the feet to the base with 8 x M3 10mm screws.
 
 ![Footed.jpg](../docs/images/Footed.jpg)
 
-Fully Booted.
+*Fully Booted.*
 
 All eight Feet attached to the base.
 
@@ -398,7 +398,7 @@ All eight Feet attached to the base.
 
 ![Psu_screw.jpg](../docs/images/Psu_screw.jpg)
 
-Screw the PSU.
+*Screw the PSU.*
 
 - 4 x M3 12mm (Bag 9).
 - 4 x 5mm Nylon Spacers (Bag 1).
@@ -407,13 +407,13 @@ Push the screws from the underside of the base through the nylon spacer and into
 
 ![Position_psu_spacer.jpg](../docs/images/Position_psu_spacer.jpg)
 
-Nylon Spacer.
+*Nylon Spacer.*
 
 Use an Allen Key to help position the spacers between the PSU and Base.
 
 ![Position_psu_switch.jpg](../docs/images/Position_psu_switch.jpg)
 
-Power Selector.
+*Power Selector.*
 
 Check the [mains A/C power supply in your country](https://en.wikipedia.org/wiki/Mains_electricity_by_country) and move the switch to match.
 
@@ -421,7 +421,7 @@ Check the [mains A/C power supply in your country](https://en.wikipedia.org/wiki
 
 ![Fixed_psu.jpg](../docs/images/Fixed_psu.jpg)
 
-Mounted PSU.
+*Mounted PSU.*
 
 PSU Completed.
 
@@ -429,7 +429,7 @@ PSU Completed.
 
 ![Stand_offs.jpg](../docs/images/Stand_offs.jpg)
 
-Mounted PSU.
+*Mounted PSU.*
 
 - 4 x M3 20mm Black Nylon Stand-Off.
 
@@ -437,13 +437,13 @@ Mountings for the Rumba (Bag 1).
 
 ![Stand_offs_fitted.jpg](../docs/images/Stand_offs_fitted.jpg)
 
-Rumba Posts.
+*Rumba Posts.*
 
 Mountings for the Rumba.
 
 ![Rumba_fitted.jpg](../docs/images/Rumba_fitted.jpg)
 
-Rumba Posts.
+*Rumba Posts.*
 
 - 4 x M3 6mm Screws (Fixings correction bag, in the Stretch box).
 
@@ -455,7 +455,7 @@ Fix the Rumba to the posts.
 
 ![Single_pt100-amp.jpg](../docs/images/Single_pt100-amp.jpg)
 
-PT100 & Cable.
+*PT100 & Cable.*
 
 A PT100 Amplifier Board. (Extruder Box)
 
@@ -463,7 +463,7 @@ Single Amplifier Cable. (Extruder Box)
 
 ![Fitted_single_pt100-amp.jpg](../docs/images/Fitted_single_pt100-amp.jpg)
 
-A fitted PT100 Amp.
+*A fitted PT100 Amp.*
 
 - 4 x M3 12mm (Bag 9).
 - 4 x 5mm Nylon Spacer (Bag 1).
@@ -474,7 +474,7 @@ Fit the Amplifier to the Base board with the white PT100 Cable connector facing 
 
 ![Dual_pt100-amp.jpg](../docs/images/Dual_pt100-amp.jpg)
 
-Dual PT100 & Cable.
+*Dual PT100 & Cable.*
 
 Two PT100 Amplifier Board.
 
@@ -482,7 +482,7 @@ Dual Amplifier Cable.
 
 ![Fitted_dual_pt100-amp.jpg](../docs/images/Fitted_dual_pt100-amp.jpg)
 
-A fitted PT100 Amp.
+*A fitted PT100 Amp.*
 
 - 8 x M3 12mm (Bag 9).
 - 8 x 5mm Nylon Spacer (Bag 1).
@@ -493,7 +493,7 @@ Fit the Amplifier to the Base board with the white PT100 Cable connector facing 
 
 ![Cable_tie.jpg](../docs/images/Cable_tie.jpg)
 
-Cable Tie.
+*Cable Tie.*
 
 - 1 x Cable Tie (Bag 1).
 
@@ -501,37 +501,37 @@ Fit a cable tie through the base board.
 
 ![Iec_leads.jpg](../docs/images/Iec_leads.jpg)
 
-Cables.
+*Cables.*
 
 - 2 x IEC to Rumba Cable (Electronics Box).
 
 ![Iec_end.jpg](../docs/images/Iec_end.jpg)
 
-Tinned Ends.
+*Tinned Ends.*
 
 Check the Polarity of the cables. Red / Positive + \| Black / Negative -
 
 ![Iec_leads_terminals.jpg](../docs/images/Iec_leads_terminals.jpg)
 
-Screw Terminals.
+*Screw Terminals.*
 
 Clamp down the wires by tightening the screw terminals.
 
 ![Dual_iec_leads_terminals.jpg](../docs/images/Dual_iec_leads_terminals.jpg)
 
-Both wires.
+*Both wires.*
 
 Both power cables fitted.
 
 ![Both_iec_leads_terminals.jpg](../docs/images/Both_iec_leads_terminals.jpg)
 
-Terminal Ends.
+*Terminal Ends.*
 
 Terminals ends.
 
 ![Screwed_terminals.jpg](../docs/images/Screwed_terminals.jpg)
 
-Connected to the PSU.
+*Connected to the PSU.*
 
 Connect the cable to the PSU.
 
@@ -539,13 +539,13 @@ Connect the cable to the PSU.
 
 ![Both_connected_terminals.jpg](../docs/images/Both_connected_terminals.jpg)
 
-Both cables.
+*Both cables.*
 
 Check the cables are correctly positioned.
 
 ![Cable_tied_wires.jpg](../docs/images/Cable_tied_wires.jpg)
 
-Cable Tied.
+*Cable Tied.*
 
 Secure the cables with the Cable Tie.
 
@@ -555,13 +555,13 @@ Secure the cables with the Cable Tie.
 
 ![Single_pt100_wire.jpg](../docs/images/Single_pt100_wire.jpg)
 
-Single PT100.
+*Single PT100.*
 
 Connect the cable to the PT100.
 
 ![Single_pt100_wire-to_rumba.jpg](../docs/images/Single_pt100_wire-to_rumba.jpg)
 
-Plugged to Rumba.
+*Plugged to Rumba.*
 
 Connect the cable to the Rumba.
 
@@ -573,13 +573,13 @@ Connect the cable to the Rumba.
 
 ![Dual_pt100_wire.jpg](../docs/images/Dual_pt100_wire.jpg)
 
-Single PT100.
+*Single PT100.*
 
 Connect the cable to the PT100. Note the different colours of the two cables connected to the PT100 boards
 
 ![Dual_pt100_wire-to_rumba.jpg](../docs/images/Dual_pt100_wire-to_rumba.jpg)
 
-Plugged to Rumba.
+*Plugged to Rumba.*
 
 Connect the cable to the Rumba.
 
@@ -593,7 +593,7 @@ Connect the cable to the Rumba.
 
 ![Pi_parts.jpg](../docs/images/Pi_parts.jpg)
 
-Raspberry Pi.
+*Raspberry Pi.*
 
 - Raspberry Pi.
 - DC/DC Converter.
@@ -604,7 +604,7 @@ Remove the Raspberry Pi and DC/DC Converter from their packaging.
 
 ![Dc_converter.jpg](../docs/images/Dc_converter.jpg)
 
-DC/DC Converter.
+*DC/DC Converter.*
 
 - 4 x M2 12mm (Bag 3).
 - 4 x 5mm Nylon Spacers (Bag 1).
@@ -613,7 +613,7 @@ Attach the DC/DC Converter to the Base with the screw terminals facing towards t
 
 ![Pi_fitted.jpg](../docs/images/Pi_fitted.jpg)
 
-Raspberry Pi.
+*Raspberry Pi.*
 
 - 4 x M2.5 12mm (Bag 4).
 - 4 x 5mm Nylon Spacers (Bag 1).
@@ -622,7 +622,7 @@ Attach the Raspberry Pi to the Base with the USB Ports facing towards the Rumba.
 
 ![Pi_wires.jpg](../docs/images/Pi_wires.jpg)
 
-Cables.
+*Cables.*
 
 - 1 x USB A To Micro B.
 - 1 x USB A To Mini B.
@@ -632,7 +632,7 @@ Cables for the Pi installation.
 
 ![Cable_ties_pi.jpg](../docs/images/Cable_ties_pi.jpg)
 
-Cable Ties.
+*Cable Ties.*
 
 - 3 x Cable Ties (Bag 1).
 
@@ -640,25 +640,25 @@ Pass cable ties through the holes in the base at the front near the Rumba.
 
 ![Blue_usb_mini.jpg](../docs/images/Blue_usb_mini.jpg)
 
-USB Mini B to Rumba.
+*USB Mini B to Rumba.*
 
 Plug the USB Mini B into the Rumba.
 
 ![Blue_usb_a.jpg](../docs/images/Blue_usb_a.jpg)
 
-USB A to Pi.
+*USB A to Pi.*
 
 Plug the other end into the Raspberry Pi.
 
 ![Micro_usb.jpg](../docs/images/Micro_usb.jpg)
 
-USB A to Micro USB.
+*USB A to Micro USB.*
 
 Connect the white USB A to Micro B between the Raspberry Pi and DC/DC Converter.
 
 ![Black_red.jpg](../docs/images/Black_red.jpg)
 
-Red & Black Wire.
+*Red & Black Wire.*
 
 Plug the Red\|Black Wire onto the Rumba.
 
@@ -668,7 +668,7 @@ The Red wire plug to the outer pin with the Black wire inwards. The printing on 
 
 ![Wires_to_dc.jpg](../docs/images/Wires_to_dc.jpg)
 
-Wires in the DC/DC Converter.
+*Wires in the DC/DC Converter.*
 
 Affix the other end of the cable to the DC/DC Converter.
 
@@ -676,7 +676,7 @@ Affix the other end of the cable to the DC/DC Converter.
 
 ![Wired.jpg](../docs/images/Wired.jpg)
 
-Cable Management.
+*Cable Management.*
 
 Strap down the cables using the three previously fitted Cable Ties.
 
@@ -684,7 +684,7 @@ Strap down the cables using the three previously fitted Cable Ties.
 
 ![Z_cables.jpg](../docs/images/Z_cables.jpg)
 
-Motor Cables.
+*Motor Cables.*
 
 Due to an unfortunate miss-communication the cables for the Z-Axis Motors have not been prepared correctly.
 
@@ -692,13 +692,13 @@ Luckily this isn't too much of a problem to fix and we'll show you how to do it!
 
 ![Wire_in_motor.jpg](../docs/images/Wire_in_motor.jpg)
 
-Plug one in.
+*Plug one in.*
 
 Get a spare Stepper Motor and plug one of the cables into it. (1.8 Degree, 200 Step)
 
 ![Split_pairs.jpg](../docs/images/Split_pairs.jpg)
 
-Pairs.
+*Pairs.*
 
 Split the pairs.
 
@@ -708,7 +708,7 @@ Red & Blue.
 
 ![Twist_pairs.jpg](../docs/images/Twist_pairs.jpg)
 
-Twist.
+*Twist.*
 
 Twist the first pair together.
 
@@ -716,55 +716,55 @@ You might find it easier to wedge the motor somewhere while you twist.
 
 ![Twist_hold.jpg](../docs/images/Twist_hold.jpg)
 
-Hold Twist.
+*Hold Twist.*
 
 Leave the end of the wires un-twisted.
 
 ![Secure_pairs.jpg](../docs/images/Secure_pairs.jpg)
 
-A little tape.
+*A little tape.*
 
 Wrap a little bit of tape around the end to stop the wires coming undone.
 
 ![Done_pairs.jpg](../docs/images/Done_pairs.jpg)
 
-Finished Cable.
+*Finished Cable.*
 
 Repeat with the other pair.
 
 ![Both_pairs.jpg](../docs/images/Both_pairs.jpg)
 
-Two Cables.
+*Two Cables.*
 
 Make another cable.
 
 ![Join_pairs.jpg](../docs/images/Join_pairs.jpg)
 
-Twisted together.
+*Twisted together.*
 
 Now take the two Motor Cable and twist similarly coloured wires together.
 
 ![Loosen.jpg](../docs/images/Loosen.jpg)
 
-Unscrew.
+*Unscrew.*
 
 On the Rumba undo the 9th, 10th, 11th and 12th screw terminals. They are for the Z-Axis.
 
 ![Join_black.jpg](../docs/images/Join_black.jpg)
 
-Fit Black.
+*Fit Black.*
 
 Insert the black wires in the connector.
 
 ![Join_rest.jpg](../docs/images/Join_rest.jpg)
 
-The rest.
+*The rest.*
 
 Insert the remaining wires in the connector and tighten down the screws.
 
 ![Route.jpg](../docs/images/Route.jpg)
 
-Cables.
+*Cables.*
 
 Route the Z-Axis Motor Cables under the Rumba with a cable running out from underneath each side.
 
@@ -772,7 +772,7 @@ They will be plugged into the Stepper Motors at a later stage.
 
 ![Completed_base.jpg](../docs/images/Completed_base.jpg)
 
-Completed.
+*Completed.*
 
 All done.
 
@@ -804,63 +804,63 @@ An M3 Square Nut Pressed into a Nut Trap.
 
 ![Frame-Assembly-stage-1.JPG](../docs/images/Frame-Assembly-stage-1.JPG)
 
-Laser cut frame parts.
+*Laser cut frame parts.*
 
 If you have opted to upgrade to an Acrylic frame you will need to remove the protective covering on each part as you come to use it.
 
 ![Left_and_right_upper_frame_supports.JPG](../docs/images/Left_and_right_upper_frame_supports.JPG)
 
-the right side support has square hole in rear right corner
+*the right side support has square hole in rear right corner*
 
 Ensure you have the correct pieces (they will only fit one way into the frame sides).
 
 ![Left_frame_side_and_left_frame_support.JPG](../docs/images/Left_frame_side_and_left_frame_support.JPG)
 
-joining left upper support to left side panel (marked 'L'
+*joining left upper support to left side panel (marked 'L'*
 
 ![Frame_lug_tightening.JPG](../docs/images/Frame_lug_tightening.JPG)
 
-hold square nut into place in frame lug, and affix with 18mm screw
+*hold square nut into place in frame lug, and affix with 18mm screw*
 
 Attach the left upper-support to the left-side panel at the 4 frame connection points.
 
 ![Right_side_of_BigBox_frame.JPG](../docs/images/Right_side_of_BigBox_frame.JPG)
 
-right upper support and right side of BigBox frame
+*right upper support and right side of BigBox frame*
 
 Attach the right upper-support to the right-side panel. (There are 5 connections on this side.).
 
 ![Sides_and_lower_support.JPG](../docs/images/Sides_and_lower_support.JPG)
 
-right upper support and right side of BigBox frame
+*right upper support and right side of BigBox frame*
 
 Place the two sides front-face down on the worktop. Attach the lower-support to the right-side. Attach the left-side to the lower-support.
 
 ![Lower_support_on.JPG](../docs/images/Lower_support_on.JPG)
 
-caption
+*caption*
 
 Once attached, it should look like this.
 
 ![Fix_sides_into_back_panel.JPG](../docs/images/Fix_sides_into_back_panel.JPG)
 
-Attach back panel - numbers facing inward
+*Attach back panel - numbers facing inward*
 
 Attach the back-panel to the frame. Overhang the edge of the worktop slightly to attach the first few frame lugs to hold into position..
 
 ![Frame_so_far.JPG](../docs/images/Frame_so_far.JPG)
 
-caption
+*caption*
 
 Pick the frame up and set it upright on the worktop.
 
 ![BigBox_frame_fronts.JPG](../docs/images/BigBox_frame_fronts.JPG)
 
-frame front parts - Left and Right - 'belt tensioner' text faces outwards
+*frame front parts - Left and Right - 'belt tensioner' text faces outwards*
 
 ![Frame_front_half_attached.JPG](../docs/images/Frame_front_half_attached.JPG)
 
-Don't attach frame lugs above lower support.
+*Don't attach frame lugs above lower support.*
 
 Attach the right-front to the frame. Do not put screws into the frame above the level of the lower-support. Attach the left-front to the frame.
 
@@ -872,13 +872,13 @@ Do take care after this to remember that this front section is NOT fully attache
 
 ![Laser_cut_lcd_parts.jpeg](../docs/images/Laser_cut_lcd_parts.jpeg)
 
-LCD laser-cut parts.
+*LCD laser-cut parts.*
 
 Gather the 5 Laser Cut parts which compose the LCD panel.
 
 ![Lcd_cable_plugs.jpeg](../docs/images/Lcd_cable_plugs.jpeg)
 
-LCD cable plugs.
+*LCD cable plugs.*
 
 Newer screen have already had their sockets swapped around. Please compare with the image below to see if they have already been swapped for you.
 
@@ -888,19 +888,19 @@ You can use a flat-tip screwdriver to help ease them up.
 
 ![Correct_cable_plugs.jpeg](../docs/images/Correct_cable_plugs.jpeg)
 
-Correctly orientated plugs.
+*Correctly orientated plugs.*
 
 This is how the plugs should be orientated.
 
 ![Lcd_wires.jpeg](../docs/images/Lcd_wires.jpeg)
 
-LCD.
+*LCD.*
 
 Remove the tag on the buzzer and peel off the protective film from the LCD. Refit the cables to the back of the LCD.
 
 ![Lcd_front_with_screws.jpg](../docs/images/Lcd_front_with_screws.jpg)
 
-The LCD front panel.
+*The LCD front panel.*
 
 - 4 x M3 25mm (Bag 7)
 - 4 x M3 8mm Spacers (Bag 1).
@@ -909,7 +909,7 @@ Fit the screws in the LCD mounting holes and place the LCD-front face-down on yo
 
 ![Lcd_screwed.jpeg](../docs/images/Lcd_screwed.jpeg)
 
-The LCD secured to the LCD front panel.
+*The LCD secured to the LCD front panel.*
 
 - 4 x M3 Lock Washer (Bag 6).
 - 4 x M3 Hex half Nuts (Bag 5).
@@ -920,7 +920,7 @@ The LCD cables can be removed for assembly.
 
 ![Lcd_sides.jpeg](../docs/images/Lcd_sides.jpeg)
 
-The LCD sides.
+*The LCD sides.*
 
 - M3 Square Nuts Fit into the Nut Traps (Bag 6).
 - M3 18mm Screws Secure the Nut Traps to the frame (Bag 8).
@@ -929,7 +929,7 @@ Fit the sides, top and lower sections to the LCD front. Note the opening for the
 
 ![Lcd_sd.jpeg](../docs/images/Lcd_sd.jpeg)
 
-The LCD showing the SD slot.
+*The LCD showing the SD slot.*
 
 Fit the Top and Bottom panels to the LCD Enclosure.
 
@@ -937,7 +937,7 @@ Check the position of the left side to ensure the opening lines up with the SD s
 
 ![Lcd_assembly.jpeg](../docs/images/Lcd_assembly.jpeg)
 
-The completed LCD.
+*The completed LCD.*
 
 The LCD is now complete.
 
