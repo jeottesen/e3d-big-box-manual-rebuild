@@ -13,13 +13,11 @@ Archived 20220930194123 · source: wiki.e3d-online.com/wiki/Dual_Direct-Drive_Pr
 - [(20.7) Cable Management.](#207-cable-management)
 - [(20.8) Rear Spine.](#208-rear-spine)
 
-🖼️ \[image not archived: PRINT-HEAD\_(DUAL).jpg\]
+*\[image not archived: "PRINT-HEAD\_(DUAL).jpg"\]*
 
 ## (20.1) Fitting the Dual Extruders.
 
-🖼️ \[image not archived: Dual_extru_fit.jpg\]
-
-*Duals.*
+*\[image not archived: "Dual_extru_fit.jpg" Caption: "Duals."\]*
 
 - 4 x M4 16mm Screws (Bag 14).
 
@@ -27,9 +25,7 @@ Position the previously assembled [Dual Extruder](BigBox_Printer_Sub-assemblies.
 
 Secure using the M4 Screws.
 
-🖼️ \[image not archived: Dual_extru_fan.jpg\]
-
-*Fan.*
+*\[image not archived: "Dual_extru_fan.jpg" Caption: "Fan."\]*
 
 - 2 x M3 Square Nuts (Bag 6).
 
@@ -37,17 +33,13 @@ Slide one of the previously assembled [Print Cooling Fans](BigBox_Parts_Preparat
 
 Affix with the Nuts.
 
-🖼️ \[image not archived: Dual_extru_fan_thread.jpg\]
-
-*Fan.*
+*\[image not archived: "Dual_extru_fan_thread.jpg" Caption: "Fan."\]*
 
 **Tip**: The Square nut at the back can be a little tricky to get on. I find removing the lock washer from the M3 Screw and refitting gives a little more thread to grip onto. Use tweezers to hold the nut.
 
 Once the nut is in remove the Screw again, pop back on the lock washer and carry on...
 
-🖼️ \[image not archived: Dual_extru_fans.jpg\]
-
-*Fan.*
+*\[image not archived: "Dual_extru_fans.jpg" Caption: "Fan."\]*
 
 - 4 x M3 Square Nuts (Bag 6).
 
@@ -82,9 +74,7 @@ Thread the Heater-Block onto the Heat-Break.
 
 The top of the Heater-Block needs to be level with the end of the Heat-Break thread.
 
-🖼️ \[image not archived: Ptfe_cut_66.jpg\]
-
-*Measured to length.*
+*\[image not archived: "Ptfe_cut_66.jpg" Caption: "Measured to length."\]*
 
 - 1 x PTFE Tube (Extruder Box, Hotend Bag).
 
@@ -104,23 +94,17 @@ Fit the Nozzle to the Heater-Block, push in the Bowden Clip and insert the PTFE 
 
 Raise the Bowden Clip out the top of the HotEnd while making sure the PTFE stays pushed down. Doing this will stop the PTFE moving around and help prevent blockages.
 
-🖼️ \[image not archived: Two_v6.jpg\]
-
-*Two.*
+*\[image not archived: "Two_v6.jpg" Caption: "Two."\]*
 
 You'll need to assemble two HotEnds.
 
 ## (20.3) Installing the HotEnds.
 
-🖼️ \[image not archived: Fit_v6.jpg\]
-
-*Align.*
+*\[image not archived: "Fit_v6.jpg" Caption: "Align."\]*
 
 (20.3.1) Align the PTFE with the hole in the X-Carriage.
 
-🖼️ \[image not archived: Fitted_v6.jpg\]
-
-*Fit.*
+*\[image not archived: "Fitted_v6.jpg" Caption: "Fit."\]*
 
 Push in the HotEnd.
 
@@ -128,9 +112,7 @@ Do not push in the HotEnd while holding the Heater Block.
 
 **Note**: If the HotEnd will not push in all the way, check the grub screws are not stopping it.
 
-🖼️ \[image not archived: Both_v6_pushed_in.jpg\]
-
-*Adjust.*
+*\[image not archived: "Both_v6_pushed_in.jpg" Caption: "Adjust."\]*
 
 Insert the other HotEnd.
 
@@ -138,29 +120,21 @@ Make sure they are fully inserted.
 
 **Check the orientation of each HotEnd so they match up with what is shown in the image.**
 
-🖼️ \[image not archived: Grub_v6_front.jpg\]
-
-*Tighten.*
+*\[image not archived: "Grub_v6_front.jpg" Caption: "Tighten."\]*
 
 Tighten up the Grub Screws holding in the HotEnds.
 
-🖼️ \[image not archived: Grub_v6_back.jpg\]
-
-*Tighten.*
+*\[image not archived: "Grub_v6_back.jpg" Caption: "Tighten."\]*
 
 Do not forget the rear grub screw.
 
 **Note**: When tightening the grub screws try to make the tightening as even as possible between the front and rear grubs, too much on one grub could cause the HotEnds to be positioned at and angle. You will also need to make sure the left nozzle is slightly higher than the right. This is done to make the nozzle alignment process in the commissioning stage a little easier.
 
-🖼️ \[image not archived: Grub_v6_match.jpg\]
-
-*Level.*
+*\[image not archived: "Grub_v6_match.jpg" Caption: "Level."\]*
 
 Both HoteEnds should be at a similar height with the left extruder slightly higher.
 
-🖼️ \[image not archived: V6_cables.jpg\]
-
-*PT100 & Heater.*
+*\[image not archived: "V6_cables.jpg" Caption: "PT100 & Heater."\]*
 
 - 1 x PT100 (Extruder Box).
 - 1 x Heater Cartridge (Extruder Box).
@@ -173,23 +147,17 @@ Secure using the provided grub and button head screw.
 
 **Note**: Align the Heater Cartridge with the wires in a vertical configuration.
 
-🖼️ \[image not archived: V6_wires.jpg\]
-
-*Bend.*
+*\[image not archived: "V6_wires.jpg" Caption: "Bend."\]*
 
 Bend the Heater Cartridge cables as shown.
 
 **Do not bend the PT100 wire.**
 
-🖼️ \[image not archived: V6_wires_up.jpg\]
-
-*Run.*
+*\[image not archived: "V6_wires_up.jpg" Caption: "Run."\]*
 
 Pass the cables up through between the GT2 Belt and the 8mm Rod.
 
-🖼️ \[image not archived: V6_wires_cable.jpg\]
-
-*Cable Tie.*
+*\[image not archived: "V6_wires_cable.jpg" Caption: "Cable Tie."\]*
 
 - 1 x Cable Tie (Bag 1).
 
@@ -209,9 +177,7 @@ NOTE that there is a slight cutout (chamfer) on the (blue) fan shroud. This cuto
 
 Assemble the other Fan with the wires coming out from the other side.
 
-🖼️ \[image not archived: Hotends_fan_on.jpg\]
-
-*Fans.*
+*\[image not archived: "Hotends_fan_on.jpg" Caption: "Fans."\]*
 
 Clip the Fan to the HotEnd.
 
@@ -225,25 +191,19 @@ Repeat the last few stages for the other HotEnd.
 
 **Note**: Check the wires against the photo.
 
-🖼️ \[image not archived: Hotend_wiring.jpg\]
-
-*Wired.*
+*\[image not archived: "Hotend_wiring.jpg" Caption: "Wired."\]*
 
 Secure the wires with cable Ties.
 
 ## (20.4) IR Sensor Cable.
 
-🖼️ \[image not archived: Dual_ir_cable.jpg\]
-
-*Cable.*
+*\[image not archived: "Dual_ir_cable.jpg" Caption: "Cable."\]*
 
 - 1 x IR Sensor Cable (Electronics Box).
 
 Pass the cable between the GT2 Belt and the 8mm Rod.
 
-🖼️ \[image not archived: Dual_ir_cable_plugged.jpg\]
-
-*IR.*
+*\[image not archived: "Dual_ir_cable_plugged.jpg" Caption: "IR."\]*
 
 Plug the end into the IR Sensor.
 
@@ -251,25 +211,19 @@ Plug the end into the IR Sensor.
 
 ## (20.5) Motor Cables.
 
-🖼️ \[image not archived: Dual_motor_cable.jpg\]
-
-*Motor Cable.*
+*\[image not archived: "Dual_motor_cable.jpg" Caption: "Motor Cable."\]*
 
 - 1 x 1700mm Motor Cable (Motors Box).
 
 Pass the cable between the GT2 Belt and the 8mm Rod and plug it into the Motor.
 
-🖼️ \[image not archived: Dual_motor_cable_tie.jpg\]
-
-*Motor Cable & IR Cable.*
+*\[image not archived: "Dual_motor_cable_tie.jpg" Caption: "Motor Cable & IR Cable."\]*
 
 - 1 x Cable Tie (Bag 1).
 
 Secure the Motor Cable & IR Sensor Cable together using a Cable Tie.
 
-🖼️ \[image not archived: Dual_other_motor_cable_tie.jpg\]
-
-*Motor Cable & Fan Cable.*
+*\[image not archived: "Dual_other_motor_cable_tie.jpg" Caption: "Motor Cable & Fan Cable."\]*
 
 - 1 x 1700mm Motor Cable (Motors Box).
 - 1 x Cable Tie (Bag 1).
@@ -278,29 +232,21 @@ Repeat with the other Motor Cable on the opposite side. Secure with Fan Cable to
 
 ## (20.6) X-Axis Endstop.
 
-🖼️ \[image not archived: Dual_motor_endstop.jpg\]
-
-*Endstop.*
+*\[image not archived: "Dual_motor_endstop.jpg" Caption: "Endstop."\]*
 
 - 1 x 1700mm Endstop Cable (Electronics Box).
 
 Chop the middle pin off the Endstop.
 
-🖼️ \[image not archived: Dual_motor_endstop_bend.jpg\]
-
-*Bend.*
+*\[image not archived: "Dual_motor_endstop_bend.jpg" Caption: "Bend."\]*
 
 Bend the pins as shown.
 
-🖼️ \[image not archived: Dual_motor_endstop_fit.jpg\]
-
-*Slot in.*
+*\[image not archived: "Dual_motor_endstop_fit.jpg" Caption: "Slot in."\]*
 
 Fit the Endstop into the slot.
 
-🖼️ \[image not archived: Dual_motor_endstop_screws.jpg\]
-
-*Screws.*
+*\[image not archived: "Dual_motor_endstop_screws.jpg" Caption: "Screws."\]*
 
 - 2 x M2 12mm Screws (Bag 3).
 - 2 x M2 Hex Half Nuts (Bag 3).
@@ -309,45 +255,33 @@ Secure in place.
 
 ## (20.7) Cable Management.
 
-🖼️ \[image not archived: Dual_cable_bunch_r.jpg\]
-
-*Cable Group.*
+*\[image not archived: "Dual_cable_bunch_r.jpg" Caption: "Cable Group."\]*
 
 Gather together the right hand group of cables.
 
-🖼️ \[image not archived: Dual_cable_bunch_r_tape.jpg\]
-
-*Taped.*
+*\[image not archived: "Dual_cable_bunch_r_tape.jpg" Caption: "Taped."\]*
 
 Tape the ends together.
 
-🖼️ \[image not archived: Dual_cable_bunch_r_sleeve.jpg\]
-
-*Taped.*
+*\[image not archived: "Dual_cable_bunch_r_sleeve.jpg" Caption: "Taped."\]*
 
 - 1 x 1500mm Braided Sleeve (Bag 1).
 
 Feed the cable group through the braided sleeve.
 
-🖼️ \[image not archived: Dual_cable_bunch_r_shrink.jpg\]
-
-*Heat-Shrink.*
+*\[image not archived: "Dual_cable_bunch_r_shrink.jpg" Caption: "Heat-Shrink."\]*
 
 - 1 x 40mm Heat-Shrink (Bag 1).
 
 Fit the Heat-Shrink over the end of the braided sleeve making sure it passes about 5mm off the end of the sleeve.
 
-🖼️ \[image not archived: Dual_cable_bunch_r_tied.jpg\]
-
-*Cable Ties.*
+*\[image not archived: "Dual_cable_bunch_r_tied.jpg" Caption: "Cable Ties."\]*
 
 - 2 x Cable Ties (Bag 1).
 
 Put two cable ties into the Cable Bracket and shrink the Heat-Shrink.
 
-🖼️ \[image not archived: Dual_cable_bunches.jpg\]
-
-*Wired.*
+*\[image not archived: "Dual_cable_bunches.jpg" Caption: "Wired."\]*
 
 Secure the cable group to the Printhead.
 
@@ -355,49 +289,35 @@ Repeat the process with the left cable group.
 
 ## (20.8) Rear Spine.
 
-🖼️ \[image not archived: Dual_spine_ptfe.jpg\]
-
-*PTFE.*
+*\[image not archived: "Dual_spine_ptfe.jpg" Caption: "PTFE."\]*
 
 - 2 x 1 Meter PTFE Tubing (Stretch Box).
 
 Insert the tube into the two Bowden Couplers in the Printhead.
 
-🖼️ \[image not archived: Dual_spine_ring.jpg\]
-
-*PTFE.*
+*\[image not archived: "Dual_spine_ring.jpg" Caption: "PTFE."\]*
 
 Pass the two Cable Groups through the top ring Spine.
 
-🖼️ \[image not archived: Dual_spine_ream.jpg\]
-
-*Ream.*
+*\[image not archived: "Dual_spine_ream.jpg" Caption: "Ream."\]*
 
 Using a 4mm Drill Bit clear the holes in the printed spine parts.
 
-🖼️ \[image not archived: Dual_spine_feed_ptfe.jpg\]
-
-*Tube.*
+*\[image not archived: "Dual_spine_feed_ptfe.jpg" Caption: "Tube."\]*
 
 Feed a PTFE tube through the spine.
 
-🖼️ \[image not archived: Dual_spine_feed_ptfes.jpg\]
-
-*Tubes.*
+*\[image not archived: "Dual_spine_feed_ptfes.jpg" Caption: "Tubes."\]*
 
 Repeat with the other tube.
 
 Make sure to leave enough at the top to form a small arch at the top of the printer as shown.
 
-🖼️ \[image not archived: Dual_spine_ptfe_measure.jpg\]
-
-*Length.*
+*\[image not archived: "Dual_spine_ptfe_measure.jpg" Caption: "Length."\]*
 
 Measure the length of tube at the back to be midway between the larger spine bracket and the small spine bracket.
 
-🖼️ \[image not archived: Dual_spine_ptfe_cut.jpg\]
-
-*Cut the tubes.*
+*\[image not archived: "Dual_spine_ptfe_cut.jpg" Caption: "Cut the tubes."\]*
 
 Cut the two tubes to length.
 
@@ -419,27 +339,19 @@ Insert the Cables Ties into the Spine Brackets as shown.
 
 Prepare the Y-Axis Motor Cable by threading the wire through the Braided Sleeving and securing the end with the Heatsink.
 
-🖼️ \[image not archived: Dual_spine_y_motor.jpg\]
-
-*Y_Axis.*
+*\[image not archived: "Dual_spine_y_motor.jpg" Caption: "Y_Axis."\]*
 
 Plug the Y-Axis Motor Cable into the Y-Axis Motor and secure to the spine using Cable Ties.
 
-🖼️ \[image not archived: Dual_spine_cable_adjust.jpg\]
-
-*Adjust.*
+*\[image not archived: "Dual_spine_cable_adjust.jpg" Caption: "Adjust."\]*
 
 Adjust the Braided Sleeved Cable Groups to match the arc of the PTFE tubes.
 
-🖼️ \[image not archived: Dual_spine_cable_hole.jpg\]
-
-*Insert.*
+*\[image not archived: "Dual_spine_cable_hole.jpg" Caption: "Insert."\]*
 
 Feed the cables through the hole at the base of the spine.
 
-🖼️ \[image not archived: Dual_spine_cable_tied_done.jpg\]
-
-*Tied.*
+*\[image not archived: "Dual_spine_cable_tied_done.jpg" Caption: "Tied."\]*
 
 Tighten all the Cable Ties on the Spine.
 

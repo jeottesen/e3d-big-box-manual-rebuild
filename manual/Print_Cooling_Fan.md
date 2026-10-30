@@ -2,11 +2,9 @@
 
 Archived 20161025052640 · source: wiki.e3d-online.com/wiki/Print_Cooling_Fan · [archive link](https://web.archive.org/web/20161025052640/http://wiki.e3d-online.com:80/wiki/Print_Cooling_Fan)
 
-🖼️ \[image not archived: PRINT_FAN_DUCT.jpg\]
+*\[image not archived: "PRINT_FAN_DUCT.jpg"\]*
 
-🖼️ \[image not archived: Assembled_print_fan.jpeg\]
-
-*Completed fan assembly.*
+*\[image not archived: "Assembled_print_fan.jpeg" Caption: "Completed fan assembly."\]*
 
 If you are building a Hybrid BigBox you can skip this step.
 
