@@ -1,0 +1,158 @@
+{
+ "id": "img-EXTRUDER_HYBRID_NON-TITAN_DIRECT",
+ "title": "EXTRUDER HYBRID NON-TITAN DIRECT",
+ "source": {
+  "kind": "image",
+  "file": "docs/images/EXTRUDER_HYBRID_NON-TITAN_DIRECT.jpg",
+  "sha256": "d49c64ce0075b7dadcac686c7006b108c03afe3746e37a44cc1e95bbac5ee43f",
+  "image_sheet": [
+   19,
+   41
+  ]
+ },
+ "images": [
+  {
+   "file": "EXTRUDER_HYBRID_NON-TITAN_DIRECT.jpg",
+   "role": "wiki"
+  }
+ ],
+ "rows": [
+  {
+   "item": "1",
+   "qty": 1,
+   "part": "E-AXIS CARRIAGE TOP HYBRID NON-TITAN DIRECT GUIDE",
+   "description": "Printed Part",
+   "how": "ocr",
+   "confidence": 0.99
+  },
+  {
+   "item": "2",
+   "qty": 1,
+   "part": "E-AXIS CARRIAGE TOP HYBRID NON-TITAN DIRECT LEVER",
+   "description": "Printed Part",
+   "how": "ocr",
+   "confidence": 0.95
+  },
+  {
+   "item": "3",
+   "qty": 1,
+   "part": "E-AXIS CARRIAGE TOP HYBRID NON-TITAN DIRECT BODY",
+   "description": "Printed Part",
+   "how": "ocr",
+   "confidence": 0.96
+  },
+  {
+   "item": "4",
+   "qty": 1,
+   "part": "NEMA17-400",
+   "description": "Motor Box-0.9Deg",
+   "how": "ocr",
+   "confidence": 0.94
+  },
+  {
+   "item": "5",
+   "qty": 1,
+   "part": "Bowden Coupling",
+   "description": "See Docs",
+   "how": "ocr",
+   "confidence": 0.98
+  },
+  {
+   "item": "6",
+   "qty": 1,
+   "part": "HOBBGOBLIN-500ID",
+   "description": "Extruder Box",
+   "how": "ocr",
+   "confidence": 0.96
+  },
+  {
+   "item": "7",
+   "qty": 1,
+   "part": "M3 x 3 Skt Grub Screw Knurled Point",
+   "description": "Fixings Bag 17",
+   "how": "ocr",
+   "confidence": 0.96
+  },
+  {
+   "item": "8",
+   "qty": 1,
+   "part": "M4 x 30 Socket Cap Screw",
+   "description": "Fixings Bag 17",
+   "how": "ocr",
+   "confidence": 0.96
+  },
+  {
+   "item": "6",
+   "qty": 1,
+   "part": "M4 Washer",
+   "description": "Fixings Bag 13",
+   "how": "ocr",
+   "confidence": 0.99
+  },
+  {
+   "item": "10",
+   "qty": 1,
+   "part": "Extruder Spring",
+   "description": "Extruder Box - Black Spring",
+   "how": "ocr",
+   "confidence": 0.99
+  },
+  {
+   "item": "11",
+   "qty": 1,
+   "part": "M4 Square Nut",
+   "description": "Fixings Bag 12",
+   "how": "ocr",
+   "confidence": 0.99
+  },
+  {
+   "item": "12",
+   "qty": 1,
+   "part": "Nylon Spacer 3.2ID 6OD 15L",
+   "description": "Fixings Bag 16",
+   "how": "ocr",
+   "confidence": 0.95
+  },
+  {
+   "item": "13",
+   "qty": 1,
+   "part": "M3 x 25 Socket Cap Screw",
+   "description": "Fixings Bag 7",
+   "how": "ocr",
+   "confidence": 0.93
+  },
+  {
+   "item": "14",
+   "qty": 2,
+   "part": "M3 x 30 Socket Cap Screw",
+   "description": "Fixings Bag 10",
+   "how": "ocr",
+   "confidence": 0.99
+  },
+  {
+   "item": "15",
+   "qty": 2,
+   "part": "M3 Hex Nut",
+   "description": "Fixings Bag 3",
+   "how": "hand",
+   "confidence": 0.96,
+   "read_as": {
+    "part": "M2 Hex Nut",
+    "description": "Fixings Bag 3"
+   }
+  },
+  {
+   "item": "16",
+   "qty": 1,
+   "part": "M3 x 10 Socket Cap Screw",
+   "description": "Fixings Bag 8",
+   "how": "ocr",
+   "confidence": 0.96
+  }
+ ],
+ "confirmed": {
+  "by": "jeottesen",
+  "on": "2026-10-30"
+ },
+ "notes": ""
+}

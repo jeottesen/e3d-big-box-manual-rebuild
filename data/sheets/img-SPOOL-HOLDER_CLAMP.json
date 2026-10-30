@@ -1,0 +1,82 @@
+{
+ "id": "img-SPOOL-HOLDER_CLAMP",
+ "title": "SPOOL-HOLDER CLAMP",
+ "source": {
+  "kind": "image",
+  "file": "docs/images/SPOOL-HOLDER_CLAMP.jpg",
+  "sha256": "8997e5d86cafb85d50d57fb7fa47af70246baaeee894d16baa9fa4522331b3d4",
+  "image_sheet": [
+   37,
+   37
+  ]
+ },
+ "images": [
+  {
+   "file": "SPOOL-HOLDER_CLAMP.jpg",
+   "role": "wiki"
+  }
+ ],
+ "rows": [
+  {
+   "item": "1",
+   "qty": 1,
+   "part": "SPOOL-HOLDER CLAMP INNER",
+   "description": "Printed Part",
+   "how": "ocr",
+   "confidence": 0.97
+  },
+  {
+   "item": "2",
+   "qty": 1,
+   "part": "SPOOL-HOLDER CLAMP OUTER",
+   "description": "Printed Part",
+   "how": "ocr",
+   "confidence": 0.99
+  },
+  {
+   "item": "3",
+   "qty": 1,
+   "part": "M4 x 30 Socket Cap Screw",
+   "description": "Fixings Bag 17",
+   "how": "ocr",
+   "confidence": 0.96
+  },
+  {
+   "item": "4",
+   "qty": 1,
+   "part": "M4 Square Nut",
+   "description": "Fixings Bag 12",
+   "how": "ocr",
+   "confidence": 0.99
+  },
+  {
+   "item": "5",
+   "qty": 3,
+   "part": "M4 Washer",
+   "description": "Fixings Bag 13",
+   "how": "ocr",
+   "confidence": 0.96
+  },
+  {
+   "item": "6",
+   "qty": 1,
+   "part": "Spool-Holder Spring",
+   "description": "Extruder Box-Silver Spring",
+   "how": "ocr",
+   "confidence": 0.99
+  },
+  {
+   "item": "7",
+   "qty": 1,
+   "part": "BEARING-688ZZ",
+   "description": "Bearing Box",
+   "how": "ocr",
+   "confidence": 0.96
+  }
+ ],
+ "confirmed": {
+  "by": "jeottesen",
+  "on": "2026-10-30"
+ },
+ "notes": ""
+}

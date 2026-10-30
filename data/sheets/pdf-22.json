@@ -1,0 +1,71 @@
+{
+ "id": "pdf-22",
+ "title": "X-CARRIAGE ASSEMBLY",
+ "source": {
+  "kind": "pdf",
+  "file": "docs/files/EXPLODED_DRAWINGS.pdf",
+  "sha256": "659ab7e3f4c9d042f2082aeaf231af6e9901d9c25841854a618e5caae793cbe2",
+  "page": 22
+ },
+ "images": [],
+ "rows": [
+  {
+   "item": "1",
+   "qty": 1,
+   "part": "X-AXIS MOTOR ASSEMBLY",
+   "description": "",
+   "how": "pdf-text"
+  },
+  {
+   "item": "2",
+   "qty": 1,
+   "part": "E-AXIS CARRIAGE BOTTOM (SINGLE)",
+   "description": "",
+   "how": "pdf-text"
+  },
+  {
+   "item": "3",
+   "qty": 2,
+   "part": "X-AXIS CARRIAGE BEARING CLAMP",
+   "description": "Printed Part",
+   "how": "pdf-text"
+  },
+  {
+   "item": "4",
+   "qty": 8,
+   "part": "M3 x 10 Socket Cap Screw",
+   "description": "Fixings Bag 8",
+   "how": "pdf-text"
+  },
+  {
+   "item": "5",
+   "qty": 1,
+   "part": "M3 Square Nut",
+   "description": "Fixings Bag 6",
+   "how": "pdf-text"
+  },
+  {
+   "item": "6",
+   "qty": 1,
+   "part": "M3 x 18 Socket Cap Screw",
+   "description": "Fixings Bag 8",
+   "how": "pdf-text"
+  },
+  {
+   "item": "7",
+   "qty": 1,
+   "part": "X-AXIS BELT-TENSIONER",
+   "description": "Printed Part",
+   "how": "pdf-text"
+  },
+  {
+   "item": "8",
+   "qty": 2,
+   "part": "M4 x 8 Skt Grub Screw Flat Point",
+   "description": "Fixings Kit Bag 13",
+   "how": "pdf-text"
+  }
+ ],
+ "confirmed": null,
+ "notes": ""
+}

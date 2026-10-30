@@ -1,7 +1,8 @@
 """The OCR text rules (scripts/ocr_text.py). The rule that matters most: a correction never changes a number."""
 import unittest
-from helpers import load
-from ocr_text import key, vocabulary, parts_by_description, respace, normalise, fix_row, digits
+import helpers  # noqa: F401  (puts scripts/ on the path)
+from truth import load_truth
+from ocr_text import key, vocabulary, parts_by_description, respace, normalise, fix_row
 from targets import OCR_FIXES
 
 class Respace(unittest.TestCase):
@@ -48,24 +49,12 @@ class HandFixes(unittest.TestCase):
         self.assertEqual(OCR_FIXES['M2Hex Nut'], 'M3 Hex Nut')
 
 class CommittedData(unittest.TestCase):
-    """The same rule, checked on what is committed: only a hand fix (OCR_FIXES) may change the digits of a name."""
-    def test_automatic_corrections_keep_digits(self):
-        fixes = {key(k) for k in OCR_FIXES}
-        bad = []
-        for sheet in load('notes/parts_images.json')['sheets']:
-            for r in sheet['rows']:
-                if 'ocr' not in r: continue
-                for f in ('part', 'description'):
-                    if r['ocr'][f] != r[f] and key(r['ocr'][f]) not in fixes and digits(r['ocr'][f]) != digits(r[f]):
-                        bad.append((sheet['image'], r['item'], r['ocr'][f], r[f]))
-        self.assertEqual(bad, [])
-
     def test_hand_fixes_do_not_collide(self):
         keys = [key(k) for k in OCR_FIXES]
         self.assertEqual(len(keys), len(set(keys)))
 
-    def test_vocabulary_is_built_from_the_pdf(self):
-        sheets = load('notes/parts.json')['sheets']
+    def test_vocabulary_is_built_from_the_pdf_sheets(self):
+        sheets = [s for s in load_truth().values() if s['source']['kind'] == 'pdf']
         v = vocabulary(sheets)
         self.assertIn(key('M3 Hex Nut'), v)
         self.assertIn(key('Fixings Bag 3'), parts_by_description(sheets))

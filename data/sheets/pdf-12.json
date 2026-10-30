@@ -1,0 +1,69 @@
+{
+ "id": "pdf-12",
+ "title": "PRINT FAN DUCT",
+ "source": {
+  "kind": "pdf",
+  "file": "docs/files/EXPLODED_DRAWINGS.pdf",
+  "sha256": "659ab7e3f4c9d042f2082aeaf231af6e9901d9c25841854a618e5caae793cbe2",
+  "page": 12
+ },
+ "images": [
+  {
+   "file": "PRINT_FAN_DUCT.jpg",
+   "role": "lost"
+  }
+ ],
+ "rows": [
+  {
+   "item": "1",
+   "qty": 1,
+   "part": "PRINT FAN BRACKET",
+   "description": "Printed Part",
+   "how": "pdf-text"
+  },
+  {
+   "item": "2",
+   "qty": 1,
+   "part": "PRINT FAN DUCT",
+   "description": "Printed Part",
+   "how": "pdf-text"
+  },
+  {
+   "item": "3",
+   "qty": 2,
+   "part": "M3 Square Nut",
+   "description": "Fixings Bag 6",
+   "how": "pdf-text"
+  },
+  {
+   "item": "4",
+   "qty": 1,
+   "part": "M3 x 8 Socket Cap Screw",
+   "description": "Fixings Bag 15",
+   "how": "pdf-text"
+  },
+  {
+   "item": "5",
+   "qty": 1,
+   "part": "FAN-SNAIL-BLOWER",
+   "description": "Fan Box",
+   "how": "pdf-text"
+  },
+  {
+   "item": "6",
+   "qty": 1,
+   "part": "M3 x 22 Socket Cap Screw",
+   "description": "Fixings Bag 11",
+   "how": "pdf-text"
+  },
+  {
+   "item": "7",
+   "qty": 2,
+   "part": "M3 x 30 Socket Cap Screw",
+   "description": "Fixings Bag 10",
+   "how": "pdf-text"
+  }
+ ],
+ "confirmed": null,
+ "notes": ""
+}

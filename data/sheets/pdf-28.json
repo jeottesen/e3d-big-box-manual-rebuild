@@ -1,0 +1,69 @@
+{
+ "id": "pdf-28",
+ "title": "ELECTRONICS COVER",
+ "source": {
+  "kind": "pdf",
+  "file": "docs/files/EXPLODED_DRAWINGS.pdf",
+  "sha256": "659ab7e3f4c9d042f2082aeaf231af6e9901d9c25841854a618e5caae793cbe2",
+  "page": 28
+ },
+ "images": [
+  {
+   "file": "ELECTRONICS_COVER.jpg",
+   "role": "wiki"
+  }
+ ],
+ "rows": [
+  {
+   "item": "1",
+   "qty": 1,
+   "part": "ELECTRONICS-COVER",
+   "description": "Laser Cut Part",
+   "how": "pdf-text"
+  },
+  {
+   "item": "2",
+   "qty": 4,
+   "part": "ELECTRONICS-COVER-BRACKET",
+   "description": "Printed Part",
+   "how": "pdf-text"
+  },
+  {
+   "item": "3",
+   "qty": 8,
+   "part": "M3 x 10 Socket Cap Screw",
+   "description": "Fixings Bag 8",
+   "how": "pdf-text"
+  },
+  {
+   "item": "4",
+   "qty": 4,
+   "part": "M3 x 20 Socket Cap Screw",
+   "description": "Fixings Bag 9",
+   "how": "pdf-text"
+  },
+  {
+   "item": "5",
+   "qty": 4,
+   "part": "M3 Hex Nut (Half)",
+   "description": "Fixings Bag 5",
+   "how": "pdf-text"
+  },
+  {
+   "item": "6",
+   "qty": 4,
+   "part": "M3 Microbarb Nut (Brass)",
+   "description": "Fixings Bag 2",
+   "how": "pdf-text"
+  },
+  {
+   "item": "7",
+   "qty": 1,
+   "part": "FAN-50-50-10",
+   "description": "Fan Box",
+   "how": "pdf-text"
+  }
+ ],
+ "confirmed": null,
+ "notes": ""
+}

@@ -9,7 +9,7 @@ import difflib, re
 MIN_CONF = 0.85   # below this the OCR itself was unsure
 
 def vocabulary(sheets):
-    """Exact part and description strings from the PDF's sheets (notes/parts.json), keyed without spaces."""
+    """Exact part and description strings from the PDF's sheets (work/proposed/parts.json), keyed without spaces."""
     vocab = {}
     for sh in sheets:
         for r in sh['rows']:

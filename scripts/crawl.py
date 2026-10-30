@@ -33,6 +33,7 @@ def write_if_changed(path, text):
     """Write text unless the file already holds exactly that, so an unchanged result keeps its modification time and
     mise does not think the steps that read it are out of date."""
     if os.path.exists(path) and open(path).read() == text: return False
+    os.makedirs(os.path.dirname(path), exist_ok=True)
     open(path, 'w').write(text)
     return True
 

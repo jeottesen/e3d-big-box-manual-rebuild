@@ -1,5 +1,6 @@
 """Which PDF sheet an image is (scripts/match_logic.py)."""
 import unittest
+import helpers  # noqa: F401  (puts scripts/ on the path)
 from match_logic import decide
 
 class Decide(unittest.TestCase):

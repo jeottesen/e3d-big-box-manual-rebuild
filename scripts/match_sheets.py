@@ -4,7 +4,7 @@
 The wiki embedded most sheets as images (docs/images); the PDF (docs/files/EXPLODED_DRAWINGS.pdf) has the same sheets
 as vector drawings. For each image this finds the PDF sheet that looks like it, and checks the match three ways:
 the drawing itself (the PDF sheet is drawn small and compared with the image), the sheet title, and the parts list
-(the PDF's rows against the rows OCR read from the image). It writes notes/sheet_matches.json, which says for each
+(the PDF's rows against the rows OCR read from the image). It writes work/proposed/sheet_matches.json, which says for each
 image which sheet it is, how sure that is, and whether the image should be redrawn from the PDF (it is low resolution,
 and the two have the same parts, so the PDF is the same drawing at a better size).
 
@@ -22,7 +22,8 @@ from targets import SHEET_IMAGES, MATCH_OVERRIDES
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 PDF = f'{ROOT}/docs/files/EXPLODED_DRAWINGS.pdf'
-OUT = f'{ROOT}/notes/sheet_matches.json'
+from truth import PROPOSED
+OUT = f'{PROPOSED}/sheet_matches.json'
 W, H = 420, 297            # size both are compared at (A4 landscape)
 LOW_RES = 1200             # images narrower than this are worth redrawing from the PDF
 
@@ -56,12 +57,12 @@ def ncc(a, b):
 
 def main():
     pdf = pdfium.PdfDocument(PDF)
-    parts = {s['sheet']: s for s in json.load(open(f'{ROOT}/notes/parts.json'))['sheets']}
+    parts = {s['sheet']: s for s in json.load(open(f'{PROPOSED}/parts.json'))['sheets']}
     sheet_ink = {}
     for n in range(1, len(pdf) + 1):
         page = pdf[n - 1]
         sheet_ink[n] = ink(page.render(scale=1400 / page.get_width()).to_pil())
-    ocr = {s['image']: s for s in json.load(open(f'{ROOT}/notes/parts_images.json'))['sheets']}
+    ocr = {s['image']: s for s in json.load(open(f'{PROPOSED}/parts_images.json'))['sheets']}
     result = {}
     for name, path in candidates().items():
         im = Image.open(path); w, h = im.size

@@ -1,0 +1,62 @@
+{
+ "id": "pdf-13",
+ "title": "IR SENSOR ASSEMBLY",
+ "source": {
+  "kind": "pdf",
+  "file": "docs/files/EXPLODED_DRAWINGS.pdf",
+  "sha256": "659ab7e3f4c9d042f2082aeaf231af6e9901d9c25841854a618e5caae793cbe2",
+  "page": 13
+ },
+ "images": [
+  {
+   "file": "IR_SENSOR_ASSEMBLY.jpg",
+   "role": "lost"
+  }
+ ],
+ "rows": [
+  {
+   "item": "1",
+   "qty": 1,
+   "part": "IR-SENSOR HOUSING",
+   "description": "Printed Part",
+   "how": "pdf-text"
+  },
+  {
+   "item": "2",
+   "qty": 1,
+   "part": "IR-SENSOR",
+   "description": "Electronics Box",
+   "how": "pdf-text"
+  },
+  {
+   "item": "3",
+   "qty": 2,
+   "part": "M2.5 x 6 Socket Cap Screw",
+   "description": "Fixings Bag 5",
+   "how": "pdf-text"
+  },
+  {
+   "item": "4",
+   "qty": 2,
+   "part": "M3 Square Nut",
+   "description": "Fixings Bag 6",
+   "how": "pdf-text"
+  },
+  {
+   "item": "5",
+   "qty": 2,
+   "part": "M3 x 12 Socket Cap Screw",
+   "description": "Fixings Bag 9",
+   "how": "pdf-text"
+  },
+  {
+   "item": "6",
+   "qty": 2,
+   "part": "M2.5 Square Nut",
+   "description": "Fixings Bag 4",
+   "how": "pdf-text"
+  }
+ ],
+ "confirmed": null,
+ "notes": ""
+}
