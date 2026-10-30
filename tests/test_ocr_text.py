@@ -43,8 +43,8 @@ class FixRow(unittest.TestCase):
 
 class HandFixes(unittest.TestCase):
     def test_the_m3_hex_nut_misread_as_m2_is_a_hand_fix(self):
-        # no M2 screws or nuts are listed anywhere in the drawings; the OCR reads the 3 as a 2. The automatic rules must not
-        # make this change (they never change a number), so it is checked and recorded by hand.
+        # no M2 screws or nuts are listed anywhere in the drawings, and the hybrid drawings print the M3 nut as 'M2' (a typo in
+        # the source). The automatic rules must not make this change (they never change a number), so it is recorded by hand.
         self.assertEqual(OCR_FIXES['M2Hex Nut'], 'M3 Hex Nut')
 
 class CommittedData(unittest.TestCase):

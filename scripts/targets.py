@@ -118,6 +118,6 @@ OCR_FIXES = {
     'MAWasher': 'M4 Washer',
     'HOBDGOBLIN-SOOIO': 'HOBBGOBLIN-500ID',
     'M3x 3Skt Grb Screw Knurled Point': 'M3 x 3 Skt Grub Screw Knurled Point',
-    'M2Hex Nut': 'M3 Hex Nut',   # the OCR reads the 3 as a 2; Fixings Bag 3 holds the M3 hex nut and no M2 screws or nuts are listed anywhere (confirmed by the maintainer)
+    'M2Hex Nut': 'M3 Hex Nut',   # the hybrid drawings themselves print 'M2 Hex Nut' (E3D's typo): Fixings Bag 3 holds the M3 hex nut and no M2 screws or nuts are listed anywhere (confirmed by the maintainer)
 }
 # (lookup ignores spaces and case, so 'M2 HexNut' and 'M2Hex Nut' both match)
