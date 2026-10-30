@@ -1,16 +1,13 @@
 # The mandatory checks, as a workflow: tests, ruff, the link and image check on manual/, and markdownlint.
 # It is the same as running `mise run check` locally.
 #
-# DISABLED ON PURPOSE: it only runs when started by hand (workflow_dispatch), so it never starts by itself.
-# To turn it on, replace the `on:` block with:
-#
-#   on:
-#     pull_request:
-#     push:
-#       branches: [main]
+# Runs on pull requests, on pushes to main, and by hand.
 name: check
 
 on:
+  pull_request:
+  push:
+    branches: [main]
   workflow_dispatch:
 
 jobs:
