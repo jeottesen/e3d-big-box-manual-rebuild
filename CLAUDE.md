@@ -6,8 +6,8 @@ E3D BigBox 3D printer manual, recovered from the Wayback Machine. See README.md 
 
 - `manual/` – the manual as Markdown (browsable on GitHub); it links to the images and PDFs in `docs/`
 - `docs/` – the HTML build, for GitHub Pages later
-- `scripts/` – recovery and build scripts (Python, standard library only; `markdown.py` also needs pandoc)
-- `notes/` – what is missing, the history analysis, and which archive snapshot each page and image came from
+- `scripts/` – recovery and build scripts (Python, standard library only; `markdown.py` also needs pandoc). The one exception is `drawings.py`, which needs `pypdf` and is run by hand, not by the build
+- `notes/` – what is missing, the history analysis, which archive snapshot each page and image came from, and `parts.json` (the parts lists read from the exploded drawings, used by the build to fill in the Bill of Materials)
 
 ## Rules
 

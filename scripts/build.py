@@ -5,7 +5,8 @@ Produces one HTML file per wiki page, an index.html, and manual.html (every page
 Images missing from the archive are shown as a labelled placeholder with the original file name.
 Run:  python3 -I scripts/build.py
 """
-import html, json, os, re, shutil, urllib.parse
+import html, json, os, re, shutil, sys, urllib.parse
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))   # sibling modules (python -I does not add the script folder)
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RAW = os.environ.get('BIGBOX_RAW', f'{ROOT}/raw')   # archive data lives outside git; override with BIGBOX_RAW
@@ -35,7 +36,7 @@ STYLE = '''body{font:16px/1.55 system-ui,sans-serif;max-width:60rem;margin:2rem 
 img{max-width:100%;height:auto}.missing{display:inline-block;border:1px dashed #999;padding:.4rem .7rem;color:#777;font-size:.85em;margin:.2rem 0}
 nav a{margin-right:1rem}table{border-collapse:collapse}td,th{border:1px solid #ccc;padding:.3rem .5rem}
 .src{color:#777;font-size:.8em}h1,h2,h3{line-height:1.2}
-.toc{display:inline-block;border:1px solid #ccc;background:#f8f8f8;padding:.4rem 1.2rem;margin:.6rem 0}.toc ul{margin:.1rem 0;padding-left:1.3rem}.sections ul{margin:.1rem 0 .9rem}'''
+.toc{display:inline-block;border:1px solid #ccc;background:#f8f8f8;padding:.4rem 1.2rem;margin:.6rem 0}.toc ul{margin:.1rem 0;padding-left:1.3rem}.sections ul{margin:.1rem 0 .9rem}.derived{color:#555}'''
 
 def slug(t): return re.sub(r'[<>:"|?*\\]', '_', re.sub(r':_', '_', urllib.parse.unquote(t).replace('/', '_')))   # safe file name on every OS: no colons
 
@@ -148,6 +149,45 @@ def add_section_lists(body, self_slug, heads_by_slug):
         return div + ''.join(keep)
     return re.sub(r'(<div class="sections">.*?</div>)((?:\s*(?:<dl>(?:(?!<h\d).)*?</dl>|<p>(?:(?!<h\d).)*?</p>))*)', tidy, body, flags=re.S)
 
+PARTS_PATH = f'{ROOT}/notes/parts.json'   # written by scripts/drawings.py from the exploded drawings
+PDF_LINK = 'https://web.archive.org/web/20160109071827/http://files.e3d-online.com/BigBox/EXPLODED_DRAWINGS.pdf'
+
+def add_drawing_parts(body, parts, heads_by_slug):
+    """On the Bill of Materials page: fill the empty Printed Parts section and add a fixings table under Fixings, from the
+    parts lists in the exploded drawings. Both are marked as coming from the drawings, not from the wiki page."""
+    from targets import SHEET_SECTIONS
+    esc = html.escape
+    titles = {sh['sheet']: sh['title'] for sh in parts['sheets']}
+    def drawing(n): return f'<a href="{PDF_LINK}#page={n}">sheet {n}</a>'
+    def section(n):
+        ref = SHEET_SECTIONS.get(n)
+        if not ref: return ''
+        page, prefix = ref
+        for level, hid, text in heads_by_slug.get(page, []):
+            if text.startswith(prefix + ' ') : return f'<a href="{page}.html#{html.escape(hid)}">{esc(text)}</a>'
+        return ''
+    def note(extra=''):
+        return ('<p class="derived"><em>This list is not from the wiki page, which left it empty. It is compiled from the parts lists in the '
+                f'<a href="{PDF_LINK}">exploded drawings</a> (EXPLODED_DRAWINGS.pdf, sheets 1 to {len(parts["sheets"])}). {extra}</em></p>')
+    unread = [sh['sheet'] for sh in parts['sheets'] if not sh['rows']]
+    gap = f'Sheets {", ".join(map(str, unread))} have no readable parts list in the archived PDF, so their parts are missing here.' if unread else ''
+    rows = [(sh['sheet'], r) for sh in parts['sheets'] for r in sh['rows']]
+    printed = [(n, r) for n, r in rows if r['description'] in ('Printed Part', 'Printed Parts Box')]
+    tr = ''.join(f'<tr><td>{esc(r["part"])}</td><td>{r["qty"]}</td><td>{"printed" if r["description"] == "Printed Part" else "from the Printed Parts Box"}</td>'
+                 f'<td>{drawing(n)}</td><td>{section(n) or "–"}</td></tr>' for n, r in printed)
+    printed_html = note(gap) + f'<table><thead><tr><th>Part</th><th>Qty</th><th>Source</th><th>Drawing</th><th>Build section</th></tr></thead><tbody>{tr}</tbody></table>'
+    fixings = {}
+    for n, r in rows:
+        if r['description'].startswith('Fixings'): fixings.setdefault((r['description'], r['part']), []).append((n, int(r['qty'])))
+    def bag_no(d): return int(''.join(c for c in d if c.isdigit()) or 0)
+    tr = ''.join(f'<tr><td>{esc(bag)}</td><td>{esc(part)}</td><td>{sum(q for _, q in uses)}</td>'
+                 f'<td>{", ".join(f"{drawing(n)} ({q})" for n, q in uses)}</td></tr>'
+                 for (bag, part), uses in sorted(fixings.items(), key=lambda kv: (bag_no(kv[0][0]), kv[0][1])))
+    fixings_html = note('Quantities are added up across the sheets that list the fixing; the sheets are shown with their own count in brackets. ' + gap) + \
+        f'<table><thead><tr><th>Fixings bag</th><th>Fixing</th><th>Total qty</th><th>Used on</th></tr></thead><tbody>{tr}</tbody></table>'
+    body = re.sub(r'(<h3><span class="mw-headline" id="Printed_Parts">Printed Parts</span></h3>)', lambda m: m.group(1) + printed_html, body, count=1)
+    return re.sub(r'(<h3><span class="mw-headline" id="Fixings">Fixings</span></h3>)', lambda m: m.group(1) + fixings_html, body, count=1)
+
 def mark_dead(body):
     """A link the status file says is dead keeps its text and is labelled; if the archive has a copy, that is linked too."""
     def repl(m):
@@ -187,6 +227,8 @@ order = ['BigBox_Build_Manual'] + sorted(t for t in pages if t != 'BigBox_Build_
 stats, sections = {}, []
 prepared = {t: with_heading_ids(extract(pages[t])) for t in order}   # (body, headings) per page
 heads_by_slug = {slug(t): heads for t, (_, heads) in prepared.items()}
+if os.path.exists(PARTS_PATH) and 'Bill_Of_Materials' in prepared:
+    prepared['Bill_Of_Materials'] = (add_drawing_parts(prepared['Bill_Of_Materials'][0], json.load(open(PARTS_PATH)), heads_by_slug), prepared['Bill_Of_Materials'][1])
 for t in order:
     body0, heads = prepared[t]
     b = fix_links(fix_images(body0, stats), False)

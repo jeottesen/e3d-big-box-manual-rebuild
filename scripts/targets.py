@@ -91,3 +91,19 @@ DOWNLOADS = [
       ('BigBoxSingle-alpha-settings.fff', None, 'the early alpha Simplify3D profile (it was on Dropbox)'),
       ('ASM_EX_THUMB_SCREW.stl', None, 'the Titan thumb screw model linked from Titan Assembly; the archive has the .stp version above but not this file')]),
 ]
+
+# Which build section each sheet of the exploded drawings belongs to: sheet -> (page, "(n)" prefix of the section heading).
+# Only sheets whose title clearly matches a section are listed; a missing sheet gets no build link (a wrong link is worse
+# than none). Sheets 8, 15 and 17 have no readable title or table in the archived PDF; 11, 18, 19, 25 and 29 have titles that
+# do not obviously match a section. These need a manual look.
+SHEET_SECTIONS = {
+    1: ('BigBox_Parts_Preparation', '(1)'), 2: ('BigBox_Parts_Preparation', '(2)'), 3: ('BigBox_Parts_Preparation', '(3)'),
+    4: ('BigBox_Parts_Preparation', '(4)'), 5: ('BigBox_Parts_Preparation', '(5)'), 6: ('BigBox_Parts_Preparation', '(6)'),
+    7: ('BigBox_Parts_Preparation', '(7)'), 9: ('BigBox_Parts_Preparation', '(10)'), 10: ('BigBox_Parts_Preparation', '(11)'),
+    12: ('BigBox_Parts_Preparation', '(13)'), 13: ('BigBox_Parts_Preparation', '(15)'), 27: ('BigBox_Parts_Preparation', '(14)'),
+    14: ('BigBox_Printer_Sub-assemblies', '(1)'), 16: ('BigBox_Printer_Sub-assemblies', '(7)'), 28: ('BigBox_Printer_Sub-assemblies', '(8)'),
+    20: ('Printer_main_assemblies_Step_By_Step_Assembly_Process', '(3)'), 21: ('Printer_main_assemblies_Step_By_Step_Assembly_Process', '(5)'),
+    22: ('Printer_main_assemblies_Step_By_Step_Assembly_Process', '(6)'), 23: ('Printer_main_assemblies_Step_By_Step_Assembly_Process', '(10)'),
+    24: ('Printer_main_assemblies_Step_By_Step_Assembly_Process', '(16)'),
+    26: ('Single_Direct-Drive_Printhead_Assembly', '(19.3)'),
+}

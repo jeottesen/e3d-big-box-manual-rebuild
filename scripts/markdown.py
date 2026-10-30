@@ -94,6 +94,7 @@ def convert(page, h, pages, amap):
     md = re.sub(r'(?m)^\\\n', '', md)            # lines holding only a backslash (a <br> between blocks)
     md = re.sub(r'\\\n(?=\n)', '\n', md)         # a hard line break at the end of a paragraph
     md = re.sub(r'[ \t]+\n', '\n', md)
+    md = re.sub(r'(?m)^\|(?:-+\|)+$', lambda m: '| ' + ' | '.join('---' for _ in m.group(0).strip('|').split('|')) + ' |', md)   # table separator rows in the style markdownlint wants
     return normalize_headings(re.sub(r'\n{3,}', '\n\n', md).strip()) + '\n'
 
 def main():
