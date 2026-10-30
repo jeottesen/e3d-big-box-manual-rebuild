@@ -4,7 +4,9 @@ Rebuilt page · source: wiki.e3d-online.com/wiki/Single\_&\_Dual_Direct-Drive_IR
 
 Recovered from an older version of BigBox Parts Preparation (20160807071206), section "(15) Single & Dual Direct-Drive IR Sensor Bracket" — the separate wiki page is not in the archive.
 
-\[image not archived: "IR_SENSOR_ASSEMBLY.jpg"\]
+![IR_SENSOR_ASSEMBLY.jpg](../docs/images/IR_SENSOR_ASSEMBLY.jpg)
+
+*Drawn from sheet 13 of the exploded drawings PDF; the wiki's own copy of this image was not archived.*
 
 ![Ir_sensor_pcb.jpg](../docs/images/Ir_sensor_pcb.jpg)
 

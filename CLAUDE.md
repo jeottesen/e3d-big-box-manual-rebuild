@@ -6,8 +6,24 @@ E3D BigBox 3D printer manual, recovered from the Wayback Machine. See README.md 
 
 - `manual/` – the manual as Markdown (browsable on GitHub); it links to the images and PDFs in `docs/`
 - `docs/` – the HTML build, for GitHub Pages later
-- `scripts/` – recovery and build scripts (Python, standard library only; `markdown.py` also needs pandoc)
-- `notes/` – what is missing, the history analysis, and which archive snapshot each page and image came from
+- `scripts/` – recovery and build scripts (Python, standard library only; `markdown.py` also needs pandoc). The exceptions are `drawings.py` and `drawing_images.py`, which need the packages in `requirements.txt` and run as the `extract` step
+- `docs/files/EXPLODED_DRAWINGS.pdf` is the one committed source file under `docs/`: the exploded drawings PDF, which the drawing scripts read
+- `notes/` – what is missing, the history analysis, which archive snapshot each page and image came from, and `parts.json` and `parts_images.json` (the parts lists read from the exploded drawings, used by the build to fill in the Bill of Materials) and `sheet_matches.json` (which wiki image is which PDF sheet; written by `mise run match`, not part of `build`)
+
+## Build
+
+- `mise.toml` pins the tools and defines the tasks: `mise install`, then `mise run build` (read the drawings, build `docs/` and `manual/`, check them). `mise run fetch` fills `raw/` from the Wayback Machine; `mise run extract`, `site`, `markdown` and `check` are the steps on their own.
+- Python packages are in `requirements.txt`, compiled from `requirements.in` with `uv pip compile requirements.in --python-version 3.13 -o requirements.txt`. mise installs them into `.venv` (git-ignored).
+
+## Checks
+
+- Run `mise run check` before committing. It runs the tests (`tests/`, standard library only), `ruff` (config in `ruff.toml`), `scripts/check_markdown.py` and `markdownlint-cli2`. `.github/workflows/check.yml` does the same in CI but is switched off (manual start only) until this repo has a self-hosted runner set; see the comments in the file.
+- The tests read the committed data (`notes/*.json`, `docs/`), so they need no venv and no `raw/` folder. They fail if an extraction leaves anything unchecked, repeats a Bill of Materials row, changes a number in a correction, or breaks a link from the Bill of Materials to a drawing or a build section. If a test fails after a re-run, look at why before changing the test.
+
+## Source of truth
+
+- The manual is the source of truth for which step a part or drawing belongs to. The wiki author placed each drawing under the step that uses it, and that is ground truth from the source, not a guess from a title or a sheet number. A build-section link comes from the heading a drawing is embedded under (`embedded_sections` in `scripts/build.py`); a drawing shown in several steps links all of them. When the manual and a drawing's own name or numbering disagree about where something belongs, the manual wins. Don't add hand tables that map names to sections.
+- Likewise a person's reading of the drawing outranks the tools: a hand correction goes in `OCR_FIXES` in `scripts/targets.py`, and the tools never overwrite it.
 
 ## Rules
 

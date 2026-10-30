@@ -1,0 +1,87 @@
+# Tools and tasks for building the manual.   mise install && mise run build
+# The archive data lives outside git, in raw/ (override with BIGBOX_RAW); `mise run fetch` fills it from the Wayback Machine.
+
+[tools]
+python = "3.13"
+"aqua:astral-sh/uv" = "latest"
+pandoc = "3.13"                       # scripts/markdown.py
+node = "24"                           # only to run markdownlint-cli2
+"npm:markdownlint-cli2" = "0.24"
+"aqua:astral-sh/ruff" = "0.17.3"        # lint the Python
+
+[env]
+# the scripts that need packages (requirements.txt) run in this venv; the rest are standard library only
+_.python.venv = { path = ".venv", create = true }
+
+[tasks.deps]
+description = "Install the Python packages in requirements.txt into .venv"
+sources = ["requirements.txt"]
+outputs = [".venv/.deps-installed"]
+run = ["uv pip install --quiet -r requirements.txt", "touch .venv/.deps-installed"]
+
+[tasks.fetch]
+description = "Fetch the pages the manual needs from the Wayback Machine into raw/ (network; polite and cached)"
+run = [
+  "python3 -I scripts/fetch.py",
+  "python3 -I scripts/fetch_files.py",
+  "python3 -I scripts/recover.py",
+  "python3 -I scripts/appendix.py",
+]
+
+[tasks.extract]
+description = "Read the parts lists off the exploded drawings (PDF text, then OCR for the sheets that are only images)"
+depends = ["deps"]
+sources = ["scripts/drawings.py", "scripts/drawing_images.py", "scripts/ocr_text.py", "scripts/targets.py", "scripts/crawl.py", "requirements.txt",
+           "docs/files/EXPLODED_DRAWINGS.pdf", "docs/images/*.jpg", "docs/images/original/*.jpg", "notes/sheet_matches.json"]
+outputs = ["notes/parts.json", "notes/parts_images.json", "notes/OCR_REVIEW.md"]
+run = [
+  "python3 -I scripts/drawings.py",
+  "python3 -I scripts/drawing_images.py",
+  "touch notes/parts.json notes/parts_images.json notes/OCR_REVIEW.md",   # an unchanged result is not rewritten; this marks it up to date
+]
+
+[tasks.match]
+description = "Match the wiki's drawing images to sheets of the exploded drawings PDF (writes notes/sheet_matches.json; run extract first, and it re-runs when the result changes)"
+depends = ["deps", "extract"]
+sources = ["scripts/match_sheets.py", "scripts/match_logic.py", "scripts/targets.py", "requirements.txt", "docs/files/EXPLODED_DRAWINGS.pdf",
+           "docs/images/*.jpg", "docs/images/original/*.jpg", "notes/parts.json", "notes/parts_images.json"]
+outputs = ["notes/sheet_matches.json"]
+run = ["python3 -I scripts/match_sheets.py", "touch notes/sheet_matches.json"]
+
+[tasks.render]
+description = "Draw the PDF sheets that stand in for wiki images, and enlarge low-resolution drawings (writes <data folder>/rendered/; cheap, so it always runs)"
+depends = ["deps"]
+run = "python3 -I scripts/render_sheets.py"
+
+[tasks.site]
+description = "Build the HTML manual into docs/"
+run = "python3 -I scripts/build.py"
+
+[tasks.markdown]
+description = "Convert docs/ to the GitHub Markdown in manual/"
+depends = ["site"]
+run = "python3 -I scripts/markdown.py"
+
+[tasks.test]
+description = "Run the tests (standard library only; they read the committed data, so no venv or raw/ is needed)"
+run = "python3 -I -m unittest discover -s tests"
+
+[tasks.lint]
+description = "Lint the Python"
+run = "ruff check scripts tests"
+
+[tasks.check]
+description = "The mandatory checks: tests, lint, every link and image in manual/, and markdownlint"
+depends = ["test", "lint"]
+run = [
+  "python3 -I scripts/check_markdown.py",
+  "markdownlint-cli2 \"**/*.md\"",
+]
+
+[tasks.build]
+description = "Everything: read the drawings, build docs/ and manual/, then check them"
+depends = ["extract", "render"]
+run = [
+  "mise run markdown",
+  "mise run check",
+]

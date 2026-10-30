@@ -77,7 +77,7 @@ def convert(page, h, pages, amap):
         if not href and frag:                                    # #section inside this page
             return f'href="#{own[frag]}"' if frag in own else 'href="#"'
         if re.match(r'(https?:|mailto:)', href): return m.group(0)
-        if href.startswith('images/') or href.startswith('files/'): return f'href="../docs/{href}"'
+        if href.startswith('images/') or href.startswith('files/'): return f'href="../docs/{href}' + (f'#{frag}' if frag else '') + '"'
         name = href[:-5] if href.endswith('.html') else None
         if name == 'index': return 'href="README.md"'
         if name in pages:
@@ -94,6 +94,7 @@ def convert(page, h, pages, amap):
     md = re.sub(r'(?m)^\\\n', '', md)            # lines holding only a backslash (a <br> between blocks)
     md = re.sub(r'\\\n(?=\n)', '\n', md)         # a hard line break at the end of a paragraph
     md = re.sub(r'[ \t]+\n', '\n', md)
+    md = re.sub(r'(?m)^\|(?:-+\|)+$', lambda m: '| ' + ' | '.join('---' for _ in m.group(0).strip('|').split('|')) + ' |', md)   # table separator rows in the style markdownlint wants
     return normalize_headings(re.sub(r'\n{3,}', '\n\n', md).strip()) + '\n'
 
 def main():

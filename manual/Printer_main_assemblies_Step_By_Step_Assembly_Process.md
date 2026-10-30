@@ -199,7 +199,7 @@ If you are building an older **Non-Hybrid** Dual Direct-Drive X-Carriage \| Clic
 
 ## (8) Hybrid X-Carriage
 
-[800px](/index.php?title=Special:Upload&wpDestFile=V1.1_x_carriage_assembly.jpg "File:V1.1 x carriage assembly.jpg")
+\[image not archived: "V1.1_x_carriage_assembly.jpg"\]
 
 ![V1.1_x_carriage_fit.jpg](../docs/images/V1.1_x_carriage_fit.jpg)
 
@@ -358,6 +358,8 @@ Finally fit the free end into the X-Axis Idler and secure with a grub.
 ## (12) X-Axis Cable Conduits
 
 ![REAR-RIGHT-BACK_CABLE_CONDUIT.jpg](../docs/images/REAR-RIGHT-BACK_CABLE_CONDUIT.jpg)
+
+*Drawn from sheet 29 of the exploded drawings PDF; the wiki's image of this drawing was low resolution and the PDF has it larger.*
 
 ![Cable_Conduit.jpg](../docs/images/Cable_Conduit.jpg)
 

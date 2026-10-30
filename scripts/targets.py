@@ -79,7 +79,7 @@ DOWNLOADS = [
       ('BigBox_Cura_0.10.ini', 'https://web.archive.org/web/20160519153237/http://files.e3d-online.com/BigBox/Slicer%20Configs/Cura/BigBox_Cura_0.10.ini', 'Cura configuration, 0.10 layer height'),
       ('BigBox_Cura_0.20.ini', 'https://web.archive.org/web/20160519153242/http://files.e3d-online.com/BigBox/Slicer%20Configs/Cura/BigBox_Cura_0.20.ini', 'Cura configuration, 0.20 layer height'),
       ('BigBox_Cura_0.25.ini', 'https://web.archive.org/web/20160519152959/http://files.e3d-online.com/BigBox/Slicer%20Configs/Cura/BigBox_Cura_0.25.ini', 'Cura configuration, 0.25 layer height'),
-      ('EXPLODED_DRAWINGS.pdf', 'https://web.archive.org/web/20160109071827/http://files.e3d-online.com/BigBox/EXPLODED_DRAWINGS.pdf', 'BigBox exploded drawings'),
+      ('EXPLODED_DRAWINGS.pdf', 'files/EXPLODED_DRAWINGS.pdf', 'BigBox exploded drawings; this repository holds a copy of the file the archive saved on 2016-01-09'),
       ('Titan_Assembly_Supplementary.pdf', 'https://web.archive.org/web/20160527143731/http://files.e3d-online.com/Titan/Titan_Assembly_Supplementary.pdf', 'Titan assembly supplementary instructions (the wiki linked it with spaces in the name)'),
       ('ASM_EX_THUMB_SCREW.stp', 'https://web.archive.org/web/20170910104341/http://files.e3d-online.com/Titan/ASM_EX_THUMB_SCREW.stp', 'Titan thumb screw CAD model'),
       ('ASM_EX_AERO_285.stl', 'https://web.archive.org/web/20171114074932/http://files.e3d-online.com/Titan/ASM_EX_AERO_285.stl', 'Titan Aero 2.85 mm model'),
@@ -91,3 +91,33 @@ DOWNLOADS = [
       ('BigBoxSingle-alpha-settings.fff', None, 'the early alpha Simplify3D profile (it was on Dropbox)'),
       ('ASM_EX_THUMB_SCREW.stl', None, 'the Titan thumb screw model linked from Titan Assembly; the archive has the .stp version above but not this file')]),
 ]
+
+# Drawing images the wiki used but the archive did not keep, whose sheet is in the exploded drawings PDF: file name -> sheet.
+# scripts/render_sheets.py draws these sheets from the PDF and the build uses them in place of the missing image.
+# Checked by eye against the page each one appears on. (X-CARRIAGE_DUAL, PRINT-HEAD_(SINGLE) and PRINT-HEAD_(DUAL) have no
+# sheet in the PDF: sheet 8 is blank.)
+SHEET_IMAGES = {
+    'EXTRUDER_IDLER.jpg': 4,
+    'X-CARRIAGE_SINGLE.jpg': 7,
+    'PRINT_FAN_DUCT.jpg': 12,
+    'IR_SENSOR_ASSEMBLY.jpg': 13,
+}
+
+# Matches decided by eye, for images the matcher cannot confirm on its own: image -> PDF sheet. They link to that sheet and are never
+# redrawn. (Empty: the matcher now compares an image's parts with the sheet its title names, which confirms HEATED_BED_CORNERS by itself.)
+MATCH_OVERRIDES = {}
+
+# OCR misreads on the image-only drawing sheets, checked against the drawing by eye: what the OCR read -> what the drawing says.
+# (EXTRUDER_DUAL.jpg is only 800 px wide.) scripts/drawing_images.py applies these and treats the rows as checked.
+OCR_FIXES = {
+    'EXTRUDER BOOY(DUAL)': 'EXTRUDER BODY (DUAL)',
+    'Motox Box-0.9Deg': 'Motor Box - 0.9Deg',
+    'E-AXIS CABLE BRACKET(DUAL)(R)': 'E-AXIS CABLE BRACKET (DUAL)(R)',
+    'E-AXIS CABLE BRACKET(DUAL)IL)': 'E-AXIS CABLE BRACKET (DUAL)(L)',
+    'M3x2S.Socket CapScrew': 'M3 x 25 Socket Cap Screw',
+    'MAWasher': 'M4 Washer',
+    'HOBDGOBLIN-SOOIO': 'HOBBGOBLIN-500ID',
+    'M3x 3Skt Grb Screw Knurled Point': 'M3 x 3 Skt Grub Screw Knurled Point',
+    'M2Hex Nut': 'M3 Hex Nut',   # the hybrid drawings themselves print 'M2 Hex Nut' (E3D's typo): Fixings Bag 3 holds the M3 hex nut and no M2 screws or nuts are listed anywhere (confirmed by the maintainer)
+}
+# (lookup ignores spaces and case, so 'M2 HexNut' and 'M2Hex Nut' both match)

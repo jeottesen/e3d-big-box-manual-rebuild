@@ -1,0 +1,15 @@
+# Lint settings. The scripts are written in a compact style (long lines, one-line if/for), so the style rules that fight that
+# are off; the rules that find real mistakes (unused names, undefined names, likely bugs, global state) are on.
+target-version = "py313"
+
+[lint]
+select = ["E", "F", "B", "PLW0603"]
+ignore = [
+  "E501",   # line length
+  "E701",   # statement on the same line as a colon
+  "E702",   # several statements on one line
+  "E401",   # several imports on one line
+  "E402",   # imports after the sys.path line (python -I does not add the script folder)
+  "E731",   # assigning a lambda
+  "E741",   # short names such as l and h
+]
