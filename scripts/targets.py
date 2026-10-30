@@ -79,7 +79,7 @@ DOWNLOADS = [
       ('BigBox_Cura_0.10.ini', 'https://web.archive.org/web/20160519153237/http://files.e3d-online.com/BigBox/Slicer%20Configs/Cura/BigBox_Cura_0.10.ini', 'Cura configuration, 0.10 layer height'),
       ('BigBox_Cura_0.20.ini', 'https://web.archive.org/web/20160519153242/http://files.e3d-online.com/BigBox/Slicer%20Configs/Cura/BigBox_Cura_0.20.ini', 'Cura configuration, 0.20 layer height'),
       ('BigBox_Cura_0.25.ini', 'https://web.archive.org/web/20160519152959/http://files.e3d-online.com/BigBox/Slicer%20Configs/Cura/BigBox_Cura_0.25.ini', 'Cura configuration, 0.25 layer height'),
-      ('EXPLODED_DRAWINGS.pdf', 'https://web.archive.org/web/20160109071827/http://files.e3d-online.com/BigBox/EXPLODED_DRAWINGS.pdf', 'BigBox exploded drawings'),
+      ('EXPLODED_DRAWINGS.pdf', 'files/EXPLODED_DRAWINGS.pdf', 'BigBox exploded drawings; this repository holds a copy of the file the archive saved on 2016-01-09'),
       ('Titan_Assembly_Supplementary.pdf', 'https://web.archive.org/web/20160527143731/http://files.e3d-online.com/Titan/Titan_Assembly_Supplementary.pdf', 'Titan assembly supplementary instructions (the wiki linked it with spaces in the name)'),
       ('ASM_EX_THUMB_SCREW.stp', 'https://web.archive.org/web/20170910104341/http://files.e3d-online.com/Titan/ASM_EX_THUMB_SCREW.stp', 'Titan thumb screw CAD model'),
       ('ASM_EX_AERO_285.stl', 'https://web.archive.org/web/20171114074932/http://files.e3d-online.com/Titan/ASM_EX_AERO_285.stl', 'Titan Aero 2.85 mm model'),

@@ -57,8 +57,8 @@ open(f'{RAW}/recovered/Datasheets.html', 'w').write(f'<div id="mw-content-text">
                                                    f'(V6 hotend, stepper motors, fans). Volcano and heater-mat datasheets were left out as they are not BigBox parts.</p><ul>{rows}</ul></div>')
 index['Datasheets'] = {'parent': 'wiki-hosted files', 'version': 'various', 'heading': 'datasheets', 'lines': len(files)}
 # a page saying where the files the wiki hosted can be found now
-dl = ['<p>Files the wiki linked to that are no longer on the wiki, and where to find them now. They are linked, not copied: '
-      'most of these repositories have no licence. Checked against the repositories on 2026-10-29.</p>']
+dl = ['<p>Files the wiki linked to that are no longer on the wiki, and where to find them now. They are linked, not copied (most of these repositories have no licence), '
+      'except the exploded drawings PDF, which is included here under the same terms as the rest of the archived material. Checked against the repositories on 2026-10-29.</p>']
 for heading, intro, items in DOWNLOADS:
     dl.append(f'<h2>{html.escape(heading)}</h2><p>{html.escape(intro)}</p><ul>' + ''.join(
         '<li>' + (f'<a href="{html.escape(url)}">{html.escape(text)}</a>' if url else html.escape(text)) + (f' – {html.escape(note)}' if note else '') + '</li>'

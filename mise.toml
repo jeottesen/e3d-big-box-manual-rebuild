@@ -37,6 +37,11 @@ run = [
   "python3 -I scripts/drawing_images.py",
 ]
 
+[tasks.match]
+description = "Match the wiki's drawing images to sheets of the exploded drawings PDF (writes notes/sheet_matches.json; not part of build)"
+depends = ["deps"]
+run = "python3 -I scripts/match_sheets.py"
+
 [tasks.render]
 description = "Draw the PDF sheets that stand in for drawing images the archive did not keep"
 depends = ["deps"]

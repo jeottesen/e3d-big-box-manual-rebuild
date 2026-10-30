@@ -2,6 +2,7 @@ flatbuffers==25.12.19
     # via onnxruntime
 numpy==2.5.4
     # via
+    #   -r requirements.in
     #   onnxruntime
     #   opencv-python
     #   rapidocr-onnxruntime

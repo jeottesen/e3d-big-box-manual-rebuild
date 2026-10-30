@@ -4,3 +4,4 @@ pypdf             # scripts/drawings.py: read the parts lists from the exploded 
 rapidocr_onnxruntime   # scripts/drawing_images.py: OCR for the drawing sheets that are only images (bundles its models)
 pillow            # scripts/drawing_images.py: open and resize the images
 pypdfium2         # scripts/render_sheets.py: draw sheets of the exploded drawings PDF as images
+numpy             # scripts/match_sheets.py: compare drawings

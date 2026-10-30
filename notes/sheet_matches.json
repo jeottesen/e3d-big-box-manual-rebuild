@@ -1,0 +1,439 @@
+{
+ "source": "scripts/match_sheets.py",
+ "matches": {
+  "DOCK-BRACKET.jpg": {
+   "status": "no match",
+   "sheet": null,
+   "visual": 0.665,
+   "next_best": 0.644,
+   "next_sheet": 29,
+   "sheets_with_this_title": [],
+   "rows_shared": 0.0,
+   "image_width": 1600,
+   "sheet_title": "SPOOL-HOLDER INNER",
+   "image_sheet_no": 35,
+   "image_of": 36
+  },
+  "E3D-V6_HOTEND_ASSEMBLY_BIGBOX.jpg": {
+   "status": "confirmed",
+   "sheet": 26,
+   "visual": 0.956,
+   "next_best": 0.405,
+   "next_sheet": 1,
+   "sheets_with_this_title": [
+    26
+   ],
+   "rows_shared": 0.93,
+   "image_width": 1600,
+   "sheet_title": "E3D-v6 HOTEND",
+   "image_sheet_no": 28,
+   "image_of": 36
+  },
+  "ELECTRONICS_COVER.jpg": {
+   "status": "confirmed",
+   "sheet": 28,
+   "visual": 0.958,
+   "next_best": 0.552,
+   "next_sheet": 2,
+   "sheets_with_this_title": [
+    28
+   ],
+   "rows_shared": 1.0,
+   "image_width": 1200,
+   "sheet_title": "ELECTRONICS COVER",
+   "image_sheet_no": 30,
+   "image_of": 36
+  },
+  "EXTRUDER_DUAL.jpg": {
+   "status": "no match",
+   "sheet": null,
+   "visual": 0.572,
+   "next_best": 0.415,
+   "next_sheet": 27,
+   "sheets_with_this_title": [],
+   "rows_shared": 0.0,
+   "image_width": 800,
+   "sheet_title": "EXTRUDER (SINGLE)",
+   "image_sheet_no": 16,
+   "image_of": 36
+  },
+  "EXTRUDER_HYBRID_NON-TITAN_DIRECT.jpg": {
+   "status": "no match",
+   "sheet": null,
+   "visual": 0.472,
+   "next_best": 0.431,
+   "next_sheet": 3,
+   "sheets_with_this_title": [],
+   "rows_shared": 0.62,
+   "image_width": 1200,
+   "sheet_title": "EXTRUDER (SINGLE)",
+   "image_sheet_no": 19,
+   "image_of": 41
+  },
+  "EXTRUDER_HYBRID_TITAN_DIRECT.jpg": {
+   "status": "no match",
+   "sheet": null,
+   "visual": 0.397,
+   "next_best": 0.39,
+   "next_sheet": 14,
+   "sheets_with_this_title": [],
+   "rows_shared": 0.0,
+   "image_width": 1200,
+   "sheet_title": "Y-AXIS MOTOR MOUNT",
+   "image_sheet_no": 18,
+   "image_of": 41
+  },
+  "EXTRUDER_SINGLE.jpg": {
+   "status": "confirmed",
+   "sheet": 14,
+   "visual": 0.672,
+   "next_best": 0.476,
+   "next_sheet": 5,
+   "sheets_with_this_title": [
+    14
+   ],
+   "rows_shared": 0.69,
+   "image_width": 800,
+   "sheet_title": "EXTRUDER (SINGLE)",
+   "image_sheet_no": 15,
+   "image_of": 36,
+   "action": "redraw"
+  },
+  "FRAME-LUG_DRAWING.jpg": {
+   "status": "no match",
+   "sheet": null,
+   "visual": 0.544,
+   "next_best": 0.544,
+   "next_sheet": 15,
+   "sheets_with_this_title": [],
+   "rows_shared": null,
+   "image_width": 1200,
+   "sheet_title": "",
+   "image_sheet_no": 1,
+   "image_of": 1
+  },
+  "HEATED_BED_CORNERS.jpg": {
+   "status": "check",
+   "sheet": 10,
+   "visual": 0.66,
+   "next_best": 0.621,
+   "next_sheet": 4,
+   "sheets_with_this_title": [
+    9
+   ],
+   "rows_shared": 0.25,
+   "image_width": 1200,
+   "sheet_title": "SPOOL-HOLDER OUTER (L)",
+   "image_sheet_no": 9,
+   "image_of": 36
+  },
+  "MOUNT_SPOOL-HOLDER_OUTER.jpg": {
+   "status": "confirmed",
+   "sheet": 25,
+   "visual": 0.956,
+   "next_best": 0.573,
+   "next_sheet": 4,
+   "sheets_with_this_title": [
+    25
+   ],
+   "rows_shared": 1.0,
+   "image_width": 1600,
+   "sheet_title": "MOUNT SPOOL-HOLDER OUTER",
+   "image_sheet_no": 27,
+   "image_of": 36
+  },
+  "MOUNT_Y-AXIS_MOTOR.jpg": {
+   "status": "confirmed",
+   "sheet": 23,
+   "visual": 0.947,
+   "next_best": 0.572,
+   "next_sheet": 13,
+   "sheets_with_this_title": [
+    23
+   ],
+   "rows_shared": 0.67,
+   "image_width": 1600,
+   "sheet_title": "MOUNT Y-AXIS MOTOR",
+   "image_sheet_no": 25,
+   "image_of": 36
+  },
+  "REAR-RIGHT-BACK_CABLE_CONDUIT.jpg": {
+   "status": "confirmed",
+   "sheet": 29,
+   "visual": 0.839,
+   "next_best": 0.638,
+   "next_sheet": 17,
+   "sheets_with_this_title": [
+    29
+   ],
+   "rows_shared": 1.0,
+   "image_width": 1169,
+   "sheet_title": "REAR-RIGHT-BACK CABLE CONDUIT",
+   "image_sheet_no": 31,
+   "image_of": 37,
+   "action": "redraw"
+  },
+  "SPINE.jpg": {
+   "status": "confirmed",
+   "sheet": 24,
+   "visual": 0.97,
+   "next_best": 0.53,
+   "next_sheet": 6,
+   "sheets_with_this_title": [
+    24
+   ],
+   "rows_shared": 1.0,
+   "image_width": 1600,
+   "sheet_title": "SPINE",
+   "image_sheet_no": 26,
+   "image_of": 36
+  },
+  "SPOOL-HOLDER_CLAMP.jpg": {
+   "status": "no match",
+   "sheet": null,
+   "visual": 0.602,
+   "next_best": 0.596,
+   "next_sheet": 12,
+   "sheets_with_this_title": [],
+   "rows_shared": 0.0,
+   "image_width": 1200,
+   "sheet_title": "HEATED BED CORNERS",
+   "image_sheet_no": 37,
+   "image_of": 37
+  },
+  "SPOOL-HOLDER_INNER.jpg": {
+   "status": "confirmed",
+   "sheet": 11,
+   "visual": 0.599,
+   "next_best": 0.57,
+   "next_sheet": 29,
+   "sheets_with_this_title": [
+    11
+   ],
+   "rows_shared": 1.0,
+   "image_width": 1200,
+   "sheet_title": "SPOOL-HOLDER INNER",
+   "image_sheet_no": 12,
+   "image_of": 36
+  },
+  "SPOOL-HOLDER_OUTER.jpg": {
+   "status": "confirmed",
+   "sheet": 10,
+   "visual": 0.781,
+   "next_best": 0.562,
+   "next_sheet": 2,
+   "sheets_with_this_title": [
+    10
+   ],
+   "rows_shared": 1.0,
+   "image_width": 1200,
+   "sheet_title": "SPOOL-HOLDER OUTER (L)",
+   "image_sheet_no": 10,
+   "image_of": 36
+  },
+  "X-AXIS_ASSEMBLY.jpg": {
+   "status": "confirmed",
+   "sheet": 16,
+   "visual": 0.979,
+   "next_best": 0.451,
+   "next_sheet": 29,
+   "sheets_with_this_title": [
+    16,
+    18
+   ],
+   "rows_shared": 1.0,
+   "image_width": 1200,
+   "sheet_title": "X-AXIS ASSEMBLY",
+   "image_sheet_no": 18,
+   "image_of": 36
+  },
+  "X-AXIS_IDLER_CARRIAGE.jpg": {
+   "status": "confirmed",
+   "sheet": 5,
+   "visual": 0.96,
+   "next_best": 0.523,
+   "next_sheet": 6,
+   "sheets_with_this_title": [
+    5
+   ],
+   "rows_shared": 1.0,
+   "image_width": 1200,
+   "sheet_title": "X-AXIS IDLER CARRIAGE",
+   "image_sheet_no": 5,
+   "image_of": 36
+  },
+  "X-AXIS_MOTOR_CARRIAGE.jpg": {
+   "status": "confirmed",
+   "sheet": 6,
+   "visual": 0.967,
+   "next_best": 0.541,
+   "next_sheet": 29,
+   "sheets_with_this_title": [
+    6
+   ],
+   "rows_shared": 0.89,
+   "image_width": 1200,
+   "sheet_title": "X-AXIS MOTOR CARRIAGE",
+   "image_sheet_no": 6,
+   "image_of": 36
+  },
+  "X-AXIS_MOTOR_INSTALL.jpg": {
+   "status": "confirmed",
+   "sheet": 21,
+   "visual": 0.931,
+   "next_best": 0.576,
+   "next_sheet": 13,
+   "sheets_with_this_title": [
+    21
+   ],
+   "rows_shared": 1.0,
+   "image_width": 1600,
+   "sheet_title": "X-AXIS MOTOR INSTALL",
+   "image_sheet_no": 23,
+   "image_of": 36
+  },
+  "XY-AXIS_ASSEMBLY.jpg": {
+   "status": "confirmed",
+   "sheet": 20,
+   "visual": 0.987,
+   "next_best": 0.439,
+   "next_sheet": 17,
+   "sheets_with_this_title": [
+    20
+   ],
+   "rows_shared": 1.0,
+   "image_width": 1600,
+   "sheet_title": "XY-AXIS ASSEMBLY",
+   "image_sheet_no": 22,
+   "image_of": 36
+  },
+  "Y-AXIS_FRONT.jpg": {
+   "status": "confirmed",
+   "sheet": 2,
+   "visual": 0.959,
+   "next_best": 0.629,
+   "next_sheet": 3,
+   "sheets_with_this_title": [
+    2,
+    19
+   ],
+   "rows_shared": 1.0,
+   "image_width": 1200,
+   "sheet_title": "Y-AXIS FRONT (L)",
+   "image_sheet_no": 2,
+   "image_of": 36
+  },
+  "Y-AXIS_FRONT_ASSEMBLY.jpg": {
+   "status": "confirmed",
+   "sheet": 19,
+   "visual": 0.502,
+   "next_best": 0.455,
+   "next_sheet": 11,
+   "sheets_with_this_title": [
+    19
+   ],
+   "rows_shared": 1.0,
+   "image_width": 1600,
+   "sheet_title": "Y-AXIS FRONT ASSEMBLY",
+   "image_sheet_no": 21,
+   "image_of": 36
+  },
+  "Y-AXIS_IDLER.jpg": {
+   "status": "confirmed",
+   "sheet": 3,
+   "visual": 0.928,
+   "next_best": 0.617,
+   "next_sheet": 2,
+   "sheets_with_this_title": [
+    3
+   ],
+   "rows_shared": 1.0,
+   "image_width": 1200,
+   "sheet_title": "Y-AXIS IDLER (L & R)",
+   "image_sheet_no": 3,
+   "image_of": 36
+  },
+  "Y-AXIS_MOTOR.jpg": {
+   "status": "confirmed",
+   "sheet": 27,
+   "visual": 0.923,
+   "next_best": 0.513,
+   "next_sheet": 24,
+   "sheets_with_this_title": [
+    27
+   ],
+   "rows_shared": 1.0,
+   "image_width": 1200,
+   "sheet_title": "Y-AXIS MOTOR MOUNT",
+   "image_sheet_no": 29,
+   "image_of": 36
+  },
+  "Y-AXIS_REAR.jpg": {
+   "status": "confirmed",
+   "sheet": 1,
+   "visual": 0.965,
+   "next_best": 0.46,
+   "next_sheet": 10,
+   "sheets_with_this_title": [
+    1
+   ],
+   "rows_shared": 1.0,
+   "image_width": 1200,
+   "sheet_title": "Y-AXIS REAR (L)",
+   "image_sheet_no": 1,
+   "image_of": 36
+  },
+  "Y-AXIS_REAR_ASSEMBLY.jpg": {
+   "status": "confirmed",
+   "sheet": 18,
+   "visual": 0.962,
+   "next_best": 0.384,
+   "next_sheet": 17,
+   "sheets_with_this_title": [],
+   "rows_shared": 0.83,
+   "image_width": 1600,
+   "sheet_title": "X-AXIS ASSEMBLY",
+   "image_sheet_no": 20,
+   "image_of": 36
+  },
+  "Z-AXIS_BASE_BRACKETS.jpg": {
+   "status": "no match",
+   "sheet": null,
+   "visual": 0.622,
+   "next_best": 0.62,
+   "next_sheet": 4,
+   "sheets_with_this_title": [],
+   "rows_shared": 0.25,
+   "image_width": 1600,
+   "sheet_title": "HEATED BED CORNERS",
+   "image_sheet_no": 32,
+   "image_of": 36
+  },
+  "Z-AXIS_DRAG_CHAIN.jpg": {
+   "status": "no match",
+   "sheet": null,
+   "visual": 0.593,
+   "next_best": 0.554,
+   "next_sheet": 13,
+   "sheets_with_this_title": [],
+   "rows_shared": 0.0,
+   "image_width": 1200,
+   "sheet_title": "HEATED BED CORNERS",
+   "image_sheet_no": 36,
+   "image_of": 36
+  },
+  "Z-AXIS_TOP_BRACKETS.jpg": {
+   "status": "no match",
+   "sheet": null,
+   "visual": 0.603,
+   "next_best": 0.578,
+   "next_sheet": 13,
+   "sheets_with_this_title": [],
+   "rows_shared": 0.0,
+   "image_width": 1600,
+   "sheet_title": "REAR-RIGHT-BACK CABLE CONDUIT",
+   "image_sheet_no": 38,
+   "image_of": 38
+  }
+ }
+}

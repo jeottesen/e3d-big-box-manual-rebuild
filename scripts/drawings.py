@@ -22,11 +22,11 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = f'{ROOT}/notes/parts.json'
 PDF_URL = 'http://files.e3d-online.com/BigBox/EXPLODED_DRAWINGS.pdf'
 PDF_TS = '20160109071827'
-PDF_PATH = f'{crawl.RAW}/drawings/EXPLODED_DRAWINGS.pdf'   # not under files/, which the build publishes
+PDF_PATH = f'{ROOT}/docs/files/EXPLODED_DRAWINGS.pdf'   # a copy is kept in the repository; downloaded from the archive only if it is missing
 
 def get_pdf():
     if len(sys.argv) > 2 and sys.argv[1] == '--pdf': return sys.argv[2]
-    if not os.path.exists(PDF_PATH) and not crawl.from_seed('drawings/EXPLODED_DRAWINGS.pdf'):
+    if not os.path.exists(PDF_PATH):
         st, data = crawl.get_snapshot(crawl.snap(PDF_URL, PDF_TS, 'id_'), binary=True)
         if not data: sys.exit(f'Could not download the exploded drawings (status {st}).')
         os.makedirs(os.path.dirname(PDF_PATH), exist_ok=True); open(PDF_PATH, 'wb').write(data)

@@ -542,21 +542,73 @@
    ]
   },
   {
+   "image": "EXTRUDER_IDLER.jpg",
+   "title": "EXTRUDER IDLER",
+   "sheet": 4,
+   "of": 29,
+   "rows": [
+    {
+     "item": "1",
+     "qty": "2",
+     "part": "M4 Washer",
+     "description": "Fixings Bag 13",
+     "confidence": 1.0,
+     "review": false
+    },
+    {
+     "item": "2",
+     "qty": "1",
+     "part": "BEARING-604ZZ",
+     "description": "Bearing Box",
+     "confidence": 0.95,
+     "review": false
+    },
+    {
+     "item": "3",
+     "qty": "1",
+     "part": "E-AXIS IDLER",
+     "description": "Printed Part",
+     "confidence": 0.96,
+     "review": false
+    },
+    {
+     "item": "",
+     "qty": "4",
+     "part": "M4 x 12 Socket Grub Screw (Flat Point)",
+     "description": "Fixings Bag 14",
+     "confidence": 0.97,
+     "review": false
+    },
+    {
+     "item": "5",
+     "qty": "1",
+     "part": "Nylon Spacer 3.2ID 6OD 15L",
+     "description": "Fixings Bag 16",
+     "confidence": 0.98,
+     "review": false
+    }
+   ]
+  },
+  {
    "image": "EXTRUDER_SINGLE.jpg",
    "title": "EXTRUDER SINGLE",
-   "sheet": 15,
-   "of": 36,
+   "sheet": 14,
+   "of": 29,
    "rows": [
     {
      "item": "1",
      "qty": "1",
      "part": "EXTRUDER BODY (SINGLE)",
      "description": "Printed Part",
-     "confidence": 0.93,
-     "ocr": {
-      "part": "EXT RUOERE OD Y(SINGLE)",
-      "description": "Printed Part"
-     },
+     "confidence": 0.98,
+     "review": false
+    },
+    {
+     "item": "2",
+     "qty": "1",
+     "part": "NEMA17-400",
+     "description": "Motor Box - 400 Step Motor",
+     "confidence": 1.0,
      "review": false
     },
     {
@@ -564,11 +616,7 @@
      "qty": "1",
      "part": "EXTRUDER CABLE BRACKET",
      "description": "Printed Part",
-     "confidence": 0.88,
-     "ocr": {
-      "part": "EXT RUOER CABLE BRACKET",
-      "description": "Printed Part"
-     },
+     "confidence": 0.99,
      "review": false
     },
     {
@@ -576,11 +624,7 @@
      "qty": "2",
      "part": "M3 x 35 Socket Cap Screw",
      "description": "Fixings Bag 11",
-     "confidence": 0.87,
-     "ocr": {
-      "part": "M3 x 35 Socket Cap Screw",
-      "description": "Foongs Beg 11"
-     },
+     "confidence": 0.96,
      "review": false
     },
     {
@@ -588,7 +632,7 @@
      "qty": "1",
      "part": "M3 x 25 Socket Cap Screw",
      "description": "Fixings Bag 7",
-     "confidence": 0.74,
+     "confidence": 0.99,
      "review": false
     },
     {
@@ -596,75 +640,55 @@
      "qty": "1",
      "part": "M3 x 10 Socket Cap Screw",
      "description": "Fixings Bag 8",
-     "confidence": 0.83,
-     "ocr": {
-      "part": "M3 x 10 Socket Cap Screw",
-      "description": "Foongs Bog8"
-     },
+     "confidence": 0.99,
      "review": false
     },
     {
-     "item": "",
-     "qty": "7",
+     "item": "7",
+     "qty": "1",
      "part": "M4 x 30 Socket Cap Screw",
      "description": "Fixings Bag 17",
-     "confidence": 0.83,
-     "ocr": {
-      "part": "M4 x 30 Socket Cap Screw",
-      "description": "Foxings Bog 17"
-     },
+     "confidence": 0.99,
      "review": false
     },
     {
      "item": "8",
      "qty": "1",
-     "part": "MAWasher",
+     "part": "M4 Washer",
      "description": "Fixings Bag 13",
-     "confidence": 0.81,
-     "ocr": {
-      "part": "MAWasher",
-      "description": "Foxings Bog 13"
-     },
-     "review": true
+     "confidence": 1.0,
+     "review": false
     },
     {
      "item": "9",
      "qty": "1",
      "part": "Extruder Spring",
      "description": "Extruder Box - Black Spring",
-     "confidence": 0.91,
-     "ocr": {
-      "part": "Extruder Spring",
-      "description": "Extruder Box-ElackSpring"
-     },
+     "confidence": 0.99,
      "review": false
     },
     {
-     "item": "10",
-     "qty": "1",
-     "part": "MASquare Mut",
-     "description": "Fixings Bag 12",
-     "confidence": 0.86,
-     "review": false
+     "item": "",
+     "qty": "10",
+     "part": "I",
+     "description": "M4SquareNut FixingsBag12",
+     "confidence": 0.67,
+     "review": true
     },
     {
      "item": "11",
      "qty": "1",
      "part": "EXTRUDER IDLER",
-     "description": "Part Aevemby",
-     "confidence": 0.8,
-     "ocr": {
-      "part": "EXT RUOER IDLER",
-      "description": "Part Aevemby"
-     },
-     "review": true
+     "description": "Part Assembly",
+     "confidence": 1.0,
+     "review": false
     },
     {
      "item": "12",
      "qty": "1",
-     "part": "HOBBGOBLIN-SOOTO",
+     "part": "HOBBGOBLIN-500ID",
      "description": "Extruder Box",
-     "confidence": 0.87,
+     "confidence": 0.99,
      "review": false
     },
     {
@@ -672,11 +696,7 @@
      "qty": "1",
      "part": "M3 x 3 Skt Grub Screw Knurled Point",
      "description": "Fixings Bag 17",
-     "confidence": 0.8,
-     "ocr": {
-      "part": "M3x3 Skt GrubScrewKeuriedPoint",
-      "description": "Fioings Bog 17"
-     },
+     "confidence": 0.99,
      "review": false
     },
     {
@@ -684,11 +704,7 @@
      "qty": "1",
      "part": "Bowden Coupling",
      "description": "See Docs",
-     "confidence": 0.88,
-     "ocr": {
-      "part": "Boaden Couplng",
-      "description": "See Docs"
-     },
+     "confidence": 0.95,
      "review": false
     }
    ]
@@ -737,6 +753,62 @@
      "part": "BEARING-LM8LUU",
      "description": "Bearing Kit",
      "confidence": 0.97,
+     "review": false
+    }
+   ]
+  },
+  {
+   "image": "IR_SENSOR_ASSEMBLY.jpg",
+   "title": "IR SENSOR ASSEMBLY",
+   "sheet": 13,
+   "of": 29,
+   "rows": [
+    {
+     "item": "1",
+     "qty": "1",
+     "part": "IR-SENSOR HOUSING",
+     "description": "Printed Part",
+     "confidence": 0.99,
+     "review": false
+    },
+    {
+     "item": "2",
+     "qty": "1",
+     "part": "IR-SENSOR",
+     "description": "Electronics Box",
+     "confidence": 0.99,
+     "review": false
+    },
+    {
+     "item": "3",
+     "qty": "2",
+     "part": "M2.5 x 6 Socket Cap Screw",
+     "description": "Fixings Bag 5",
+     "confidence": 0.98,
+     "review": false
+    },
+    {
+     "item": "4",
+     "qty": "2",
+     "part": "M3 Square Nut",
+     "description": "Fixings Bag 6",
+     "confidence": 0.97,
+     "review": false
+    },
+    {
+     "item": "5",
+     "qty": "2",
+     "part": "M3 x 12 Socket Cap Screw",
+     "description": "Fixings Bag 9",
+     "confidence": 0.98,
+     "review": false
+    },
+    {
+     "item": "6",
+     "qty": "2",
+     "part": "M2.5 Square Nut",
+     "description": "Fixings Bag 4",
+     "confidence": 1.0,
      "review": false
     }
    ]
@@ -822,32 +894,96 @@
    ]
   },
   {
+   "image": "PRINT_FAN_DUCT.jpg",
+   "title": "PRINT FAN DUCT",
+   "sheet": 12,
+   "of": 29,
+   "rows": [
+    {
+     "item": "1",
+     "qty": "1",
+     "part": "PRINT FAN BRACKET",
+     "description": "Printed Part",
+     "confidence": 0.99,
+     "review": false
+    },
+    {
+     "item": "2",
+     "qty": "1",
+     "part": "PRINT FAN DUCT",
+     "description": "Printed Part",
+     "confidence": 0.99,
+     "review": false
+    },
+    {
+     "item": "3",
+     "qty": "2",
+     "part": "M3 Square Nut",
+     "description": "Fixings Bag 6",
+     "confidence": 0.99,
+     "review": false
+    },
+    {
+     "item": "4",
+     "qty": "1",
+     "part": "M3 x 8 Socket Cap Screw",
+     "description": "Fixings Bag 15",
+     "confidence": 0.99,
+     "review": false
+    },
+    {
+     "item": "5",
+     "qty": "1",
+     "part": "FAN-SNAIL-BLOWER",
+     "description": "Fan Box",
+     "confidence": 0.99,
+     "review": false
+    },
+    {
+     "item": "6",
+     "qty": "1",
+     "part": "M3 x 22 Socket Cap Screw",
+     "description": "Fixings Bag 11",
+     "confidence": 0.98,
+     "review": false
+    },
+    {
+     "item": "7",
+     "qty": "2",
+     "part": "M3 x 30 Socket Cap Screw",
+     "description": "Fixings Bag 10",
+     "confidence": 0.98,
+     "review": false
+    }
+   ]
+  },
+  {
    "image": "REAR-RIGHT-BACK_CABLE_CONDUIT.jpg",
    "title": "REAR-RIGHT-BACK CABLE CONDUIT",
-   "sheet": 31,
-   "of": 37,
+   "sheet": 29,
+   "of": 29,
    "rows": [
     {
      "item": "1",
      "qty": "3",
      "part": "RRB-CABLE-CONDUIT",
      "description": "Printed Part",
-     "confidence": 0.97,
+     "confidence": 0.99,
      "review": false
     },
     {
      "item": "2",
      "qty": "3",
-     "part": "M3 x 25 Socket Cap Screw",
-     "description": "Fixings Bag 7",
-     "confidence": 0.95,
+     "part": "M3 Hex Nut",
+     "description": "Fixings Bag 3",
+     "confidence": 0.99,
      "review": false
     },
     {
      "item": "3",
      "qty": "3",
-     "part": "M3 Hex Nut",
-     "description": "Fixings Bag 3",
+     "part": "M3 x 25 Socket Cap Screw",
+     "description": "Fixings Bag 7",
      "confidence": 0.99,
      "review": false
     }
@@ -1353,6 +1489,46 @@
      "part": "GT2-20T-5ID",
      "description": "Motion Box (20 Tooth, 5mm ID)",
      "confidence": 0.94,
+     "review": false
+    }
+   ]
+  },
+  {
+   "image": "X-CARRIAGE_SINGLE.jpg",
+   "title": "X-CARRIAGE SINGLE",
+   "sheet": 7,
+   "of": 29,
+   "rows": [
+    {
+     "item": "1",
+     "qty": "1",
+     "part": "X-CARRIAGE SINGLE",
+     "description": "Printed Part",
+     "confidence": 0.99,
+     "review": false
+    },
+    {
+     "item": "2",
+     "qty": "8",
+     "part": "M3 Square Nut",
+     "description": "Fixings Bag 6",
+     "confidence": 0.99,
+     "review": false
+    },
+    {
+     "item": "3",
+     "qty": "6",
+     "part": "M4 Square Nut",
+     "description": "Fixings Bag 12",
+     "confidence": 0.99,
+     "review": false
+    },
+    {
+     "item": "4",
+     "qty": "2",
+     "part": "M4 x 20 Socket Cap Screw",
+     "description": "Fixings Bag 17",
+     "confidence": 0.98,
      "review": false
     }
    ]
@@ -1898,7 +2074,7 @@
   "EXTRUDER_DUAL.jpg: 1 of 14 rows the OCR was unsure of and could not match to a known name: no item no. EXTRUDER BOOY(DUAL)",
   "EXTRUDER_HYBRID_NON-TITAN_DIRECT.jpg: item numbers ['1', '2', '3', '4', '5', '6', '7', '8', '6', '10', '11', '12', '13', '14', '15', '16'] repeat; one was probably misread",
   "EXTRUDER_HYBRID_TITAN_DIRECT.jpg: 1 of 4 rows the OCR was unsure of and could not match to a known name: 1 M2Hex Nut",
-  "EXTRUDER_SINGLE.jpg: 2 of 13 rows the OCR was unsure of and could not match to a known name: 8 MAWasher; 11 EXTRUDER IDLER",
+  "EXTRUDER_SINGLE.jpg: 1 of 14 rows the OCR was unsure of and could not match to a known name: no item no. I",
   "FRAME-LUG_DRAWING.jpg: no PARTS LIST heading found"
  ]
 }

@@ -63,6 +63,13 @@ def extract(h):
     return body
 
 from targets import SHEET_IMAGES
+MATCHES_PATH = f'{ROOT}/notes/sheet_matches.json'   # written by scripts/match_sheets.py
+matches = json.load(open(MATCHES_PATH))['matches'] if os.path.exists(MATCHES_PATH) else {}
+# images drawn from the exploded drawings PDF by scripts/render_sheets.py: name -> (sheet, 'lost' or 'redrawn')
+REDRAW = {n: (sh, 'lost') for n, sh in SHEET_IMAGES.items()}
+REDRAW.update({n: (m['sheet'], 'redrawn') for n, m in matches.items() if m.get('action') == 'redraw'})
+REDRAW_NOTE = {'lost': "the wiki's own copy of this image was not archived",
+               'redrawn': "the wiki's image of this drawing was low resolution and the PDF has it larger"}
 
 def fix_images(body, stats):
     def thumb_file(src):
@@ -75,16 +82,17 @@ def fix_images(body, stats):
         if not s: return tag
         if '/resources/' in s.group(1): return ''
         fn = thumb_file(s.group(1))
+        if fn in REDRAW and os.path.exists(f'{RAW}/rendered/{fn}'):   # drawn from the PDF instead (see scripts/render_sheets.py)
+            sheet, kind = REDRAW[fn]
+            shutil.copy(f'{RAW}/rendered/{fn}', f'{SITE}/images/{fn}')
+            stats['rendered'] = stats.get('rendered', 0) + 1
+            return (f'<img src="images/{urllib.parse.quote(fn)}" alt="{html.escape(fn)}">'
+                    f'<p class="derived"><em>Drawn from sheet {sheet} of the exploded drawings PDF; {REDRAW_NOTE[kind]}.</em></p>')
         rec = imgs.get(fn)
         if rec and rec.get('kind') and os.path.exists(f'{RAW}/images/{fn}'):
             shutil.copy(f'{RAW}/images/{fn}', f'{SITE}/images/{fn}')
             stats[rec['kind'].split('-')[0]] = stats.get(rec['kind'].split('-')[0], 0) + 1
             return f'<img src="images/{urllib.parse.quote(fn)}" alt="{html.escape(fn)}">'
-        if fn in SHEET_IMAGES and os.path.exists(f'{RAW}/rendered/{fn}'):   # a drawing the archive lost, drawn from its sheet in the PDF instead
-            shutil.copy(f'{RAW}/rendered/{fn}', f'{SITE}/images/{fn}')
-            stats['rendered'] = stats.get('rendered', 0) + 1
-            return (f'<img src="images/{urllib.parse.quote(fn)}" alt="{html.escape(fn)}">'
-                    f'<p class="derived"><em>Drawn from sheet {SHEET_IMAGES[fn]} of the exploded drawings PDF; the wiki\'s own copy of this image was not archived.</em></p>')
         stats['missing'] = stats.get('missing', 0) + 1
         return f'<span class="missing">[image not archived: {html.escape(fn)}]</span>'
     def never_uploaded(m):   # the wiki's red link for a file that was never uploaded; it points at Special:Upload, which is no use here
@@ -162,7 +170,7 @@ def add_section_lists(body, self_slug, heads_by_slug):
 
 PARTS_PATH = f'{ROOT}/notes/parts.json'   # written by scripts/drawings.py from the exploded drawings
 IMAGE_PARTS_PATH = f'{ROOT}/notes/parts_images.json'   # written by scripts/drawing_images.py (OCR of the drawing images)
-PDF_LINK = 'https://web.archive.org/web/20160109071827/http://files.e3d-online.com/BigBox/EXPLODED_DRAWINGS.pdf'
+PDF_LINK = 'files/EXPLODED_DRAWINGS.pdf'   # the copy kept in the repository (the archive's capture of 2016-01-09)
 
 def add_drawing_parts(body, parts, images, heads_by_slug):
     """On the Bill of Materials page: fill the empty Printed Parts section and add a fixings table under Fixings, from the
@@ -179,9 +187,18 @@ def add_drawing_parts(body, parts, images, heads_by_slug):
     def norm(t): return re.sub(r'[^A-Z0-9]', '', t.upper())
     pdf_titles = [norm(sh['title']) for sh in parts['sheets'] if sh['rows']]
     rows, left_out = [], 0   # (drawing link, build section link, row)
+    sheet_image = {}   # sheet -> the image of it: a wiki image the matcher confirmed, or one drawn from the PDF to replace a lost one
+    for name, m in matches.items():
+        if m['status'] == 'confirmed': sheet_image.setdefault(m['sheet'], name)
+    for name, (sheet, kind) in REDRAW.items():
+        if kind == 'lost': sheet_image.setdefault(sheet, name)
+    def drawing(n):   # the image of the sheet if there is one, with the PDF sheet it is; otherwise the sheet's page in the PDF
+        name = sheet_image.get(n)
+        if name: return f'<a href="images/{urllib.parse.quote(name)}">{esc(os.path.splitext(name)[0].replace("_", " ").lower())}</a> (sheet {n})'
+        return f'<a href="{PDF_LINK}#page={n}">sheet {n} of the PDF</a>'
     for sh in parts['sheets']:
         for r in sh['rows']:
-            rows.append((f'<a href="{PDF_LINK}#page={sh["sheet"]}">sheet {sh["sheet"]}</a>', section(SHEET_SECTIONS.get(sh['sheet'])), r))
+            rows.append((drawing(sh['sheet']), section(SHEET_SECTIONS.get(sh['sheet'])), r))
     for sh in (images or {}).get('sheets', []):
         k = norm(sh['title'])
         if not sh['rows'] or any(t == k or t.startswith(k) or k.startswith(t) for t in pdf_titles): continue   # the PDF has this sheet
@@ -191,7 +208,7 @@ def add_drawing_parts(body, parts, images, heads_by_slug):
     ocr = ' Sheets marked (image) exist only as pictures on the wiki; they were read by OCR and may contain mistakes.' if any('(image)' in d for d, _, _ in rows) else ''
     cut = f' {left_out} rows the OCR was not sure about are left out.' if left_out else ''
     note = ('<p class="derived"><em>This list is not from the wiki page, which left it empty. It is compiled from the parts lists in the '
-            f'<a href="{PDF_LINK}">exploded drawings</a> (EXPLODED_DRAWINGS.pdf, sheets 1 to {len(parts["sheets"])}) and the drawing images on the wiki.{ocr}{cut}</em></p>')
+            f'<a href="{PDF_LINK}">exploded drawings PDF</a> (EXPLODED_DRAWINGS.pdf, sheets 1 to {len(parts["sheets"])}) and the drawing images on the wiki. Each row links to the drawing, with its sheet number in the PDF.{ocr}{cut}</em></p>')
     printed = [(d, sec, r) for d, sec, r in rows if r['description'] in ('Printed Part', 'Printed Parts Box')]
     tr = ''.join(f'<tr><td>{esc(r["part"])}</td><td>{r["qty"]}</td><td>{"printed" if r["description"] == "Printed Part" else "from the Printed Parts Box"}</td>'
                  f'<td>{d}</td><td>{sec or "–"}</td></tr>' for d, sec, r in printed)
