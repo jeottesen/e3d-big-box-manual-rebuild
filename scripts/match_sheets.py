@@ -17,6 +17,7 @@ import numpy as np
 import pypdfium2 as pdfium
 from PIL import Image, ImageFilter
 import crawl
+from match_logic import decide
 from targets import SHEET_IMAGES, MATCH_OVERRIDES
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -24,7 +25,6 @@ PDF = f'{ROOT}/docs/files/EXPLODED_DRAWINGS.pdf'
 OUT = f'{ROOT}/notes/sheet_matches.json'
 W, H = 420, 297            # size both are compared at (A4 landscape)
 LOW_RES = 1200             # images narrower than this are worth redrawing from the PDF
-MIN_ROWS = 0.8             # share of the image's rows that must also be on the PDF sheet to say they have the same parts
 
 def key(t): return re.sub(r'[^A-Z0-9]', '', t.upper())
 
@@ -66,27 +66,24 @@ def main():
     for name, path in candidates().items():
         im = Image.open(path); w, h = im.size
         v = ink(im)
-        scores = sorted(((ncc(v, sheet_ink[n]), n) for n in sheet_ink if np.ptp(sheet_ink[n]) > 0), reverse=True)
-        (best, n), (second, n2) = scores[0], scores[1]
+        visual = {n: ncc(v, sheet_ink[n]) for n in sheet_ink if np.ptp(sheet_ink[n]) > 0}
         stem = key(os.path.splitext(name)[0])
         by_title = [m for m, sh in parts.items() if key(sh['title']) and (key(sh['title']) == stem or key(sh['title']).startswith(stem) or stem.startswith(key(sh['title'])))]
-        pdf_rows = {(key(r['part']), r['qty']) for r in parts[n]['rows']}
         img_rows = {(key(r['part']), r['qty']) for r in ocr.get(name, {}).get('rows', [])}
-        shared = len(pdf_rows & img_rows) / len(img_rows) if img_rows else None
-        strong = best >= 0.85 and best - second >= 0.2                      # the drawings look the same, and no other sheet does
-        text_ok = n in by_title and (shared is None or shared >= 0.8 or (shared >= 0.6 and best - second >= 0.15))   # same title and (mostly) the same parts
-        if strong or text_ok: status = 'confirmed'
-        elif by_title and n not in by_title: status = 'check'               # the title says one sheet, the drawing looks like another
-        else: status = 'no match'                                           # nothing in the PDF looks like it: a sheet from a newer revision
-        r = {'status': status, 'sheet': n if status != 'no match' else None, 'visual': round(best, 3), 'next_best': round(second, 3), 'next_sheet': n2,
-             'sheets_with_this_title': by_title, 'rows_shared': None if shared is None else round(shared, 2), 'image_width': w,
-             'sheet_title': parts[n]['title'], 'image_sheet_no': ocr.get(name, {}).get('sheet'), 'image_of': ocr.get(name, {}).get('of')}
+        shared = {t: (len(img_rows & {(key(r['part']), r['qty']) for r in parts[t]['rows']}) / len(img_rows) if img_rows else None) for t in by_title}
+        status, n = decide(visual, by_title, shared)
+        ranked = sorted(visual.items(), key=lambda kv: kv[1], reverse=True)
+        (n_best, best), (n_next, second) = (ranked[0][0], ranked[0][1]), (ranked[1][0], ranked[1][1])
+        n = n if n is not None else n_best    # for the record, the sheet it looks most like
+        r = {'status': status, 'sheet': n if status != 'no match' else None, 'visual': round(visual[n], 3), 'looks_most_like': n_best, 'best_visual': round(best, 3),
+             'next_best': round(second, 3), 'next_sheet': n_next, 'sheets_with_this_title': by_title, 'rows_shared': None if shared.get(n) is None else round(shared[n], 2),
+             'image_width': w, 'sheet_title': parts[n]['title'], 'image_sheet_no': ocr.get(name, {}).get('sheet'), 'image_of': ocr.get(name, {}).get('of')}
         if name in MATCH_OVERRIDES:   # decided by eye (targets.MATCH_OVERRIDES): the drawing may be a different view or revision
             r.update({'status': 'confirmed', 'sheet': MATCH_OVERRIDES[name], 'manual': True, 'sheet_title': parts[MATCH_OVERRIDES[name]]['title']})
         elif status == 'confirmed' and w < LOW_RES: r['action'] = 'redraw'
         elif status == 'no match' and w < LOW_RES: r['action'] = 'enlarge'      # no PDF sheet to redraw it from: make it larger, keeping the original       # same drawing, and the PDF has it at a better size
         result[name] = r
-    json.dump({'source': 'scripts/match_sheets.py', 'matches': result}, open(OUT, 'w'), indent=1)
+    crawl.write_if_changed(OUT, json.dumps({'source': 'scripts/match_sheets.py', 'matches': result}, indent=1))
     for name, r in sorted(result.items(), key=lambda kv: (kv[1]['sheet'] or 99, kv[0])):
         print(f"{name:40} {r['status']:9} sheet {str(r['sheet']):4} visual {r['visual']:.2f} (next {r['next_best']:.2f}) title-sheets {r['sheets_with_this_title']} rows {r['rows_shared']} width {r['image_width']} {r.get('action', '')}")
 

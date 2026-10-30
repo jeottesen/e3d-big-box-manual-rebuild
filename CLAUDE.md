@@ -15,6 +15,11 @@ E3D BigBox 3D printer manual, recovered from the Wayback Machine. See README.md 
 - `mise.toml` pins the tools and defines the tasks: `mise install`, then `mise run build` (read the drawings, build `docs/` and `manual/`, check them). `mise run fetch` fills `raw/` from the Wayback Machine; `mise run extract`, `site`, `markdown` and `check` are the steps on their own.
 - Python packages are in `requirements.txt`, compiled from `requirements.in` with `uv pip compile requirements.in --python-version 3.13 -o requirements.txt`. mise installs them into `.venv` (git-ignored).
 
+## Checks
+
+- Run `mise run check` before committing. It runs the tests (`tests/`, standard library only), `ruff` (config in `ruff.toml`), `scripts/check_markdown.py` and `markdownlint-cli2`. `.github/workflows/check.yml` does the same in CI but is switched off (manual start only).
+- The tests read the committed data (`notes/*.json`, `docs/`), so they need no venv and no `raw/` folder. They fail if an extraction leaves anything unchecked, repeats a Bill of Materials row, changes a number in a correction, or breaks a link from the Bill of Materials to a drawing or a build section. If a test fails after a re-run, look at why before changing the test.
+
 ## Rules
 
 - Keep the CC BY 3.0 attribution in NOTICE.md. Any new recovered content must be covered by it.

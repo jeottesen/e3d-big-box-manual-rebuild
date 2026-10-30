@@ -123,7 +123,7 @@ def main():
             end = next((n for n, l in enumerate(lines) if l.startswith('E3D BigBox Part Explosions')), len(lines))
             if end - start != len(s['rows']): problems.append(f'sheet {i}: read {len(s["rows"])} rows but the text has {end - start} table lines')
         sheets.append(s)
-    json.dump({'source': f'{PDF_URL} (archived {PDF_TS})', 'sheets': sheets, 'problems': problems, 'notes': notes}, open(OUT, 'w'), indent=1, ensure_ascii=False)
+    crawl.write_if_changed(OUT, json.dumps({'source': f'{PDF_URL} (archived {PDF_TS})', 'sheets': sheets, 'problems': problems, 'notes': notes}, indent=1, ensure_ascii=False))
     print(f'{len(sheets)} sheets, {sum(len(s["rows"]) for s in sheets)} parts rows, {len(problems)} problems, {len(notes)} notes -> {OUT}')
     for p in problems + notes: print('  ', p)
 

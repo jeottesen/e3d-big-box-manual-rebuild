@@ -7,6 +7,7 @@ python = "3.13"
 pandoc = "3.13"                       # scripts/markdown.py
 node = "24"                           # only to run markdownlint-cli2
 "npm:markdownlint-cli2" = "0.24"
+"aqua:astral-sh/ruff" = "0.17.3"        # lint the Python
 
 [env]
 # the scripts that need packages (requirements.txt) run in this venv; the rest are standard library only
@@ -30,20 +31,25 @@ run = [
 [tasks.extract]
 description = "Read the parts lists off the exploded drawings (PDF text, then OCR for the sheets that are only images)"
 depends = ["deps"]
-sources = ["scripts/drawings.py", "scripts/drawing_images.py", "docs/images/*.jpg"]
-outputs = ["notes/parts.json", "notes/parts_images.json"]
+sources = ["scripts/drawings.py", "scripts/drawing_images.py", "scripts/ocr_text.py", "scripts/targets.py", "scripts/crawl.py", "requirements.txt",
+           "docs/files/EXPLODED_DRAWINGS.pdf", "docs/images/*.jpg", "docs/images/original/*.jpg", "notes/sheet_matches.json"]
+outputs = ["notes/parts.json", "notes/parts_images.json", "notes/OCR_REVIEW.md"]
 run = [
   "python3 -I scripts/drawings.py",
   "python3 -I scripts/drawing_images.py",
+  "touch notes/parts.json notes/parts_images.json notes/OCR_REVIEW.md",   # an unchanged result is not rewritten; this marks it up to date
 ]
 
 [tasks.match]
-description = "Match the wiki's drawing images to sheets of the exploded drawings PDF (writes notes/sheet_matches.json; not part of build)"
-depends = ["deps"]
-run = "python3 -I scripts/match_sheets.py"
+description = "Match the wiki's drawing images to sheets of the exploded drawings PDF (writes notes/sheet_matches.json; run extract first, and it re-runs when the result changes)"
+depends = ["deps", "extract"]
+sources = ["scripts/match_sheets.py", "scripts/match_logic.py", "scripts/targets.py", "requirements.txt", "docs/files/EXPLODED_DRAWINGS.pdf",
+           "docs/images/*.jpg", "docs/images/original/*.jpg", "notes/parts.json", "notes/parts_images.json"]
+outputs = ["notes/sheet_matches.json"]
+run = ["python3 -I scripts/match_sheets.py", "touch notes/sheet_matches.json"]
 
 [tasks.render]
-description = "Draw the PDF sheets that stand in for drawing images the archive did not keep"
+description = "Draw the PDF sheets that stand in for wiki images, and enlarge low-resolution drawings (writes <data folder>/rendered/; cheap, so it always runs)"
 depends = ["deps"]
 run = "python3 -I scripts/render_sheets.py"
 
@@ -56,8 +62,17 @@ description = "Convert docs/ to the GitHub Markdown in manual/"
 depends = ["site"]
 run = "python3 -I scripts/markdown.py"
 
+[tasks.test]
+description = "Run the tests (standard library only; they read the committed data, so no venv or raw/ is needed)"
+run = "python3 -I -m unittest discover -s tests"
+
+[tasks.lint]
+description = "Lint the Python"
+run = "ruff check scripts tests"
+
 [tasks.check]
-description = "Check every link and image in manual/, and lint all the Markdown"
+description = "The mandatory checks: tests, lint, every link and image in manual/, and markdownlint"
+depends = ["test", "lint"]
 run = [
   "python3 -I scripts/check_markdown.py",
   "markdownlint-cli2 \"**/*.md\"",

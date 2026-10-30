@@ -29,9 +29,16 @@ def from_seed(rel, dest=None):
 
 fails = 0
 
+def write_if_changed(path, text):
+    """Write text unless the file already holds exactly that, so an unchanged result keeps its modification time and
+    mise does not think the steps that read it are out of date."""
+    if os.path.exists(path) and open(path).read() == text: return False
+    open(path, 'w').write(text)
+    return True
+
 def get(url, binary=False, tries=5, final_codes=(404, 403, 410)):
     """Return (status, bytes|str|None). The final_codes statuses are answers; everything else is retried."""
-    global fails
+    global fails  # noqa: PLW0603 (a retry counter shared by the whole run)
     stats['network'] += 1
     codes = []   # what each failed attempt was: an HTTP status, or None for a network error
     for i in range(tries):

@@ -30,7 +30,7 @@ caps = json.load(open(CAPS_PATH)) if os.path.exists(CAPS_PATH) else {}
 _seed = None
 
 def seed_captures():
-    global _seed
+    global _seed  # noqa: PLW0603 (the seed index is read once)
     if _seed is None:
         p = f'{crawl.SEED}/versions/captures.json' if crawl.SEED else None
         _seed = json.load(open(p)) if p and os.path.exists(p) else {}

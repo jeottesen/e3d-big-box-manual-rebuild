@@ -14,18 +14,19 @@ The OCR drops the spaces inside names, so names are matched to the exact strings
 where possible and re-spaced by rule otherwise. Every sheet is checked (item numbers, quantities, OCR confidence);
 anything doubtful is listed under "problems" for a manual look.
 """
-import difflib, json, os, re, sys
+import json, os, re, sys
 import numpy as np
 from PIL import Image
 from rapidocr_onnxruntime import RapidOCR
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))   # sibling modules (python -I does not add the script folder)
+import crawl
 from targets import OCR_FIXES, SHEET_IMAGES
+from ocr_text import MIN_CONF, key, vocabulary, parts_by_description, respace, fix_row
 IMAGES = f'{ROOT}/docs/images'
 OUT = f'{ROOT}/notes/parts_images.json'
 REVIEW = f'{ROOT}/notes/OCR_REVIEW.md'
-MIN_CONF = 0.85
 BY_DESC = None   # set in main()
 FIXES = {re.sub(r'[^A-Z0-9]', '', k.upper()): v for k, v in OCR_FIXES.items()}   # hand corrections, found by name without spaces or case
 
@@ -42,76 +43,6 @@ def candidates():
         w, h = Image.open(orig(f)).size
         if w >= 700 and 1.38 <= w / h <= 1.45: out.append(f)
     return out
-
-def key(t): return re.sub(r'[^A-Z0-9]', '', t.upper())
-
-def vocabulary():
-    """Exact part and description strings from the PDF, keyed without spaces, to put the spaces back."""
-    path = f'{ROOT}/notes/parts.json'
-    vocab = {}
-    if os.path.exists(path):
-        for sh in json.load(open(path))['sheets']:
-            for r in sh['rows']:
-                for t in (r['part'], r['description']):
-                    if t: vocab[key(t)] = t
-    return vocab
-
-EXTRA_WORDS = 'DOCK CLAMP LEVER GUIDE HYBRID TITAN NON DIRECT BODY TOP CAP BOTTOM BED DUAL CABLE BRACKET CHAIN ANCHOR BASE UPPER LOWER'.split()
-
-def words_of(vocab):
-    """Upper-case words from the PDF's names, plus a few the image-only sheets use."""
-    return {w for t in vocab.values() for w in re.findall(r'[A-Za-z]{2,}', t.upper())} | set(EXTRA_WORDS)
-
-def segment(run, known):
-    """Split a run of capitals with no spaces ('BASEBRACKETLOWER') into known words; unknown stretches stay whole."""
-    n = len(run)
-    best = [(0, None)] + [(10 ** 9, None)] * n   # (cost, previous index)
-    for j in range(1, n + 1):
-        for i in range(max(0, j - 14), j):
-            w = run[i:j]
-            cost = best[i][0] + (1 if w in known else 12 * len(w))
-            if cost < best[j][0]: best[j] = (cost, i)
-    out, j = [], n
-    while j > 0: i = best[j][1]; out.append(run[i:j]); j = i
-    return ' '.join(reversed(out))
-
-def parts_by_description():
-    """Which part names the PDF lists under each description (mostly each 'Fixings Bag N'), keyed without spaces."""
-    path = f'{ROOT}/notes/parts.json'
-    out = {}
-    if os.path.exists(path):
-        for sh in json.load(open(path))['sheets']:
-            for r in sh['rows']:
-                if r['description']: out.setdefault(key(r['description']), {})[key(r['part'])] = r['part']
-    return out
-
-def respace(text, vocab):
-    """OCR gives 'M3x10SocketCapScrew' for 'M3 x 10 Socket Cap Screw'. Use the PDF's exact string if there is one."""
-    if key(text) in vocab: return vocab[key(text)]
-    t = text.strip()
-    known = words_of(vocab)
-    t = re.sub(r'[A-Z]{7,}', lambda m: segment(m.group(0), known), t)   # OCR runs capitals together: BASEBRACKETLOWER
-    t = re.sub(r'\b(M\d+(?:\.\d+)?)(?=[A-Z][a-z])', r'\1 ', t)         # M2Hex Nut -> M2 Hex Nut
-    t = re.sub(r'(?<=[a-z])(?=[A-Z])', ' ', t)                         # HexNut -> Hex Nut, CapScrew -> Cap Screw
-    if ' ' in t and not re.search(r'[a-z]\d|\dx\d|[A-Za-z0-9]\(', t): return t
-    t = re.sub(r'(?<=[a-z])(?=\d)', ' ', t)                            # Bag8 -> Bag 8
-    t = re.sub(r'(?<=\d)x(?=\d)', ' x ', t)                           # M3x10 -> M3 x 10
-    t = re.sub(r'(?<=[A-Za-z0-9])(?=\()', ' ', t)                      # Nut(Half) -> Nut (Half)
-    return t
-
-BAG = re.compile(r'F[A-Za-z]{1,7}\s*B[A-Za-z]{1,3}\s*(\d{1,2})', re.I)   # 'Foings Bog8', 'Fxinss Bag 12': the OCR garbles 'Fixings Bag' more than anything else
-
-def normalise(text, vocab, conf):
-    """Put the OCR text right where we can. 'Fixings Bag N' is corrected by pattern. Other names are matched to the closest exact
-    string from the PDF only when the OCR itself was unsure, and never if that would change a number: the image-only sheets
-    hold parts the PDF does not have, and a near miss (a 364 mm rod for a 384 mm one) is a different part, not a misread."""
-    m = BAG.fullmatch(text.strip())
-    if m: return f'Fixings Bag {m.group(1)}'
-    if not text or key(text) in vocab: return vocab.get(key(text), text)
-    if conf >= MIN_CONF: return text
-    digits = lambda t: re.sub(r'\D', '', t)
-    close = [c for c in difflib.get_close_matches(key(text), list(vocab), n=2, cutoff=0.88) if digits(c) == digits(key(text))]
-    return vocab[close[0]] if len(close) == 1 else text
 
 def read(ocr, path):
     im = Image.open(path).convert('RGB')
@@ -148,16 +79,9 @@ def table(words, vocab):
         elif len(texts) >= 3 and texts[0].isdigit() and not texts[1].isdigit(): num, qty, rest = '', texts[0], texts[1:]   # the narrow ITEM column is sometimes not read
         else: num = None
         if num is not None:
-            part = respace(rest[0], vocab); desc = respace(' '.join(rest[1:]), vocab) if len(rest) > 1 else ''
+            read_part = respace(rest[0], vocab); read_desc = respace(' '.join(rest[1:]), vocab) if len(rest) > 1 else ''   # what the OCR gave, with the spaces put back
             conf = round(min(w['c'] for w in g), 2)
-            read_part, read_desc = part, desc   # what the OCR gave
-            by_hand = key(part) in FIXES or key(desc) in FIXES   # checked against the drawing by eye (targets.OCR_FIXES)
-            part, desc_read = FIXES.get(key(part), part), FIXES.get(key(desc), desc)
-            fixed_part, fixed_desc = normalise(part, vocab, conf), normalise(desc_read, vocab, conf)
-            if key(fixed_part) not in vocab and fixed_desc.startswith('Fixings Bag') and key(fixed_desc) in BY_DESC:   # only a fixings bag is a short enough list to match inside   # a part in a known bag is one of that bag's parts: M2Hex Nut in Fixings Bag 3 is the M3 Hex Nut
-                bag = BY_DESC[key(fixed_desc)]
-                close = [c for c in difflib.get_close_matches(key(fixed_part), list(bag), n=2, cutoff=0.8) if re.sub(r'\D', '', c) == re.sub(r'\D', '', key(fixed_part))]   # never change a number
-                if len(close) == 1: fixed_part = bag[close[0]]
+            fixed_part, fixed_desc, by_hand = fix_row(read_part, read_desc, conf, vocab, BY_DESC, FIXES)
             row = {'item': num, 'qty': qty, 'part': fixed_part, 'description': fixed_desc, 'confidence': conf}
             if (fixed_part, fixed_desc) != (read_part, read_desc): row['ocr'] = {'part': read_part, 'description': read_desc}   # what the OCR gave, before the correction
             # a missing item number does not matter; a row is for review when the OCR was unsure and the text is not a string known from the PDF
@@ -171,8 +95,8 @@ def table(words, vocab):
 
 def main():
     global BY_DESC
-    vocab = vocabulary()
-    BY_DESC = parts_by_description()
+    sheets_pdf = json.load(open(f'{ROOT}/notes/parts.json'))['sheets'] if os.path.exists(f'{ROOT}/notes/parts.json') else []
+    vocab, BY_DESC = vocabulary(sheets_pdf), parts_by_description(sheets_pdf)
     matched = json.load(open(f'{ROOT}/notes/sheet_matches.json'))['matches'] if os.path.exists(f'{ROOT}/notes/sheet_matches.json') else {}
     ocr = RapidOCR()
     sheets, problems = [], []
@@ -190,7 +114,7 @@ def main():
             if weak: problems.append(f'{f}: {len(weak)} of {len(rows)} rows the OCR was unsure of and could not match to a known name: {"; ".join((r["item"] or "no item no.") + " " + r["part"] for r in weak)}')
         sheets.append(entry)
         print(f'{f}: {len(entry["rows"])} rows, sheet {entry["sheet"]}/{entry["of"]}{" (in the PDF)" if entry["in_pdf"] else ""}')
-    json.dump({'source': 'OCR (rapidocr) of the drawing images in docs/images', 'sheets': sheets, 'problems': problems}, open(OUT, 'w'), indent=1, ensure_ascii=False)
+    crawl.write_if_changed(OUT, json.dumps({'source': 'OCR (rapidocr) of the drawing images in docs/images', 'sheets': sheets, 'problems': problems}, indent=1, ensure_ascii=False))
     write_review(sheets)
     used = [x for x in sheets if not x['in_pdf']]
     print(f'\n{len(sheets)} images ({len(sheets) - len(used)} are PDF sheets), {sum(len(x["rows"]) for x in used)} rows used, {len(problems)} to check -> {OUT}, {REVIEW}')
@@ -221,6 +145,6 @@ def write_review(sheets):
     lines += ['', '## No parts list found', '']
     none = [x for x in used if x.get('skipped')]
     lines += [f'- {x["image"]}' for x in none] if none else ['None.']
-    open(REVIEW, 'w').write('\n'.join(lines) + '\n')
+    crawl.write_if_changed(REVIEW, '\n'.join(lines) + '\n')
 
 if __name__ == '__main__': main()

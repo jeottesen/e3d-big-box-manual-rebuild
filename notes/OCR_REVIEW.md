@@ -15,14 +15,14 @@ Fixed against the exact names in the PDF; listed so they can be spot-checked.
 | EXTRUDER_DUAL.jpg | - | part | EXTRUDER BOOY (DUAL) | EXTRUDER BODY (DUAL) |
 | EXTRUDER_DUAL.jpg | 2 | description | Motox Box-0.9Deg | Motor Box - 0.9Deg |
 | EXTRUDER_DUAL.jpg | 6 | part | E-AXIS CABLE BRACKET (DUAL)IL) | E-AXIS CABLE BRACKET (DUAL)(L) |
-| EXTRUDER_DUAL.jpg | 7 | part | M3x 2S.Socket Cap Screw | M3 x 25 Socket Cap Screw |
+| EXTRUDER_DUAL.jpg | 7 | part | M3 x 2S.Socket Cap Screw | M3 x 25 Socket Cap Screw |
 | EXTRUDER_DUAL.jpg | 7 | description | Fxings Bog 7 | Fixings Bag 7 |
 | EXTRUDER_DUAL.jpg | 8 | description | Foings Bog 8 | Fixings Bag 8 |
 | EXTRUDER_DUAL.jpg | 9 | description | Fiings Bag 17 | Fixings Bag 17 |
 | EXTRUDER_DUAL.jpg | 10 | part | MAWasher | M4 Washer |
 | EXTRUDER_DUAL.jpg | 12 | description | Fxinss Bag 12 | Fixings Bag 12 |
 | EXTRUDER_DUAL.jpg | 13 | part | HOBDGOBLIN-SOOIO | HOBBGOBLIN-500ID |
-| EXTRUDER_DUAL.jpg | 14 | part | M3x 3Skt Grb Screw Knurled Point | M3 x 3 Skt Grub Screw Knurled Point |
+| EXTRUDER_DUAL.jpg | 14 | part | M3 x 3Skt Grb Screw Knurled Point | M3 x 3 Skt Grub Screw Knurled Point |
 | EXTRUDER_DUAL.jpg | 14 | description | Fxings Bog 17 | Fixings Bag 17 |
 
 ## No parts list found

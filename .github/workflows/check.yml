@@ -1,0 +1,22 @@
+# The mandatory checks, as a workflow: tests, ruff, the link and image check on manual/, and markdownlint.
+# It is the same as running `mise run check` locally.
+#
+# DISABLED ON PURPOSE: it only runs when started by hand (workflow_dispatch), so it never starts by itself.
+# To turn it on, replace the `on:` block with:
+#
+#   on:
+#     pull_request:
+#     push:
+#       branches: [main]
+name: check
+
+on:
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: jdx/mise-action@v2   # installs the tools pinned in mise.toml
+      - run: mise run check

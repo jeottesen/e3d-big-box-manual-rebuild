@@ -293,7 +293,7 @@
      "description": "Fixings Bag 7",
      "confidence": 0.86,
      "ocr": {
-      "part": "M3x 2S.Socket Cap Screw",
+      "part": "M3 x 2S.Socket Cap Screw",
       "description": "Fxings Bog 7"
      },
      "review": false
@@ -373,7 +373,7 @@
      "description": "Fixings Bag 17",
      "confidence": 0.86,
      "ocr": {
-      "part": "M3x 3Skt Grb Screw Knurled Point",
+      "part": "M3 x 3Skt Grb Screw Knurled Point",
       "description": "Fxings Bog 17"
      },
      "review": false
@@ -1733,7 +1733,7 @@
      "item": "5",
      "qty": "1",
      "part": "GT2-36T-8ID",
-     "description": "Motion Box（36Tooth，8mm ID) BIGBOX",
+     "description": "Motion Box（36 Tooth，8mm ID) BIGBOX",
      "confidence": 0.94,
      "review": false
     },

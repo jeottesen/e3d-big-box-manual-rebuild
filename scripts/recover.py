@@ -56,7 +56,7 @@ def sections(h, rx):
 
 def find_section(h, rx, must=None, min_lines=1):
     """First section of page html h whose heading matches rx (and whose text contains `must`). (title, body, lines) or None."""
-    for title, head, body, n in sections(h, rx):
+    for title, _head, body, n in sections(h, rx):
         if n >= min_lines and (must is None or must.lower() in htext(body).lower()): return title, body, n
     return None
 

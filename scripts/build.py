@@ -5,13 +5,19 @@ Produces one HTML file per wiki page, an index.html, and manual.html (every page
 Images missing from the archive are shown as a labelled placeholder with the original file name.
 Run:  python3 -I scripts/build.py
 """
-import html, json, os, re, shutil, sys, urllib.parse
+import filecmp, html, json, os, re, shutil, sys, urllib.parse
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))   # sibling modules (python -I does not add the script folder)
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 RAW = os.environ.get('BIGBOX_RAW', f'{ROOT}/raw')   # archive data lives outside git; override with BIGBOX_RAW
 SITE = os.environ.get('BIGBOX_SITE', f'{ROOT}/docs')
 os.makedirs(f'{SITE}/images', exist_ok=True)
+
+def copy(src, dst):
+    """Copy a file unless the destination already holds the same bytes, so an unchanged image keeps its modification time
+    (mise decides whether the drawing extraction is out of date from the images' times)."""
+    if os.path.exists(dst) and filecmp.cmp(src, dst, shallow=False): return
+    shutil.copy(src, dst)
 
 pages = {f[:-5]: open(f'{RAW}/pages/{f}').read() for f in sorted(os.listdir(f'{RAW}/pages'))} if os.path.isdir(f'{RAW}/pages') else {}
 meta = json.load(open(f'{RAW}/pages.json'))
@@ -85,17 +91,17 @@ def fix_images(body, stats):
         fn = thumb_file(s.group(1))
         if fn in REDRAW and os.path.exists(f'{RAW}/rendered/{fn}'):   # drawn from the PDF instead (see scripts/render_sheets.py)
             sheet, kind = REDRAW[fn]
-            shutil.copy(f'{RAW}/rendered/{fn}', f'{SITE}/images/{fn}')
+            copy(f'{RAW}/rendered/{fn}', f'{SITE}/images/{fn}')
             stats['rendered'] = stats.get('rendered', 0) + 1
             if kind == 'enlarged':   # the original stays, and the note links to it
                 os.makedirs(f'{SITE}/images/original', exist_ok=True)
-                if os.path.exists(f'{RAW}/images/{fn}'): shutil.copy(f'{RAW}/images/{fn}', f'{SITE}/images/original/{fn}')
+                if os.path.exists(f'{RAW}/images/{fn}'): copy(f'{RAW}/images/{fn}', f'{SITE}/images/original/{fn}')
                 note = f'Enlarged to twice the size from the wiki\'s low-resolution image; <a href="images/original/{urllib.parse.quote(fn)}">the original</a> is kept.'
             else: note = f'Drawn from sheet {sheet} of the exploded drawings PDF; {REDRAW_NOTE[kind]}.'
             return f'<img src="images/{urllib.parse.quote(fn)}" alt="{html.escape(fn)}"><p class="derived"><em>{note}</em></p>'
         rec = imgs.get(fn)
         if rec and rec.get('kind') and os.path.exists(f'{RAW}/images/{fn}'):
-            shutil.copy(f'{RAW}/images/{fn}', f'{SITE}/images/{fn}')
+            copy(f'{RAW}/images/{fn}', f'{SITE}/images/{fn}')
             stats[rec['kind'].split('-')[0]] = stats.get(rec['kind'].split('-')[0], 0) + 1
             return f'<img src="images/{urllib.parse.quote(fn)}" alt="{html.escape(fn)}">'
         stats['missing'] = stats.get('missing', 0) + 1
@@ -186,7 +192,7 @@ def add_drawing_parts(body, parts, images, heads_by_slug):
     def section(ref):
         if not ref: return ''
         page, prefix = ref
-        for level, hid, text in heads_by_slug.get(page, []):
+        for _level, hid, text in heads_by_slug.get(page, []):
             if text.startswith(prefix + ' '): return f'<a href="{page}.html#{html.escape(hid)}">{esc(text)}</a>'
         return ''
     def norm(t): return re.sub(r'[^A-Z0-9]', '', t.upper())
@@ -219,7 +225,7 @@ def add_drawing_parts(body, parts, images, heads_by_slug):
                  f'<td>{d}</td><td>{sec or "–"}</td></tr>' for d, sec, r in printed)
     printed_html = note + f'<table><thead><tr><th>Part</th><th>Qty</th><th>Source</th><th>Drawing</th><th>Build section</th></tr></thead><tbody>{tr}</tbody></table>'
     fixings = {}
-    for d, sec, r in rows:
+    for d, _sec, r in rows:
         if r['description'].startswith('Fixings'): fixings.setdefault((r['description'], r['part']), []).append(d)
     def bag_no(d): return int(''.join(c for c in d if c.isdigit()) or 0)
     tr = ''.join(f'<tr><td>{esc(bag)}</td><td>{esc(part)}</td><td>{", ".join(ds)}</td></tr>'
@@ -257,7 +263,7 @@ def fix_links(body, to_anchor):
 
 os.makedirs(f'{SITE}/files', exist_ok=True)   # wiki-hosted PDF datasheets (see fetch_files.py / appendix.py)
 if os.path.isdir(f'{RAW}/files'):
-    for f in os.listdir(f'{RAW}/files'): shutil.copy(f'{RAW}/files/{f}', f'{SITE}/files/{f}')
+    for f in os.listdir(f'{RAW}/files'): copy(f'{RAW}/files/{f}', f'{SITE}/files/{f}')
 
 TARGET = '20161018063904'
 # index first, then the archived pages alphabetically, then rebuilt pages, appendix and datasheets in the order recover/appendix wrote them

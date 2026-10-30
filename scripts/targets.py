@@ -130,10 +130,9 @@ SHEET_IMAGES = {
     'IR_SENSOR_ASSEMBLY.jpg': 13,
 }
 
-# Matches decided by eye, for images the matcher could not confirm: image -> PDF sheet. They link to that sheet and are never redrawn.
-MATCH_OVERRIDES = {
-    'HEATED_BED_CORNERS.jpg': 9,   # the wiki's image is the same drawing from another angle
-}
+# Matches decided by eye, for images the matcher cannot confirm on its own: image -> PDF sheet. They link to that sheet and are never
+# redrawn. (Empty: the matcher now compares an image's parts with the sheet its title names, which confirms HEATED_BED_CORNERS by itself.)
+MATCH_OVERRIDES = {}
 
 # OCR misreads on the image-only drawing sheets, checked against the drawing by eye: what the OCR read -> what the drawing says.
 # (EXTRUDER_DUAL.jpg is only 800 px wide.) scripts/drawing_images.py applies these and treats the rows as checked.
