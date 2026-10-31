@@ -12,7 +12,7 @@ Archived 20210416002713 · source: wiki.e3d-online.com/wiki/Bill_Of_Materials ·
 - [Bearings](#bearings)
 - [E3D HotEnd(s)](#e3d-hotends)
 - [Wiring](#wiring)
-- [Printed Parts](#printed-parts)
+- [Printed Parts, Printed Parts Box and Printed Parts Bag](#printed-parts-printed-parts-box-and-printed-parts-bag)
 - [Fixings](#fixings)
 - [OctoPrint Upgrade Extras](#octoprint-upgrade-extras)
 - [Where next?](#where-next)
@@ -145,7 +145,7 @@ Embedded Plastic Bowden Coupler, two parts.
 
 ## Wiring
 
-## Printed Parts
+## Printed Parts, Printed Parts Box and Printed Parts Bag
 
 *This list is not from the wiki page, which left it empty. It is compiled from the parts lists in the [exploded drawings PDF](../docs/files/EXPLODED_DRAWINGS.pdf) (EXPLODED_DRAWINGS.pdf, sheets 1 to 29) and the drawing images on the wiki. Each row links to the drawing, with its sheet number in the PDF. [All the drawings are on one page.](Exploded_Drawings.md) Sheets marked (image) exist only as pictures on the wiki; they were read by OCR and checked by a person, or entered by hand from the drawing and the manual where the drawing has no parts list. Printed parts that the manual's own step lists name but that no drawing covers are added at the end, marked no drawing.*
 
@@ -163,7 +163,7 @@ Embedded Plastic Bowden Coupler, two parts.
 | X-CARRIAGE SINGLE | 1 | printed | [x-carriage single](../docs/images/X-CARRIAGE_SINGLE.jpg) (sheet 7) | [Pro & Lite X-Carriage](Pro_%26_Lite_X-Carriage.md) |
 | HEATED BED CORNERS | 1 | printed | [heated bed corners](../docs/images/HEATED_BED_CORNERS.jpg) (sheet 9) | [(10) Heated Bed Corners](BigBox_Parts_Preparation.md#10-heated-bed-corners) |
 | SPOOL-HOLDER OUTER (L) | 1 | printed | [spool-holder outer](../docs/images/SPOOL-HOLDER_OUTER.jpg) (sheet 10) | [(11) Outer Spools Rear (Left & Right)](BigBox_Parts_Preparation.md#11-outer-spools-rear-left--right) |
-| SPOOL-HOLDER INNER | 1 | printed | [spool-holder inner](../docs/images/SPOOL-HOLDER_INNER.jpg) (sheet 11) | [(12) Spool Holder Outer Fronts](BigBox_Parts_Preparation.md#12-spool-holder-outer-fronts) |
+| SPOOL-HOLDER INNER | 2 | printed | [spool-holder inner](../docs/images/SPOOL-HOLDER_INNER.jpg) (sheet 11) | [(12) Spool Holder Outer Fronts](BigBox_Parts_Preparation.md#12-spool-holder-outer-fronts) |
 | PRINT FAN BRACKET | 1 | printed | [print fan duct](../docs/images/PRINT_FAN_DUCT.jpg) (sheet 12) | [Print Cooling Fan](Print_Cooling_Fan.md) |
 | PRINT FAN DUCT | 1 | printed | [print fan duct](../docs/images/PRINT_FAN_DUCT.jpg) (sheet 12) | [Print Cooling Fan](Print_Cooling_Fan.md) |
 | IR-SENSOR HOUSING | 1 | printed | [ir sensor assembly](../docs/images/IR_SENSOR_ASSEMBLY.jpg) (sheet 13) | [Single & Dual Direct-Drive IR Sensor Bracket](Single_%26_Dual_Direct-Drive_IR_Sensor_Bracket.md) |
@@ -194,9 +194,9 @@ Embedded Plastic Bowden Coupler, two parts.
 | Z-AXIS BASE BRACKET UPPER | 1 | printed | [z-axis base brackets (image)](../docs/images/Z-AXIS_BASE_BRACKETS.jpg) | [(17.5) Z-Axis Lower Rod Brackets](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#175-z-axis-lower-rod-brackets) |
 | Z-AXIS DRAG-CHAIN ANCHOR BASE | 1 | printed | [z-axis drag chain (image)](../docs/images/Z-AXIS_DRAG_CHAIN.jpg) | [(18) Z-Axis Drag Chain Anchors](BigBox_Parts_Preparation.md#18-z-axis-drag-chain-anchors) |
 | Z-AXIS DRAG-CHAIN ANCHOR BED | 1 | printed | [z-axis drag chain (image)](../docs/images/Z-AXIS_DRAG_CHAIN.jpg) | [(18) Z-Axis Drag Chain Anchors](BigBox_Parts_Preparation.md#18-z-axis-drag-chain-anchors) |
-| Z-AXIS TOP BOTTOM | 1 | printed | [z-axis top brackets (image)](../docs/images/Z-AXIS_TOP_BRACKETS.jpg) | [(32.2) Z Bed](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#322-z-bed) |
-| Z-AXIS TOP TOP | 1 | printed | [z-axis top brackets (image)](../docs/images/Z-AXIS_TOP_BRACKETS.jpg) | [(32.2) Z Bed](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#322-z-bed) |
-| Z-AXIS TOP CAP | 1 | printed | [z-axis top brackets (image)](../docs/images/Z-AXIS_TOP_BRACKETS.jpg) | [(32.2) Z Bed](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#322-z-bed) |
+| Z-AXIS TOP BOTTOM | 4 | printed | [z-axis top brackets (image)](../docs/images/Z-AXIS_TOP_BRACKETS.jpg) | [(32.2) Z Bed](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#322-z-bed) |
+| Z-AXIS TOP TOP | 4 | printed | [z-axis top brackets (image)](../docs/images/Z-AXIS_TOP_BRACKETS.jpg) | [(32.2) Z Bed](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#322-z-bed) |
+| Z-AXIS TOP CAP | 4 | printed | [z-axis top brackets (image)](../docs/images/Z-AXIS_TOP_BRACKETS.jpg) | [(32.2) Z Bed](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#322-z-bed) |
 | Hybrid X-Carriage | 1 | printed | no drawing | [(9) Hybrid X-Carriage](BigBox_Parts_Preparation.md#9-hybrid-x-carriage) |
 | Hybrid X-Carriage Rear Bearing Clamp | 1 | printed | no drawing | [(9) Hybrid X-Carriage](BigBox_Parts_Preparation.md#9-hybrid-x-carriage); [(8) Hybrid X-Carriage](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#8-hybrid-x-carriage) |
 | Drive Supports | 2 | printed | no drawing | [(10) Z-Axis Bed Assembly](BigBox_Printer_Sub-assemblies.md#10-z-axis-bed-assembly) |

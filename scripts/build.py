@@ -71,10 +71,12 @@ def extract(h):
 from sections import HEADING, embedded_sections, thumb_file
 from drawings_page import drawings_page
 import manual_parts
+from targets import MANUAL_PART_NAMES
 import truth
 SHEETS = truth.load_truth()   # the reviewed per-sheet data (data/sheets/*.json): the build reads this and nothing the tools propose
-MANUAL_PARTS = manual_parts.load()   # the printed parts the manual's own step lists name (data/manual_parts.json)
-_bad = truth.all_problems(SHEETS) + manual_parts.problems(MANUAL_PARTS, set(SHEETS))
+_bad = truth.all_problems(SHEETS)
+for _name, (_sheet, _part) in MANUAL_PART_NAMES.items():   # each manual name in targets.MANUAL_PART_NAMES must be a row of the sheet it says
+    if not any(truth.key(r['part']) == truth.key(_part) for r in SHEETS.get(_sheet, {}).get('rows', [])): _bad.append(f'MANUAL_PART_NAMES: {_name!r} -> {_sheet} {_part!r} is not a row of that sheet')
 if _bad: sys.exit('data/sheets is malformed, so the Bill of Materials cannot be built:\n  ' + '\n  '.join(_bad))   # a hand edit that left a file the wrong shape
 # images drawn from the exploded drawings PDF by scripts/render_sheets.py: name -> (sheet, 'lost', 'redrawn' or 'enlarged')
 REDRAW = {im['file']: (sh['source'].get('page'), im['role']) for sh in SHEETS.values() for im in sh['images'] if im['role'] != 'wiki'}
@@ -205,23 +207,19 @@ def add_drawing_parts(body, sheets, sections_by_image, manual_entries=()):
         else:
             if sh['confirmed'] is None and any(r['how'] in ('ocr', 'ocr+fix') for r in sh['rows']): left_out += len(sh['rows']); continue   # read by OCR and not yet checked by a person
             drawing = f'<a href="images/{urllib.parse.quote(files[0])}">{esc(sh["title"].lower())} (image)</a>'
-        for r in sh['rows']: rows.append((drawing, sections_for(files), r))
+        for r in sh['rows']: rows.append((drawing, sections_for(files), r, sh['id']))
     last_pdf_page = max((sh['source']['page'] for sh in sheets.values() if sh['source']['kind'] == 'pdf'), default=0)
-    ocr = ' Sheets marked (image) exist only as pictures on the wiki; they were read by OCR and checked by a person, or entered by hand from the drawing and the manual where the drawing has no parts list.' if any('(image)' in d for d, _, _ in rows) else ''
+    ocr = ' Sheets marked (image) exist only as pictures on the wiki; they were read by OCR and checked by a person, or entered by hand from the drawing and the manual where the drawing has no parts list.' if any('(image)' in row[0] for row in rows) else ''
     cut = f' {left_out} rows read by OCR are left out until they are checked.' if left_out else ''
     note = ('<p class="derived"><em>This list is not from the wiki page, which left it empty. It is compiled from the parts lists in the '
             f'<a href="{PDF_LINK}">exploded drawings PDF</a> (EXPLODED_DRAWINGS.pdf, sheets 1 to {last_pdf_page}) and the drawing images on the wiki. Each row links to the drawing, with its sheet number in the PDF. <a href="Exploded_Drawings.html">All the drawings are on one page.</a>{ocr}{cut}</em></p>')
-    no_drawing = {}   # printed parts the manual names that no drawing covers, one row per part, linked to every step that lists it
-    for e in manual_entries:
-        if e['drawing']: continue
-        g = no_drawing.setdefault(truth.key(e['part']), {'part': e['part'], 'qty': e['qty'], 'container': e['container'], 'steps': []})
-        g['qty'] = max(g['qty'], e['qty'])
-        link = f'<a href="{e["page"]}.html{"#" + esc(e["step_id"]) if e["step_id"] else ""}">{esc(e["step"])}</a>'
-        if link not in g['steps']: g['steps'].append(link)
+    covered, no_drawing = manual_parts.group(manual_entries, MANUAL_PART_NAMES)   # the printed parts the manual names: the ones a drawing shows, and the ones none does
+    qty_for = {(sid, truth.key(part)): e['qty'] for e, sid, part in covered}   # the quantity the manual's step uses, where a drawing shows one part that applies to several places
+    rows = [(d, sec, dict(r, qty=qty_for.get((sid, truth.key(r['part'])), r['qty']))) for d, sec, r, sid in rows]
     printed = [(d, sec, r) for d, sec, r in rows if truth.key(r['description']) in PRINTED]   # compared the way drift compares names: spacing and case do not matter
     tr = ''.join(f'<tr><td>{esc(r["part"])}</td><td>{"~" if r.get("approx") else ""}{r["qty"]}</td><td>{"printed" if truth.key(r["description"]) == PRINTED_PART else "from the Printed Parts Box"}</td>'
                  f'<td>{d}</td><td>{sec or "–"}</td></tr>' for d, sec, r in printed)
-    tr += ''.join(f'<tr><td>{esc(g["part"])}</td><td>{g["qty"]}</td><td>{manual_parts.CONTAINER_LABEL[g["container"]]}</td><td>no drawing</td><td>{"; ".join(g["steps"])}</td></tr>' for g in no_drawing.values())
+    tr += ''.join(f'<tr><td>{esc(g["part"])}</td><td>{g["qty"]}</td><td>{manual_parts.CONTAINER_LABEL[g["container"]]}</td><td>no drawing</td><td>{"; ".join(f'<a href="{pg}.html{"#" + esc(sid) if sid else ""}">{esc(txt)}</a>' for pg, sid, txt in g["steps"])}</td></tr>' for g in no_drawing)
     printed_note = note[:-len('</em></p>')] + ' Printed parts that the manual\'s own step lists name but that no drawing covers are added at the end, marked no drawing.</em></p>'
     printed_html = printed_note + f'<table><thead><tr><th>Part</th><th>Qty</th><th>Source</th><th>Drawing</th><th>Build section</th></tr></thead><tbody>{tr}</tbody></table>'
     fixings = {}
@@ -231,7 +229,7 @@ def add_drawing_parts(body, sheets, sections_by_image, manual_entries=()):
     tr = ''.join(f'<tr><td>{esc(bag)}</td><td>{esc(part)}</td><td>{", ".join(ds)}</td></tr>'
                  for (bag, part), ds in sorted(fixings.items(), key=lambda kv: (bag_no(kv[0][0]), kv[0][1])))
     fixings_html = note + f'<table><thead><tr><th>Fixings bag</th><th>Fixing</th><th>Drawings</th></tr></thead><tbody>{tr}</tbody></table>'
-    body = re.sub(r'(<h3><span class="mw-headline" id="Printed_Parts">Printed Parts</span></h3>)', lambda m: m.group(1) + printed_html, body, count=1)
+    body = re.sub(r'<h3><span class="mw-headline" id="Printed_Parts">Printed Parts</span></h3>', lambda m: '<h3><span class="mw-headline" id="Printed_Parts">Printed Parts, Printed Parts Box and Printed Parts Bag</span></h3>' + printed_html, body, count=1)
     return re.sub(r'(<h3><span class="mw-headline" id="Fixings">Fixings</span></h3>)', lambda m: m.group(1) + fixings_html, body, count=1)
 
 def mark_dead(body):
@@ -276,7 +274,7 @@ heads_by_slug = {slug(t): heads for t, (_, heads) in prepared.items()}
 DRAWINGS_PAGE = 'Exploded_Drawings'   # every exploded drawing on one page, generated from the reviewed data
 shown_in = embedded_sections({t: body for t, (body, _) in prepared.items()}, slug)   # before the new page exists, so it does not count as a step
 if SHEETS and 'Bill_Of_Materials' in prepared:
-    prepared['Bill_Of_Materials'] = (add_drawing_parts(prepared['Bill_Of_Materials'][0], SHEETS, shown_in, MANUAL_PARTS), prepared['Bill_Of_Materials'][1])
+    prepared['Bill_Of_Materials'] = with_heading_ids(add_drawing_parts(prepared['Bill_Of_Materials'][0], SHEETS, shown_in, manual_parts.scan({slug(t): body for t, (body, _) in prepared.items()})))
 if SHEETS:
     order.insert(order.index('Bill_Of_Materials') + 1 if 'Bill_Of_Materials' in order else len(order), DRAWINGS_PAGE)
     prepared[DRAWINGS_PAGE] = with_heading_ids(drawings_page(SHEETS, shown_in, {slug(t): t.replace('_', ' ') for t in order if t != DRAWINGS_PAGE},

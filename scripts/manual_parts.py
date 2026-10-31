@@ -2,20 +2,18 @@
 """The printed parts the manual itself names in its step lists. Standard library only.
 
 A step's parts list in the manual has items like "2 x Drive Supports (Printed Parts)." or "8 x Printed Feet (Printed Parts Box)." The
-exploded drawings do not cover every one of them, so the Bill of Materials adds the rest from here, linked to the step that lists them.
-The reviewed list is data/manual_parts.json: each item records which drawing sheet covers it (or null if no drawing does).
+exploded drawings do not cover every one of them, so the Bill of Materials adds the rest, linked to the step that lists them. The ones a
+drawing does cover are named in MANUAL_PART_NAMES (scripts/targets.py), which says which row of which drawing each one is.
 
-    python3 -I scripts/manual_parts.py              compare the manual (docs/*.html) with the reviewed list; exit 1 if they differ
-    python3 -I scripts/manual_parts.py --add-new    add what the manual has and the list lacks, with no drawing, for a person to review
+    python3 -I scripts/manual_parts.py     list what the manual names and what each one is in the Bill of Materials
 """
-import html, json, os, re, sys
+import html, os, re, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))   # sibling modules (python -I does not add the script folder)
 from sections import HEADING, NOT_BUILD_PAGES, STEP
 from ocr_text import key
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOCS = f'{ROOT}/docs'
-DATA = f'{ROOT}/data/manual_parts.json'
 ITEM = re.compile(r'<li>\s*(\d+) x (.+?) \((Printed [Pp]arts?(?: [Bb]ox| [Bb]ag)?)\)\.?\s*</li>')   # the wiki is not tidy: a stray space after the full stop
 CONTAINERS = {'printed part': 'printed', 'printed parts': 'printed', 'printed parts box': 'printed-parts-box', 'printed parts bag': 'printed-parts-bag'}
 CONTAINER_LABEL = {'printed': 'printed', 'printed-parts-box': 'from the Printed Parts Box', 'printed-parts-bag': 'from the Printed Parts Bag'}
@@ -61,54 +59,31 @@ def read_pages(docs=DOCS):
     return pages
 
 
-def ident(e): return (e['page'], e['step_id'], key(e['part']))
+def group(entries, mapping):
+    """(covered, no_drawing). covered: [(entry, sheet id, the drawing's name for the part)] for entries whose manual name is in `mapping`.
+    no_drawing: one record per other part, in the manual's order, linking every step that lists it (a part listed in a preparation step and
+    again in the step that fits it is one part)."""
+    covered, grouped = [], {}
+    for e in entries:
+        if e['part'] in mapping: covered.append((e, *mapping[e['part']])); continue
+        g = grouped.setdefault(key(e['part']), {'part': e['part'], 'qty': e['qty'], 'container': e['container'], 'steps': []})
+        g['qty'] = max(g['qty'], e['qty'])
+        step = (e['page'], e['step_id'], e['step'])
+        if step not in g['steps']: g['steps'].append(step)
+    return covered, list(grouped.values())
 
 
-def load(path=DATA):
-    if not os.path.exists(path): return []
-    with open(path, encoding='utf-8') as f: return json.load(f)['parts']
+def main():
+    from targets import MANUAL_PART_NAMES
+    pages = read_pages()
+    found = scan(pages)
+    covered, none = group(found, MANUAL_PART_NAMES)
+    for e, sheet, name in covered: print(f'{e["qty"]} x {e["part"]:34} -> {sheet} {name}  ({e["step"]})')
+    for g in none: print(f'{g["qty"]} x {g["part"]:34} no drawing  [{g["container"]}]  ({"; ".join(st[2] for st in g["steps"])})')
+    stale = [n for n in MANUAL_PART_NAMES if n not in {e['part'] for e in found}]
+    for n in stale: print(f'STALE: {n!r} is in MANUAL_PART_NAMES but the manual no longer names it')
+    for slug, text in unparsed(pages): print(f'UNREAD: {slug}: {text}')
+    return 1 if stale or unparsed(pages) else 0
 
 
-def problems(entries, sheet_ids):
-    """What is wrong with the reviewed list. sheet_ids: the ids in data/sheets."""
-    out, seen = [], set()
-    for i, e in enumerate(entries):
-        if not isinstance(e, dict): out.append(f'entry {i}: must be an object'); continue
-        if not (isinstance(e.get('part'), str) and e['part']): out.append(f'entry {i}: no part')
-        if not (isinstance(e.get('qty'), int) and not isinstance(e.get('qty'), bool) and e['qty'] >= 1): out.append(f'entry {i}: qty must be a whole number')
-        if e.get('container') not in CONTAINER_LABEL: out.append(f'entry {i}: container must be one of {sorted(CONTAINER_LABEL)}')
-        if not (isinstance(e.get('page'), str) and isinstance(e.get('step'), str)): out.append(f'entry {i}: needs page and step')
-        if e.get('drawing') is not None and e['drawing'] not in sheet_ids: out.append(f'entry {i} ({e.get("part")}): drawing {e["drawing"]!r} is not a sheet in data/sheets')
-        if isinstance(e.get('part'), str) and isinstance(e.get('page'), str):
-            k = ident(e) if e.get('step_id') is not None or True else None
-            if k in seen: out.append(f'entry {i} ({e["part"]}): listed twice for the same step')
-            seen.add(k)
-    return out
-
-
-def diff(found, reviewed):
-    """[(kind, message)] between what the manual lists and the reviewed list."""
-    f, r = {ident(e): e for e in found}, {ident(e): e for e in reviewed}
-    out = [('new', f'in the manual but not in the list: {e["qty"]} x {e["part"]} ({e["step"]}, {e["page"]})') for k, e in f.items() if k not in r]
-    out += [('gone', f'in the list but not in the manual: {e["qty"]} x {e["part"]} ({e["step"]}, {e["page"]})') for k, e in r.items() if k not in f]
-    out += [('changed', f'quantity differs for {e["part"]} ({e["step"]}): manual {f[k]["qty"]}, list {e["qty"]}') for k, e in r.items() if k in f and f[k]['qty'] != e['qty']]
-    return out
-
-
-def main(argv):
-    found, reviewed = scan(read_pages()), load()
-    differences = diff(found, reviewed)
-    if '--add-new' in argv:
-        have = {ident(e) for e in reviewed}
-        new = [e for e in found if ident(e) not in have]
-        os.makedirs(os.path.dirname(DATA), exist_ok=True)
-        with open(DATA, 'w', encoding='utf-8') as fh:
-            json.dump({'source': 'the "(Printed Part...)" items in the manual\'s step lists; see scripts/manual_parts.py', 'parts': reviewed + new}, fh, indent=1, ensure_ascii=False); fh.write('\n')
-        print(f'added {len(new)} entries with no drawing; set "drawing" to a sheet id where one covers the part')
-        return 0
-    for kind, msg in differences: print(f'{kind:8}{msg}')
-    print(f'\n{len(found)} printed parts in the manual, {len(reviewed)} in the list, {len(differences)} differences.')
-    return 1 if differences else 0
-
-
-if __name__ == '__main__': sys.exit(main(sys.argv[1:]))
+if __name__ == '__main__': sys.exit(main())
