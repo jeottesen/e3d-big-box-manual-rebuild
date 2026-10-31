@@ -29,8 +29,8 @@ Offline copy compiled from the Wayback Machine capture of wiki.e3d-online.com.
 - [Single & Dual Direct-Drive IR Sensor Bracket](Single_%26_Dual_Direct-Drive_IR_Sensor_Bracket.md)
 - [Mesh Levelling the Non-Hybrid Dual](Mesh_Levelling_the_Non-Hybrid_Dual.md)
 - [Non-Hybrid Dual Calibrating Z Offset](Non-Hybrid_Dual_Calibrating_Z_Offset.md)
-- [Appendix Older Version Content](Appendix_Older_Version_Content.md)
 - [Datasheets](Datasheets.md)
 - [Downloads](Downloads.md)
+- [Older Version Content](Older_Version_Content.md)
 
 The original wiki showed a notice on its pages from 2019 onward saying it was no longer maintained and pointing to e3d-online.dozuki.com. That notice is left out here. The Dozuki site could not be reached when this copy was compiled, and the archived copy that was checked contained no BigBox guides.

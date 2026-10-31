@@ -274,7 +274,11 @@ if SHEETS:
     extras.add(DRAWINGS_PAGE)   # not a wiki page: no source line
 if 'BigBox_Build_Manual' in prepared:   # the main page links the pages that are generated from the reviewed data, in an Appendix at the end
     entries = [(DRAWINGS_PAGE, 'Exploded Drawings', 'every assembly drawing in one place, each with its parts list and the steps of the manual that show it')] if SHEETS else []
-    entries += [('Bill_Of_Materials', 'Bill of Materials', 'the parts, with the printed parts and fixings compiled from the exploded drawings')] if 'Bill_Of_Materials' in prepared else []
+    for page, label, note in (('Bill_Of_Materials', 'Bill of Materials', 'the parts, with the printed parts and fixings compiled from the exploded drawings'),
+                              ('Datasheets', 'Datasheets', 'the PDF datasheets and drawings the wiki hosted for the hotend, the motors and the fans'),
+                              ('Downloads', 'Downloads', 'where to find the files the wiki linked to that are gone: firmware, slicer profiles and models'),
+                              ('Older_Version_Content', 'Older Version Content', 'sections that were in older versions of the manual and were later removed')):
+        if page in prepared: entries.append((page, label, note))
     if entries:
         appendix = '<h3><span class="mw-headline" id="Appendix">Appendix</span></h3><ul>' + ''.join(f'<li><a href="{slug(t)}.html">{label}</a> &ndash; {note}</li>' for t, label, note in entries) + '</ul>'
         body, heads = prepared['BigBox_Build_Manual']

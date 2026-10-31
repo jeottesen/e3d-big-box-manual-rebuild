@@ -17,7 +17,7 @@
   "by": "maintainer",
   "text": "E3D's Everyday PLA",
   "pages": [
-   "Appendix_Older_Version_Content"
+   "Older_Version_Content"
   ],
   "archived": "https://web.archive.org/web/20161105152053/http://e3d-online.com/All-Filament&filter=5,24,11"
  },
@@ -49,7 +49,7 @@
   "status": "dead",
   "text": "Dual.fff",
   "pages": [
-   "Appendix_Older_Version_Content"
+   "Older_Version_Content"
   ],
   "checked": "2026-10-29",
   "by": "script",
@@ -61,7 +61,7 @@
   "status": "dead",
   "text": "Dual Experimental.fff",
   "pages": [
-   "Appendix_Older_Version_Content"
+   "Older_Version_Content"
   ],
   "checked": "2026-10-29",
   "by": "script",
@@ -73,7 +73,7 @@
   "status": "dead",
   "text": "Pro.fff",
   "pages": [
-   "Appendix_Older_Version_Content"
+   "Older_Version_Content"
   ],
   "checked": "2026-10-29",
   "by": "script",
@@ -305,7 +305,7 @@
   "status": "ok",
   "text": "Slic3r",
   "pages": [
-   "Appendix_Older_Version_Content",
+   "Older_Version_Content",
    "BigBox_Software"
   ],
   "checked": "2026-10-29",
@@ -435,7 +435,7 @@
   "status": "dead",
   "text": "https://dl.dropboxusercontent.com/u/54348751/BigBoxSingle-alpha-settings.fff",
   "pages": [
-   "Appendix_Older_Version_Content"
+   "Older_Version_Content"
   ],
   "checked": "2026-10-29",
   "by": "script",
@@ -456,7 +456,7 @@
   "status": "dead",
   "text": "BigBox_Slic3r_config_bundle.ini",
   "pages": [
-   "Appendix_Older_Version_Content",
+   "Older_Version_Content",
    "BigBox_Software"
   ],
   "checked": "2026-10-29",
@@ -1129,7 +1129,7 @@
   "status": "ok",
   "text": "archived copy",
   "pages": [
-   "Appendix_Older_Version_Content",
+   "Older_Version_Content",
    "Downloads"
   ],
   "checked": "2026-10-29",
@@ -1160,7 +1160,7 @@
   "status": "ok",
   "text": "archived copy",
   "pages": [
-   "Appendix_Older_Version_Content",
+   "Older_Version_Content",
    "Downloads"
   ],
   "checked": "2026-10-29",
@@ -1171,7 +1171,7 @@
   "status": "ok",
   "text": "archived copy",
   "pages": [
-   "Appendix_Older_Version_Content",
+   "Older_Version_Content",
    "Downloads"
   ],
   "checked": "2026-10-29",
@@ -1212,7 +1212,7 @@
   "status": "ok",
   "text": "archived copy",
   "pages": [
-   "Appendix_Older_Version_Content"
+   "Older_Version_Content"
   ],
   "checked": "2026-10-29",
   "by": "script",
@@ -1298,7 +1298,7 @@
   "status": "ok",
   "text": "Simplify3D",
   "pages": [
-   "Appendix_Older_Version_Content",
+   "Older_Version_Content",
    "BigBox_Software"
   ],
   "checked": "2026-10-29",

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Build two extra manual pages from recovered material (written to raw/recovered/ for build.py):
 
-  Appendix_Older_Version_Content  sections that existed in older wiki versions but were later removed
+  Older_Version_Content           sections that existed in older wiki versions but were later removed
                                   (slicer-profile notes and alpha slicer profiles)
   Datasheets                      links to the wiki-hosted PDF datasheets in raw/files/ that apply to the BigBox
 
@@ -39,10 +39,13 @@ os.makedirs(f'{RAW}/recovered', exist_ok=True)
 index_path = f'{RAW}/recovered/index.json'
 index = json.load(open(index_path)) if os.path.exists(index_path) else {}
 
-open(f'{RAW}/recovered/Appendix_Older_Version_Content.html', 'w').write(
+# the page was called Appendix_Older_Version_Content until it was renamed: a data folder built before that still has the old one
+index.pop('Appendix_Older_Version_Content', None)
+if os.path.exists(f'{RAW}/recovered/Appendix_Older_Version_Content.html'): os.remove(f'{RAW}/recovered/Appendix_Older_Version_Content.html')
+open(f'{RAW}/recovered/Older_Version_Content.html', 'w').write(
     '<div id="mw-content-text"><p>Content that appeared in older versions of this manual and was later removed, kept here for completeness. '
     'It is not part of the current build instructions.</p>' + ''.join(parts) + '</div>')
-index['Appendix_Older_Version_Content'] = {'parent': 'older versions of several pages', 'version': ', '.join(sources), 'heading': 'appendix', 'lines': len(parts)}
+index['Older_Version_Content'] = {'parent': 'older versions of several pages', 'version': ', '.join(sources), 'heading': 'appendix', 'lines': len(parts)}
 
 DESC = {
     'V6-175-ASSM': 'E3D V6 1.75 mm hotend, assembly drawing', 'V6-175-BREAK': 'E3D V6 1.75 mm heatbreak, drawing',
@@ -66,7 +69,7 @@ for heading, intro, items in DOWNLOADS:
 open(f'{RAW}/recovered/Downloads.html', 'w').write('<div id="mw-content-text">' + ''.join(dl) + '</div>')
 index['Downloads'] = {'parent': 'GitHub repositories', 'version': '2026-10-29', 'heading': 'downloads', 'lines': sum(len(i) for _, _, i in DOWNLOADS)}
 # the appendix points to it
-ap = f'{RAW}/recovered/Appendix_Older_Version_Content.html'
+ap = f'{RAW}/recovered/Older_Version_Content.html'
 text = open(ap).read().replace('It is not part of the current build instructions.</p>',
     'It is not part of the current build instructions. Current copies of the profiles and firmware are listed on the <a href="/wiki/Downloads">Downloads</a> page.</p>', 1)
 open(ap, 'w').write(text)

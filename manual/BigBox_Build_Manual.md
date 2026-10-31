@@ -209,3 +209,6 @@ Using platformio to flash firmware from RPi *(dead link)*
 
 - [Exploded Drawings](Exploded_Drawings.md) – every assembly drawing in one place, each with its parts list and the steps of the manual that show it
 - [Bill of Materials](Bill_Of_Materials.md) – the parts, with the printed parts and fixings compiled from the exploded drawings
+- [Datasheets](Datasheets.md) – the PDF datasheets and drawings the wiki hosted for the hotend, the motors and the fans
+- [Downloads](Downloads.md) – where to find the files the wiki linked to that are gone: firmware, slicer profiles and models
+- [Older Version Content](Older_Version_Content.md) – sections that were in older versions of the manual and were later removed

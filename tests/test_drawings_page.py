@@ -126,7 +126,7 @@ class BuiltPage(unittest.TestCase):
         with open(os.path.join(ROOT, 'docs/BigBox_Build_Manual.html'), encoding='utf-8') as f: main = f.read()
         appendix = main[main.index('id="Appendix"'):]
         self.assertIn('href="Exploded_Drawings.html"', appendix)
-        self.assertIn('href="Bill_Of_Materials.html"', appendix)
+        for page in ('Bill_Of_Materials', 'Datasheets', 'Downloads', 'Older_Version_Content'): self.assertIn(f'href="{page}.html"', appendix)
         self.assertIn('href="#Appendix"', main)   # and the page's own contents list has it
 
     def test_the_manual_does_not_show_exactly_the_sheets_without_a_wiki_image(self):
