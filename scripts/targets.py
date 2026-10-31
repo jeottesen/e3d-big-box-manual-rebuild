@@ -124,3 +124,17 @@ OCR_FIXES = {
     'M2Hex Nut': 'M3 Hex Nut',   # the hybrid drawings themselves print 'M2 Hex Nut' (E3D's typo): Fixings Bag 3 holds the M3 hex nut and no M2 screws or nuts are listed anywhere (confirmed by the maintainer)
 }
 # (lookup ignores spaces and case, so 'M2 HexNut' and 'M2Hex Nut' both match)
+
+# Printed parts the manual names in its step lists ("2 x Spool Inner Brackets (Printed Parts)") that a drawing also shows, matched to the row of
+# the drawing that is the same part: the manual's name -> (sheet id in data/sheets, the drawing's name for it). The Bill of Materials shows the
+# drawing's name (one name per part), with the quantity the manual's step uses: a drawing shows one part that applies to several places, such as
+# one corner of the four of the Z bed. A printed part the manual names that is not here has no drawing and is added from the manual.
+MANUAL_PART_NAMES = {
+    'Right Cable Bracket': ('img-EXTRUDER_DUAL', 'E-AXIS CABLE BRACKET (DUAL)(R)'),
+    'Belt Tensioner': ('pdf-22', 'X-AXIS BELT-TENSIONER'),
+    'Dock': ('img-DOCK-BRACKET', 'DOCK-BRACKET'),
+    'Spool Inner Brackets': ('pdf-11', 'SPOOL-HOLDER INNER'),
+    'Z-Axis Top Bottoms': ('img-Z-AXIS_TOP_BRACKETS', 'Z-AXIS TOP BOTTOM'),   # the Z bed has four corners: the drawing shows one, the manual uses 4
+    'Top Tops': ('img-Z-AXIS_TOP_BRACKETS', 'Z-AXIS TOP TOP'),
+    'Caps': ('img-Z-AXIS_TOP_BRACKETS', 'Z-AXIS TOP CAP'),
+}

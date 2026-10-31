@@ -8,6 +8,7 @@ E3D BigBox 3D printer manual, recovered from the Wayback Machine. See README.md 
 - `docs/` – the HTML build, for GitHub Pages later
 - `scripts/` – recovery and build scripts (Python, standard library only; `markdown.py` also needs pandoc). The exceptions are `drawings.py`, `drawing_images.py`, `match_sheets.py` and `render_sheets.py`, which need the packages in `requirements.txt`
 - `data/sheets/` – the reviewed parts list of each sheet of the exploded drawings: the source of truth for the Bill of Materials' Printed Parts and Fixings (see `data/README.md`)
+- Printed parts the manual's own step lists name (`2 x Drive Supports (Printed Parts).`) are found by `scripts/manual_parts.py` at build time. The ones a drawing also shows are matched in `MANUAL_PART_NAMES` in `scripts/targets.py` (which documents the matching); the rest are added to the Bill of Materials as "no drawing", linked to the step that lists them
 - `docs/files/EXPLODED_DRAWINGS.pdf` is the one committed source file under `docs/`: the exploded drawings PDF, which the drawing scripts read
 - `notes/` – what is missing, the history analysis, and which archive snapshot each page and image came from
 - `work/` – scratch and proposals (git-ignored): `work/proposed/` is the extraction tools' output
