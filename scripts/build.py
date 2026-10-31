@@ -70,9 +70,11 @@ def extract(h):
 
 from sections import HEADING, embedded_sections, thumb_file
 from drawings_page import drawings_page
+import manual_parts
 import truth
 SHEETS = truth.load_truth()   # the reviewed per-sheet data (data/sheets/*.json): the build reads this and nothing the tools propose
-_bad = truth.all_problems(SHEETS)
+MANUAL_PARTS = manual_parts.load()   # the printed parts the manual's own step lists name (data/manual_parts.json)
+_bad = truth.all_problems(SHEETS) + manual_parts.problems(MANUAL_PARTS, set(SHEETS))
 if _bad: sys.exit('data/sheets is malformed, so the Bill of Materials cannot be built:\n  ' + '\n  '.join(_bad))   # a hand edit that left a file the wrong shape
 # images drawn from the exploded drawings PDF by scripts/render_sheets.py: name -> (sheet, 'lost', 'redrawn' or 'enlarged')
 REDRAW = {im['file']: (sh['source'].get('page'), im['role']) for sh in SHEETS.values() for im in sh['images'] if im['role'] != 'wiki'}
@@ -181,7 +183,7 @@ PRINTED_PART = truth.key('Printed Part')
 PRINTED = {PRINTED_PART, truth.key('Printed Parts Box')}
 PDF_LINK = 'files/EXPLODED_DRAWINGS.pdf'   # the copy kept in the repository (the archive's capture of 2016-01-09)
 
-def add_drawing_parts(body, sheets, sections_by_image):
+def add_drawing_parts(body, sheets, sections_by_image, manual_entries=()):
     """On the Bill of Materials page: fill the empty Printed Parts section and add a fixings table under Fixings, from the
     reviewed sheets (data/sheets). Both are marked as coming from the drawings, not from the wiki page.
     PDF sheets are exact text. Sheets that are only images on the wiki were read by OCR; their rows are used once a person has confirmed the sheet."""
@@ -209,10 +211,19 @@ def add_drawing_parts(body, sheets, sections_by_image):
     cut = f' {left_out} rows read by OCR are left out until they are checked.' if left_out else ''
     note = ('<p class="derived"><em>This list is not from the wiki page, which left it empty. It is compiled from the parts lists in the '
             f'<a href="{PDF_LINK}">exploded drawings PDF</a> (EXPLODED_DRAWINGS.pdf, sheets 1 to {last_pdf_page}) and the drawing images on the wiki. Each row links to the drawing, with its sheet number in the PDF. <a href="Exploded_Drawings.html">All the drawings are on one page.</a>{ocr}{cut}</em></p>')
+    no_drawing = {}   # printed parts the manual names that no drawing covers, one row per part, linked to every step that lists it
+    for e in manual_entries:
+        if e['drawing']: continue
+        g = no_drawing.setdefault(truth.key(e['part']), {'part': e['part'], 'qty': e['qty'], 'container': e['container'], 'steps': []})
+        g['qty'] = max(g['qty'], e['qty'])
+        link = f'<a href="{e["page"]}.html{"#" + esc(e["step_id"]) if e["step_id"] else ""}">{esc(e["step"])}</a>'
+        if link not in g['steps']: g['steps'].append(link)
     printed = [(d, sec, r) for d, sec, r in rows if truth.key(r['description']) in PRINTED]   # compared the way drift compares names: spacing and case do not matter
     tr = ''.join(f'<tr><td>{esc(r["part"])}</td><td>{"~" if r.get("approx") else ""}{r["qty"]}</td><td>{"printed" if truth.key(r["description"]) == PRINTED_PART else "from the Printed Parts Box"}</td>'
                  f'<td>{d}</td><td>{sec or "–"}</td></tr>' for d, sec, r in printed)
-    printed_html = note + f'<table><thead><tr><th>Part</th><th>Qty</th><th>Source</th><th>Drawing</th><th>Build section</th></tr></thead><tbody>{tr}</tbody></table>'
+    tr += ''.join(f'<tr><td>{esc(g["part"])}</td><td>{g["qty"]}</td><td>{manual_parts.CONTAINER_LABEL[g["container"]]}</td><td>no drawing</td><td>{"; ".join(g["steps"])}</td></tr>' for g in no_drawing.values())
+    printed_note = note[:-len('</em></p>')] + ' Printed parts that the manual\'s own step lists name but that no drawing covers are added at the end, marked no drawing.</em></p>'
+    printed_html = printed_note + f'<table><thead><tr><th>Part</th><th>Qty</th><th>Source</th><th>Drawing</th><th>Build section</th></tr></thead><tbody>{tr}</tbody></table>'
     fixings = {}
     for d, _sec, r in rows:
         if truth.key(r['description']).startswith('FIXINGS'): fixings.setdefault((r['description'], r['part']), []).append(d)
@@ -265,7 +276,7 @@ heads_by_slug = {slug(t): heads for t, (_, heads) in prepared.items()}
 DRAWINGS_PAGE = 'Exploded_Drawings'   # every exploded drawing on one page, generated from the reviewed data
 shown_in = embedded_sections({t: body for t, (body, _) in prepared.items()}, slug)   # before the new page exists, so it does not count as a step
 if SHEETS and 'Bill_Of_Materials' in prepared:
-    prepared['Bill_Of_Materials'] = (add_drawing_parts(prepared['Bill_Of_Materials'][0], SHEETS, shown_in), prepared['Bill_Of_Materials'][1])
+    prepared['Bill_Of_Materials'] = (add_drawing_parts(prepared['Bill_Of_Materials'][0], SHEETS, shown_in, MANUAL_PARTS), prepared['Bill_Of_Materials'][1])
 if SHEETS:
     order.insert(order.index('Bill_Of_Materials') + 1 if 'Bill_Of_Materials' in order else len(order), DRAWINGS_PAGE)
     prepared[DRAWINGS_PAGE] = with_heading_ids(drawings_page(SHEETS, shown_in, {slug(t): t.replace('_', ' ') for t in order if t != DRAWINGS_PAGE},

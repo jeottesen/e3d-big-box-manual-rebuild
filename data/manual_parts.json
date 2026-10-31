@@ -1,0 +1,225 @@
+{
+ "source": "the \"(Printed Part...)\" items in the manual's step lists; see scripts/manual_parts.py",
+ "parts": [
+  {
+   "page": "BigBox_Parts_Preparation",
+   "step_id": ".289.29_Hybrid_X-Carriage",
+   "step": "(9) Hybrid X-Carriage",
+   "qty": 1,
+   "part": "Hybrid X-Carriage",
+   "container": "printed",
+   "drawing": null,
+   "note": ""
+  },
+  {
+   "page": "BigBox_Parts_Preparation",
+   "step_id": ".289.29_Hybrid_X-Carriage",
+   "step": "(9) Hybrid X-Carriage",
+   "qty": 1,
+   "part": "Hybrid X-Carriage Rear Bearing Clamp",
+   "container": "printed",
+   "drawing": null,
+   "note": ""
+  },
+  {
+   "page": "BigBox_Printer_Sub-assemblies",
+   "step_id": ".2810.29_Z-Axis_Bed_Assembly",
+   "step": "(10) Z-Axis Bed Assembly",
+   "qty": 2,
+   "part": "Drive Supports",
+   "container": "printed",
+   "drawing": null,
+   "note": ""
+  },
+  {
+   "page": "BigBox_Printer_Sub-assemblies",
+   "step_id": ".2812.2.29_Feet",
+   "step": "(12.2) Feet",
+   "qty": 8,
+   "part": "Printed Feet",
+   "container": "printed-parts-box",
+   "drawing": null,
+   "note": ""
+  },
+  {
+   "page": "Dual_Direct-Drive_Extruders",
+   "step_id": null,
+   "step": "Dual Direct-Drive Extruders",
+   "qty": 1,
+   "part": "Right Cable Bracket",
+   "container": "printed",
+   "drawing": "img-EXTRUDER_DUAL",
+   "note": ""
+  },
+  {
+   "page": "Printer_Commissioning",
+   "step_id": ".281.4.29_Leadscrews",
+   "step": "(1.4) Leadscrews",
+   "qty": 2,
+   "part": "Z-Axis Driver Bottoms",
+   "container": "printed",
+   "drawing": null,
+   "note": ""
+  },
+  {
+   "page": "Printer_Commissioning",
+   "step_id": ".281.4.29_Leadscrews",
+   "step": "(1.4) Leadscrews",
+   "qty": 2,
+   "part": "Z-Axis Driver Tops",
+   "container": "printed",
+   "drawing": null,
+   "note": ""
+  },
+  {
+   "page": "Printer_main_assemblies_Step_By_Step_Assembly_Process",
+   "step_id": ".288.29_Hybrid_X-Carriage",
+   "step": "(8) Hybrid X-Carriage",
+   "qty": 1,
+   "part": "Hybrid X-Carriage Rear Bearing Clamp",
+   "container": "printed",
+   "drawing": null,
+   "note": ""
+  },
+  {
+   "page": "Printer_main_assemblies_Step_By_Step_Assembly_Process",
+   "step_id": ".288.29_Hybrid_X-Carriage",
+   "step": "(8) Hybrid X-Carriage",
+   "qty": 1,
+   "part": "Hybrid X-Carriage Front Bearing Clamp",
+   "container": "printed",
+   "drawing": null,
+   "note": ""
+  },
+  {
+   "page": "Printer_main_assemblies_Step_By_Step_Assembly_Process",
+   "step_id": ".288.1.29_X-Carriage_Belt",
+   "step": "(8.1) X-Carriage Belt",
+   "qty": 1,
+   "part": "Belt Tensioner",
+   "container": "printed",
+   "drawing": "pdf-22",
+   "note": ""
+  },
+  {
+   "page": "Printer_main_assemblies_Step_By_Step_Assembly_Process",
+   "step_id": ".2814.29_Frame_Top",
+   "step": "(14) Frame Top",
+   "qty": 1,
+   "part": "Dock",
+   "container": "printed",
+   "drawing": "img-DOCK-BRACKET",
+   "note": ""
+  },
+  {
+   "page": "Printer_main_assemblies_Step_By_Step_Assembly_Process",
+   "step_id": ".2817.2.29_Spool_Inner_Brackets",
+   "step": "(17.2) Spool Inner Brackets",
+   "qty": 2,
+   "part": "Spool Inner Brackets",
+   "container": "printed",
+   "drawing": "pdf-11",
+   "note": ""
+  },
+  {
+   "page": "Printer_main_assemblies_Step_By_Step_Assembly_Process",
+   "step_id": ".2817.4.29_Z-Axis_Motors",
+   "step": "(17.4) Z-Axis Motors",
+   "qty": 2,
+   "part": "Cork Pads",
+   "container": "printed-parts-box",
+   "drawing": null,
+   "note": ""
+  },
+  {
+   "page": "Printer_main_assemblies_Step_By_Step_Assembly_Process",
+   "step_id": ".2817.6.29_A.2FC_IEC_Socket",
+   "step": "(17.6) A/C IEC Socket",
+   "qty": 1,
+   "part": "IEC Back Cover",
+   "container": "printed",
+   "drawing": null,
+   "note": ""
+  },
+  {
+   "page": "Printer_main_assemblies_Step_By_Step_Assembly_Process",
+   "step_id": ".2821.11.2.29_Non-Titan_Direct-Drive_Bowden_System",
+   "step": "(21.11.2) Non-Titan Direct-Drive Bowden System",
+   "qty": 1,
+   "part": "Main Block",
+   "container": "printed",
+   "drawing": null,
+   "note": "No drawing names this part."
+  },
+  {
+   "page": "Printer_main_assemblies_Step_By_Step_Assembly_Process",
+   "step_id": ".2821.11.2.29_Non-Titan_Direct-Drive_Bowden_System",
+   "step": "(21.11.2) Non-Titan Direct-Drive Bowden System",
+   "qty": 1,
+   "part": "Embedded Bowden Coupler",
+   "container": "printed-parts-bag",
+   "drawing": null,
+   "note": "The manual lists this as coming in the Printed Parts Bag."
+  },
+  {
+   "page": "Printer_main_assemblies_Step_By_Step_Assembly_Process",
+   "step_id": ".2821.11.2.29_Non-Titan_Direct-Drive_Bowden_System",
+   "step": "(21.11.2) Non-Titan Direct-Drive Bowden System",
+   "qty": 1,
+   "part": "Black Spring",
+   "container": "printed-parts-bag",
+   "drawing": null,
+   "note": "The manual lists this as coming in the Printed Parts Bag."
+  },
+  {
+   "page": "Printer_main_assemblies_Step_By_Step_Assembly_Process",
+   "step_id": ".2821.11.2.29_Non-Titan_Direct-Drive_Bowden_System",
+   "step": "(21.11.2) Non-Titan Direct-Drive Bowden System",
+   "qty": 1,
+   "part": "Hobgoblin",
+   "container": "printed-parts-bag",
+   "drawing": null,
+   "note": "The manual lists this as coming in the Printed Parts Bag."
+  },
+  {
+   "page": "Printer_main_assemblies_Step_By_Step_Assembly_Process",
+   "step_id": ".2829.29_Y-Axis_Frame_Endstop",
+   "step": "(29) Y-Axis Frame Endstop",
+   "qty": 1,
+   "part": "Y-Axis Endstop",
+   "container": "printed",
+   "drawing": null,
+   "note": ""
+  },
+  {
+   "page": "Printer_main_assemblies_Step_By_Step_Assembly_Process",
+   "step_id": ".2832.2.29_Z_Bed",
+   "step": "(32.2) Z Bed",
+   "qty": 4,
+   "part": "Z-Axis Top Bottoms",
+   "container": "printed",
+   "drawing": "img-Z-AXIS_TOP_BRACKETS",
+   "note": "The manual uses 4 of each; the drawing lists 1 of each."
+  },
+  {
+   "page": "Printer_main_assemblies_Step_By_Step_Assembly_Process",
+   "step_id": ".2832.2.29_Z_Bed",
+   "step": "(32.2) Z Bed",
+   "qty": 4,
+   "part": "Caps",
+   "container": "printed",
+   "drawing": "img-Z-AXIS_TOP_BRACKETS",
+   "note": "The manual uses 4 of each; the drawing lists 1 of each."
+  },
+  {
+   "page": "Printer_main_assemblies_Step_By_Step_Assembly_Process",
+   "step_id": ".2832.2.29_Z_Bed",
+   "step": "(32.2) Z Bed",
+   "qty": 4,
+   "part": "Top Tops",
+   "container": "printed",
+   "drawing": "img-Z-AXIS_TOP_BRACKETS",
+   "note": "The manual uses 4 of each; the drawing lists 1 of each."
+  }
+ ]
+}

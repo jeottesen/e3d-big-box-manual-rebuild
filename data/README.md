@@ -26,3 +26,9 @@ The extraction tools (`scripts/drawings.py`, `scripts/drawing_images.py`, `scrip
 ## Build sections
 
 The build section a part links to is not stored here. It comes from where the manual shows the sheet's drawing (`embedded_sections` in `scripts/sections.py`), because the manual is the source of truth for which step a drawing belongs to.
+
+## Printed parts the manual names that no drawing covers
+
+`manual_parts.json` lists the printed parts the manual itself names in its step lists, such as `2 x Drive Supports (Printed Parts).` Each entry has the page and step that list it, the quantity, the part, where it comes from (`printed`, `printed-parts-box` or `printed-parts-bag`), and `drawing`: the id of the sheet in `sheets/` that covers the part, or `null` if no drawing does. The Bill of Materials adds the entries with no drawing to its Printed Parts table, marked `no drawing` and linked to the step that lists them; a part listed in two steps is one row that links both.
+
+`scripts/manual_parts.py` finds these items in the built manual (`docs/*.html`) and reports what differs from this file; `--add-new` appends new ones with no drawing for a person to review. A test fails if the manual has such an item that the list lacks. It can only find items written in the manual's list format, with `(Printed Part…)` after the name; a printed part the manual never labels that way is not found.

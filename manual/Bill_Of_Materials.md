@@ -147,7 +147,7 @@ Embedded Plastic Bowden Coupler, two parts.
 
 ## Printed Parts
 
-*This list is not from the wiki page, which left it empty. It is compiled from the parts lists in the [exploded drawings PDF](../docs/files/EXPLODED_DRAWINGS.pdf) (EXPLODED_DRAWINGS.pdf, sheets 1 to 29) and the drawing images on the wiki. Each row links to the drawing, with its sheet number in the PDF. [All the drawings are on one page.](Exploded_Drawings.md) Sheets marked (image) exist only as pictures on the wiki; they were read by OCR and checked by a person, or entered by hand from the drawing and the manual where the drawing has no parts list.*
+*This list is not from the wiki page, which left it empty. It is compiled from the parts lists in the [exploded drawings PDF](../docs/files/EXPLODED_DRAWINGS.pdf) (EXPLODED_DRAWINGS.pdf, sheets 1 to 29) and the drawing images on the wiki. Each row links to the drawing, with its sheet number in the PDF. [All the drawings are on one page.](Exploded_Drawings.md) Sheets marked (image) exist only as pictures on the wiki; they were read by OCR and checked by a person, or entered by hand from the drawing and the manual where the drawing has no parts list. Printed parts that the manual's own step lists name but that no drawing covers are added at the end, marked no drawing.*
 
 | Part | Qty | Source | Drawing | Build section |
 | --- | --- | --- | --- | --- |
@@ -197,6 +197,20 @@ Embedded Plastic Bowden Coupler, two parts.
 | Z-AXIS TOP BOTTOM | 1 | printed | [z-axis top brackets (image)](../docs/images/Z-AXIS_TOP_BRACKETS.jpg) | [(32.2) Z Bed](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#322-z-bed) |
 | Z-AXIS TOP TOP | 1 | printed | [z-axis top brackets (image)](../docs/images/Z-AXIS_TOP_BRACKETS.jpg) | [(32.2) Z Bed](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#322-z-bed) |
 | Z-AXIS TOP CAP | 1 | printed | [z-axis top brackets (image)](../docs/images/Z-AXIS_TOP_BRACKETS.jpg) | [(32.2) Z Bed](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#322-z-bed) |
+| Hybrid X-Carriage | 1 | printed | no drawing | [(9) Hybrid X-Carriage](BigBox_Parts_Preparation.md#9-hybrid-x-carriage) |
+| Hybrid X-Carriage Rear Bearing Clamp | 1 | printed | no drawing | [(9) Hybrid X-Carriage](BigBox_Parts_Preparation.md#9-hybrid-x-carriage); [(8) Hybrid X-Carriage](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#8-hybrid-x-carriage) |
+| Drive Supports | 2 | printed | no drawing | [(10) Z-Axis Bed Assembly](BigBox_Printer_Sub-assemblies.md#10-z-axis-bed-assembly) |
+| Printed Feet | 8 | from the Printed Parts Box | no drawing | [(12.2) Feet](BigBox_Printer_Sub-assemblies.md#122-feet) |
+| Z-Axis Driver Bottoms | 2 | printed | no drawing | [(1.4) Leadscrews](Printer_Commissioning.md#14-leadscrews) |
+| Z-Axis Driver Tops | 2 | printed | no drawing | [(1.4) Leadscrews](Printer_Commissioning.md#14-leadscrews) |
+| Hybrid X-Carriage Front Bearing Clamp | 1 | printed | no drawing | [(8) Hybrid X-Carriage](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#8-hybrid-x-carriage) |
+| Cork Pads | 2 | from the Printed Parts Box | no drawing | [(17.4) Z-Axis Motors](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#174-z-axis-motors) |
+| IEC Back Cover | 1 | printed | no drawing | [(17.6) A/C IEC Socket](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#176-ac-iec-socket) |
+| Main Block | 1 | printed | no drawing | [(21.11.2) Non-Titan Direct-Drive Bowden System](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#21112-non-titan-direct-drive-bowden-system) |
+| Embedded Bowden Coupler | 1 | from the Printed Parts Bag | no drawing | [(21.11.2) Non-Titan Direct-Drive Bowden System](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#21112-non-titan-direct-drive-bowden-system) |
+| Black Spring | 1 | from the Printed Parts Bag | no drawing | [(21.11.2) Non-Titan Direct-Drive Bowden System](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#21112-non-titan-direct-drive-bowden-system) |
+| Hobgoblin | 1 | from the Printed Parts Bag | no drawing | [(21.11.2) Non-Titan Direct-Drive Bowden System](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#21112-non-titan-direct-drive-bowden-system) |
+| Y-Axis Endstop | 1 | printed | no drawing | [(29) Y-Axis Frame Endstop](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#29-y-axis-frame-endstop) |
 
 ## Fixings
 
