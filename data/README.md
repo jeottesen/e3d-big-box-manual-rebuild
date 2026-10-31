@@ -2,7 +2,7 @@
 
 One JSON file per sheet of the BigBox exploded drawings: the parts list a person has checked. **This is the source of truth** for the Printed Parts and Fixings lists on the Bill of Materials page. The build (`scripts/build.py`) reads these files and nothing the tools propose.
 
-The extraction tools (`scripts/drawings.py`, `scripts/drawing_images.py`, `scripts/match_sheets.py`; `mise run propose`) never write here. They write proposals to `work/proposed/` (git-ignored). `scripts/drift.py` (`mise run drift`) compares the proposals with these files and prints every difference. A change is accepted on purpose, with `python3 -I scripts/drift.py --accept ID [--confirm NAME]`.
+The extraction tools (`scripts/drawings.py`, `scripts/drawing_images.py`, `scripts/match_sheets.py`; `mise run propose`) never write here. They write proposals to `work/proposed/` (git-ignored). `scripts/drift.py` (`mise run drift`) compares the proposals with these files and prints every difference. A change is accepted on purpose, with `python3 -I scripts/drift.py --accept ID [--confirm NAME]`. Accepting merges the proposal into the sheet and never throws away what a person added (a row's `how`, `read_as`, `approx` and `basis`, and the rows entered by hand); `confirmed` is cleared when a row changes.
 
 ## Files
 

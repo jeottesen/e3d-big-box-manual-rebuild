@@ -39,7 +39,10 @@ def fix_row(part, desc, conf, vocab, by_desc, fixes):
 
 def digits(t): return re.sub(r'\D', '', t)
 
-def key(t): return re.sub(r'[^A-Z0-9]', '', t.upper())
+def key(t):
+    """A name without spaces, punctuation or case, for comparing: 'M3 x 10' and 'M3X10' are the same, and the multiplication
+    sign counts as an x ('M3×10'); it must not collapse into 'M310', which 'M3-10' also gives."""
+    return re.sub(r'[^A-Z0-9]', '', (t or '').upper().replace('×', 'X'))
 
 EXTRA_WORDS = 'DOCK CLAMP LEVER GUIDE HYBRID TITAN NON DIRECT BODY TOP CAP BOTTOM BED DUAL CABLE BRACKET CHAIN ANCHOR BASE UPPER LOWER'.split()
 

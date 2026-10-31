@@ -3,7 +3,7 @@ import os, re, unittest
 from helpers import ROOT
 import truth
 from ocr_text import digits
-from targets import OCR_FIXES
+from targets import MATCH_OVERRIDES, OCR_FIXES
 from ocr_text import key
 
 SHEETS = truth.load_truth()
@@ -54,6 +54,10 @@ class Provenance(unittest.TestCase):
         for s in SHEETS.values():
             for im in s['images']:
                 if im['role'] in ('enlarged', 'redrawn'): self.assertTrue(os.path.exists(os.path.join(ROOT, 'docs/images/original', im['file'])), im['file'])
+
+    def test_a_match_decided_by_hand_is_what_the_data_says(self):
+        for name, page in MATCH_OVERRIDES.items():
+            self.assertIn(name, [im['file'] for im in SHEETS[f'pdf-{page:02d}']['images']], name)
 
     def test_no_image_belongs_to_two_sheets(self):
         owners = {}

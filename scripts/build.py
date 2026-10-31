@@ -71,6 +71,8 @@ def extract(h):
 from sections import HEADING, embedded_sections, thumb_file
 import truth
 SHEETS = truth.load_truth()   # the reviewed per-sheet data (data/sheets/*.json): the build reads this and nothing the tools propose
+_bad = truth.all_problems(SHEETS)
+if _bad: sys.exit('data/sheets is malformed, so the Bill of Materials cannot be built:\n  ' + '\n  '.join(_bad))   # a hand edit that left a file the wrong shape
 # images drawn from the exploded drawings PDF by scripts/render_sheets.py: name -> (sheet, 'lost', 'redrawn' or 'enlarged')
 REDRAW = {im['file']: (sh['source'].get('page'), im['role']) for sh in SHEETS.values() for im in sh['images'] if im['role'] != 'wiki'}
 REDRAW_NOTE = {'lost': "the wiki's own copy of this image was not archived",
@@ -173,6 +175,8 @@ def add_section_lists(body, self_slug, heads_by_slug):
         return div + ''.join(keep)
     return re.sub(r'(<div class="sections">.*?</div>)((?:\s*(?:<dl>(?:(?!<h\d).)*?</dl>|<p>(?:(?!<h\d).)*?</p>))*)', tidy, body, flags=re.S)
 
+PRINTED_PART = truth.key('Printed Part')
+PRINTED = {PRINTED_PART, truth.key('Printed Parts Box')}
 PDF_LINK = 'files/EXPLODED_DRAWINGS.pdf'   # the copy kept in the repository (the archive's capture of 2016-01-09)
 
 def add_drawing_parts(body, sheets, sections_by_image):
@@ -198,18 +202,18 @@ def add_drawing_parts(body, sheets, sections_by_image):
             if sh['confirmed'] is None and any(r['how'] in ('ocr', 'ocr+fix') for r in sh['rows']): left_out += len(sh['rows']); continue   # read by OCR and not yet checked by a person
             drawing = f'<a href="images/{urllib.parse.quote(files[0])}">{esc(sh["title"].lower())} (image)</a>'
         for r in sh['rows']: rows.append((drawing, sections_for(files), r))
-    last_pdf_page = max(sh['source']['page'] for sh in sheets.values() if sh['source']['kind'] == 'pdf')
+    last_pdf_page = max((sh['source']['page'] for sh in sheets.values() if sh['source']['kind'] == 'pdf'), default=0)
     ocr = ' Sheets marked (image) exist only as pictures on the wiki; they were read by OCR and checked by a person, or entered by hand from the drawing and the manual where the drawing has no parts list.' if any('(image)' in d for d, _, _ in rows) else ''
     cut = f' {left_out} rows read by OCR are left out until they are checked.' if left_out else ''
     note = ('<p class="derived"><em>This list is not from the wiki page, which left it empty. It is compiled from the parts lists in the '
             f'<a href="{PDF_LINK}">exploded drawings PDF</a> (EXPLODED_DRAWINGS.pdf, sheets 1 to {last_pdf_page}) and the drawing images on the wiki. Each row links to the drawing, with its sheet number in the PDF.{ocr}{cut}</em></p>')
-    printed = [(d, sec, r) for d, sec, r in rows if r['description'] in ('Printed Part', 'Printed Parts Box')]
-    tr = ''.join(f'<tr><td>{esc(r["part"])}</td><td>{"~" if r.get("approx") else ""}{r["qty"]}</td><td>{"printed" if r["description"] == "Printed Part" else "from the Printed Parts Box"}</td>'
+    printed = [(d, sec, r) for d, sec, r in rows if truth.key(r['description']) in PRINTED]   # compared the way drift compares names: spacing and case do not matter
+    tr = ''.join(f'<tr><td>{esc(r["part"])}</td><td>{"~" if r.get("approx") else ""}{r["qty"]}</td><td>{"printed" if truth.key(r["description"]) == PRINTED_PART else "from the Printed Parts Box"}</td>'
                  f'<td>{d}</td><td>{sec or "–"}</td></tr>' for d, sec, r in printed)
     printed_html = note + f'<table><thead><tr><th>Part</th><th>Qty</th><th>Source</th><th>Drawing</th><th>Build section</th></tr></thead><tbody>{tr}</tbody></table>'
     fixings = {}
     for d, _sec, r in rows:
-        if r['description'].startswith('Fixings'): fixings.setdefault((r['description'], r['part']), []).append(d)
+        if truth.key(r['description']).startswith('FIXINGS'): fixings.setdefault((r['description'], r['part']), []).append(d)
     def bag_no(d): return int(''.join(c for c in d if c.isdigit()) or 0)
     tr = ''.join(f'<tr><td>{esc(bag)}</td><td>{esc(part)}</td><td>{", ".join(ds)}</td></tr>'
                  for (bag, part), ds in sorted(fixings.items(), key=lambda kv: (bag_no(kv[0][0]), kv[0][1])))
