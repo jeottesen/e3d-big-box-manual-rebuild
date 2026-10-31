@@ -195,16 +195,16 @@ def add_drawing_parts(body, sheets, sections_by_image):
             drawing = (f'<a href="images/{urllib.parse.quote(files[0])}">{esc(os.path.splitext(files[0])[0].replace("_", " ").lower())}</a> (sheet {n})' if files
                        else f'<a href="{PDF_LINK}#page={n}">sheet {n} of the PDF</a>')
         else:
-            if sh['confirmed'] is None: left_out += len(sh['rows']); continue   # read by OCR and not yet checked by a person
+            if sh['confirmed'] is None and any(r['how'] in ('ocr', 'ocr+fix') for r in sh['rows']): left_out += len(sh['rows']); continue   # read by OCR and not yet checked by a person
             drawing = f'<a href="images/{urllib.parse.quote(files[0])}">{esc(sh["title"].lower())} (image)</a>'
         for r in sh['rows']: rows.append((drawing, sections_for(files), r))
     last_pdf_page = max(sh['source']['page'] for sh in sheets.values() if sh['source']['kind'] == 'pdf')
-    ocr = ' Sheets marked (image) exist only as pictures on the wiki; they were read by OCR and checked by a person.' if any('(image)' in d for d, _, _ in rows) else ''
+    ocr = ' Sheets marked (image) exist only as pictures on the wiki; they were read by OCR and checked by a person, or entered by hand from the drawing and the manual where the drawing has no parts list.' if any('(image)' in d for d, _, _ in rows) else ''
     cut = f' {left_out} rows read by OCR are left out until they are checked.' if left_out else ''
     note = ('<p class="derived"><em>This list is not from the wiki page, which left it empty. It is compiled from the parts lists in the '
             f'<a href="{PDF_LINK}">exploded drawings PDF</a> (EXPLODED_DRAWINGS.pdf, sheets 1 to {last_pdf_page}) and the drawing images on the wiki. Each row links to the drawing, with its sheet number in the PDF.{ocr}{cut}</em></p>')
     printed = [(d, sec, r) for d, sec, r in rows if r['description'] in ('Printed Part', 'Printed Parts Box')]
-    tr = ''.join(f'<tr><td>{esc(r["part"])}</td><td>{r["qty"]}</td><td>{"printed" if r["description"] == "Printed Part" else "from the Printed Parts Box"}</td>'
+    tr = ''.join(f'<tr><td>{esc(r["part"])}</td><td>{"~" if r.get("approx") else ""}{r["qty"]}</td><td>{"printed" if r["description"] == "Printed Part" else "from the Printed Parts Box"}</td>'
                  f'<td>{d}</td><td>{sec or "–"}</td></tr>' for d, sec, r in printed)
     printed_html = note + f'<table><thead><tr><th>Part</th><th>Qty</th><th>Source</th><th>Drawing</th><th>Build section</th></tr></thead><tbody>{tr}</tbody></table>'
     fixings = {}

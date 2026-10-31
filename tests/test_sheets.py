@@ -66,8 +66,11 @@ class Provenance(unittest.TestCase):
 
 class Review(unittest.TestCase):
     """Nothing read by OCR is used until a person has checked it against the drawing."""
-    def test_every_ocr_sheet_is_confirmed(self):
-        self.assertEqual([s['id'] for s in SHEETS.values() if s['source']['kind'] == 'image' and s['confirmed'] is None], [])
+    def test_every_sheet_with_ocr_rows_is_confirmed(self):
+        self.assertEqual([s['id'] for s in SHEETS.values() if s['confirmed'] is None and any(r['how'] in ('ocr', 'ocr+fix') for r in s['rows'])], [])
+
+    def test_an_entered_row_says_what_it_is_based_on(self):
+        self.assertEqual([(s['id'], r['part']) for s, r in rows() if r['how'] == 'entered' and not r.get('basis')], [])
 
     def test_no_row_is_marked_unsure_on_a_confirmed_sheet_without_being_fixed(self):
         self.assertEqual([(s['id'], r['part']) for s, r in rows() if r.get('unsure') and r['how'] == 'ocr'], [])

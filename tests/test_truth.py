@@ -44,6 +44,16 @@ class Shape(unittest.TestCase):
         s = sheet('img-A', 'image'); s['rows'][0]['how'] = 'ocr+fix'
         self.assertTrue(any('read_as' in p for p in truth.problems(s)))
 
+    def test_an_entered_row_needs_a_basis(self):
+        s = sheet('img-A', 'image'); s['rows'][0]['how'] = 'entered'
+        self.assertTrue(any('basis' in p for p in truth.problems(s)))
+        s['rows'][0]['basis'] = 'the title block'
+        self.assertEqual(truth.problems(s), [])
+
+    def test_a_sheet_made_only_of_entered_rows_is_not_reported_as_vanished(self):
+        t = sheet('img-A', 'image'); t['rows'][0].update(how='entered', basis='x')
+        self.assertEqual(truth.diff({'img-A': t}, {}), [])
+
     def test_confirmed_needs_who_and_when(self):
         s = copy.deepcopy(sheet()); s['confirmed'] = {'by': 'someone'}
         self.assertTrue(truth.problems(s))
