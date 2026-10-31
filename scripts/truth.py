@@ -17,7 +17,8 @@ A sheet file (see data/README.md for the full description):
   confirmed   null, or {"by", "on"}: a person has checked this sheet against the drawing
   notes       free text
 """
-import collections, hashlib, json, os, re
+import collections, hashlib, json, os
+from ocr_text import key   # one way of comparing names, shared with the OCR rules
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA = f'{ROOT}/data/sheets'
@@ -27,8 +28,6 @@ PDF_REL = 'docs/files/EXPLODED_DRAWINGS.pdf'
 ROLES = ('wiki', 'redrawn', 'enlarged', 'lost')
 HOW = ('pdf-text', 'ocr', 'ocr+fix', 'hand', 'entered')
 
-
-def key(t): return re.sub(r'[^A-Z0-9]', '', (t or '').upper())
 
 def sha256(path):
     h = hashlib.sha256()
@@ -51,22 +50,52 @@ def write_sheet(sheet):
     os.makedirs(DATA, exist_ok=True)
     with open(f'{DATA}/{sheet["id"]}.json', 'w', encoding='utf-8') as f: f.write(dumps(sheet))
 
+def _is_int(v): return isinstance(v, int) and not isinstance(v, bool)
+
 def problems(sheet):
-    """What is wrong with a sheet's shape. [] when it is fine."""
+    """What is wrong with a sheet's shape. [] when it is fine. Never raises, whatever a hand edit left in the file."""
+    if not isinstance(sheet, dict): return ['a sheet must be an object']
     out = []
     for field in ('id', 'title', 'source', 'images', 'rows', 'confirmed'):
         if field not in sheet: out.append(f'missing "{field}"')
     if out: return out
-    if sheet['source'].get('kind') not in ('pdf', 'image'): out.append('source.kind must be pdf or image')
+    src = sheet['source']
+    if not isinstance(src, dict) or src.get('kind') not in ('pdf', 'image'): return ['source must be an object with kind pdf or image']
+    if not isinstance(sheet['id'], str) or not sheet['id'].startswith('pdf-' if src['kind'] == 'pdf' else 'img-'): out.append('id must start with pdf- for a PDF sheet and img- for an image sheet')
+    if not isinstance(src.get('file'), str) or not isinstance(src.get('sha256'), str): out.append('source needs file and sha256')
+    if src['kind'] == 'pdf' and not (_is_int(src.get('page')) and src['page'] >= 1): out.append('a PDF sheet needs source.page')
+    if not isinstance(sheet['images'], list): return out + ['images must be a list']
+    if src['kind'] == 'image' and not sheet['images']: out.append('an image sheet needs at least one image')
     for im in sheet['images']:
-        if im.get('role') not in ROLES: out.append(f'image {im.get("file")}: role must be one of {ROLES}')
+        if not isinstance(im, dict) or not isinstance(im.get('file'), str): out.append('each image needs a file'); continue
+        if im.get('role') not in ROLES: out.append(f'image {im["file"]}: role must be one of {ROLES}')
+        if im.get('role') in ('lost', 'redrawn') and src['kind'] != 'pdf': out.append(f'image {im["file"]}: only a PDF sheet can have a {im["role"]} image (it is drawn from the PDF page)')
+    if not isinstance(sheet['rows'], list): return out + ['rows must be a list']
     for i, r in enumerate(sheet['rows']):
-        if not isinstance(r.get('qty'), int) or r['qty'] < 1: out.append(f'row {i}: qty must be a whole number')
-        if not r.get('part'): out.append(f'row {i}: no part')
+        if not isinstance(r, dict): out.append(f'row {i}: must be an object'); continue
+        if not _is_int(r.get('qty')) or r['qty'] < 1: out.append(f'row {i}: qty must be a whole number')
+        if not (isinstance(r.get('part'), str) and r['part']): out.append(f'row {i}: no part')
+        if not isinstance(r.get('description'), str): out.append(f'row {i}: description must be text (empty if there is none)')
         if r.get('how') not in HOW: out.append(f'row {i}: how must be one of {HOW}')
-        if r.get('how') in ('ocr+fix', 'hand') and 'read_as' not in r: out.append(f'row {i}: a corrected row must keep what the tool read (read_as)')
+        if r.get('how') in ('ocr+fix', 'hand') and not isinstance(r.get('read_as'), dict): out.append(f'row {i}: a corrected row must keep what the tool read (read_as)')
         if r.get('how') == 'entered' and not r.get('basis'): out.append(f'row {i}: an entered row must say what it is based on (basis)')
-    if sheet['confirmed'] is not None and not (sheet['confirmed'].get('by') and sheet['confirmed'].get('on')): out.append('confirmed needs by and on')
+        if 'approx' in r and not isinstance(r['approx'], bool): out.append(f'row {i}: approx must be true or false')
+    c = sheet['confirmed']
+    if c is not None and not (isinstance(c, dict) and isinstance(c.get('by'), str) and c['by'] and isinstance(c.get('on'), str) and c['on']): out.append('confirmed needs by and on')
+    return out
+
+def all_problems(sheets):
+    """problems() for every sheet, plus what only shows across sheets: a file name that does not match its id, and a drawing
+    image claimed by two sheets. [] when the data is sound."""
+    out = []
+    owners = {}
+    for sid, s in sorted(sheets.items()):
+        out += [f'{sid}: {p}' for p in problems(s)]
+        if isinstance(s, dict) and s.get('id') != sid: out.append(f'{sid}: the file name and the id ({s.get("id")!r}) differ')
+        if isinstance(s, dict) and isinstance(s.get('images'), list):
+            for im in s['images']:
+                if isinstance(im, dict) and isinstance(im.get('file'), str): owners.setdefault(im['file'], []).append(sid)
+    out += [f'image {f} belongs to more than one sheet: {ids}' for f, ids in sorted(owners.items()) if len(ids) > 1]
     return out
 
 
@@ -117,10 +146,16 @@ def proposals(fixes, lost_images):
 
 # ---------- comparing proposals with the truth ----------
 
-def _rows(sheet): return collections.Counter((r['qty'], key(r['part']), key(r['description'])) for r in sheet['rows'])
+def rowkey(r): return (r['qty'], key(r['part']), key(r['description']))
+
+def _rows(sheet): return collections.Counter(rowkey(r) for r in sheet['rows'])
+
+def _how(r): return (r['how'], bool(r.get('approx')), bool(r.get('unsure')), json.dumps(r.get('read_as'), sort_keys=True))
 
 def diff(truth, proposed):
-    """[(severity, id, message)]. severity "error" for a change to exact PDF text, a changed PDF, or a broken truth file; else "info"."""
+    """[(severity, id, message)]. severity "error" for a change to exact PDF text, a changed PDF, or a broken truth file; else "info".
+    A row is the same row when its quantity, part and description match (spacing and case aside). For the same row, a change to how it
+    was read (how, read_as, approx, unsure) is reported too: it means a correction or a flag the person made is not what the tools propose."""
     out = []
     for sid in sorted(set(truth) | set(proposed)):
         t, p = truth.get(sid), proposed.get(sid)
@@ -134,6 +169,9 @@ def diff(truth, proposed):
         a, b = _rows(t), _rows(p)
         for row, n in sorted((a - b).items()): out.append((sev, sid, f'row in the data but not proposed: {n} x {row}'))
         for row, n in sorted((b - a).items()): out.append((sev, sid, f'row proposed but not in the data: {n} x {row}'))
+        tr, pr = {rowkey(r): r for r in t['rows']}, {rowkey(r): r for r in p['rows']}
+        for k in sorted(set(tr) & set(pr)):
+            if _how(tr[k]) != _how(pr[k]): out.append((sev, sid, f'row {k} was read differently: data {_how(tr[k])[:3]}, proposed {_how(pr[k])[:3]}' + (' (read_as differs)' if _how(tr[k])[3] != _how(pr[k])[3] else '')))
         if t['title'] != p['title']: out.append(('info', sid, f'title: data {t["title"]!r}, proposed {p["title"]!r}'))
         if sorted((i['file'], i['role']) for i in t['images']) != sorted((i['file'], i['role']) for i in p['images']):
             out.append(('info', sid, f'images: data {[(i["file"], i["role"]) for i in t["images"]]}, proposed {[(i["file"], i["role"]) for i in p["images"]]}'))

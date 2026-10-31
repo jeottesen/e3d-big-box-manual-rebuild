@@ -81,6 +81,7 @@ def main():
              'image_width': w, 'sheet_title': parts[n]['title'], 'image_sheet_no': ocr.get(name, {}).get('sheet'), 'image_of': ocr.get(name, {}).get('of')}
         if name in MATCH_OVERRIDES:   # decided by eye (targets.MATCH_OVERRIDES): the drawing may be a different view or revision
             r.update({'status': 'confirmed', 'sheet': MATCH_OVERRIDES[name], 'manual': True, 'sheet_title': parts[MATCH_OVERRIDES[name]]['title']})
+            if w < LOW_RES: r['action'] = 'redraw'   # still the PDF's drawing of it, at a better size
         elif status == 'confirmed' and w < LOW_RES: r['action'] = 'redraw'
         elif status == 'no match' and w < LOW_RES: r['action'] = 'enlarge'      # no PDF sheet to redraw it from: make it larger, keeping the original       # same drawing, and the PDF has it at a better size
         result[name] = r
