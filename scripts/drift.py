@@ -49,8 +49,8 @@ def main(argv):
     errors = [m for sev, _, m in differences if sev == 'error']
     for line in bad: print('ERROR  data:', line)
     for sev, sid, msg in differences: print(f'{"ERROR" if sev == "error" else "info "}  {sid}: {msg}')
-    for sid in unchecked: print(f'info   {sid}: read by OCR and not yet confirmed by a person')
-    print(f'\n{len(current)} sheets in the data, {len(proposed)} proposed; {len(differences)} differences, {len(unchecked)} OCR sheets unconfirmed.')
+    for sid in unchecked: print(f'info   {sid}: not exact PDF text (read by OCR or entered by hand) and not yet confirmed by a person')
+    print(f'\n{len(current)} sheets in the data, {len(proposed)} proposed; {len(differences)} differences, {len(unchecked)} sheets not yet confirmed by a person.')
     return 1 if bad or errors or (strict and (differences or unchecked)) else 0
 
 
