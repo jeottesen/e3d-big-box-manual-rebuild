@@ -69,13 +69,15 @@ def extract(h):
     return body
 
 from sections import HEADING, embedded_sections, thumb_file
+from drawings_page import drawings_page
 import truth
 SHEETS = truth.load_truth()   # the reviewed per-sheet data (data/sheets/*.json): the build reads this and nothing the tools propose
 _bad = truth.all_problems(SHEETS)
 if _bad: sys.exit('data/sheets is malformed, so the Bill of Materials cannot be built:\n  ' + '\n  '.join(_bad))   # a hand edit that left a file the wrong shape
 # images drawn from the exploded drawings PDF by scripts/render_sheets.py: name -> (sheet, 'lost', 'redrawn' or 'enlarged')
 REDRAW = {im['file']: (sh['source'].get('page'), im['role']) for sh in SHEETS.values() for im in sh['images'] if im['role'] != 'wiki'}
-REDRAW_NOTE = {'lost': "the wiki's own copy of this image was not archived",
+REDRAW_NOTE = {'drawn': "the wiki never showed this sheet as an image",
+               'lost': "the wiki's own copy of this image was not archived",
                'redrawn': "the wiki's image of this drawing was low resolution and the PDF has it larger"}
 
 def fix_images(body, stats):
@@ -206,7 +208,7 @@ def add_drawing_parts(body, sheets, sections_by_image):
     ocr = ' Sheets marked (image) exist only as pictures on the wiki; they were read by OCR and checked by a person, or entered by hand from the drawing and the manual where the drawing has no parts list.' if any('(image)' in d for d, _, _ in rows) else ''
     cut = f' {left_out} rows read by OCR are left out until they are checked.' if left_out else ''
     note = ('<p class="derived"><em>This list is not from the wiki page, which left it empty. It is compiled from the parts lists in the '
-            f'<a href="{PDF_LINK}">exploded drawings PDF</a> (EXPLODED_DRAWINGS.pdf, sheets 1 to {last_pdf_page}) and the drawing images on the wiki. Each row links to the drawing, with its sheet number in the PDF.{ocr}{cut}</em></p>')
+            f'<a href="{PDF_LINK}">exploded drawings PDF</a> (EXPLODED_DRAWINGS.pdf, sheets 1 to {last_pdf_page}) and the drawing images on the wiki. Each row links to the drawing, with its sheet number in the PDF. <a href="Exploded_Drawings.html">All the drawings are on one page.</a>{ocr}{cut}</em></p>')
     printed = [(d, sec, r) for d, sec, r in rows if truth.key(r['description']) in PRINTED]   # compared the way drift compares names: spacing and case do not matter
     tr = ''.join(f'<tr><td>{esc(r["part"])}</td><td>{"~" if r.get("approx") else ""}{r["qty"]}</td><td>{"printed" if truth.key(r["description"]) == PRINTED_PART else "from the Printed Parts Box"}</td>'
                  f'<td>{d}</td><td>{sec or "–"}</td></tr>' for d, sec, r in printed)
@@ -260,8 +262,29 @@ order = ['BigBox_Build_Manual'] + sorted(t for t in pages if t != 'BigBox_Build_
 stats, sections = {}, []
 prepared = {t: with_heading_ids(extract(pages[t])) for t in order}   # (body, headings) per page
 heads_by_slug = {slug(t): heads for t, (_, heads) in prepared.items()}
+DRAWINGS_PAGE = 'Exploded_Drawings'   # every exploded drawing on one page, generated from the reviewed data
+shown_in = embedded_sections({t: body for t, (body, _) in prepared.items()}, slug)   # before the new page exists, so it does not count as a step
 if SHEETS and 'Bill_Of_Materials' in prepared:
-    prepared['Bill_Of_Materials'] = (add_drawing_parts(prepared['Bill_Of_Materials'][0], SHEETS, embedded_sections({t: body for t, (body, _) in prepared.items()}, slug)), prepared['Bill_Of_Materials'][1])
+    prepared['Bill_Of_Materials'] = (add_drawing_parts(prepared['Bill_Of_Materials'][0], SHEETS, shown_in), prepared['Bill_Of_Materials'][1])
+if SHEETS:
+    order.insert(order.index('Bill_Of_Materials') + 1 if 'Bill_Of_Materials' in order else len(order), DRAWINGS_PAGE)
+    prepared[DRAWINGS_PAGE] = with_heading_ids(drawings_page(SHEETS, shown_in, {slug(t): t.replace('_', ' ') for t in order if t != DRAWINGS_PAGE},
+                                                             [slug(t) for t in order if t != DRAWINGS_PAGE], heads_by_slug))
+    heads_by_slug[slug(DRAWINGS_PAGE)] = prepared[DRAWINGS_PAGE][1]
+    extras.add(DRAWINGS_PAGE)   # not a wiki page: no source line
+if 'BigBox_Build_Manual' in prepared:   # the main page links the pages that are generated from the reviewed data, in an Appendix at the end
+    entries = [(DRAWINGS_PAGE, 'Exploded Drawings', 'every assembly drawing in one place, each with its parts list and the steps of the manual that show it')] if SHEETS else []
+    for page, label, note in (('Bill_Of_Materials', 'Bill of Materials', 'the parts, with the printed parts and fixings compiled from the exploded drawings'),
+                              ('Datasheets', 'Datasheets', 'the PDF datasheets and drawings the wiki hosted for the hotend, the motors and the fans'),
+                              ('Downloads', 'Downloads', 'where to find the files the wiki linked to that are gone: firmware, slicer profiles and models'),
+                              ('Older_Version_Content', 'Older Version Content', 'sections that were in older versions of the manual and were later removed')):
+        if page in prepared: entries.append((page, label, note))
+    if entries:
+        appendix = '<h3><span class="mw-headline" id="Appendix">Appendix</span></h3><ul>' + ''.join(f'<li><a href="{slug(t)}.html">{label}</a> &ndash; {note}</li>' for t, label, note in entries) + '</ul>'
+        body, heads = prepared['BigBox_Build_Manual']
+        extra_body, extra_heads = with_heading_ids(appendix)
+        prepared['BigBox_Build_Manual'] = (body + extra_body, heads + extra_heads)
+        heads_by_slug[slug('BigBox_Build_Manual')] = prepared['BigBox_Build_Manual'][1]
 for t in order:
     body0, heads = prepared[t]
     b = fix_links(fix_images(body0, stats), False)

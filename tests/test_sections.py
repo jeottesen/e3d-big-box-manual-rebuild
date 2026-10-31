@@ -84,7 +84,7 @@ class BuiltPages(unittest.TestCase):
         self.assertEqual(pages, {'Single_Direct-Drive_Printhead_Assembly', 'Dual_Direct-Drive_Printhead_Assembly', 'Printer_main_assemblies_Step_By_Step_Assembly_Process'})
 
     def test_every_drawing_in_the_reviewed_data_is_shown_somewhere(self):
-        shown = [im['file'] for s in truth.load_truth().values() for im in s['images']]
+        shown = [im['file'] for s in truth.load_truth().values() for im in s['images'] if im['role'] != 'drawn']   # a drawn image is one the wiki never showed
         self.assertEqual([f for f in shown if f not in DERIVED], [])
 
     def test_every_section_found_exists_in_its_page(self):
@@ -96,7 +96,8 @@ class BuiltPages(unittest.TestCase):
     def test_the_bill_of_materials_links_only_to_steps_that_show_a_drawing(self):
         allowed = {f'{p}.html#{i}' if i else f'{p}.html' for sections in DERIVED.values() for p, i, _ in sections}
         bom = PAGES['Bill_Of_Materials']
-        table = bom[bom.index('id="Printed_Parts"'):bom.index('id="Fixings"')]
+        section = bom[bom.index('id="Printed_Parts"'):bom.index('id="Fixings"')]
+        table = section[section.index('<table>'):]   # the note above it links to the page of all the drawings, which is not a step
         links = set(re.findall(r'href="([^"]+\.html(?:#[^"]*)?)"', table))
         self.assertTrue(links)
         self.assertEqual(sorted(l for l in links if l not in allowed), [])

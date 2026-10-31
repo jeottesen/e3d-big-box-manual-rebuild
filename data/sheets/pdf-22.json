@@ -7,7 +7,12 @@
   "sha256": "659ab7e3f4c9d042f2082aeaf231af6e9901d9c25841854a618e5caae793cbe2",
   "page": 22
  },
- "images": [],
+ "images": [
+  {
+   "file": "X-CARRIAGE_ASSEMBLY.jpg",
+   "role": "drawn"
+  }
+ ],
  "rows": [
   {
    "item": "1",
