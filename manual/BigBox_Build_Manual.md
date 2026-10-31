@@ -18,6 +18,7 @@ Archived 20200803120509 · source: wiki.e3d-online.com/wiki/BigBox_Build_Manual 
 - [BigBox Software](#bigbox-software)
 - [BigBox Community Generated Help & Guides](#bigbox-community-generated-help--guides)
 - [BigBox printer projects](#bigbox-printer-projects)
+- [Appendix](#appendix)
 
 ![Bigbox_logo.png](../docs/images/Bigbox_logo.png)
 
@@ -203,3 +204,8 @@ Using platformio to flash firmware from RPi *(dead link)*
 **[Picture](http://www.instructables.com/id/Picture-The-3D-Printed-Raspberry-Pi-Camera/)** - A digital camera powered by the Raspberry Pi and designed to be 3D printed with a BigBox!
 
 **[Handled Drills (Hole Reamers)](https://www.thingiverse.com/thing:1387197)** - Sometimes an electric drill is simply too powerful for delicate parts. The answer is a handle for your drill bits!
+
+## Appendix
+
+- [Exploded Drawings](Exploded_Drawings.md) – every assembly drawing in one place, each with its parts list and the steps of the manual that show it
+- [Bill of Materials](Bill_Of_Materials.md) – the parts, with the printed parts and fixings compiled from the exploded drawings

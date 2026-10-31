@@ -122,6 +122,13 @@ class BuiltPage(unittest.TestCase):
     def test_the_bill_of_materials_links_to_it(self):
         with open(os.path.join(ROOT, 'docs/Bill_Of_Materials.html'), encoding='utf-8') as f: self.assertIn('href="Exploded_Drawings.html"', f.read())
 
+    def test_the_main_page_links_it_in_an_appendix(self):
+        with open(os.path.join(ROOT, 'docs/BigBox_Build_Manual.html'), encoding='utf-8') as f: main = f.read()
+        appendix = main[main.index('id="Appendix"'):]
+        self.assertIn('href="Exploded_Drawings.html"', appendix)
+        self.assertIn('href="Bill_Of_Materials.html"', appendix)
+        self.assertIn('href="#Appendix"', main)   # and the page's own contents list has it
+
     def test_the_manual_does_not_show_exactly_the_sheets_without_a_wiki_image(self):
         heading = re.search(r'<h2[^>]*>Not shown in the manual</h2>', BUILT)   # the contents list also names it, so find the heading itself
         tail = BUILT[heading.end():] if heading else ''

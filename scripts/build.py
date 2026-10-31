@@ -272,6 +272,15 @@ if SHEETS:
                                                              [slug(t) for t in order if t != DRAWINGS_PAGE], heads_by_slug))
     heads_by_slug[slug(DRAWINGS_PAGE)] = prepared[DRAWINGS_PAGE][1]
     extras.add(DRAWINGS_PAGE)   # not a wiki page: no source line
+if 'BigBox_Build_Manual' in prepared:   # the main page links the pages that are generated from the reviewed data, in an Appendix at the end
+    entries = [(DRAWINGS_PAGE, 'Exploded Drawings', 'every assembly drawing in one place, each with its parts list and the steps of the manual that show it')] if SHEETS else []
+    entries += [('Bill_Of_Materials', 'Bill of Materials', 'the parts, with the printed parts and fixings compiled from the exploded drawings')] if 'Bill_Of_Materials' in prepared else []
+    if entries:
+        appendix = '<h3><span class="mw-headline" id="Appendix">Appendix</span></h3><ul>' + ''.join(f'<li><a href="{slug(t)}.html">{label}</a> &ndash; {note}</li>' for t, label, note in entries) + '</ul>'
+        body, heads = prepared['BigBox_Build_Manual']
+        extra_body, extra_heads = with_heading_ids(appendix)
+        prepared['BigBox_Build_Manual'] = (body + extra_body, heads + extra_heads)
+        heads_by_slug[slug('BigBox_Build_Manual')] = prepared['BigBox_Build_Manual'][1]
 for t in order:
     body0, heads = prepared[t]
     b = fix_links(fix_images(body0, stats), False)
