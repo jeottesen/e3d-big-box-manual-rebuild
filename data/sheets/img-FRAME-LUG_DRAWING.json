@@ -1,0 +1,32 @@
+{
+ "id": "img-FRAME-LUG_DRAWING",
+ "title": "FRAME-LUG DRAWING",
+ "source": {
+  "kind": "image",
+  "file": "docs/images/FRAME-LUG_DRAWING.jpg",
+  "sha256": "46d4357083d7f29817573543a3c4a7cab7d86acfcba348225548b110bd1d9de8",
+  "image_sheet": [
+   1,
+   1
+  ]
+ },
+ "images": [
+  {
+   "file": "FRAME-LUG_DRAWING.jpg",
+   "role": "wiki"
+  }
+ ],
+ "rows": [
+  {
+   "item": "",
+   "qty": 150,
+   "approx": true,
+   "part": "BB_FRAME_M3_NUT_TRAP-1",
+   "description": "Printed Part",
+   "how": "entered",
+   "basis": "The title block of FRAME-LUG_DRAWING.jpg names the part; the manual, step (13.1) A Note on Nut-Traps, says approximately 150 nut traps are used in the frame assembly."
+  }
+ ],
+ "confirmed": null,
+ "notes": "The drawing has no parts list, so this row was entered by hand. The manual calls the part a nut trap or lug and links the files on Thingiverse (thing:1272287)."
+}

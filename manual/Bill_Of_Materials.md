@@ -147,7 +147,7 @@ Embedded Plastic Bowden Coupler, two parts.
 
 ## Printed Parts
 
-*This list is not from the wiki page, which left it empty. It is compiled from the parts lists in the [exploded drawings PDF](../docs/files/EXPLODED_DRAWINGS.pdf) (EXPLODED_DRAWINGS.pdf, sheets 1 to 29) and the drawing images on the wiki. Each row links to the drawing, with its sheet number in the PDF. Sheets marked (image) exist only as pictures on the wiki; they were read by OCR and checked by a person.*
+*This list is not from the wiki page, which left it empty. It is compiled from the parts lists in the [exploded drawings PDF](../docs/files/EXPLODED_DRAWINGS.pdf) (EXPLODED_DRAWINGS.pdf, sheets 1 to 29) and the drawing images on the wiki. Each row links to the drawing, with its sheet number in the PDF. Sheets marked (image) exist only as pictures on the wiki; they were read by OCR and checked by a person, or entered by hand from the drawing and the manual where the drawing has no parts list.*
 
 | Part | Qty | Source | Drawing | Build section |
 | --- | --- | --- | --- | --- |
@@ -187,6 +187,7 @@ Embedded Plastic Bowden Coupler, two parts.
 | E-AXIS CARRIAGE TOP HYBRID NON-TITAN DIRECT LEVER | 1 | printed | [extruder hybrid non-titan direct (image)](../docs/images/EXTRUDER_HYBRID_NON-TITAN_DIRECT.jpg) | [(5) Hybrid Non-Titan Extruder (Direct)](BigBox_Printer_Sub-assemblies.md#5-hybrid-non-titan-extruder-direct) |
 | E-AXIS CARRIAGE TOP HYBRID NON-TITAN DIRECT BODY | 1 | printed | [extruder hybrid non-titan direct (image)](../docs/images/EXTRUDER_HYBRID_NON-TITAN_DIRECT.jpg) | [(5) Hybrid Non-Titan Extruder (Direct)](BigBox_Printer_Sub-assemblies.md#5-hybrid-non-titan-extruder-direct) |
 | E-AXIS CARRIAGE TOP HYBRID TITAN DIRECT | 1 | printed | [extruder hybrid titan direct (image)](../docs/images/EXTRUDER_HYBRID_TITAN_DIRECT.jpg) | [(3) Hybrid Titan Extruder (Direct)](BigBox_Printer_Sub-assemblies.md#3-hybrid-titan-extruder-direct) |
+| BB_FRAME_M3_NUT_TRAP-1 | ~150 | printed | [frame-lug drawing (image)](../docs/images/FRAME-LUG_DRAWING.jpg) | [(13.1) A Note on Nut-Traps](BigBox_Printer_Sub-assemblies.md#131-a-note-on-nut-traps) |
 | SPOOL-HOLDER CLAMP INNER | 1 | printed | [spool-holder clamp (image)](../docs/images/SPOOL-HOLDER_CLAMP.jpg) | [(17) Spool Carrier Clamp](BigBox_Parts_Preparation.md#17-spool-carrier-clamp) |
 | SPOOL-HOLDER CLAMP OUTER | 1 | printed | [spool-holder clamp (image)](../docs/images/SPOOL-HOLDER_CLAMP.jpg) | [(17) Spool Carrier Clamp](BigBox_Parts_Preparation.md#17-spool-carrier-clamp) |
 | Z-AXIS BASE BRACKET LOWER | 1 | printed | [z-axis base brackets (image)](../docs/images/Z-AXIS_BASE_BRACKETS.jpg) | [(17.5) Z-Axis Lower Rod Brackets](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#175-z-axis-lower-rod-brackets) |
@@ -199,7 +200,7 @@ Embedded Plastic Bowden Coupler, two parts.
 
 ## Fixings
 
-*This list is not from the wiki page, which left it empty. It is compiled from the parts lists in the [exploded drawings PDF](../docs/files/EXPLODED_DRAWINGS.pdf) (EXPLODED_DRAWINGS.pdf, sheets 1 to 29) and the drawing images on the wiki. Each row links to the drawing, with its sheet number in the PDF. Sheets marked (image) exist only as pictures on the wiki; they were read by OCR and checked by a person.*
+*This list is not from the wiki page, which left it empty. It is compiled from the parts lists in the [exploded drawings PDF](../docs/files/EXPLODED_DRAWINGS.pdf) (EXPLODED_DRAWINGS.pdf, sheets 1 to 29) and the drawing images on the wiki. Each row links to the drawing, with its sheet number in the PDF. Sheets marked (image) exist only as pictures on the wiki; they were read by OCR and checked by a person, or entered by hand from the drawing and the manual where the drawing has no parts list.*
 
 | Fixings bag | Fixing | Drawings |
 | --- | --- | --- |

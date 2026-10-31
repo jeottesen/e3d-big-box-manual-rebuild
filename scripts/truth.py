@@ -12,7 +12,8 @@ A sheet file (see data/README.md for the full description):
   images      [{"file", "role"}]  role: wiki (as the wiki has it), redrawn (replaced by a drawing of the PDF sheet, original kept),
               enlarged (made twice the size, original kept), lost (the wiki's image was not archived; drawn from the PDF sheet)
   rows        [{"item", "qty", "part", "description", "how", ...}]  how: pdf-text (exact), ocr, ocr+fix (corrected by rule),
-              hand (corrected by a person). Corrected rows keep "read_as": what the tool read. OCR rows keep "confidence".
+              hand (corrected by a person), entered (typed by a person from the drawing and the manual; no tool read it, so it has a "basis").
+              Corrected rows keep "read_as": what the tool read. OCR rows keep "confidence". "approx": true marks a quantity the manual gives as approximate.
   confirmed   null, or {"by", "on"}: a person has checked this sheet against the drawing
   notes       free text
 """
@@ -24,7 +25,7 @@ PROPOSED = f'{ROOT}/work/proposed'     # the tools' output (git-ignored): propos
 PDF = f'{ROOT}/docs/files/EXPLODED_DRAWINGS.pdf'
 PDF_REL = 'docs/files/EXPLODED_DRAWINGS.pdf'
 ROLES = ('wiki', 'redrawn', 'enlarged', 'lost')
-HOW = ('pdf-text', 'ocr', 'ocr+fix', 'hand')
+HOW = ('pdf-text', 'ocr', 'ocr+fix', 'hand', 'entered')
 
 
 def key(t): return re.sub(r'[^A-Z0-9]', '', (t or '').upper())
@@ -64,6 +65,7 @@ def problems(sheet):
         if not r.get('part'): out.append(f'row {i}: no part')
         if r.get('how') not in HOW: out.append(f'row {i}: how must be one of {HOW}')
         if r.get('how') in ('ocr+fix', 'hand') and 'read_as' not in r: out.append(f'row {i}: a corrected row must keep what the tool read (read_as)')
+        if r.get('how') == 'entered' and not r.get('basis'): out.append(f'row {i}: an entered row must say what it is based on (basis)')
     if sheet['confirmed'] is not None and not (sheet['confirmed'].get('by') and sheet['confirmed'].get('on')): out.append('confirmed needs by and on')
     return out
 
@@ -123,7 +125,9 @@ def diff(truth, proposed):
     for sid in sorted(set(truth) | set(proposed)):
         t, p = truth.get(sid), proposed.get(sid)
         if t is None: out.append(('info', sid, f'new sheet, no data yet ({len(p["rows"])} rows); accept it with --accept {sid}')); continue
-        if p is None: out.append(('info', sid, 'in the data but the tools no longer propose it')); continue
+        if p is None:
+            if not all(r['how'] == 'entered' for r in t['rows']): out.append(('info', sid, 'in the data but the tools no longer propose it'))   # a sheet a person entered is not the tools' to propose
+            continue
         exact = t['source']['kind'] == 'pdf'
         sev = 'error' if exact else 'info'
         if exact and t['source'].get('sha256') != p['source']['sha256']: out.append(('error', sid, 'the PDF has changed since this sheet was recorded'))

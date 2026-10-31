@@ -21,7 +21,7 @@ The extraction tools (`scripts/drawings.py`, `scripts/drawing_images.py`, `scrip
 | `confirmed` | `null`, or `{"by", "on"}`: a person has checked the sheet against the drawing. Rows read by OCR are not used by the build until the sheet is confirmed. |
 | `notes` | Free text. |
 
-`how` says how a row got its text: `pdf-text` (exact), `ocr` (as the OCR read it), `ocr+fix` (corrected by a rule; these never change a number), or `hand` (corrected by a person). A corrected row keeps `read_as`, what the tool read, and an OCR row keeps its `confidence`.
+`how` says how a row got its text: `pdf-text` (exact), `ocr` (as the OCR read it), `ocr+fix` (corrected by a rule; these never change a number), `hand` (corrected by a person), or `entered` (typed by a person where the drawing has no parts list, with a `basis` saying what it rests on). A corrected row keeps `read_as`, what the tool read, and an OCR row keeps its `confidence`. `"approx": true` marks a quantity the manual gives as approximate; the page shows it as `~150`. A sheet made only of entered rows is not the tools' to propose, so `drift.py` does not report it as missing.
 
 ## Build sections
 
