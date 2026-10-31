@@ -69,6 +69,17 @@ def normalize_headings(md):
         prev = new
     return '\n'.join(lines)
 
+def table_separators(md):
+    """Rewrite pandoc's `|---|---|` separator rows for markdownlint (MD060). A table pandoc left compact gets `| --- | --- |`; one pandoc padded
+    to a common width ('aligned') needs the separator's pipes under the header's, so each column is filled with dashes to the header's width."""
+    lines = md.split('\n')
+    for i, line in enumerate(lines):
+        if i and re.fullmatch(r'\|(?:-+\|)+', line):
+            cells = lines[i - 1].split('|')[1:-1]
+            padded = any(len(c.strip()) < len(c) - 2 for c in cells)
+            lines[i] = '|' + '|'.join((' ' + '-' * (len(c) - 2) + ' ') if padded and len(c) - 2 >= 3 else ' --- ' for c in cells) + '|'
+    return '\n'.join(lines)
+
 def convert(page, h, pages, amap):
     own = amap[page]
     def link(m):
@@ -94,7 +105,7 @@ def convert(page, h, pages, amap):
     md = re.sub(r'(?m)^\\\n', '', md)            # lines holding only a backslash (a <br> between blocks)
     md = re.sub(r'\\\n(?=\n)', '\n', md)         # a hard line break at the end of a paragraph
     md = re.sub(r'[ \t]+\n', '\n', md)
-    md = re.sub(r'(?m)^\|(?:-+\|)+$', lambda m: '| ' + ' | '.join('---' for _ in m.group(0).strip('|').split('|')) + ' |', md)   # table separator rows in the style markdownlint wants
+    md = table_separators(md)   # table separator rows in the style markdownlint wants
     return normalize_headings(re.sub(r'\n{3,}', '\n\n', md).strip()) + '\n'
 
 def main():

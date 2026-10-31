@@ -10,14 +10,15 @@ A sheet file (see data/README.md for the full description):
   title       the sheet's title
   source      {"kind": "pdf", "file", "sha256", "page"} or {"kind": "image", "file", "sha256", "image_sheet": [n, of]}
   images      [{"file", "role"}]  role: wiki (as the wiki has it), redrawn (replaced by a drawing of the PDF sheet, original kept),
-              enlarged (made twice the size, original kept), lost (the wiki's image was not archived; drawn from the PDF sheet)
+              enlarged (made twice the size, original kept), lost (the wiki's image was not archived; drawn from the PDF sheet),
+              drawn (the wiki never showed this sheet as an image; drawn from the PDF sheet so the page of all drawings has it)
   rows        [{"item", "qty", "part", "description", "how", ...}]  how: pdf-text (exact), ocr, ocr+fix (corrected by rule),
               hand (corrected by a person), entered (typed by a person from the drawing and the manual; no tool read it, so it has a "basis").
               Corrected rows keep "read_as": what the tool read. OCR rows keep "confidence". "approx": true marks a quantity the manual gives as approximate.
   confirmed   null, or {"by", "on"}: a person has checked this sheet against the drawing
   notes       free text
 """
-import collections, hashlib, json, os
+import collections, hashlib, json, os, re
 from ocr_text import key   # one way of comparing names, shared with the OCR rules
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -25,7 +26,7 @@ DATA = f'{ROOT}/data/sheets'
 PROPOSED = f'{ROOT}/work/proposed'     # the tools' output (git-ignored): proposals, never the truth
 PDF = f'{ROOT}/docs/files/EXPLODED_DRAWINGS.pdf'
 PDF_REL = 'docs/files/EXPLODED_DRAWINGS.pdf'
-ROLES = ('wiki', 'redrawn', 'enlarged', 'lost')
+ROLES = ('wiki', 'redrawn', 'enlarged', 'lost', 'drawn')
 HOW = ('pdf-text', 'ocr', 'ocr+fix', 'hand', 'entered')
 
 
@@ -69,7 +70,7 @@ def problems(sheet):
     for im in sheet['images']:
         if not isinstance(im, dict) or not isinstance(im.get('file'), str): out.append('each image needs a file'); continue
         if im.get('role') not in ROLES: out.append(f'image {im["file"]}: role must be one of {ROLES}')
-        if im.get('role') in ('lost', 'redrawn') and src['kind'] != 'pdf': out.append(f'image {im["file"]}: only a PDF sheet can have a {im["role"]} image (it is drawn from the PDF page)')
+        if im.get('role') in ('lost', 'redrawn', 'drawn') and src['kind'] != 'pdf': out.append(f'image {im["file"]}: only a PDF sheet can have a {im["role"]} image (it is drawn from the PDF page)')
     if not isinstance(sheet['rows'], list): return out + ['rows must be a list']
     for i, r in enumerate(sheet['rows']):
         if not isinstance(r, dict): out.append(f'row {i}: must be an object'); continue
@@ -118,6 +119,7 @@ def proposals(fixes, lost_images):
         n = sh['sheet']
         images = [{'file': f, 'role': 'redrawn' if m.get('action') == 'redraw' else 'wiki'} for f, m in sorted(matches.items()) if m['status'] == 'confirmed' and m['sheet'] == n]
         images += [{'file': f, 'role': 'lost'} for f, s in sorted(lost_images.items()) if s == n]
+        if not images: images = [{'file': re.sub(r'[^A-Za-z0-9-]+', '_', sh['title']).strip('_') + '.jpg', 'role': 'drawn'}]   # no wiki image of this sheet: draw it from the PDF
         out[f'pdf-{n:02d}'] = {
             'id': f'pdf-{n:02d}', 'title': sh['title'],
             'source': {'kind': 'pdf', 'file': PDF_REL, 'sha256': sha256(PDF), 'page': n},

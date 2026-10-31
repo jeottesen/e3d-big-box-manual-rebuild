@@ -11,6 +11,7 @@ Offline copy compiled from the Wayback Machine capture of wiki.e3d-online.com.
 - [BigBox Software](BigBox_Software.md)
 - [BigBox Version Overview](BigBox_Version_Overview.md)
 - [Bill Of Materials](Bill_Of_Materials.md)
+- [Exploded Drawings](Exploded_Drawings.md)
 - [Dual Direct-Drive Extruders](Dual_Direct-Drive_Extruders.md)
 - [Dual Direct-Drive Printhead Assembly](Dual_Direct-Drive_Printhead_Assembly.md)
 - [Dual Extruders](Dual_Extruders.md)

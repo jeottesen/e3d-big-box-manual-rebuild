@@ -16,7 +16,7 @@ The extraction tools (`scripts/drawings.py`, `scripts/drawing_images.py`, `scrip
 | `id` | The file name without `.json`. |
 | `title` | The sheet's title. |
 | `source` | Where the rows came from. `kind` is `pdf` (with `file`, `sha256` of the PDF, and `page`) or `image` (with `file`, `sha256` of the original image, and `image_sheet` as `[n, of]` in the wiki's newer revision). |
-| `images` | The drawing images that show this sheet, each with a `role`: `wiki` (as the wiki has it), `redrawn` (low resolution, replaced by a drawing of the PDF sheet), `enlarged` (low resolution, no PDF sheet, made twice the size), or `lost` (the wiki's image was not archived; drawn from the PDF sheet). |
+| `images` | The drawing images that show this sheet, each with a `role`: `wiki` (as the wiki has it), `redrawn` (low resolution, replaced by a drawing of the PDF sheet), `enlarged` (low resolution, no PDF sheet, made twice the size), `lost` (the wiki's image was not archived; drawn from the PDF sheet), or `drawn` (the wiki never showed this sheet as an image; drawn from the PDF sheet so the Exploded Drawings page has it). |
 | `rows` | The parts list. Each row has `item`, `qty` (a whole number), `part`, `description` (the bag or box, or `Printed Part`), and `how`. |
 | `confirmed` | `null`, or `{"by", "on"}`: a person has checked the sheet against the drawing. Rows read by OCR are not used by the build until the sheet is confirmed. |
 | `notes` | Free text. |

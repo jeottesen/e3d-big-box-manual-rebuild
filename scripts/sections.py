@@ -8,7 +8,7 @@ import html, re, urllib.parse
 
 HEADING = re.compile(r'<h([1-6])\b([^>]*)>(.*?)</h\1>', re.S)   # the page title is added separately, so any h1 in a body is a section (Titan Assembly uses them)
 IMG_SRC = re.compile(r'<img\b[^>]*?\ssrc="([^"]+)"')
-NOT_BUILD_PAGES = {'BigBox_Build_Manual', 'Bill_Of_Materials', 'Downloads', 'Datasheets', 'Appendix_Older_Version_Content'}   # pages that are not build steps
+NOT_BUILD_PAGES = {'BigBox_Build_Manual', 'Bill_Of_Materials', 'Exploded_Drawings', 'Downloads', 'Datasheets', 'Appendix_Older_Version_Content'}   # pages that are not build steps
 STEP = re.compile(r'\(\d')   # a heading that starts with a step number: "(8) Electronics Cover", "(20.2) Assembly of the E3D HotEnds"
 
 

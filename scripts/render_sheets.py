@@ -3,7 +3,7 @@
 low-resolution drawing images that have no PDF sheet.
 
 What to draw comes from the reviewed data (data/sheets/): an image with role "lost" (the archive did not keep it) or "redrawn"
-(low resolution, and the PDF has the same drawing) is drawn from the PDF sheet; role "enlarged" (low resolution, no PDF sheet)
+(low resolution, and the PDF has the same drawing) or "drawn" (the wiki never showed the sheet as an image) is drawn from the PDF sheet; role "enlarged" (low resolution, no PDF sheet)
 is made twice the size, with the original kept. The PDF is vector, so the sheets draw cleanly at any size.
 Output: docs/images/<file name>, which is committed, so the build needs no venv. The wiki's own image is kept in docs/images/original/
 first. Run it with `mise run render` when the reviewed data changes. Needs pypdfium2 (requirements.txt).
@@ -35,7 +35,7 @@ def main():
             if im['role'] in ('redrawn', 'enlarged') and not os.path.exists(f'{originals}/{name}'):   # keep the wiki's own image before it is replaced
                 if os.path.exists(f'{crawl.RAW}/images/{name}'): shutil.copy(f'{crawl.RAW}/images/{name}', f'{originals}/{name}')
                 else: sys.exit(f'{name}: the wiki original is not in {originals} and not in the data folder; run `mise run fetch` first')
-            if im['role'] in ('lost', 'redrawn'):
+            if im['role'] in ('lost', 'redrawn', 'drawn'):
                 page = pdf[sheet['source']['page'] - 1]
                 img = page.render(scale=WIDTH / page.get_width()).to_pil().convert('RGB')
                 changed = save_if_changed(img, f'{images}/{name}', 88)
