@@ -47,6 +47,7 @@ class Bom(unittest.TestCase):
         for section, rows in TABLES.items():
             for row in rows:
                 text, hrefs = self.drawing_cell(section, row)
+                if text == 'no drawing': self.assertTrue(row[4][1], f'{row[0][0]}: a part with no drawing must link the step that lists it'); continue   # added from the manual
                 self.assertTrue(hrefs, f'{section}: {row[0][0]} has no drawing link')
                 for href in hrefs:
                     if href.startswith('images/'): self.assertTrue(os.path.exists(os.path.join(ROOT, 'docs', urllib.parse.unquote(href))), href)

@@ -26,3 +26,7 @@ The extraction tools (`scripts/drawings.py`, `scripts/drawing_images.py`, `scrip
 ## Build sections
 
 The build section a part links to is not stored here. It comes from where the manual shows the sheet's drawing (`embedded_sections` in `scripts/sections.py`), because the manual is the source of truth for which step a drawing belongs to.
+
+## Printed parts the manual names that no drawing covers
+
+These are not stored here. The manual itself names printed parts in its step lists, such as `2 x Drive Supports (Printed Parts).` `scripts/manual_parts.py` finds them in the manual at build time. The ones a drawing also shows are matched, by name, to the row of the drawing in `MANUAL_PART_NAMES` in `scripts/targets.py`; the Bill of Materials shows the drawing's name for those, with the quantity the manual's step uses. Every other one is added to the Printed Parts table, marked `no drawing` and linked to the step that lists it (a part listed in two steps is one row that links both). A test fails if the manual has such an item the tool cannot read, or if a name in the table is no longer in the manual. The tool can only find items written in the manual's list format, with `(Printed Part…)` after the name.
