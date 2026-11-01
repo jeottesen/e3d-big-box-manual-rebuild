@@ -129,11 +129,12 @@ OCR_FIXES = {
 # the drawing that is the same part: the manual's name -> (sheet id in data/sheets, the drawing's name for it). The Bill of Materials shows the
 # drawing's name (one name per part), with the quantity the manual's step uses: a drawing shows one part that applies to several places, such as
 # one corner of the four of the Z bed. A printed part the manual names that is not here has no drawing and is added from the manual.
+# Checked against the drawings by the maintainer: the right cable bracket, the dock and the three Z-bed parts are the same parts. The manual's
+# Spool Inner Brackets are NOT the SPOOL-HOLDER INNER drawing (they look different), so they have no drawing.
 MANUAL_PART_NAMES = {
     'Right Cable Bracket': ('img-EXTRUDER_DUAL', 'E-AXIS CABLE BRACKET (DUAL)(R)'),
     'Belt Tensioner': ('pdf-22', 'X-AXIS BELT-TENSIONER'),
     'Dock': ('img-DOCK-BRACKET', 'DOCK-BRACKET'),
-    'Spool Inner Brackets': ('pdf-11', 'SPOOL-HOLDER INNER'),
     'Z-Axis Top Bottoms': ('img-Z-AXIS_TOP_BRACKETS', 'Z-AXIS TOP BOTTOM'),   # the Z bed has four corners: the drawing shows one, the manual uses 4
     'Top Tops': ('img-Z-AXIS_TOP_BRACKETS', 'Z-AXIS TOP TOP'),
     'Caps': ('img-Z-AXIS_TOP_BRACKETS', 'Z-AXIS TOP CAP'),

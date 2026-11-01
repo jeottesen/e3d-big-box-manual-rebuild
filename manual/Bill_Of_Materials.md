@@ -163,7 +163,7 @@ Embedded Plastic Bowden Coupler, two parts.
 | X-CARRIAGE SINGLE | 1 | printed | [x-carriage single](../docs/images/X-CARRIAGE_SINGLE.jpg) (sheet 7) | [Pro & Lite X-Carriage](Pro_%26_Lite_X-Carriage.md) |
 | HEATED BED CORNERS | 1 | printed | [heated bed corners](../docs/images/HEATED_BED_CORNERS.jpg) (sheet 9) | [(10) Heated Bed Corners](BigBox_Parts_Preparation.md#10-heated-bed-corners) |
 | SPOOL-HOLDER OUTER (L) | 1 | printed | [spool-holder outer](../docs/images/SPOOL-HOLDER_OUTER.jpg) (sheet 10) | [(11) Outer Spools Rear (Left & Right)](BigBox_Parts_Preparation.md#11-outer-spools-rear-left--right) |
-| SPOOL-HOLDER INNER | 2 | printed | [spool-holder inner](../docs/images/SPOOL-HOLDER_INNER.jpg) (sheet 11) | [(12) Spool Holder Outer Fronts](BigBox_Parts_Preparation.md#12-spool-holder-outer-fronts) |
+| SPOOL-HOLDER INNER | 1 | printed | [spool-holder inner](../docs/images/SPOOL-HOLDER_INNER.jpg) (sheet 11) | [(12) Spool Holder Outer Fronts](BigBox_Parts_Preparation.md#12-spool-holder-outer-fronts) |
 | PRINT FAN BRACKET | 1 | printed | [print fan duct](../docs/images/PRINT_FAN_DUCT.jpg) (sheet 12) | [Print Cooling Fan](Print_Cooling_Fan.md) |
 | PRINT FAN DUCT | 1 | printed | [print fan duct](../docs/images/PRINT_FAN_DUCT.jpg) (sheet 12) | [Print Cooling Fan](Print_Cooling_Fan.md) |
 | IR-SENSOR HOUSING | 1 | printed | [ir sensor assembly](../docs/images/IR_SENSOR_ASSEMBLY.jpg) (sheet 13) | [Single & Dual Direct-Drive IR Sensor Bracket](Single_%26_Dual_Direct-Drive_IR_Sensor_Bracket.md) |
@@ -204,6 +204,7 @@ Embedded Plastic Bowden Coupler, two parts.
 | Z-Axis Driver Bottoms | 2 | printed | no drawing | [(1.4) Leadscrews](Printer_Commissioning.md#14-leadscrews) |
 | Z-Axis Driver Tops | 2 | printed | no drawing | [(1.4) Leadscrews](Printer_Commissioning.md#14-leadscrews) |
 | Hybrid X-Carriage Front Bearing Clamp | 1 | printed | no drawing | [(8) Hybrid X-Carriage](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#8-hybrid-x-carriage) |
+| Spool Inner Brackets | 2 | printed | no drawing | [(17.2) Spool Inner Brackets](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#172-spool-inner-brackets) |
 | Cork Pads | 2 | from the Printed Parts Box | no drawing | [(17.4) Z-Axis Motors](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#174-z-axis-motors) |
 | IEC Back Cover | 1 | printed | no drawing | [(17.6) A/C IEC Socket](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#176-ac-iec-socket) |
 | Main Block | 1 | printed | no drawing | [(21.11.2) Non-Titan Direct-Drive Bowden System](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#21112-non-titan-direct-drive-bowden-system) |
