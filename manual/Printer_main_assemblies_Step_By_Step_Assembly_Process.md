@@ -781,7 +781,7 @@ The extruder is attached to the X-Carriage using 2 x M4 16mm Screws (Bag 14).
 
 ### (21.2) BigBox Non-Titan Direct-Drive Extruder.
 
-Please refer to the \[[Non-Titan Extruder Assembly instructions](BigBox_Printer_Sub-assemblies.md)\]
+Please refer to the [Non-Titan Extruder Assembly instructions](BigBox_Printer_Sub-assemblies.md#5-hybrid-non-titan-extruder-direct)
 
 The extruder is attached to the X-Carriage using 2 x M4 16mm Screws (Bag 14).
 

@@ -246,7 +246,7 @@ def mark_dead(body):
 def fix_links(body, to_anchor):
     def repl(m):
         href = html.unescape(m.group(1)); frag = ''
-        if '#' in href: href, frag = href.split('#', 1); frag = '#' + frag
+        if '#' in href: href, frag = href.split('#', 1); frag = '#' + re.split(r'%7C|\|', frag, maxsplit=1, flags=re.I)[0]   # [url#Section|text]: the author typed wiki piped-link syntax in an external link, so the text is glued to the anchor
         m2 = re.match(r'(?:https?://wiki\.e3d-online\.com)?/(?:wiki/)?(?!images/|resources/|index\.php|web/)([^?#]+)$', href)   # /wiki/Title (2016) and /Title (2019+)
         if m2:
             t = urllib.parse.unquote(m2.group(1)).replace(' ', '_')
@@ -257,6 +257,7 @@ def fix_links(body, to_anchor):
         if href.startswith('/web/'): return f'href="https://web.archive.org{html.escape(href)}{frag}"'
         return m.group(0)
     body = re.sub(r'href="([^"]+)"', repl, body)
+    body = re.sub(r'\[(<a\b[^>]*\bhref="(?!https?:)[^"]*"[^>]*>[^<]*</a>)\]', r'\1', body)   # the same typo leaves literal [ ] around a link to a page of this manual
     return mark_dead(re.sub(r'<a\b[^>]*href="#unarchived-page"[^>]*>(.*?)</a>', r'\1', body, flags=re.S))   # plain text, not a link
 
 os.makedirs(f'{SITE}/files', exist_ok=True)   # wiki-hosted PDF datasheets (see fetch_files.py / appendix.py)

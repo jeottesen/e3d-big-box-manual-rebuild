@@ -24,6 +24,10 @@ APPENDIX = [
      'Early single-extruder profile. ' + NOTE_LINKS),
     ('Slic3r alpha profile (older First Print page)', 'Your_First_Print', r'^Slic3r$', 'alpha release',
      'Early single-extruder profile. ' + NOTE_LINKS),
+    ('Hybrid Titan extruder steps (older Step By Step page)', 'Printer_main_assemblies:_Step_By_Step_Assembly_Process',
+     r'^(\(21\.1\) )?Titan Extruder\.?$', 'Pinion Gear Grub Screw',
+     'The Titan extruder bracket, nuts, motor and lid steps, as written in section (21.1) until June 2016, when they were replaced by a link to the Sub-assemblies page. '
+     'Only the gear spacing note was kept there. The photos of these steps were never archived.'),
 ]
 
 # Wiki-hosted PDF datasheets that apply to the BigBox (V6 hotend, NEMA17 motors, DC fans).
