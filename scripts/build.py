@@ -72,6 +72,7 @@ from sections import HEADING, embedded_sections, thumb_file
 from drawings_page import drawings_page
 import manual_parts
 from targets import MANUAL_PART_NAMES, NO_DRAWING_NAMES
+import printed_parts
 import truth
 SHEETS = truth.load_truth()   # the reviewed per-sheet data (data/sheets/*.json): the build reads this and nothing the tools propose
 _bad = truth.all_problems(SHEETS)
@@ -185,7 +186,7 @@ PRINTED_PART = truth.key('Printed Part')
 PRINTED = {PRINTED_PART, truth.key('Printed Parts Box')}
 PDF_LINK = 'files/EXPLODED_DRAWINGS.pdf'   # the copy kept in the repository (the archive's capture of 2016-01-09)
 
-def add_drawing_parts(body, sheets, sections_by_image, manual_entries=()):
+def add_drawing_parts(body, sheets, sections_by_image, manual_entries=(), heading_id=lambda page, text: None):
     """On the Bill of Materials page: fill the empty Printed Parts section and add a fixings table under Fixings, from the
     reviewed sheets (data/sheets). Both are marked as coming from the drawings, not from the wiki page.
     PDF sheets are exact text. Sheets that are only images on the wiki were read by OCR; their rows are used once a person has confirmed the sheet."""
@@ -217,11 +218,30 @@ def add_drawing_parts(body, sheets, sections_by_image, manual_entries=()):
     qty_for = {(sid, truth.key(part)): e['qty'] for e, sid, part in covered}   # the quantity the manual's step uses, where a drawing shows one part that applies to several places
     rows = [(d, sec, dict(r, qty=qty_for.get((sid, truth.key(r['part'])), r['qty']))) for d, sec, r, sid in rows]
     printed = [(d, sec, r) for d, sec, r in rows if truth.key(r['description']) in PRINTED]   # compared the way drift compares names: spacing and case do not matter
+    names = [r['part'] for _, _, r in printed] + [NO_DRAWING_NAMES.get(g['part'], g['part']) for g in no_drawing]
+    main_files, alternates, mirrors, extras = printed_parts.classify(printed_parts.load(), names)   # the STEP files, matched to the rows by name
+    def step(n):
+        links = ([f'<a href="{printed_parts.href(main_files[n])}">STEP</a>'] if n in main_files else []) \
+            + [f'<a href="{printed_parts.href(r)}">STEP (alternate, for the newer screw)</a>' for r in alternates.get(n, [])] \
+            + ([f'<a href="{printed_parts.href(mirrors[n])}">STEP (R, the mirror image)</a>'] if n in mirrors else [])
+        return '; '.join(links) or '–'
     tr = ''.join(f'<tr><td>{esc(r["part"])}</td><td>{"~" if r.get("approx") else ""}{r["qty"]}</td><td>{"printed" if truth.key(r["description"]) == PRINTED_PART else "from the Printed Parts Box"}</td>'
-                 f'<td>{d}</td><td>{sec or "–"}</td></tr>' for d, sec, r in printed)
-    tr += ''.join(f'<tr><td>{esc(NO_DRAWING_NAMES.get(g["part"], g["part"]))}</td><td>{g["qty"]}</td><td>{manual_parts.CONTAINER_LABEL[g["container"]]}</td><td>no drawing</td><td>{"; ".join(f'<a href="{pg}.html{"#" + esc(sid) if sid else ""}">{esc(txt)}</a>' for pg, sid, txt in g["steps"])}</td></tr>' for g in no_drawing)
+                 f'<td>{d}</td><td>{sec or "–"}</td><td>{step(r["part"])}</td></tr>' for d, sec, r in printed)
+    tr += ''.join(f'<tr><td>{esc(NO_DRAWING_NAMES.get(g["part"], g["part"]))}</td><td>{g["qty"]}</td><td>{manual_parts.CONTAINER_LABEL[g["container"]]}</td><td>no drawing</td><td>{"; ".join(f'<a href="{pg}.html{"#" + esc(sid) if sid else ""}">{esc(txt)}</a>' for pg, sid, txt in g["steps"])}</td><td>{step(NO_DRAWING_NAMES.get(g["part"], g["part"]))}</td></tr>' for g in no_drawing)
     printed_note = note[:-len('</em></p>')] + ' Printed parts that the manual\'s own step lists name but that no drawing covers are added at the end, marked no drawing.</em></p>'
-    printed_html = printed_note + f'<table><thead><tr><th>Part</th><th>Qty</th><th>Source</th><th>Drawing</th><th>Build section</th></tr></thead><tbody>{tr}</tbody></table>'
+    def where(r):
+        pg = printed_parts.page_of(r)
+        hid = heading_id(*pg) if pg else None
+        return (f'<a href="{pg[0]}.html#{esc(hid)}">{esc(pg[1])}</a>' if hid else esc(pg[1])) if pg else '–'
+    mirrored = '; '.join(f'{esc(printed_parts.bom_name(r))} was made by mirroring the (L) part, which the original files hold once' if 'made by mirroring' in r['notes']
+                         else f'{esc(printed_parts.bom_name(r))} is the mirror image of the (L) part' for r in mirrors.values())
+    step_note = ('<p><em>The STEP column links the part\'s STEP file, from <a href="Downloads.html">Downloads</a>, where its sources are listed. Each file is one solid in its own frame, '
+                 f'moved so its bounding box sits on the origin and never rotated, so a slicer can open it directly. Left and right parts that are the same shape are one file; the quantity says how many to print.{" " + mirrored + "." if mirrored else ""}</em></p>')
+    extras_html = ('<h3><span class="mw-headline" id="Printed_Parts_With_No_Row">Printed Parts With No Row</span></h3>'
+                   '<p><em>STEP files for printed parts that have no row above, because the Bill of Materials does not list them.</em></p>'
+                   '<table><thead><tr><th>Part</th><th>STEP</th><th>Used in</th><th>Note</th></tr></thead><tbody>'
+                   + ''.join(f'<tr><td>{esc(r["name"])}</td><td><a href="{printed_parts.href(r)}">STEP</a></td><td>{where(r)}</td><td>{esc(r["notes"]) or "–"}</td></tr>' for r in extras) + '</tbody></table>') if extras else ''
+    printed_html = printed_note + step_note + f'<table><thead><tr><th>Part</th><th>Qty</th><th>Source</th><th>Drawing</th><th>Build section</th><th>STEP</th></tr></thead><tbody>{tr}</tbody></table>' + extras_html
     fixings = {}
     for d, _sec, r in rows:
         if truth.key(r['description']).startswith('FIXINGS'): fixings.setdefault((r['description'], r['part']), []).append(d)
@@ -285,7 +305,8 @@ heads_by_slug = {slug(t): heads for t, (_, heads) in prepared.items()}
 DRAWINGS_PAGE = 'Exploded_Drawings'   # every exploded drawing on one page, generated from the reviewed data
 shown_in = embedded_sections({t: body for t, (body, _) in prepared.items()}, slug)   # before the new page exists, so it does not count as a step
 if SHEETS and 'Bill_Of_Materials' in prepared:
-    prepared['Bill_Of_Materials'] = with_heading_ids(add_drawing_parts(prepared['Bill_Of_Materials'][0], SHEETS, shown_in, manual_parts.scan({slug(t): body for t, (body, _) in prepared.items()})))
+    prepared['Bill_Of_Materials'] = with_heading_ids(add_drawing_parts(prepared['Bill_Of_Materials'][0], SHEETS, shown_in, manual_parts.scan({slug(t): body for t, (body, _) in prepared.items()}),
+                                                                  lambda page, text: next((hid for _, hid, t in heads_by_slug.get(page, []) if t == text), None)))
 if SHEETS:
     order.insert(order.index('Bill_Of_Materials') + 1 if 'Bill_Of_Materials' in order else len(order), DRAWINGS_PAGE)
     prepared[DRAWINGS_PAGE] = with_heading_ids(drawings_page(SHEETS, shown_in, {slug(t): t.replace('_', ' ') for t in order if t != DRAWINGS_PAGE},

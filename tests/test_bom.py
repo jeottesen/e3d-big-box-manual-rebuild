@@ -10,6 +10,7 @@ class Tables(HTMLParser):
     def handle_starttag(self, tag, attrs):
         a = dict(attrs)
         if tag == 'span' and a.get('id') in ('Printed_Parts', 'Fixings'): self.section = a['id']
+        elif tag == 'span' and a.get('class') == 'mw-headline': self.section = None   # any other heading ends the section (the STEP files with no row have their own)
         elif tag == 'h3' and self.section and 'id' not in a: pass
         elif tag == 'tr' and self.section: self.row = []
         elif tag in ('td', 'th') and self.row is not None: self.cell = ['', []]

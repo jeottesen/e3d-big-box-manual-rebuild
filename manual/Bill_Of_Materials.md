@@ -13,6 +13,7 @@ Archived 20210416002713 · source: wiki.e3d-online.com/wiki/Bill_Of_Materials ·
 - [E3D HotEnd(s)](#e3d-hotends)
 - [Wiring](#wiring)
 - [Printed Parts, Printed Parts Box and Printed Parts Bag](#printed-parts-printed-parts-box-and-printed-parts-bag)
+- [Printed Parts With No Row](#printed-parts-with-no-row)
 - [Fixings](#fixings)
 - [OctoPrint Upgrade Extras](#octoprint-upgrade-extras)
 - [Where next?](#where-next)
@@ -149,70 +150,94 @@ Embedded Plastic Bowden Coupler, two parts.
 
 *This list is not from the wiki page, which left it empty. It is compiled from the parts lists in the [exploded drawings PDF](../docs/files/EXPLODED_DRAWINGS.pdf) (EXPLODED_DRAWINGS.pdf, sheets 1 to 29) and the drawing images on the wiki. Each row links to the drawing, with its sheet number in the PDF. [All the drawings are on one page.](Exploded_Drawings.md) Sheets marked (image) exist only as pictures on the wiki; they were read by OCR and checked by a person, or entered by hand from the drawing and the manual where the drawing has no parts list. Printed parts that the manual's own step lists name but that no drawing covers are added at the end, marked no drawing.*
 
-| Part | Qty | Source | Drawing | Build section |
-| --- | --- | --- | --- | --- |
-| Y-AXIS REAR (L) | 1 | printed | [y-axis rear](../docs/images/Y-AXIS_REAR.jpg) (sheet 1) | [(1) Y-Axis Rear Brackets (Left & Right)](BigBox_Parts_Preparation.md#1-y-axis-rear-brackets-left--right) |
-| Y-AXIS REAR (L&R) BEARING RETAINER | 1 | printed | [y-axis rear](../docs/images/Y-AXIS_REAR.jpg) (sheet 1) | [(1) Y-Axis Rear Brackets (Left & Right)](BigBox_Parts_Preparation.md#1-y-axis-rear-brackets-left--right) |
-| Y-AXIS BACK (L) CORK (Self Adhesive) | 1 | from the Printed Parts Box | [y-axis rear](../docs/images/Y-AXIS_REAR.jpg) (sheet 1) | [(1) Y-Axis Rear Brackets (Left & Right)](BigBox_Parts_Preparation.md#1-y-axis-rear-brackets-left--right) |
-| Y-AXIS FRONT (R) | 1 | printed | [y-axis front](../docs/images/Y-AXIS_FRONT.jpg) (sheet 2) | [(2) Y-Axis Front Brackets (Left & Right)](BigBox_Parts_Preparation.md#2-y-axis-front-brackets-left--right) |
-| Y-AXIS FRONT CORK (L & R) (Self Adhesive) | 1 | from the Printed Parts Box | [y-axis front](../docs/images/Y-AXIS_FRONT.jpg) (sheet 2) | [(2) Y-Axis Front Brackets (Left & Right)](BigBox_Parts_Preparation.md#2-y-axis-front-brackets-left--right) |
-| Y-AXIS BELT TENSIONER | 1 | printed | [y-axis idler](../docs/images/Y-AXIS_IDLER.jpg) (sheet 3) | [(3) Y-Axis Belt Idlers](BigBox_Parts_Preparation.md#3-y-axis-belt-idlers) |
-| E-AXIS IDLER | 1 | printed | [extruder idler](../docs/images/EXTRUDER_IDLER.jpg) (sheet 4) | [Non-Titan Idler Arms](Non-Titan_Idler_Arms.md) |
-| X-AXIS IDLER CARRIAGE | 1 | printed | [x-axis idler carriage](../docs/images/X-AXIS_IDLER_CARRIAGE.jpg) (sheet 5) | [(5) X-Axis Idler Carriage](BigBox_Parts_Preparation.md#5-x-axis-idler-carriage) |
-| X-AXIS MOTOR CARRIAGE | 1 | printed | [x-axis motor carriage](../docs/images/X-AXIS_MOTOR_CARRIAGE.jpg) (sheet 6) | [(6) X-Axis Motor Mount](BigBox_Parts_Preparation.md#6-x-axis-motor-mount) |
-| X-CARRIAGE SINGLE | 1 | printed | [x-carriage single](../docs/images/X-CARRIAGE_SINGLE.jpg) (sheet 7) | [Pro & Lite X-Carriage](Pro_%26_Lite_X-Carriage.md) |
-| HEATED BED CORNERS | 1 | printed | [heated bed corners](../docs/images/HEATED_BED_CORNERS.jpg) (sheet 9) | [(10) Heated Bed Corners](BigBox_Parts_Preparation.md#10-heated-bed-corners) |
-| SPOOL-HOLDER OUTER (L) | 1 | printed | [spool-holder outer](../docs/images/SPOOL-HOLDER_OUTER.jpg) (sheet 10) | [(11) Outer Spools Rear (Left & Right)](BigBox_Parts_Preparation.md#11-outer-spools-rear-left--right) |
-| SPOOL-HOLDER INNER | 1 | printed | [spool-holder inner](../docs/images/SPOOL-HOLDER_INNER.jpg) (sheet 11) | [(12) Spool Holder Outer Fronts](BigBox_Parts_Preparation.md#12-spool-holder-outer-fronts) |
-| PRINT FAN BRACKET | 1 | printed | [print fan duct](../docs/images/PRINT_FAN_DUCT.jpg) (sheet 12) | [Print Cooling Fan](Print_Cooling_Fan.md) |
-| PRINT FAN DUCT | 1 | printed | [print fan duct](../docs/images/PRINT_FAN_DUCT.jpg) (sheet 12) | [Print Cooling Fan](Print_Cooling_Fan.md) |
-| IR-SENSOR HOUSING | 1 | printed | [ir sensor assembly](../docs/images/IR_SENSOR_ASSEMBLY.jpg) (sheet 13) | [Single & Dual Direct-Drive IR Sensor Bracket](Single_%26_Dual_Direct-Drive_IR_Sensor_Bracket.md) |
-| EXTRUDER BODY (SINGLE) | 1 | printed | [extruder single](../docs/images/EXTRUDER_SINGLE.jpg) (sheet 14) | [Single Direct-Drive Extruder](Single_Direct-Drive_Extruder.md) |
-| EXTRUDER CABLE BRACKET | 1 | printed | [extruder single](../docs/images/EXTRUDER_SINGLE.jpg) (sheet 14) | [Single Direct-Drive Extruder](Single_Direct-Drive_Extruder.md) |
-| X-AXIS CARRIAGE BEARING CLAMP | 2 | printed | [x-carriage assembly](../docs/images/X-CARRIAGE_ASSEMBLY.jpg) (sheet 22) | – |
-| X-AXIS BELT-TENSIONER | 1 | printed | [x-carriage assembly](../docs/images/X-CARRIAGE_ASSEMBLY.jpg) (sheet 22) | – |
-| SPINE-LARGE | 1 | printed | [spine](../docs/images/SPINE.jpg) (sheet 24) | [(16) Cable Spine](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#16-cable-spine) |
-| SPINE-MED | 2 | printed | [spine](../docs/images/SPINE.jpg) (sheet 24) | [(16) Cable Spine](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#16-cable-spine) |
-| SPINE-SMALL | 2 | printed | [spine](../docs/images/SPINE.jpg) (sheet 24) | [(16) Cable Spine](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#16-cable-spine) |
-| SPINE-Y | 2 | printed | [spine](../docs/images/SPINE.jpg) (sheet 24) | [(16) Cable Spine](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#16-cable-spine) |
-| Y-AXIS MOTOR MOUNT | 1 | printed | [y-axis motor](../docs/images/Y-AXIS_MOTOR.jpg) (sheet 27) | [(14) Y-Axis Motor Mount](BigBox_Parts_Preparation.md#14-y-axis-motor-mount) |
-| Y-MOTOR MOUNT CORK (Self Adhesive) | 1 | from the Printed Parts Box | [y-axis motor](../docs/images/Y-AXIS_MOTOR.jpg) (sheet 27) | [(14) Y-Axis Motor Mount](BigBox_Parts_Preparation.md#14-y-axis-motor-mount) |
-| ELECTRONICS-COVER-BRACKET | 4 | printed | [electronics cover](../docs/images/ELECTRONICS_COVER.jpg) (sheet 28) | [(8) Electronics Cover](BigBox_Printer_Sub-assemblies.md#8-electronics-cover) |
-| RRB-CABLE-CONDUIT | 3 | printed | [rear-right-back cable conduit](../docs/images/REAR-RIGHT-BACK_CABLE_CONDUIT.jpg) (sheet 29) | [(12) X-Axis Cable Conduits](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#12-x-axis-cable-conduits) |
-| DOCK-BRACKET | 1 | printed | [dock-bracket (image)](../docs/images/DOCK-BRACKET.jpg) | [(14) Frame Top](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#14-frame-top) |
-| EXTRUDER BODY (DUAL) | 1 | printed | [extruder dual (image)](../docs/images/EXTRUDER_DUAL.jpg) | [Dual Direct-Drive Extruders](Dual_Direct-Drive_Extruders.md) |
-| E-AXIS CABLE BRACKET (DUAL)(R) | 1 | printed | [extruder dual (image)](../docs/images/EXTRUDER_DUAL.jpg) | [Dual Direct-Drive Extruders](Dual_Direct-Drive_Extruders.md) |
-| E-AXIS CABLE BRACKET (DUAL)(L) | 1 | printed | [extruder dual (image)](../docs/images/EXTRUDER_DUAL.jpg) | [Dual Direct-Drive Extruders](Dual_Direct-Drive_Extruders.md) |
-| E-AXIS CARRIAGE TOP HYBRID NON-TITAN DIRECT GUIDE | 1 | printed | [extruder hybrid non-titan direct (image)](../docs/images/EXTRUDER_HYBRID_NON-TITAN_DIRECT.jpg) | [(5) Hybrid Non-Titan Extruder (Direct)](BigBox_Printer_Sub-assemblies.md#5-hybrid-non-titan-extruder-direct) |
-| E-AXIS CARRIAGE TOP HYBRID NON-TITAN DIRECT LEVER | 1 | printed | [extruder hybrid non-titan direct (image)](../docs/images/EXTRUDER_HYBRID_NON-TITAN_DIRECT.jpg) | [(5) Hybrid Non-Titan Extruder (Direct)](BigBox_Printer_Sub-assemblies.md#5-hybrid-non-titan-extruder-direct) |
-| E-AXIS CARRIAGE TOP HYBRID NON-TITAN DIRECT BODY | 1 | printed | [extruder hybrid non-titan direct (image)](../docs/images/EXTRUDER_HYBRID_NON-TITAN_DIRECT.jpg) | [(5) Hybrid Non-Titan Extruder (Direct)](BigBox_Printer_Sub-assemblies.md#5-hybrid-non-titan-extruder-direct) |
-| E-AXIS CARRIAGE TOP HYBRID TITAN DIRECT | 1 | printed | [extruder hybrid titan direct (image)](../docs/images/EXTRUDER_HYBRID_TITAN_DIRECT.jpg) | [(3) Hybrid Titan Extruder (Direct)](BigBox_Printer_Sub-assemblies.md#3-hybrid-titan-extruder-direct) |
-| BB_FRAME_M3_NUT_TRAP-1 | ~150 | printed | [frame-lug drawing (image)](../docs/images/FRAME-LUG_DRAWING.jpg) | [(13.1) A Note on Nut-Traps](BigBox_Printer_Sub-assemblies.md#131-a-note-on-nut-traps) |
-| SPOOL-HOLDER CLAMP INNER | 1 | printed | [spool-holder clamp (image)](../docs/images/SPOOL-HOLDER_CLAMP.jpg) | [(17) Spool Carrier Clamp](BigBox_Parts_Preparation.md#17-spool-carrier-clamp) |
-| SPOOL-HOLDER CLAMP OUTER | 1 | printed | [spool-holder clamp (image)](../docs/images/SPOOL-HOLDER_CLAMP.jpg) | [(17) Spool Carrier Clamp](BigBox_Parts_Preparation.md#17-spool-carrier-clamp) |
-| Z-AXIS BASE BRACKET LOWER | 1 | printed | [z-axis base brackets (image)](../docs/images/Z-AXIS_BASE_BRACKETS.jpg) | [(17.5) Z-Axis Lower Rod Brackets](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#175-z-axis-lower-rod-brackets) |
-| Z-AXIS BASE BRACKET UPPER | 1 | printed | [z-axis base brackets (image)](../docs/images/Z-AXIS_BASE_BRACKETS.jpg) | [(17.5) Z-Axis Lower Rod Brackets](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#175-z-axis-lower-rod-brackets) |
-| Z-AXIS DRAG-CHAIN ANCHOR BASE | 1 | printed | [z-axis drag chain (image)](../docs/images/Z-AXIS_DRAG_CHAIN.jpg) | [(18) Z-Axis Drag Chain Anchors](BigBox_Parts_Preparation.md#18-z-axis-drag-chain-anchors) |
-| Z-AXIS DRAG-CHAIN ANCHOR BED | 1 | printed | [z-axis drag chain (image)](../docs/images/Z-AXIS_DRAG_CHAIN.jpg) | [(18) Z-Axis Drag Chain Anchors](BigBox_Parts_Preparation.md#18-z-axis-drag-chain-anchors) |
-| Z-AXIS TOP BOTTOM | 4 | printed | [z-axis top brackets (image)](../docs/images/Z-AXIS_TOP_BRACKETS.jpg) | [(32.2) Z Bed](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#322-z-bed) |
-| Z-AXIS TOP TOP | 4 | printed | [z-axis top brackets (image)](../docs/images/Z-AXIS_TOP_BRACKETS.jpg) | [(32.2) Z Bed](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#322-z-bed) |
-| Z-AXIS TOP CAP | 4 | printed | [z-axis top brackets (image)](../docs/images/Z-AXIS_TOP_BRACKETS.jpg) | [(32.2) Z Bed](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#322-z-bed) |
-| Hybrid X-Carriage | 1 | printed | no drawing | [(9) Hybrid X-Carriage](BigBox_Parts_Preparation.md#9-hybrid-x-carriage) |
-| Hybrid X-Carriage Rear Bearing Clamp | 1 | printed | no drawing | [(9) Hybrid X-Carriage](BigBox_Parts_Preparation.md#9-hybrid-x-carriage); [(8) Hybrid X-Carriage](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#8-hybrid-x-carriage) |
-| Drive Supports | 2 | printed | no drawing | [(10) Z-Axis Bed Assembly](BigBox_Printer_Sub-assemblies.md#10-z-axis-bed-assembly) |
-| Printed Feet | 8 | from the Printed Parts Box | no drawing | [(12.2) Feet](BigBox_Printer_Sub-assemblies.md#122-feet) |
-| Z-Axis Driver Bottoms | 2 | printed | no drawing | [(1.4) Leadscrews](Printer_Commissioning.md#14-leadscrews) |
-| Z-Axis Driver Tops | 2 | printed | no drawing | [(1.4) Leadscrews](Printer_Commissioning.md#14-leadscrews) |
-| Hybrid X-Carriage Front Bearing Clamp | 1 | printed | no drawing | [(8) Hybrid X-Carriage](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#8-hybrid-x-carriage) |
-| Spool Inner Brackets | 2 | printed | no drawing | [(17.2) Spool Inner Brackets](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#172-spool-inner-brackets) |
-| Cork Pads | 2 | from the Printed Parts Box | no drawing | [(17.4) Z-Axis Motors](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#174-z-axis-motors) |
-| IEC Back Cover | 1 | printed | no drawing | [(17.6) A/C IEC Socket](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#176-ac-iec-socket) |
-| Main Block | 1 | printed | no drawing | [(21.11.2) Non-Titan Direct-Drive Bowden System](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#21112-non-titan-direct-drive-bowden-system) |
-| Embedded Bowden Coupler | 1 | from the Printed Parts Bag | no drawing | [(21.11.2) Non-Titan Direct-Drive Bowden System](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#21112-non-titan-direct-drive-bowden-system) |
-| Black Spring | 1 | from the Printed Parts Bag | no drawing | [(21.11.2) Non-Titan Direct-Drive Bowden System](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#21112-non-titan-direct-drive-bowden-system) |
-| Hobgoblin | 1 | from the Printed Parts Bag | no drawing | [(21.11.2) Non-Titan Direct-Drive Bowden System](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#21112-non-titan-direct-drive-bowden-system) |
-| Y-Axis Endstop | 1 | printed | no drawing | [(29) Y-Axis Frame Endstop](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#29-y-axis-frame-endstop) |
-| X-AXIS CARRIAGE BEARING CLAMP DUAL | 2 | printed | no drawing | [Dual Direct-Drive X-Carriage](Dual_Direct-Drive_X-Carriage.md) |
+*The STEP column links the part's STEP file, from [Downloads](Downloads.md), where its sources are listed. Each file is one solid in its own frame, moved so its bounding box sits on the origin and never rotated, so a slicer can open it directly. Left and right parts that are the same shape are one file; the quantity says how many to print. SPOOL-HOLDER OUTER (R) was made by mirroring the (L) part, which the original files hold once; Y-AXIS REAR (R) is the mirror image of the (L) part.*
+
+| Part | Qty | Source | Drawing | Build section | STEP |
+| --- | --- | --- | --- | --- | --- |
+| Y-AXIS REAR (L) | 1 | printed | [y-axis rear](../docs/images/Y-AXIS_REAR.jpg) (sheet 1) | [(1) Y-Axis Rear Brackets (Left & Right)](BigBox_Parts_Preparation.md#1-y-axis-rear-brackets-left--right) | [STEP](../downloads/printed-parts/parts/Y-AXIS-REAR-L.step); [STEP (R, the mirror image)](../downloads/printed-parts/parts/Y-AXIS-REAR-R.step) |
+| Y-AXIS REAR (L&R) BEARING RETAINER | 1 | printed | [y-axis rear](../docs/images/Y-AXIS_REAR.jpg) (sheet 1) | [(1) Y-Axis Rear Brackets (Left & Right)](BigBox_Parts_Preparation.md#1-y-axis-rear-brackets-left--right) | [STEP](../downloads/printed-parts/parts/Y-AXIS-REAR-L-R-BEARING-RETAINER.step) |
+| Y-AXIS BACK (L) CORK (Self Adhesive) | 1 | from the Printed Parts Box | [y-axis rear](../docs/images/Y-AXIS_REAR.jpg) (sheet 1) | [(1) Y-Axis Rear Brackets (Left & Right)](BigBox_Parts_Preparation.md#1-y-axis-rear-brackets-left--right) | – |
+| Y-AXIS FRONT (R) | 1 | printed | [y-axis front](../docs/images/Y-AXIS_FRONT.jpg) (sheet 2) | [(2) Y-Axis Front Brackets (Left & Right)](BigBox_Parts_Preparation.md#2-y-axis-front-brackets-left--right) | [STEP](../downloads/printed-parts/parts/Y-AXIS-FRONT-R.step) |
+| Y-AXIS FRONT CORK (L & R) (Self Adhesive) | 1 | from the Printed Parts Box | [y-axis front](../docs/images/Y-AXIS_FRONT.jpg) (sheet 2) | [(2) Y-Axis Front Brackets (Left & Right)](BigBox_Parts_Preparation.md#2-y-axis-front-brackets-left--right) | – |
+| Y-AXIS BELT TENSIONER | 1 | printed | [y-axis idler](../docs/images/Y-AXIS_IDLER.jpg) (sheet 3) | [(3) Y-Axis Belt Idlers](BigBox_Parts_Preparation.md#3-y-axis-belt-idlers) | [STEP](../downloads/printed-parts/parts/Y-AXIS-BELT-TENSIONER.step) |
+| E-AXIS IDLER | 1 | printed | [extruder idler](../docs/images/EXTRUDER_IDLER.jpg) (sheet 4) | [Non-Titan Idler Arms](Non-Titan_Idler_Arms.md) | [STEP](../downloads/printed-parts/parts/E-AXIS-IDLER.step) |
+| X-AXIS IDLER CARRIAGE | 1 | printed | [x-axis idler carriage](../docs/images/X-AXIS_IDLER_CARRIAGE.jpg) (sheet 5) | [(5) X-Axis Idler Carriage](BigBox_Parts_Preparation.md#5-x-axis-idler-carriage) | [STEP](../downloads/printed-parts/parts/X-AXIS-IDLER-CARRIAGE.step) |
+| X-AXIS MOTOR CARRIAGE | 1 | printed | [x-axis motor carriage](../docs/images/X-AXIS_MOTOR_CARRIAGE.jpg) (sheet 6) | [(6) X-Axis Motor Mount](BigBox_Parts_Preparation.md#6-x-axis-motor-mount) | [STEP](../downloads/printed-parts/parts/X-AXIS-MOTOR-CARRIAGE.step) |
+| X-CARRIAGE SINGLE | 1 | printed | [x-carriage single](../docs/images/X-CARRIAGE_SINGLE.jpg) (sheet 7) | [Pro & Lite X-Carriage](Pro_%26_Lite_X-Carriage.md) | [STEP](../downloads/printed-parts/parts/X-CARRIAGE-SINGLE.step) |
+| HEATED BED CORNERS | 1 | printed | [heated bed corners](../docs/images/HEATED_BED_CORNERS.jpg) (sheet 9) | [(10) Heated Bed Corners](BigBox_Parts_Preparation.md#10-heated-bed-corners) | [STEP](../downloads/printed-parts/parts/HEATED-BED-CORNERS.step) |
+| SPOOL-HOLDER OUTER (L) | 1 | printed | [spool-holder outer](../docs/images/SPOOL-HOLDER_OUTER.jpg) (sheet 10) | [(11) Outer Spools Rear (Left & Right)](BigBox_Parts_Preparation.md#11-outer-spools-rear-left--right) | [STEP](../downloads/printed-parts/parts/SPOOL-HOLDER-OUTER-L.step); [STEP (R, the mirror image)](../downloads/printed-parts/parts/SPOOL-HOLDER-OUTER-R.step) |
+| SPOOL-HOLDER INNER | 1 | printed | [spool-holder inner](../docs/images/SPOOL-HOLDER_INNER.jpg) (sheet 11) | [(12) Spool Holder Outer Fronts](BigBox_Parts_Preparation.md#12-spool-holder-outer-fronts) | [STEP](../downloads/printed-parts/parts/SPOOL-HOLDER-INNER.step) |
+| PRINT FAN BRACKET | 1 | printed | [print fan duct](../docs/images/PRINT_FAN_DUCT.jpg) (sheet 12) | [Print Cooling Fan](Print_Cooling_Fan.md) | [STEP](../downloads/printed-parts/parts/PRINT-FAN-BRACKET.step) |
+| PRINT FAN DUCT | 1 | printed | [print fan duct](../docs/images/PRINT_FAN_DUCT.jpg) (sheet 12) | [Print Cooling Fan](Print_Cooling_Fan.md) | [STEP](../downloads/printed-parts/parts/PRINT-FAN-DUCT.step) |
+| IR-SENSOR HOUSING | 1 | printed | [ir sensor assembly](../docs/images/IR_SENSOR_ASSEMBLY.jpg) (sheet 13) | [Single & Dual Direct-Drive IR Sensor Bracket](Single_%26_Dual_Direct-Drive_IR_Sensor_Bracket.md) | [STEP](../downloads/printed-parts/parts/IR-SENSOR-HOUSING.step) |
+| EXTRUDER BODY (SINGLE) | 1 | printed | [extruder single](../docs/images/EXTRUDER_SINGLE.jpg) (sheet 14) | [Single Direct-Drive Extruder](Single_Direct-Drive_Extruder.md) | [STEP](../downloads/printed-parts/parts/EXTRUDER-BODY-SINGLE.step) |
+| EXTRUDER CABLE BRACKET | 1 | printed | [extruder single](../docs/images/EXTRUDER_SINGLE.jpg) (sheet 14) | [Single Direct-Drive Extruder](Single_Direct-Drive_Extruder.md) | [STEP](../downloads/printed-parts/parts/EXTRUDER-CABLE-BRACKET.step) |
+| X-AXIS CARRIAGE BEARING CLAMP | 2 | printed | [x-carriage assembly](../docs/images/X-CARRIAGE_ASSEMBLY.jpg) (sheet 22) | – | [STEP](../downloads/printed-parts/parts/X-AXIS-CARRIAGE-BEARING-CLAMP__regular.step) |
+| X-AXIS BELT-TENSIONER | 1 | printed | [x-carriage assembly](../docs/images/X-CARRIAGE_ASSEMBLY.jpg) (sheet 22) | – | [STEP](../downloads/printed-parts/parts/X-AXIS-BELT-TENSIONER.step) |
+| SPINE-LARGE | 1 | printed | [spine](../docs/images/SPINE.jpg) (sheet 24) | [(16) Cable Spine](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#16-cable-spine) | [STEP](../downloads/printed-parts/parts/SPINE-LARGE.step) |
+| SPINE-MED | 2 | printed | [spine](../docs/images/SPINE.jpg) (sheet 24) | [(16) Cable Spine](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#16-cable-spine) | [STEP](../downloads/printed-parts/parts/SPINE-MED.step) |
+| SPINE-SMALL | 2 | printed | [spine](../docs/images/SPINE.jpg) (sheet 24) | [(16) Cable Spine](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#16-cable-spine) | [STEP](../downloads/printed-parts/parts/SPINE-SMALL.step) |
+| SPINE-Y | 2 | printed | [spine](../docs/images/SPINE.jpg) (sheet 24) | [(16) Cable Spine](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#16-cable-spine) | [STEP](../downloads/printed-parts/parts/SPINE-Y.step) |
+| Y-AXIS MOTOR MOUNT | 1 | printed | [y-axis motor](../docs/images/Y-AXIS_MOTOR.jpg) (sheet 27) | [(14) Y-Axis Motor Mount](BigBox_Parts_Preparation.md#14-y-axis-motor-mount) | [STEP](../downloads/printed-parts/parts/Y-AXIS-MOTOR-MOUNT.step) |
+| Y-MOTOR MOUNT CORK (Self Adhesive) | 1 | from the Printed Parts Box | [y-axis motor](../docs/images/Y-AXIS_MOTOR.jpg) (sheet 27) | [(14) Y-Axis Motor Mount](BigBox_Parts_Preparation.md#14-y-axis-motor-mount) | – |
+| ELECTRONICS-COVER-BRACKET | 4 | printed | [electronics cover](../docs/images/ELECTRONICS_COVER.jpg) (sheet 28) | [(8) Electronics Cover](BigBox_Printer_Sub-assemblies.md#8-electronics-cover) | [STEP](../downloads/printed-parts/parts/ELECTRONICS-COVER-BRACKET.step) |
+| RRB-CABLE-CONDUIT | 3 | printed | [rear-right-back cable conduit](../docs/images/REAR-RIGHT-BACK_CABLE_CONDUIT.jpg) (sheet 29) | [(12) X-Axis Cable Conduits](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#12-x-axis-cable-conduits) | [STEP](../downloads/printed-parts/parts/RRB-CABLE-CONDUIT.step) |
+| DOCK-BRACKET | 1 | printed | [dock-bracket (image)](../docs/images/DOCK-BRACKET.jpg) | [(14) Frame Top](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#14-frame-top) | [STEP](../downloads/printed-parts/parts/DOCK-BRACKET.step) |
+| EXTRUDER BODY (DUAL) | 1 | printed | [extruder dual (image)](../docs/images/EXTRUDER_DUAL.jpg) | [Dual Direct-Drive Extruders](Dual_Direct-Drive_Extruders.md) | [STEP](../downloads/printed-parts/parts/EXTRUDER-BODY-DUAL.step) |
+| E-AXIS CABLE BRACKET (DUAL)(R) | 1 | printed | [extruder dual (image)](../docs/images/EXTRUDER_DUAL.jpg) | [Dual Direct-Drive Extruders](Dual_Direct-Drive_Extruders.md) | [STEP](../downloads/printed-parts/parts/E-AXIS-CABLE-BRACKET-DUAL-R.step) |
+| E-AXIS CABLE BRACKET (DUAL)(L) | 1 | printed | [extruder dual (image)](../docs/images/EXTRUDER_DUAL.jpg) | [Dual Direct-Drive Extruders](Dual_Direct-Drive_Extruders.md) | [STEP](../downloads/printed-parts/parts/E-AXIS-CABLE-BRACKET-DUAL-L.step) |
+| E-AXIS CARRIAGE TOP HYBRID NON-TITAN DIRECT GUIDE | 1 | printed | [extruder hybrid non-titan direct (image)](../docs/images/EXTRUDER_HYBRID_NON-TITAN_DIRECT.jpg) | [(5) Hybrid Non-Titan Extruder (Direct)](BigBox_Printer_Sub-assemblies.md#5-hybrid-non-titan-extruder-direct) | [STEP](../downloads/printed-parts/parts/E-AXIS-CARRIAGE-TOP-HYBRID-NON-TITAN-DIRECT-GUIDE.step) |
+| E-AXIS CARRIAGE TOP HYBRID NON-TITAN DIRECT LEVER | 1 | printed | [extruder hybrid non-titan direct (image)](../docs/images/EXTRUDER_HYBRID_NON-TITAN_DIRECT.jpg) | [(5) Hybrid Non-Titan Extruder (Direct)](BigBox_Printer_Sub-assemblies.md#5-hybrid-non-titan-extruder-direct) | [STEP](../downloads/printed-parts/parts/E-AXIS-CARRIAGE-TOP-HYBRID-NON-TITAN-DIRECT-LEVER.step) |
+| E-AXIS CARRIAGE TOP HYBRID NON-TITAN DIRECT BODY | 1 | printed | [extruder hybrid non-titan direct (image)](../docs/images/EXTRUDER_HYBRID_NON-TITAN_DIRECT.jpg) | [(5) Hybrid Non-Titan Extruder (Direct)](BigBox_Printer_Sub-assemblies.md#5-hybrid-non-titan-extruder-direct) | [STEP](../downloads/printed-parts/parts/E-AXIS-CARRIAGE-TOP-HYBRID-NON-TITAN-DIRECT-BODY.step) |
+| E-AXIS CARRIAGE TOP HYBRID TITAN DIRECT | 1 | printed | [extruder hybrid titan direct (image)](../docs/images/EXTRUDER_HYBRID_TITAN_DIRECT.jpg) | [(3) Hybrid Titan Extruder (Direct)](BigBox_Printer_Sub-assemblies.md#3-hybrid-titan-extruder-direct) | [STEP](../downloads/printed-parts/parts/E-AXIS-CARRIAGE-TOP-HYBRID-TITAN-DIRECT.step) |
+| BB_FRAME_M3_NUT_TRAP-1 | ~150 | printed | [frame-lug drawing (image)](../docs/images/FRAME-LUG_DRAWING.jpg) | [(13.1) A Note on Nut-Traps](BigBox_Printer_Sub-assemblies.md#131-a-note-on-nut-traps) | [STEP](../downloads/printed-parts/parts/BB-FRAME-M3-NUT-TRAP-1.step) |
+| SPOOL-HOLDER CLAMP INNER | 1 | printed | [spool-holder clamp (image)](../docs/images/SPOOL-HOLDER_CLAMP.jpg) | [(17) Spool Carrier Clamp](BigBox_Parts_Preparation.md#17-spool-carrier-clamp) | [STEP](../downloads/printed-parts/parts/SPOOL-HOLDER-CLAMP-INNER.step) |
+| SPOOL-HOLDER CLAMP OUTER | 1 | printed | [spool-holder clamp (image)](../docs/images/SPOOL-HOLDER_CLAMP.jpg) | [(17) Spool Carrier Clamp](BigBox_Parts_Preparation.md#17-spool-carrier-clamp) | [STEP](../downloads/printed-parts/parts/SPOOL-HOLDER-CLAMP-OUTER.step) |
+| Z-AXIS BASE BRACKET LOWER | 1 | printed | [z-axis base brackets (image)](../docs/images/Z-AXIS_BASE_BRACKETS.jpg) | [(17.5) Z-Axis Lower Rod Brackets](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#175-z-axis-lower-rod-brackets) | [STEP](../downloads/printed-parts/parts/Z-AXIS-BASE-BRACKET-LOWER.step); [STEP (alternate, for the newer screw)](../downloads/printed-parts/parts/Z-AXIS-BASE-BRACKET-LOWER-4-hole.step) |
+| Z-AXIS BASE BRACKET UPPER | 1 | printed | [z-axis base brackets (image)](../docs/images/Z-AXIS_BASE_BRACKETS.jpg) | [(17.5) Z-Axis Lower Rod Brackets](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#175-z-axis-lower-rod-brackets) | [STEP](../downloads/printed-parts/parts/Z-AXIS-BASE-BRACKET-UPPER.step); [STEP (alternate, for the newer screw)](../downloads/printed-parts/parts/Z-AXIS-BASE-BRACKET-UPPER-4-hole.step) |
+| Z-AXIS DRAG-CHAIN ANCHOR BASE | 1 | printed | [z-axis drag chain (image)](../docs/images/Z-AXIS_DRAG_CHAIN.jpg) | [(18) Z-Axis Drag Chain Anchors](BigBox_Parts_Preparation.md#18-z-axis-drag-chain-anchors) | [STEP](../downloads/printed-parts/parts/Z-AXIS-DRAG-CHAIN-ANCHOR-BASE.step) |
+| Z-AXIS DRAG-CHAIN ANCHOR BED | 1 | printed | [z-axis drag chain (image)](../docs/images/Z-AXIS_DRAG_CHAIN.jpg) | [(18) Z-Axis Drag Chain Anchors](BigBox_Parts_Preparation.md#18-z-axis-drag-chain-anchors) | [STEP](../downloads/printed-parts/parts/Z-AXIS-DRAG-CHAIN-ANCHOR-BED.step) |
+| Z-AXIS TOP BOTTOM | 4 | printed | [z-axis top brackets (image)](../docs/images/Z-AXIS_TOP_BRACKETS.jpg) | [(32.2) Z Bed](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#322-z-bed) | [STEP](../downloads/printed-parts/parts/Z-AXIS-TOP-BOTTOM.step) |
+| Z-AXIS TOP TOP | 4 | printed | [z-axis top brackets (image)](../docs/images/Z-AXIS_TOP_BRACKETS.jpg) | [(32.2) Z Bed](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#322-z-bed) | [STEP](../downloads/printed-parts/parts/Z-AXIS-TOP-TOP.step) |
+| Z-AXIS TOP CAP | 4 | printed | [z-axis top brackets (image)](../docs/images/Z-AXIS_TOP_BRACKETS.jpg) | [(32.2) Z Bed](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#322-z-bed) | [STEP](../downloads/printed-parts/parts/Z-AXIS-TOP-CAP.step) |
+| Hybrid X-Carriage | 1 | printed | no drawing | [(9) Hybrid X-Carriage](BigBox_Parts_Preparation.md#9-hybrid-x-carriage) | [STEP](../downloads/printed-parts/parts/Hybrid-X-Carriage.step) |
+| Hybrid X-Carriage Rear Bearing Clamp | 1 | printed | no drawing | [(9) Hybrid X-Carriage](BigBox_Parts_Preparation.md#9-hybrid-x-carriage); [(8) Hybrid X-Carriage](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#8-hybrid-x-carriage) | [STEP](../downloads/printed-parts/parts/Hybrid-X-Carriage-Rear-Bearing-Clamp.step) |
+| Drive Supports | 2 | printed | no drawing | [(10) Z-Axis Bed Assembly](BigBox_Printer_Sub-assemblies.md#10-z-axis-bed-assembly) | [STEP](../downloads/printed-parts/parts/Drive-Supports.step) |
+| Printed Feet | 8 | from the Printed Parts Box | no drawing | [(12.2) Feet](BigBox_Printer_Sub-assemblies.md#122-feet) | [STEP](../downloads/printed-parts/parts/Printed-Feet.step) |
+| Z-Axis Driver Bottoms | 2 | printed | no drawing | [(1.4) Leadscrews](Printer_Commissioning.md#14-leadscrews) | [STEP](../downloads/printed-parts/parts/Z-Axis-Driver-Bottoms.step) |
+| Z-Axis Driver Tops | 2 | printed | no drawing | [(1.4) Leadscrews](Printer_Commissioning.md#14-leadscrews) | [STEP](../downloads/printed-parts/parts/Z-Axis-Driver-Tops.step) |
+| Hybrid X-Carriage Front Bearing Clamp | 1 | printed | no drawing | [(8) Hybrid X-Carriage](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#8-hybrid-x-carriage) | [STEP](../downloads/printed-parts/parts/Hybrid-X-Carriage-Front-Bearing-Clamp.step) |
+| Spool Inner Brackets | 2 | printed | no drawing | [(17.2) Spool Inner Brackets](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#172-spool-inner-brackets) | [STEP](../downloads/printed-parts/parts/Spool-Inner-Brackets.step) |
+| Cork Pads | 2 | from the Printed Parts Box | no drawing | [(17.4) Z-Axis Motors](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#174-z-axis-motors) | – |
+| IEC Back Cover | 1 | printed | no drawing | [(17.6) A/C IEC Socket](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#176-ac-iec-socket) | – |
+| Main Block | 1 | printed | no drawing | [(21.11.2) Non-Titan Direct-Drive Bowden System](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#21112-non-titan-direct-drive-bowden-system) | – |
+| Embedded Bowden Coupler | 1 | from the Printed Parts Bag | no drawing | [(21.11.2) Non-Titan Direct-Drive Bowden System](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#21112-non-titan-direct-drive-bowden-system) | – |
+| Black Spring | 1 | from the Printed Parts Bag | no drawing | [(21.11.2) Non-Titan Direct-Drive Bowden System](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#21112-non-titan-direct-drive-bowden-system) | – |
+| Hobgoblin | 1 | from the Printed Parts Bag | no drawing | [(21.11.2) Non-Titan Direct-Drive Bowden System](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#21112-non-titan-direct-drive-bowden-system) | – |
+| Y-Axis Endstop | 1 | printed | no drawing | [(29) Y-Axis Frame Endstop](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#29-y-axis-frame-endstop) | [STEP](../downloads/printed-parts/parts/Y-Axis-Endstop.step) |
+| X-AXIS CARRIAGE BEARING CLAMP DUAL | 2 | printed | no drawing | [Dual Direct-Drive X-Carriage](Dual_Direct-Drive_X-Carriage.md) | [STEP](../downloads/printed-parts/parts/X-AXIS-CARRIAGE-BEARING-CLAMP__dual.step) |
+
+## Printed Parts With No Row
+
+*STEP files for printed parts that have no row above, because the Bill of Materials does not list them.*
+
+| Part | STEP | Used in | Note |
+| --- | --- | --- | --- |
+| Bottom Camera Bracket | [STEP](../downloads/printed-parts/parts/Bottom-Camera-Bracket.step) | [(22) OctoPrint Upgrade Camera Install](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#22-octoprint-upgrade-camera-install) | – |
+| Camera Arm | [STEP](../downloads/printed-parts/parts/Camera-Arm.step) | [(22) OctoPrint Upgrade Camera Install](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#22-octoprint-upgrade-camera-install) | – |
+| Camera Mount | [STEP](../downloads/printed-parts/parts/Camera-Mount.step) | [(22) OctoPrint Upgrade Camera Install](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#22-octoprint-upgrade-camera-install) | Camera holder |
+| Drag Anchor Bracket | [STEP](../downloads/printed-parts/parts/Drag-Anchor-Bracket.step) | [(13) X-Axis Drag Chain](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#13-x-axis-drag-chain) | – |
+| Dual Dump Bucket | [STEP](../downloads/printed-parts/parts/Dual-Dump-Bucket.step) | [(31) Ooze Wiper & Dump Bucket](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#31-ooze-wiper--dump-bucket) | – |
+| Dual Ooze Wiper | [STEP](../downloads/printed-parts/parts/Dual-Ooze-Wiper.step) | [(31) Ooze Wiper & Dump Bucket](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#31-ooze-wiper--dump-bucket) | – |
+| Dump Bucket | [STEP](../downloads/printed-parts/parts/Dump-Bucket.step) | [(31) Ooze Wiper & Dump Bucket](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#31-ooze-wiper--dump-bucket) | – |
+| Fan Mount | [STEP](../downloads/printed-parts/parts/Fan-Mount.step) | [(13) Print Cooling Fan (v1.0)](BigBox_Parts_Preparation.md#13-print-cooling-fan-v10) | – |
+| FFC Conduits | [STEP](../downloads/printed-parts/parts/FFC-Conduits.step) | [(22) OctoPrint Upgrade Camera Install](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#22-octoprint-upgrade-camera-install) | – |
+| Hybrid IR Sensor Bracket | [STEP](../downloads/printed-parts/parts/Hybrid-IR-Sensor-Bracket.step) | [(16) Hybrid IR Sensor Bracket](BigBox_Parts_Preparation.md#16-hybrid-ir-sensor-bracket) | – |
+| Hybrid Ooze Wiper | [STEP](../downloads/printed-parts/parts/Hybrid-Ooze-Wiper.step) | [(31) Ooze Wiper & Dump Bucket](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#31-ooze-wiper--dump-bucket) | – |
+| Ooze Wiper | [STEP](../downloads/printed-parts/parts/Ooze-Wiper.step) | [(31) Ooze Wiper & Dump Bucket](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#31-ooze-wiper--dump-bucket) | – |
+| SPINE-VERTICAL | [STEP](../downloads/printed-parts/parts/SPINE-VERTICAL.step) | [(16) Cable Spine](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#16-cable-spine) | Not in assembly |
+| Top Camera Bracket | [STEP](../downloads/printed-parts/parts/Top-Camera-Bracket.step) | [(22) OctoPrint Upgrade Camera Install](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#22-octoprint-upgrade-camera-install) | – |
+| X-CARRIAGE DUAL | [STEP](../downloads/printed-parts/parts/X-CARRIAGE-DUAL.step) | [(8) Dual X-Carriage](BigBox_Parts_Preparation.md#8-dual-x-carriage) | Not in the BOM yet: the manual has a Dual X-Carriage page but no BOM row for it. |
 
 ## Fixings
 

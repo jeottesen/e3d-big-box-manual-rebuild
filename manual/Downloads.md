@@ -5,6 +5,7 @@
 - [Simplify3D profiles](#simplify3d-profiles)
 - [Firmware](#firmware)
 - [SD card files](#sd-card-files)
+- [Printed parts (STEP files)](#printed-parts-step-files)
 - [Archived copies from the old E3D file server](#archived-copies-from-the-old-e3d-file-server)
 - [Still missing](#still-missing)
 
@@ -51,6 +52,17 @@ The files that came on the SD card in the kit.
 - [Pro/calibration/extruder_0.gcode](https://github.com/BigBox3D/SD-Card/blob/master/Pro/calibration/extruder_0.gcode)
 - [Dual/calibration/extruder_0.gcode](https://github.com/BigBox3D/SD-Card/blob/master/Dual/calibration/extruder_0.gcode)
 - [Dual/calibration/extruder_1.gcode](https://github.com/BigBox3D/SD-Card/blob/master/Dual/calibration/extruder_1.gcode)
+
+## Printed parts (STEP files)
+
+One STEP file for each printed part, named after its Bill of Materials row and linked from it. Each is one solid in its own frame, moved so its bounding box sits on the origin and never rotated, so a slicer can open it directly. They were cut from the original BigBox CAD assemblies listed below, which are not stored here. The right-hand SPOOL-HOLDER OUTER (R) was made by mirroring (L), which the originals hold once.
+
+- [parts.csv](../downloads/printed-parts/parts.csv) – one row per file: Bill of Materials name, quantity, manual section, source assembly and part, size, volume and SHA-256
+- [SHA256SUMS](../downloads/printed-parts/SHA256SUMS) – check the files with sha256sum -c SHA256SUMS in downloads/printed-parts
+- bigbox_v1.1.0.stp (source assembly) – BigBox v1.1: 54 of the parts; source and licence not yet recorded
+- Hybrid_v1.1.0.stp (source assembly) – BigBox v1.1 Hybrid: 10 of the parts; source and licence not yet recorded
+- bigbox_dual_v1.0.0.stp (source assembly) – BigBox v1.0 Dual: 7 of the parts; source and licence not yet recorded
+- BB_FRAME_M3_NUT_TRAP.stp (source assembly) – the frame nut trap: 1 part; source and licence not yet recorded
 
 ## Archived copies from the old E3D file server
 
