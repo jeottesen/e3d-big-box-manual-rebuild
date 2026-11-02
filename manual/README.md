@@ -27,6 +27,8 @@ Offline copy compiled from the Wayback Machine capture of wiki.e3d-online.com.
 - [Dual X-Carriage](Dual_X-Carriage.md)
 - [Non-Titan Idler Arms](Non-Titan_Idler_Arms.md)
 - [Single & Dual Direct-Drive IR Sensor Bracket](Single_%26_Dual_Direct-Drive_IR_Sensor_Bracket.md)
+- [Single Direct-Drive X-Carriage](Single_Direct-Drive_X-Carriage.md)
+- [Dual Direct-Drive X-Carriage](Dual_Direct-Drive_X-Carriage.md)
 - [Mesh Levelling the Non-Hybrid Dual](Mesh_Levelling_the_Non-Hybrid_Dual.md)
 - [Non-Hybrid Dual Calibrating Z Offset](Non-Hybrid_Dual_Calibrating_Z_Offset.md)
 - [Older Version Content](Older_Version_Content.md)

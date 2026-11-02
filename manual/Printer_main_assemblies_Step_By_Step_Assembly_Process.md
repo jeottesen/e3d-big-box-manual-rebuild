@@ -191,11 +191,11 @@ REPEAT......USE THE 20T GT2.....
 
 ## (6) Single Direct-Drive X-Carriage
 
-If you are building an older **Non-Hybrid** Single Direct-Drive X-Carriage \| Click Here
+If you are building an older **Non-Hybrid** Single Direct-Drive X-Carriage \| [Click Here](Single_Direct-Drive_X-Carriage.md "Single Direct-Drive X-Carriage")
 
 ## (7) Dual Direct-Drive X-Carriage
 
-If you are building an older **Non-Hybrid** Dual Direct-Drive X-Carriage \| Click Here
+If you are building an older **Non-Hybrid** Dual Direct-Drive X-Carriage \| [Click Here](Dual_Direct-Drive_X-Carriage.md "Dual Direct-Drive X-Carriage")
 
 ## (8) Hybrid X-Carriage
 

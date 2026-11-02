@@ -9,6 +9,8 @@ TARGETS = {
     'Non-Titan_Idler_Arms': (['BigBox_Parts_Preparation'], r'(non.titan )?single (&|and) dual extruder filament idlers'),
     'Single_&_Dual_Direct-Drive_IR_Sensor_Bracket': (['BigBox_Parts_Preparation'], r'single (&|and) dual direct.drive ir sensor bracket'),
     'Single_Direct-Drive_Extruder': (['BigBox_Printer_Sub-assemblies'], r'single direct.drive extruder'),
+    'Single_Direct-Drive_X-Carriage': (['Printer_main_assemblies:_Step_By_Step_Assembly_Process'], r'^(\(6\) )?single direct.drive x.carriage$'),
+    'Dual_Direct-Drive_X-Carriage': (['Printer_main_assemblies:_Step_By_Step_Assembly_Process'], r'^(\(7\) )?dual direct.drive x.carriage$'),
     'Mesh_Levelling_the_Non-Hybrid_Dual': (['Printer_Commissioning'], r'mesh levelling the (non.hybrid )?dual'),
     'Non-Hybrid_Dual_Calibrating_Z_Offset': (['Printer_Commissioning'], r'(non.hybrid )?dual calibrating z.?offset|calibrating z.?offset dual'),
 }
