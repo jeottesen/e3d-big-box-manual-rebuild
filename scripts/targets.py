@@ -46,14 +46,18 @@ def gh(repo, path='', kind='blob', ref='master'):
     return f'https://github.com/{repo}' + (f'/{kind}/{ref}/{quote(path)}' if path else '')
 
 # The original CAD assemblies the printed parts' STEP files were cut from: (file, where it can be downloaded, what it holds, licence).
-# The files themselves are not stored here (see downloads/printed-parts/). UNRECORDED stays until the maintainer gives the source and the licence;
-# tests/test_printed_parts.py fails while it is there, so the parts are not published without them.
+# The files themselves are not stored here (see downloads/printed-parts/). They are from E3D's BigBox design files on Thingiverse (thing 1521722, by
+# Bigbox3DP), which the wiki's main page links. That page says CC BY-SA 3.0 (the archived copy of 2016-12-04 links creativecommons.org/licenses/by-sa/3.0/)
+# and offers STEP.zip; which of the files named here are inside it was not checked. The maintainer gave this source and licence on 2026-11-02.
+# tests/test_printed_parts.py fails if a source or licence is missing, so the parts are not published without them.
 UNRECORDED = 'source and licence not yet recorded'
+THINGIVERSE = 'https://www.thingiverse.com/thing:1521722'
+CC_BY_SA = 'CC BY-SA 3.0, Bigbox3DP on Thingiverse'
 STEP_SOURCES = [
-    ('bigbox_v1.1.0.stp', None, 'BigBox v1.1: 54 of the parts', UNRECORDED),
-    ('Hybrid_v1.1.0.stp', None, 'BigBox v1.1 Hybrid: 10 of the parts', UNRECORDED),
-    ('bigbox_dual_v1.0.0.stp', None, 'BigBox v1.0 Dual: 7 of the parts', UNRECORDED),
-    ('BB_FRAME_M3_NUT_TRAP.stp', None, 'the frame nut trap: 1 part', UNRECORDED),
+    ('bigbox_v1.1.0.stp', THINGIVERSE, 'BigBox v1.1: 54 of the parts', CC_BY_SA),
+    ('Hybrid_v1.1.0.stp', THINGIVERSE, 'BigBox v1.1 Hybrid: 10 of the parts', CC_BY_SA),
+    ('bigbox_dual_v1.0.0.stp', THINGIVERSE, 'BigBox v1.0 Dual: 7 of the parts', CC_BY_SA),
+    ('BB_FRAME_M3_NUT_TRAP.stp', THINGIVERSE, 'the frame nut trap: 1 part', CC_BY_SA),
 ]
 
 # (heading, intro, [(text, url or None, note)])
@@ -86,10 +90,13 @@ DOWNLOADS = [
       ('Dual/calibration/extruder_1.gcode', gh('BigBox3D/SD-Card', 'Dual/calibration/extruder_1.gcode'), '')]),
     ('Printed parts (STEP files)',
      'One STEP file for each printed part, named after its Bill of Materials row and linked from it. Each is one solid in its own frame, moved so its bounding box sits on the origin and never rotated, so a slicer can open it directly. '
-     'They were cut from the original BigBox CAD assemblies listed below, which are not stored here. The right-hand SPOOL-HOLDER OUTER (R) was made by mirroring (L), which the originals hold once.',
+     'They were cut from the original BigBox CAD assemblies listed below, which are not stored here, and they are licensed Creative Commons Attribution-ShareAlike (CC BY-SA 3.0), as the originals are, not CC BY 3.0 like the rest of this repository. '
+     'The designs are by Bigbox3DP (E3D) on Thingiverse, thing 1521722. '
+     'The right-hand SPOOL-HOLDER OUTER (R) was made by mirroring (L), which the originals hold once.',
      [('parts.csv', '../downloads/printed-parts/parts.csv', 'one row per file: Bill of Materials name, quantity, manual section, source assembly and part, size, volume and SHA-256'),
       ('SHA256SUMS', '../downloads/printed-parts/SHA256SUMS', 'check the files with sha256sum -c SHA256SUMS in downloads/printed-parts')] +
-     [(f'{name} (source assembly)', url, f'{note}; {licence}') for name, url, note, licence in STEP_SOURCES]),
+     [(f'{name} (source assembly)', url, f'{note}; {licence}') for name, url, note, licence in STEP_SOURCES] +
+     [('Thingiverse page, archived copy of 2016-12-04', 'https://web.archive.org/web/20161204111516/http://www.thingiverse.com/thing:1521722', 'states the licence (CC BY-SA 3.0) and offers STEP.zip')]),
     ('Archived copies from the old E3D file server',
      'The wiki\'s own file server (files.e3d-online.com) is gone, but the Wayback Machine kept these. The links go to the archived copies.',
      [

@@ -235,7 +235,7 @@ def add_drawing_parts(body, sheets, sections_by_image, manual_entries=(), headin
         return (f'<a href="{pg[0]}.html#{esc(hid)}">{esc(pg[1])}</a>' if hid else esc(pg[1])) if pg else '–'
     mirrored = '; '.join(f'{esc(printed_parts.bom_name(r))} was made by mirroring the (L) part, which the original files hold once' if 'made by mirroring' in r['notes']
                          else f'{esc(printed_parts.bom_name(r))} is the mirror image of the (L) part' for r in mirrors.values())
-    step_note = ('<p><em>The STEP column links the part\'s STEP file, from <a href="Downloads.html">Downloads</a>, where its sources are listed. Each file is one solid in its own frame, '
+    step_note = ('<p><em>The STEP column links the part\'s STEP file, from <a href="Downloads.html">Downloads</a>, where its sources are listed. The files are licensed CC BY-SA 3.0 (see their README). Each file is one solid in its own frame, '
                  f'moved so its bounding box sits on the origin and never rotated, so a slicer can open it directly. Left and right parts that are the same shape are one file; the quantity says how many to print.{" " + mirrored + "." if mirrored else ""}</em></p>')
     extras_html = ('<h3><span class="mw-headline" id="Printed_Parts_With_No_Row">Printed Parts With No Row</span></h3>'
                    '<p><em>STEP files for printed parts that have no row above, because the Bill of Materials does not list them.</em></p>'

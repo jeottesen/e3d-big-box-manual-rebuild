@@ -61,4 +61,12 @@ class Sources(unittest.TestCase):
             self.assertTrue(url, f'{name}: no source address')
             self.assertNotEqual(licence, UNRECORDED, name)
 
+class Licence(unittest.TestCase):
+    def test_every_file_is_marked_cc_by_sa_and_the_folder_and_notice_say_so(self):
+        self.assertEqual({r['license'] for r in ROWS}, {'CC BY-SA 3.0'})
+        for path in (f'{D}/README.md', f'{ROOT}/NOTICE.md'):
+            text = open(path).read()
+            self.assertIn('thing:1521722', text, path)
+            self.assertIn('CC BY-SA 3.0', text, path)
+
 if __name__ == '__main__': unittest.main()
