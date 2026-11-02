@@ -1610,7 +1610,7 @@ If you have the OctoPrint Upgrade you'll have the extra camera FFC.
 
 *Base.*
 
-Take the previously assembled \[BigBox_Printer_Sub-assemblies#Base_Assembly\|Base Assembly\]\], and with the BigBox on it's side, align the base to the frame.
+Take the previously assembled [Base Assembly](BigBox_Printer_Sub-assemblies.md#12-base-assembly), and with the BigBox on it's side, align the base to the frame.
 
 ![Base_install_psu.jpg](../docs/images/Base_install_psu.jpg)
 

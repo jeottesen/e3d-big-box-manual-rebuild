@@ -41,6 +41,12 @@ class Source(unittest.TestCase):
                          'Printer_main_assemblies:_Step_By_Step')
 
 class BuiltManual(unittest.TestCase):
+    def test_the_built_manual_has_no_malformed_links(self):
+        import os
+        found = [(f, n, what) for f in sorted(os.listdir(f'{ROOT}/manual')) if f.endswith('.md')
+                 for n, what in s.malformed_links(open(f'{ROOT}/manual/{f}').read())]
+        self.assertEqual(found, [])
+
     def test_no_link_to_a_section_carries_the_wiki_pipe_typo(self):
         md = open(f'{ROOT}/manual/Printer_main_assemblies_Step_By_Step_Assembly_Process.md').read()
         self.assertFalse(re.search(r'%7C|\\\[\[', md.split('## (22)')[0].split('## (21)')[1]))

@@ -137,6 +137,9 @@ OCR_FIXES = {
 # one corner of the four of the Z bed. A printed part the manual names that is not here has no drawing and is added from the manual.
 # Checked against the drawings by the maintainer: the right cable bracket, the belt tensioner, the dock and the three Z-bed parts are the same parts. The manual's
 # Spool Inner Brackets are NOT the SPOOL-HOLDER INNER drawing (they look different), so they have no drawing.
+# Names for parts that have no drawing, where the manual's name is not the one the part goes by (the printed parts package names it so).
+# 'Bearing Clamps' (dual carriage) is the larger version of the X-AXIS CARRIAGE BEARING CLAMP, checked by the maintainer.
+NO_DRAWING_NAMES = {'Bearing Clamps': 'X-AXIS CARRIAGE BEARING CLAMP DUAL'}
 MANUAL_PART_NAMES = {
     'Right Cable Bracket': ('img-EXTRUDER_DUAL', 'E-AXIS CABLE BRACKET (DUAL)(R)'),
     'Belt Tensioner': ('pdf-22', 'X-AXIS BELT-TENSIONER'),

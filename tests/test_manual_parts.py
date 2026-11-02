@@ -68,7 +68,7 @@ class Group(unittest.TestCase):
         self.assertEqual(mp.group([self.entry('C', 1), self.entry('C', 2)], {})[1][0]['qty'], 2)
 
 # ---- the table in targets.py and the manual
-from targets import MANUAL_PART_NAMES
+from targets import MANUAL_PART_NAMES, NO_DRAWING_NAMES
 PAGES = mp.read_pages()
 FOUND = mp.scan(PAGES)
 SHEETS = truth.load_truth()
@@ -102,7 +102,7 @@ class InTheBom(unittest.TestCase):
     def test_every_part_without_a_drawing_is_a_row_linked_to_its_step(self):
         _, table = bom_rows()
         for g in mp.group(FOUND, MANUAL_PART_NAMES)[1]:
-            row = re.search(rf'<tr><td>{re.escape(g["part"].replace("&", "&amp;"))}</td>.*?</tr>', table)
+            row = re.search(rf'<tr><td>{re.escape(NO_DRAWING_NAMES.get(g["part"], g["part"]).replace("&", "&amp;"))}</td>.*?</tr>', table)
             self.assertTrue(row, g['part'])
             self.assertIn('<td>no drawing</td>', row.group(0))
             for page, _, _ in g['steps']: self.assertIn(f'{page}.html', row.group(0))
@@ -123,7 +123,7 @@ class InTheBom(unittest.TestCase):
     def test_box_and_bag_items_are_labelled_with_where_they_come_from(self):
         _, table = bom_rows()
         for g in mp.group(FOUND, MANUAL_PART_NAMES)[1]:
-            row = re.search(rf'<tr><td>{re.escape(g["part"])}</td>.*?</tr>', table).group(0)
+            row = re.search(rf'<tr><td>{re.escape(NO_DRAWING_NAMES.get(g["part"], g["part"]))}</td>.*?</tr>', table).group(0)
             self.assertIn(f'<td>{mp.CONTAINER_LABEL[g["container"]]}</td>', row)
 
 if __name__ == '__main__': unittest.main()
