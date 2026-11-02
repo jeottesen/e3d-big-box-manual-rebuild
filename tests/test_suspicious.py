@@ -35,6 +35,11 @@ class Thin(unittest.TestCase):
     def test_a_renumbered_heading_keeps_its_key(self):
         self.assertEqual(s.key('(21.1) Titan Extruder.'), s.key('Titan Extruder'))
 
+class Source(unittest.TestCase):
+    def test_the_page_name_loses_markdowns_escapes(self):
+        self.assertEqual(s.source_page('Archived 2020 · source: wiki.e3d-online.com/wiki/Printer_main_assemblies:\\_Step_By_Step · [archive link](x)'),
+                         'Printer_main_assemblies:_Step_By_Step')
+
 class BuiltManual(unittest.TestCase):
     def test_no_link_to_a_section_carries_the_wiki_pipe_typo(self):
         md = open(f'{ROOT}/manual/Printer_main_assemblies_Step_By_Step_Assembly_Process.md').read()

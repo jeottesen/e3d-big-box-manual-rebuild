@@ -80,6 +80,12 @@ def thin_sections(md):
     return out
 
 
+def source_page(md):
+    """The wiki page a built page came from, as its saved-version folder is named (None for a generated page)."""
+    m = re.search(r'source: wiki\.e3d-online\.com/wiki/([^\s·]+)', md[:600])
+    return urllib.parse.unquote(m.group(1)).replace('\\', '').replace(' ', '_') if m else None
+
+
 def key(title):
     """A heading without its step number, so a renumbered section still matches its older self."""
     return re.sub(r'\W+', ' ', re.sub(r'^\(?[\d.]+\)?\s*', '', html.unescape(title))).strip().lower()
@@ -96,11 +102,13 @@ def old_sizes(page):
         h = open(f'{d}/{f}').read()
         if 'id="mw-content-text"' not in h or recover.ERR.search(h[:6000]): continue   # an error page, not an article
         c = recover.content(h); hs = list(recover.HEAD.finditer(c))
+        sizes = {}
         for i, m in enumerate(hs):
             end = hs[i + 1].start() if i + 1 < len(hs) else len(c)   # own text only: stop at the next heading of any level
             words = len(re.findall(r"[A-Za-z0-9][\w'.\-]*", recover.htext(re.sub(r'<(img|a)\b[^>]*>', ' ', c[m.end():end]))))
-            k = key(recover.htext(m.group(2)))
-            if words > best.get(k, (0, ''))[0]: best[k] = (words, f[:-5])
+            sizes.setdefault(key(recover.htext(m.group(2))), []).append(words)
+        for k, ws in sizes.items():
+            if len(ws) == 1 and ws[0] > best.get(k, (0, ''))[0]: best[k] = (ws[0], f[:-5])   # a name used twice on the page cannot be told apart
     return best
 
 
@@ -125,8 +133,7 @@ def main():
         if show_warnings:
             for n, title, why in thin_sections(md):
                 warnings += 1; print(f'thin    {f}:{n}: {title}: {why}')
-            m = re.search(r'source: wiki\.e3d-online\.com/wiki/([^\s·]+)', md[:600])
-            page = urllib.parse.unquote(m.group(1)).replace(' ', '_') if m else None
+            page = source_page(md)
             for n, title, why in (shrunk_sections(md, page) if page else []):
                 warnings += 1; print(f'shrunk  {f}:{n}: {title}: {why}')
     print(f'{errors} errors' + (f', {warnings} warnings' if show_warnings else ' (run with --warnings for thin and shrunk sections)'))
