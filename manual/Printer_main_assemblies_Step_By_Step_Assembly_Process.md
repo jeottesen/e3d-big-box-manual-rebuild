@@ -191,11 +191,11 @@ REPEAT......USE THE 20T GT2.....
 
 ## (6) Single Direct-Drive X-Carriage
 
-If you are building an older **Non-Hybrid** Single Direct-Drive X-Carriage \| Click Here
+If you are building an older **Non-Hybrid** Single Direct-Drive X-Carriage \| [Click Here](Single_Direct-Drive_X-Carriage.md "Single Direct-Drive X-Carriage")
 
 ## (7) Dual Direct-Drive X-Carriage
 
-If you are building an older **Non-Hybrid** Dual Direct-Drive X-Carriage \| Click Here
+If you are building an older **Non-Hybrid** Dual Direct-Drive X-Carriage \| [Click Here](Dual_Direct-Drive_X-Carriage.md "Dual Direct-Drive X-Carriage")
 
 ## (8) Hybrid X-Carriage
 
@@ -781,7 +781,7 @@ The extruder is attached to the X-Carriage using 2 x M4 16mm Screws (Bag 14).
 
 ### (21.2) BigBox Non-Titan Direct-Drive Extruder.
 
-Please refer to the \[[Non-Titan Extruder Assembly instructions](BigBox_Printer_Sub-assemblies.md)\]
+Please refer to the [Non-Titan Extruder Assembly instructions](BigBox_Printer_Sub-assemblies.md#5-hybrid-non-titan-extruder-direct)
 
 The extruder is attached to the X-Carriage using 2 x M4 16mm Screws (Bag 14).
 
@@ -1610,7 +1610,7 @@ If you have the OctoPrint Upgrade you'll have the extra camera FFC.
 
 *Base.*
 
-Take the previously assembled \[BigBox_Printer_Sub-assemblies#Base_Assembly\|Base Assembly\]\], and with the BigBox on it's side, align the base to the frame.
+Take the previously assembled [Base Assembly](BigBox_Printer_Sub-assemblies.md#12-base-assembly), and with the BigBox on it's side, align the base to the frame.
 
 ![Base_install_psu.jpg](../docs/images/Base_install_psu.jpg)
 
