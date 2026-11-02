@@ -75,6 +75,10 @@ run = [
   "markdownlint-cli2 \"**/*.md\"",
 ]
 
+[tasks.suspicious]
+description = "Look for malformed links, thin sections and sections that shrank since an older wiki version (reports only; see scripts/suspicious.py)"
+run = "python3 -I scripts/suspicious.py --warnings"
+
 [tasks.build]
 description = "Everything: build docs/ and manual/ from the reviewed data, then run the checks"
 run = [

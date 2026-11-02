@@ -71,7 +71,7 @@ def extract(h):
 from sections import HEADING, embedded_sections, thumb_file
 from drawings_page import drawings_page
 import manual_parts
-from targets import MANUAL_PART_NAMES
+from targets import MANUAL_PART_NAMES, NO_DRAWING_NAMES
 import truth
 SHEETS = truth.load_truth()   # the reviewed per-sheet data (data/sheets/*.json): the build reads this and nothing the tools propose
 _bad = truth.all_problems(SHEETS)
@@ -219,7 +219,7 @@ def add_drawing_parts(body, sheets, sections_by_image, manual_entries=()):
     printed = [(d, sec, r) for d, sec, r in rows if truth.key(r['description']) in PRINTED]   # compared the way drift compares names: spacing and case do not matter
     tr = ''.join(f'<tr><td>{esc(r["part"])}</td><td>{"~" if r.get("approx") else ""}{r["qty"]}</td><td>{"printed" if truth.key(r["description"]) == PRINTED_PART else "from the Printed Parts Box"}</td>'
                  f'<td>{d}</td><td>{sec or "–"}</td></tr>' for d, sec, r in printed)
-    tr += ''.join(f'<tr><td>{esc(g["part"])}</td><td>{g["qty"]}</td><td>{manual_parts.CONTAINER_LABEL[g["container"]]}</td><td>no drawing</td><td>{"; ".join(f'<a href="{pg}.html{"#" + esc(sid) if sid else ""}">{esc(txt)}</a>' for pg, sid, txt in g["steps"])}</td></tr>' for g in no_drawing)
+    tr += ''.join(f'<tr><td>{esc(NO_DRAWING_NAMES.get(g["part"], g["part"]))}</td><td>{g["qty"]}</td><td>{manual_parts.CONTAINER_LABEL[g["container"]]}</td><td>no drawing</td><td>{"; ".join(f'<a href="{pg}.html{"#" + esc(sid) if sid else ""}">{esc(txt)}</a>' for pg, sid, txt in g["steps"])}</td></tr>' for g in no_drawing)
     printed_note = note[:-len('</em></p>')] + ' Printed parts that the manual\'s own step lists name but that no drawing covers are added at the end, marked no drawing.</em></p>'
     printed_html = printed_note + f'<table><thead><tr><th>Part</th><th>Qty</th><th>Source</th><th>Drawing</th><th>Build section</th></tr></thead><tbody>{tr}</tbody></table>'
     fixings = {}
@@ -243,10 +243,20 @@ def mark_dead(body):
         return f'{inner} <em>(dead link{archived})</em>'
     return re.sub(r'<a\b([^>]*?)\bhref="(https?://[^"]+)"([^>]*)>(.*?)</a>', repl, body, flags=re.S)
 
+def typed_links(body):
+    """Wiki links the author typed by hand as text, [Page#Section|text]], and an empty [[]], which is dropped with its line."""
+    def link(m):
+        t = local.get(m.group(1).lower())
+        ids = re.findall(r'id="([^"]*_' + re.escape(m.group(2)) + r')"', pages.get(t, ''))
+        return f'<a href="/wiki/{t}#{ids[0]}">{m.group(3)}</a>' if t and len(ids) == 1 else m.group(0)
+    body = re.sub(r'\[([^\[\]#|\s<]+)#([^\[\]|\s<]+)\|([^\[\]<]+)\]\]?', link, body)
+    return re.sub(r'<dd>[^<]*\[\[\]\][^<]*</dd>\s*', '', body)
+
 def fix_links(body, to_anchor):
+    body = typed_links(body)
     def repl(m):
         href = html.unescape(m.group(1)); frag = ''
-        if '#' in href: href, frag = href.split('#', 1); frag = '#' + frag
+        if '#' in href: href, frag = href.split('#', 1); frag = '#' + re.split(r'%7C|\|', frag, maxsplit=1, flags=re.I)[0]   # [url#Section|text]: the author typed wiki piped-link syntax in an external link, so the text is glued to the anchor
         m2 = re.match(r'(?:https?://wiki\.e3d-online\.com)?/(?:wiki/)?(?!images/|resources/|index\.php|web/)([^?#]+)$', href)   # /wiki/Title (2016) and /Title (2019+)
         if m2:
             t = urllib.parse.unquote(m2.group(1)).replace(' ', '_')
@@ -257,6 +267,7 @@ def fix_links(body, to_anchor):
         if href.startswith('/web/'): return f'href="https://web.archive.org{html.escape(href)}{frag}"'
         return m.group(0)
     body = re.sub(r'href="([^"]+)"', repl, body)
+    body = re.sub(r'\[(<a\b[^>]*\bhref="(?!https?:)[^"]*"[^>]*>[^<]*</a>)\]', r'\1', body)   # the same typo leaves literal [ ] around a link to a page of this manual
     return mark_dead(re.sub(r'<a\b[^>]*href="#unarchived-page"[^>]*>(.*?)</a>', r'\1', body, flags=re.S))   # plain text, not a link
 
 os.makedirs(f'{SITE}/files', exist_ok=True)   # wiki-hosted PDF datasheets (see fetch_files.py / appendix.py)

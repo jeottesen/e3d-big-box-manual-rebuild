@@ -8,6 +8,8 @@ Their text was rebuilt from older versions of the pages that used to contain the
 - Non-Titan_Idler_Arms: rebuilt from BigBox_Parts_Preparation 20160807071206 (9 lines)
 - Single_&_Dual_Direct-Drive_IR_Sensor_Bracket: rebuilt from BigBox_Parts_Preparation 20160807071206 (6 lines)
 - Single_Direct-Drive_Extruder: found as a real page under a later URL form (capture 20191220164342)
+- Single_Direct-Drive_X-Carriage: rebuilt from Printer_main_assemblies:_Step_By_Step_Assembly_Process 20160729070751 (23 lines)
+- Dual_Direct-Drive_X-Carriage: rebuilt from Printer_main_assemblies:_Step_By_Step_Assembly_Process 20160729070751 (30 lines)
 - Mesh_Levelling_the_Non-Hybrid_Dual: rebuilt from Printer_Commissioning 20160811132429 (29 lines)
 - Non-Hybrid_Dual_Calibrating_Z_Offset: rebuilt from Printer_Commissioning 20160811132429 (47 lines)
 

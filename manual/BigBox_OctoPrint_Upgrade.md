@@ -330,6 +330,4 @@ Swap to the **Control** tab to see the printer do it's magic.
 
 Back to [Your First Print](Your_First_Print.md "Your First Print")
 
-Continue to the \[\[\]\]
-
 Home to the [BigBox Build Manual Main Index](BigBox_Build_Manual.md "BigBox Build Manual")

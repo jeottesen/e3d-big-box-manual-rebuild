@@ -98,6 +98,7 @@ class BuiltPages(unittest.TestCase):
         bom = PAGES['Bill_Of_Materials']
         section = bom[bom.index('id="Printed_Parts"'):bom.index('id="Fixings"')]
         table = section[section.index('<table>'):]   # the note above it links to the page of all the drawings, which is not a step
+        table = ''.join(r for r in re.findall(r'<tr>.*?</tr>', table, re.S) if 'no drawing' not in r)   # those rows link the step that lists the part
         links = set(re.findall(r'href="([^"]+\.html(?:#[^"]*)?)"', table))
         self.assertTrue(links)
         self.assertEqual(sorted(l for l in links if l not in allowed), [])

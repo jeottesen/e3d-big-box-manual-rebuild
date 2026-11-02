@@ -9,6 +9,8 @@ TARGETS = {
     'Non-Titan_Idler_Arms': (['BigBox_Parts_Preparation'], r'(non.titan )?single (&|and) dual extruder filament idlers'),
     'Single_&_Dual_Direct-Drive_IR_Sensor_Bracket': (['BigBox_Parts_Preparation'], r'single (&|and) dual direct.drive ir sensor bracket'),
     'Single_Direct-Drive_Extruder': (['BigBox_Printer_Sub-assemblies'], r'single direct.drive extruder'),
+    'Single_Direct-Drive_X-Carriage': (['Printer_main_assemblies:_Step_By_Step_Assembly_Process'], r'^(\(6\) )?single direct.drive x.carriage$'),
+    'Dual_Direct-Drive_X-Carriage': (['Printer_main_assemblies:_Step_By_Step_Assembly_Process'], r'^(\(7\) )?dual direct.drive x.carriage$'),
     'Mesh_Levelling_the_Non-Hybrid_Dual': (['Printer_Commissioning'], r'mesh levelling the (non.hybrid )?dual'),
     'Non-Hybrid_Dual_Calibrating_Z_Offset': (['Printer_Commissioning'], r'(non.hybrid )?dual calibrating z.?offset|calibrating z.?offset dual'),
 }
@@ -24,6 +26,10 @@ APPENDIX = [
      'Early single-extruder profile. ' + NOTE_LINKS),
     ('Slic3r alpha profile (older First Print page)', 'Your_First_Print', r'^Slic3r$', 'alpha release',
      'Early single-extruder profile. ' + NOTE_LINKS),
+    ('Hybrid Titan extruder steps (older Step By Step page)', 'Printer_main_assemblies:_Step_By_Step_Assembly_Process',
+     r'^(\(21\.1\) )?Titan Extruder\.?$', 'Pinion Gear Grub Screw',
+     'The Titan extruder bracket, nuts, motor and lid steps, as written in section (21.1) until June 2016, when they were replaced by a link to the Sub-assemblies page. '
+     'Only the gear spacing note was kept there. The photos of these steps were never archived.'),
 ]
 
 # Wiki-hosted PDF datasheets that apply to the BigBox (V6 hotend, NEMA17 motors, DC fans).
@@ -131,6 +137,9 @@ OCR_FIXES = {
 # one corner of the four of the Z bed. A printed part the manual names that is not here has no drawing and is added from the manual.
 # Checked against the drawings by the maintainer: the right cable bracket, the belt tensioner, the dock and the three Z-bed parts are the same parts. The manual's
 # Spool Inner Brackets are NOT the SPOOL-HOLDER INNER drawing (they look different), so they have no drawing.
+# Names for parts that have no drawing, where the manual's name is not the one the part goes by (the printed parts package names it so).
+# 'Bearing Clamps' (dual carriage) is the larger version of the X-AXIS CARRIAGE BEARING CLAMP, checked by the maintainer.
+NO_DRAWING_NAMES = {'Bearing Clamps': 'X-AXIS CARRIAGE BEARING CLAMP DUAL'}
 MANUAL_PART_NAMES = {
     'Right Cable Bracket': ('img-EXTRUDER_DUAL', 'E-AXIS CABLE BRACKET (DUAL)(R)'),
     'Belt Tensioner': ('pdf-22', 'X-AXIS BELT-TENSIONER'),

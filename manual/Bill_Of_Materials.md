@@ -212,6 +212,7 @@ Embedded Plastic Bowden Coupler, two parts.
 | Black Spring | 1 | from the Printed Parts Bag | no drawing | [(21.11.2) Non-Titan Direct-Drive Bowden System](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#21112-non-titan-direct-drive-bowden-system) |
 | Hobgoblin | 1 | from the Printed Parts Bag | no drawing | [(21.11.2) Non-Titan Direct-Drive Bowden System](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#21112-non-titan-direct-drive-bowden-system) |
 | Y-Axis Endstop | 1 | printed | no drawing | [(29) Y-Axis Frame Endstop](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#29-y-axis-frame-endstop) |
+| X-AXIS CARRIAGE BEARING CLAMP DUAL | 2 | printed | no drawing | [Dual Direct-Drive X-Carriage](Dual_Direct-Drive_X-Carriage.md) |
 
 ## Fixings
 
