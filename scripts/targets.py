@@ -48,7 +48,7 @@ def gh(repo, path='', kind='blob', ref='master'):
 # The original CAD assemblies the printed parts' STEP files were cut from: (file, where it can be downloaded, what it holds, licence).
 # The files themselves are not stored here (see downloads/printed-parts/). They are from E3D's BigBox design files on Thingiverse (thing 1521722, by
 # Bigbox3DP), which the wiki's main page links. That page says CC BY-SA 3.0 (the archived copy of 2016-12-04 links creativecommons.org/licenses/by-sa/3.0/)
-# and offers STEP.zip; which of the files named here are inside it was not checked. The maintainer gave this source and licence on 2026-11-02.
+# and offers STEP.zip. The maintainer downloaded it from Thingiverse and confirmed that the files named here are in it and that the licence is right (2026-11-02/03).
 # tests/test_printed_parts.py fails if a source or licence is missing, so the parts are not published without them.
 UNRECORDED = 'source and licence not yet recorded'
 THINGIVERSE = 'https://www.thingiverse.com/thing:1521722'
