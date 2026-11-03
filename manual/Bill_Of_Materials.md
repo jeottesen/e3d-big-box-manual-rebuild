@@ -13,7 +13,7 @@ Archived 20210416002713 · source: wiki.e3d-online.com/wiki/Bill_Of_Materials ·
 - [E3D HotEnd(s)](#e3d-hotends)
 - [Wiring](#wiring)
 - [Printed Parts](#printed-parts)
-- [Not Printed](#not-printed)
+- [General](#general)
 - [Fixings](#fixings)
 - [OctoPrint Upgrade Extras](#octoprint-upgrade-extras)
 - [Where next?](#where-next)
@@ -225,19 +225,88 @@ Embedded Plastic Bowden Coupler, two parts.
 | Top Camera Bracket | – | – | [(22) OctoPrint Upgrade Camera Install](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#22-octoprint-upgrade-camera-install) | [STEP](../downloads/printed-parts/parts/Top-Camera-Bracket.step) |
 | X-CARRIAGE DUAL | – | – | [(8) Dual X-Carriage](BigBox_Parts_Preparation.md#8-dual-x-carriage) | [STEP](../downloads/printed-parts/parts/X-CARRIAGE-DUAL.step) |
 
-## Not Printed
+## General
 
-*These come in the Printed Parts Box or Bag but are not 3D printed.*
+*Everything in the kit that is not a fixing, by product, from E3D's Bill of Materials spreadsheet.*
 
-| Part | Qty | Source | Drawing | Build section |
-| --- | --- | --- | --- | --- |
-| Y-AXIS BACK (L) CORK (Self Adhesive) | 1 | Printed Parts Box | [y-axis rear](../docs/images/Y-AXIS_REAR.jpg) (sheet 1) | [(1) Y-Axis Rear Brackets (Left & Right)](BigBox_Parts_Preparation.md#1-y-axis-rear-brackets-left--right) |
-| Y-AXIS FRONT CORK (L & R) (Self Adhesive) | 1 | Printed Parts Box | [y-axis front](../docs/images/Y-AXIS_FRONT.jpg) (sheet 2) | [(2) Y-Axis Front Brackets (Left & Right)](BigBox_Parts_Preparation.md#2-y-axis-front-brackets-left--right) |
-| Y-MOTOR MOUNT CORK (Self Adhesive) | 1 | Printed Parts Box | [y-axis motor](../docs/images/Y-AXIS_MOTOR.jpg) (sheet 27) | [(14) Y-Axis Motor Mount](BigBox_Parts_Preparation.md#14-y-axis-motor-mount) |
-| Cork Pads | 2 | Printed Parts Box | – | [(17.4) Z-Axis Motors](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#174-z-axis-motors) |
-| Embedded Bowden Coupler | 1 | Printed Parts Bag | – | [(21.11.2) Non-Titan Direct-Drive Bowden System](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#21112-non-titan-direct-drive-bowden-system) |
-| Black Spring | 1 | Printed Parts Bag | – | [(21.11.2) Non-Titan Direct-Drive Bowden System](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#21112-non-titan-direct-drive-bowden-system) |
-| Hobgoblin | 1 | Printed Parts Bag | – | [(21.11.2) Non-Titan Direct-Drive Bowden System](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#21112-non-titan-direct-drive-bowden-system) |
+| Category | Sub-Category | Location | Component | Lite | Pro | Dual | Build section |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Electronics | Cabling | E3D Extruder Box | PT100 Single amp cable | 1 | 1 | 0 | – |
+| Electronics | Cabling | E3D Extruder Box | PT100 Double amp cable | 0 | 0 | 1 | – |
+| Electronics | PCB | E3D Extruder Box | PT100 Amp | 1 | 1 | 2 | – |
+| Electronics | Sensors | E3D Extruder Box | PT100 (1700mm Cable) | 1 | 1 | 2 | – |
+| Electronics | Cable | Electronics & wiring | Link | 1 | 1 | 1 | – |
+| Electronics | Cable | Electronics & wiring | PSU to Rumba | 2 | 2 | 2 | – |
+| Electronics | Cable | Electronics & wiring | IEC to PSU (Mains to PSU (300mm)) | 1 | 1 | 1 | – |
+| Electronics | Cable | Electronics & wiring | Bed Wiring Loom | 1 | 1 | 1 | – |
+| Electronics | Cabling | Electronics & wiring | IR Endstop Cable | 1 | 1 | 1 | – |
+| Electronics | IEC | Electronics & wiring | IEC Socket with Fuse | 1 | 1 | 1 | – |
+| Electronics | PCB | Electronics & wiring | Rumba | 1 | 1 | 1 | – |
+| Electronics | PCB | Electronics & wiring | A4988 | 4 | 4 | 5 | – |
+| Electronics | PSU | Electronics & wiring | PSU | 1 | 1 | 1 | – |
+| Electronics | Sensors | Electronics & wiring | IR Sensor | 1 | 1 | 1 | – |
+| Electronics | Sensors | Electronics & wiring | EndStops MicroSwitch (with Cable) | 2 | 2 | 2 | – |
+| Electronics | Print Related | Heated Bed | Heated Bed | 0 | 1 | 1 | – |
+| Electronics | Sensors | Heated Bed | Bed Thermistor Semitec | 0 | 1 | 1 | – |
+| Electronics | PCB | LCD & fans | LCD | 1 | 1 | 1 | – |
+| Electronics | Cable | Motor Box | Z-Motor Cable (300mm) | 1 | 1 | 1 | – |
+| Electronics | Cable | Motor Box | E-Motor Cable (1500mm) | 1 | 1 | 1 | – |
+| Electronics | Cable | Motor Box | Y-Motor Cable (1000mm) | 1 | 1 | 1 | – |
+| Electronics | Cable | Motor Box | X-Motor Cable (1500mm) | 1 | 1 | 1 | – |
+| Electronics | Cabling | Stretch Box | Panel Mount USB Extension | 1 | 1 | 1 | – |
+| Extrusion System | Extruder | E3D Extruder Box | Nitrile 70 O-Rings 12mm ID 17 OD | 0 | 0 | 2 | – |
+| Extrusion System | Extruder | E3D Extruder Box | E3D HobGoblin (5mm) (M3 x 4 Grub) | 1 | 1 | 2 | [(21.11.2) Non-Titan Direct-Drive Bowden System](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#21112-non-titan-direct-drive-bowden-system) |
+| Extrusion System | HotEnd | E3D Extruder Box | E3D V6 Lite (Direct, 24V, PT100 Block, No Electronics) | 1 | 0 | 0 | – |
+| Extrusion System | HotEnd | E3D Extruder Box | E3D V6 (Direct, 24V, PT100 Block, No Electronics) | 0 | 1 | 2 | – |
+| Extrusion System | HotEnd | E3D Extruder Box | Heater Cartridge | 1 | 1 | 2 | – |
+| Extrusion System | PTFE | E3D Extruder Box | Embedded Bowden Coupling for Plastic | 1 | 1 | 2 | [(21.11.2) Non-Titan Direct-Drive Bowden System](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#21112-non-titan-direct-drive-bowden-system) |
+| Extrusion System | PTFE | E3D Extruder Box | 4mm x 3mm x 1000mm PTFE Filament Guide | 1 | 1 | 2 | – |
+| Fans | Case | LCD & fans | 60x60x10 24v (300mm lead w/ 4mm fork ferrule) | 1 | 1 | 1 | – |
+| Fans | Electronics | LCD & fans | 50x50x10 24v (250mm lead w/ 0.1" connector) | 1 | 1 | 1 | – |
+| Fans | Print Related | LCD & fans | 40x40x20 Blower 24v (1700mm lead w/ 0.1" connector) | 1 | 1 | 2 | – |
+| Fans | Print Related | LCD & fans | 30x30x10 24v (1700mm lead w/ 0.1" connector) | 1 | 1 | 2 | – |
+| Fixings | – | Fixings Kit | BigBox Fixings Kit (See Fixings BOM for breakdown) | 1 | 1 | 1 | – |
+| Fixings | – | Stretch Box | BigBox M3 Nut Traps | 160 | 160 | 160 | – |
+| Frame | Sheet Material | Frame/Frame Kit | Laser Cut Acrylic / Plywood Frame | – | – | – | – |
+| Frame | Sheet Material | Printed Parts | Laser Cut Cork Dampener Parts | 1 | 1 | 1 | [(1) Y-Axis Rear Brackets (Left & Right)](BigBox_Parts_Preparation.md#1-y-axis-rear-brackets-left--right); [(2) Y-Axis Front Brackets (Left & Right)](BigBox_Parts_Preparation.md#2-y-axis-front-brackets-left--right); [(14) Y-Axis Motor Mount](BigBox_Parts_Preparation.md#14-y-axis-motor-mount); [(17.4) Z-Axis Motors](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#174-z-axis-motors) |
+| Miscellaneous | Extruder | E3D Extruder Box | Filament-Idler Spring | 1 | 1 | 2 | [(21.11.2) Non-Titan Direct-Drive Bowden System](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#21112-non-titan-direct-drive-bowden-system) |
+| Miscellaneous | Print Related | E3D Extruder Box | Viton A Rubber Strip (1.5 x 12) 40mm | 1 | 1 | 0 | – |
+| Miscellaneous | Print Related | E3D Extruder Box | Viton A Rubber Strip (1.5 x 12) 77mm | 0 | 0 | 1 | – |
+| Miscellaneous | PTFE | E3D Extruder Box | V6 Direct PTFE tubing (2mm x 4mm) | 1 | 1 | 2 | – |
+| Miscellaneous | Spool Holder | E3D Extruder Box | Spring (spool holder) | 1 | 1 | 2 | – |
+| Miscellaneous | Print Related | Heated Bed | Adhesive Sheet 3M 467MP | 1 | 1 | 1 | – |
+| Miscellaneous | Print Related | Heated Bed | Glass Bed | 1 | 1 | 1 | – |
+| Miscellaneous | Print Related | Heated Bed | Cork Insulation | 0 | 1 | 1 | – |
+| Miscellaneous | Cable Management | Motion Box | Drag Chain 400mm | 1 | 2 | 2 | – |
+| Miscellaneous | Print Related | Stretch Box | Glass Bed Clips | 8 | 8 | 8 | – |
+| Motion System | Bearings | E3D Extruder Box | 604-ZZ (4x12x4) | 1 | 1 | 2 | – |
+| Motion System | Bearings | Motion Box | F604 (4x12x4 Flange-13.5) | 6 | 6 | 6 | – |
+| Motion System | Bearings | Motion Box | 634ZZ (4x16x5) | 9 | 9 | 18 | – |
+| Motion System | Bearings | Motion Box | 688-ZZ (8x16x5) | 2 | 2 | 2 | – |
+| Motion System | Bearings | Motion Box | LM8LUU (8x45) | 8 | 8 | 8 | – |
+| Motion System | Belts & Pulleys | Motion Box | 66 Tooth (132mm) GT2 Loop Belt | 1 | 1 | 1 | – |
+| Motion System | Belts & Pulleys | Motion Box | GT2 6mm Belt (3000mm) | 1 | 1 | 1 | – |
+| Motion System | Belts & Pulleys | Motion Box | GT2 16T (5mm) | 1 | 1 | 1 | – |
+| Motion System | Belts & Pulleys | Motion Box | GT2 20T (5mm) | 1 | 1 | 1 | – |
+| Motion System | Belts & Pulleys | Motion Box | GT2 20T (8mm) | 2 | 2 | 2 | – |
+| Motion System | Belts & Pulleys | Motion Box | GT2 36T (8mm) | 1 | 1 | 1 | – |
+| Motion System | Leadscrews & Nuts | Motion Box | 5mm – 8mm Couplers | 2 | 2 | 2 | – |
+| Motion System | Leadscrews & Nuts | Motion Box | TR8 Nut (4 x M3 Mounting Holes) | 2 | 2 | 2 | – |
+| Motion System | Leadscrews & Nuts | Rods | TR8 Leadscrew (347mm) | 2 | 2 | 2 | – |
+| Motion System | Rods | Rods | SiS. 532mm (Y) | 1 | 1 | 1 | – |
+| Motion System | Rods | Rods | GHSiS 484mm (X) | 2 | 2 | 2 | – |
+| Motion System | Rods | Rods | GHSiS 384mm (Y) | 2 | 2 | 2 | – |
+| Motion System | Rods | Rods | GHSiS 364mm (Z) | 4 | 4 | 4 | – |
+| Motion System | Rods | Rods | SiS 325mm (S) | 2 | 2 | 4 | – |
+| RPI Kit | Cable | Rasberry Pi Box | Panel Mount RJ45 Socket (600mm) | – | – | – | – |
+| RPI Kit | Cable | Rasberry Pi Box | USB A-Mini cable (~500mm) | – | – | – | – |
+| RPI Kit | Cable | Rasberry Pi Box | Short uUSB cable | – | – | – | – |
+| RPI Kit | Cable | Rasberry Pi Box | Rumba to DCDC Power In (300mm lead. 0.1” - Tinned) | – | – | – | – |
+| RPI Kit | PCB | Rasberry Pi Box | Raspberry Pi 2 + 8gb | – | – | – | – |
+| RPI Kit | PCB | Rasberry Pi Box | Camera & 750mm FFC Cable | – | – | – | – |
+| RPI Kit | PCB | Rasberry Pi Box | 5v DC DC Converter | – | – | – | – |
+| Stepper Motors | Stepper Motors | Motor Box | 46nm NEMA 17 (400 Steps) (Wantai 42BYGHM809L20P4.5-17-X2) | 3 | 3 | 4 | – |
+| Stepper Motors | Stepper Motors | Motor Box | 40nm NEMA 17 (200 Steps) (Wantai 42BYGHW609L20P1-X2) | 2 | 2 | 2 | – |
 
 ## Fixings
 
@@ -256,7 +325,6 @@ Embedded Plastic Bowden Coupler, two parts.
 | Fixings Bag 2 | M3 x 8 Countersunk Rec Platite 30 Screws BZP | 6 | 7 | [x-axis motor carriage](../docs/images/X-AXIS_MOTOR_CARRIAGE.jpg) (sheet 6), [z-axis drag chain (image)](../docs/images/Z-AXIS_DRAG_CHAIN.jpg) |
 | Fixings Bag 3 | M2 A2 S/S Half Nuts | 4 | 5 | – |
 | Fixings Bag 3 | M2 x 12 Socket Cap Screws | 8 | 9 | – |
-| Fixings Bag 3 | M3 Hex Nut | – | – | [x-axis motor carriage](../docs/images/X-AXIS_MOTOR_CARRIAGE.jpg) (sheet 6), [rear-right-back cable conduit](../docs/images/REAR-RIGHT-BACK_CABLE_CONDUIT.jpg) (sheet 29), [extruder hybrid non-titan direct (image)](../docs/images/EXTRUDER_HYBRID_NON-TITAN_DIRECT.jpg), [extruder hybrid titan direct (image)](../docs/images/EXTRUDER_HYBRID_TITAN_DIRECT.jpg) |
 | Fixings Bag 4 | M2 x 8 Socket Cap Screws | 2 | 3 | – |
 | Fixings Bag 4 | M2.5 MicroBarb | 4 | 5 | – |
 | Fixings Bag 4 | M2.5 Square Nut | 2 | 3 | [ir sensor assembly](../docs/images/IR_SENSOR_ASSEMBLY.jpg) (sheet 13) |
@@ -291,7 +359,7 @@ Embedded Plastic Bowden Coupler, two parts.
 | Fixings Bag 16 | Brass Standoff - Female Female M3 x 15 Full Thread | 4 | 5 | – |
 | Fixings Bag 16 | Nylon Spacer - 3-3.2mm ID x 6mm OD x 15 L | 2 | 3 | [extruder idler](../docs/images/EXTRUDER_IDLER.jpg) (sheet 4), [extruder hybrid non-titan direct (image)](../docs/images/EXTRUDER_HYBRID_NON-TITAN_DIRECT.jpg) |
 | Fixings Bag 16 | Nylon Washer - 8mm ID x 18mm OD x 1.6-1.8mm T | 2 | 3 | [y-axis rear assembly](../docs/images/Y-AXIS_REAR_ASSEMBLY.jpg) (sheet 18) |
-| Fixings Bag 17 | M3 x 3 Skt Grub Screws Knruled Point | 2 | 3 | [extruder single](../docs/images/EXTRUDER_SINGLE.jpg) (sheet 14), [extruder dual (image)](../docs/images/EXTRUDER_DUAL.jpg), [extruder hybrid non-titan direct (image)](../docs/images/EXTRUDER_HYBRID_NON-TITAN_DIRECT.jpg) |
+| Fixings Bag 17 | M3 x 3 Skt Grub Screws Knurled Point | 2 | 3 | [extruder single](../docs/images/EXTRUDER_SINGLE.jpg) (sheet 14), [extruder dual (image)](../docs/images/EXTRUDER_DUAL.jpg), [extruder hybrid non-titan direct (image)](../docs/images/EXTRUDER_HYBRID_NON-TITAN_DIRECT.jpg) |
 | Fixings Bag 17 | M4 x 20 Skt Cap Screws | 17 | 19 | [y-axis idler](../docs/images/Y-AXIS_IDLER.jpg) (sheet 3), [x-carriage single](../docs/images/X-CARRIAGE_SINGLE.jpg) (sheet 7), [spool-holder outer](../docs/images/SPOOL-HOLDER_OUTER.jpg) (sheet 10), [spool-holder inner](../docs/images/SPOOL-HOLDER_INNER.jpg) (sheet 11), [mount y-axis motor](../docs/images/MOUNT_Y-AXIS_MOTOR.jpg) (sheet 23) |
 | Fixings Bag 17 | M4 x 30 Skt Cap Screws | 5 | 6 | [x-axis idler carriage](../docs/images/X-AXIS_IDLER_CARRIAGE.jpg) (sheet 5), [extruder single](../docs/images/EXTRUDER_SINGLE.jpg) (sheet 14), [extruder dual (image)](../docs/images/EXTRUDER_DUAL.jpg), [extruder hybrid non-titan direct (image)](../docs/images/EXTRUDER_HYBRID_NON-TITAN_DIRECT.jpg), [spool-holder clamp (image)](../docs/images/SPOOL-HOLDER_CLAMP.jpg) |
 

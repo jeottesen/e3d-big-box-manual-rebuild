@@ -4,8 +4,9 @@ fixings the manual compiled from the exploded drawings.
 
 The Fixings sheet lists every fixing in the kit by bag: description, quantity required and quantity supplied. The Bill of Materials page shows that list,
 with the drawings that show each fixing beside it. A drawing's name for a fixing is matched to the sheet's by what it says (size, kind, finish ignored),
-and the few that differ in wording more than that are in ALIASES. A fixing the drawings show in another bag than the sheet lists it in is reported by
-`bag_conflicts`; the page shows the sheet's bag, which agrees with the bags the manual's own steps name.
+and the few that differ in wording more than that are in ALIASES. The sheet is trusted over the drawings: the page shows its bags, quantities and
+names, and a fixing only the drawings show (their text was read by OCR for the image-only sheets) is not listed. The General sheet is the list of
+everything else in the kit, by product (Lite, Pro, Dual).
 
 Standard library only (an .ods file is a zip of XML).  Run:  python3 -I scripts/bom_ods.py   (lists the matches and the conflicts)
 """
@@ -45,13 +46,13 @@ def fixings(path=ODS):
     out = []
     for r in sheet('Fixings', path):
         if len(r) >= 5 and r[1].strip().isdigit():
-            out.append({'bag': int(r[1]), 'description': r[2].strip(), 'required': int(r[3]), 'supplied': int(r[4])})
+            out.append({'bag': int(r[1]), 'description': r[2].strip().replace('Knruled', 'Knurled'), 'required': int(r[3]), 'supplied': int(r[4])})   # a typo in the sheet
     return out
 
 
 def signature(name):
     """What a fixing's name says, without the wording around it: a set of words (size, kind, 'half'...), the finish and the plural left out."""
-    s = name.lower().replace('skt', 'socket').replace('csk', 'countersunk').replace('knruled', 'knurled')
+    s = name.lower().replace('skt', 'socket').replace('csk', 'countersunk')
     s = re.sub(r'platite 30|a2 s/s|\ba2\b|\bbzp\b|\brec\b', ' ', s)
     words = [w[:-1] if w in ('nuts', 'screws', 'washers', 'standoffs') else w for w in re.split(r'[\s()\-,/]+', s) if w]
     return frozenset(w for w in words if w not in ('x', 'a'))
@@ -68,10 +69,13 @@ def match(drawn, official):
     return out
 
 
-def bag_conflicts(drawn, official):
-    """[(drawn name, bag the drawing gives, bag the sheet gives)] for matched fixings that the two put in different bags. drawn: {name: bag number}."""
-    m = match(drawn, official)
-    return [(n, drawn[n], m[n]['bag']) for n in drawn if n in m and drawn[n] != m[n]['bag']]
+def general(path=ODS):
+    """[{category, sub, location, component, lite, pro, dual}] from the General sheet, in the sheet's order (a quantity the sheet leaves empty is '')."""
+    out = []
+    for r in sheet('General', path)[2:]:   # the first two rows are the headings
+        r = r + [''] * (7 - len(r))
+        out.append(dict(zip(('category', 'sub', 'location', 'component', 'lite', 'pro', 'dual'), (c.strip() for c in r[:7]), strict=True)))
+    return out
 
 
 def main():
@@ -85,8 +89,7 @@ def main():
     print(f'{len(off)} fixings on the sheet; {len(drawn)} named by the drawings, {len(m)} matched')
     for n in sorted(drawn):
         if n not in m: print('  not on the sheet:', n)
-    for n, d, o in bag_conflicts(drawn, off): print(f'  bag differs: {n}: drawing {d}, sheet {o}')
-    print('  only on the sheet:', len([o for o in off if o not in m.values()]))
+    print('  only on the sheet:', len([o for o in off if o not in m.values()]), '; General sheet rows:', len(general()))
     return 0
 
 

@@ -1,5 +1,5 @@
 """The printed parts the manual's own step lists name (scripts/manual_parts.py), and the reviewed list in data/manual_parts.json."""
-import os, re, unittest
+import html, os, re, unittest
 from helpers import ROOT
 import manual_parts as mp
 import truth
@@ -68,7 +68,7 @@ class Group(unittest.TestCase):
         self.assertEqual(mp.group([self.entry('C', 1), self.entry('C', 2)], {})[1][0]['qty'], 2)
 
 # ---- the table in targets.py and the manual
-from targets import MANUAL_PART_NAMES, NO_DRAWING_NAMES, NOT_PRINTED
+from targets import MANUAL_PART_NAMES, NO_DRAWING_NAMES, GENERAL_ROWS
 PAGES = mp.read_pages()
 FOUND = mp.scan(PAGES)
 SHEETS = truth.load_truth()
@@ -102,6 +102,7 @@ class InTheBom(unittest.TestCase):
     def test_every_part_without_a_drawing_is_a_row_linked_to_its_step(self):
         _, table = bom_rows()
         for g in mp.group(FOUND, MANUAL_PART_NAMES)[1]:
+            if NO_DRAWING_NAMES.get(g['part'], g['part']) in GENERAL_ROWS: continue   # not printed: in the General table, under the sheet's name
             row = re.search(rf'<tr><td>{re.escape(NO_DRAWING_NAMES.get(g["part"], g["part"]).replace("&", "&amp;"))}</td>.*?</tr>', table)
             self.assertTrue(row, g['part'])
             self.assertRegex(row.group(0), r'<td>[^<]*</td><td>–</td><td><a ')   # a dash where the drawing would be, then the step
@@ -115,18 +116,18 @@ class InTheBom(unittest.TestCase):
             self.assertEqual(int(row.group(1)), e['qty'], part)                       # the manual's quantity (4 corners of the Z bed), not the drawing's 1
             if e['part'] != part: self.assertNotIn(f'<td>{e["part"]}</td>', table, e['part'])   # one name: the drawing's, not also the manual's
 
-    def test_the_printed_parts_keep_the_wikis_heading_and_what_is_not_printed_has_its_own(self):
+    def test_the_printed_parts_keep_the_wikis_heading_and_the_sheets_general_list_follows(self):
         bom, _ = bom_rows()
         self.assertIn('id="Printed_Parts">Printed Parts<', bom)
-        self.assertIn('id="Not_Printed_Parts">Not Printed<', bom)
+        self.assertIn('id="General">General<', bom)
 
-    def test_items_that_are_not_printed_say_which_box_or_bag_they_come_from(self):
+    def test_each_part_that_is_not_printed_links_its_step_on_the_row_the_sheet_gives_it(self):
         bom, _ = bom_rows()
-        other = bom[bom.index('id="Not_Printed_Parts"'):bom.index('id="Fixings"')]
+        general = bom[bom.index('id="General"'):bom.index('id="Fixings"')]
         for g in mp.group(FOUND, MANUAL_PART_NAMES)[1]:
             name = NO_DRAWING_NAMES.get(g['part'], g['part'])
-            if name not in NOT_PRINTED: continue
-            row = re.search(rf'<tr><td>{re.escape(name)}</td>.*?</tr>', other).group(0)
-            self.assertIn(f'<td>{mp.CONTAINER_LABEL[g["container"]]}</td>', row)
+            if name not in GENERAL_ROWS: continue
+            row = re.search(rf'<tr>(?:<td>[^<]*</td>){{3}}<td>{re.escape(html.escape(GENERAL_ROWS[name]))}</td>.*?</tr>', general).group(0)
+            for page, _, _ in g['steps']: self.assertIn(f'{page}.html', row, name)
 
 if __name__ == '__main__': unittest.main()

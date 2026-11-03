@@ -71,7 +71,7 @@ def extract(h):
 from sections import HEADING, embedded_sections, thumb_file
 from drawings_page import drawings_page
 import manual_parts
-from targets import MANUAL_PART_NAMES, NO_DRAWING_NAMES, NOT_PRINTED
+from targets import MANUAL_PART_NAMES, NO_DRAWING_NAMES, GENERAL_ROWS
 import printed_parts
 import bom_ods
 import truth
@@ -221,7 +221,7 @@ def add_drawing_parts(body, sheets, sections_by_image, manual_entries=(), headin
     def final_name(g): return NO_DRAWING_NAMES.get(g['part'], g['part'])
     names = [r['part'] for _, _, r in printed] + [final_name(g) for g in no_drawing]
     main_files, alternates, mirrors, extras = printed_parts.classify(printed_parts.load(), names)   # the STEP files, matched to the rows by name
-    not_printed = {truth.key(n) for n in NOT_PRINTED}
+    in_general = {truth.key(n) for n in GENERAL_ROWS}
     own_files = {**main_files, **{r['name']: r for r in extras}}   # a file with no row of its own is listed under its own name
     def step(n):
         links = ([f'<a href="{printed_parts.href(own_files[n])}">STEP</a>'] if n in own_files else []) \
@@ -237,34 +237,42 @@ def add_drawing_parts(body, sheets, sections_by_image, manual_entries=(), headin
     listed = [(r['part'], f'{"~" if r.get("approx") else ""}{r["qty"]}', 'printed' if truth.key(r['description']) == PRINTED_PART else 'Printed Parts Box', d, sec or '–') for d, sec, r in printed]
     listed += [(final_name(g), str(g['qty']), manual_parts.CONTAINER_LABEL[g['container']], '–', steps_of(g)) for g in no_drawing]
     listed += [(r['name'], '–', 'printed', '–', where(r)) for r in extras]
-    def table(rows, with_step):   # the printed parts have a STEP column and no Source column (all are printed); the others say which box or bag they come in
-        head = '<th>Part</th><th>Qty</th>' + ('' if with_step else '<th>Source</th>') + '<th>Drawing</th><th>Build section</th>' + ('<th>STEP</th>' if with_step else '')
-        return '<table><thead><tr>' + head + '</tr></thead><tbody>' + ''.join(
-            f'<tr><td>{esc(n)}</td><td>{q}</td>' + ('' if with_step else f'<td>{src}</td>') + f'<td>{d}</td><td>{sec}</td>' + (f'<td>{step(n)}</td>' if with_step else '') + '</tr>' for n, q, src, d, sec in rows) + '</tbody></table>'
-    printed_rows = [row for row in listed if truth.key(row[0]) not in not_printed]
-    other_rows = [row for row in listed if truth.key(row[0]) in not_printed]
+    def table(rows):
+        return '<table><thead><tr><th>Part</th><th>Qty</th><th>Drawing</th><th>Build section</th><th>STEP</th></tr></thead><tbody>' + ''.join(
+            f'<tr><td>{esc(n)}</td><td>{q}</td><td>{d}</td><td>{sec}</td><td>{step(n)}</td></tr>' for n, q, _src, d, sec in rows) + '</tbody></table>'
+    printed_rows = [row for row in listed if truth.key(row[0]) not in in_general]
+    general_rows = [row for row in listed if truth.key(row[0]) in in_general]
     printed_note = note
     mirrored = '; '.join(f'{esc(printed_parts.bom_name(r))} was made by mirroring the (L) part' if 'made by mirroring' in r['notes']
                          else f'{esc(printed_parts.bom_name(r))} is the mirror image of the (L) part' for r in mirrors.values())
     step_note = ('<p><em>The STEP files were sourced from the BigBox design files listed on <a href="Downloads.html">Downloads</a>.' + (f' {mirrored}.' if mirrored else '') + '</em></p>')
-    other_html = ('<h3><span class="mw-headline" id="Not_Printed_Parts">Not Printed</span></h3>'
-                  '<p><em>These come in the Printed Parts Box or Bag but are not 3D printed.</em></p>' + table(other_rows, False)) if other_rows else ''
-    printed_html = printed_note + step_note + table(printed_rows, True) + other_html
+    # the General sheet of E3D's spreadsheet, with the build sections of the parts that are in it (several parts of ours can be one item of the sheet)
+    sheet_general = bom_ods.general()
+    to_row = {truth.key(k): v for k, v in GENERAL_ROWS.items()}
+    unknown = sorted({v for v in GENERAL_ROWS.values()} - {g['component'] for g in sheet_general})
+    if unknown: sys.exit(f'GENERAL_ROWS names rows that are not on the General sheet: {unknown}')
+    sections_of_row = {}
+    for name, _q, _src, _d, sec in general_rows:
+        for link in re.findall(r'<a .*?</a>', sec):
+            if link not in sections_of_row.setdefault(to_row[truth.key(name)], []): sections_of_row[to_row[truth.key(name)]].append(link)
+    general_tr = ''.join(f'<tr><td>{esc(g["category"])}</td><td>{esc(g["sub"]) or "–"}</td><td>{esc(g["location"])}</td><td>{esc(g["component"])}</td>'
+                         f'<td>{g["lite"] or "–"}</td><td>{g["pro"] or "–"}</td><td>{g["dual"] or "–"}</td><td>{"; ".join(sections_of_row.get(g["component"], [])) or "–"}</td></tr>' for g in sheet_general)
+    general_html = ('<h3><span class="mw-headline" id="General">General</span></h3><p><em>Everything in the kit that is not a fixing, by product, from E3D\'s Bill of Materials spreadsheet.</em></p>'
+                    '<table><thead><tr><th>Category</th><th>Sub-Category</th><th>Location</th><th>Component</th><th>Lite</th><th>Pro</th><th>Dual</th><th>Build section</th></tr></thead>'
+                    f'<tbody>{general_tr}</tbody></table>')
+    printed_html = printed_note + step_note + table(printed_rows) + general_html
     fixings = {}
     for d, _sec, r in rows:
         if truth.key(r['description']).startswith('FIXINGS'): fixings.setdefault((r['description'], r['part']), []).append(d)
-    def bag_no(d): return int(''.join(c for c in d if c.isdigit()) or 0)
-    # E3D's own list of the kit (data/bom.ods) is the list; the drawings that show each fixing are added to it. A fixing only the drawings show keeps the drawings' bag and has no quantity.
+    # E3D's own list of the kit (data/bom.ods) is the list, and is trusted over the drawings (read by OCR for the image-only sheets); the drawings that show each fixing are added to it.
     sheet_rows = bom_ods.fixings()
     matched = bom_ods.match({part for _bag, part in fixings}, sheet_rows)
     merged = {id(o): (o, []) for o in sheet_rows}
-    only_drawn = []
-    for (bag, part), ds in fixings.items():
+    for (_bag, part), ds in fixings.items():
         if part in matched: merged[id(matched[part])][1].extend(d for d in ds if d not in merged[id(matched[part])][1])
-        else: only_drawn.append(({'bag': bag_no(bag), 'description': part, 'required': None, 'supplied': None}, ds))
-    fixing_rows = sorted(list(merged.values()) + only_drawn, key=lambda x: (x[0]['bag'], x[0]['description']))
-    tr = ''.join(f'<tr><td>Fixings Bag {o["bag"]}</td><td>{esc(o["description"])}</td><td>{"–" if o["required"] is None else o["required"]}</td>'
-                 f'<td>{"–" if o["supplied"] is None else o["supplied"]}</td><td>{", ".join(ds) or "–"}</td></tr>' for o, ds in fixing_rows)
+    fixing_rows = sorted(merged.values(), key=lambda x: (x[0]['bag'], x[0]['description']))
+    tr = ''.join(f'<tr><td>Fixings Bag {o["bag"]}</td><td>{esc(o["description"])}</td><td>{o["required"]}</td>'
+                 f'<td>{o["supplied"]}</td><td>{", ".join(ds) or "–"}</td></tr>' for o, ds in fixing_rows)
     fixings_html = note + f'<table><thead><tr><th>Fixings bag</th><th>Fixing</th><th>Qty required</th><th>Qty supplied</th><th>Drawings</th></tr></thead><tbody>{tr}</tbody></table>'
     body = re.sub(r'<h3><span class="mw-headline" id="Printed_Parts">Printed Parts</span></h3>', lambda m: m.group(0) + printed_html, body, count=1)
     return re.sub(r'(<h3><span class="mw-headline" id="Fixings">Fixings</span></h3>)', lambda m: m.group(1) + fixings_html, body, count=1)

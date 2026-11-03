@@ -8,7 +8,7 @@ D = f'{ROOT}/downloads/printed-parts'
 ROWS = pp.load()
 BOM = open(f'{ROOT}/docs/Bill_Of_Materials.html').read()
 PRINTED = BOM[BOM.index('id="Printed_Parts"'):BOM.index('id="Fixings"')]
-TABLE = PRINTED[:PRINTED.index('id="Not_Printed_Parts"')]   # the table of rows; after it come the files that have none
+TABLE = PRINTED[:PRINTED.index('id="General"')]   # the table of rows; after it come the files that have none
 BOM_NAMES = [html.unescape(re.sub(r'<[^>]+>', '', c)) for c in re.findall(r'<tr><td>(.*?)</td><td>', TABLE)]
 HREFS = re.findall(r'href="\.\./downloads/printed-parts/(parts/[^"]+)"', PRINTED)
 
@@ -56,12 +56,11 @@ class OnTheBillOfMaterials(unittest.TestCase):
             row = next(x for x in TABLE.split('<tr>') if x.startswith(f'<td>{name}</td>'))
             self.assertTrue(row.rstrip().endswith('<td></td></tr></tbody></table>') or row.rstrip().endswith('<td></td></tr>'), name)
 
-    def test_what_is_not_printed_is_in_its_own_table_with_no_step_column(self):
-        other = PRINTED[PRINTED.index('id="Not_Printed_Parts"'):]
+    def test_what_is_not_printed_is_in_the_general_table_and_not_among_the_printed_parts(self):
+        general = PRINTED[PRINTED.index('id="General"'):]
         for name in ('Cork Pads', 'Black Spring', 'Hobgoblin', 'Embedded Bowden Coupler'):
-            self.assertIn(f'<td>{name}</td>', other)
             self.assertNotIn(f'<td>{name}</td>', TABLE)
-        self.assertNotIn('<th>STEP</th>', other)
+            self.assertNotIn(f'<td>{name}</td>', general)   # the General table goes by the sheet's names
 
 class Sources(unittest.TestCase):
     def test_every_original_file_is_listed_with_how_many_parts_came_from_it(self):

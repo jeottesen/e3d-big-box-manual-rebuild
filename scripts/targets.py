@@ -166,10 +166,16 @@ OCR_FIXES = {
 NO_DRAWING_NAMES = {'Bearing Clamps': 'X-AXIS CARRIAGE BEARING CLAMP DUAL',
                     'Main Block': 'Non-Titan Direct-Drive Bowden Main Block'}   # the maintainer's name for it
 
-# Parts that are in the Printed Parts Box or Bag but are not 3D printed: cork pads, a spring, a coupler and a hobbed gear. The Bill of Materials
-# lists them in their own table, apart from the printed parts. (Names as the Bill of Materials shows them.)
-NOT_PRINTED = {'Y-AXIS BACK (L) CORK (Self Adhesive)', 'Y-AXIS FRONT CORK (L & R) (Self Adhesive)', 'Y-MOTOR MOUNT CORK (Self Adhesive)',
-               'Cork Pads', 'Embedded Bowden Coupler', 'Black Spring', 'Hobgoblin'}
+# Parts of the Printed Parts Box or Bag that are not 3D printed. They are not in the printed parts table but in the General table, which is the General
+# sheet of E3D's spreadsheet (data/bom.ods), under the sheet's name for them: manual or drawing name -> the sheet's Component. The cork parts are one
+# item on the sheet. 'Black Spring' is the filament idler spring (it is fitted in the Non-Titan Direct-Drive Bowden System).
+GENERAL_ROWS = {'Y-AXIS BACK (L) CORK (Self Adhesive)': 'Laser Cut Cork Dampener Parts',
+                'Y-AXIS FRONT CORK (L & R) (Self Adhesive)': 'Laser Cut Cork Dampener Parts',
+                'Y-MOTOR MOUNT CORK (Self Adhesive)': 'Laser Cut Cork Dampener Parts',
+                'Cork Pads': 'Laser Cut Cork Dampener Parts',
+                'Embedded Bowden Coupler': 'Embedded Bowden Coupling for Plastic',
+                'Black Spring': 'Filament-Idler Spring',
+                'Hobgoblin': 'E3D HobGoblin (5mm) (M3 x 4 Grub)'}
 MANUAL_PART_NAMES = {
     'Right Cable Bracket': ('img-EXTRUDER_DUAL', 'E-AXIS CABLE BRACKET (DUAL)(R)'),
     'Belt Tensioner': ('pdf-22', 'X-AXIS BELT-TENSIONER'),
