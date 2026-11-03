@@ -98,7 +98,7 @@ class BuiltPages(unittest.TestCase):
         bom = PAGES['Bill_Of_Materials']
         section = bom[bom.index('id="Printed_Parts"'):bom.index('id="Not_Printed_Parts"')]   # the parts that are not printed have their own table after it
         table = section[section.index('<table>'):]   # the note above it links to the page of all the drawings, which is not a step
-        table = ''.join(r for r in re.findall(r'<tr>.*?</tr>', table, re.S) if 'no drawing' not in r)   # those rows link the step that lists the part
+        table = ''.join(r for r in re.findall(r'<tr>.*?</tr>', table, re.S) if '<td>–</td><td>' not in r)   # a row with a dash for the drawing links the step that lists the part, not a step that shows a drawing
         links = set(re.findall(r'href="([^"]+\.html(?:#[^"]*)?)"', table))
         self.assertTrue(links)
         self.assertEqual(sorted(l for l in links if l not in allowed), [])

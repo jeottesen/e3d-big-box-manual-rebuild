@@ -148,7 +148,7 @@ Embedded Plastic Bowden Coupler, two parts.
 
 ## Printed Parts
 
-*This list is not from the wiki page, which left it empty. It is compiled from the parts lists in the [exploded drawings PDF](../docs/files/EXPLODED_DRAWINGS.pdf) (EXPLODED_DRAWINGS.pdf, sheets 1 to 29) and the drawing images on the wiki. Each row links to the drawing, with its sheet number in the PDF. [All the drawings are on one page.](Exploded_Drawings.md) Sheets marked (image) exist only as pictures on the wiki; they were read by OCR and checked by a person, or entered by hand from the drawing and the manual where the drawing has no parts list. Printed parts that the manual's own step lists name, and printed parts that have a STEP file but no row, are added after them, marked no drawing.*
+*This list is not from the wiki page, which left it empty. It is compiled from the parts lists in the [exploded drawings PDF](../docs/files/EXPLODED_DRAWINGS.pdf) (EXPLODED_DRAWINGS.pdf, sheets 1 to 29) and the drawing images on the wiki. Each row links to the drawing, with its sheet number in the PDF. [All the drawings are on one page.](Exploded_Drawings.md) Sheets marked (image) exist only as pictures on the wiki; they were read by OCR and checked by a person, or entered by hand from the drawing and the manual where the drawing has no parts list. Printed parts that the manual's own step lists name, and printed parts that have a STEP file but no row, are added after them, with a dash where the drawing would be.*
 
 *The STEP files were sourced from the BigBox design files listed on [Downloads](Downloads.md). SPOOL-HOLDER OUTER (R) was made by mirroring the (L) part; Y-AXIS REAR (R) is the mirror image of the (L) part.*
 
@@ -197,33 +197,33 @@ Embedded Plastic Bowden Coupler, two parts.
 | Z-AXIS TOP BOTTOM | 4 | [z-axis top brackets (image)](../docs/images/Z-AXIS_TOP_BRACKETS.jpg) | [(32.2) Z Bed](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#322-z-bed) | [STEP](../downloads/printed-parts/parts/Z-AXIS-TOP-BOTTOM.step) |
 | Z-AXIS TOP TOP | 4 | [z-axis top brackets (image)](../docs/images/Z-AXIS_TOP_BRACKETS.jpg) | [(32.2) Z Bed](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#322-z-bed) | [STEP](../downloads/printed-parts/parts/Z-AXIS-TOP-TOP.step) |
 | Z-AXIS TOP CAP | 4 | [z-axis top brackets (image)](../docs/images/Z-AXIS_TOP_BRACKETS.jpg) | [(32.2) Z Bed](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#322-z-bed) | [STEP](../downloads/printed-parts/parts/Z-AXIS-TOP-CAP.step) |
-| Hybrid X-Carriage | 1 | no drawing | [(9) Hybrid X-Carriage](BigBox_Parts_Preparation.md#9-hybrid-x-carriage) | [STEP](../downloads/printed-parts/parts/Hybrid-X-Carriage.step) |
-| Hybrid X-Carriage Rear Bearing Clamp | 1 | no drawing | [(9) Hybrid X-Carriage](BigBox_Parts_Preparation.md#9-hybrid-x-carriage); [(8) Hybrid X-Carriage](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#8-hybrid-x-carriage) | [STEP](../downloads/printed-parts/parts/Hybrid-X-Carriage-Rear-Bearing-Clamp.step) |
-| Drive Supports | 2 | no drawing | [(10) Z-Axis Bed Assembly](BigBox_Printer_Sub-assemblies.md#10-z-axis-bed-assembly) | [STEP](../downloads/printed-parts/parts/Drive-Supports.step) |
-| Printed Feet | 8 | no drawing | [(12.2) Feet](BigBox_Printer_Sub-assemblies.md#122-feet) | [STEP](../downloads/printed-parts/parts/Printed-Feet.step) |
-| Z-Axis Driver Bottoms | 2 | no drawing | [(1.4) Leadscrews](Printer_Commissioning.md#14-leadscrews) | [STEP](../downloads/printed-parts/parts/Z-Axis-Driver-Bottoms.step) |
-| Z-Axis Driver Tops | 2 | no drawing | [(1.4) Leadscrews](Printer_Commissioning.md#14-leadscrews) | [STEP](../downloads/printed-parts/parts/Z-Axis-Driver-Tops.step) |
-| Hybrid X-Carriage Front Bearing Clamp | 1 | no drawing | [(8) Hybrid X-Carriage](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#8-hybrid-x-carriage) | [STEP](../downloads/printed-parts/parts/Hybrid-X-Carriage-Front-Bearing-Clamp.step) |
-| Spool Inner Brackets | 2 | no drawing | [(17.2) Spool Inner Brackets](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#172-spool-inner-brackets) | [STEP](../downloads/printed-parts/parts/Spool-Inner-Brackets.step) |
-| IEC Back Cover | 1 | no drawing | [(17.6) A/C IEC Socket](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#176-ac-iec-socket) | |
-| Non-Titan Direct-Drive Bowden Main Block | 1 | no drawing | [(21.11.2) Non-Titan Direct-Drive Bowden System](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#21112-non-titan-direct-drive-bowden-system) | |
-| Y-Axis Endstop | 1 | no drawing | [(29) Y-Axis Frame Endstop](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#29-y-axis-frame-endstop) | [STEP](../downloads/printed-parts/parts/Y-Axis-Endstop.step) |
-| X-AXIS CARRIAGE BEARING CLAMP DUAL | 2 | no drawing | [Dual Direct-Drive X-Carriage](Dual_Direct-Drive_X-Carriage.md) | [STEP](../downloads/printed-parts/parts/X-AXIS-CARRIAGE-BEARING-CLAMP__dual.step) |
-| Bottom Camera Bracket | – | no drawing | [(22) OctoPrint Upgrade Camera Install](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#22-octoprint-upgrade-camera-install) | [STEP](../downloads/printed-parts/parts/Bottom-Camera-Bracket.step) |
-| Camera Arm | – | no drawing | [(22) OctoPrint Upgrade Camera Install](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#22-octoprint-upgrade-camera-install) | [STEP](../downloads/printed-parts/parts/Camera-Arm.step) |
-| Camera Mount | – | no drawing | [(22) OctoPrint Upgrade Camera Install](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#22-octoprint-upgrade-camera-install) | [STEP](../downloads/printed-parts/parts/Camera-Mount.step) |
-| Drag Anchor Bracket | – | no drawing | [(13) X-Axis Drag Chain](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#13-x-axis-drag-chain) | [STEP](../downloads/printed-parts/parts/Drag-Anchor-Bracket.step) |
-| Dual Dump Bucket | – | no drawing | [(31) Ooze Wiper & Dump Bucket](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#31-ooze-wiper--dump-bucket) | [STEP](../downloads/printed-parts/parts/Dual-Dump-Bucket.step) |
-| Dual Ooze Wiper | – | no drawing | [(31) Ooze Wiper & Dump Bucket](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#31-ooze-wiper--dump-bucket) | [STEP](../downloads/printed-parts/parts/Dual-Ooze-Wiper.step) |
-| Dump Bucket | – | no drawing | [(31) Ooze Wiper & Dump Bucket](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#31-ooze-wiper--dump-bucket) | [STEP](../downloads/printed-parts/parts/Dump-Bucket.step) |
-| Fan Mount | – | no drawing | [(13) Print Cooling Fan (v1.0)](BigBox_Parts_Preparation.md#13-print-cooling-fan-v10) | [STEP](../downloads/printed-parts/parts/Fan-Mount.step) |
-| FFC Conduits | – | no drawing | [(22) OctoPrint Upgrade Camera Install](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#22-octoprint-upgrade-camera-install) | [STEP](../downloads/printed-parts/parts/FFC-Conduits.step) |
-| Hybrid IR Sensor Bracket | – | no drawing | [(16) Hybrid IR Sensor Bracket](BigBox_Parts_Preparation.md#16-hybrid-ir-sensor-bracket) | [STEP](../downloads/printed-parts/parts/Hybrid-IR-Sensor-Bracket.step) |
-| Hybrid Ooze Wiper | – | no drawing | [(31) Ooze Wiper & Dump Bucket](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#31-ooze-wiper--dump-bucket) | [STEP](../downloads/printed-parts/parts/Hybrid-Ooze-Wiper.step) |
-| Ooze Wiper | – | no drawing | [(31) Ooze Wiper & Dump Bucket](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#31-ooze-wiper--dump-bucket) | [STEP](../downloads/printed-parts/parts/Ooze-Wiper.step) |
-| SPINE-VERTICAL | – | no drawing | [(16) Cable Spine](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#16-cable-spine) | [STEP](../downloads/printed-parts/parts/SPINE-VERTICAL.step) |
-| Top Camera Bracket | – | no drawing | [(22) OctoPrint Upgrade Camera Install](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#22-octoprint-upgrade-camera-install) | [STEP](../downloads/printed-parts/parts/Top-Camera-Bracket.step) |
-| X-CARRIAGE DUAL | – | no drawing | [(8) Dual X-Carriage](BigBox_Parts_Preparation.md#8-dual-x-carriage) | [STEP](../downloads/printed-parts/parts/X-CARRIAGE-DUAL.step) |
+| Hybrid X-Carriage | 1 | – | [(9) Hybrid X-Carriage](BigBox_Parts_Preparation.md#9-hybrid-x-carriage) | [STEP](../downloads/printed-parts/parts/Hybrid-X-Carriage.step) |
+| Hybrid X-Carriage Rear Bearing Clamp | 1 | – | [(9) Hybrid X-Carriage](BigBox_Parts_Preparation.md#9-hybrid-x-carriage); [(8) Hybrid X-Carriage](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#8-hybrid-x-carriage) | [STEP](../downloads/printed-parts/parts/Hybrid-X-Carriage-Rear-Bearing-Clamp.step) |
+| Drive Supports | 2 | – | [(10) Z-Axis Bed Assembly](BigBox_Printer_Sub-assemblies.md#10-z-axis-bed-assembly) | [STEP](../downloads/printed-parts/parts/Drive-Supports.step) |
+| Printed Feet | 8 | – | [(12.2) Feet](BigBox_Printer_Sub-assemblies.md#122-feet) | [STEP](../downloads/printed-parts/parts/Printed-Feet.step) |
+| Z-Axis Driver Bottoms | 2 | – | [(1.4) Leadscrews](Printer_Commissioning.md#14-leadscrews) | [STEP](../downloads/printed-parts/parts/Z-Axis-Driver-Bottoms.step) |
+| Z-Axis Driver Tops | 2 | – | [(1.4) Leadscrews](Printer_Commissioning.md#14-leadscrews) | [STEP](../downloads/printed-parts/parts/Z-Axis-Driver-Tops.step) |
+| Hybrid X-Carriage Front Bearing Clamp | 1 | – | [(8) Hybrid X-Carriage](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#8-hybrid-x-carriage) | [STEP](../downloads/printed-parts/parts/Hybrid-X-Carriage-Front-Bearing-Clamp.step) |
+| Spool Inner Brackets | 2 | – | [(17.2) Spool Inner Brackets](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#172-spool-inner-brackets) | [STEP](../downloads/printed-parts/parts/Spool-Inner-Brackets.step) |
+| IEC Back Cover | 1 | – | [(17.6) A/C IEC Socket](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#176-ac-iec-socket) | |
+| Non-Titan Direct-Drive Bowden Main Block | 1 | – | [(21.11.2) Non-Titan Direct-Drive Bowden System](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#21112-non-titan-direct-drive-bowden-system) | |
+| Y-Axis Endstop | 1 | – | [(29) Y-Axis Frame Endstop](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#29-y-axis-frame-endstop) | [STEP](../downloads/printed-parts/parts/Y-Axis-Endstop.step) |
+| X-AXIS CARRIAGE BEARING CLAMP DUAL | 2 | – | [Dual Direct-Drive X-Carriage](Dual_Direct-Drive_X-Carriage.md) | [STEP](../downloads/printed-parts/parts/X-AXIS-CARRIAGE-BEARING-CLAMP__dual.step) |
+| Bottom Camera Bracket | – | – | [(22) OctoPrint Upgrade Camera Install](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#22-octoprint-upgrade-camera-install) | [STEP](../downloads/printed-parts/parts/Bottom-Camera-Bracket.step) |
+| Camera Arm | – | – | [(22) OctoPrint Upgrade Camera Install](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#22-octoprint-upgrade-camera-install) | [STEP](../downloads/printed-parts/parts/Camera-Arm.step) |
+| Camera Mount | – | – | [(22) OctoPrint Upgrade Camera Install](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#22-octoprint-upgrade-camera-install) | [STEP](../downloads/printed-parts/parts/Camera-Mount.step) |
+| Drag Anchor Bracket | – | – | [(13) X-Axis Drag Chain](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#13-x-axis-drag-chain) | [STEP](../downloads/printed-parts/parts/Drag-Anchor-Bracket.step) |
+| Dual Dump Bucket | – | – | [(31) Ooze Wiper & Dump Bucket](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#31-ooze-wiper--dump-bucket) | [STEP](../downloads/printed-parts/parts/Dual-Dump-Bucket.step) |
+| Dual Ooze Wiper | – | – | [(31) Ooze Wiper & Dump Bucket](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#31-ooze-wiper--dump-bucket) | [STEP](../downloads/printed-parts/parts/Dual-Ooze-Wiper.step) |
+| Dump Bucket | – | – | [(31) Ooze Wiper & Dump Bucket](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#31-ooze-wiper--dump-bucket) | [STEP](../downloads/printed-parts/parts/Dump-Bucket.step) |
+| Fan Mount | – | – | [(13) Print Cooling Fan (v1.0)](BigBox_Parts_Preparation.md#13-print-cooling-fan-v10) | [STEP](../downloads/printed-parts/parts/Fan-Mount.step) |
+| FFC Conduits | – | – | [(22) OctoPrint Upgrade Camera Install](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#22-octoprint-upgrade-camera-install) | [STEP](../downloads/printed-parts/parts/FFC-Conduits.step) |
+| Hybrid IR Sensor Bracket | – | – | [(16) Hybrid IR Sensor Bracket](BigBox_Parts_Preparation.md#16-hybrid-ir-sensor-bracket) | [STEP](../downloads/printed-parts/parts/Hybrid-IR-Sensor-Bracket.step) |
+| Hybrid Ooze Wiper | – | – | [(31) Ooze Wiper & Dump Bucket](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#31-ooze-wiper--dump-bucket) | [STEP](../downloads/printed-parts/parts/Hybrid-Ooze-Wiper.step) |
+| Ooze Wiper | – | – | [(31) Ooze Wiper & Dump Bucket](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#31-ooze-wiper--dump-bucket) | [STEP](../downloads/printed-parts/parts/Ooze-Wiper.step) |
+| SPINE-VERTICAL | – | – | [(16) Cable Spine](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#16-cable-spine) | [STEP](../downloads/printed-parts/parts/SPINE-VERTICAL.step) |
+| Top Camera Bracket | – | – | [(22) OctoPrint Upgrade Camera Install](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#22-octoprint-upgrade-camera-install) | [STEP](../downloads/printed-parts/parts/Top-Camera-Bracket.step) |
+| X-CARRIAGE DUAL | – | – | [(8) Dual X-Carriage](BigBox_Parts_Preparation.md#8-dual-x-carriage) | [STEP](../downloads/printed-parts/parts/X-CARRIAGE-DUAL.step) |
 
 ## Not Printed
 
@@ -234,10 +234,10 @@ Embedded Plastic Bowden Coupler, two parts.
 | Y-AXIS BACK (L) CORK (Self Adhesive) | 1 | Printed Parts Box | [y-axis rear](../docs/images/Y-AXIS_REAR.jpg) (sheet 1) | [(1) Y-Axis Rear Brackets (Left & Right)](BigBox_Parts_Preparation.md#1-y-axis-rear-brackets-left--right) |
 | Y-AXIS FRONT CORK (L & R) (Self Adhesive) | 1 | Printed Parts Box | [y-axis front](../docs/images/Y-AXIS_FRONT.jpg) (sheet 2) | [(2) Y-Axis Front Brackets (Left & Right)](BigBox_Parts_Preparation.md#2-y-axis-front-brackets-left--right) |
 | Y-MOTOR MOUNT CORK (Self Adhesive) | 1 | Printed Parts Box | [y-axis motor](../docs/images/Y-AXIS_MOTOR.jpg) (sheet 27) | [(14) Y-Axis Motor Mount](BigBox_Parts_Preparation.md#14-y-axis-motor-mount) |
-| Cork Pads | 2 | Printed Parts Box | no drawing | [(17.4) Z-Axis Motors](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#174-z-axis-motors) |
-| Embedded Bowden Coupler | 1 | Printed Parts Bag | no drawing | [(21.11.2) Non-Titan Direct-Drive Bowden System](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#21112-non-titan-direct-drive-bowden-system) |
-| Black Spring | 1 | Printed Parts Bag | no drawing | [(21.11.2) Non-Titan Direct-Drive Bowden System](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#21112-non-titan-direct-drive-bowden-system) |
-| Hobgoblin | 1 | Printed Parts Bag | no drawing | [(21.11.2) Non-Titan Direct-Drive Bowden System](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#21112-non-titan-direct-drive-bowden-system) |
+| Cork Pads | 2 | Printed Parts Box | – | [(17.4) Z-Axis Motors](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#174-z-axis-motors) |
+| Embedded Bowden Coupler | 1 | Printed Parts Bag | – | [(21.11.2) Non-Titan Direct-Drive Bowden System](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#21112-non-titan-direct-drive-bowden-system) |
+| Black Spring | 1 | Printed Parts Bag | – | [(21.11.2) Non-Titan Direct-Drive Bowden System](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#21112-non-titan-direct-drive-bowden-system) |
+| Hobgoblin | 1 | Printed Parts Bag | – | [(21.11.2) Non-Titan Direct-Drive Bowden System](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#21112-non-titan-direct-drive-bowden-system) |
 
 ## Fixings
 

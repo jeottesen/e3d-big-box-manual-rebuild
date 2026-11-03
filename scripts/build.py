@@ -235,15 +235,15 @@ def add_drawing_parts(body, sheets, sections_by_image, manual_entries=(), headin
     def steps_of(g): return '; '.join(f'<a href="{pg}.html{"#" + esc(sid) if sid else ""}">{esc(txt)}</a>' for pg, sid, txt in g['steps'])
     # (name, qty, source, drawing, build section) of every row, from the drawings, then the manual's own lists, then the STEP files that no row names
     listed = [(r['part'], f'{"~" if r.get("approx") else ""}{r["qty"]}', 'printed' if truth.key(r['description']) == PRINTED_PART else 'Printed Parts Box', d, sec or '–') for d, sec, r in printed]
-    listed += [(final_name(g), str(g['qty']), manual_parts.CONTAINER_LABEL[g['container']], 'no drawing', steps_of(g)) for g in no_drawing]
-    listed += [(r['name'], '–', 'printed', 'no drawing', where(r)) for r in extras]
+    listed += [(final_name(g), str(g['qty']), manual_parts.CONTAINER_LABEL[g['container']], '–', steps_of(g)) for g in no_drawing]
+    listed += [(r['name'], '–', 'printed', '–', where(r)) for r in extras]
     def table(rows, with_step):   # the printed parts have a STEP column and no Source column (all are printed); the others say which box or bag they come in
         head = '<th>Part</th><th>Qty</th>' + ('' if with_step else '<th>Source</th>') + '<th>Drawing</th><th>Build section</th>' + ('<th>STEP</th>' if with_step else '')
         return '<table><thead><tr>' + head + '</tr></thead><tbody>' + ''.join(
             f'<tr><td>{esc(n)}</td><td>{q}</td>' + ('' if with_step else f'<td>{src}</td>') + f'<td>{d}</td><td>{sec}</td>' + (f'<td>{step(n)}</td>' if with_step else '') + '</tr>' for n, q, src, d, sec in rows) + '</tbody></table>'
     printed_rows = [row for row in listed if truth.key(row[0]) not in not_printed]
     other_rows = [row for row in listed if truth.key(row[0]) in not_printed]
-    printed_note = note[:-len('</em></p>')] + ' Printed parts that the manual\'s own step lists name, and printed parts that have a STEP file but no row, are added after them, marked no drawing.</em></p>'
+    printed_note = note[:-len('</em></p>')] + ' Printed parts that the manual\'s own step lists name, and printed parts that have a STEP file but no row, are added after them, with a dash where the drawing would be.</em></p>'
     mirrored = '; '.join(f'{esc(printed_parts.bom_name(r))} was made by mirroring the (L) part' if 'made by mirroring' in r['notes']
                          else f'{esc(printed_parts.bom_name(r))} is the mirror image of the (L) part' for r in mirrors.values())
     step_note = ('<p><em>The STEP files were sourced from the BigBox design files listed on <a href="Downloads.html">Downloads</a>.' + (f' {mirrored}.' if mirrored else '') + '</em></p>')

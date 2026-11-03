@@ -104,7 +104,7 @@ class InTheBom(unittest.TestCase):
         for g in mp.group(FOUND, MANUAL_PART_NAMES)[1]:
             row = re.search(rf'<tr><td>{re.escape(NO_DRAWING_NAMES.get(g["part"], g["part"]).replace("&", "&amp;"))}</td>.*?</tr>', table)
             self.assertTrue(row, g['part'])
-            self.assertIn('<td>no drawing</td>', row.group(0))
+            self.assertRegex(row.group(0), r'<td>[^<]*</td><td>–</td><td><a ')   # a dash where the drawing would be, then the step
             for page, _, _ in g['steps']: self.assertIn(f'{page}.html', row.group(0))
 
     def test_a_part_a_drawing_covers_shows_the_quantity_the_manual_uses_and_one_name(self):
