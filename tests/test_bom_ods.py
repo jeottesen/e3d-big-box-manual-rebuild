@@ -53,4 +53,15 @@ class General(unittest.TestCase):
         from targets import GENERAL_ROWS
         self.assertEqual(sorted(set(GENERAL_ROWS.values()) - {g['component'] for g in bom_ods.general()}), [])
 
+    def test_every_component_with_a_source_has_a_build_section_and_the_rest_are_the_ones_nothing_ties_to_a_step(self):
+        from targets import GENERAL_ROWS, GENERAL_SOURCES
+        general = PAGE[PAGE.index('id="General"'):PAGE.index('id="Fixings"')]
+        rows = [[html.unescape(re.sub(r'<[^>]+>', '', c)) for c in re.findall(r'<td>(.*?)</td>', r)] for r in re.findall(r'<tr><td>.*?</tr>', general)]
+        have = set(GENERAL_SOURCES) | set(GENERAL_ROWS.values())
+        for r in rows: self.assertEqual(r[3] in have, r[7] != '–', r[3])
+        self.assertEqual(sorted(r[3] for r in rows if r[7] == '–'), sorted([
+            '30x30x10 24v (1700mm lead w/ 0.1" connector)', '40nm NEMA 17 (200 Steps) (Wantai 42BYGHW609L20P1-X2)', 'Adhesive Sheet 3M 467MP',
+            'BigBox Fixings Kit (See Fixings BOM for breakdown)', 'Cork Insulation', 'Link', 'SiS 325mm (S)', 'TR8 Nut (4 x M3 Mounting Holes)',
+            'Viton A Rubber Strip (1.5 x 12) 77mm']))
+
 if __name__ == '__main__': unittest.main()

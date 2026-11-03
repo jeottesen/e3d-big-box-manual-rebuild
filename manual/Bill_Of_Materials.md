@@ -231,81 +231,81 @@ Embedded Plastic Bowden Coupler, two parts.
 
 | Category | Sub-Category | Location | Component | Lite | Pro | Dual | Build section |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| Electronics | Cabling | E3D Extruder Box | PT100 Single amp cable | 1 | 1 | 0 | – |
-| Electronics | Cabling | E3D Extruder Box | PT100 Double amp cable | 0 | 0 | 1 | – |
-| Electronics | PCB | E3D Extruder Box | PT100 Amp | 1 | 1 | 2 | – |
-| Electronics | Sensors | E3D Extruder Box | PT100 (1700mm Cable) | 1 | 1 | 2 | – |
+| Electronics | Cabling | E3D Extruder Box | PT100 Single amp cable | 1 | 1 | 0 | [(12.5) PT100 Amplifier(s)](BigBox_Printer_Sub-assemblies.md#125-pt100-amplifiers) |
+| Electronics | Cabling | E3D Extruder Box | PT100 Double amp cable | 0 | 0 | 1 | [(12.5) PT100 Amplifier(s)](BigBox_Printer_Sub-assemblies.md#125-pt100-amplifiers) |
+| Electronics | PCB | E3D Extruder Box | PT100 Amp | 1 | 1 | 2 | [(12.5) PT100 Amplifier(s)](BigBox_Printer_Sub-assemblies.md#125-pt100-amplifiers) |
+| Electronics | Sensors | E3D Extruder Box | PT100 (1700mm Cable) | 1 | 1 | 2 | [(20.2) Assembly of the E3D HotEnds.](Dual_Direct-Drive_Printhead_Assembly.md#202-assembly-of-the-e3d-hotends); [(21.3) Assembly of the E3D V6 HotEnds.](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#213-assembly-of-the-e3d-v6-hotends); [(19.3) Assembly of the E3D HotEnd.](Single_Direct-Drive_Printhead_Assembly.md#193-assembly-of-the-e3d-hotend); [(12.7) PT100 Wiring](BigBox_Printer_Sub-assemblies.md#127-pt100-wiring) |
 | Electronics | Cable | Electronics & wiring | Link | 1 | 1 | 1 | – |
-| Electronics | Cable | Electronics & wiring | PSU to Rumba | 2 | 2 | 2 | – |
-| Electronics | Cable | Electronics & wiring | IEC to PSU (Mains to PSU (300mm)) | 1 | 1 | 1 | – |
-| Electronics | Cable | Electronics & wiring | Bed Wiring Loom | 1 | 1 | 1 | – |
-| Electronics | Cabling | Electronics & wiring | IR Endstop Cable | 1 | 1 | 1 | – |
-| Electronics | IEC | Electronics & wiring | IEC Socket with Fuse | 1 | 1 | 1 | – |
-| Electronics | PCB | Electronics & wiring | Rumba | 1 | 1 | 1 | – |
-| Electronics | PCB | Electronics & wiring | A4988 | 4 | 4 | 5 | – |
-| Electronics | PSU | Electronics & wiring | PSU | 1 | 1 | 1 | – |
-| Electronics | Sensors | Electronics & wiring | IR Sensor | 1 | 1 | 1 | – |
-| Electronics | Sensors | Electronics & wiring | EndStops MicroSwitch (with Cable) | 2 | 2 | 2 | – |
-| Electronics | Print Related | Heated Bed | Heated Bed | 0 | 1 | 1 | – |
-| Electronics | Sensors | Heated Bed | Bed Thermistor Semitec | 0 | 1 | 1 | – |
-| Electronics | PCB | LCD & fans | LCD | 1 | 1 | 1 | – |
-| Electronics | Cable | Motor Box | Z-Motor Cable (300mm) | 1 | 1 | 1 | – |
-| Electronics | Cable | Motor Box | E-Motor Cable (1500mm) | 1 | 1 | 1 | – |
-| Electronics | Cable | Motor Box | Y-Motor Cable (1000mm) | 1 | 1 | 1 | – |
-| Electronics | Cable | Motor Box | X-Motor Cable (1500mm) | 1 | 1 | 1 | – |
-| Electronics | Cabling | Stretch Box | Panel Mount USB Extension | 1 | 1 | 1 | – |
-| Extrusion System | Extruder | E3D Extruder Box | Nitrile 70 O-Rings 12mm ID 17 OD | 0 | 0 | 2 | – |
-| Extrusion System | Extruder | E3D Extruder Box | E3D HobGoblin (5mm) (M3 x 4 Grub) | 1 | 1 | 2 | [(21.11.2) Non-Titan Direct-Drive Bowden System](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#21112-non-titan-direct-drive-bowden-system) |
-| Extrusion System | HotEnd | E3D Extruder Box | E3D V6 Lite (Direct, 24V, PT100 Block, No Electronics) | 1 | 0 | 0 | – |
-| Extrusion System | HotEnd | E3D Extruder Box | E3D V6 (Direct, 24V, PT100 Block, No Electronics) | 0 | 1 | 2 | – |
-| Extrusion System | HotEnd | E3D Extruder Box | Heater Cartridge | 1 | 1 | 2 | – |
-| Extrusion System | PTFE | E3D Extruder Box | Embedded Bowden Coupling for Plastic | 1 | 1 | 2 | [(21.11.2) Non-Titan Direct-Drive Bowden System](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#21112-non-titan-direct-drive-bowden-system) |
-| Extrusion System | PTFE | E3D Extruder Box | 4mm x 3mm x 1000mm PTFE Filament Guide | 1 | 1 | 2 | – |
-| Fans | Case | LCD & fans | 60x60x10 24v (300mm lead w/ 4mm fork ferrule) | 1 | 1 | 1 | – |
-| Fans | Electronics | LCD & fans | 50x50x10 24v (250mm lead w/ 0.1" connector) | 1 | 1 | 1 | – |
-| Fans | Print Related | LCD & fans | 40x40x20 Blower 24v (1700mm lead w/ 0.1" connector) | 1 | 1 | 2 | – |
+| Electronics | Cable | Electronics & wiring | PSU to Rumba | 2 | 2 | 2 | [(12.6) PSU - Rumba Wiring](BigBox_Printer_Sub-assemblies.md#126-psu---rumba-wiring) |
+| Electronics | Cable | Electronics & wiring | IEC to PSU (Mains to PSU (300mm)) | 1 | 1 | 1 | [(12.6) PSU - Rumba Wiring](BigBox_Printer_Sub-assemblies.md#126-psu---rumba-wiring) |
+| Electronics | Cable | Electronics & wiring | Bed Wiring Loom | 1 | 1 | 1 | [(11) Z-Axis Drag Chain Assembly](BigBox_Printer_Sub-assemblies.md#11-z-axis-drag-chain-assembly); [(32.3) Connecting the Heated Bed](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#323-connecting-the-heated-bed) |
+| Electronics | Cabling | Electronics & wiring | IR Endstop Cable | 1 | 1 | 1 | [(21.5) IR Sensor](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#215-ir-sensor) |
+| Electronics | IEC | Electronics & wiring | IEC Socket with Fuse | 1 | 1 | 1 | [(17.6) A/C IEC Socket](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#176-ac-iec-socket) |
+| Electronics | PCB | Electronics & wiring | Rumba | 1 | 1 | 1 | [(12.4) Rumba](BigBox_Printer_Sub-assemblies.md#124-rumba) |
+| Electronics | PCB | Electronics & wiring | A4988 | 4 | 4 | 5 | [(27) Tuning The Stepper Drivers](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#27-tuning-the-stepper-drivers) |
+| Electronics | PSU | Electronics & wiring | PSU | 1 | 1 | 1 | [(12.3) Power Supply Unit (PSU)](BigBox_Printer_Sub-assemblies.md#123-power-supply-unit-psu) |
+| Electronics | Sensors | Electronics & wiring | IR Sensor | 1 | 1 | 1 | [Single & Dual Direct-Drive IR Sensor Bracket](Single_%26_Dual_Direct-Drive_IR_Sensor_Bracket.md) |
+| Electronics | Sensors | Electronics & wiring | EndStops MicroSwitch (with Cable) | 2 | 2 | 2 | [(21.6) X-Axis Endstop](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#216-x-axis-endstop); [(19.5) X-Axis Endstop](Single_Direct-Drive_Printhead_Assembly.md#195-x-axis-endstop); [(29) Y-Axis Frame Endstop](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#29-y-axis-frame-endstop) |
+| Electronics | Print Related | Heated Bed | Heated Bed | 0 | 1 | 1 | [(32.3) Connecting the Heated Bed](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#323-connecting-the-heated-bed) |
+| Electronics | Sensors | Heated Bed | Bed Thermistor Semitec | 0 | 1 | 1 | [(25.1) Single Extruder](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#251-single-extruder) |
+| Electronics | PCB | LCD & fans | LCD | 1 | 1 | 1 | [(13.3) The LCD Enclosure](BigBox_Printer_Sub-assemblies.md#133-the-lcd-enclosure) |
+| Electronics | Cable | Motor Box | Z-Motor Cable (300mm) | 1 | 1 | 1 | [(17.4) Z-Axis Motors](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#174-z-axis-motors) |
+| Electronics | Cable | Motor Box | E-Motor Cable (1500mm) | 1 | 1 | 1 | [(21.8) Extruder Motor Cable](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#218-extruder-motor-cable) |
+| Electronics | Cable | Motor Box | Y-Motor Cable (1000mm) | 1 | 1 | 1 | [(20.8) Rear Spine.](Dual_Direct-Drive_Printhead_Assembly.md#208-rear-spine); [(21.10) Upper Spine](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#2110-upper-spine); [(21.12) Lower Spine](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#2112-lower-spine); [(19.9) The Rear Spine](Single_Direct-Drive_Printhead_Assembly.md#199-the-rear-spine) |
+| Electronics | Cable | Motor Box | X-Motor Cable (1500mm) | 1 | 1 | 1 | [(25.1) Single Extruder](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#251-single-extruder) |
+| Electronics | Cabling | Stretch Box | Panel Mount USB Extension | 1 | 1 | 1 | [(18.1)USB](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#181usb) |
+| Extrusion System | Extruder | E3D Extruder Box | Nitrile 70 O-Rings 12mm ID 17 OD | 0 | 0 | 2 | [(9) Hybrid X-Carriage](BigBox_Parts_Preparation.md#9-hybrid-x-carriage) |
+| Extrusion System | Extruder | E3D Extruder Box | E3D HobGoblin (5mm) (M3 x 4 Grub) | 1 | 1 | 2 | [(21.11.2) Non-Titan Direct-Drive Bowden System](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#21112-non-titan-direct-drive-bowden-system); [Dual Direct-Drive Extruders](Dual_Direct-Drive_Extruders.md); [(5) Hybrid Non-Titan Extruder (Direct)](BigBox_Printer_Sub-assemblies.md#5-hybrid-non-titan-extruder-direct); [Single Direct-Drive Extruder](Single_Direct-Drive_Extruder.md) |
+| Extrusion System | HotEnd | E3D Extruder Box | E3D V6 Lite (Direct, 24V, PT100 Block, No Electronics) | 1 | 0 | 0 | [(21.3) Assembly of the E3D V6 HotEnds.](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#213-assembly-of-the-e3d-v6-hotends) |
+| Extrusion System | HotEnd | E3D Extruder Box | E3D V6 (Direct, 24V, PT100 Block, No Electronics) | 0 | 1 | 2 | [(21.3) Assembly of the E3D V6 HotEnds.](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#213-assembly-of-the-e3d-v6-hotends) |
+| Extrusion System | HotEnd | E3D Extruder Box | Heater Cartridge | 1 | 1 | 2 | [(20.2) Assembly of the E3D HotEnds.](Dual_Direct-Drive_Printhead_Assembly.md#202-assembly-of-the-e3d-hotends); [(21.3) Assembly of the E3D V6 HotEnds.](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#213-assembly-of-the-e3d-v6-hotends); [(19.3) Assembly of the E3D HotEnd.](Single_Direct-Drive_Printhead_Assembly.md#193-assembly-of-the-e3d-hotend) |
+| Extrusion System | PTFE | E3D Extruder Box | Embedded Bowden Coupling for Plastic | 1 | 1 | 2 | [(21.11.2) Non-Titan Direct-Drive Bowden System](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#21112-non-titan-direct-drive-bowden-system); [Dual Direct-Drive Extruders](Dual_Direct-Drive_Extruders.md); [(5) Hybrid Non-Titan Extruder (Direct)](BigBox_Printer_Sub-assemblies.md#5-hybrid-non-titan-extruder-direct); [Single Direct-Drive Extruder](Single_Direct-Drive_Extruder.md) |
+| Extrusion System | PTFE | E3D Extruder Box | 4mm x 3mm x 1000mm PTFE Filament Guide | 1 | 1 | 2 | [(21.12) Lower Spine](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#2112-lower-spine) |
+| Fans | Case | LCD & fans | 60x60x10 24v (300mm lead w/ 4mm fork ferrule) | 1 | 1 | 1 | [(17.1) Exhaust Fan](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#171-exhaust-fan) |
+| Fans | Electronics | LCD & fans | 50x50x10 24v (250mm lead w/ 0.1" connector) | 1 | 1 | 1 | [(8) Electronics Cover](BigBox_Printer_Sub-assemblies.md#8-electronics-cover) |
+| Fans | Print Related | LCD & fans | 40x40x20 Blower 24v (1700mm lead w/ 0.1" connector) | 1 | 1 | 2 | [Print Cooling Fan](Print_Cooling_Fan.md); [(21.4) Print Cooling Fan](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#214-print-cooling-fan) |
 | Fans | Print Related | LCD & fans | 30x30x10 24v (1700mm lead w/ 0.1" connector) | 1 | 1 | 2 | – |
 | Fixings | – | Fixings Kit | BigBox Fixings Kit (See Fixings BOM for breakdown) | 1 | 1 | 1 | – |
-| Fixings | – | Stretch Box | BigBox M3 Nut Traps | 160 | 160 | 160 | – |
-| Frame | Sheet Material | Frame/Frame Kit | Laser Cut Acrylic / Plywood Frame | – | – | – | – |
+| Fixings | – | Stretch Box | BigBox M3 Nut Traps | 160 | 160 | 160 | [(31.1) Single Extruder Dock](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#311-single-extruder-dock) |
+| Frame | Sheet Material | Frame/Frame Kit | Laser Cut Acrylic / Plywood Frame | – | – | – | [(13.2) Main Frame](BigBox_Printer_Sub-assemblies.md#132-main-frame) |
 | Frame | Sheet Material | Printed Parts | Laser Cut Cork Dampener Parts | 1 | 1 | 1 | [(1) Y-Axis Rear Brackets (Left & Right)](BigBox_Parts_Preparation.md#1-y-axis-rear-brackets-left--right); [(2) Y-Axis Front Brackets (Left & Right)](BigBox_Parts_Preparation.md#2-y-axis-front-brackets-left--right); [(14) Y-Axis Motor Mount](BigBox_Parts_Preparation.md#14-y-axis-motor-mount); [(17.4) Z-Axis Motors](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#174-z-axis-motors) |
-| Miscellaneous | Extruder | E3D Extruder Box | Filament-Idler Spring | 1 | 1 | 2 | [(21.11.2) Non-Titan Direct-Drive Bowden System](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#21112-non-titan-direct-drive-bowden-system) |
-| Miscellaneous | Print Related | E3D Extruder Box | Viton A Rubber Strip (1.5 x 12) 40mm | 1 | 1 | 0 | – |
+| Miscellaneous | Extruder | E3D Extruder Box | Filament-Idler Spring | 1 | 1 | 2 | [(21.11.2) Non-Titan Direct-Drive Bowden System](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#21112-non-titan-direct-drive-bowden-system); [Dual Direct-Drive Extruders](Dual_Direct-Drive_Extruders.md); [(5) Hybrid Non-Titan Extruder (Direct)](BigBox_Printer_Sub-assemblies.md#5-hybrid-non-titan-extruder-direct); [Single Direct-Drive Extruder](Single_Direct-Drive_Extruder.md) |
+| Miscellaneous | Print Related | E3D Extruder Box | Viton A Rubber Strip (1.5 x 12) 40mm | 1 | 1 | 0 | [(31.1) Single Extruder Dock](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#311-single-extruder-dock) |
 | Miscellaneous | Print Related | E3D Extruder Box | Viton A Rubber Strip (1.5 x 12) 77mm | 0 | 0 | 1 | – |
-| Miscellaneous | PTFE | E3D Extruder Box | V6 Direct PTFE tubing (2mm x 4mm) | 1 | 1 | 2 | – |
-| Miscellaneous | Spool Holder | E3D Extruder Box | Spring (spool holder) | 1 | 1 | 2 | – |
+| Miscellaneous | PTFE | E3D Extruder Box | V6 Direct PTFE tubing (2mm x 4mm) | 1 | 1 | 2 | [(21.3) Assembly of the E3D V6 HotEnds.](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#213-assembly-of-the-e3d-v6-hotends) |
+| Miscellaneous | Spool Holder | E3D Extruder Box | Spring (spool holder) | 1 | 1 | 2 | [(17) Spool Carrier Clamp](BigBox_Parts_Preparation.md#17-spool-carrier-clamp) |
 | Miscellaneous | Print Related | Heated Bed | Adhesive Sheet 3M 467MP | 1 | 1 | 1 | – |
-| Miscellaneous | Print Related | Heated Bed | Glass Bed | 1 | 1 | 1 | – |
+| Miscellaneous | Print Related | Heated Bed | Glass Bed | 1 | 1 | 1 | [(2.2) Glass](Printer_Commissioning.md#22-glass) |
 | Miscellaneous | Print Related | Heated Bed | Cork Insulation | 0 | 1 | 1 | – |
-| Miscellaneous | Cable Management | Motion Box | Drag Chain 400mm | 1 | 2 | 2 | – |
-| Miscellaneous | Print Related | Stretch Box | Glass Bed Clips | 8 | 8 | 8 | – |
-| Motion System | Bearings | E3D Extruder Box | 604-ZZ (4x12x4) | 1 | 1 | 2 | – |
-| Motion System | Bearings | Motion Box | F604 (4x12x4 Flange-13.5) | 6 | 6 | 6 | – |
-| Motion System | Bearings | Motion Box | 634ZZ (4x16x5) | 9 | 9 | 18 | – |
-| Motion System | Bearings | Motion Box | 688-ZZ (8x16x5) | 2 | 2 | 2 | – |
-| Motion System | Bearings | Motion Box | LM8LUU (8x45) | 8 | 8 | 8 | – |
-| Motion System | Belts & Pulleys | Motion Box | 66 Tooth (132mm) GT2 Loop Belt | 1 | 1 | 1 | – |
-| Motion System | Belts & Pulleys | Motion Box | GT2 6mm Belt (3000mm) | 1 | 1 | 1 | – |
-| Motion System | Belts & Pulleys | Motion Box | GT2 16T (5mm) | 1 | 1 | 1 | – |
-| Motion System | Belts & Pulleys | Motion Box | GT2 20T (5mm) | 1 | 1 | 1 | – |
-| Motion System | Belts & Pulleys | Motion Box | GT2 20T (8mm) | 2 | 2 | 2 | – |
-| Motion System | Belts & Pulleys | Motion Box | GT2 36T (8mm) | 1 | 1 | 1 | – |
-| Motion System | Leadscrews & Nuts | Motion Box | 5mm – 8mm Couplers | 2 | 2 | 2 | – |
+| Miscellaneous | Cable Management | Motion Box | Drag Chain 400mm | 1 | 2 | 2 | [(11) Z-Axis Drag Chain Assembly](BigBox_Printer_Sub-assemblies.md#11-z-axis-drag-chain-assembly); [(13) X-Axis Drag Chain](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#13-x-axis-drag-chain) |
+| Miscellaneous | Print Related | Stretch Box | Glass Bed Clips | 8 | 8 | 8 | [(2.1) Clips](Printer_Commissioning.md#21-clips) |
+| Motion System | Bearings | E3D Extruder Box | 604-ZZ (4x12x4) | 1 | 1 | 2 | [Non-Titan Idler Arms](Non-Titan_Idler_Arms.md) |
+| Motion System | Bearings | Motion Box | F604 (4x12x4 Flange-13.5) | 6 | 6 | 6 | [(3) Y-Axis Belt Idlers](BigBox_Parts_Preparation.md#3-y-axis-belt-idlers); [(5) X-Axis Idler Carriage](BigBox_Parts_Preparation.md#5-x-axis-idler-carriage) |
+| Motion System | Bearings | Motion Box | 634ZZ (4x16x5) | 9 | 9 | 18 | [(11) Outer Spools Rear (Left & Right)](BigBox_Parts_Preparation.md#11-outer-spools-rear-left--right); [(15) Spool Holder Brackets](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#15-spool-holder-brackets) |
+| Motion System | Bearings | Motion Box | 688-ZZ (8x16x5) | 2 | 2 | 2 | [(17) Spool Carrier Clamp](BigBox_Parts_Preparation.md#17-spool-carrier-clamp); [(1) Y-Axis Rear Brackets (Left & Right)](BigBox_Parts_Preparation.md#1-y-axis-rear-brackets-left--right) |
+| Motion System | Bearings | Motion Box | LM8LUU (8x45) | 8 | 8 | 8 | [(5) X-Axis Idler Carriage](BigBox_Parts_Preparation.md#5-x-axis-idler-carriage); [(6) X-Axis Motor Mount](BigBox_Parts_Preparation.md#6-x-axis-motor-mount); [(10) Heated Bed Corners](BigBox_Parts_Preparation.md#10-heated-bed-corners); [(7) X-Axis Assembly](BigBox_Printer_Sub-assemblies.md#7-x-axis-assembly) |
+| Motion System | Belts & Pulleys | Motion Box | 66 Tooth (132mm) GT2 Loop Belt | 1 | 1 | 1 | [(1) Y-Axis Rear-Bar Assembly](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#1-y-axis-rear-bar-assembly) |
+| Motion System | Belts & Pulleys | Motion Box | GT2 6mm Belt (3000mm) | 1 | 1 | 1 | [(7.1) X-Carriage Belt](Dual_Direct-Drive_X-Carriage.md#71-x-carriage-belt) |
+| Motion System | Belts & Pulleys | Motion Box | GT2 16T (5mm) | 1 | 1 | 1 | [(14) Y-Axis Motor Mount](BigBox_Parts_Preparation.md#14-y-axis-motor-mount) |
+| Motion System | Belts & Pulleys | Motion Box | GT2 20T (5mm) | 1 | 1 | 1 | [(5) X-Axis Motor Installation](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#5-x-axis-motor-installation) |
+| Motion System | Belts & Pulleys | Motion Box | GT2 20T (8mm) | 2 | 2 | 2 | [(1) Y-Axis Rear-Bar Assembly](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#1-y-axis-rear-bar-assembly) |
+| Motion System | Belts & Pulleys | Motion Box | GT2 36T (8mm) | 1 | 1 | 1 | [(1) Y-Axis Rear-Bar Assembly](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#1-y-axis-rear-bar-assembly) |
+| Motion System | Leadscrews & Nuts | Motion Box | 5mm – 8mm Couplers | 2 | 2 | 2 | [(32.1) Shaft Couplers](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#321-shaft-couplers) |
 | Motion System | Leadscrews & Nuts | Motion Box | TR8 Nut (4 x M3 Mounting Holes) | 2 | 2 | 2 | – |
-| Motion System | Leadscrews & Nuts | Rods | TR8 Leadscrew (347mm) | 2 | 2 | 2 | – |
-| Motion System | Rods | Rods | SiS. 532mm (Y) | 1 | 1 | 1 | – |
-| Motion System | Rods | Rods | GHSiS 484mm (X) | 2 | 2 | 2 | – |
-| Motion System | Rods | Rods | GHSiS 384mm (Y) | 2 | 2 | 2 | – |
-| Motion System | Rods | Rods | GHSiS 364mm (Z) | 4 | 4 | 4 | – |
+| Motion System | Leadscrews & Nuts | Rods | TR8 Leadscrew (347mm) | 2 | 2 | 2 | [(1.4) Leadscrews](Printer_Commissioning.md#14-leadscrews) |
+| Motion System | Rods | Rods | SiS. 532mm (Y) | 1 | 1 | 1 | [(1) Y-Axis Rear-Bar Assembly](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#1-y-axis-rear-bar-assembly) |
+| Motion System | Rods | Rods | GHSiS 484mm (X) | 2 | 2 | 2 | [(7) X-Axis Assembly](BigBox_Printer_Sub-assemblies.md#7-x-axis-assembly) |
+| Motion System | Rods | Rods | GHSiS 384mm (Y) | 2 | 2 | 2 | [(3) X-Axis & Y-Axis Assembly](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#3-x-axis--y-axis-assembly) |
+| Motion System | Rods | Rods | GHSiS 364mm (Z) | 4 | 4 | 4 | [(32.2) Z Bed](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#322-z-bed) |
 | Motion System | Rods | Rods | SiS 325mm (S) | 2 | 2 | 4 | – |
-| RPI Kit | Cable | Rasberry Pi Box | Panel Mount RJ45 Socket (600mm) | – | – | – | – |
-| RPI Kit | Cable | Rasberry Pi Box | USB A-Mini cable (~500mm) | – | – | – | – |
-| RPI Kit | Cable | Rasberry Pi Box | Short uUSB cable | – | – | – | – |
-| RPI Kit | Cable | Rasberry Pi Box | Rumba to DCDC Power In (300mm lead. 0.1” - Tinned) | – | – | – | – |
-| RPI Kit | PCB | Rasberry Pi Box | Raspberry Pi 2 + 8gb | – | – | – | – |
-| RPI Kit | PCB | Rasberry Pi Box | Camera & 750mm FFC Cable | – | – | – | – |
-| RPI Kit | PCB | Rasberry Pi Box | 5v DC DC Converter | – | – | – | – |
-| Stepper Motors | Stepper Motors | Motor Box | 46nm NEMA 17 (400 Steps) (Wantai 42BYGHM809L20P4.5-17-X2) | 3 | 3 | 4 | – |
+| RPI Kit | Cable | Rasberry Pi Box | Panel Mount RJ45 Socket (600mm) | – | – | – | [(18.2) RJ45 (OctoPrint Upgrade)](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#182-rj45-octoprint-upgrade) |
+| RPI Kit | Cable | Rasberry Pi Box | USB A-Mini cable (~500mm) | – | – | – | [(12.8) OctoPrint Upgrades](BigBox_Printer_Sub-assemblies.md#128-octoprint-upgrades) |
+| RPI Kit | Cable | Rasberry Pi Box | Short uUSB cable | – | – | – | [(12.8) OctoPrint Upgrades](BigBox_Printer_Sub-assemblies.md#128-octoprint-upgrades) |
+| RPI Kit | Cable | Rasberry Pi Box | Rumba to DCDC Power In (300mm lead. 0.1” - Tinned) | – | – | – | [(12.8) OctoPrint Upgrades](BigBox_Printer_Sub-assemblies.md#128-octoprint-upgrades) |
+| RPI Kit | PCB | Rasberry Pi Box | Raspberry Pi 2 + 8gb | – | – | – | [(12.8) OctoPrint Upgrades](BigBox_Printer_Sub-assemblies.md#128-octoprint-upgrades) |
+| RPI Kit | PCB | Rasberry Pi Box | Camera & 750mm FFC Cable | – | – | – | [(22) OctoPrint Upgrade Camera Install](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#22-octoprint-upgrade-camera-install) |
+| RPI Kit | PCB | Rasberry Pi Box | 5v DC DC Converter | – | – | – | [(12.8) OctoPrint Upgrades](BigBox_Printer_Sub-assemblies.md#128-octoprint-upgrades) |
+| Stepper Motors | Stepper Motors | Motor Box | 46nm NEMA 17 (400 Steps) (Wantai 42BYGHM809L20P4.5-17-X2) | 3 | 3 | 4 | [Dual Direct-Drive Extruders](Dual_Direct-Drive_Extruders.md); [(5) Hybrid Non-Titan Extruder (Direct)](BigBox_Printer_Sub-assemblies.md#5-hybrid-non-titan-extruder-direct); [Single Direct-Drive Extruder](Single_Direct-Drive_Extruder.md); [(5) X-Axis Motor Installation](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#5-x-axis-motor-installation); [(14) Y-Axis Motor Mount](BigBox_Parts_Preparation.md#14-y-axis-motor-mount) |
 | Stepper Motors | Stepper Motors | Motor Box | 40nm NEMA 17 (200 Steps) (Wantai 42BYGHW609L20P1-X2) | 2 | 2 | 2 | – |
 
 ## Fixings

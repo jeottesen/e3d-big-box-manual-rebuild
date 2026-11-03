@@ -71,7 +71,7 @@ def extract(h):
 from sections import HEADING, embedded_sections, thumb_file
 from drawings_page import drawings_page
 import manual_parts
-from targets import MANUAL_PART_NAMES, NO_DRAWING_NAMES, GENERAL_ROWS
+from targets import MANUAL_PART_NAMES, NO_DRAWING_NAMES, GENERAL_ROWS, GENERAL_SOURCES
 import printed_parts
 import bom_ods
 import truth
@@ -187,7 +187,7 @@ PRINTED_PART = truth.key('Printed Part')
 PRINTED = {PRINTED_PART, truth.key('Printed Parts Box')}
 PDF_LINK = 'files/EXPLODED_DRAWINGS.pdf'   # the copy kept in the repository (the archive's capture of 2016-01-09)
 
-def add_drawing_parts(body, sheets, sections_by_image, manual_entries=(), heading_id=lambda page, text: None):
+def add_drawing_parts(body, sheets, sections_by_image, manual_entries=(), heading_id=lambda page, text: None, box_entries=()):
     """On the Bill of Materials page: fill the empty Printed Parts section and add a fixings table under Fixings, from the
     reviewed sheets (data/sheets). Both are marked as coming from the drawings, not from the wiki page.
     PDF sheets are exact text. Sheets that are only images on the wiki were read by OCR; their rows are used once a person has confirmed the sheet."""
@@ -255,6 +255,28 @@ def add_drawing_parts(body, sheets, sections_by_image, manual_entries=(), headin
     for name, _q, _src, _d, sec in general_rows:
         for link in re.findall(r'<a .*?</a>', sec):
             if link not in sections_of_row.setdefault(to_row[truth.key(name)], []): sections_of_row[to_row[truth.key(name)]].append(link)
+    # the rest of the sheet's components: where the manual puts them (GENERAL_SOURCES), found in the drawings, the step lists and the headings
+    box_named = {}
+    for e in box_entries: box_named.setdefault(truth.key(e['part']), []).append(e)
+    shown_sheets = [sh for sh in sheets.values() if not (sh['source']['kind'] != 'pdf' and sh['confirmed'] is None and any(r['how'] in ('ocr', 'ocr+fix') for r in sh['rows']))]
+    def source_links(spec):
+        if spec[0] == 'part':
+            files = [im['file'] for sh in shown_sheets for r in sh['rows'] if truth.key(r['part']) == truth.key(spec[1]) for im in sh['images']]
+            return re.findall(r'<a .*?</a>', sections_for(files)) if files else []
+        if spec[0] == 'item':
+            return [f'<a href="{e["page"]}.html{"#" + esc(e["step_id"]) if e["step_id"] else ""}">{esc(e["step"])}</a>' for e in box_named.get(truth.key(spec[1]), [])]
+        hid = heading_id(spec[1], spec[2])
+        return [f'<a href="{spec[1]}.html#{esc(hid)}">{esc(spec[2])}</a>'] if hid else []
+    unresolved = []
+    for comp, specs in GENERAL_SOURCES.items():
+        for spec in specs:
+            links = source_links(spec)
+            if not links: unresolved.append((comp, spec))
+            for link in links:
+                if link not in sections_of_row.setdefault(comp, []): sections_of_row[comp].append(link)
+    if unresolved: sys.exit(f'GENERAL_SOURCES has entries the manual does not back: {unresolved}')
+    unknown = sorted(set(GENERAL_SOURCES) - {g['component'] for g in sheet_general})
+    if unknown: sys.exit(f'GENERAL_SOURCES names components that are not on the General sheet: {unknown}')
     general_tr = ''.join(f'<tr><td>{esc(g["category"])}</td><td>{esc(g["sub"]) or "–"}</td><td>{esc(g["location"])}</td><td>{esc(g["component"])}</td>'
                          f'<td>{g["lite"] or "–"}</td><td>{g["pro"] or "–"}</td><td>{g["dual"] or "–"}</td><td>{"; ".join(sections_of_row.get(g["component"], [])) or "–"}</td></tr>' for g in sheet_general)
     general_html = ('<h3><span class="mw-headline" id="General">General</span></h3><p><em>Everything in the kit that is not a fixing, by product, from E3D\'s Bill of Materials spreadsheet.</em></p>'
@@ -331,7 +353,8 @@ DRAWINGS_PAGE = 'Exploded_Drawings'   # every exploded drawing on one page, gene
 shown_in = embedded_sections({t: body for t, (body, _) in prepared.items()}, slug)   # before the new page exists, so it does not count as a step
 if SHEETS and 'Bill_Of_Materials' in prepared:
     prepared['Bill_Of_Materials'] = with_heading_ids(add_drawing_parts(prepared['Bill_Of_Materials'][0], SHEETS, shown_in, manual_parts.scan({slug(t): body for t, (body, _) in prepared.items()}),
-                                                                  lambda page, text: next((hid for _, hid, t in heads_by_slug.get(page, []) if t == text), None)))
+                                                                  lambda page, text: next((hid for _, hid, t in heads_by_slug.get(page, []) if t == text), None),
+                                                                  manual_parts.scan_boxes({slug(t): body for t, (body, _) in prepared.items()})))
 if SHEETS:
     order.insert(order.index('Bill_Of_Materials') + 1 if 'Bill_Of_Materials' in order else len(order), DRAWINGS_PAGE)
     prepared[DRAWINGS_PAGE] = with_heading_ids(drawings_page(SHEETS, shown_in, {slug(t): t.replace('_', ' ') for t in order if t != DRAWINGS_PAGE},
