@@ -163,7 +163,13 @@ OCR_FIXES = {
 # Spool Inner Brackets are NOT the SPOOL-HOLDER INNER drawing (they look different), so they have no drawing.
 # Names for parts that have no drawing, where the manual's name is not the one the part goes by (the printed parts package names it so).
 # 'Bearing Clamps' (dual carriage) is the larger version of the X-AXIS CARRIAGE BEARING CLAMP, checked by the maintainer.
-NO_DRAWING_NAMES = {'Bearing Clamps': 'X-AXIS CARRIAGE BEARING CLAMP DUAL'}
+NO_DRAWING_NAMES = {'Bearing Clamps': 'X-AXIS CARRIAGE BEARING CLAMP DUAL',
+                    'Main Block': 'Non-Titan Direct-Drive Bowden Main Block'}   # the maintainer's name for it
+
+# Parts that are in the Printed Parts Box or Bag but are not 3D printed: cork pads, a spring, a coupler and a hobbed gear. The Bill of Materials
+# lists them in their own table, apart from the printed parts. (Names as the Bill of Materials shows them.)
+NOT_PRINTED = {'Y-AXIS BACK (L) CORK (Self Adhesive)', 'Y-AXIS FRONT CORK (L & R) (Self Adhesive)', 'Y-MOTOR MOUNT CORK (Self Adhesive)',
+               'Cork Pads', 'Embedded Bowden Coupler', 'Black Spring', 'Hobgoblin'}
 MANUAL_PART_NAMES = {
     'Right Cable Bracket': ('img-EXTRUDER_DUAL', 'E-AXIS CABLE BRACKET (DUAL)(R)'),
     'Belt Tensioner': ('pdf-22', 'X-AXIS BELT-TENSIONER'),

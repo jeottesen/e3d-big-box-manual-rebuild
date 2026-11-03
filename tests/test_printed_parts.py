@@ -8,7 +8,7 @@ D = f'{ROOT}/downloads/printed-parts'
 ROWS = pp.load()
 BOM = open(f'{ROOT}/docs/Bill_Of_Materials.html').read()
 PRINTED = BOM[BOM.index('id="Printed_Parts"'):BOM.index('id="Fixings"')]
-TABLE = PRINTED[:PRINTED.index('id="Printed_Parts_With_No_Row"')]   # the table of rows; after it come the files that have none
+TABLE = PRINTED[:PRINTED.index('id="Not_Printed_Parts"')]   # the table of rows; after it come the files that have none
 BOM_NAMES = [html.unescape(re.sub(r'<[^>]+>', '', c)) for c in re.findall(r'<tr><td>(.*?)</td><td>', TABLE)]
 HREFS = re.findall(r'href="\.\./downloads/printed-parts/(parts/[^"]+)"', PRINTED)
 
@@ -31,9 +31,8 @@ class OnTheBillOfMaterials(unittest.TestCase):
         self.assertEqual(sorted(HREFS), sorted(pp.href(r).split('printed-parts/', 1)[1] for r in ROWS))
 
     def test_every_file_the_package_says_is_on_a_row_is_on_that_row(self):
-        main, _, _, extras = pp.classify(ROWS, BOM_NAMES)
-        self.assertEqual(sorted(r['name'] for r in main.values()), sorted(r['name'] for r in ROWS if r['in_bom'] == 'True'))
-        self.assertTrue(all(r['in_bom'] != 'True' for r in extras))
+        main, _, _, _ = pp.classify(ROWS, BOM_NAMES)
+        self.assertTrue({r['name'] for r in ROWS if r['in_bom'] == 'True'} <= {r['name'] for r in main.values()})
 
     def test_the_alternates_and_the_mirrors_are_on_the_row_of_their_standard_part(self):
         for row in TABLE.split('<tr>')[1:]:
@@ -44,10 +43,25 @@ class OnTheBillOfMaterials(unittest.TestCase):
     def test_the_page_says_the_right_spool_holder_was_made_by_mirroring(self):
         self.assertIn('SPOOL-HOLDER OUTER (R) was made by mirroring the (L) part', PRINTED)
 
-    def test_each_part_with_no_row_says_which_step_uses_it(self):
-        extras = PRINTED[PRINTED.index('id="Printed_Parts_With_No_Row"'):]
-        for row in extras.split('<tr>')[2:]:
-            self.assertRegex(row, r'<a href="[^"#]+\.html#[^"]+">', row[:80])
+    def test_each_file_with_no_row_of_its_own_is_listed_in_the_table_with_the_step_that_uses_it(self):
+        own = [r for r in ROWS if r['in_bom'] != 'True' and not r['name'].endswith(('(4 hole)', '(R)'))]
+        self.assertTrue(own)
+        for r in own:
+            row = next(x for x in TABLE.split('<tr>') if x.startswith(f'<td>{html.escape(pp.bom_name(r))}</td>'))
+            self.assertRegex(row, r'<a href="[^"#]+\.html#[^"]+">', r['name'])   # the step the manual puts it in
+            self.assertIn(pp.href(r), row)
+
+    def test_the_parts_with_no_file_are_listed_with_the_printed_parts_and_have_no_step_link(self):
+        for name in ('IEC Back Cover', 'Non-Titan Direct-Drive Bowden Main Block'):
+            row = next(x for x in TABLE.split('<tr>') if x.startswith(f'<td>{name}</td>'))
+            self.assertTrue(row.rstrip().endswith('<td></td></tr></tbody></table>') or row.rstrip().endswith('<td></td></tr>'), name)
+
+    def test_what_is_not_printed_is_in_its_own_table_with_no_step_column(self):
+        other = PRINTED[PRINTED.index('id="Not_Printed_Parts"'):]
+        for name in ('Cork Pads', 'Black Spring', 'Hobgoblin', 'Embedded Bowden Coupler'):
+            self.assertIn(f'<td>{name}</td>', other)
+            self.assertNotIn(f'<td>{name}</td>', TABLE)
+        self.assertNotIn('<th>STEP</th>', other)
 
 class Sources(unittest.TestCase):
     def test_every_original_file_is_listed_with_how_many_parts_came_from_it(self):

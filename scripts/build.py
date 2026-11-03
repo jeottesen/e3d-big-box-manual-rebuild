@@ -71,7 +71,7 @@ def extract(h):
 from sections import HEADING, embedded_sections, thumb_file
 from drawings_page import drawings_page
 import manual_parts
-from targets import MANUAL_PART_NAMES, NO_DRAWING_NAMES
+from targets import MANUAL_PART_NAMES, NO_DRAWING_NAMES, NOT_PRINTED
 import printed_parts
 import truth
 SHEETS = truth.load_truth()   # the reviewed per-sheet data (data/sheets/*.json): the build reads this and nothing the tools propose
@@ -218,30 +218,40 @@ def add_drawing_parts(body, sheets, sections_by_image, manual_entries=(), headin
     qty_for = {(sid, truth.key(part)): e['qty'] for e, sid, part in covered}   # the quantity the manual's step uses, where a drawing shows one part that applies to several places
     rows = [(d, sec, dict(r, qty=qty_for.get((sid, truth.key(r['part'])), r['qty']))) for d, sec, r, sid in rows]
     printed = [(d, sec, r) for d, sec, r in rows if truth.key(r['description']) in PRINTED]   # compared the way drift compares names: spacing and case do not matter
-    names = [r['part'] for _, _, r in printed] + [NO_DRAWING_NAMES.get(g['part'], g['part']) for g in no_drawing]
+    def final_name(g): return NO_DRAWING_NAMES.get(g['part'], g['part'])
+    names = [r['part'] for _, _, r in printed] + [final_name(g) for g in no_drawing]
     main_files, alternates, mirrors, extras = printed_parts.classify(printed_parts.load(), names)   # the STEP files, matched to the rows by name
+    not_printed = {truth.key(n) for n in NOT_PRINTED}
+    own_files = {**main_files, **{r['name']: r for r in extras}}   # a file with no row of its own is listed under its own name
     def step(n):
-        links = ([f'<a href="{printed_parts.href(main_files[n])}">STEP</a>'] if n in main_files else []) \
+        links = ([f'<a href="{printed_parts.href(own_files[n])}">STEP</a>'] if n in own_files else []) \
             + [f'<a href="{printed_parts.href(r)}">STEP (alternate, for the newer screw)</a>' for r in alternates.get(n, [])] \
             + ([f'<a href="{printed_parts.href(mirrors[n])}">STEP (R, the mirror image)</a>'] if n in mirrors else [])
-        return '; '.join(links) or '–'
-    tr = ''.join(f'<tr><td>{esc(r["part"])}</td><td>{"~" if r.get("approx") else ""}{r["qty"]}</td><td>{"printed" if truth.key(r["description"]) == PRINTED_PART else "from the Printed Parts Box"}</td>'
-                 f'<td>{d}</td><td>{sec or "–"}</td><td>{step(r["part"])}</td></tr>' for d, sec, r in printed)
-    tr += ''.join(f'<tr><td>{esc(NO_DRAWING_NAMES.get(g["part"], g["part"]))}</td><td>{g["qty"]}</td><td>{manual_parts.CONTAINER_LABEL[g["container"]]}</td><td>no drawing</td><td>{"; ".join(f'<a href="{pg}.html{"#" + esc(sid) if sid else ""}">{esc(txt)}</a>' for pg, sid, txt in g["steps"])}</td><td>{step(NO_DRAWING_NAMES.get(g["part"], g["part"]))}</td></tr>' for g in no_drawing)
-    printed_note = note[:-len('</em></p>')] + ' Printed parts that the manual\'s own step lists name but that no drawing covers are added at the end, marked no drawing.</em></p>'
+        return '; '.join(links)   # blank where there is no file
     def where(r):
         pg = printed_parts.page_of(r)
         hid = heading_id(*pg) if pg else None
         return (f'<a href="{pg[0]}.html#{esc(hid)}">{esc(pg[1])}</a>' if hid else esc(pg[1])) if pg else '–'
+    def steps_of(g): return '; '.join(f'<a href="{pg}.html{"#" + esc(sid) if sid else ""}">{esc(txt)}</a>' for pg, sid, txt in g['steps'])
+    # (name, qty, source, drawing, build section) of every row, from the drawings, then the manual's own lists, then the STEP files that no row names
+    listed = [(r['part'], f'{"~" if r.get("approx") else ""}{r["qty"]}', 'printed' if truth.key(r['description']) == PRINTED_PART else 'from the Printed Parts Box', d, sec or '–') for d, sec, r in printed]
+    listed += [(final_name(g), str(g['qty']), manual_parts.CONTAINER_LABEL[g['container']], 'no drawing', steps_of(g)) for g in no_drawing]
+    listed += [(r['name'], '–', 'printed', 'no drawing', where(r)) for r in extras]
+    def table(rows, with_step):
+        head = '<th>Part</th><th>Qty</th><th>Source</th><th>Drawing</th><th>Build section</th>' + ('<th>STEP</th>' if with_step else '')
+        return '<table><thead><tr>' + head + '</tr></thead><tbody>' + ''.join(
+            f'<tr><td>{esc(n)}</td><td>{q}</td><td>{src}</td><td>{d}</td><td>{sec}</td>' + (f'<td>{step(n)}</td>' if with_step else '') + '</tr>' for n, q, src, d, sec in rows) + '</tbody></table>'
+    printed_rows = [row for row in listed if truth.key(row[0]) not in not_printed]
+    other_rows = [row for row in listed if truth.key(row[0]) in not_printed]
+    printed_note = note[:-len('</em></p>')] + (' Printed parts that the manual\'s own step lists name but that no drawing covers are added after them, marked no drawing, and so are the printed parts whose '
+                                               'STEP files are here but that the Bill of Materials does not list (with the step the manual puts them in and no quantity).</em></p>')
     mirrored = '; '.join(f'{esc(printed_parts.bom_name(r))} was made by mirroring the (L) part, which the original files hold once' if 'made by mirroring' in r['notes']
                          else f'{esc(printed_parts.bom_name(r))} is the mirror image of the (L) part' for r in mirrors.values())
     step_note = ('<p><em>The STEP column links the part\'s STEP file, from <a href="Downloads.html">Downloads</a>, where its sources are listed. The files are licensed CC BY-SA 3.0 (see their README). Each file is one solid in its own frame, '
                  f'moved so its bounding box sits on the origin and never rotated, so a slicer can open it directly. Left and right parts that are the same shape are one file; the quantity says how many to print.{" " + mirrored + "." if mirrored else ""}</em></p>')
-    extras_html = ('<h3><span class="mw-headline" id="Printed_Parts_With_No_Row">Printed Parts With No Row</span></h3>'
-                   '<p><em>STEP files for printed parts that have no row above, because the Bill of Materials does not list them.</em></p>'
-                   '<table><thead><tr><th>Part</th><th>STEP</th><th>Used in</th><th>Note</th></tr></thead><tbody>'
-                   + ''.join(f'<tr><td>{esc(r["name"])}</td><td><a href="{printed_parts.href(r)}">STEP</a></td><td>{where(r)}</td><td>{esc(r["notes"]) or "–"}</td></tr>' for r in extras) + '</tbody></table>') if extras else ''
-    printed_html = printed_note + step_note + f'<table><thead><tr><th>Part</th><th>Qty</th><th>Source</th><th>Drawing</th><th>Build section</th><th>STEP</th></tr></thead><tbody>{tr}</tbody></table>' + extras_html
+    other_html = ('<h3><span class="mw-headline" id="Not_Printed_Parts">Parts From the Printed Parts Box and Bag That Are Not Printed</span></h3>'
+                  '<p><em>These come in the Printed Parts Box or Bag with the printed parts but are not 3D printed, so they have no STEP file.</em></p>' + table(other_rows, False)) if other_rows else ''
+    printed_html = printed_note + step_note + table(printed_rows, True) + other_html
     fixings = {}
     for d, _sec, r in rows:
         if truth.key(r['description']).startswith('FIXINGS'): fixings.setdefault((r['description'], r['part']), []).append(d)
