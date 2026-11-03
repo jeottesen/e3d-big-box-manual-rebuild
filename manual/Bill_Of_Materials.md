@@ -13,7 +13,7 @@ Archived 20210416002713 · source: wiki.e3d-online.com/wiki/Bill_Of_Materials ·
 - [E3D HotEnd(s)](#e3d-hotends)
 - [Wiring](#wiring)
 - [Printed Parts](#printed-parts)
-- [Not Printed: From the Printed Parts Box and Bag](#not-printed-from-the-printed-parts-box-and-bag)
+- [Not Printed](#not-printed)
 - [Fixings](#fixings)
 - [OctoPrint Upgrade Extras](#octoprint-upgrade-extras)
 - [Where next?](#where-next)
@@ -225,7 +225,7 @@ Embedded Plastic Bowden Coupler, two parts.
 | Top Camera Bracket | – | no drawing | [(22) OctoPrint Upgrade Camera Install](Printer_main_assemblies_Step_By_Step_Assembly_Process.md#22-octoprint-upgrade-camera-install) | [STEP](../downloads/printed-parts/parts/Top-Camera-Bracket.step) |
 | X-CARRIAGE DUAL | – | no drawing | [(8) Dual X-Carriage](BigBox_Parts_Preparation.md#8-dual-x-carriage) | [STEP](../downloads/printed-parts/parts/X-CARRIAGE-DUAL.step) |
 
-## Not Printed: From the Printed Parts Box and Bag
+## Not Printed
 
 *These come in the Printed Parts Box or Bag but are not 3D printed.*
 

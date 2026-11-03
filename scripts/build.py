@@ -247,7 +247,7 @@ def add_drawing_parts(body, sheets, sections_by_image, manual_entries=(), headin
     mirrored = '; '.join(f'{esc(printed_parts.bom_name(r))} was made by mirroring the (L) part' if 'made by mirroring' in r['notes']
                          else f'{esc(printed_parts.bom_name(r))} is the mirror image of the (L) part' for r in mirrors.values())
     step_note = ('<p><em>The STEP files were sourced from the BigBox design files listed on <a href="Downloads.html">Downloads</a>.' + (f' {mirrored}.' if mirrored else '') + '</em></p>')
-    other_html = ('<h3><span class="mw-headline" id="Not_Printed_Parts">Not Printed: From the Printed Parts Box and Bag</span></h3>'
+    other_html = ('<h3><span class="mw-headline" id="Not_Printed_Parts">Not Printed</span></h3>'
                   '<p><em>These come in the Printed Parts Box or Bag but are not 3D printed.</em></p>' + table(other_rows, False)) if other_rows else ''
     printed_html = printed_note + step_note + table(printed_rows, True) + other_html
     fixings = {}

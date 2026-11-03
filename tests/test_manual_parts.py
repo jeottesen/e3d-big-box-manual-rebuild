@@ -118,7 +118,7 @@ class InTheBom(unittest.TestCase):
     def test_the_printed_parts_keep_the_wikis_heading_and_what_is_not_printed_has_its_own(self):
         bom, _ = bom_rows()
         self.assertIn('id="Printed_Parts">Printed Parts<', bom)
-        self.assertIn('id="Not_Printed_Parts">Not Printed: From the Printed Parts Box and Bag<', bom)
+        self.assertIn('id="Not_Printed_Parts">Not Printed<', bom)
 
     def test_items_that_are_not_printed_say_which_box_or_bag_they_come_from(self):
         bom, _ = bom_rows()
