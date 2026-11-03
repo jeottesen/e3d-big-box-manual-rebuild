@@ -73,6 +73,7 @@ from drawings_page import drawings_page
 import manual_parts
 from targets import MANUAL_PART_NAMES, NO_DRAWING_NAMES, NOT_PRINTED
 import printed_parts
+import bom_ods
 import truth
 SHEETS = truth.load_truth()   # the reviewed per-sheet data (data/sheets/*.json): the build reads this and nothing the tools propose
 _bad = truth.all_problems(SHEETS)
@@ -253,9 +254,18 @@ def add_drawing_parts(body, sheets, sections_by_image, manual_entries=(), headin
     for d, _sec, r in rows:
         if truth.key(r['description']).startswith('FIXINGS'): fixings.setdefault((r['description'], r['part']), []).append(d)
     def bag_no(d): return int(''.join(c for c in d if c.isdigit()) or 0)
-    tr = ''.join(f'<tr><td>{esc(bag)}</td><td>{esc(part)}</td><td>{", ".join(ds)}</td></tr>'
-                 for (bag, part), ds in sorted(fixings.items(), key=lambda kv: (bag_no(kv[0][0]), kv[0][1])))
-    fixings_html = note + f'<table><thead><tr><th>Fixings bag</th><th>Fixing</th><th>Drawings</th></tr></thead><tbody>{tr}</tbody></table>'
+    # E3D's own list of the kit (data/bom.ods) is the list; the drawings that show each fixing are added to it. A fixing only the drawings show keeps the drawings' bag and has no quantity.
+    sheet_rows = bom_ods.fixings()
+    matched = bom_ods.match({part for _bag, part in fixings}, sheet_rows)
+    merged = {id(o): (o, []) for o in sheet_rows}
+    only_drawn = []
+    for (bag, part), ds in fixings.items():
+        if part in matched: merged[id(matched[part])][1].extend(d for d in ds if d not in merged[id(matched[part])][1])
+        else: only_drawn.append(({'bag': bag_no(bag), 'description': part, 'required': None, 'supplied': None}, ds))
+    fixing_rows = sorted(list(merged.values()) + only_drawn, key=lambda x: (x[0]['bag'], x[0]['description']))
+    tr = ''.join(f'<tr><td>Fixings Bag {o["bag"]}</td><td>{esc(o["description"])}</td><td>{"–" if o["required"] is None else o["required"]}</td>'
+                 f'<td>{"–" if o["supplied"] is None else o["supplied"]}</td><td>{", ".join(ds) or "–"}</td></tr>' for o, ds in fixing_rows)
+    fixings_html = note + f'<table><thead><tr><th>Fixings bag</th><th>Fixing</th><th>Qty required</th><th>Qty supplied</th><th>Drawings</th></tr></thead><tbody>{tr}</tbody></table>'
     body = re.sub(r'<h3><span class="mw-headline" id="Printed_Parts">Printed Parts</span></h3>', lambda m: m.group(0) + printed_html, body, count=1)
     return re.sub(r'(<h3><span class="mw-headline" id="Fixings">Fixings</span></h3>)', lambda m: m.group(1) + fixings_html, body, count=1)
 

@@ -8,6 +8,7 @@ The extraction tools (`scripts/drawings.py`, `scripts/drawing_images.py`, `scrip
 
 - `sheets/pdf-NN.json` – page NN of `docs/files/EXPLODED_DRAWINGS.pdf`, read from the PDF's text (exact).
 - `sheets/img-NAME.json` – a sheet that exists only as an image on the wiki (not in the PDF), read by OCR and checked by a person.
+- `bom.ods` – E3D's own Bill of Materials spreadsheet (from `bom.zip` on the BigBox Thingiverse page, CC BY-SA 3.0, see `NOTICE.md`). Its Fixings sheet is the list of the fixings kit, by bag, with the quantity required and supplied; `scripts/bom_ods.py` reads it and the build merges it with the fixings the drawings show. It is not a sheet and nothing reads it but the build.
 
 ## Fields
 

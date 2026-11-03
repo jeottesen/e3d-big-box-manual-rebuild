@@ -42,12 +42,13 @@ class Bom(unittest.TestCase):
             seen = [tuple((t, tuple(h)) for t, h in r) for r in rows]
             self.assertEqual(len(seen), len(set(seen)), section)
 
-    def drawing_cell(self, section, row): return row[2]   # Part, Qty, Drawing (printed parts); Fixings bag, Fixing, Drawings
+    def drawing_cell(self, section, row): return row[2] if section == 'Printed_Parts' else row[4]   # Part, Qty, Drawing (printed parts); Fixings bag, Fixing, Qty required, Qty supplied, Drawings
 
     def test_every_row_has_a_drawing_that_exists(self):
         for section, rows in TABLES.items():
             for row in rows:
                 text, hrefs = self.drawing_cell(section, row)
+                if text == '–' and section == 'Fixings': continue   # on E3D's list of the kit, but no drawing shows it
                 if text == '–': self.assertTrue(row[3][1], f'{row[0][0]}: a part with no drawing must link the step that lists it'); continue   # added from the manual
                 self.assertTrue(hrefs, f'{section}: {row[0][0]} has no drawing link')
                 for href in hrefs:
