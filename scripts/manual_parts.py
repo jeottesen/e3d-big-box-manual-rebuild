@@ -16,7 +16,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOCS = f'{ROOT}/docs'
 ITEM = re.compile(r'<li>\s*(\d+) x (.+?) \((Printed [Pp]arts?(?: [Bb]ox| [Bb]ag)?)\)\.?\s*</li>')   # the wiki is not tidy: a stray space after the full stop
 CONTAINERS = {'printed part': 'printed', 'printed parts': 'printed', 'printed parts box': 'printed-parts-box', 'printed parts bag': 'printed-parts-bag'}
-CONTAINER_LABEL = {'printed': 'printed', 'printed-parts-box': 'from the Printed Parts Box', 'printed-parts-bag': 'from the Printed Parts Bag'}
+CONTAINER_LABEL = {'printed': 'printed', 'printed-parts-box': 'Printed Parts Box', 'printed-parts-bag': 'Printed Parts Bag'}
 
 
 def scan(pages):

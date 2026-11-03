@@ -234,7 +234,7 @@ def add_drawing_parts(body, sheets, sections_by_image, manual_entries=(), headin
         return (f'<a href="{pg[0]}.html#{esc(hid)}">{esc(pg[1])}</a>' if hid else esc(pg[1])) if pg else '–'
     def steps_of(g): return '; '.join(f'<a href="{pg}.html{"#" + esc(sid) if sid else ""}">{esc(txt)}</a>' for pg, sid, txt in g['steps'])
     # (name, qty, source, drawing, build section) of every row, from the drawings, then the manual's own lists, then the STEP files that no row names
-    listed = [(r['part'], f'{"~" if r.get("approx") else ""}{r["qty"]}', 'printed' if truth.key(r['description']) == PRINTED_PART else 'from the Printed Parts Box', d, sec or '–') for d, sec, r in printed]
+    listed = [(r['part'], f'{"~" if r.get("approx") else ""}{r["qty"]}', 'printed' if truth.key(r['description']) == PRINTED_PART else 'Printed Parts Box', d, sec or '–') for d, sec, r in printed]
     listed += [(final_name(g), str(g['qty']), manual_parts.CONTAINER_LABEL[g['container']], 'no drawing', steps_of(g)) for g in no_drawing]
     listed += [(r['name'], '–', 'printed', 'no drawing', where(r)) for r in extras]
     def table(rows, with_step):   # the printed parts have a STEP column and no Source column (all are printed); the others say which box or bag they come in
