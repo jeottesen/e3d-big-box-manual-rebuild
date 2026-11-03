@@ -212,8 +212,9 @@ def add_drawing_parts(body, sheets, sections_by_image, manual_entries=(), headin
     last_pdf_page = max((sh['source']['page'] for sh in sheets.values() if sh['source']['kind'] == 'pdf'), default=0)
     ocr = ' Sheets marked (image) exist only as pictures on the wiki; they were read by OCR and checked by a person, or entered by hand from the drawing and the manual where the drawing has no parts list.' if any('(image)' in row[0] for row in rows) else ''
     cut = f' {left_out} rows read by OCR are left out until they are checked.' if left_out else ''
-    note = ('<p class="derived"><em>This list is not from the wiki page, which left it empty. It is compiled from the parts lists in the '
-            f'<a href="{PDF_LINK}">exploded drawings PDF</a> (EXPLODED_DRAWINGS.pdf, sheets 1 to {last_pdf_page}) and the drawing images on the wiki. Each row links to the drawing, with its sheet number in the PDF. <a href="Exploded_Drawings.html">All the drawings are on one page.</a>{ocr}{cut}</em></p>')
+    lead = ('<p class="derived"><em>This list is not from the wiki page, which left it empty. It is compiled from the parts lists in the '
+            f'<a href="{PDF_LINK}">exploded drawings PDF</a> (EXPLODED_DRAWINGS.pdf, sheets 1 to {last_pdf_page}) and the drawing images on the wiki. Each row links to the drawing, with its sheet number in the PDF. <a href="Exploded_Drawings.html">All the drawings are on one page.</a>')
+    note = lead + f'{ocr}{cut}</em></p>'   # the Fixings section says which sheets were read by OCR; the printed parts stop at the link above
     covered, no_drawing = manual_parts.group(manual_entries, MANUAL_PART_NAMES)   # the printed parts the manual names: the ones a drawing shows, and the ones none does
     qty_for = {(sid, truth.key(part)): e['qty'] for e, sid, part in covered}   # the quantity the manual's step uses, where a drawing shows one part that applies to several places
     rows = [(d, sec, dict(r, qty=qty_for.get((sid, truth.key(r['part'])), r['qty']))) for d, sec, r, sid in rows]
@@ -243,7 +244,7 @@ def add_drawing_parts(body, sheets, sections_by_image, manual_entries=(), headin
             f'<tr><td>{esc(n)}</td><td>{q}</td>' + ('' if with_step else f'<td>{src}</td>') + f'<td>{d}</td><td>{sec}</td>' + (f'<td>{step(n)}</td>' if with_step else '') + '</tr>' for n, q, src, d, sec in rows) + '</tbody></table>'
     printed_rows = [row for row in listed if truth.key(row[0]) not in not_printed]
     other_rows = [row for row in listed if truth.key(row[0]) in not_printed]
-    printed_note = note[:-len('</em></p>')] + ' Printed parts that the manual\'s own step lists name, and printed parts that have a STEP file but no row, are added after them, with a dash where the drawing would be.</em></p>'
+    printed_note = lead + '</em></p>'
     mirrored = '; '.join(f'{esc(printed_parts.bom_name(r))} was made by mirroring the (L) part' if 'made by mirroring' in r['notes']
                          else f'{esc(printed_parts.bom_name(r))} is the mirror image of the (L) part' for r in mirrors.values())
     step_note = ('<p><em>The STEP files were sourced from the BigBox design files listed on <a href="Downloads.html">Downloads</a>.' + (f' {mirrored}.' if mirrored else '') + '</em></p>')

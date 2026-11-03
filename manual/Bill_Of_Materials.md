@@ -148,7 +148,7 @@ Embedded Plastic Bowden Coupler, two parts.
 
 ## Printed Parts
 
-*This list is not from the wiki page, which left it empty. It is compiled from the parts lists in the [exploded drawings PDF](../docs/files/EXPLODED_DRAWINGS.pdf) (EXPLODED_DRAWINGS.pdf, sheets 1 to 29) and the drawing images on the wiki. Each row links to the drawing, with its sheet number in the PDF. [All the drawings are on one page.](Exploded_Drawings.md) Sheets marked (image) exist only as pictures on the wiki; they were read by OCR and checked by a person, or entered by hand from the drawing and the manual where the drawing has no parts list. Printed parts that the manual's own step lists name, and printed parts that have a STEP file but no row, are added after them, with a dash where the drawing would be.*
+*This list is not from the wiki page, which left it empty. It is compiled from the parts lists in the [exploded drawings PDF](../docs/files/EXPLODED_DRAWINGS.pdf) (EXPLODED_DRAWINGS.pdf, sheets 1 to 29) and the drawing images on the wiki. Each row links to the drawing, with its sheet number in the PDF. [All the drawings are on one page.](Exploded_Drawings.md)*
 
 *The STEP files were sourced from the BigBox design files listed on [Downloads](Downloads.md). SPOOL-HOLDER OUTER (R) was made by mirroring the (L) part; Y-AXIS REAR (R) is the mirror image of the (L) part.*
 
