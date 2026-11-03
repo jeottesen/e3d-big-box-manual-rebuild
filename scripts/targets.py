@@ -152,6 +152,7 @@ OCR_FIXES = {
     'HOBDGOBLIN-SOOIO': 'HOBBGOBLIN-500ID',
     'M3x 3Skt Grb Screw Knurled Point': 'M3 x 3 Skt Grub Screw Knurled Point',
     'M2Hex Nut': 'M3 Hex Nut',   # the hybrid drawings themselves print 'M2 Hex Nut' (E3D's typo): Fixings Bag 3 holds the M3 hex nut and no M2 screws or nuts are listed anywhere (confirmed by the maintainer)
+    '30x30x30 DC Fan (24v)': '30x30x10 DC Fan (24v)',   # sheet 26 prints 30x30x30 (E3D's typo or a misprint): there is no 30x30x30 fan in the build, it is the 30x30x10 hotend fan (confirmed by the maintainer)
 }
 # (lookup ignores spaces and case, so 'M2 HexNut' and 'M2Hex Nut' both match)
 
@@ -246,7 +247,7 @@ GENERAL_SOURCES = {
     'Raspberry Pi 2 + 8gb': [('heading', _SUB, '(12.8) OctoPrint Upgrades')],
     '5v DC DC Converter': [('heading', _SUB, '(12.8) OctoPrint Upgrades')],
     'Link': [('heading', 'BigBox_Parts_Preparation', '(19) IEC Socket')],
-    '30x30x10 24v (1700mm lead w/ 0.1" connector)': [('part', '30x30x30 DC Fan (24v)'), ('heading', _MAIN, '(21.3) Assembly of the E3D V6 HotEnds.')],   # the drawing's 30x30x30 is a typo for 30x30x10 (maintainer)
+    '30x30x10 24v (1700mm lead w/ 0.1" connector)': [('part', '30x30x10 DC Fan (24v)'), ('heading', _MAIN, '(21.3) Assembly of the E3D V6 HotEnds.')],   # sheet 26 prints it 30x30x30 (corrected in data/sheets/pdf-26.json)
     '40nm NEMA 17 (200 Steps) (Wantai 42BYGHW609L20P1-X2)': [('heading', _MAIN, '(17.4) Z-Axis Motors')],
     'TR8 Nut (4 x M3 Mounting Holes)': [('heading', _SUB, '(10) Z-Axis Bed Assembly'), ('heading', _COM, '(1.4) Leadscrews')],
     'SiS 325mm (S)': [('heading', _MAIN, '(30) Spool Carrier')],
