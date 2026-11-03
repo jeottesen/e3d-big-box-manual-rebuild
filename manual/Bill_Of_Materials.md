@@ -241,7 +241,7 @@ Embedded Plastic Bowden Coupler, two parts.
 
 ## Fixings
 
-*This list is not from the wiki page, which left it empty. It is compiled from the parts lists in the [exploded drawings PDF](../docs/files/EXPLODED_DRAWINGS.pdf) (EXPLODED_DRAWINGS.pdf, sheets 1 to 29) and the drawing images on the wiki. Each row links to the drawing, with its sheet number in the PDF. [All the drawings are on one page.](Exploded_Drawings.md) Sheets marked (image) exist only as pictures on the wiki; they were read by OCR and checked by a person, or entered by hand from the drawing and the manual where the drawing has no parts list.*
+*This list is not from the wiki page, which left it empty. It is compiled from the parts lists in the [exploded drawings PDF](../docs/files/EXPLODED_DRAWINGS.pdf) (EXPLODED_DRAWINGS.pdf, sheets 1 to 29) and the drawing images on the wiki. Each row links to the drawing, with its sheet number in the PDF. [All the drawings are on one page.](Exploded_Drawings.md)*
 
 | Fixings bag | Fixing | Drawings |
 | --- | --- | --- |
