@@ -237,20 +237,18 @@ def add_drawing_parts(body, sheets, sections_by_image, manual_entries=(), headin
     listed = [(r['part'], f'{"~" if r.get("approx") else ""}{r["qty"]}', 'printed' if truth.key(r['description']) == PRINTED_PART else 'from the Printed Parts Box', d, sec or '–') for d, sec, r in printed]
     listed += [(final_name(g), str(g['qty']), manual_parts.CONTAINER_LABEL[g['container']], 'no drawing', steps_of(g)) for g in no_drawing]
     listed += [(r['name'], '–', 'printed', 'no drawing', where(r)) for r in extras]
-    def table(rows, with_step):
-        head = '<th>Part</th><th>Qty</th><th>Source</th><th>Drawing</th><th>Build section</th>' + ('<th>STEP</th>' if with_step else '')
+    def table(rows, with_step):   # the printed parts have a STEP column and no Source column (all are printed); the others say which box or bag they come in
+        head = '<th>Part</th><th>Qty</th>' + ('' if with_step else '<th>Source</th>') + '<th>Drawing</th><th>Build section</th>' + ('<th>STEP</th>' if with_step else '')
         return '<table><thead><tr>' + head + '</tr></thead><tbody>' + ''.join(
-            f'<tr><td>{esc(n)}</td><td>{q}</td><td>{src}</td><td>{d}</td><td>{sec}</td>' + (f'<td>{step(n)}</td>' if with_step else '') + '</tr>' for n, q, src, d, sec in rows) + '</tbody></table>'
+            f'<tr><td>{esc(n)}</td><td>{q}</td>' + ('' if with_step else f'<td>{src}</td>') + f'<td>{d}</td><td>{sec}</td>' + (f'<td>{step(n)}</td>' if with_step else '') + '</tr>' for n, q, src, d, sec in rows) + '</tbody></table>'
     printed_rows = [row for row in listed if truth.key(row[0]) not in not_printed]
     other_rows = [row for row in listed if truth.key(row[0]) in not_printed]
-    printed_note = note[:-len('</em></p>')] + (' Printed parts that the manual\'s own step lists name but that no drawing covers are added after them, marked no drawing, and so are the printed parts whose '
-                                               'STEP files are here but that the Bill of Materials does not list (with the step the manual puts them in and no quantity).</em></p>')
-    mirrored = '; '.join(f'{esc(printed_parts.bom_name(r))} was made by mirroring the (L) part, which the original files hold once' if 'made by mirroring' in r['notes']
+    printed_note = note[:-len('</em></p>')] + ' Printed parts that the manual\'s own step lists name, and printed parts that have a STEP file but no row, are added after them, marked no drawing.</em></p>'
+    mirrored = '; '.join(f'{esc(printed_parts.bom_name(r))} was made by mirroring the (L) part' if 'made by mirroring' in r['notes']
                          else f'{esc(printed_parts.bom_name(r))} is the mirror image of the (L) part' for r in mirrors.values())
-    step_note = ('<p><em>The STEP column links the part\'s STEP file, from <a href="Downloads.html">Downloads</a>, where its sources are listed. The files are licensed CC BY-SA 3.0 (see their README). Each file is one solid in its own frame, '
-                 f'moved so its bounding box sits on the origin and never rotated, so a slicer can open it directly. Left and right parts that are the same shape are one file; the quantity says how many to print.{" " + mirrored + "." if mirrored else ""}</em></p>')
-    other_html = ('<h3><span class="mw-headline" id="Not_Printed_Parts">Parts From the Printed Parts Box and Bag That Are Not Printed</span></h3>'
-                  '<p><em>These come in the Printed Parts Box or Bag with the printed parts but are not 3D printed, so they have no STEP file.</em></p>' + table(other_rows, False)) if other_rows else ''
+    step_note = ('<p><em>The STEP files were sourced from the BigBox design files listed on <a href="Downloads.html">Downloads</a>.' + (f' {mirrored}.' if mirrored else '') + '</em></p>')
+    other_html = ('<h3><span class="mw-headline" id="Not_Printed_Parts">Not Printed: From the Printed Parts Box and Bag</span></h3>'
+                  '<p><em>These come in the Printed Parts Box or Bag but are not 3D printed.</em></p>' + table(other_rows, False)) if other_rows else ''
     printed_html = printed_note + step_note + table(printed_rows, True) + other_html
     fixings = {}
     for d, _sec, r in rows:
@@ -259,7 +257,7 @@ def add_drawing_parts(body, sheets, sections_by_image, manual_entries=(), headin
     tr = ''.join(f'<tr><td>{esc(bag)}</td><td>{esc(part)}</td><td>{", ".join(ds)}</td></tr>'
                  for (bag, part), ds in sorted(fixings.items(), key=lambda kv: (bag_no(kv[0][0]), kv[0][1])))
     fixings_html = note + f'<table><thead><tr><th>Fixings bag</th><th>Fixing</th><th>Drawings</th></tr></thead><tbody>{tr}</tbody></table>'
-    body = re.sub(r'<h3><span class="mw-headline" id="Printed_Parts">Printed Parts</span></h3>', lambda m: '<h3><span class="mw-headline" id="Printed_Parts">Printed Parts, Printed Parts Box and Printed Parts Bag</span></h3>' + printed_html, body, count=1)
+    body = re.sub(r'<h3><span class="mw-headline" id="Printed_Parts">Printed Parts</span></h3>', lambda m: m.group(0) + printed_html, body, count=1)
     return re.sub(r'(<h3><span class="mw-headline" id="Fixings">Fixings</span></h3>)', lambda m: m.group(1) + fixings_html, body, count=1)
 
 def mark_dead(body):

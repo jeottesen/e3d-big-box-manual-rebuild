@@ -55,15 +55,15 @@ The files that came on the SD card in the kit.
 
 ## Printed parts (STEP files)
 
-One STEP file for each printed part, named after its Bill of Materials row and linked from it. Each is one solid in its own frame, moved so its bounding box sits on the origin and never rotated, so a slicer can open it directly. They were cut from the original BigBox CAD assemblies listed below, which are not stored here, and they are licensed Creative Commons Attribution-ShareAlike (CC BY-SA 3.0), as the originals are, not CC BY 3.0 like the rest of this repository. The designs are by Bigbox3DP (E3D) on Thingiverse, thing 1521722. The right-hand SPOOL-HOLDER OUTER (R) was made by mirroring (L), which the originals hold once.
+One STEP file for each printed part, named after its Bill of Materials row and linked from it. Each is one solid in its own frame, moved so its bounding box sits on the origin and never rotated, so a slicer can open it directly. They were cut from the original BigBox CAD assemblies listed below, which are not stored here. The designs are by Bigbox3DP (E3D) on Thingiverse, thing 1521722. The right-hand SPOOL-HOLDER OUTER (R) was made by mirroring (L), which the originals hold once.
 
 - [parts.csv](../downloads/printed-parts/parts.csv) – one row per file: Bill of Materials name, quantity, manual section, source assembly and part, size, volume and SHA-256
 - [SHA256SUMS](../downloads/printed-parts/SHA256SUMS) – check the files with sha256sum -c SHA256SUMS in downloads/printed-parts
-- [bigbox_v1.1.0.stp (source assembly)](https://www.thingiverse.com/thing:1521722) – BigBox v1.1: 54 of the parts; CC BY-SA 3.0, Bigbox3DP on Thingiverse
-- [Hybrid_v1.1.0.stp (source assembly)](https://www.thingiverse.com/thing:1521722) – BigBox v1.1 Hybrid: 10 of the parts; CC BY-SA 3.0, Bigbox3DP on Thingiverse
-- [bigbox_dual_v1.0.0.stp (source assembly)](https://www.thingiverse.com/thing:1521722) – BigBox v1.0 Dual: 7 of the parts; CC BY-SA 3.0, Bigbox3DP on Thingiverse
-- [BB_FRAME_M3_NUT_TRAP.stp (source assembly)](https://www.thingiverse.com/thing:1521722) – the frame nut trap: 1 part; CC BY-SA 3.0, Bigbox3DP on Thingiverse
-- [Thingiverse page, archived copy of 2016-12-04](https://web.archive.org/web/20161204111516/http://www.thingiverse.com/thing:1521722) – states the licence (CC BY-SA 3.0) and offers STEP.zip
+- [bigbox_v1.1.0.stp (source assembly)](https://www.thingiverse.com/thing:1521722) – BigBox v1.1: 54 of the parts
+- [Hybrid_v1.1.0.stp (source assembly)](https://www.thingiverse.com/thing:1521722) – BigBox v1.1 Hybrid: 10 of the parts
+- [bigbox_dual_v1.0.0.stp (source assembly)](https://www.thingiverse.com/thing:1521722) – BigBox v1.0 Dual: 7 of the parts
+- [BB_FRAME_M3_NUT_TRAP.stp (source assembly)](https://www.thingiverse.com/thing:1521722) – the frame nut trap: 1 part
+- [Thingiverse page, archived copy of 2016-12-04](https://web.archive.org/web/20161204111516/http://www.thingiverse.com/thing:1521722) – the page the files are from; it offers STEP.zip
 
 ## Archived copies from the old E3D file server
 

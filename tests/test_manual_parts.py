@@ -68,7 +68,7 @@ class Group(unittest.TestCase):
         self.assertEqual(mp.group([self.entry('C', 1), self.entry('C', 2)], {})[1][0]['qty'], 2)
 
 # ---- the table in targets.py and the manual
-from targets import MANUAL_PART_NAMES, NO_DRAWING_NAMES
+from targets import MANUAL_PART_NAMES, NO_DRAWING_NAMES, NOT_PRINTED
 PAGES = mp.read_pages()
 FOUND = mp.scan(PAGES)
 SHEETS = truth.load_truth()
@@ -115,15 +115,18 @@ class InTheBom(unittest.TestCase):
             self.assertEqual(int(row.group(1)), e['qty'], part)                       # the manual's quantity (4 corners of the Z bed), not the drawing's 1
             if e['part'] != part: self.assertNotIn(f'<td>{e["part"]}</td>', table, e['part'])   # one name: the drawing's, not also the manual's
 
-    def test_the_heading_says_the_table_holds_box_and_bag_items(self):
+    def test_the_printed_parts_keep_the_wikis_heading_and_what_is_not_printed_has_its_own(self):
         bom, _ = bom_rows()
-        self.assertIn('id="Printed_Parts">Printed Parts, Printed Parts Box and Printed Parts Bag<', bom)
-        self.assertIn('Printed Parts, Printed Parts Box and Printed Parts Bag</a>', bom)   # and so does the page's contents list
+        self.assertIn('id="Printed_Parts">Printed Parts<', bom)
+        self.assertIn('id="Not_Printed_Parts">Not Printed: From the Printed Parts Box and Bag<', bom)
 
-    def test_box_and_bag_items_are_labelled_with_where_they_come_from(self):
-        _, table = bom_rows()
+    def test_items_that_are_not_printed_say_which_box_or_bag_they_come_from(self):
+        bom, _ = bom_rows()
+        other = bom[bom.index('id="Not_Printed_Parts"'):bom.index('id="Fixings"')]
         for g in mp.group(FOUND, MANUAL_PART_NAMES)[1]:
-            row = re.search(rf'<tr><td>{re.escape(NO_DRAWING_NAMES.get(g["part"], g["part"]))}</td>.*?</tr>', table).group(0)
+            name = NO_DRAWING_NAMES.get(g['part'], g['part'])
+            if name not in NOT_PRINTED: continue
+            row = re.search(rf'<tr><td>{re.escape(name)}</td>.*?</tr>', other).group(0)
             self.assertIn(f'<td>{mp.CONTAINER_LABEL[g["container"]]}</td>', row)
 
 if __name__ == '__main__': unittest.main()

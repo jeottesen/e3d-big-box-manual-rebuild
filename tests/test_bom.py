@@ -42,13 +42,13 @@ class Bom(unittest.TestCase):
             seen = [tuple((t, tuple(h)) for t, h in r) for r in rows]
             self.assertEqual(len(seen), len(set(seen)), section)
 
-    def drawing_cell(self, section, row): return row[3] if section == 'Printed_Parts' else row[2]
+    def drawing_cell(self, section, row): return row[2]   # Part, Qty, Drawing (printed parts); Fixings bag, Fixing, Drawings
 
     def test_every_row_has_a_drawing_that_exists(self):
         for section, rows in TABLES.items():
             for row in rows:
                 text, hrefs = self.drawing_cell(section, row)
-                if text == 'no drawing': self.assertTrue(row[4][1], f'{row[0][0]}: a part with no drawing must link the step that lists it'); continue   # added from the manual
+                if text == 'no drawing': self.assertTrue(row[3][1], f'{row[0][0]}: a part with no drawing must link the step that lists it'); continue   # added from the manual
                 self.assertTrue(hrefs, f'{section}: {row[0][0]} has no drawing link')
                 for href in hrefs:
                     if href.startswith('images/'): self.assertTrue(os.path.exists(os.path.join(ROOT, 'docs', urllib.parse.unquote(href))), href)
@@ -58,7 +58,7 @@ class Bom(unittest.TestCase):
 
     def test_every_build_section_link_lands_on_a_heading(self):
         for row in TABLES['Printed_Parts']:
-            for href in row[4][1]:
+            for href in row[3][1]:
                 page, _, frag = href.partition('#')
                 with open(os.path.join(ROOT, 'docs', page), encoding='utf-8') as f: html = f.read()
                 if frag: self.assertIn(f'id="{frag}"', html, href)   # a link with no heading is to a page that is itself the step
@@ -66,7 +66,7 @@ class Bom(unittest.TestCase):
     def sections_of(self, part):   # the text of the Build section cell for the row with this part name
         rows = [r for r in TABLES['Printed_Parts'] if r[0][0] == part]
         self.assertTrue(rows, part)
-        return rows[0][4][0]
+        return rows[0][3][0]
 
     def test_sections_come_from_where_the_manual_shows_the_drawing(self):
         # the manual is the source of truth: a drawing's step is the heading it is embedded under, not a guess from its title or number
@@ -80,7 +80,7 @@ class Bom(unittest.TestCase):
 
     def test_most_printed_parts_have_a_build_section(self):
         rows = TABLES['Printed_Parts']
-        without = [r[0][0] for r in rows if not r[4][1]]
+        without = [r[0][0] for r in rows if not r[3][1]]
         self.assertLess(len(without), len(rows) * 0.1, without)
 
     def test_the_pdf_link_is_at_the_top_of_each_section(self):

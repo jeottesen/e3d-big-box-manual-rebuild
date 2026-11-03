@@ -90,13 +90,13 @@ DOWNLOADS = [
       ('Dual/calibration/extruder_1.gcode', gh('BigBox3D/SD-Card', 'Dual/calibration/extruder_1.gcode'), '')]),
     ('Printed parts (STEP files)',
      'One STEP file for each printed part, named after its Bill of Materials row and linked from it. Each is one solid in its own frame, moved so its bounding box sits on the origin and never rotated, so a slicer can open it directly. '
-     'They were cut from the original BigBox CAD assemblies listed below, which are not stored here, and they are licensed Creative Commons Attribution-ShareAlike (CC BY-SA 3.0), as the originals are, not CC BY 3.0 like the rest of this repository. '
+     'They were cut from the original BigBox CAD assemblies listed below, which are not stored here. '
      'The designs are by Bigbox3DP (E3D) on Thingiverse, thing 1521722. '
      'The right-hand SPOOL-HOLDER OUTER (R) was made by mirroring (L), which the originals hold once.',
      [('parts.csv', '../downloads/printed-parts/parts.csv', 'one row per file: Bill of Materials name, quantity, manual section, source assembly and part, size, volume and SHA-256'),
       ('SHA256SUMS', '../downloads/printed-parts/SHA256SUMS', 'check the files with sha256sum -c SHA256SUMS in downloads/printed-parts')] +
-     [(f'{name} (source assembly)', url, f'{note}; {licence}') for name, url, note, licence in STEP_SOURCES] +
-     [('Thingiverse page, archived copy of 2016-12-04', 'https://web.archive.org/web/20161204111516/http://www.thingiverse.com/thing:1521722', 'states the licence (CC BY-SA 3.0) and offers STEP.zip')]),
+     [(f'{name} (source assembly)', url, note) for name, url, note, _licence in STEP_SOURCES] +
+     [('Thingiverse page, archived copy of 2016-12-04', 'https://web.archive.org/web/20161204111516/http://www.thingiverse.com/thing:1521722', 'the page the files are from; it offers STEP.zip')]),
     ('Archived copies from the old E3D file server',
      'The wiki\'s own file server (files.e3d-online.com) is gone, but the Wayback Machine kept these. The links go to the archived copies.',
      [
