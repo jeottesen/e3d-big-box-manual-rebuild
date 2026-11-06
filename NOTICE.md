@@ -21,6 +21,14 @@ The recovered material is not identical to the original wiki. Changes include:
 - The exploded drawings PDF (`docs/files/EXPLODED_DRAWINGS.pdf`) was published by E3D Online on `files.e3d-online.com`, linked from the wiki, and is included here as saved by the Wayback Machine on 2016-01-09, on the same terms as the rest of the archived material.
 - The Bill of Materials' Printed Parts and Fixings lists, and some drawing images, are derived from that PDF and from the wiki's drawing images, and are marked as such on the page. Some images are redrawn from the PDF where the wiki's own image was low resolution or was not archived.
 
+## Printed parts (STEP files)
+
+`downloads/printed-parts/` holds STEP files of the printed parts. They are adapted from the BigBox design files by Bigbox3DP (E3D) on [Thingiverse](https://www.thingiverse.com/thing:1521722) (thing 1521722), which are licensed [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/). The files carry that licence, not CC BY 3.0, and the folder's `README.md` lists the changes made. The CC BY 3.0 grant above does not cover them.
+
+## Fixings quantities
+
+The Fixings table on the Bill of Materials page lists every fixing in E3D's BigBox fixings kit, by bag, with the quantity required and supplied. That list is the Fixings sheet of `data/bom.ods`, the Bill of Materials spreadsheet in `bom.zip` on the BigBox design files page on [Thingiverse](https://www.thingiverse.com/thing:1521722), which is licensed [CC BY-SA 3.0](https://creativecommons.org/licenses/by-sa/3.0/). The spreadsheet is included unchanged; the page merges its Fixings sheet with the fixings the exploded drawings show, and the descriptions are the spreadsheet's own, typos included.
+
 ## No endorsement
 
 This is an unofficial community recovery. It is not produced, reviewed or endorsed by E3D Online or the Internet Archive. E3D, BigBox and related names and logos belong to their respective owners.

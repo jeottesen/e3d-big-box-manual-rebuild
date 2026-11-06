@@ -463,7 +463,7 @@ sheet 32 of 36 in the wiki’s newer drawings · shown in [(17.5) Z-Axis Lower R
 | 1 | M3 x 10 Dome Head Socket Screw | Extruder Box -\> E3D V6 Bag -\> Fixings Kit |
 | 1 | E3D-V6 Fan Duct | Extruder Box |
 | 1 | E3D-v6 Heater Block | Extruder Box -\> E3D V6 Bag |
-| 1 | 30x30x30 DC Fan (24v) | LCD / Fans Box (+ Extruder Box for Duals) |
+| 1 | 30x30x10 DC Fan (24v) | LCD / Fans Box (+ Extruder Box for Duals) |
 | 4 | 2.5 x 15 Screws for Plastic | Extruder Box -\> E3D V6 Bag -\> Fixings Kit |
 | 1 | PTFE-63 | Extruder Box -\> E3D V6 Bag |
 

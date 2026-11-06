@@ -101,9 +101,13 @@
   {
    "item": "11.2",
    "qty": 1,
-   "part": "30x30x30 DC Fan (24v)",
+   "part": "30x30x10 DC Fan (24v)",
    "description": "LCD / Fans Box (+ Extruder Box for Duals)",
-   "how": "pdf-text"
+   "how": "hand",
+   "read_as": {
+    "part": "30x30x30 DC Fan (24v)",
+    "description": "LCD / Fans Box (+ Extruder Box for Duals)"
+   }
   },
   {
    "item": "11.3",

@@ -48,6 +48,19 @@ class HandFixes(unittest.TestCase):
         # the source). The automatic rules must not make this change (they never change a number), so it is recorded by hand.
         self.assertEqual(OCR_FIXES['M2Hex Nut'], 'M3 Hex Nut')
 
+class PdfHandFix(unittest.TestCase):
+    def test_a_typo_in_the_pdf_itself_is_a_hand_fix_that_keeps_what_the_pdf_says(self):
+        import truth
+        row = {'item': '11.2', 'qty': 1, 'part': '30x30x30 DC Fan (24v)', 'description': 'LCD / Fans Box'}
+        got = truth.pdf_row(row, OCR_FIXES['30x30x30 DC Fan (24v)'])
+        self.assertEqual((got['part'], got['how'], got['read_as']['part']), ('30x30x10 DC Fan (24v)', 'hand', '30x30x30 DC Fan (24v)'))
+        self.assertEqual(truth.pdf_row(row, None)['how'], 'pdf-text')
+
+    def test_the_committed_sheet_has_the_corrected_fan(self):
+        from helpers import load
+        rows = [r for r in load('data/sheets/pdf-26.json')['rows'] if 'Fan (24v)' in r['part'] and r['part'].startswith('30x30')]
+        self.assertEqual([(r['part'], r['how']) for r in rows], [('30x30x10 DC Fan (24v)', 'hand')])
+
 class CommittedData(unittest.TestCase):
     def test_hand_fixes_do_not_collide(self):
         keys = [key(k) for k in OCR_FIXES]

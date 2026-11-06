@@ -16,7 +16,7 @@ ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DOCS = f'{ROOT}/docs'
 ITEM = re.compile(r'<li>\s*(\d+) x (.+?) \((Printed [Pp]arts?(?: [Bb]ox| [Bb]ag)?)\)\.?\s*</li>')   # the wiki is not tidy: a stray space after the full stop
 CONTAINERS = {'printed part': 'printed', 'printed parts': 'printed', 'printed parts box': 'printed-parts-box', 'printed parts bag': 'printed-parts-bag'}
-CONTAINER_LABEL = {'printed': 'printed', 'printed-parts-box': 'from the Printed Parts Box', 'printed-parts-bag': 'from the Printed Parts Bag'}
+CONTAINER_LABEL = {'printed': 'printed', 'printed-parts-box': 'Printed Parts Box', 'printed-parts-bag': 'Printed Parts Bag'}
 
 
 def scan(pages):
@@ -39,6 +39,33 @@ def scan(pages):
                 step = next((h for h in reversed(stack) if STEP.match(h[2])), stack[-1] if stack else (0, None, slug.replace('_', ' ')))
                 out.append({'page': slug, 'step_id': step[1], 'step': step[2], 'qty': int(v.group(1)), 'part': html.unescape(v.group(2)).strip(),
                             'container': CONTAINERS[v.group(3).lower()], 'drawing': None, 'note': ''})
+    return out
+
+
+BOX_ITEM = re.compile(r'<li>\s*(\d+) x (.+?) \(([^()]*(?:\([^()]*\))?[^()]*)\)\.?\s*</li>')   # "1 x Rumba (Electronics Box)."
+
+
+def scan_boxes(pages):
+    """[entry] for the list items that name something from a box of the kit ("1 x Rumba (Electronics Box)."): every "N x NAME (WHERE)" item that is not a
+    fixing ("Bag 8") or a printed part (scan() takes those). Same entries as scan(), with `container` the box as the manual words it."""
+    out = []
+    for slug, body in pages.items():
+        if slug in NOT_BUILD_PAGES or slug in ('index', 'manual'): continue
+        marks = []
+        for m in HEADING.finditer(body):
+            found = re.search(r'\bid="([^"]+)"', m.group(2) + m.group(3))
+            if found: marks.append((m.start(), 'h', (int(m.group(1)), html.unescape(found.group(1)), ' '.join(html.unescape(re.sub(r'<[^>]+>', '', m.group(3))).split()))))
+        marks += [(m.start(), 'i', m) for m in BOX_ITEM.finditer(body)]
+        stack = []
+        for _, kind, v in sorted(marks, key=lambda x: x[0]):
+            if kind == 'h':
+                while stack and stack[-1][0] >= v[0]: stack.pop()
+                stack.append(v)
+                continue
+            where = html.unescape(v.group(3)).strip()
+            if re.fullmatch(r'Bag \d+', where) or where.lower().startswith('printed'): continue
+            step = next((h for h in reversed(stack) if STEP.match(h[2])), stack[-1] if stack else (0, None, slug.replace('_', ' ')))
+            out.append({'page': slug, 'step_id': step[1], 'step': step[2], 'qty': int(v.group(1)), 'part': html.unescape(v.group(2)).strip(), 'container': where})
     return out
 
 

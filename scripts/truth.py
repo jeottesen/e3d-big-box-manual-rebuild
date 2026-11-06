@@ -107,12 +107,20 @@ def _load(name):
     if not os.path.exists(path): return None
     with open(path, encoding='utf-8') as f: return json.load(f)
 
+def pdf_row(r, fixed):
+    """A row read from the PDF's text. If the PDF itself has a typo that a person corrected (the hand-corrections table), the row is the correction
+    and keeps the PDF's text in read_as."""
+    row = {'item': r['item'], 'qty': int(r['qty']), 'part': fixed or r['part'], 'description': r['description'], 'how': 'hand' if fixed else 'pdf-text'}
+    if fixed: row['read_as'] = {'part': r['part'], 'description': r['description']}
+    return row
+
 def proposals(fixes, lost_images):
     """{id: sheet} built from work/proposed/{parts,parts_images,sheet_matches}.json.
     fixes: the hand-corrections table (targets.OCR_FIXES). lost_images: {file: sheet} for drawings the archive lost (targets.SHEET_IMAGES)."""
     parts, ocr, matches = _load('parts.json'), _load('parts_images.json'), _load('sheet_matches.json')
     if not (parts and ocr and matches): raise SystemExit('Nothing proposed yet: run `mise run propose` first.')
     matches = matches['matches']; hand = {key(k) for k in fixes}
+    fixes_by_key = {key(k): v for k, v in fixes.items()}
     out = {}
     for sh in parts['sheets']:
         if not sh['rows']: continue   # a blank sheet
@@ -124,7 +132,7 @@ def proposals(fixes, lost_images):
             'id': f'pdf-{n:02d}', 'title': sh['title'],
             'source': {'kind': 'pdf', 'file': PDF_REL, 'sha256': sha256(PDF), 'page': n},
             'images': images,
-            'rows': [{'item': r['item'], 'qty': int(r['qty']), 'part': r['part'], 'description': r['description'], 'how': 'pdf-text'} for r in sh['rows']],
+            'rows': [pdf_row(r, fixed) for r in sh['rows'] for fixed in [fixes_by_key.get(key(r['part']))]],
             'confirmed': None, 'notes': ''}
     for sh in ocr['sheets']:
         if matches.get(sh['image'], {}).get('status') == 'confirmed' or not sh['rows']: continue   # a sheet the PDF has is read from the PDF

@@ -45,6 +45,21 @@ from urllib.parse import quote
 def gh(repo, path='', kind='blob', ref='master'):
     return f'https://github.com/{repo}' + (f'/{kind}/{ref}/{quote(path)}' if path else '')
 
+# The original CAD assemblies the printed parts' STEP files were cut from: (file, where it can be downloaded, what it holds, licence).
+# The files themselves are not stored here (see downloads/printed-parts/). They are from E3D's BigBox design files on Thingiverse (thing 1521722, by
+# Bigbox3DP), which the wiki's main page links. That page says CC BY-SA 3.0 (the archived copy of 2016-12-04 links creativecommons.org/licenses/by-sa/3.0/)
+# and offers STEP.zip. The maintainer downloaded it from Thingiverse and confirmed that the files named here are in it and that the licence is right (2026-11-02/03).
+# tests/test_printed_parts.py fails if a source or licence is missing, so the parts are not published without them.
+UNRECORDED = 'source and licence not yet recorded'
+THINGIVERSE = 'https://www.thingiverse.com/thing:1521722'
+CC_BY_SA = 'CC BY-SA 3.0, Bigbox3DP on Thingiverse'
+STEP_SOURCES = [
+    ('bigbox_v1.1.0.stp', THINGIVERSE, 'BigBox v1.1: 54 of the parts', CC_BY_SA),
+    ('Hybrid_v1.1.0.stp', THINGIVERSE, 'BigBox v1.1 Hybrid: 10 of the parts', CC_BY_SA),
+    ('bigbox_dual_v1.0.0.stp', THINGIVERSE, 'BigBox v1.0 Dual: 7 of the parts', CC_BY_SA),
+    ('BB_FRAME_M3_NUT_TRAP.stp', THINGIVERSE, 'the frame nut trap: 1 part', CC_BY_SA),
+]
+
 # (heading, intro, [(text, url or None, note)])
 DOWNLOADS = [
     ('Simplify3D profiles',
@@ -73,6 +88,15 @@ DOWNLOADS = [
       ('Pro/calibration/extruder_0.gcode', gh('BigBox3D/SD-Card', 'Pro/calibration/extruder_0.gcode'), ''),
       ('Dual/calibration/extruder_0.gcode', gh('BigBox3D/SD-Card', 'Dual/calibration/extruder_0.gcode'), ''),
       ('Dual/calibration/extruder_1.gcode', gh('BigBox3D/SD-Card', 'Dual/calibration/extruder_1.gcode'), '')]),
+    ('Printed parts (STEP files)',
+     'One STEP file for each printed part, named after its Bill of Materials row and linked from it. Each is one solid in its own frame, moved so its bounding box sits on the origin and never rotated, so a slicer can open it directly. '
+     'They were cut from the original BigBox CAD assemblies listed below, which are not stored here. '
+     'The designs are by Bigbox3DP (E3D) on Thingiverse, thing 1521722. '
+     'The right-hand SPOOL-HOLDER OUTER (R) was made by mirroring (L), which the originals hold once.',
+     [('parts.csv', '../downloads/printed-parts/parts.csv', 'one row per file: Bill of Materials name, quantity, manual section, source assembly and part, size, volume and SHA-256'),
+      ('SHA256SUMS', '../downloads/printed-parts/SHA256SUMS', 'check the files with sha256sum -c SHA256SUMS in downloads/printed-parts')] +
+     [(f'{name} (source assembly)', url, note) for name, url, note, _licence in STEP_SOURCES] +
+     [('Thingiverse page, archived copy of 2016-12-04', 'https://web.archive.org/web/20161204111516/http://www.thingiverse.com/thing:1521722', 'the page the files are from; it offers STEP.zip')]),
     ('Archived copies from the old E3D file server',
      'The wiki\'s own file server (files.e3d-online.com) is gone, but the Wayback Machine kept these. The links go to the archived copies.',
      [
@@ -128,6 +152,7 @@ OCR_FIXES = {
     'HOBDGOBLIN-SOOIO': 'HOBBGOBLIN-500ID',
     'M3x 3Skt Grb Screw Knurled Point': 'M3 x 3 Skt Grub Screw Knurled Point',
     'M2Hex Nut': 'M3 Hex Nut',   # the hybrid drawings themselves print 'M2 Hex Nut' (E3D's typo): Fixings Bag 3 holds the M3 hex nut and no M2 screws or nuts are listed anywhere (confirmed by the maintainer)
+    '30x30x30 DC Fan (24v)': '30x30x10 DC Fan (24v)',   # sheet 26 prints 30x30x30 (E3D's typo or a misprint): there is no 30x30x30 fan in the build, it is the 30x30x10 hotend fan (confirmed by the maintainer)
 }
 # (lookup ignores spaces and case, so 'M2 HexNut' and 'M2Hex Nut' both match)
 
@@ -139,7 +164,98 @@ OCR_FIXES = {
 # Spool Inner Brackets are NOT the SPOOL-HOLDER INNER drawing (they look different), so they have no drawing.
 # Names for parts that have no drawing, where the manual's name is not the one the part goes by (the printed parts package names it so).
 # 'Bearing Clamps' (dual carriage) is the larger version of the X-AXIS CARRIAGE BEARING CLAMP, checked by the maintainer.
-NO_DRAWING_NAMES = {'Bearing Clamps': 'X-AXIS CARRIAGE BEARING CLAMP DUAL'}
+NO_DRAWING_NAMES = {'Bearing Clamps': 'X-AXIS CARRIAGE BEARING CLAMP DUAL',
+                    'Main Block': 'Non-Titan Direct-Drive Bowden Main Block'}   # the maintainer's name for it
+
+# Parts of the Printed Parts Box or Bag that are not 3D printed. They are not in the printed parts table but in the General table, which is the General
+# sheet of E3D's spreadsheet (data/bom.ods), under the sheet's name for them: manual or drawing name -> the sheet's Component. The cork parts are one
+# item on the sheet. 'Black Spring' is the filament idler spring (it is fitted in the Non-Titan Direct-Drive Bowden System).
+GENERAL_ROWS = {'Y-AXIS BACK (L) CORK (Self Adhesive)': 'Laser Cut Cork Dampener Parts',
+                'Y-AXIS FRONT CORK (L & R) (Self Adhesive)': 'Laser Cut Cork Dampener Parts',
+                'Y-MOTOR MOUNT CORK (Self Adhesive)': 'Laser Cut Cork Dampener Parts',
+                'Cork Pads': 'Laser Cut Cork Dampener Parts',
+                'Embedded Bowden Coupler': 'Embedded Bowden Coupling for Plastic',
+                'Black Spring': 'Filament-Idler Spring',
+                'Hobgoblin': 'E3D HobGoblin (5mm) (M3 x 4 Grub)'}
+# Where the manual puts the parts of the General sheet (data/bom.ods), by the sheet's Component. Each entry is evidence in the manual itself, and the build
+# fails if one stops resolving: ('part', NAME) a row of the exploded drawings with that part name (the steps that show those drawings), ('item', NAME) a
+# list item in a step ("1 x Rumba (Electronics Box)."), ('heading', PAGE, TEXT) a step whose heading is that part. The build section is every step found.
+# Checked by the maintainer. The parts of GENERAL_ROWS above are added to their rows too. A component not here has no step the manual ties it to.
+_SUB, _MAIN, _COM = 'BigBox_Printer_Sub-assemblies', 'Printer_main_assemblies_Step_By_Step_Assembly_Process', 'Printer_Commissioning'
+GENERAL_SOURCES = {
+    'PT100 Single amp cable': [('heading', _SUB, '(12.5) PT100 Amplifier(s)')],
+    'PT100 Double amp cable': [('heading', _SUB, '(12.5) PT100 Amplifier(s)')],
+    'PT100 Amp': [('heading', _SUB, '(12.5) PT100 Amplifier(s)')],
+    'PT100 (1700mm Cable)': [('part', 'PT100'), ('heading', _SUB, '(12.7) PT100 Wiring')],
+    'PSU to Rumba': [('heading', _SUB, '(12.6) PSU - Rumba Wiring')],
+    'IEC to PSU (Mains to PSU (300mm))': [('heading', _SUB, '(12.6) PSU - Rumba Wiring')],
+    'Bed Wiring Loom': [('item', 'Heated Bed Wiring'), ('heading', _MAIN, '(32.3) Connecting the Heated Bed')],
+    'IR Endstop Cable': [('item', '3-Wire IR Sensor Cable')],
+    'IEC Socket with Fuse': [('heading', _MAIN, '(17.6) A/C IEC Socket')],
+    'Rumba': [('heading', _SUB, '(12.4) Rumba')],
+    'A4988': [('heading', _MAIN, '(27) Tuning The Stepper Drivers')],
+    'PSU': [('heading', _SUB, '(12.3) Power Supply Unit (PSU)')],
+    'IR Sensor': [('part', 'IR-SENSOR')],
+    'EndStops MicroSwitch (with Cable)': [('item', 'Endstop'), ('heading', _MAIN, '(29) Y-Axis Frame Endstop')],
+    'Heated Bed': [('heading', _MAIN, '(32.3) Connecting the Heated Bed')],
+    'LCD': [('heading', _SUB, '(13.3) The LCD Enclosure')],
+    'Z-Motor Cable (300mm)': [('heading', _MAIN, '(17.4) Z-Axis Motors')],
+    'E-Motor Cable (1500mm)': [('heading', _MAIN, '(21.8) Extruder Motor Cable')],
+    'Y-Motor Cable (1000mm)': [('item', '1000mm Y-Axis Motor Cable')],
+    'Panel Mount USB Extension': [('item', 'USB Panel Mount Cable')],
+    'Nitrile 70 O-Rings 12mm ID 17 OD': [('item', 'O-Ring')],
+    'E3D HobGoblin (5mm) (M3 x 4 Grub)': [('part', 'HOBBGOBLIN-500ID')],
+    'E3D V6 Lite (Direct, 24V, PT100 Block, No Electronics)': [('heading', _MAIN, '(21.3) Assembly of the E3D V6 HotEnds.')],
+    'E3D V6 (Direct, 24V, PT100 Block, No Electronics)': [('heading', _MAIN, '(21.3) Assembly of the E3D V6 HotEnds.')],
+    'Heater Cartridge': [('part', 'HEATER-CARTRIDGE-24V-30W')],
+    'Embedded Bowden Coupling for Plastic': [('part', 'Bowden Coupling')],
+    '4mm x 3mm x 1000mm PTFE Filament Guide': [('item', '1000mm 4mm OD - 3mm ID Thin-Walled PTFE Tube')],
+    '60x60x10 24v (300mm lead w/ 4mm fork ferrule)': [('item', '60x60x10 Exhaust Fan')],
+    '50x50x10 24v (250mm lead w/ 0.1" connector)': [('part', 'FAN-50-50-10')],
+    '40x40x20 Blower 24v (1700mm lead w/ 0.1" connector)': [('part', 'FAN-SNAIL-BLOWER'), ('item', '40x40x20 Blower Fan')],
+    'BigBox M3 Nut Traps': [('item', 'Nut Traps')],
+    'Laser Cut Acrylic / Plywood Frame': [('heading', _SUB, '(13.2) Main Frame')],
+    'Filament-Idler Spring': [('part', 'Extruder Spring')],
+    'Viton A Rubber Strip (1.5 x 12) 40mm': [('item', 'Rubber Stip')],
+    'V6 Direct PTFE tubing (2mm x 4mm)': [('item', '2mm ID PTFE Tubing')],
+    'Spring (spool holder)': [('part', 'Spool-Holder Spring')],
+    'Glass Bed': [('heading', _COM, '(2.2) Glass')],
+    'Drag Chain 400mm': [('item', 'Drag Chain')],
+    'Glass Bed Clips': [('item', 'Bed Clips')],
+    '604-ZZ (4x12x4)': [('part', 'BEARING-604ZZ')],
+    'F604 (4x12x4 Flange-13.5)': [('part', 'BEARING-F604ZZ')],
+    '634ZZ (4x16x5)': [('part', 'BEARING-634ZZ')],
+    '688-ZZ (8x16x5)': [('part', 'BEARING-688ZZ')],
+    'LM8LUU (8x45)': [('part', 'BEARING-LM8LUU')],
+    '66 Tooth (132mm) GT2 Loop Belt': [('part', 'GT2-BELT-CLOSED-66T')],
+    'GT2 6mm Belt (3000mm)': [('item', 'GT2 Belt')],
+    'GT2 16T (5mm)': [('part', 'GT2-16T-5ID')],
+    'GT2 20T (5mm)': [('part', 'GT2-20T-5ID')],
+    'GT2 20T (8mm)': [('part', 'GT2-20T-8ID')],
+    'GT2 36T (8mm)': [('part', 'GT2-36T-8ID')],
+    '5mm – 8mm Couplers': [('item', '5mm - 8mm Aluminium Couplers')],
+    'TR8 Leadscrew (347mm)': [('heading', _COM, '(1.4) Leadscrews')],
+    'SiS. 532mm (Y)': [('part', 'ROD-SS-8-532')],
+    'GHSiS 484mm (X)': [('part', 'ROD-G.H.SS-8-484')],
+    'GHSiS 384mm (Y)': [('part', 'ROD-G.H.SS-8-384')],
+    'GHSiS 364mm (Z)': [('part', 'ROD-G.H.SS-8-364')],
+    'Bed Thermistor Semitec': [('heading', _MAIN, '(25.1) Single Extruder')],
+    'X-Motor Cable (1500mm)': [('heading', _MAIN, '(25.1) Single Extruder')],
+    'USB A-Mini cable (~500mm)': [('heading', _SUB, '(12.8) OctoPrint Upgrades')],
+    'Short uUSB cable': [('heading', _SUB, '(12.8) OctoPrint Upgrades')],
+    'Rumba to DCDC Power In (300mm lead. 0.1” - Tinned)': [('heading', _SUB, '(12.8) OctoPrint Upgrades')],
+    'Raspberry Pi 2 + 8gb': [('heading', _SUB, '(12.8) OctoPrint Upgrades')],
+    '5v DC DC Converter': [('heading', _SUB, '(12.8) OctoPrint Upgrades')],
+    'Link': [('heading', 'BigBox_Parts_Preparation', '(19) IEC Socket')],
+    '30x30x10 24v (1700mm lead w/ 0.1" connector)': [('part', '30x30x10 DC Fan (24v)'), ('heading', _MAIN, '(21.3) Assembly of the E3D V6 HotEnds.')],   # sheet 26 prints it 30x30x30 (corrected in data/sheets/pdf-26.json)
+    '40nm NEMA 17 (200 Steps) (Wantai 42BYGHW609L20P1-X2)': [('heading', _MAIN, '(17.4) Z-Axis Motors')],
+    'TR8 Nut (4 x M3 Mounting Holes)': [('heading', _SUB, '(10) Z-Axis Bed Assembly'), ('heading', _COM, '(1.4) Leadscrews')],
+    'SiS 325mm (S)': [('heading', _MAIN, '(30) Spool Carrier')],
+    'Viton A Rubber Strip (1.5 x 12) 77mm': [('heading', _MAIN, '(31.2) Dual Extruder Dock')],
+    'Panel Mount RJ45 Socket (600mm)': [('item', 'RJ45 Panel Mount Cable')],
+    'Camera & 750mm FFC Cable': [('item', '750mm FFC'), ('item', 'Raspberry Pi Camera Module')],
+    '46nm NEMA 17 (400 Steps) (Wantai 42BYGHM809L20P4.5-17-X2)': [('part', 'NEMA17-400')],
+}
 MANUAL_PART_NAMES = {
     'Right Cable Bracket': ('img-EXTRUDER_DUAL', 'E-AXIS CABLE BRACKET (DUAL)(R)'),
     'Belt Tensioner': ('pdf-22', 'X-AXIS BELT-TENSIONER'),

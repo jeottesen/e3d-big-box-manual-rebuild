@@ -80,6 +80,10 @@ def table_separators(md):
             lines[i] = '|' + '|'.join((' ' + '-' * (len(c) - 2) + ' ') if padded and len(c) - 2 >= 3 else ' --- ' for c in cells) + '|'
     return '\n'.join(lines)
 
+def empty_cells(md):
+    """Pandoc writes an empty cell of a compact table as `|  |`; markdownlint (MD060) wants one space, `| |`."""
+    return '\n'.join(re.sub(r'\|  (?=\|)', '| ', l) if l.startswith('|') else l for l in md.split('\n'))
+
 def convert(page, h, pages, amap):
     own = amap[page]
     def link(m):
@@ -106,6 +110,7 @@ def convert(page, h, pages, amap):
     md = re.sub(r'\\\n(?=\n)', '\n', md)         # a hard line break at the end of a paragraph
     md = re.sub(r'[ \t]+\n', '\n', md)
     md = table_separators(md)   # table separator rows in the style markdownlint wants
+    md = empty_cells(md)
     return normalize_headings(re.sub(r'\n{3,}', '\n\n', md).strip()) + '\n'
 
 def main():
